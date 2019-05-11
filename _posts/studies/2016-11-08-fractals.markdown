@@ -27,7 +27,7 @@ If zoomed in, there is no way to tell that we have zoomed in.
 
 ### Sierpinski Carpet
 
-![Sierpinski Carpet](http://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg)
+![Sierpinski Carpet](https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg)
 
 - A square divided into 9 squares
 - The center square is empty

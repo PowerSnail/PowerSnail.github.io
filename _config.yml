@@ -4,15 +4,14 @@ slogan: Home for PowerSnail
 description: My Home Page
 author: powersnail
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://PowerSnail.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-credits: '<p>Created with &hearts; by <a href="http://phlow.de/">Phlow</a> with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a>.</p>'
+url: "https://PowerSnail.github.io"
 improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
 logo: "logo.svg"
 language: 'en'
 
 
-paginate: 5                      # Paginates all X entries
-paginate_path: "blog/page:num"   # Pagination path › Important for blog page in /blog/ to work
+# paginate: 5                      # Paginates all X entries
+# paginate_path: "blog/page:num"   # Pagination path › Important for blog page in /blog/ to work
 
 
 # Build Settings
