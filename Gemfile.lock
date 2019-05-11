@@ -3,8 +3,8 @@ GEM
   specs:
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
-    asciidoctor (1.5.8)
-    coderay (1.1.1)
+    asciidoctor (2.0.9)
+    coderay (1.1.2)
     colorator (1.1.0)
     concurrent-ruby (1.1.5)
     em-websocket (0.5.1)
@@ -75,8 +75,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  asciidoctor (~> 1.5.4)
-  coderay (= 1.1.1)
+  asciidoctor
+  coderay
   jekyll (~> 3.8.5)
   jekyll-asciidoc
   jekyll-feed (~> 0.6)
