@@ -125,7 +125,7 @@ The goal: Turn voxels into polygons
 Connect the center of each cell -> a set of cubes
 
 Determine whether each cell is inside rock or not, and based on that select a model of cube. Each model marks some boundary of the shape. 
- 
+
 
 ## Lagrangian Simulation
 

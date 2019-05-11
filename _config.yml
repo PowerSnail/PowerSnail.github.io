@@ -1,39 +1,93 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Site Settings
 title: SnailShell
-email: hj5fb@virginia.edu
-description: >- # this means to ignore newlines until "baseurl:"
-  My Home Page
+slogan: Home for PowerSnail
+description: My Home Page
+author: powersnail
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://PowerSnail.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+credits: '<p>Created with &hearts; by <a href="http://phlow.de/">Phlow</a> with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a>.</p>'
+improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
+logo: "logo.svg"
+language: 'en'
 
-# Build settings
+
+paginate: 5                      # Paginates all X entries
+paginate_path: "blog/page:num"   # Pagination path › Important for blog page in /blog/ to work
+
+
+# Build Settings
 markdown: kramdown
-remote-theme: Phlow/feeling-responsive
+permalink          : /:categories/:title/
+highlight          : rouge
+excerpt_separator  : "<!--more-->"
+include            : ['.htaccess']
 plugins:
   - jekyll-feed
+  - jekyll-asciidoc
+  - jekyll-gist
+  - jekyll-paginate
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  ignore:
+    envs: [development]
+
+# Exclude these files from your production _site
+exclude:
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - INSTALL.md
+  - vendor
+  - _drafts/
+
+
+# Theme related
+
+defaults:
+  -
+    scope:
+      path: '' 				# an empty string here means all files in the project
+      type: 'pages'
+    values:
+      show_meta: false 	# Hide metadata for all pages
+      comments: false
+      author: powersnail     # Default author for pages
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      show_meta: true   # Show metadata for all posts
+      comments: false
+      author: powersnail     # Default author for posts
+
+favicon-32x32:                          'icon32x32.png'
+touch-icon-192x192:                     'icon192x192.png'
+apple-touch-icon-180x180-precomposed:   'icon180x180.png'
+apple-touch-icon-152x152-precomposed:   'icon152x152.png'
+apple-touch-icon-144x144-precomposed:   'icon144x144.png'
+apple-touch-icon-120x120-precomposed:   'icon120x120.png'
+apple-touch-icon-114x114-precomposed:   'icon114x114.png'
+apple-touch-icon-76x76-precomposed:     'icon76x76.png'
+apple-touch-icon-72x72-precomposed:     'icon72x72.png'
+apple-touch-icon-precomposed:           'icon57x57.png'
+msapplication_tileimage:                'icon144x144.png'
+msapplication_tilecolor:                '#fabb00'
+
+sass:
+    sass_dir : _sass
+    style    : :compressed
+
+asciidoctor-enabled: false
+asciidoctor:
+  description: testtewtetrue
+  attributes:
+    source-highlighter: coderay
+    coderay-css: style
+    icons: font

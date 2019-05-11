@@ -72,9 +72,9 @@ The return is a special operation `return from interrupt`, which restores kernal
 
 | Class | Cause | Async/Sync | Return behavior |
 | ----- | ----- | ---------- | --------------- |
-| Interrupt | Signal from I/O device | Async | Aways returns to next instruction | 
+| Interrupt | Signal from I/O device | Async | Aways returns to next instruction |
 | Trap | Intentional exception | Sync | Always returns to next instruction |
-| Fault | Potentially recoverable error | Sync | Might return to current instruction | 
+| Fault | Potentially recoverable error | Sync | Might return to current instruction |
 | Abort | Nonrecoverable error | Sync | Never returns |
 
 Table 1: Classes of Exceptions [^1]
