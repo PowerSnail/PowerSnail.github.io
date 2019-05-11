@@ -7,32 +7,34 @@ permalink: "/cv/"
 
 ## Education
 
-University of Virginia, Charlottesville, VA
+University of Virginia, Charlottesville, VA \
 Bachelor of Science, Computer Science, 2018
 
 ## Skills
 
-### Programming Languages
-
-Python, C++, Java, Ruby, C#, C, Bash
-
-### Machine Learning Framework
-
-Tensorflow/Keras, Pytorch
-
-### Web Framework
-
-Django
+| Skills                     |                                        |
+| -------------------------- | -------------------------------------- |
+| Programming Languages      | Python, C++, Java, Ruby, C#, C, (Ba)sh |
+| Machine Learning Framework | Tensorflow/Keras, Pytorch              |
+| Web Framework              | Django                                 |
 
 ## Research
 
-**Automatically Co-locating Data Sensors in Buildings**  
+**Co-location and Co-equipment Convolutional Neural Network**  
 _2018 - present_
 
-Apply machine learning to raw sensor data with python and Tensorflow, that group sensors
-based on their location with accuracy as high as 96%. The method
+Trained a Convolutional Neural Network with Triplet Loss Architecture to extract 
+features from raw sensory data, creating embeddings where sensors of the same group are
+closer than those of different group. 
+In the embedding space, I calculated the pairwise distances and with a Genetic Algorithm
+clustered sensors under the contraints of number of each type of sensor in each group.
+The algorithm has achieved over 85% accuracy on both co-location (belonging to the same
+room) and co-equipment (belonging to the same control unit) dataset.
 
-1. Extracts features from raw sensory data with canny edge detection
+**Automatically Co-locate Raw Sensory data of Building Sensors**
+_2017-2018_
+
+1. Extracts features from raw sensory data with Canny Edge detector
 
 2. Encodes signal that maximizes the Pearson Correlation Coefficient difference between
 in-group and out-group sensors, with a CNN-based Siamese network trained by Triplet loss
@@ -44,7 +46,7 @@ annealing (both proposed by previous work).
 
 ## Work Experience
 
-**Student Intern (Reinforcement Learning) at Happy Elements**  
+**Student Intern (Deep Reinforcement Learning) at Happy Elements**
 _2017 Summer_
 
 Assisted in building, improving, and accelerating an AI player in python with Tensorflow
@@ -64,6 +66,13 @@ _2015 Spring – 2016 Spring_
 Assisted in the teaching of multiple semesters of CS 2102 (Discrete Mathematics) by
 grading examinations, hosting office hours, and pre-viewing some assignment questions.
 
+
+## Publications
+
+Wu, H., Jin, H., Sun, Y., Wang, Y., Ge, M., Chen, Y., & Chi, Y. (2016). 
+**Evaluating stereoacuity with 3D shutter glasses technology**. 
+BMC Ophthalmology BMC Ophthalmol, 16(1). doi:10.1186/s12886-016-0223-3
+
 ## Project
 
 **Ticket-To-Ride AI Player**
@@ -81,13 +90,17 @@ stereo depth, orientation, and places. It generates two formats of stereoimage: 
 PNGs and randot images (filled with randomly placed pixels).
 
 
-Interpreter for Classroom Object Oriented Language 2017 Spring
-Created a lexer, a parser, a type system, and interpreter for COOL. It efficiently evaluated a COOL program, could
-produce annotated AST, and had some debugging capability. The core of the program was written in OCaml.
-POSIX Shell 2017 Fall
-Wrote a simple shell that can evaluate user input and execute proper program in a separate process. The program was
-written in C++ on Linux, using POSIX interface for system calls.
-PUBLICATION
-Co-authored a paper on the application of 3D Shutter Glass Technology in eye examination.
-Wu, H., Jin, H., Sun, Y., Wang, Y., Ge, M., Chen, Y., & Chi, Y. (2016). Evaluating stereoacuity with 3D shutter glasses
-technology. BMC Ophthalmology BMC Ophthalmol, 16(1). doi:10.1186/s12886-016-0223-3
+**Interpreter for Classroom Object Oriented Language**
+_2017 Spring_
+
+Created a lexer, a parser, a type system, and interpreter for COOL. It efficiently
+evaluated a COOL program, could produce annotated AST, and had some debugging
+capability. The core of the program was written in OCaml.
+
+**POSIX Shell** 
+_2017 Fall_
+
+Wrote a simple shell that can evaluate user input and execute proper program in a
+separate process. The program was written in C++ on Linux, using POSIX interface for
+system calls.
+
