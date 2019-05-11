@@ -31,7 +31,7 @@ clustered sensors under the contraints of number of each type of sensor in each 
 The algorithm has achieved over 85% accuracy on both co-location (belonging to the same
 room) and co-equipment (belonging to the same control unit) dataset.
 
-**Automatically Co-locate Raw Sensory data of Building Sensors**
+**Automatically Co-locate Raw Sensory data of Building Sensors**  
 _2017-2018_
 
 1. Extracts features from raw sensory data with Canny Edge detector
@@ -46,7 +46,7 @@ annealing (both proposed by previous work).
 
 ## Work Experience
 
-**Student Intern (Deep Reinforcement Learning) at Happy Elements**
+**Student Intern (Deep Reinforcement Learning) at Happy Elements**  
 _2017 Summer_
 
 Assisted in building, improving, and accelerating an AI player in python with Tensorflow
@@ -60,7 +60,7 @@ model:
 convergence, and better score.
 
 
-**Teaching Assistant for CS 2102 (Discrete Math) at University of Virginia** 
+**Teaching Assistant for CS 2102 (Discrete Math) at University of Virginia**   
 _2015 Spring – 2016 Spring_
 
 Assisted in the teaching of multiple semesters of CS 2102 (Discrete Mathematics) by
@@ -75,13 +75,13 @@ BMC Ophthalmology BMC Ophthalmol, 16(1). doi:10.1186/s12886-016-0223-3
 
 ## Project
 
-**Ticket-To-Ride AI Player**
+**Ticket-To-Ride AI Player**  
 _2016 Summer_
 
 Created an AI player (Java) for Ticket-To-Ride that won the first place in the class 
 tournament, by modeling the game with Markov Decision Process.
 
-**Randot Studio**
+**Randot Studio**  
 _2018_
 
 Created a desktop application that helps generating stereo-images for ophthalmology 
@@ -90,14 +90,14 @@ stereo depth, orientation, and places. It generates two formats of stereoimage: 
 PNGs and randot images (filled with randomly placed pixels).
 
 
-**Interpreter for Classroom Object Oriented Language**
+**Interpreter for Classroom Object Oriented Language**  
 _2017 Spring_
 
 Created a lexer, a parser, a type system, and interpreter for COOL. It efficiently
 evaluated a COOL program, could produce annotated AST, and had some debugging
 capability. The core of the program was written in OCaml.
 
-**POSIX Shell** 
+**POSIX Shell**  
 _2017 Fall_
 
 Wrote a simple shell that can evaluate user input and execute proper program in a
