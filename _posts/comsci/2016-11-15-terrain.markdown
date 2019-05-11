@@ -1,0 +1,141 @@
+---
+layout: page
+title: "Terrain"
+categories:
+    - comsci
+tags:
+    - computer science
+    - notes
+    - study
+    - graphics
+---
+
+# Geology
+
+There are changes occur to the terrain over time.
+
+Geology Forces:
+
+- Volcano
+- Earthquakes
+- Plate tectomics
+- **Erosion**
+    + Hydrolic: caused by water
+    + Pneumatic: caused by air
+    + Thermal: caused by heat
+    + **Chemical**
+        * Crystal
+        * Salt
+        * Lime + water
+
+## Hydrolic Erosion
+
+### Land Drains
+
+The basic result of hydrolic erosion is that *land drains*. 
+
+**Planchon-Darboux** Algorithm: $$Heightmap \to Heightmap$$
+
+In the new heightmap, find the lowest elevation, which is defined as:
+
+- each pixel.height >= original
+- each pixel.height > at least one neighbor .height
+- except the drains
+
+### Speed of Water
+
+Generally speaking, the faster the water is, the more erosion there is.
+
+$$speed \propto depth \cdot slope$$
+
+The flat area does not erode, and the slopes erode fast, so the result is very steep cliffs.
+
+1. Planchon-Darboux
+2. Small amount of water everywhere (raining)
+3. Have water move down
+4. Erode as water moves (based on the slope and amount of water)
+
+### Better Model
+
+How water affects the terrain?
+
+- Carries sediment
+    + Amount of sediment $$\propto$$ kinetic energy
+
+### River sides
+
+At turning of a river, the outside of the curve gradually gets larger, while the inside does not grow. 
+
+### Land Slide
+
+When water erode away dirt/rock near the river bed, rocks become hang by itself on the bank. When the erosion reach some threshold, the whole piece of land will slide down.
+
+## Wind Erosion
+
+When there are plants, wind erosion does not affect the land.
+
+When there are no plants, wind will blow away pieces over time, and forms round shapes on the rocks. 
+
+Wind blows slower close to surface. So if there is a large flat ground, wind erosion will be less severe. When there is sharp curves, there is not enough length to slow down, and thus causing faster erosion.
+
+## Thermal Erosion
+
+Heat causes expansions, and coldness causes contraction. Rocks are rigid, not malleable, and thus the expansions/contractions will cause microfractures on the rocks, which will grow larger over time. 
+
+## Salt Erosion
+
+taffoni: 
+
+![](https://www.2tout2rien.fr/wp-content/uploads/2014/05/taffoni-tafoni-roches-a-erosion-circulaire-9.jpg)
+
+## Crystallized Fracture Plains
+
+Slow, high pressure deposition yields organized forms.
+
+
+## Lime + Water
+
+![](http://www.adventure-caves.com/images/cave_types_ice_caves.jpg)
+
+# When Height Map Fails
+
+## Voxels
+
+A voxel is a volume of pixels. 3-D array of pixels.
+
+In each pixel, there are some fraction of rocks vs air. 
+
+**Spheroidal Weathering**: Pneumatic + Thermal 
+    - Smoothing effect
+
+For each pixel,
+    if neighbors have more rock than itself # low concavicity
+        less weathering
+    else
+        more weathering
+        based on the pixels with lower rock
+
+
+if the function of concavicity and weathering is good, the weathering tends to create a sphere.
+
+## Marching Cubes Algorithm
+
+The goal: Turn voxels into polygons
+
+Connect the center of each cell -> a set of cubes
+
+Determine whether each cell is inside rock or not, and based on that select a model of cube. Each model marks some boundary of the shape. 
+ 
+
+## Lagrangian Simulation
+
+A set of points along the border of air and rock. Calculate angle of neighboring points, and figure out how to move the pixel. 
+
+Problems:
+
+1. Poor Spacing
+2. Topology changes, A non-hole shape -> a hole shape
+3. Delauney Triangulation
+
+    - 
+
