@@ -4,8 +4,8 @@ slogan: Home for PowerSnail
 description: My Home Page
 author: powersnail
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.powersnail.com"
-improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
+url: "https://powersnail.com"
+# improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
 logo: "logo.svg"
 language: 'en'
 
