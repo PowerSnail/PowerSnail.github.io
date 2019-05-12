@@ -50,9 +50,22 @@ format: frontpage
 {% endif %}
 
 <div class="row">
-    {{ content }}
-</div><!-- /.row -->
+    <div class="large-3 columns">
+        <div class="row text-center">
+            <img src="{{ site.url }}{{site.baseurl}}/images/han_jin.jpg" width="200"></img>
+            <h2 style="font-family:'sans-serif'">PowerSnail</h2>
+            <p>Research Assitant<br>
+            University of Virginia</p>
+        </div>
+    </div>
+    <div class="large-1 columns">
+    </div>
 
+    <div class="large-8 columns">
+        {{ content }}
+    </div>
+</div><!-- /.row -->
+<hr>
 
 {% comment %}
 *
