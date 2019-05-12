@@ -70,6 +70,7 @@
 .icon-thumbs-down:before,
 .icon-thumbs-up:before,
 .icon-tree:before,
+.icon-snail:before,
 .icon-tumblr:before,
 .icon-twitter:before,
 .icon-upload-to-cloud:before,
@@ -147,3 +148,4 @@
 .icon-warning:before { content: "\f131"; }
 .icon-xing:before { content: "\f135"; }
 .icon-youtube:before { content: "\f132"; }
+.icon-snail:before { content: "\f139"; }
