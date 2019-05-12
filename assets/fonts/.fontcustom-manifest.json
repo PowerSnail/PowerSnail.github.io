@@ -229,6 +229,10 @@
     "youtube": {
       "codepoint": 61746,
       "source": "svg-files-for-custom-font/youtube.svg"
+    },
+    "snail": {
+      "codepoint": 61753,
+      "source": "svg-files-for-custom-font/snail.svg"
     }
   },
   "options": {
