@@ -16,7 +16,7 @@ language: 'en'
 
 # Build Settings
 markdown: kramdown
-permalink          : /:categories/:title/
+permalink          : /:year/:title/
 highlight          : rouge
 excerpt_separator  : "<!--more-->"
 include            : ['.htaccess']
