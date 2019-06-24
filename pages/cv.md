@@ -7,8 +7,8 @@ permalink: "/cv/"
 
 ## Education
 
-University of Virginia, Charlottesville, VA \
-Bachelor of Science, Computer Science, 2018
+Bachelor of Science, Computer Science, 2018  
+University of Virginia, Charlottesville, VA  
 
 ## Skills
 
