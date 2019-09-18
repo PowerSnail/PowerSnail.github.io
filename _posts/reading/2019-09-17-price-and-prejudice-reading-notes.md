@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "_Pride and Prejudice_ Reading Notes: Highlights and Annotations"
+title: '"Pride and Prejudice" Reading Notes: Highlights and Annotations'
 categories:
     - reading
 tags:
