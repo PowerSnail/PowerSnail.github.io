@@ -83,4 +83,4 @@ The original Nanban sauce recipe had half a table spoon of sugar. I used a littl
 
 ## 参考资料 / References
 
-[^1]: MASA. (2018, October 16). 宮崎風酸甜雞腿丼飯/Miyazaki Style Nanban Chicken Don |MASAの料理ABC - YouTube. [https://www.youtube.com/watch?v=p7BaHCJ6xiI&t=335s](https://www.youtube.com/watch?v=p7BaHCJ6xiI&t=335s)
+[^1]: MASA. (2018, October 16). 宮崎風酸甜雞腿丼飯/Miyazaki Style Nanban Chicken Don \|MASAの料理ABC - YouTube. [https://www.youtube.com/watch?v=p7BaHCJ6xiI&t=335s](https://www.youtube.com/watch?v=p7BaHCJ6xiI&t=335s)
