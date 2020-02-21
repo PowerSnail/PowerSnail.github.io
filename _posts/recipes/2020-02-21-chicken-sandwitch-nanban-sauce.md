@@ -83,4 +83,4 @@ The original Nanban sauce recipe had half a table spoon of sugar. I used a littl
 
 
 
-[1]: https://www.youtube.com/watch?v=p7BaHCJ6xiI&t=330s
+[^1]: Miyazaki Style Nanban Chicken Rice Bowl [link](https://www.youtube.com/watch?v=p7BaHCJ6xiI&t=330s)
