@@ -14,6 +14,10 @@
   url: "/reading/"
   side: left
 
+- title: "Recipes"
+  url: "/recipes/"
+  side: left
+
 - title: "Search"
   url: "/search/"
   side: right
