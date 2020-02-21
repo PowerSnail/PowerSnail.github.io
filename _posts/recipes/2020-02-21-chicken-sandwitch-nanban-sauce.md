@@ -81,6 +81,6 @@ According to my experiments, it makes no difference using starch or flour, since
 
 The original Nanban sauce recipe had half a table spoon of sugar. I used a little less than that to emphasize more on the acidity and umami.
 
+## 参考资料 / References
 
-
-[^1]: Miyazaki Style Nanban Chicken Rice Bowl [link](https://www.youtube.com/watch?v=p7BaHCJ6xiI&t=330s)
+[^1]: MASA. (2018, October 16). 宮崎風酸甜雞腿丼飯/Miyazaki Style Nanban Chicken Don |MASAの料理ABC - YouTube. [https://www.youtube.com/watch?v=p7BaHCJ6xiI&t=335s](https://www.youtube.com/watch?v=p7BaHCJ6xiI&t=335s)
