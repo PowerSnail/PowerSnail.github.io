@@ -30,30 +30,39 @@ tags:
 ## 烹调 / Cooking
 
 1. 鸡腿肉皮朝下，把厚的地方蝴蝶切，摊平
+   
    Place the chicken thigh skin-side down; butterfly-cut to flatten the thigh.
 
 2. 用刀尖浅戳鸡肉，断筋
+   
    Poke the muscle with the tip of the knife lightly multiple times to cut connective tissues.
 
 3. 均匀涂抹盐和胡椒，腌制 15 分钟，使鸡肉基本恢复成室温
+   
    Evenly rub salt and pepper into the chicken thigh; rest for 15 minutes so the chicken gets to room temperature.
 
 4. 热锅，少油，中大火，将鸡肉均匀沾粉，皮朝下放入锅中
+   
    Hot pan, a little oil, medium-high heat. Cover the chicken with starch or flour. Into the pan skin-side down.
 
 5. 煎至金黄，翻面
+   
    Flip when the skin becomes golden.
 
 6. 两面都金黄以后，加入酱汁，调成中火
+   
    Add sauce when both sides are golden; turn heat to medium.
 
 7. 拨动、翻面，让鸡肉吸收酱汁
+   
    Move around and flip the chicken so it absorbs the sauce.
 
 8. 关火，在锅中静置 5 分钟
+   
    Turn off heat and rest for 5 minutes.
 
 9. 切两片面包，将多余的酱汁涂在内侧，夹好鸡肉
+   
    Prepare two slices of bread, and spread extra sauce onto the slices. Place the chicken thigh between the slices.
 
 南蛮鸡肉三明治，完成！
