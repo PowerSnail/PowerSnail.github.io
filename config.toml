@@ -5,11 +5,18 @@ theme = "rocinante"
 hasCJKLanguage = true
 
 [markup]
-  [markup.highlight]
-    style = "monokailight"
-    tabWidth = 2
   [markup.goldmark.renderer]
     unsafe= true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNumbersInTable = true
+    noClasses = true
+    style = 'dracula'
+    tabWidth = 4
 
 [author]
   name = "PowerSnail"
