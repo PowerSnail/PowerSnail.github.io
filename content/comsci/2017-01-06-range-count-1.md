@@ -9,6 +9,8 @@ tags:
     - codefights
     - C++
 mathjax: true
+isCJKLanguage: true
+lang: zh
 ---
 
 在 codefights 上做到了一个很有意思的题。给你 a, b 两个数，假设你构建了一个从 a 到 b 的 array，所有这些数的 binary representation 里面有多少个 1？

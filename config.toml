@@ -2,6 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "SnailShell"
 theme = "rocinante"
+hasCJKLanguage = true
 
 [markup]
   [markup.highlight]
