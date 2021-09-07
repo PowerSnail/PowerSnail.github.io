@@ -213,10 +213,6 @@ The concurrent flows that run on different processor cores or computers are call
 
 The illusion that the program has exclusive use of address space is provided by *private address space*. This "space" of addresses cannot be read/written by other programs, and therefore is exclusive to the program. 
 
-
-
-![](/images/process_address_space.PNG)
-
 ### User Mode vs Kernel Mode
 
 The OS restricts each process what instructions can be executed and what memory space can be accessed. The processor provides the capability with a `mode bit`. 

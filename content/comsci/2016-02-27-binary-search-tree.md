@@ -97,10 +97,6 @@ For an arbitrary iteration, there are three possibilities:
 2. `prev` is the left child of `x`. This means we have just come back from the left branch, implying that the left is already printed. Now we have to print `x` itself and going to the right.
 3. `prev` is the right child of `x`. This means we have printed the everything in the subtree rooted at `x`, and should now go up.
 
-We can summarize the *loop invariant* (something that is true for every iteration) in this diagram:
-
-![Three conditions inorder traversal](/images/inordertraversalthreeconditions.jpg)
-
 `prev` pointing at  | printed subtree
 ---------|----------------
 `-> parent` | none
