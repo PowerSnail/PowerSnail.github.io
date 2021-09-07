@@ -11,6 +11,7 @@ tags:
     - csapp
     - reading notes
 mathjax: true
+date: "2016-11-15"
 ---
 
 ## Overview

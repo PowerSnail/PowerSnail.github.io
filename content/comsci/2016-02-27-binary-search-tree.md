@@ -8,6 +8,7 @@ tags:
     - Algorithms
     - BST
     - Data Structure
+date: "2016-02-27"
 ---
 
 This is a simple implementation of binary search tree implemented by C++. Here are the methods of my BST:

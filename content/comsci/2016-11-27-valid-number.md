@@ -9,6 +9,7 @@ tags:
     - leetcode
     - C++
 mathjax: true
+date: "2016-11-27"
 ---
 
 ## Introduction to the Problem

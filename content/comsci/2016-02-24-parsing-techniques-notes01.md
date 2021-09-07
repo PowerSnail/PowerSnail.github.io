@@ -10,6 +10,7 @@ tags:
     - study
     - parsing
 mathjax: true
+date: "2016-02-24"
 ---
 
 ## Generative Grammar

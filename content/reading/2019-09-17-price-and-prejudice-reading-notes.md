@@ -6,6 +6,7 @@ categories:
 tags:
     - notes
     - study
+date: "2019-09-17"
 ---
 
 ## Summary of _Pride and Prejudice_

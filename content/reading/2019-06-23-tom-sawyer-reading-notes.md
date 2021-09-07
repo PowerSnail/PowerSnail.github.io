@@ -6,6 +6,7 @@ categories:
 tags:
     - notes
     - study
+date: "2019-06-23"
 ---
 
 ## An Overall Review

@@ -6,6 +6,7 @@ categories:
 tags:
     - cognition psychology
     - notes
+date: "2016-03-03"
 ---
 
 

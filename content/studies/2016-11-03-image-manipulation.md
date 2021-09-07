@@ -6,6 +6,7 @@ categories:
 tags:
     - graphics
     - notes
+date: "2016-11-03"
 ---
 
 ## gradient detection convolutions
