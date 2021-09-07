@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "And Then There Were None" Reading Notes
+title: '"And Then There Were None" Reading Notes'
 categories:
     - reading
 tags:
