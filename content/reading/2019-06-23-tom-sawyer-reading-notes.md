@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Reading Notes on "The Adventure of Tom Sawyer"
 tags:
     - notes

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Linear Algebra Notes - Definitions & Theorems"
 tags:
     - linear algebra

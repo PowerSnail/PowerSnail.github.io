@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "南蛮鸡肉三明治 Chicken Sandwich with Nanban Sauce"
 description: "Pan-fried chicken thigh, immersed in Nanban Sauce"
 tags:

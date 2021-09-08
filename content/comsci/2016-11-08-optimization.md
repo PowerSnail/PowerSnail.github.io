@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Code Optimizations"
 tags:
     - com arc

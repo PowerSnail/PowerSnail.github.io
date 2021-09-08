@@ -22,7 +22,6 @@ hasCJKLanguage = true
   name = "PowerSnail"
 
 [params]
-  mainSections = ["comsci", "reading", "recipes", "studies"]
   about = "I'm PowerSnail. A coder, music lover, and an enthusiastic cook."
   favicon = "/images/snail.svg"
   lang = "en"

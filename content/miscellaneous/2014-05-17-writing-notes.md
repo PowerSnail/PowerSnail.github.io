@@ -1,5 +1,4 @@
 ---
-layout: page
 title:  "My Notes on SciWrite"
 date: "2014-05-17"
 ---

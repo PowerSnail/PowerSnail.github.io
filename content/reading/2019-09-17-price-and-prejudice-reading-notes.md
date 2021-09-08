@@ -1,5 +1,4 @@
 ---
-layout: page
 title: '"Pride and Prejudice" Reading Notes: Highlights and Annotations'
 tags:
     - notes

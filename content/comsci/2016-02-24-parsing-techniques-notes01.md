@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Generative Grammar and Four Types of Grammars: Parsing Techniques Notes (1)"
 description: "some notes on Parsing Techniques A Practical Guide"
 tags:

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: '"And Then There Were None" Reading Notes'
 tags:
     - notes

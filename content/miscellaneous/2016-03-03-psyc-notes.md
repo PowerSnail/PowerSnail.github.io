@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Psychology - Episodic and Semantic Memory"
 tags:
     - cognition psychology

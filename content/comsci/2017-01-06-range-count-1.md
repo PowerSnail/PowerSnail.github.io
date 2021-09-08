@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Count 1s in Range"
 tags:
     - computer science

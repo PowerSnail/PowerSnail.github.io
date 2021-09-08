@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Valid Number - By DFA"
 tags:
     - computer science

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Binary Search Tree implemented by C++"
 tags:
     - computer science

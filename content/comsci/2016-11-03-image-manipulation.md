@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Gradient Detection Convolutions, Seam Carving, and Patch March"
 tags:
     - graphics
