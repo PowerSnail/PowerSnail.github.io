@@ -2,8 +2,6 @@
 layout: page
 title: "Production of Sentences and Properties of Languages: Parsing Techniques Notes (2)"
 description: "some notes on Parsing Techniques A Practical Guide"
-categories:
-    - comsci
 tags:
     - computer science
     - notes
