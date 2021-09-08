@@ -26,20 +26,4 @@ hasCJKLanguage = true
   favicon = "/images/snail.svg"
   lang = "en"
 
-  [[params.links]]
-    [[params.links.link]]
-      name = "Computer Science"
-      href = "/comsci"
-    [[params.links.link]]
-      name = "Reading"
-      href = "/reading"
-    [[params.links.link]]
-      name = "Recipes"
-      href = "/recipes"
-    [[params.links.link]]
-      name = "Studies"
-      href = "/studies"
-    [[params.links.link]]
-      name = "About"
-      href = "/about"
   
