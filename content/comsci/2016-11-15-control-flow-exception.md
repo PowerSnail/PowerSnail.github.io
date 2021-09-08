@@ -2,8 +2,6 @@
 layout: page
 title: "Exceptional Control Flow"
 description: "Reading Notes on CSAPP"
-categories:
-    - comsci
 tags:
     - computer science
     - notes

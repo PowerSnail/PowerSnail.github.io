@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Binary Search Tree implemented by C++"
-categories:
-    - comsci
 tags:
     - computer science
     - Algorithms

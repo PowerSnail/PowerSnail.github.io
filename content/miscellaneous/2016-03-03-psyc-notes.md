@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Psychology - Episodic and Semantic Memory"
-categories:
-    - studies
 tags:
     - cognition psychology
     - notes

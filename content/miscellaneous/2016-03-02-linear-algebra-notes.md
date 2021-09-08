@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Linear Algebra Notes - Definitions & Theorems"
-categories:
-    - studies
 tags:
     - linear algebra
     - notes

@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Plants"
-categories:
-    - studies
 tags:
     - graphics
     - notes

@@ -1,8 +1,6 @@
 ---
 layout: page
 title:  "My Notes on SciWrite"
-categories:
-    - studies
 date: "2014-05-17"
 ---
 # Unit 1

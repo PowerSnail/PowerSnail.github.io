@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Code Optimizations"
-categories:
-    - studies
 tags:
     - com arc
     - notes

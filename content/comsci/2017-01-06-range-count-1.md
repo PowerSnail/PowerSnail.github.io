@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Count 1s in Range"
-categories:
-    - comsci
 tags:
     - computer science
     - algorithm

@@ -1,8 +1,6 @@
 ---
 layout: page
 title: "Valid Number - By DFA"
-categories:
-    - comsci
 tags:
     - computer science
     - algorithm

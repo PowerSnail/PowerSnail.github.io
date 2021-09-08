@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Reading Notes on "The Adventure of Tom Sawyer"
-categories:
-    - reading
 tags:
     - notes
     - study
