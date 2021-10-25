@@ -12,7 +12,7 @@ interface Rect {
 class PointSet {
     points: Map<number, Set<number>>;
 
-    constructor () {
+    constructor() {
         this.points = new Map();
     }
 
@@ -84,8 +84,8 @@ function step(world: World): World {
     let alive: PointSet = new PointSet;
     for (const [x, row] of potentially_alive.entries()) {
         for (const [y, count] of row) {
-            if (count == 3 || (count == 2 && world.alive.has({x: x, y: y}))) {
-                alive.add({x: x, y: y});
+            if (count == 3 || (count == 2 && world.alive.has({ x: x, y: y }))) {
+                alive.add({ x: x, y: y });
             }
         }
     }
@@ -95,22 +95,42 @@ function step(world: World): World {
     };
 }
 
-function render(world: World, canvas: HTMLCanvasElement) {
-    let center: Point = {
-        x: Math.floor((world.boundingBox.topLeft.x + world.boundingBox.bottomRight.x) / 2),
-        y: Math.floor((world.boundingBox.topLeft.y + world.boundingBox.bottomRight.y) / 2),
+function get_center(rect: Rect): Point {
+    return {
+        x: Math.floor((rect.topLeft.x + rect.bottomRight.x) / 2),
+        y: Math.floor((rect.topLeft.y + rect.bottomRight.y) / 2),
     };
-    let renderBox: Rect = {
-        topLeft: { x: center.x - 40, y: center.y - 40 },
-        bottomRight: { x: center.x + 40, y: center.y + 40 },
-    };
+}
 
-    let unitSize = Math.min(canvas.width, canvas.height) / 200;
-    let offset: Point = { x: renderBox.topLeft.x * unitSize, y: renderBox.topLeft.y * unitSize };
-    let context = canvas.getContext("2d")
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    for (const p of world.alive) {
-        context.fillRect(p.x * unitSize - offset.x, p.y * unitSize - offset.y, unitSize, unitSize);
+function render(world: World, context: CanvasRenderingContext2D) {
+    let margin = 10;
+    let unitPerRow = 20;
+    let unitSize = Math.floor((Math.min(context.canvas.width, context.canvas.height) - margin) / unitPerRow);
+
+    let center: Point = get_center(world.boundingBox);
+    let canvasRect: Rect = {
+        topLeft: { x: 0, y: 0 },
+        bottomRight: { x: context.canvas.width, y: context.canvas.height },
+    };
+    let canvasCenter: Point = get_center(canvasRect);
+    let offset: Point = { x: center.x * unitSize - canvasCenter.x, y: center.y * unitSize - canvasCenter.y };
+
+    context.imageSmoothingEnabled = true;
+    context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+
+    context.strokeStyle = "#fff";
+    for (let x = -unitPerRow / 2; x < unitPerRow / 2; x += 1) {
+        for (let y = -unitPerRow / 2; y < unitPerRow / 2; y += 1) {
+            if (world.alive.has({ x: x, y: y })) {
+                context.fillStyle = "#333"
+            } else {
+                context.fillStyle = "#ccc";
+            }
+            context.beginPath();
+            context.rect(x * unitSize - offset.x, y * unitSize - offset.y, unitSize, unitSize);
+            context.stroke();
+            context.fill();
+        }
     }
 }
 
@@ -129,29 +149,30 @@ function initialize_with_blinker(): World {
 
 
 let c = document.getElementById("mainCanvas") as HTMLCanvasElement;
+
+function setupCanvas(canvas: HTMLCanvasElement) {
+    // Get the device pixel ratio, falling back to 1.
+    let dpr = window.devicePixelRatio || 1;
+    // Get the size of the canvas in CSS pixels.
+    let rect = canvas.getBoundingClientRect();
+    // Give the canvas pixel dimensions of their CSS
+    // size * the device pixel ratio.
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    let ctx = canvas.getContext('2d');
+    // Scale all drawing operations by the dpr, so you
+    // don't have to worry about the difference.
+    ctx.scale(dpr, dpr);
+    return ctx;
+}
+
+let context = setupCanvas(c);
 let world = initialize_with_blinker();
-render(world, c);
+render(world, context);
 
 function onTimeout() {
     world = step(world);
-    render(world, c);
+    render(world, context);
 }
 
 setInterval(onTimeout, 1000);
-
-
-// let alive: Set<Point> = new Set();
-// let a = alive.add({ x: -1, y: 0 });
-// a = alive.add({ x: 0, y: 0 });
-// a = alive.add({ x: 1, y: 0 });
-// a = alive.add({ x: 1, y: 0 });
-// a = alive.add({ x: 1, y: 0 });
-// a = alive.add({ x: 3, y: 0 });
-// a = alive.add({ x: 4, y: 0 });
-
-// console.log(a)
-// for (const n of alive) {
-//     console.log(JSON.stringify(n));
-// }
-
-// console.log("123")
