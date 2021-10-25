@@ -8,7 +8,6 @@ interface Rect {
     bottomRight: Point;
 }
 
-
 class PointSet {
     points: Map<number, Set<number>>;
 
@@ -30,12 +29,11 @@ class PointSet {
     *[Symbol.iterator](): Iterator<Point> {
         for (const [x, s] of this.points.entries()) {
             for (const y of s) {
-                yield { x: x, y: y }
+                yield { x: x, y: y };
             }
         }
     }
 }
-
 
 interface World {
     alive: PointSet;
@@ -54,12 +52,21 @@ function* neighbors(p: Point): IterableIterator<Point> {
 }
 
 function makeBoundingBox(points: Iterable<Point>, margin: number) {
-    let boundingBox: Rect = { topLeft: { x: Infinity, y: Infinity }, bottomRight: { x: -Infinity, y: -Infinity } };
+    let boundingBox: Rect = {
+        topLeft: { x: Infinity, y: Infinity },
+        bottomRight: { x: -Infinity, y: -Infinity },
+    };
     for (const p of points) {
         boundingBox.topLeft.x = Math.min(boundingBox.topLeft.x, p.x - margin);
         boundingBox.topLeft.y = Math.min(boundingBox.topLeft.y, p.y - margin);
-        boundingBox.bottomRight.x = Math.max(boundingBox.bottomRight.x, p.x + margin);
-        boundingBox.bottomRight.y = Math.max(boundingBox.bottomRight.y, p.y + margin);
+        boundingBox.bottomRight.x = Math.max(
+            boundingBox.bottomRight.x,
+            p.x + margin
+        );
+        boundingBox.bottomRight.y = Math.max(
+            boundingBox.bottomRight.y,
+            p.y + margin
+        );
     }
     return boundingBox;
 }
@@ -79,9 +86,9 @@ function step(world: World): World {
                 map_ref.set(n.y, map_ref.get(n.y) + 1);
             }
         }
-    };
+    }
 
-    let alive: PointSet = new PointSet;
+    let alive: PointSet = new PointSet();
     for (const [x, row] of potentially_alive.entries()) {
         for (const [y, count] of row) {
             if (count == 3 || (count == 2 && world.alive.has({ x: x, y: y }))) {
@@ -91,11 +98,12 @@ function step(world: World): World {
     }
 
     return {
-        alive: alive, boundingBox: makeBoundingBox(alive, 1)
+        alive: alive,
+        boundingBox: makeBoundingBox(alive, 1),
     };
 }
 
-function get_center(rect: Rect): Point {
+function getCenter(rect: Rect): Point {
     return {
         x: Math.floor((rect.topLeft.x + rect.bottomRight.x) / 2),
         y: Math.floor((rect.topLeft.y + rect.bottomRight.y) / 2),
@@ -105,15 +113,21 @@ function get_center(rect: Rect): Point {
 function render(world: World, context: CanvasRenderingContext2D) {
     let margin = 10;
     let unitPerRow = 20;
-    let unitSize = Math.floor((Math.min(context.canvas.width, context.canvas.height) - margin) / unitPerRow);
+    let unitSize = Math.floor(
+        (Math.min(context.canvas.width, context.canvas.height) - margin) /
+        unitPerRow
+    );
 
-    let center: Point = get_center(world.boundingBox);
+    let center: Point = getCenter(world.boundingBox);
     let canvasRect: Rect = {
         topLeft: { x: 0, y: 0 },
         bottomRight: { x: context.canvas.width, y: context.canvas.height },
     };
-    let canvasCenter: Point = get_center(canvasRect);
-    let offset: Point = { x: center.x * unitSize - canvasCenter.x, y: center.y * unitSize - canvasCenter.y };
+    let canvasCenter: Point = getCenter(canvasRect);
+    let offset: Point = {
+        x: center.x * unitSize - canvasCenter.x,
+        y: center.y * unitSize - canvasCenter.y,
+    };
 
     context.imageSmoothingEnabled = true;
     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
@@ -122,21 +136,25 @@ function render(world: World, context: CanvasRenderingContext2D) {
     for (let x = -unitPerRow / 2; x < unitPerRow / 2; x += 1) {
         for (let y = -unitPerRow / 2; y < unitPerRow / 2; y += 1) {
             if (world.alive.has({ x: x, y: y })) {
-                context.fillStyle = "#333"
+                context.fillStyle = "#333";
             } else {
                 context.fillStyle = "#ccc";
             }
             context.beginPath();
-            context.rect(x * unitSize - offset.x, y * unitSize - offset.y, unitSize, unitSize);
+            context.rect(
+                x * unitSize - offset.x,
+                y * unitSize - offset.y,
+                unitSize,
+                unitSize
+            );
             context.stroke();
             context.fill();
         }
     }
 }
 
-
-function initialize_with_blinker(): World {
-    let alive: PointSet = new PointSet;
+function initWorldWithBlinker(): World {
+    let alive: PointSet = new PointSet();
     alive.add({ x: -1, y: 0 });
     alive.add({ x: 0, y: 0 });
     alive.add({ x: 1, y: 0 });
@@ -144,11 +162,8 @@ function initialize_with_blinker(): World {
     return {
         alive: alive,
         boundingBox: makeBoundingBox(alive, 1),
-    }
+    };
 }
-
-
-let c = document.getElementById("mainCanvas") as HTMLCanvasElement;
 
 function setupCanvas(canvas: HTMLCanvasElement) {
     // Get the device pixel ratio, falling back to 1.
@@ -159,20 +174,27 @@ function setupCanvas(canvas: HTMLCanvasElement) {
     // size * the device pixel ratio.
     canvas.width = rect.width * dpr;
     canvas.height = rect.height * dpr;
-    let ctx = canvas.getContext('2d');
+    let ctx = canvas.getContext("2d");
     // Scale all drawing operations by the dpr, so you
     // don't have to worry about the difference.
     ctx.scale(dpr, dpr);
     return ctx;
 }
 
-let context = setupCanvas(c);
-let world = initialize_with_blinker();
-render(world, context);
-
-function onTimeout() {
-    world = step(world);
+function runMainLoop() {
+    let c = document.getElementById("mainCanvas") as HTMLCanvasElement;
+    let context = setupCanvas(c);
+    let world = initWorldWithBlinker();
     render(world, context);
+
+    function onTimeout() {
+        world = step(world);
+        render(world, context);
+    }
+
+    setInterval(onTimeout, 1000);
 }
 
-setInterval(onTimeout, 1000);
+window.addEventListener("load", function () {
+    runMainLoop();
+});
