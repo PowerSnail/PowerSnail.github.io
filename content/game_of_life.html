@@ -1,0 +1,29 @@
+---
+markup: html
+layout: blank
+---
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Game of Life - Snail Shell</title>
+
+  <!-- <link rel="stylesheet" href="/assets/css/styles.css"> -->
+
+  <meta name="description" content="An implementation of Conway's game of life in the browser">
+
+  <link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+
+<canvas id="mainCanvas" width="600" height="600" style="border:1px solid #000000;">
+
+</canvas> 
+
+{{< get_js "ts/game_of_life.ts" >}}
+</body>
+</html>
