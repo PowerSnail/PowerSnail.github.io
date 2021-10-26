@@ -19,11 +19,25 @@ class PointSet {
         if (!this.points.has(p.x)) {
             this.points.set(p.x, new Set());
         }
-        this.points.get(p.x).add(p.y);
+        let row = this.points.get(p.x);
+        if (row.has(p.y)) {
+            return false;
+        } else {
+            row.add(p.y);
+            return true;
+        }
     }
 
     has(p: Point): boolean {
         return this.points.has(p.x) && this.points.get(p.x).has(p.y);
+    }
+
+    count(): number {
+        let sum = 0;
+        for (const s of this.points.values()) {
+            sum += s.size;
+        }
+        return sum;
     }
 
     *[Symbol.iterator](): Iterator<Point> {
@@ -105,20 +119,21 @@ function step(world: World): World {
 
 function getCenter(rect: Rect): Point {
     return {
-        x: Math.floor((rect.topLeft.x + rect.bottomRight.x) / 2),
-        y: Math.floor((rect.topLeft.y + rect.bottomRight.y) / 2),
+        x: Math.floor((rect.topLeft.x + rect.bottomRight.x) / 2) || 0,
+        y: Math.floor((rect.topLeft.y + rect.bottomRight.y) / 2) || 0,
     };
 }
 
 function render(world: World, context: CanvasRenderingContext2D) {
     let margin = 10;
-    let unitPerRow = 20;
+    let unitPerRow = 100;
     let unitSize = Math.floor(
         (Math.min(context.canvas.width, context.canvas.height) - margin) /
         unitPerRow
     );
 
-    let center: Point = getCenter(world.boundingBox);
+    // let center: Point = getCenter(world.boundingBox);
+    let center: Point = { x: 0, y: 0 };
     let canvasRect: Rect = {
         topLeft: { x: 0, y: 0 },
         bottomRight: { x: context.canvas.width, y: context.canvas.height },
@@ -133,8 +148,8 @@ function render(world: World, context: CanvasRenderingContext2D) {
     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 
     context.strokeStyle = "#fff";
-    for (let x = -unitPerRow / 2; x < unitPerRow / 2; x += 1) {
-        for (let y = -unitPerRow / 2; y < unitPerRow / 2; y += 1) {
+    for (let x = center.x - unitPerRow / 2; x < center.x + unitPerRow / 2; x += 1) {
+        for (let y = center.y - unitPerRow / 2; y < center.y + unitPerRow / 2; y += 1) {
             if (world.alive.has({ x: x, y: y })) {
                 context.fillStyle = "#333";
             } else {
@@ -151,6 +166,12 @@ function render(world: World, context: CanvasRenderingContext2D) {
             context.fill();
         }
     }
+
+    if (world.alive.count() == 0) {
+        context.fillStyle = "#00000044";
+        context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+        return;
+    }
 }
 
 function initWorldWithBlinker(): World {
@@ -163,6 +184,27 @@ function initWorldWithBlinker(): World {
         alive: alive,
         boundingBox: makeBoundingBox(alive, 1),
     };
+}
+
+function initWorldRandomly(count_alive: number, range: Rect): World {
+    let alive: PointSet = new PointSet();
+    let width = range.bottomRight.x - range.topLeft.x;
+    let height = range.bottomRight.y - range.topLeft.y;
+
+    for (let n = 0; n < count_alive; n++) {
+        while (
+            !alive.add({
+                x: Math.floor(Math.random() * width) + range.topLeft.x,
+                y: Math.floor(Math.random() * height) + range.topLeft.y,
+            })
+        ) {
+            // Nothing
+        }
+    }
+
+    return {
+        alive: alive, boundingBox: makeBoundingBox(alive, 1)
+    }
 }
 
 function setupCanvas(canvas: HTMLCanvasElement) {
@@ -184,15 +226,21 @@ function setupCanvas(canvas: HTMLCanvasElement) {
 function runMainLoop() {
     let c = document.getElementById("mainCanvas") as HTMLCanvasElement;
     let context = setupCanvas(c);
-    let world = initWorldWithBlinker();
+    let world = initWorldRandomly(500, { topLeft: { x: -15, y: -15 }, bottomRight: { x: 15, y: 15 } });
+    // let world = initWorldWithBlinker();
     render(world, context);
+
+    let intervalId: number = null;
 
     function onTimeout() {
         world = step(world);
         render(world, context);
+        if (world.alive.count() == 0) {
+            clearInterval(intervalId);
+        }
     }
 
-    setInterval(onTimeout, 1000);
+    intervalId = setInterval(onTimeout, 100);
 }
 
 window.addEventListener("load", function () {
