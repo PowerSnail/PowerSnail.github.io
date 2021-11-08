@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://powersnail.com/"
 languageCode = "en-us"
 title = "SnailShell"
 theme = "rocinante"
