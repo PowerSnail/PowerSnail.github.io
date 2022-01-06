@@ -15,7 +15,7 @@ hasCJKLanguage = true
     lineNoStart = 1
     lineNumbersInTable = true
     noClasses = true
-    style = 'dracula'
+    style = 'pygments'
     tabWidth = 4
 
 [author]
