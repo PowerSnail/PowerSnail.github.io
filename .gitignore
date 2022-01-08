@@ -4,3 +4,4 @@ _site
 resources/_gen
 .vscode/
 output/
+node_modules
