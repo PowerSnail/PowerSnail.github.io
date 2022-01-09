@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+  <nav>
+    {{- range $index, $section := .Site.Sections -}}
+    <a href="{{ $section.RelPermalink }}"> {{ $section.Title }}</a
+    ><span class="bar-delimiter">|</span>
+    {{- end }} {{ with .Site.GetPage "/about" }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  </nav>
+</div>

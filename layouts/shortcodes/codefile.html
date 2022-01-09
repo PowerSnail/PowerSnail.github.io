@@ -1,0 +1,4 @@
+{{ $lang := .Get 0 }}
+{{ $input := .Get 1 }}
+{{ $code := os.ReadFile $input }} 
+{{ highlight $code $lang "" }}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ $.Param "lang" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
+
+    {{ $mvp_css := resources.Get "css/mvp.scss" | resources.ToCSS | resources.Minify | resources.PostCSS | fingerprint }}
+    <link rel="stylesheet" href="{{ $mvp_css.RelPermalink }}" />
+
+    <link rel="icon" href="/favicon.ico">
+    {{ with .Site.Params.favicon }}
+    <link rel="shortcut icon" href="{{ . }}" type="image/svg+xml">
+    {{ end }}
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    {{ if or (.Params.mathjax) (.IsNode) }}{{ partial "mathjax_support.html" . }}{{ end }}
+
+  </head>
+<body>
+  <header>
+    {{ partial "header.html" . }}
+  </header>
+  <main>
+    {{- block "main" . }}{{- end }}
+  </main>
+  <footer>
+    {{- partial "footer.html" . -}}
+  </footer>
+</body>
+</html>
