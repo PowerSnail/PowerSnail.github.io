@@ -6,8 +6,8 @@
     
     <title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
 
-    {{ $mvp_css := resources.Get "css/mvp.scss" | resources.ToCSS | resources.Minify | resources.PostCSS | fingerprint }}
-    <link rel="stylesheet" href="{{ $mvp_css.RelPermalink }}" />
+    {{ $style := resources.Get "css/style.scss" | resources.ToCSS | resources.Minify | resources.PostCSS | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
     <link rel="icon" href="/favicon.ico">
     {{ with .Site.Params.favicon }}
