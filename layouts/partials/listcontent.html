@@ -20,19 +20,8 @@
         <p><a href="{{.RelPermalink}}"><img src="{{ $image.RelPermalink }}"></a></p>
         {{ end }}
     </div>
-    {{ if eq .Type "photos" }}
-        {{ if gt (len .Resources) 1 }}
-            <div class="read-more">
-                <a href="{{ .RelPermalink }}">See {{ len .Resources }} photos ›</a>
-            </div>
-        {{ end }}
-    {{ else }}
-        {{ if .Truncated }}
-            <div class="read-more">
-                <a href="{{ .RelPermalink }}">Read more ›</a>
-            </div>
-        {{ end }}
-    {{ end }}
-
+    <div class="read-more">
+        <a href="{{ .RelPermalink }}">Read more ›</a>
+    </div>
 </article>
 {{ end }}

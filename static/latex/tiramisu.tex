@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{bookman}
+\thispagestyle{empty}
+
+\setlength{\tabcolsep}{16pt}
+\newcommand{\tabletitle}[1]{\midrule\multicolumn{3}{l}{\textbf{\color{BrickRed} \MakeUppercase{#1}}}}
+
+\begin{document}
+
+\begin{tabular}{lll} \toprule
+  \textbf{Ingredients} & \textbf{Quantity} & \textbf{Instruction}                            \\
+  \tabletitle{Sabayon}                                                                                                                   \\
+  Egg yolks            & 3                 & Bring water to a boil and turn down to a simmer \\
+  Sugar                & 100g              & Beat egg yolks and sugar in a bowl over steam   \\
+  Mascarpone           & 220g              & Whip for 10 minutes                             \\
+                       &                   & Remove from heat, and whip until cool           \\
+                       &                   & Fold in mascarpone                              \\
+  \tabletitle{Ladyfinger}                                                                    \\
+  Coffee               & 200g              & Dip Ladyfingers in coffee                       \\
+  Ladyfinger           & 30                &                                                 \\
+  \tabletitle{Assemble}                                                                      \\
+                       &                   & Place a layer of ladyfingers                    \\
+                       &                   & Spoon a layer of Sabayon                        \\
+                       &                   & Repeat                                          \\
+                       &                   & Refrigerate                                     \\
+  \bottomrule
+\end{tabular}
+
+\end{document}
