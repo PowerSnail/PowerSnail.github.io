@@ -1,12 +1,24 @@
 @import "mvp";
+@import "friendly";
+@import "color";
+
+table tr:nth-child(even) {
+  background-color: inherit;
+}
 
 /* Quotes */
 blockquote {
-  display: block;
+  font-size: inherit;
   border-left: 2px solid var(--color-accent);
+  margin: inherit;
+  padding: inherit;
   padding-left: 1em;
-  margin-left: 1em;
-  line-height: var(--line-height);
+  padding-right: 1em;
+  text-align: inherit;
+}
+
+code {
+  background-color: inherit;
 }
 
 /* Customizations */
@@ -25,10 +37,10 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   display: flex;
-  color: Gainsboro;
+  color: var(--color-head);
 
   a {
-    color: Gainsboro;
+    color: var(--color-head);
   }
 
   h1 {
@@ -81,10 +93,8 @@ header {
 }
 
 .paginator {
-  margin: 2em 0;
-  .disabled {
-    color: var(--color-text-secondary);
-  }
+  margin: 0;
+  margin-top: 3em;
   .newer {
     float: right;
     clear: both;
@@ -105,4 +115,8 @@ header {
     padding-right: 1em;
     margin-left: 0.5em;
   }
+}
+
+sup {
+  background-color: var(--color-bg-secondary);
 }

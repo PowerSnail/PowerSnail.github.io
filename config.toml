@@ -13,7 +13,7 @@ hasCJKLanguage = true
     lineAnchors = ''
     lineNoStart = 1
     lineNumbersInTable = true
-    noClasses = true
+    noClasses = false
     style = 'pygments'
     tabWidth = 4
 

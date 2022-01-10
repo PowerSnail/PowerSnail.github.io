@@ -6,5 +6,8 @@ latex-svg name:
 mathjax-update:
     wget --output-document "themes/rocinante/assets/js/tex-svg.js" "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js"
 
+change-color color:
+    python tool_scripts/make_theme.py "{{ color }}" > assets/css/_color.scss
+
 serve:
     hugo serve -D --port 1313
