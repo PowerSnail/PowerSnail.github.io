@@ -6,15 +6,19 @@ table tr:nth-child(even) {
   background-color: inherit;
 }
 
+:root {
+  --width-content: 800px;
+}
+
 /* Quotes */
 blockquote {
   font-size: inherit;
   border-left: 2px solid var(--color-accent);
   margin: inherit;
-  padding: inherit;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 1px 1px 1px 16px;
   text-align: inherit;
+  max-width: inherit;
+  background-color: var(--color-accent);
 }
 
 code {
@@ -123,4 +127,9 @@ sup {
 
 .read-more {
   padding-top: 1em;
+}
+
+.date {
+  font-weight: 600;
+  padding-bottom: 1em;
 }
