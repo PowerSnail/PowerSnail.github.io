@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ $.Param "lang" }}">
   <head>
-    <meta charset="utf-8">
+    <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
     
     {{ $css := resources.Get "css/style.scss" | resources.ToCSS | resources.Minify | resources.PostCSS | fingerprint }}
