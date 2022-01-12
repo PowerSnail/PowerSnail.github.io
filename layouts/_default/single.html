@@ -8,9 +8,8 @@
             <div class="date">{{ .Params.date.Format "Jan 02, 2006" }}</div>
         </div>
         <article class="content">
-            {{ .Content }}
+            {{ replaceRE `(?ms)^<section class="footnotes" role="doc-endnotes">\s*(.*)\s</section>` "$1" .Content | safeHTML }}
         </article>
-        <hr>
         {{ with .Params.tags }}
             <div class="tags">
                 <span title="Tags">🏷</span>
