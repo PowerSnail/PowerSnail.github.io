@@ -116,7 +116,7 @@ Let $\pmb{u}_1, \pmb{u}_2, ..., \pmb{u}_m$ and $\pmb{u}$ be vectors in $\mathbb{
 
 ### Theorem 2.8
 
-Let ${\pmb{u}_1, \pmb{u}_2, ..., \pmb{u}_m}$ be a set of vectors in $\mathbb{R}^n$. If $m < n$, then this set does not span $\mathbb{R}^n$. If $m \geq n$, then the set might span $\mathbb{R}^n$ or it might not. In this case, we cannot say more without additional information about the vectors.
+Let ${\pmb{u}_1, \pmb{u}_2, ..., \pmb{u}_m}$ be a set of vectors in $\mathbb{R}^n$. If $m < n$, then this set does not span $\mathbb{R}^n$. If $m \geq n$, then the set might span $\mathbb{R}^n$, or it might not. In this case, we cannot say more without additional information about the vectors.
 
 <a name="2.9"></a>
 
@@ -144,7 +144,7 @@ Let ${ \pmb{u}_1,  \pmb{u}_2, ...,  \pmb{u}_m}$ be a set of vectors in $\mathbb{
 
 $$ x_1 \pmb{u}_1,  x_2 \pmb{u}_2, ...,  x_m \pmb{u}_m = \pmb{0}$$
 
-is the trivil solution given by $x_1 = x_2 = ... = x_m = 0$, then the set ${ \pmb{u}_1   \pmb{u}_2  ...   \pmb{u}_m}$ is **linearly independent**. If there are nontrivial solutions, then the set is **linearly dependent**.
+is the trivial solution given by $x_1 = x_2 = ... = x_m = 0$, then the set ${ \pmb{u}_1   \pmb{u}_2  ...   \pmb{u}_m}$ is **linearly independent**. If there are nontrivial solutions, then the set is **linearly dependent**.
 
 ### Theorem 2.12
 
@@ -179,7 +179,7 @@ Then all solution $\pmb{x}_g$ to it have the form $ \pmb{x}_g - \pmb{x}_p + \pmb
 
 ### Theorem 2.19: The Big Theorem - Version 1
 
-Let $\mathcal{A} = { \pmb{a}_1 ,  \pmb{a}_2 , ... ,  \pmb{a}_m}$ be a set of $n$ vectors in $\mathbb{R}^n$, an dlet $A = \begin{bmatrix} \pmb{a}_1 & \pmb{a}_2 & ... & \pmb{a}_m \end{bmatrix}$. Then the followign are equivalent:
+Let $\mathcal{A} = { \pmb{a}_1 ,  \pmb{a}_2 , ... ,  \pmb{a}_m}$ be a set of $n$ vectors in $\mathbb{R}^n$, and let $A = \begin{bmatrix} \pmb{a}_1 & \pmb{a}_2 & ... & \pmb{a}_m \end{bmatrix}$. Then the following are equivalent:
 
 1. $\mathcal{A}$ spans $\mathbb{R}^n$.
 2. $\mathcal{A}$ is linearly independent.

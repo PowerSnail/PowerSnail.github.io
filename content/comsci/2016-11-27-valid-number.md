@@ -19,9 +19,9 @@ The question asks the programmer to validate whether a string is a valid represe
 4. integer and real number can be signed
 5. ignore any surrounding white spaces
 
-In order to solve the problem in linear time, most solutions set a few flags. This is smple, and quite efficient in both time and space. In fact, I don't really consider this problem qualified for _hard_.
+In order to solve the problem in linear time, most solutions set a few flags. This is simple, and quite efficient in both time and space. In fact, I don't really consider this problem qualified for _hard_.
 
-Just to add some fun, this problem can be solved using a very textbook DFA. The code is elegant, less space efficient (but only for a constant amount) than the flag algorithm. In fact, the latter is just a compact, specialized DFA in essense. The trade off is more variables and branching.
+Just to add some fun, this problem can be solved using a very textbook DFA. The code is elegant, less space efficient (but only for a constant amount) than the flag algorithm. In fact, the latter is just a compact, specialized DFA in essence. The trade-off is more variables and branching.
 
 ## The Algorithm
 
@@ -111,7 +111,7 @@ $$
 
 The DFA will terminate when
 
-- input is deplete
+- input is depleted
 - state is `FAULT`
 
 The string will be accepted if the termination state is one of following:

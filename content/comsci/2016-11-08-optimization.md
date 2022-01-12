@@ -1,8 +1,8 @@
 ---
 title: "Code Optimizations"
 tags:
-    - com arc
-    - notes
+  - com arc
+  - notes
 date: "2016-11-08"
 ---
 
@@ -14,9 +14,9 @@ for i in rows
         b[i][j] = a[j][i]
 ```
 
-However, it might be the case that we do not know the size at *compilation time*, so we cannot statically declare this 2D array. Therefore, for this to work, `b[i][j]` needs to be a pointer to an array.
+However, it might be the case that we do not know the size at _compilation time_, so we cannot statically declare this 2D array. Therefore, for this to work, `b[i][j]` needs to be a pointer to an array.
 
-To optimize, we usea 1-D array by flattening the table:
+To optimize, we use a 1-D array by flattening the table:
 
 ```ruby
 a[i][j] -> a[i * N + j]
@@ -37,12 +37,12 @@ For readability, let us assume that we can write `b[i, j]` for this.
 
 `b[i, j] = a[j, i]` vs. `b[j, i] = a[i, j]`
 
-| |Temperal Locality| Spacial Locality |
-|---|---|---|
-| `b[i, j]` | No | Yes |
-| `a[j, i]` | No | No |
-| `b[j, i]` | No | No |
-| `a[i, j]` | No | Yes |
+|           | Temporal Locality | Spacial Locality |
+| --------- | ----------------- | ---------------- |
+| `b[i, j]` | No                | Yes              |
+| `a[j, i]` | No                | No               |
+| `b[j, i]` | No                | No               |
+| `a[i, j]` | No                | Yes              |
 
 So, either is bad.
 
@@ -60,12 +60,12 @@ Note that for each block, the destination is still the desired position and ther
 
 ### Right size of block size
 
-if `block.size` is one (operation), this is meaningless
+If `block.size` is one (operation), this is meaningless
 if `block.size` is $N$, this is also meaningless.
 
-**Good!** : `block.size` = $k \times ${cache line size}$
+**Good!**: `block.size` = $k \times ${cache line size}$
 
-*NOTE: although it is not possible to optimize the performance without benchmarking on the machine, we can generally optimize it based on some trials.*
+_NOTE: although it is not possible to optimize the performance without benchmarking on the machine, we can generally optimize it based on some trials._
 
 ### Implementation
 
@@ -94,7 +94,7 @@ for (B_i = 0; B_i < N; B_i++) {
 
 If we only look at the inner loop, it still looks like we do not have spatial locality for at least one query. However, because of blocking, all information are in cache and locality does not matter anymore.
 
-### loop variables
+### Loop variables
 
 `B_j + B_size` is run every time with the loop.
 If we use a variable to store the value, the performance will increase.
@@ -104,9 +104,9 @@ If we use a variable to store the value, the performance will increase.
 ### Disadvantage
 
 1. Not changing semantics
-2. Limited Contac
+2. Limited Contact
 3. Conservative Heuristics
-    - A *Guess Work**
+   - A \*Guess Work\*\*
 
 For example,
 
@@ -142,7 +142,7 @@ jmp Loop
 End:
 ```
 
-Only 2/5 of the operations are doing the actual work! The book-keeping is taking a great portion of our time.
+Only 2/5 of the operations are doing the actual work! The bookkeeping is taking a great portion of our time.
 
 The simple solution is to put more operations into the loop:
 
@@ -158,12 +158,11 @@ for (int i = 0; i < N; )
 }
 ```
 
-**Caveat**: the unrolled loop operations might exceed `N`, therefore we need to change the boundary: `for (int i = 0; i <  N - 2; )`.
+**Caveat**: the unrolled loop operations might exceed `N`, therefore we need to change the boundary: `for (int i = 0; i < N - 2; )`.
 
 If `N` is big, this should not hurt the performance overall. The advantage of unrolling loops will be more important.
 
-**Unrolling Too Much**: intruction cache miss (But this is unlikely, as it would take quite a number of unrollings to do that)
-
+**Unrolling Too Much**: instruction cache miss (But this is unlikely, as it would take quite a number of unrolling to do that)
 
 ## Function Inlining
 
@@ -172,7 +171,6 @@ If `N` is big, this should not hurt the performance overall. The advantage of un
 **Caller/Callee Convention**
 
 > `%rax` is a caller saved register. Before calling the subroutine, the caller need to push `%rax` onto the stack, and pop it afterwards. So that the callee can change `%rax` as he wants.
-
 
 These are tedious work to store register values. In order to avoid this, we inline functions.
 

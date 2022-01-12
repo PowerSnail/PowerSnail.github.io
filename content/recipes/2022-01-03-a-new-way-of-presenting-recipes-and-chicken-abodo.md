@@ -17,11 +17,11 @@ I bumped into a site called [Cooking for Engineers](http://www.cookingforenginee
 
 \* Copied from [this recipe](http://www.cookingforengineers.com/recipe/59/Chicken-Mushroom-Marsala)
 
-The drawback of this method is that it's not easily written in markdown, which is sadly the backbone of Hugo. Markdown table is not as flexible as the html one, but the html one, with a lot of spans, is not readable inside a markdown file. Not to mention the fact that I probably have to further mess with the CSS to hide some of the cell walls.
+The drawback of this method is that it's not easily written in Markdown, which is sadly the backbone of Hugo. Markdown table is not as flexible as the HTML one, but the HTML one, with a lot of spans, is not readable inside a markdown file. Not to mention the fact that I probably have to further mess with the CSS to hide some cell walls.
 
 ## Modernist Cuisine
 
-I encountered another website Modernist Cuisine, which, too, offered their own summary card for each recipe. Instead of a hacky html table, they chose to upload an image of a better-formatted table, like the one on this [page](https://modernistcuisine.com/recipes/hanukkah-short-ribs/).
+I encountered another website Modernist Cuisine, which, too, offered their own summary card for each recipe. Instead of a hacky HTML table, they chose to upload an image of a better-formatted table, like the one on this [page](https://modernistcuisine.com/recipes/hanukkah-short-ribs/).
 
 It's not as succinct as the approach taken by Cooking for Engineers. The pro is that the procedure is listed in chronological order. The con is that it's not immediately obvious what can be made in parallel.
 
@@ -31,7 +31,7 @@ So, I decided to go with the Modernist's approach.
 
 ## Chicken Abodo
 
-Chicken Abodo is a famous dish from the Philippines, which I first saw on [J. Kenji López-Alt](http://www.kenjilopezalt.com/)'s Youtube channel. At the time I took some short notes on my phone:
+Chicken Abodo is a famous dish from the Philippines, which I first saw on [J. Kenji López-Alt](http://www.kenjilopezalt.com/)'s YouTube channel. At the time I took some short notes on my phone:
 
 ```markdown
 - Sear the chicken, lightly salted
@@ -50,7 +50,7 @@ And to convert this into an image, which tightly bounds the table rather than be
 
 ![Recipe Summary for Chicken Abodo](/images/chicken-abodo.svg)
 
-This is the final result of a printable, succinct, summary card for my chicken abodo recipe. Gotta admit that after reading on the web (and fiddling with HTML and CSS) for so long, there's something very satisfying about LaTeX. It just looks nice.
+This is the final result of a printable, succinct, summary card for my chicken abodo recipe. After reading on the web (and fiddling with HTML and CSS) for so long, there's something very satisfying about LaTeX. It just looks nice.
 
 I then wrote a [Justfile](https://github.com/casey/just) recipe to automate the process:
 

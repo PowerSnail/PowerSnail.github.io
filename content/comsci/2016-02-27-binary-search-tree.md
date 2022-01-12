@@ -1,10 +1,10 @@
 ---
 title: "Binary Search Tree implemented by C++"
 tags:
-    - computer science
-    - Algorithms
-    - BST
-    - Data Structure
+  - computer science
+  - Algorithms
+  - BST
+  - Data Structure
 date: "2016-02-27"
 ---
 
@@ -67,7 +67,7 @@ The top node is called root, and the nodes that do not have a child are called l
 
 ## Traversals
 
-The recursive inorder traversal is easy to implement:
+The recursive in-order traversal is easy to implement:
 
 ```cpp
 void BST::inorderRec(Node* node)
@@ -90,17 +90,17 @@ auto prev = nil;
 
 For an arbitrary iteration, there are three possibilities:
 
-1. `prev` is the parent of `x`. It means we have been going downwards in the tree, and both left branch and right branch of `x` has not yet been explored; then as inorder traversal requires, we go left from here.
+1. `prev` is the parent of `x`. It means we have been going downwards in the tree, and both left branch and right branch of `x` has not yet been explored; then as in-order traversal requires, we go left from here.
 2. `prev` is the left child of `x`. This means we have just come back from the left branch, implying that the left is already printed. Now we have to print `x` itself and going to the right.
-3. `prev` is the right child of `x`. This means we have printed the everything in the subtree rooted at `x`, and should now go up.
+3. `prev` is the right child of `x`. This means we have printed everything in the subtree rooted at `x`, and should now go up.
 
-`prev` pointing at  | printed subtree
----------|----------------
-`-> parent` | none
-`-> left`   | rooted at `left`
-`-> right`  | rooted at `x`
+| `prev` pointing at | printed subtree  |
+| ------------------ | ---------------- |
+| `-> parent`        | none             |
+| `-> left`          | rooted at `left` |
+| `-> right`         | rooted at `x`    |
 
-The trick here is to 1) progress the printing and 2) ensure that at the end of each iteration, the *invariant* is preserved, i.e. the situation falls into one of the situations.
+The trick here is to 1) progress the printing and 2) ensure that at the end of each iteration, the _invariant_ is preserved, i.e. the situation falls into one of the situations.
 
 #### `prev` Pointing at Parent
 
@@ -111,8 +111,7 @@ prev = x;
 x = x -> left;
 ```
 
-We need to consider the case where `left` is nil, but this is easy because we can just throw `prev` to left. This works because if we examine the *loop invariant*, now the tree complies with the second situation.
-
+We need to consider the case where `left` is nil, but this is easy because we can just throw `prev` to left. This works because if we examine the _loop invariant_, now the tree complies with the second situation.
 
 #### `prev` Pointing at left
 
@@ -121,7 +120,6 @@ Left tree is already printed (we consider `nil` as printed), so we try to go rig
 There is a slight complication if `x` is a leaf, as both children are `nil`. We would not be able to know whether we have come back from left or right! The traversal will circle around at `x` forever.
 
 ![From Left to Right](/images/fromlefttoright.jpg){:width="36px"}.
-
 
 The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.
 
@@ -150,8 +148,7 @@ x = x -> parent;
 
 ## Insertion
 
-Insertion always occur at leaf in a BST. Generally, we need to 1) find a proper leaf as the parent of our new node and 2) insert the it into the proper child of the leaf.
-
+Insertion always occur at leaf in a BST. Generally, we need to 1) find a proper leaf as the parent of our new node and 2) insert it into the proper child of the leaf.
 
 ## <a name="sentinelNode"></a> Sentinel Node
 
@@ -159,31 +156,10 @@ How is a sentinel node useful? There are several uses of it, and the most import
 
 `NULL` is a very bad design from the very beginning, as it is passed into a function as `pointer type` but is not a `pointer` at all. Any attempt to call a member function will cause a crush. It is also hard to debug, especially when there are layers of function calls. You cannot dereference a null pointer in debugger; it points to 0x00000000, which has no useful information at all.
 
-A sentinel `nil` on the other hand is a legitimate `Node` object. It has all functions supported, and could be more useful for debugging. It is printable and assignable.
+A sentinel `nil` on the other hand is a legitimate `Node` object. It has all functions supported, and could be more useful for debugging. Debugging-wise, it is printable and assignable.
 
 It is also used as the parent of `root` in our tree. This eliminates the difference between an empty tree and non-empty tree, so insertion and removal of `root` could be carried out without an extra conditional branch.
 
 ## Codes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!--  -->

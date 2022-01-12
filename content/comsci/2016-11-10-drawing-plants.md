@@ -22,7 +22,7 @@ Planes: *Good!*
 
  - Ops, *Bad*
 
-Fractals! : *Good!*
+Fractals!: *Good!*
 
  - Ops, *Bad*
 
@@ -67,7 +67,7 @@ This can be easily modelled by a Computer Science Tree.
 Pruning: Move the pointer of active buds to the next node closer to root after the cut. 
 
 
-Side Bugs will have their own grows over time. 
+Side Bugs will have their own growth over time. 
 
 
 ### Basic Structure of Plants
@@ -92,7 +92,7 @@ Most leaves have simple structures. They either have parallel veins, or a princi
 
 Leaves are hard to draw, not because of the shape, but because leaves are designed to absorb light. It has to let the light in but little light out.
 
-Four things affects its appearance:
+Four things affect its appearance:
 
 - Surface
 - Thickness
@@ -101,18 +101,18 @@ Four things affects its appearance:
 
 ##### Surface
 
-Some leaves have a tendency to dry, by having either wax or fur. Wax results in high reflectivity. Therefore, there has to be a lot of shine. This is just specularity for modelling. Fur, on the other hand, is complicated. When furs, especially short furs, are struck by light, it is more interesting.Example of furry plants: Peach Fruit
+Some leaves have a tendency to dry, by having either wax or fur. Wax results in high reflectivity. Therefore, there has to be a lot of shine. This is just specularity for modelling. Fur, on the other hand, is complicated. When furs, especially short furs, are struck by light, it is more interesting. Example of furry plants: Peach Fruit
 ![peach](http://www.fumari.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/h/o/hookah-tobacco-white-peach.png)
 
-It is more fuzzy when the angle is getting perpendicular to our plane, because there are more furs that light has to travel through. When we model it, we have two colors, for surface and for furs independently, mixed according to the angle between the *Normal* of surface and *eye* vector. ie. $$\nabla N \cdot \nabla e$
+It is more fuzzy when the angle is getting perpendicular to our plane, because there are more furs that light has to travel through. When we model it, we have two colors, for surface and for furs independently, mixed according to the angle between the *Normal* of surface and *eye* vector. i.e. $$\nabla N \cdot \nabla e$
 
 ##### Thickness
 
-Sub-surface Scattering occurs in leaves, and the thicker the leaves are, the more light bounces inside the leaves. Moreover, there are chlorophylls inside the leaves that absorb different light wavelengths. 
+Sub-surface Scattering occurs in leaves, and the thicker the leaves are, the more light bounces inside the leaves. Moreover, there is chlorophyll inside the leaves that absorb different light wavelengths. 
 
 ##### Translucency
 
-This is dependent on the concentration of chlorophylls. The less chlorophyll, the more transparent the leaves are.
+This is dependent on the concentration of chlorophyll. The less chlorophyll, the more transparent the leaves are.
 
 ##### Layers
 

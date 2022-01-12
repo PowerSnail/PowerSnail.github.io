@@ -1,21 +1,21 @@
 ---
 title: "Gradient Detection Convolutions, Seam Carving, and Patch March"
 tags:
-    - graphics
-    - notes
+  - graphics
+  - notes
 date: "2016-11-03"
 ---
 
-## gradient detection convolutions
+## Gradient detection convolutions
 
 Square instead of rectangle: to avoid problems concerning diagonal
-  - usually 3 x 3
+
+- usually 3 x 3
 
 ## edge detection
 
 - apply gradient detection convolution
 - find where gradient appears
-
 
 ```
 
@@ -26,7 +26,6 @@ Square instead of rectangle: to avoid problems concerning diagonal
  ******************************
  ******************************
 ```
-
 
 - find maximum gradient points
 - edge is perpendicular to gradients
@@ -43,7 +42,7 @@ ALGORITHM
 - treat the picture as a graph
 - each pixel is connected to neighboring pixels
 - cost minimization
-  - cost = 1 - gradient  // higher gradient, better to choose
+  - cost = 1 - gradient // higher gradient, better to choose
   - optionally, cost for diagonal is higher, etc.
 - simply adding up cost of each step
 
@@ -53,7 +52,7 @@ automatic algorithm: k neighbor
 
 It finds pixels that are close in color-space & geometry, and connect them. By tweaking the weight of adjacency and color-space closeness, we can have different results. This can be used in color reduction. It reduces the amount of gradient exists in the graph.
 
-[segmentation](https://en.wikipedia.org/wiki/Image_segmentation)
+[Segmentation](https://en.wikipedia.org/wiki/Image_segmentation)
 
 ## Image Processing Algorithms: Machine Learning
 
@@ -103,28 +102,31 @@ Use magnitude of gradient to approximate the "interestingness".
 
 In order to get a better estimate, we might need to blur the image a little bit.
 
-*NOTE: the reason that the gradient image on Wikipedia has squares is because JPEG compression*
+_NOTE: the reason that the gradient image on Wikipedia has squares is because JPEG compression_
 
 **How to decide what to remove?**
 
 In order to narrow an image for 1 pixel, every row needs to be smaller by 1 pixel.
 
 1. For each row, pick the least interesting pixel
-  - [FAILED]
-  - line shifts, and the image will be distorted
+
+- [FAILED]
+- line shifts, and the image will be distorted
 
 2. Select one vertical line
-  - [FAILED]
-  - This will create a visible vertical line of discontinuous
 
-3. Make sure that pixels removed are *adjacent* to each other
-  - [CORRECT]
-  - After selecting one pixel, select one of the 3 pixels below it.
-  - Pick first pixel:
-    - dynamic programming
-    - minimize cost from first row to each pixel of the next row
-    - for each pixel, we have a `prev`, and a minimized accumulative cost
-    - at the last row, find the smallest accumulative cost, and follow the `prev`s back up to generate the path to be cut.
+- [FAILED]
+- This will create a visible vertical line of discontinuous
+
+3. Make sure that pixels removed are _adjacent_ to each other
+
+- [CORRECT]
+- After selecting one pixel, select one of the 3 pixels below it.
+- Pick first pixel:
+  - dynamic programming
+  - minimize cost from first row to each pixel of the next row
+  - for each pixel, we have a `prev`, and a minimized accumulative cost
+  - at the last row, find the smallest accumulative cost, and follow the `prev`s back up to generate the path to be cut.
 
 **Enlarging the image with the same algorithm**
 
@@ -171,58 +173,3 @@ Another improvement could be giving the algorithm more images to draw patches fr
 - Although human cannot see some anomalies, computers can detect them
 - 3D Geometric features:
   - shadow length / light source angle
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

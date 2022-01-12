@@ -8,7 +8,7 @@ date: "2021-02-24"
 
 # Summary
 
-The book was the execution of ten people, carried out on an isolated island. Ten people of very different backgrounds were invited, by various ruses, to come on to the island. A recorded voice blared out accusations, that each of them had committed a murder and escaped the punishment of the law. One by one, they started dying, in a similar manner as described by a nursery rhyme that was carved in their bedrooms. A rich young man died by poison. The maid died by sleeping pill overdose. No one else was on the island, so the murderer must be among themselves, but despite their effort at self-preservation, the killing continued. The general was killed by the sea. The butler was chopped by an ax. The old distinguished lady was again poisoned with cyanide, while a bumble bee was present, as a symbol for bee sting. They searched for poisons and weapons, but then, the Judge was shot when they rushed to help the young lady. The doctor ran out of the house and vanished at midnight. The ex-policeman was killed by a bear-shaped clock dropped from a window. The last two, Vera the young lady, and Lombard the shady hard man, found the corpse of the doctor floating in the sea. Now that there was no other option, Vera though Lombard was the murderer. She cheated him, stole his gun, and shot him dead. Then, as she came back to her room, she was so moved by the murder, the shooting, and the guilt, she committed suicide.
+The book was the execution of ten people, carried out on an isolated island. Ten people of very different backgrounds were invited, by various ruses, to come on to the island. A recorded voice blared out accusations, that each of them had committed a murder and escaped the punishment of the law. One by one, they started dying, in the same manner as described by a nursery rhyme that was carved in their bedrooms. A rich young man died by poison. The maid died by sleeping pill overdose. No one else was on the island, so the murderer must be among themselves, but despite their effort at self-preservation, the killing continued. The general was killed by the sea. The butler was chopped by an axe. The old distinguished lady was again poisoned with cyanide, while a bumblebee was present, as a symbol for bee sting. They searched for poisons and weapons, but then, the Judge was shot when they rushed to help the young lady. The doctor ran out of the house and vanished at midnight. The ex-policeman was killed by a bear-shaped clock dropped from a window. The last two, Vera the young lady, and Lombard the shady hard man, found the corpse of the doctor floating in the sea. Now that there was no other option, Vera though Lombard was the murderer. She cheated him, stole his gun, and shot him dead. Then, as she came back to her room, she was so moved by the murder, the shooting, and the guilt, she committed suicide.
 
 The judge was the mastermind. His death was faked by the doctor, who was convinced that faking the death would help draw out the real murderer.
 
@@ -56,7 +56,7 @@ Page 9 Location 198
 
 Page 11 Location 221
 
-> Tony Marston, roaring down into Mere, thought to himself: “The amount of cars crawling about the roads is frightful. Always something blocking your way. And they will drive in the middle of the road! Pretty hopeless driving in England, anyway…. Not like France where you really could let out….”
+> Tony Marston, roaring down into Mere, thought to himself: "The amount of cars crawling about the roads is frightful. Always something blocking your way. And they will drive in the middle of the road! Pretty hopeless driving in England, anyway…. Not like France where you really could let out…."
 
 Page 12 Location 237
 
@@ -78,13 +78,13 @@ Page 51 Location 842
 
 Page 101 Location 1612
 
-> He cleared his throat and said in a would-be conversational tone: “Nice peaceful spot you’ve found for yourself, sir.”
+> He cleared his throat and said in a would-be conversational tone: "Nice peaceful spot you've found for yourself, sir."
 
 ## Chapter Nine
 
 Page 130 Location 2076
 
-> Blore said: “That’s what happened. Absolutely. And that lets out the judge, Mr. Lombard, myself and Miss Claythorne.” His voice was loud and jubilant. Mr. Justice Wargrave, bringing a cold eye to bear upon him, murmured: “Ah, but does it? We must take into account every possible eventuality.”
+> Blore said: "That's what happened. Absolutely. And that lets out the judge, Mr. Lombard, myself and Miss Claythorne." His voice was loud and jubilant. Mr. Justice Wargrave, bringing a cold eye to bear upon him, murmured: "Ah, but does it? We must take into account every possible eventuality."
 
 ## Chapter Eleven
 
@@ -94,13 +94,13 @@ Page 149 Location 2358
 
 Page 150 Location 2381
 
-> The little party moved through the house. Rogers’ room, as Philip Lombard had already ascertained, was untenanted. The bed had been slept in, and his razor and sponge and soap were wet.
+> The little party moved through the house. Rogers' room, as Philip Lombard had already ascertained, was untenanted. The bed had been slept in, and his razor and sponge and soap were wet.
 
 ## Chapter Sixteen
 
 Page 216 Location 3420
 
-> Aeons passed … worlds spun and whirled … Time was motionless … It stood still—it passed through a thousand ages…. No, it was only a minute or so … Two people were standing looking down on a dead man…. Slowly, very slowly, Vera Claythorne and Philip Lombard lifted their heads and looked into each other’s eyes….
+> Aeons passed … worlds spun and whirled … Time was motionless … It stood still—it passed through a thousand ages…. No, it was only a minute or so … Two people were standing looking down on a dead man…. Slowly, very slowly, Vera Claythorne and Philip Lombard lifted their heads and looked into each other's eyes….
 
 Page 217 Location 3440
 
@@ -112,6 +112,6 @@ Page 217 Location 3440
 
 Page 219 Location 3468
 
-> His quick brain was working. Which way—which method—talk her over—lull her into security or a swift dash—All his life Lombard had taken the risky way. He took it now. He spoke slowly, argumentatively: “Now look here, my dear girl, you just listen—” And then he sprang. Quick as a panther—as any other feline creature…. Automatically Vera pressed the trigger…. Lombard’s leaping body stayed poised in mid-spring then crashed heavily to the ground. Vera came warily forward, the revolver ready in her hand. But there was no need of caution. Philip Lombard was dead—shot through the heart….
+> His quick brain was working. Which way—which method—talk her over—lull her into security or a swift dash—All his life Lombard had taken the risky way. He took it now. He spoke slowly, argumentatively: "Now look here, my dear girl, you just listen—" And then he sprang. Quick as a panther—as any other feline creature…. Automatically Vera pressed the trigger…. Lombard's leaping body stayed poised in mid-spring then crashed heavily to the ground. Vera came warily forward, the revolver ready in her hand. But there was no need of caution. Philip Lombard was dead—shot through the heart….
 
 Christie, A. (2011). And Then There Were None.
