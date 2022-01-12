@@ -10,6 +10,10 @@ table tr:nth-child(even) {
   --width-content: 800px;
 }
 
+a {
+  text-decoration: underline dashed;
+}
+
 /* Quotes */
 blockquote {
   font-size: inherit;
@@ -45,6 +49,7 @@ header {
 
   a {
     color: var(--color-head);
+    text-decoration: none;
   }
 
   h1 {
