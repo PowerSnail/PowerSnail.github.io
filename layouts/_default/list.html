@@ -3,7 +3,7 @@
     <div class="combined-title-pagination">
       <h1>{{ .Title }}</h1>
       {{ if ne .Paginator.PageNumber 1 }}
-          <h3 class="current-page">Page {{.Paginator.PageNumber}}</h3>
+          <h2 class="current-page">Page {{.Paginator.PageNumber}}</h2>
       {{ end }}
     </div>
     {{- partial "listcontent.html" . -}}
