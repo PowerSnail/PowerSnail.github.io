@@ -139,3 +139,9 @@ sup {
   font-weight: 600;
   padding-bottom: 1em;
 }
+
+pre code {
+  overflow-x: auto;
+  max-width: none;
+  white-space: pre;
+}
