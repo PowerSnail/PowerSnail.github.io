@@ -140,8 +140,13 @@ sup {
   padding-bottom: 1em;
 }
 
+code {
+  background-color: var(--color-accent);
+}
+
 pre code {
   overflow-x: auto;
   max-width: none;
   white-space: pre;
+  background-color: transparent;
 }
