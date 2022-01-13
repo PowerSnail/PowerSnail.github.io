@@ -1,27 +1,13 @@
 {{ range .Paginator.Pages }}
 <article class="post-list">
-    <div class="title-group">
-        <div class="title">
-            <h1>{{ .Title }}</h1>
-        </div>
-        {{ if eq .Type "photos" }}
-        <div class="album">
-            <div class="date">{{ .Params.display_date }}</div><div class="location">{{ .Params.location }}</div>
-        </div>
-        {{ else }}
-        <div class="date">{{ .Params.date.Format "Jan 02, 2006" }}</div>
-        {{ end }}
-    </div class="title-group">
+  <div class="title">
+    <h1>{{ .Title }}</h1>
+  </div>
+  <div class="date">{{ .Params.date.Format "Jan 02, 2006" }}</div>
 
-    <div class="content">
-        {{ .Summary | safeHTML }}
-        {{ if and (eq .Type "photos") (.Params.banner) }}
-        {{ $image := (.Resources.GetMatch .Params.banner).Resize "700x q100" }}
-        <p><a href="{{.RelPermalink}}"><img src="{{ $image.RelPermalink }}"></a></p>
-        {{ end }}
-    </div>
-    <div class="read-more">
-        <a href="{{ .RelPermalink }}">Read more ›</a>
-    </div>
+  <div class="content">{{ .Summary | safeHTML }}</div>
+  <div class="read-more">
+    <a href="{{ .RelPermalink }}">Read more ›</a>
+  </div>
 </article>
 {{ end }}
