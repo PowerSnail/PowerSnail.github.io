@@ -2,6 +2,10 @@
 @import "friendly";
 @import "color";
 
+@media (prefers-color-scheme: dark) {
+  @import "dracula";
+}
+
 table tr:nth-child(even) {
   background-color: inherit;
 }
@@ -149,4 +153,9 @@ pre code {
   max-width: none;
   white-space: pre;
   background-color: transparent;
+  padding: 1em;
+}
+
+pre {
+  padding: 0;
 }
