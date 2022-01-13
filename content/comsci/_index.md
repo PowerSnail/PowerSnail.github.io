@@ -1,3 +1,3 @@
 ---
-title: Computer Science
+title: Computer
 ---
