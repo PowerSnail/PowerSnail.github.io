@@ -1,11 +1,10 @@
-
 {{ define "main" }}
-    <div class="combined-title-pagination">
-      <h1>{{ .Title }}</h1>
-      {{ if ne .Paginator.PageNumber 1 }}
-          <h2 class="current-page">Page {{.Paginator.PageNumber}}</h2>
-      {{ end }}
-    </div>
-    {{- partial "listcontent.html" . -}}
-    {{- partial "pagination.html" . -}}
+<div class="combined-title-pagination">
+  <h1>
+    {{ .Title }} {{ if ne .Paginator.PageNumber 1 }}
+    <small>/ Page {{.Paginator.PageNumber}}</small> {{ end }}
+  </h1>
+</div>
+{{- partial "listcontent.html" . -}} 
+{{- partial "pagination.html" . -}} 
 {{ end }}

@@ -4,7 +4,7 @@
     {{ if eq .Paginator.PageNumber 1 }}
         {{- partial "about.html" . -}}
     {{ else }}
-        <h3 class="inline current-page">Page {{.Paginator.PageNumber}}</h3>
+        <h1>Blog <small>/ Page {{.Paginator.PageNumber}}</small></h1>
     {{ end }}
 
     {{- partial "listcontent.html" . -}}
