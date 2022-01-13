@@ -59,7 +59,7 @@ hugo gen chromastyles --style=dracula > assets/css/_dracula.css
     noClasses = false
 ```
 
-I then colored the website with a dark banner image of Bach's manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with [Oklab](https://bottosson.github.io/posts/oklab/) color space, and it seems to be passing accessibility tests so far.
+I then colored the website with a dark banner image of Bach's manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with [Oklab](https://bottosson.github.io/posts/oklab/) color space, and it seems to be passing accessibility tests so far. It might be a total overkill though, since a few colors on the spectrum are used. But what is a personal project without a few overkills?
 
 ## MathJax, and a Little Grievance of Hugo
 
@@ -67,7 +67,7 @@ The only JavaScript I use is [MathJax](https://www.mathjax.org/). I've been cons
 
 In fact, Hugo does not support running its output HTML through an arbitrary command, and I think it's a shame. There is a limit to what the `replace` and `replaceRE` could accomplish, which can be supplemented by custom filters written by other users. 
 
-For instance, math equations can be easily rendered with LaTeX and converted to SVG. This will enable the embedding of arbitrary Tex elements, not just what MathJax supports, and at the same time, eliminates the need to render the math client-side.
+For instance, math equations can be easily rendered with LaTeX and converted to SVG. This will enable the embedding of arbitrary Tex elements, not just what MathJax supports, and at the same time, eliminates the need to bundle a JS library for client-side rendering. 
 
 One thing that I can do is to add an extra step to `hugo build`, and iterate through all the output HTML with whatever post-processing I want. But I do hope that this could be integrated into Hugo, so I don't have to further butcher the GitHub Action file.
 
