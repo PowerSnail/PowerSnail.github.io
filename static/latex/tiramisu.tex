@@ -2,7 +2,8 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{booktabs}
 \usepackage{multirow}
-\usepackage{bookman}
+\usepackage[T1]{fontenc}
+\usepackage{tgbonum}
 \thispagestyle{empty}
 
 \setlength{\tabcolsep}{16pt}
@@ -10,24 +11,26 @@
 
 \begin{document}
 
-\begin{tabular}{lll} \toprule
-  \textbf{Ingredients} & \textbf{Quantity} & \textbf{Instruction}                            \\
-  \tabletitle{Sabayon}                                                                       \\
-  Egg yolks            & 4                 & Bring water to a boil and turn down to a simmer \\
-  Sugar                & 60g               & Beat egg yolks and sugar in a bowl over steam   \\
-  Mascarpone           & 450g              & Whip for 10 minutes                             \\
-  Egg whites           & 4                 & Remove from heat, and whip until cool           \\
-                       &                   & Fold in mascarpone                              \\
-                       &                   & Beat egg whites to stiff                        \\
-                       &                   & Fold in egg whites                              \\
-  \tabletitle{Ladyfinger}                                                                    \\
-  Coffee               & 250g              & Dip Ladyfingers in coffee                       \\
-  Ladyfinger           & 48                &                                                 \\
-  \tabletitle{Assemble}                                                                      \\
-                       &                   & Place a layer of ladyfingers                    \\
-                       &                   & Spoon a layer of Sabayon                        \\
-                       &                   & Repeat                                          \\
-                       &                   & Refrigerate                                     \\
+\begin{tabular}{lll} 
+  \toprule
+  \textbf{\MakeUppercase{Ingredients}}     & \textbf{\MakeUppercase{Quantity}} & \textbf{\MakeUppercase{Instruction}}                                      \\
+  \tabletitle{Cream}                                                                                       \\
+  Egg yolks                & 4                 & Bring water to a boil and turn down to a simmer;          \\
+  Sugar                    & 60g               & Beat egg yolks in a bowl over steam, gradually add sugar; \\
+  Mascarpone               & 450g              & Whip for 10 minutes, until light yellow;                  \\
+  Egg whites               & 4                 & Remove from heat, and whip until cool;                    \\
+                           &                   & Lightly whisk the mascarpone and fold into the yolks;     \\
+                           &                   & Beat egg whites to stiff peak;                            \\
+                           &                   & Fold in egg whites;                                       \\
+  \tabletitle{Coffee}                                                                                      \\
+  Espresso/Strong coffee   & 250g              & Make coffee;                                              \\
+  Liquor or liquor extract & A bit             & Mix in liquor or liquor extract;                          \\
+  Tea bag                  & 1                 & Optional: steep the tea bag for 2 minutes;                \\
+  \tabletitle{Assemble}                                                                                    \\
+  Ladyfinger               & 48                & Dip ladyfingers in coffee;                                \\
+                           &                   & Place a layer of ladyfingers;                             \\
+                           &                   & Spread a layer of cream;                                  \\
+                           &                   & Repeat \& refrigerate                                     \\
   \bottomrule
 \end{tabular}
 
