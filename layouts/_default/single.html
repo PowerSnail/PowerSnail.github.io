@@ -5,7 +5,9 @@
             <div class="title">
                 <h1>{{ .Title }}</h1>
             </div>
-            <div class="date">{{ .Params.date.Format "Jan 02, 2006" }}</div>
+            {{ with $.Params.date }}
+                <div class="date">{{ .Format "Jan 02, 2006" }}</div>
+            {{ end }}
         </div>
         <article class="content">
             {{ replaceRE `(?ms)^<section class="footnotes" role="doc-endnotes">\s*(.*)\s</section>` "$1" .Content | safeHTML }}
