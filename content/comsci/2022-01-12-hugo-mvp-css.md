@@ -6,6 +6,7 @@ tags:
     - hugo
     - html
 date: "2022-01-12"
+slug: "hugo-mvp-css"
 ---
 
 ## Theme-less Hugo

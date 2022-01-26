@@ -1,6 +1,7 @@
 ---
 title: "My Notes on SciWrite"
 date: "2014-05-17"
+slug: "writing-notes"
 ---
 
 # Unit 1

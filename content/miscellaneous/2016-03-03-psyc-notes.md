@@ -4,6 +4,7 @@ tags:
   - cognition psychology
   - notes
 date: "2016-03-03"
+slug: "psyc-notes"
 ---
 
 ## Episodic and Semantic Memory

@@ -5,6 +5,7 @@ tags:
   - Recipe
   - Chicken
 date: "2022-01-05"
+slug: "a-new-way-of-presenting-recipes-and-chicken-abodo"
 ---
 
 ## Cooking for Engineers

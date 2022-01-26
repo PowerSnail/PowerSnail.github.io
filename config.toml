@@ -4,25 +4,29 @@ title = "SnailShell"
 hasCJKLanguage = true
 
 [markup]
-  [markup.goldmark.renderer]
-    unsafe= true
-  [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    hl_Lines = ''
-    lineAnchors = ''
-    lineNoStart = 1
-    lineNumbersInTable = true
-    noClasses = false
-    style = 'pygments'
-    tabWidth = 4
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+hl_Lines = ''
+lineAnchors = ''
+lineNoStart = 1
+lineNumbersInTable = true
+noClasses = false
+style = 'pygments'
+tabWidth = 4
 
 [author]
-  name = "PowerSnail"
+name = "PowerSnail"
 
 [params]
-  about = "I'm PowerSnail. A coder, music lover, and an enthusiastic cook."
-  favicon = "/images/snail.svg"
-  lang = "en"
+about = "I'm PowerSnail. A coder, music lover, and an enthusiastic cook."
+favicon = "/images/snail.svg"
+lang = "en"
 
-  
+[permalinks]
+'comsci' = '/:year/:slug/'
+'miscellaneous' = '/:year/:slug/'
+'reading' = '/:year/:slug/'
+'recipes' = '/:year/:slug/'

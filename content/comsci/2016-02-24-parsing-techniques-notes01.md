@@ -8,6 +8,7 @@ tags:
   - parsing
 mathjax: true
 date: "2016-02-24"
+slug: "parsing-techniques-notes01"
 ---
 
 ## Generative Grammar

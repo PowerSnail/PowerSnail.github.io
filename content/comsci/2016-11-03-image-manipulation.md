@@ -4,6 +4,7 @@ tags:
   - graphics
   - notes
 date: "2016-11-03"
+slug: "image-manipulation"
 ---
 
 ## Gradient detection convolutions

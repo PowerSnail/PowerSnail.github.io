@@ -4,6 +4,7 @@ tags:
   - com arc
   - notes
 date: "2016-11-08"
+slug: "optimization"
 ---
 
 An example: **Transpose**

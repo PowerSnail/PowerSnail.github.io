@@ -4,6 +4,7 @@ tags:
     - linear algebra
     - notes
 date: "2016-03-02"
+slug: "linear-algebra-notes"
 ---
 
 Information is based on [Linear Algebra with Applications](https://www.amazon.com/Loose-leaf-Version-Linear-Algebra-Applications/dp/1464131821) by Jeffrey Holt.

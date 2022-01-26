@@ -8,6 +8,7 @@ tags:
   - parsing
 mathjax: true
 date: "2016-02-26"
+slug: "parsing-techniques-notes02"
 ---
 
 ## Generating Sentences

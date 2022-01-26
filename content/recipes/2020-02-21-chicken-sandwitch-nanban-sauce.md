@@ -5,6 +5,7 @@ tags:
     - Japanese
 date: "2020-02-21"
 lang: zh
+slug: "chicken-sandwitch-nanban-sauce"
 ---
 
 菜谱改编自 _MASAの料理ABC_[^1].
