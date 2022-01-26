@@ -3,7 +3,9 @@
   <div class="title">
     <h1>{{ .Title }}</h1>
   </div>
-  <div class="date">{{ .Params.date.Format "Jan 02, 2006" }}</div>
+  {{ with $.Params.date }}
+    <div class="date">{{ .Format "2006-01-02" }}</div>
+  {{ end }}
 
   <div class="content">{{ .Summary | safeHTML }}</div>
   <div class="read-more">
