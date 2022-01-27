@@ -1,8 +1,10 @@
 {{ range .Paginator.Pages }}
-<a class="post-list-item" href="{{ .RelPermalink }}">
-  <span>{{ .Title }}</span>
-  {{ with .Params.date }}
-  <span>{{ .Format "2006-01-02" }}</span>
-  {{ end }}
-</a>
+<p>
+  <a class="post-list-item" href="{{ .RelPermalink }}">
+    <span>{{ .Title }}</span>
+    {{ with .Params.date }}
+    <span>{{ .Format "2006-01-02" }}</span>
+    {{ end }}
+  </a>
+</p>
 {{ end }}

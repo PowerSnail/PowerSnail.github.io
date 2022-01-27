@@ -2,10 +2,8 @@
 <article>
   <h1>Tags</h1>
   <hr class="title-line" />
-  <div class="tags">
-    {{ range .Data.Terms.ByCount }}
-    <a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a>
-    {{ end }}
-  </div>
+  {{ range .Data.Terms.ByCount }}
+  <p><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></p>
+  {{ end }}
 </article>
 {{ end }}
