@@ -11,16 +11,15 @@
     {{ $css := resources.Get "css/style.scss" | resources.ToCSS | resources.Minify | resources.PostCSS | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
 
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" sizes="any" href="/favicon.ico">
     {{ with .Site.Params.favicon }}
-    <link rel="shortcut icon" href="{{ . }}" type="image/svg+xml">
+    <link rel="shortcut icon" sizes="any" href="{{ . }}" type="image/svg+xml">
     {{ end }}
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
     {{ if or (.Params.mathjax) (.IsNode) }}{{ partial "mathjax_support.html" . }}{{ end }}
-
   </head>
 <body>
   <header>

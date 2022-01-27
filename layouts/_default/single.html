@@ -1,27 +1,26 @@
 {{ define "main" }}
+<article class="post">
+  <h1>{{ .Title }}</h1>
+  {{ $time := .Params.date }}
+  <hr class="title-line" />
+  <div class="metadata">
+    <span class="icon-prefix calendar-event">{{ $time.Format "2006-01-02" }}</span>
+    <span class="icon-prefix calculator">{{ .WordCount }} words</span>
+    <span class="icon-prefix clock">{{ .ReadingTime }} minutes read</span>
+    
+    {{ with .Params.tags }}
+    <span class="icon-prefix tags">
+      {{ $links := apply . "partial" "tag_link.html" "." }}
+      {{ $clean := apply $links "chomp" "." }}
+      {{ delimit $clean "/" }}
+    </span>
+    {{ end }}
+  
+  </div>
 
-    <article class="post">
-        <div class="title-group">
-            <div class="title">
-                <h1>{{ .Title }}</h1>
-            </div>
-            {{ with $.Params.date }}
-                <div class="date">{{ .Format "2006-01-02" }}</div>
-            {{ end }}
-        </div>
-        <article class="content">
-            {{ replaceRE `(?ms)^<section class="footnotes" role="doc-endnotes">\s*(.*)\s</section>` "$1" .Content | safeHTML }}
-        </article>
-        {{ with .Params.tags }}
-            <div class="tags">
-                <span title="Tags">🏷</span>
-                {{ range . }}
-                    {{ with $.Site.GetPage (printf "/tags/%s" ( . | urlize)) }}
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    {{ end }}
-                {{ end }}
-            </div>
-        {{ end }}
-    </article>
+  {{ $re_foot_notes := `(?ms)^<section class="footnotes" role="doc-endnotes">\s*(.*)\s</section>` }} 
+  
+  {{ replaceRE $re_foot_notes "$1" .Content | safeHTML }} 
+</article>
 
 {{ end }}

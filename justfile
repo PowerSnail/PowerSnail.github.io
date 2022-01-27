@@ -9,5 +9,8 @@ mathjax-update:
 change-color color:
     python tool_scripts/make_theme.py "{{ color }}" > assets/css/_color.scss
 
+generate-icon-css:
+    python tool_scripts/social_icon.py > assets/css/_icons.scss
+
 serve:
     hugo serve -D --port 1313

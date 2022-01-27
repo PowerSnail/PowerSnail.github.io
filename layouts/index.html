@@ -1,12 +1,5 @@
 {{ define "main" }}
-    {{ $paginator := .Paginate site.RegularPages }}
-    {{ .Scratch.Set "pagenumber" .Paginator.PageNumber }}
-    {{ if eq .Paginator.PageNumber 1 }}
-        {{- partial "about.html" . -}}
-    {{ else }}
-        <h1>Blog <small>/ Page {{.Paginator.PageNumber}}</small></h1>
-    {{ end }}
-
-    {{- partial "listcontent.html" . -}}
-    {{- partial "pagination.html" . -}}
+<article>
+    {{ .Content }}
+</article>
 {{ end }}

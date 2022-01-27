@@ -1,10 +1,13 @@
 {{ define "main" }}
-<div class="combined-title-pagination">
+<article>
   <h1>
+    {{ if eq .Kind "term" }}<a href="/tags/">Tags /</a> {{ end }}
     {{ .Title }} {{ if ne .Paginator.PageNumber 1 }}
     <small>/ Page {{.Paginator.PageNumber}}</small> {{ end }}
   </h1>
-</div>
-{{- partial "listcontent.html" . -}} 
-{{- partial "pagination.html" . -}} 
+  <hr class="title-line" />
+  {{- partial "listcontent.html" . -}} 
+  <hr>
+  {{- partial "pagination.html" . -}} 
+</article>
 {{ end }}
