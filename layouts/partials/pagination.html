@@ -1,4 +1,5 @@
-{{ if ne .Paginator.TotalPages 0 }}
+{{ if gt .Paginator.TotalPages 1 }}
+    <hr>
     <div class="paginator">
         {{ if .Paginator.HasNext }}
             <a href="{{ .Paginator.Next.URL }}" class="older">« Older posts</a>

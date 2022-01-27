@@ -2,6 +2,7 @@ baseURL = "https://powersnail.com/"
 languageCode = "en-us"
 title = "SnailShell"
 hasCJKLanguage = true
+paginate = 50
 
 [markup]
 [markup.goldmark.renderer]
