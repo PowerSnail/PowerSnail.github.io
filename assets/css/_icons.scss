@@ -1,21 +1,28 @@
 .brand-github::before {
-  mask: url(/icons/brand-github.svg);
+  mask-image: url(/icons/brand-github.svg);
+  -webkit-mask-image: url(/icons/brand-github.svg);
 }
 .calculator::before {
-  mask: url(/icons/calculator.svg);
+  mask-image: url(/icons/calculator.svg);
+  -webkit-mask-image: url(/icons/calculator.svg);
 }
 .calendar-event::before {
-  mask: url(/icons/calendar-event.svg);
+  mask-image: url(/icons/calendar-event.svg);
+  -webkit-mask-image: url(/icons/calendar-event.svg);
 }
 .clock::before {
-  mask: url(/icons/clock.svg);
+  mask-image: url(/icons/clock.svg);
+  -webkit-mask-image: url(/icons/clock.svg);
 }
 .mail::before {
-  mask: url(/icons/mail.svg);
+  mask-image: url(/icons/mail.svg);
+  -webkit-mask-image: url(/icons/mail.svg);
 }
 .rss::before {
-  mask: url(/icons/rss.svg);
+  mask-image: url(/icons/rss.svg);
+  -webkit-mask-image: url(/icons/rss.svg);
 }
 .tags::before {
-  mask: url(/icons/tags.svg);
+  mask-image: url(/icons/tags.svg);
+  -webkit-mask-image: url(/icons/tags.svg);
 }

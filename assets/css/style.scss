@@ -181,6 +181,7 @@ footer {
   height: 1em;
   width: 1em;
   mask-size: cover;
+  -webkit-mask-size: cover;
   vertical-align: middle;
   background-color: var(--color-text);
   margin-right: 0.5em;

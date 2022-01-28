@@ -6,7 +6,8 @@ import pathlib
 def main():
     for icon in pathlib.Path("static/icons/").iterdir():
         print(f".{icon.stem}::before {{")
-        print(f"  mask: url(/icons/{icon.name});")
+        print(f"  mask-image: url(/icons/{icon.name});")
+        print(f"  -webkit-mask-image: url(/icons/{icon.name});")
         print("}")
 
 
