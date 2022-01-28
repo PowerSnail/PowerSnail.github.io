@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; img-src 'self' https://snailshell.goatcounter.com/count">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="description" content="{{ .Description }}">
+
     <link rel="canonical" href="{{ .Permalink }}"/>
     <title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
     
