@@ -33,13 +33,19 @@ When breaking a chord, we must choose where and when to move from one plane to t
 
 But to make such a choice, you have to first be able to break the chord anywhere on the bow. In his masterclass, soloist Kerson Leung instructed a student do a simple exercise for Bach: break the chord as early as you can; shorten the lower notes as much as possible, while still make them ring. Now the aim of course is not to play every chord as curtly. But when you can break the chord cleanly with just 1 cm of the bow, you can break the chord anywhere.
 
-We can reify this exercise with dotted rhythm. Again, play with the same requirement as the first exercise: clean, immediate string crossing. Increase the dotted duration as needed. 
+We can reify this exercise with dotted rhythm. Again, play with the same requirement as the first exercise: clean, immediate string crossing. Snap into the plane and draw the bow as steady as possible. Don't fidget with the elbow level; if you didn't arrive at the plane accurately, take a step back and redo the measure. Remember, the goal is to anchor your elbow.
 
+Increase the dotted duration as needed. 
 
+## Exercise Three: Advanced String Crossings
 
+![Advanced String Crossings](/images/bow-planes-exercise-string-crossings.svg)
 
+So far, we have limited ourselves in moving from one plane to the next. But chords can span up to seven planes, depending on the phrasing. Therefore, the third exercise is jumping from G-string to every other plane, and then jumping from E string backwards.
 
+To make a clean sound this time, we have one additional restraint. The passing planes in-between your targets must not make a sound.
 
+From my experience, this is the part where you can *really* drill in the anchor of each plane. 
 
 ## Conclusion
 
