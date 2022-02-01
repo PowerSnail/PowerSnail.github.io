@@ -12,5 +12,8 @@ change-color color:
 generate-icon-css:
     python tool_scripts/social_icon.py > assets/css/_icons.scss
 
+new-post category slug:
+    hugo new --kind "post" content/{{ category }}/{{ `date +%Y-%m-%d` }}-{{slug}}.md
+
 serve:
     hugo serve -D --port 1313
