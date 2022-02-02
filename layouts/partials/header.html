@@ -1,4 +1,4 @@
-<h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+<a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 <nav>
   {{- range $index, $section := .Site.Sections -}}
   <a href="{{ $section.RelPermalink }}"> {{ $section.Title }}</a>

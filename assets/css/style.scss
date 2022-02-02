@@ -135,9 +135,10 @@ header {
     font-weight: normal;
   }
 
-  h1 {
+  .site-title {
     width: fit-content;
     margin: 0.5rem;
+    font-size: 1.5em;
   }
 
   nav {
@@ -225,7 +226,12 @@ footer {
 
   span {
     align-items: center;
-    display: flex;
+    display: inline-flex;
+    justify-content: start;
+  }
+
+  .tags a::before {
+    content: "#";
   }
 }
 

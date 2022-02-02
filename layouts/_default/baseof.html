@@ -9,7 +9,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff">
     
     <meta name="author" content="PowerSnail">
-    <meta name="description" content="{{ .Description }}">
+    {{ with .Description }}
+    <meta name="description" content="{{ . }}">
+    {{ end }}
     {{ hugo.Generator }}
     <meta name="theme-color" content="#af3000">
 
