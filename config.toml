@@ -31,3 +31,4 @@ lang = "en"
 'miscellaneous' = '/:year/:slug/'
 'reading' = '/:year/:slug/'
 'recipes' = '/:year/:slug/'
+'music' = '/:year/:slug/'
