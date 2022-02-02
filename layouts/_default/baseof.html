@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="{{ $.Param "lang" }}">
   <head>
-    <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
+    <meta charset="utf-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     {{ partial "csp.html" }}
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff">
+    
+    <meta name="author" content="PowerSnail">
     <meta name="description" content="{{ .Description }}">
+    {{ hugo.Generator }}
+    <meta name="theme-color" content="#af3000">
 
-    <link rel="canonical" href="{{ .Permalink }}"/>
     <title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
     
     {{ $css := resources.Get "css/style.scss" | resources.ToCSS | resources.Minify | resources.PostCSS | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    <link rel="canonical" href="{{ .Permalink }}"/>
 
+    <link rel="shortcut icon" sizes="any" href="/images/snail.svg" type="image/svg+xml">
     <link rel="icon" sizes="any" href="/favicon.ico">
-    {{ with .Site.Params.favicon }}
-    <link rel="shortcut icon" sizes="any" href="{{ . }}" type="image/svg+xml">
-    {{ end }}
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/snail-180x180.png">
+    <link rel="mask-icon" href="/images/snail.svg" color="#af3000">
+
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
