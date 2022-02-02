@@ -4,7 +4,7 @@ description: An preparatory exercise for playing chords on the violin.
 date: 2022-01-31
 slug: bowing-planes-exercise
 tags: ["violin", "bowing", "Bach"]
-draft: true
+draft: false
 ---
 
 ## Chord and Bowing Planes
