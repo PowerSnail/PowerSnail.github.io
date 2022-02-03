@@ -1,8 +1,6 @@
 <a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 <nav>
-  {{- range $index, $section := .Site.Sections -}}
-  <a href="{{ $section.RelPermalink }}"> {{ $section.Title }}</a>
-  {{- end }} {{ with .Site.GetPage "/about" }}
-  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  {{ range .Site.Sections }}
+  <a href="{{ .RelPermalink }}"> {{ .Title }}</a>
   {{ end }}
 </nav>
