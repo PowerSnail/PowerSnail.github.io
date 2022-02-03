@@ -38,6 +38,9 @@ article {
   font-family: serif;
   font-size: 1.3em;
   margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
 
   h1 {
     text-align: center;
@@ -109,6 +112,10 @@ article {
   sup {
     background-color: var(--color-bg-secondary);
   }
+}
+
+img {
+  margin: auto 0px auto 0px;
 }
 
 header {
@@ -183,6 +190,19 @@ footer {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
     }
+  }
+}
+
+figure {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-self: center;
+  border: solid 2px var(--color-text-secondary);
+  background-color: var(--color-text-secondary);
+  border-radius: 4px;
+  figcaption {
+    color: var(--color-bg-secondary);
   }
 }
 
