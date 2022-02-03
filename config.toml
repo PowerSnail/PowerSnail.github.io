@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "SnailShell"
 hasCJKLanguage = true
 paginate = 50
+ignorefiles = ["output"] 
 
 [markup]
 [markup.goldmark.renderer]
