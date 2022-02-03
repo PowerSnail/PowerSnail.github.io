@@ -1,6 +1,6 @@
 ---
 title: Chinese Caramel Color
-description: 
+description: Making Chinese Caramel Color, 糖色, a type of natural food coloring commonly used in Chinese cooking, for example red braised pork belly
 date: 2022-02-02
 slug: chinese-caramel-color
 tags: ["Chinese"]
@@ -15,9 +15,9 @@ We can roughly break the process down to four stages: melting, bubbling, turning
 
 ![Melting sugar](/images/chinese-caramel/caramel-1.jpg "Melting sugar")
 
-To melt the sugar, turn on low heat and toss **30 grams of sugar crystals** in the pot, with **1 teaspoon of oil**, and **30 grams of water**. Keep stirring, and knocking on the crystals with the back of your spoon (or spatula) to break them apart. 
+To melt the sugar, turn on low heat and toss **30 grams of sugar crystals** in the pot, with **1 teaspoon of oil**, and **30 grams of water**. Keep stirring, and knocking on the crystals with the back of your spoon (or spatula) to break them apart.
 
-You can use just the oil, or just the water, too; I find oil & water mixture to be easier to work with. Water makes it easier to melt the sugar in the initial stage, and oil helps to buffer the heat when the sugar starts caramelizing. 
+You can use just the oil, or just the water, too; I find oil & water mixture to be easier to work with. Water makes it easier to melt the sugar in the initial stage, and oil helps to buffer the heat when the sugar starts caramelizing.
 
 ![Bubbling sugar](/images/chinese-caramel/caramel-2.jpg "Bubbling")
 
@@ -33,17 +33,17 @@ When the syrup turns #996118 (dark yellow), turn off the heat. The residual heat
 
 ![Syrup turning red](/images/chinese-caramel/caramel-5.jpg "# 420C00 Brick Red")
 
-When the syrup turns #420C00 (brick-red), pour 400 grams of boiling water into the pot to stop the cooking. Some splattering is to be expected.
+When the syrup turns #420C00 (brick-red), pour 400 grams of boiling water into the pot to stop the cooking. Be careful: some violent splattering is to be expected.
 
 ![Syrup diluted with water](/images/chinese-caramel/caramel-6.jpg "Pour water in to the pot")
 
-Keep stirring.
+Keep stirring, until the solution is even.
 
 ## Finalizing
 
 ![Caramel color in a bowl](/images/chinese-caramel/caramel-7.jpg "Final Product")
 
-Once the solution is even, pour it into a container. 
+Here's our finished Chinese caramel color in a bowl. To use it, scoop a generous amount into your braised dish at the beginning of cooking.
 
 ![Caramel color as compared with black tea](/images/chinese-caramel/caramel-8.jpg "Caramel Color vs. Earl Grey")
 
@@ -52,5 +52,3 @@ The caramel color should be roughly the same color as a cup of black tea. That's
 ## Summary
 
 ![Caramel Color Summary](/images/caramel-color.svg)
-
-
