@@ -9,7 +9,9 @@ draft: true
 
 ## 糖色: Chinese Caramel Color
 
-The iconic Chinese cuisine Red Braised Pork Belly has an appetizing, deep, brick-red color. This comes from 糖色: caramel color. Essentially, sugar crystals are heated to a deep red color, and diluted with water. This is distinctly different from the pinkish color of Char Siu, which is the result of Red Yeast Rice powder.
+The iconic Chinese cuisine Red Braised Pork Belly has an appetizing, deep, brick-red color. This comes from 糖色(tang se): caramel color. Sugar crystals are heated to a deep red color, and diluted with water. The result is a translucent shimmery red solution, more natural and appetizing than the pinkish red of 红曲粉 (red yeast rice powder), which is found on some Cantonese Char Siu.
+
+![Caramel color vs. red yeast rice powder](/images/chinese-caramel/red-braised-pork-belly.jpg "Compare the color of red braised pork belly vs. Char Siu")
 
 We can roughly break the process down to four stages: melting, bubbling, turning yellow, and turning red.
 
@@ -33,11 +35,9 @@ When the syrup turns #996118 (dark yellow), turn off the heat. The residual heat
 
 ![Syrup turning red](/images/chinese-caramel/caramel-5.jpg "# 420C00 Brick Red")
 
-When the syrup turns #420C00 (brick-red), pour 400 grams of boiling water into the pot to stop the cooking. Be careful: some violent splattering is to be expected.
+When the syrup turns #420C00 (brick-red), pour 400 grams of boiling water into the pot to stop the cooking. Be careful: some violent splattering is to be expected. Give the solution a few more rounds of stirring to ensure that it is even.
 
 ![Syrup diluted with water](/images/chinese-caramel/caramel-6.jpg "Pour water in to the pot")
-
-Keep stirring, until the solution is even.
 
 ## Finalizing
 
