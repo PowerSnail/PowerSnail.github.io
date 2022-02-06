@@ -248,6 +248,7 @@ figure {
     align-items: center;
     display: inline-flex;
     justify-content: start;
+    flex-wrap: wrap;
   }
 
   .tags a::before {
