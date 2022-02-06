@@ -1,10 +1,10 @@
 ---
 title: "Valid Number - By DFA"
 tags:
-    - computer science
-    - algorithm
-    - leetcode
-    - C++
+  - computer science
+  - algorithm
+  - leetcode
+  - C++
 mathjax: true
 date: "2016-11-27"
 slug: "valid-number"
@@ -27,7 +27,6 @@ Just to add some fun, this problem can be solved using a very textbook DFA. The 
 ## The Algorithm
 
 The first step, we trim the string. There is probably not efficient in bringing white space processing into the DFA.
-
 
 ```cpp
 static inline string trim(string s)
@@ -60,18 +59,18 @@ Any part could potentially empty. The (1) and (5) could potentially be preceded 
 
 Then, we can collect all states based on the grammar:
 
-| state | meaning|
-|------|--------|
-|`START` | starting state |
-|`REALLEFT` | before encountering any decimal |
-|`DOT` | encounter a regular decimal |
-|`E` | encounter an 'e'|
-|`REALRIGHT` | have encountered a decimal|
-|`DOT_E` | have encountered a decimal whose left is omitted|
-|`ERIGHT` | have encountered 'e', and is therefore part of the exponent|
-|`SIGN1` | the sign on the left of the 'e'|
-|`SIGN2` | the sign on the right of the 'e'|
-|`FAULT` | the faulty state |
+| state       | meaning                                                     |
+| ----------- | ----------------------------------------------------------- |
+| `START`     | starting state                                              |
+| `REALLEFT`  | before encountering any decimal                             |
+| `DOT`       | encounter a regular decimal                                 |
+| `E`         | encounter an 'e'                                            |
+| `REALRIGHT` | have encountered a decimal                                  |
+| `DOT_E`     | have encountered a decimal whose left is omitted            |
+| `ERIGHT`    | have encountered 'e', and is therefore part of the exponent |
+| `SIGN1`     | the sign on the left of the 'e'                             |
+| `SIGN2`     | the sign on the right of the 'e'                            |
+| `FAULT`     | the faulty state                                            |
 
 The starting state is `START`.
 
@@ -81,21 +80,10 @@ The starting state is `START`.
 
 The transition function is a matrix that maps (state, input char) to state.
 
-$$
-\begin{blockarray}{cccccc}
-a & b & c & d & e \\
-\begin{block}{(ccccc)c}
-  1 & 1 & 1 & 1 & 1 & f \\
-  0 & 1 & 0 & 0 & 1 & g \\
-  0 & 0 & 1 & 0 & 1 & h \\
-  0 & 0 & 0 & 1 & 1 & i \\
-  0 & 0 & 0 & 0 & 1 & j \\
-\end{block}
-\end{blockarray}
-$$
+![DFA Transformation matrix](/images/valid-number-DFA.svg)
 
 | _states_  | DIGIT     | SIGN  | DOT   | E     | NDIGIT |
-|-----------|-----------|-------|-------|-------|--------|
+| --------- | --------- | ----- | ----- | ----- | ------ |
 | START     | REALLEFT  | SIGN1 | DOT_E | FAULT | FAULT  |
 | REALLEFT  | REALLEFT  | FAULT | DOT   | E     | FAULT  |
 | DOT       | REALRIGHT | FAULT | FAULT | E     | FAULT  |
@@ -127,8 +115,6 @@ In all other cases, the format is somewhat faulty. For example, if the DFA ended
 ---
 
 The running of the DFA is easy. Simply iterate over the input, and let the transition matrix do its magic.
-
-
 
 ## Complete Code:
 
