@@ -10,9 +10,11 @@
     
     {{ with .Params.tags }}
     <span class="icon-prefix tags">
-      {{ $links := apply . "partial" "tag_link.html" "." }}
-      {{ $clean := apply $links "chomp" "." }}
-      {{ delimit $clean "/" }}
+      <div class="tag-list">
+        {{ $links := apply . "partial" "tag_link.html" "." }}
+        {{ $clean := apply $links "chomp" "." }}
+        {{ delimit $clean " " }}
+      </div>
     </span>
     {{ end }}
   

@@ -36,7 +36,7 @@ body > * {
 
 article {
   font-family: serif;
-  font-size: 1.3em;
+  font-size: 1em;
   margin: 0;
   display: flex;
   flex-flow: column nowrap;
@@ -49,25 +49,25 @@ article {
   h2::before {
     content: "## ";
     font-family: monospace;
-    color: var(--color-text-secondary)
+    color: var(--color-text-secondary);
   }
 
   h3::before {
     content: "## ";
     font-family: monospace;
-    color: var(--color-text-secondary)
+    color: var(--color-text-secondary);
   }
 
   h4::before {
     content: "## ";
     font-family: monospace;
-    color: var(--color-text-secondary)
+    color: var(--color-text-secondary);
   }
 
   h5::before {
     content: "## ";
     font-family: monospace;
-    color: var(--color-text-secondary)
+    color: var(--color-text-secondary);
   }
 
   td {
@@ -129,12 +129,12 @@ header {
   padding: 2em 1rem;
   margin: 0;
   border-bottom: 1px solid #555;
-  
+
   display: flex;
-  column-gap: 1em;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: center;
+  gap: 1em;
 
   a {
     color: var(--color-text);
@@ -144,18 +144,17 @@ header {
 
   .site-title {
     width: fit-content;
-    margin: 0.5rem;
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   nav {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 0;
-
-    a {
-      margin: 0.5rem;
-    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0.5em;
+    margin: 0;
+    gap: 1em;
+    border-top: solid 1px var(--color-head);
   }
 }
 
@@ -185,7 +184,7 @@ footer {
   section {
     display: grid;
     justify-content: left bottom;
-    
+
     .icon-prefix {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -206,6 +205,13 @@ figure {
   }
 }
 
+.icon-prefix {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 0.5em;
+}
+
 .icon-prefix::before {
   content: "";
   display: inline-block;
@@ -215,7 +221,6 @@ figure {
   -webkit-mask-size: cover;
   vertical-align: middle;
   background-color: var(--color-text);
-  margin-right: 0.5em;
 }
 
 .post-list-item {
@@ -244,15 +249,15 @@ figure {
   flex-wrap: wrap;
   column-gap: 2em;
 
-  span {
-    align-items: center;
-    display: inline-flex;
+  .tag-list {
+    display: flex;
     justify-content: start;
-    flex-wrap: wrap;
-  }
-
-  .tags a::before {
-    content: "#";
+    flex-flow: row wrap;
+    column-gap: 1em;
+    a::before {
+      content: "#";
+      font-style: italic;
+    }
   }
 }
 
