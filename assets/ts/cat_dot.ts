@@ -1,8 +1,7 @@
 function setupCanvas(canvas: HTMLCanvasElement) {
     const dpr = window.devicePixelRatio || 1;
-    const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
+    canvas.width = +canvas.style.width * dpr;
+    canvas.height = +canvas.style.height * dpr;
     const ctx = canvas.getContext("2d");
     ctx.scale(dpr, dpr);
     return ctx;
@@ -17,7 +16,7 @@ class Dot {
     y: number = 0;
     vx: number = 0.1;
     vy: number = 0.1;
-    radius: number = 5;
+    radius: number = 10;
     fill: string = "#FF0000";
     maxSpeed = 1;
     maxAcceleration = 0.1;
@@ -135,9 +134,8 @@ function runMainLoop() {
 
     window.onresize = () => {
         const dpr = window.devicePixelRatio || 1;
-        const rect = canvas.getBoundingClientRect();
-        canvas.width = rect.width * dpr;
-        canvas.height = rect.height * dpr;
+        canvas.width = +canvas.style.width * dpr;
+        canvas.height = +canvas.style.height * dpr;
     }
 
     requestAnimationFrame(first_step);
