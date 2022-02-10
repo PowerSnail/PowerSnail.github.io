@@ -1,5 +1,6 @@
 ---
 title: The Home of Power Snail
+description: My blog. My shell. The dwelling of the random sparkles inside my mind.
 ---
 
 Operating since 1995, I have been mostly healthy and required rare maintenances. I've grown into a programmer, a music lover, and an enthusiastic cook.
