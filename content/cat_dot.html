@@ -1,0 +1,73 @@
+---
+markup: html
+layout: blank
+---
+
+<!DOCTYPE html>
+<html lang="en" class="no-js" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Random Red Dot for Cats</title>
+    <meta name="description" content="" />
+    {{< get_css "/css/simple.min.css" >}}
+    <style>
+      body {
+        min-height: 100vh;
+        grid-template-columns: max-content auto;
+      }
+      canvas {
+        grid-column: 2 -1;
+        background-color: black;
+      }
+      aside {
+        grid-column: 1;
+        padding: 1em;
+        background-color: var(--accent-bg);
+        border: solid 1px var(--border);
+        display: grid;
+        grid-template-columns: min-content auto;
+        gap: 1em;
+        align-content: start;  
+      }
+      label {
+          white-space: nowrap;
+      }
+      input {
+          width: 100%;
+      }
+      input[type=color] {
+          min-height: 2em;
+      }
+      button {
+          grid-column: 1 / -1;
+      }
+    </style>
+
+    <link rel="shortcut icon" sizes="any" href="/images/snail.svg" type="image/svg+xml">
+    <link rel="icon" sizes="any" href="/favicon.ico">
+  </head>
+
+  <body>
+    <aside>
+        <label>Radius</label>
+        <input min="1" max="25" step="1"  type="number" id="inputRadius"/>
+        <label>Color</label>
+        <input type="color" id="inputColor"/>
+        <label>Max Speed</label>
+        <input min="0" max="20" step="2" type="number" id="inputSpeed"/>
+        <label>Max Acceleration</label>
+        <input min="0" max="2" step="0.1" type="number" id="inputAcceleration"/>
+        <button disabled id="buttonStart">Start</button>
+        <button id="buttonStop">Stop</button>
+        <button id="buttonRestart">Restart</button>
+        <button id="buttonFullscreen">Fullscreen</button>
+    </aside>
+    <canvas
+      id="mainCanvas"
+      style="display: block; margin: auto; width: 100%; height: 100%"
+    ></canvas>
+    {{< get_js "ts/cat_dot.ts" >}}
+  </body>
+</html>
