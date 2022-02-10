@@ -75,7 +75,6 @@ function runMainLoop() {
 
     const step = (timestamp: number) => {
         const rect = canvas.getBoundingClientRect();
-        // const dpr = window.devicePixelRatio || 1;
         canvas.width = rect.width;
         canvas.height = rect.height;
         dot.step(timestamp - previousTime, canvas.clientWidth, canvas.clientHeight);
