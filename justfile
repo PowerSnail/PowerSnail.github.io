@@ -20,3 +20,9 @@ new-post category slug:
 
 serve:
     hugo serve -D --port 1313
+
+serve-at target:
+    hugo serve -D --port 1313 --baseURL="{{ target }}" --appendPort=false
+
+deploy-test base destination:
+    hugo --baseURL {{ base }} --buildDrafts --destination {{ destination }} --forceSyncStatic -w --noChmod

@@ -118,32 +118,31 @@ img {
   margin: auto 0px auto 0px;
 }
 
-header {
+header, footer {
   --color-text: var(--color-head);
   --color-link: var(--color-head);
 
-  background: url(/images/front-cover-bw-inverted.png) no-repeat;
+  margin: 0;
+  grid-column: 1 / -1;
+  padding: 0em;
+  box-sizing: border-box;
+  max-width: none;
+
+  background: url(/images/front-cover.png) no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
-  background-color: #111;
-  padding: 2em 1rem;
-  margin: 0;
-  border-bottom: 1px solid #555;
-
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  align-content: center;
-  gap: 1em;
+  background-color: #160e0c;
 
   a {
     color: var(--color-text);
     text-decoration: none;
     font-weight: normal;
+    padding: 0em 0.5em 0em 0.5em;
   }
 
   .site-title {
     width: fit-content;
+    padding-top: 1rem;
     font-size: 2em;
   }
 
@@ -151,44 +150,9 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 0.5em;
-    margin: 0;
-    gap: 1em;
-    border-top: solid 1px var(--color-head);
-  }
-}
-
-footer {
-  --color-text: var(--color-head);
-  --color-link: var(--color-head);
-
-  background: url(/images/front-cover-bw-inverted.png) no-repeat;
-  background-size: cover;
-  background-blend-mode: overlay;
-  background-color: #111;
-  background-position: bottom;
-
-  color: var(--color-text);
-  padding: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1em;
-  border-top: 1px solid #555;
-
-  h2,
-  p {
-    margin: 0;
-  }
-
-  section {
-    display: grid;
-    justify-content: left bottom;
-
-    .icon-prefix {
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-    }
+    gap: 0.5em;
+    text-transform: uppercase;
+    margin: 1em;
   }
 }
 

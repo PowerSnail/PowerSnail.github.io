@@ -1,6 +1,6 @@
-<a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  <a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 <nav>
   {{ range .Site.Sections }}
-  <a href="{{ .RelPermalink }}"> {{ .Title }}</a>
+  <a type="button" href="{{ .RelPermalink }}"> {{ .Title }}</a>
   {{ end }}
 </nav>
