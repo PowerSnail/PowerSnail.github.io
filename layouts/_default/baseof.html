@@ -17,9 +17,7 @@
 
     <title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
     
-    {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true ) }}
-    {{ $css := resources.Get "css/style.scss" | resources.ToCSS $options | resources.PostCSS | resources.PostProcess }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+    {{ partial "default_css.html" }}
     <link rel="canonical" href="{{ .Permalink }}"/>
 
     <link rel="shortcut icon" sizes="any" href="/images/snail.svg" type="image/svg+xml">

@@ -1,0 +1,12 @@
+{{ $scss := resources.Get "css/style.scss" }}
+
+{{ if hugo.IsProduction }}
+    {{ $tocss_options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" false ) }}
+    {{ $css := $scss | resources.ToCSS $tocss_options }}
+    {{ $postcss_options := dict "use" "autoprefixer" }}
+    {{ $css := $css | resources.PostCSS $postcss_options }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+{{ else }}
+    {{ $css := $scss | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+{{ end }}
