@@ -7,21 +7,35 @@
   @import "dracula";
 }
 
+:root {
+  --font-family: sans-serif;
+  --color-bg: #f9f9f9;
+  --width-content: 72ch;
+}
+
 table tr:nth-child(even) {
   background-color: inherit;
 }
 
-:root {
-  --width-content: 800px;
-  --font-family: sans-serif;
+table {
+  display: table;
+  border: solid 1px var(--color)
+}
+
+p {
+  margin: 0;
+  &:not(:last-child)  {
+    margin-bottom: 1em;
+  }
 }
 
 body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  grid-template-columns: 1fr calc(min(800px, 100%)) 1fr;
+  grid-template-columns: 1fr calc(min(var(--width-content), 100%)) 1fr;
   justify-items: stretch;
+  line-height: 1.6;
 }
 
 a {
@@ -29,7 +43,7 @@ a {
   font-weight: normal;
 }
 
-body > * {
+body>* {
   grid-column: 2;
   margin: 0;
 }
@@ -40,7 +54,6 @@ article {
   margin: 0;
   display: flex;
   flex-flow: column nowrap;
-  align-items: stretch;
 
   h1 {
     text-align: center;
@@ -74,10 +87,6 @@ article {
     white-space: normal;
   }
 
-  p {
-    margin: 0.7em 0;
-  }
-
   li {
     padding: 0;
   }
@@ -95,6 +104,7 @@ article {
 
   code {
     background-color: var(--color-accent);
+    font-size: 0.9em;
   }
 
   pre code {
@@ -118,7 +128,8 @@ img {
   margin: auto 0px auto 0px;
 }
 
-header, footer {
+header,
+footer {
   --color-text: var(--color-head);
   --color-link: var(--color-head);
 
@@ -164,6 +175,7 @@ figure {
   border: solid 2px var(--color-text-secondary);
   background-color: var(--color-text-secondary);
   border-radius: 4px;
+
   figcaption {
     color: var(--color-bg-secondary);
   }
@@ -197,6 +209,7 @@ figure {
 .paginator {
   margin: 0;
   margin-top: 3em;
+
   .newer {
     float: right;
     clear: both;
@@ -208,6 +221,7 @@ figure {
   font-weight: normal;
   padding-bottom: 1em;
   font-family: monospace;
+  font-size: 0.8em;
   color: var(--color-text);
   display: flex;
   flex-wrap: wrap;
@@ -218,6 +232,7 @@ figure {
     justify-content: start;
     flex-flow: row wrap;
     column-gap: 1em;
+
     a::before {
       content: "#";
       font-style: italic;
@@ -237,4 +252,27 @@ figure {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 2em;
+}
+
+.status-card {
+  border-left: solid 1px var(--color);
+  padding-left: 1em;
+  max-width: 48ch;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 1em;
+}
+
+.status-time {
+  color: var(--color-text-secondary);
+  font-weight: normal;
+  font-family: monospace;
+}
+
+.status-container {
+  display: grid;
+  row-gap: 2em;
+  justify-items: stretch;
+  align-self: center;
+  padding-bottom: 1em;
 }

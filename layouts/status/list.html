@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article>
     <div class="status-container">
-        {{ range first 2 (where .Site.RegularPages "Section" "status") }}
+        {{ range .Pages }}
         <div class="status-card">
             <div class="status-time">
                 {{ with .Params.date }}
@@ -12,6 +12,5 @@
         </div>
         {{ end }}
     </div>
-    {{ .Content }}
 </article>
 {{ end }}

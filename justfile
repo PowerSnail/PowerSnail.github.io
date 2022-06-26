@@ -18,6 +18,9 @@ generate-icon-css:
 new-post category slug:
     hugo new --kind "post" content/{{ category }}/{{ `date +%Y-%m-%d` }}-{{slug}}.md
 
+new-status:
+    hugo new --kind "status" content/status/{{ `date +%Y-%m-%d-%H-%M` }}.md
+
 serve:
     hugo serve -D --port 1313
 
