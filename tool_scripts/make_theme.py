@@ -6,7 +6,7 @@ import sys
 
 class Color:
     _oklab = OKLAB()
-    _hex = SRGBhex(mode="clip")
+    _hex = SRGBhex(default_mode="clip")
 
     def __init__(self, data):
         self.data = data
@@ -23,7 +23,7 @@ def main(main_color):
     main_color = Color.from_hex(main_color)
     main_color.data[0] = 0.5
     fg = Color.from_hex("#000000")
-    bg = Color.from_hex("#FFFFFF")
+    bg = Color.from_hex("#f9f9f9")
 
     alt = Color(main_color.data + np.array([0, 0.2, 0.2]))
     fg_alt = Color(main_color.data * 0.5 + fg.data * 0.5)
