@@ -9,7 +9,6 @@
 
 :root {
   --font-family: sans-serif;
-  --color-bg: #f9f9f9;
   --width-content: 72ch;
 }
 
@@ -166,15 +165,6 @@ footer {
 }
 
 header {
-  div {
-    max-width: var(--width-content);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: baseline;
-    margin: auto;
-  }
-
   nav {
     a {
       padding-top: 4px;
