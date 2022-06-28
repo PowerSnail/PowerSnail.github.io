@@ -31,4 +31,4 @@ serve-at target:
     hugo serve -D --port 1313 --baseURL="{{ target }}" --appendPort=false
 
 deploy-test base destination:
-    hugo --baseURL {{ base }} --buildDrafts --destination {{ destination }} --forceSyncStatic -w --noChmod
+    hugo --baseURL {{ base }} --cleanDestinationDir --buildDrafts --destination {{ destination }} --forceSyncStatic -w --noChmod
