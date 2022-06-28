@@ -12,6 +12,9 @@ mathjax-update:
 change-color color:
     python3 tool_scripts/make_theme.py "{{ color }}" > assets/css/_color.scss
 
+build-ts file:
+    parcel build "{{ file }}" --dist-dir "$(filenametool parent {{ file }})"
+
 generate-icon-css:
     python3 tool_scripts/social_icon.py > assets/css/_icons.scss
 

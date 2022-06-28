@@ -5,6 +5,7 @@ hasCJKLanguage = true
 paginate = 20
 ignorefiles = ["output"] 
 summaryLength = 12
+disableKinds = ["section"]
 
 [markup]
 [markup.goldmark.renderer]

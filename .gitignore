@@ -6,3 +6,4 @@ resources/_gen
 output/
 node_modules
 .hugo_build.lock
+.parcel-cache/
