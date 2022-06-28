@@ -1,5 +1,6 @@
 {{ define "main" }}
 <article>
+    <h2>Recent status</h2>
     <div class="status-container">
         {{ range first 2 (where .Site.RegularPages "Section" "status") }}
         <div class="status-card">
@@ -12,6 +13,11 @@
         </div>
         {{ end }}
     </div>
-    {{ .Content }}
+    <h2>Recent posts</h2>
+    <div class="post-list">
+        {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+            {{ partial "list_item.html" . }}
+        {{ end }}
+    </div>
 </article>
 {{ end }}

@@ -39,7 +39,7 @@ body {
 }
 
 a {
-  text-decoration: underline dashed;
+  text-decoration: underline;
   font-weight: normal;
 }
 
@@ -104,7 +104,6 @@ article {
 
   code {
     background-color: var(--color-accent);
-    font-size: 0.9em;
   }
 
   pre code {
@@ -199,21 +198,35 @@ figure {
   background-color: var(--color-text);
 }
 
+.post-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1em;
+  row-gap: 2em;
+  align-items: baseline;
+}
+
+.post-time {
+  font-family: monospace;
+}
+
 .post-list-item {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 1em;
+  display: grid;
+  grid-template-rows: auto auto;
+
+  a {
+    font-weight: bolder;
+  }
 }
 
 .paginator {
   margin: 0;
   margin-top: 3em;
-
-  .newer {
-    float: right;
-    clear: both;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  align-self: center;
 }
 
 .metadata {
@@ -221,7 +234,7 @@ figure {
   font-weight: normal;
   padding-bottom: 1em;
   font-family: monospace;
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: var(--color-text);
   display: flex;
   flex-wrap: wrap;
@@ -235,7 +248,6 @@ figure {
 
     a::before {
       content: "#";
-      font-style: italic;
     }
   }
 }

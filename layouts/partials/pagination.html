@@ -1,12 +1,25 @@
 {{ if gt .Paginator.TotalPages 1 }}
+    {{ $current_page := .Paginator.PageNumber }}
     <hr>
     <div class="paginator">
-        {{ if .Paginator.HasNext }}
-            <a href="{{ .Paginator.Next.URL }}" class="older">« Older posts</a>
+        {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}" >« Newer</a>
+        {{ else }}
+            <br>
         {{ end }}
 
-        {{ if .Paginator.HasPrev }}
-            <a href="{{ .Paginator.Prev.URL }}" class="newer">Newer posts »</a>
+        {{ range .Paginator.Pagers }}
+            {{ if eq .PageNumber $current_page }}
+                <span>{{ .PageNumber }}</span>
+            {{ else }}
+                <a href="{{ .URL }}>">{{ .PageNumber }}</a>
+            {{ end }}
+        {{ end }}
+
+        {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}">Older »</a>
+        {{ else }}
+            <br>
         {{ end }}
     </div>
 {{ end }}

@@ -6,7 +6,12 @@
     <small>/ Page {{.Paginator.PageNumber}}</small> {{ end }}
   </h1>
   <hr class="title-line" />
-  {{- partial "listcontent.html" . -}} 
+  <div class="post-list">
+    {{ range .Paginator.Pages }}
+      {{ partial "list_item.html" . }}
+    {{ end }}
+  </div>
+
   {{- partial "pagination.html" . -}} 
 </article>
 {{ end }}
