@@ -1,6 +1,20 @@
+<div>
 <a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 <nav>
-  <a type="button" href="/about">About</a>
-  <a type="button" href="/status">Status</a>
-  <a type="button" href="/posts">Posts</a>
+  <a type="button" href="/posts/"
+    {{ if eq .RelPermalink "/posts/" }}
+      class="current"
+    {{ end }}
+  >Posts</a>
+  <a type="button" href="/status/"
+  {{ if eq .RelPermalink "/status/" }}
+    class="current"
+  {{ end }}
+  >Status</a>
+  <a type="button" href="/about/"
+  {{ if eq .RelPermalink "/about/" }}
+    class="current"
+  {{ end }}
+  >About</a>
 </nav>
+</div>
