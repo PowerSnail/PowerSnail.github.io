@@ -169,7 +169,7 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 3ch;
+    column-gap: 3ch;
     text-transform: uppercase;
     margin: 0;
   }
