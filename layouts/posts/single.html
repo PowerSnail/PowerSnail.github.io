@@ -23,6 +23,8 @@
   {{ $re_foot_notes := `(?ms)^<section class="footnotes" role="doc-endnotes">\s*(.*)\s</section>` }} 
   
   {{ replaceRE $re_foot_notes "$1" .Content | safeHTML }} 
+
+  {{ partial "cc.html" . }}
 </article>
 
 {{ end }}

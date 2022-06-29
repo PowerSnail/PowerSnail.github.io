@@ -5,6 +5,7 @@ hasCJKLanguage = true
 paginate = 20
 ignorefiles = ["output"] 
 summaryLength = 12
+copyright = "Copyright @ PowerSnail 2016-2022"
 
 [markup]
 [markup.goldmark.renderer]

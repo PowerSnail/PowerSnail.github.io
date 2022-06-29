@@ -21,9 +21,11 @@ table {
   border: solid 1px var(--color)
 }
 
-p, blockquote {
+p,
+blockquote {
   margin: 0;
-  &:not(:last-child)  {
+
+  &:not(:last-child) {
     margin-bottom: 1em;
   }
 }
@@ -136,31 +138,40 @@ footer {
   padding: 0em;
   box-sizing: border-box;
   max-width: none;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  gap: 0.5rem;
 
   background: url(/images/front-cover.png) no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
   background-color: #160e0c;
 
+  div {
+    color: var(--color-text);
+  }
+
   a {
     color: var(--color-text);
     text-decoration: none;
     font-weight: normal;
-    padding: 0;
+    margin: 0;
   }
 
   .site-title {
     width: fit-content;
-    padding-top: 1rem;
     font-size: 2em;
   }
+
   nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     gap: 3ch;
     text-transform: uppercase;
-    margin: 1em;
+    margin: 0;
   }
 }
 
@@ -298,4 +309,10 @@ figure {
   justify-items: stretch;
   align-self: center;
   padding-bottom: 1em;
+}
+
+img.cc {
+  height: 22px;
+  margin-left: 3px;
+  vertical-align: text-bottom;
 }
