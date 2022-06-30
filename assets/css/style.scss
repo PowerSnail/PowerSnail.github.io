@@ -172,13 +172,16 @@ footer {
     column-gap: 3ch;
     text-transform: uppercase;
     margin: 0;
+
+    a {
+      padding: 4px;
+    }
   }
 }
 
 header {
   nav {
     a {
-      padding-top: 4px;
       border-top: solid 2px transparent;
     }
 
