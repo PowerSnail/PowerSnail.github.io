@@ -7,6 +7,8 @@ tags: ["non-fiction", "writing"]
 draft: true
 ---
 
+![Cover](./cover.webp)
+
 ## Summary
 
 The book contains analysis of seven short stories written by Russian authors. Saunders looks at the stories from a pragmatic point of view, showing us why those stories engage us, how the writers did it, and at times, when they display their own shortcomings. There's no "-ism" in this book, or complex literary theories. Instead, he talks about readers' expectations, raising and answering questions, the cart of _Things I Couldn't Help Noticing_(TICHN), and escalations.
