@@ -125,6 +125,7 @@ article {
 
 img {
   margin: auto 0px auto 0px;
+  height: auto;
 }
 
 header,
@@ -311,7 +312,7 @@ figure {
 }
 
 img.cc {
-  height: 22px;
+  height: 1em;
   margin-left: 3px;
   vertical-align: text-bottom;
 }
