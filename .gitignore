@@ -7,3 +7,4 @@ output/
 node_modules
 .hugo_build.lock
 .parcel-cache/
+.python-version

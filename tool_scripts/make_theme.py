@@ -1,49 +1,59 @@
-from colorio.cs import OKLAB, SRGBhex
-import numpy as np
 import typer
-import sys
+import numpy as np
+import colour
+import more_itertools
 
 
 class Color:
-    _oklab = OKLAB()
-    _hex = SRGBhex(default_mode="clip")
-
     def __init__(self, data):
         self.data = data
 
     @classmethod
-    def from_hex(cls, hex):
-        return cls(cls._oklab.from_xyz100(cls._hex.to_xyz100(hex)))
+    def from_hex(cls, hex: str):
+        values = hex.lstrip("#")
+        values = more_itertools.chunked(values, 2)
+        values = (int("0x{}{}".format(*v), 16) for v in values)
+        rgb = np.array([n / 255 for n in values])
+        xyz = colour.sRGB_to_XYZ(rgb)
+        lab = colour.XYZ_to_Oklab(xyz)
+        return cls(np.array(lab))
 
-    def __str__(self):
-        return str(self._hex.from_xyz100(self._oklab.to_xyz100(self.data)))
+    def hex(self) -> str:
+        xyz = colour.Oklab_to_XYZ(self.data)
+        rgb = colour.XYZ_to_sRGB(xyz)
+        rgb = (min(1.0, max(0.0, v)) for v in rgb)
+        rgb = (int(v * 255) for v in rgb)
+        return "#{:02x}{:02x}{:02x}".format(*rgb)
+
+    def __format__(self, __format_spec: str) -> str:
+        return self.hex()
 
 
-def main(main_color):
-    main_color = Color.from_hex(main_color)
-    main_color.data[0] = 0.5
+def main(primary: str, alt: str):
+    primary = Color.from_hex(primary)
+    primary.data[0] = 0.5
     fg = Color.from_hex("#000000")
-    bg = Color.from_hex("#f9f9f9")
+    bg = Color.from_hex("#fafafa")
 
-    alt = Color(main_color.data + np.array([0, 0.2, 0.2]))
-    fg_alt = Color(main_color.data * 0.5 + fg.data * 0.5)
-    bg_alt = Color(main_color.data * 0.1 + bg.data * 0.9)
+    alt = Color.from_hex(alt)
+    fg_alt = Color(alt.data * 0.2 + fg.data * 0.8)
+    bg_alt = Color(alt.data * 0.2 + bg.data * 0.8)
 
     print(":root {")
-    print(f"  --color: {main_color};")
-    print(f"  --color-accent: {main_color}15;")
+    print(f"  --color: {primary};")
+    print(f"  --color-accent: {primary.hex()}15;")
     print(f"  --color-bg: {bg};")
     print(f"  --color-text: {fg};")
     print(f"  --color-bg-secondary: {bg_alt};")
     print(f"  --color-text-secondary: {fg_alt};")
     print(f"  --color-secondary-accent: {alt}15;")
-    print(f"  --color-link: {main_color};")
+    print(f"  --color-link: {primary};")
     print(f"  --color-shadow: #f4f4f4;")
-    print(f"  --color-table: {main_color};")
+    print(f"  --color-table: {primary};")
     print(f"  --color-head: {bg};")
     print("}")
 
-    main_color.data[0] = 1.2 - main_color.data[0]
+    primary.data[0] = 1.2 - primary.data[0]
     bg.data[0] = 1.2 - bg.data[0]
     fg.data[0] = 1.2 - fg.data[0]
     bg_alt.data[0] = 1.2 - bg_alt.data[0]
@@ -51,16 +61,16 @@ def main(main_color):
 
     print("@media (prefers-color-scheme: dark) {")
     print("  :root {")
-    print(f"    --color: {main_color};")
-    print(f"    --color-accent: {main_color}15;")
+    print(f"    --color: {primary};")
+    print(f"    --color-accent: {primary}15;")
     print(f"    --color-bg: {bg};")
     print(f"    --color-text: {fg};")
     print(f"    --color-bg-secondary: {bg_alt};")
     print(f"    --color-text-secondary: {fg_alt};")
     print(f"    --color-secondary-accent: {alt}15;")
-    print(f"    --color-link: {main_color};")
+    print(f"    --color-link: {primary};")
     print(f"    --color-shadow: #f4f4f4;")
-    print(f"    --color-table: {main_color};")
+    print(f"    --color-table: {primary};")
     print("  }")
     print("}")
 
