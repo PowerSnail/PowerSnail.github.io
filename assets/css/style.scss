@@ -1,131 +1,14 @@
-@import "mvp";
 @import "color";
 @import "icons";
-@import "mvp_fixes";
+@import "normalize";
 
 @import "friendly";
 @media (prefers-color-scheme: dark) {
   @import "dracula";
 }
 
+@import "global";
+
+@import "main";
 @import "header";
 @import "footer";
-
-
-
-
-.icon-prefix {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  column-gap: 0.5ch;
-}
-
-.icon-prefix::before {
-  content: "";
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  mask-size: cover;
-  -webkit-mask-size: cover;
-  vertical-align: middle;
-  background-color: var(--color-text);
-}
-
-.post-list {
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 1em;
-  row-gap: 2em;
-  align-items: baseline;
-}
-
-.post-time {
-  font-family: monospace;
-}
-
-.post-list-item {
-  width: 100%;
-  display: grid;
-  grid-template-rows: auto auto;
-
-  a {
-    font-weight: bolder;
-  }
-}
-
-.paginator {
-  margin: 0;
-  margin-top: 3em;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1em;
-  align-self: center;
-}
-
-.metadata {
-  --color-text: var(--color-text-secondary);
-  font-weight: normal;
-  padding-bottom: 1em;
-  font-family: monospace;
-  font-size: 0.9em;
-  color: var(--color-text);
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 2em;
-
-  .tag-list {
-    display: flex;
-    justify-content: start;
-    flex-flow: row wrap;
-    column-gap: 1em;
-
-    a::before {
-      content: "#";
-    }
-  }
-  align-self: center;
-}
-
-.goatcounter {
-  max-height: 1px;
-  max-width: 1px;
-}
-
-.title-line {
-  background-color: var(--color-text);
-  width: 33%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.status-card {
-  border-left: solid 1px var(--color);
-  padding-left: 1em;
-  max-width: 48ch;
-  display: grid;
-  grid-template-rows: auto auto;
-  gap: 1em;
-}
-
-.status-time {
-  color: var(--color-text-secondary);
-  font-weight: normal;
-  font-family: monospace;
-}
-
-.status-container {
-  display: grid;
-  row-gap: 2em;
-  justify-items: stretch;
-  align-self: center;
-  padding-bottom: 1em;
-}
-
-img.cc {
-  height: 1em;
-  margin-left: 3px;
-  vertical-align: text-bottom;
-}

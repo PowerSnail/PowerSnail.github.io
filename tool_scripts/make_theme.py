@@ -29,48 +29,37 @@ class Color:
         return self.hex()
 
 
-def main(primary: str, alt: str):
-    primary = Color.from_hex(primary)
-    primary.data[0] = 0.5
-    fg = Color.from_hex("#000000")
-    bg = Color.from_hex("#fafafa")
+DEFAULT = {
+    "accent": "#af3000",
+    "bg": "#fafafa",
+    "text": "#000000",
+    "bg-alt": "#C6FED2",
+    "text-alt": "#3D405B",
+    "code": "#1A2D29",
+    "link": "#AF3000",
+    "shadow": "#1E212B",
+}
 
-    alt = Color.from_hex(alt)
-    fg_alt = Color(alt.data * 0.2 + fg.data * 0.8)
-    bg_alt = Color(alt.data * 0.2 + bg.data * 0.8)
 
+def invert(c: str) -> str:
+    inverted = Color.from_hex(c)
+    inverted.data[0] = 1.2 - inverted.data[0]
+    return inverted.hex()
+
+
+DARK = {key: invert(value) for key, value in DEFAULT.items()}
+
+
+def main():
     print(":root {")
-    print(f"  --color: {primary};")
-    print(f"  --color-accent: {primary.hex()}15;")
-    print(f"  --color-bg: {bg};")
-    print(f"  --color-text: {fg};")
-    print(f"  --color-bg-secondary: {bg_alt};")
-    print(f"  --color-text-secondary: {fg_alt};")
-    print(f"  --color-secondary-accent: {alt}15;")
-    print(f"  --color-link: {primary};")
-    print(f"  --color-shadow: #f4f4f4;")
-    print(f"  --color-table: {primary};")
-    print(f"  --color-head: {bg};")
+    for key, value in DEFAULT.items():
+        print(f"  --{key}: {value};")
     print("}")
-
-    primary.data[0] = 1.2 - primary.data[0]
-    bg.data[0] = 1.2 - bg.data[0]
-    fg.data[0] = 1.2 - fg.data[0]
-    bg_alt.data[0] = 1.2 - bg_alt.data[0]
-    fg_alt.data[0] = 1.2 - fg_alt.data[0]
 
     print("@media (prefers-color-scheme: dark) {")
     print("  :root {")
-    print(f"    --color: {primary};")
-    print(f"    --color-accent: {primary}15;")
-    print(f"    --color-bg: {bg};")
-    print(f"    --color-text: {fg};")
-    print(f"    --color-bg-secondary: {bg_alt};")
-    print(f"    --color-text-secondary: {fg_alt};")
-    print(f"    --color-secondary-accent: {alt}15;")
-    print(f"    --color-link: {primary};")
-    print(f"    --color-shadow: #f4f4f4;")
-    print(f"    --color-table: {primary};")
+    for key, value in DARK.items():
+        print(f"    --{key}: {value};")
     print("  }")
     print("}")
 

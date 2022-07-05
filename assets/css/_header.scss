@@ -3,9 +3,10 @@ header {
   padding: 0;
   grid-template-rows: auto auto;
   justify-items: stretch;
+  grid-column: 1 / -1;
 
   a {
-    color: var(--color-text-secondary);
+    color: var(--text);
     text-decoration: none;
     font-weight: normal;
     margin: 0;
@@ -27,8 +28,8 @@ header {
     text-transform: uppercase;
     margin: 0;
 
-    border-top: solid 1px var(--color-text);
-    border-bottom: solid 2px var(--color-text);
+    border-top: solid 1px var(--text);
+    border-bottom: solid 2px var(--text);
 
     padding-top: 2px;
     padding-bottom: 2px;
@@ -40,7 +41,7 @@ header {
 
     a.current::before {
       content: "<";
-      color: var(--color);
+      color: var(--accent);
       text-align: center;
     }
 
@@ -51,7 +52,7 @@ header {
 
     a.current::after {
       content: ">";
-      color: var(--color);
+      color: var(--accent);
       text-align: center;
     }
   }

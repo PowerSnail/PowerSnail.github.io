@@ -1,0 +1,138 @@
+// Copyright 2022 PowerSnail
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+main {
+  a {
+    text-decoration: underline;
+    font-weight: normal;
+    color: var(--link);
+    border: 1px solid transparent;
+  }
+
+  a:hover {
+    background-color: var(--bg-alt);
+  }
+
+  a:active {
+    border: solid 1px var(--text-alt);
+    border-style: inset;
+    box-shadow: inset 1px 1px 0px 0px var(--shadow);
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    border-top: 2px solid var(--text);
+    border-bottom: 2px solid var(--text);
+    width: fit-content;
+    overflow-x: auto;
+  }
+
+  thead {
+    border-bottom: 1px solid var(--text);
+    font-weight: 700;
+  }
+
+  td,
+  th {
+    text-align: left;
+    white-space: normal;
+    padding: 0 15px 0 15px ;
+  }
+
+  article {
+    font-size: 1.1em;
+    margin: 0 2ch 0 2ch;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2rem 0 2rem 0;
+    row-gap: 1rem;
+
+    h1 {
+      text-align: center;
+      margin: 0;
+    }
+
+    h2::before {
+      content: "## ";
+      font-family: monospace;
+      color: var(--accent);
+    }
+
+    h3::before {
+      content: "### ";
+      font-family: monospace;
+      color: var(--accent);
+    }
+
+    h4::before {
+      content: "#### ";
+      font-family: monospace;
+      color: var(--accent);
+    }
+
+    h5::before {
+      content: "##### ";
+      font-family: monospace;
+      color: var(--accent);
+    }
+
+    /* Quotes */
+    blockquote {
+      border-left: 2px solid var(--accent);
+      padding-left: 2ch;
+      background-color: var(--bg-alt);
+    }
+
+    code {
+      background-color: var(--bg-alt);
+      color: var(--code);
+      padding: 0 0.5ch 0 0.5ch;
+      border-radius: 0.5ch;
+    }
+
+    pre {
+      padding: 1rem;
+      font-size: 1rem;
+      overflow-x: scroll;
+    }
+
+    pre code {
+      max-width: none;
+      white-space: pre;
+      background-color: transparent;
+      color: var(--text);
+      padding: 0;
+    }
+
+    img {
+      margin: auto 0px auto 0px;
+      height: auto;
+      max-width: 100%;
+    }
+  
+    figure {
+      align-self: center;
+  
+      figcaption {
+        color: var(--color-text-secondary);
+      }
+    }
+
+    hr {
+      width: 100%;
+      background-color: var(--bg-alt);
+    }
+  }
+}
