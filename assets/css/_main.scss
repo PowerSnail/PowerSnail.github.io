@@ -63,6 +63,12 @@ main {
     padding: 2rem 0 2rem 0;
     row-gap: 1rem;
 
+    ul, ol {
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: 0.5rem;
+    }
+
     h1 {
       text-align: center;
       margin: 0;
@@ -99,6 +105,10 @@ main {
       background-color: var(--bg-alt);
     }
 
+    ul {
+      margin: 0;
+    }
+
     code {
       background-color: var(--bg-alt);
       color: var(--code);
@@ -127,10 +137,12 @@ main {
     }
   
     figure {
-      align-self: center;
-  
+      display: grid;
+      gap: 0;
+      margin: 0;
       figcaption {
-        color: var(--color-text-secondary);
+        color: var(--text-alt);
+        font-size: 0.9em;
       }
     }
 

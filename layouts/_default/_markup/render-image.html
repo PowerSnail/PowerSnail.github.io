@@ -49,7 +49,7 @@
 <img src="{{ .Destination | safeURL }}" 
         alt="{{ .Text }}"
         {{ if $isSvg }}
-        style="max-width:100%; height: auto;"
+        style="width:100%; height: auto;"
         {{ end }}
         {{ with ($width) }} width="{{ . }}" {{ end }}
         {{ with ($height) }} height="{{ . }}" {{ end }}
