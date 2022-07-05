@@ -18,6 +18,14 @@ footer {
     margin: 0;
   }
 
+  a:hover {
+    background-color: var(--bg-attention);
+  }
+
+  a:active {
+    filter: brightness(85%);
+  }
+  
   nav {
     display: flex;
     flex-flow: row wrap;

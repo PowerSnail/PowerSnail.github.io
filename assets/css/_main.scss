@@ -21,22 +21,27 @@ main {
   }
 
   a:hover {
-    background-color: var(--bg-alt);
+    background-color: var(--bg-attention);
   }
 
   a:active {
-    border: solid 1px var(--text-alt);
+    border: solid 1px var(--bg-attention);
     border-style: inset;
-    box-shadow: inset 1px 1px 0px 0px var(--shadow);
+    box-shadow: inset 0px 0px 2px 0px var(--accent);
+    filter: brightness(85%);
   }
 
   table {
     border-collapse: collapse;
-    margin: 1.5rem 0;
     border-top: 2px solid var(--text);
     border-bottom: 2px solid var(--text);
-    width: fit-content;
-    overflow-x: auto;
+    margin: 1.5rem 0;
+    max-width: 100%;
+  }
+
+  tbody {
+    overflow-x: scroll;
+    width: max-content;
   }
 
   thead {
@@ -47,8 +52,7 @@ main {
   td,
   th {
     text-align: left;
-    white-space: normal;
-    padding: 0 15px 0 15px ;
+    padding: 0.2em 0.4em 0.2em 0.4em;
   }
 
   article {

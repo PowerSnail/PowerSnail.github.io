@@ -13,6 +13,36 @@ header {
     padding: 0 2px 0 2px;
   }
 
+  a:hover {
+    background-color: var(--bg-attention);
+  }
+
+  a:active {
+    filter: brightness(85%);
+  }
+
+  a::before {
+    content: "<";
+    color: transparent;
+  }
+
+  a.current::before {
+    content: "<";
+    color: var(--accent);
+    text-align: center;
+  }
+
+  a::after {
+    content: ">";
+    color: transparent;
+  }
+
+  a.current::after {
+    content: ">";
+    color: var(--accent);
+    text-align: center;
+  }
+
   .site-title {
     font-size: 3em;
     text-align: center;
@@ -34,26 +64,5 @@ header {
     padding-top: 2px;
     padding-bottom: 2px;
 
-    a::before {
-      content: "<";
-      color: transparent;
-    }
-
-    a.current::before {
-      content: "<";
-      color: var(--accent);
-      text-align: center;
-    }
-
-    a::after {
-      content: ">";
-      color: transparent;
-    }
-
-    a.current::after {
-      content: ">";
-      color: var(--accent);
-      text-align: center;
-    }
   }
 }
