@@ -1,4 +1,5 @@
----
-title: Status
-outputs:
----
++++
+title = "Status"
+description = "Short posts"
+outputs = []
++++
