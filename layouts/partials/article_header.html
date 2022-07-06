@@ -1,0 +1,32 @@
+<header>
+  <h1>
+    {{ if eq .Kind "term" }}
+    <a href="/tags/">Tags /</a>
+    {{ end }}
+    {{ .Title }}
+    {{ if .Paginator }}
+    {{ if ne .Paginator.PageNumber 1 }}
+    <small>/ Page {{.Paginator.PageNumber}}</small>
+    {{ end }}
+    {{ end }}
+  </h1>
+  <hr class="title-line" />
+  {{ if and (eq .Kind "page") (eq .Section "posts") }}
+  {{ $time := .Params.date }}
+  <div class="metadata">
+    <span class="icon-prefix calendar-event">{{ $time.Format "2006-01-02" }}</span>
+    <span class="icon-prefix calculator">{{ .WordCount }} words</span>
+    <span class="icon-prefix clock">{{ .ReadingTime }} minutes read</span>
+    
+    {{ with .Params.tags }}
+    <span class="icon-prefix tags">
+      <div class="tag-list">
+        {{ $links := apply . "partial" "tag_link.html" "." }}
+        {{ $clean := apply $links "chomp" "." }}
+        {{ delimit $clean " " }}
+      </div>
+    </span>
+    {{ end }}
+  </div>
+  {{ end }}
+</header>

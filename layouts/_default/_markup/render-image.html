@@ -1,60 +1,52 @@
-{{ $width := 1 }}
-{{ $height := 1 }}
-{{ $isSvg := false }}
-{{ $isLocal := true }}
-{{ $path := (.Destination | safeURL) }}
+{{- $width := 1 -}}
+{{- $height := 1 -}}
+{{- $isSvg := false -}}
+{{- $isLocal := true -}}
+{{- $path := (.Destination | safeURL) -}}
 
-{{ if strings.HasPrefix $path "/images" }}
-    {{ $path = add "/static" $path }}
-    {{ $isLocal = true }}
-{{ else if strings.HasPrefix $path "/" }}
-    {{ $path = add "/content" $path }}
-    {{ $isLocal = true }}
-{{ else if strings.HasPrefix $path "./" }}
-    {{ $path = add "/content/" (add .Page.File.Dir $path) }}
-    {{ $isLocal = true }}
-{{ else }}
-    {{ $isLocal = false }}
-{{ end }}
-
-
-{{ if (strings.HasSuffix $path ".svg") }}
-    {{ $isSvg = true }}
-    {{ $svgContent := "" }}
-    {{ if $isLocal }}
-        {{ $svgContent = os.ReadFile $path }}
-    {{ else }}
-        {{ $svgContent:= (resources.GetRemote $path).Content }}
-    {{ end }}
-    {{ $viewBoxSizes := split (index (split (index (split $svgContent `viewBox=`) 1) `'`) 1) ` ` }}
-    {{ $width = float (index $viewBoxSizes 2) }}
-    {{ $height = float (index $viewBoxSizes 3) }}
-{{ else }}
-    {{ if $isLocal }}
-        {{ with (imageConfig $path) -}}
-            {{ $width = .Width }}
-            {{ $height = .Height }}
-        {{ end -}}
-    {{ else }}
-        {{ $image := (resources.GetRemote $path) }}
-        {{ $width = $image.Width }}
-        {{ $height = $image.Height }}
-    {{ end }}
-{{ end }}
+{{- if strings.HasPrefix $path "/images" -}}
+    {{- $path = add "/static" $path -}}
+    {{- $isLocal = true -}}
+{{- else if strings.HasPrefix $path "/" -}}
+    {{- $path = add "/content" $path -}}
+    {{- $isLocal = true -}}
+{{- else if strings.HasPrefix $path "./" -}}
+    {{- $path = add "/content/" (add .Page.File.Dir $path) -}}
+    {{- $isLocal = true -}}
+{{- else -}}
+    {{- $isLocal = false -}}
+{{- end -}}
 
 
-{{ if .Title }}
-<figure>
-{{ end }}
-<img src="{{ .Destination | safeURL }}" 
-        alt="{{ .Text }}"
-        {{ if $isSvg }}
-        style="width:100%; height: auto;"
-        {{ end }}
-        {{ with ($width) }} width="{{ . }}" {{ end }}
-        {{ with ($height) }} height="{{ . }}" {{ end }}
-    >   
-{{ if .Title }}
-    <figcaption>{{ .Title }}</figcaption>
-</figure>
-{{ end }}
+{{- if (strings.HasSuffix $path ".svg") -}}
+    {{- $isSvg = true -}}
+    {{- $svgContent := "" -}}
+    {{- if $isLocal -}}
+        {{- $svgContent = os.ReadFile $path -}}
+    {{- else -}}
+        {{- $svgContent:= (resources.GetRemote $path).Content -}}
+    {{- end -}}
+    {{- $viewBoxSizes := split (index (split (index (split $svgContent `viewBox=`) 1) `'`) 1) ` ` -}}
+    {{- $width = float (index $viewBoxSizes 2) -}}
+    {{- $height = float (index $viewBoxSizes 3) -}}
+{{- else -}}
+    {{- if $isLocal -}}
+        {{- with (imageConfig $path) -}}
+            {{- $width = .Width -}}
+            {{- $height = .Height -}}
+        {{- end -}}
+    {{- else -}}
+        {{- $image := (resources.GetRemote $path) -}}
+        {{- $width = $image.Width -}}
+        {{- $height = $image.Height -}}
+    {{- end -}}
+{{- end -}}
+
+<img src="{{- .Destination | safeURL -}}" 
+    alt="{{- .Text -}}"
+    {{- if $isSvg -}}
+    style="width:100%; height: auto;"
+    {{- end -}}
+    {{- with ($width) -}} width="{{- . -}}" {{- end -}}
+    {{- with ($height) -}} height="{{- . -}}" {{- end -}}
+>   

@@ -1,16 +1,17 @@
 {{ define "main" }}
 <article>
-    <div class="status-container">
-        {{ range .Pages }}
-        <div class="status-card">
-            <div class="status-time">
-                {{ with .Params.date }}
-                <strong>{{ .Format "15:04" }}</strong> {{ .Format "2006-01-02" }} 
-                {{ end }}
-            </div>
-            {{ .Content }}
-        </div>
+  {{- partial "article_header.html" . -}}
+  <div class="status-container">
+    {{ range .Pages }}
+    <div class="status-card">
+      <div class="status-time">
+        {{ with .Params.date }}
+        <strong>{{ .Format "15:04" }}</strong> {{ .Format "2006-01-02" }}
         {{ end }}
+      </div>
+      {{ .Content }}
     </div>
+    {{ end }}
+  </div>
 </article>
 {{ end }}

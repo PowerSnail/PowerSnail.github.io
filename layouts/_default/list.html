@@ -1,11 +1,6 @@
 {{ define "main" }}
 <article>
-  <h1>
-    {{ if eq .Kind "term" }}<a href="/tags/">Tags /</a> {{ end }}
-    {{ .Title }} {{ if ne .Paginator.PageNumber 1 }}
-    <small>/ Page {{.Paginator.PageNumber}}</small> {{ end }}
-  </h1>
-  <hr class="title-line" />
+  {{- partial "article_header.html" . }}
   <div class="post-list">
     {{ range .Paginator.Pages }}
       {{ partial "list_item.html" . }}

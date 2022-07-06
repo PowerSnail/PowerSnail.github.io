@@ -1,17 +1,3 @@
-// Copyright 2022 PowerSnail
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 main {
   a {
     text-decoration: underline;
@@ -31,22 +17,25 @@ main {
     filter: brightness(85%);
   }
 
-  table {
-    border-collapse: collapse;
-    border-top: 2px solid var(--text);
-    border-bottom: 2px solid var(--text);
-    margin: 1.5rem 0;
+  div.table-wrapper {
+    display: block;
     max-width: 100%;
+    min-width: 100%;
+    overflow: auto;
   }
 
-  tbody {
-    overflow-x: scroll;
+  table {
+    border-collapse: collapse;
     width: max-content;
+    min-width: 100%;
+    border-top: 2px solid var(--text);
+    border-bottom: 2px solid var(--text);
   }
 
   thead {
     border-bottom: 1px solid var(--text);
     font-weight: 700;
+    width: 100%;
   }
 
   td,
@@ -55,24 +44,65 @@ main {
     padding: 0.2em 0.4em 0.2em 0.4em;
   }
 
+
   article {
     font-size: 1.1em;
     margin: 0 2ch 0 2ch;
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 2rem 0 2rem 0;
+    display: grid;
+    align-content: space-around;
     row-gap: 1rem;
 
-    ul, ol {
-      display: flex;
-      flex-flow: column nowrap;
+    header {
+      display: grid;
+      row-gap: 2rem;
+
+      h1 {
+        text-align: center;
+      }
+
+      hr {
+        background-color: var(--text);
+        width: 33%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .metadata {
+        color: var(--text);
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2em;
+        align-self: stretch;
+  
+        .icon-prefix::before {
+          background-color: var(--accent);
+          margin-right: 1ch;
+        }
+  
+        .tag-list {
+          display: flex;
+          justify-content: start;
+          flex-flow: row wrap;
+          column-gap: 1ch;
+  
+          a::before {
+            content: "#";
+          }
+        }
+      }
+    }
+
+    ul,
+    ol {
+      display: grid;
       row-gap: 0.5rem;
     }
 
-    h1 {
-      text-align: center;
-      margin: 0;
+    hr {
+      width: 100%;
+      background-color: var(--bg-alt);
     }
+
 
     h2::before {
       content: "## ";
@@ -116,9 +146,14 @@ main {
       border-radius: 0.5ch;
     }
 
+    div.highlight {
+      display: contents;
+    }
+
     pre {
       padding: 1rem;
       font-size: 1rem;
+      max-width: 100%;
       overflow-x: scroll;
     }
 
@@ -127,6 +162,7 @@ main {
       white-space: pre;
       background-color: transparent;
       color: var(--text);
+      max-width: 100%;
       padding: 0;
     }
 
@@ -135,20 +171,16 @@ main {
       height: auto;
       max-width: 100%;
     }
-  
+
     figure {
       display: grid;
       gap: 0;
       margin: 0;
+
       figcaption {
         color: var(--text-alt);
         font-size: 0.9em;
       }
-    }
-
-    hr {
-      width: 100%;
-      background-color: var(--bg-alt);
     }
   }
 }

@@ -1,5 +1,6 @@
 {{ define "main" }}
 <article>
-  {{ .Content }}
+  {{- partial "article_header.html" . -}}
+  {{ .Content }} 
 </article>
 {{ end }}
