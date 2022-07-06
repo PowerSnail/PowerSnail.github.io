@@ -1,0 +1,9 @@
+{{ $re_foot_notes := `(?ms)^<section class="footnotes" role="doc-endnotes">\s*(.*)\s</section>` }} 
+{{ $re_table := "(<table>(?:.|\n)+?</table>)" }} 
+
+{{- return (
+    .Content 
+    | replaceRE $re_table "<div class=table-wrapper> ${1} </div>" 
+    | replaceRE $re_foot_notes "{$1}" 
+    | safeHTML) 
+-}}

@@ -2,9 +2,10 @@
 <article>
   {{- partial "article_header.html" . -}}
 
-  {{ $re_foot_notes := `(?ms)^<section class="footnotes" role="doc-endnotes">\s*(.*)\s</section>` }} 
+  {{- partial "hacks.html" . }}
+  {{/*  {{ $re_foot_notes := `(?ms)^<section class="footnotes" role="doc-endnotes">\s*(.*)\s</section>` }} 
   {{ $wrappedTable := printf "<div class=table-wrapper> ${1} </div>" }}
-  {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | replaceRE $re_foot_notes "{$1}" | safeHTML }}
+  {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | replaceRE $re_foot_notes "{$1}" | safeHTML }}  */}}
 
   {{ partial "cc.html" . }}
 </article>
