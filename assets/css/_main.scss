@@ -128,10 +128,17 @@ main {
       color: var(--accent);
     }
 
+    h6::before {
+      content: "###### ";
+      font-family: monospace;
+      color: var(--accent);
+    }
+
     /* Quotes */
     blockquote {
+      margin: 0;
       border-left: 2px solid var(--accent);
-      padding-left: 2ch;
+      padding-left: 1ch;
       background-color: var(--bg-alt);
     }
 
