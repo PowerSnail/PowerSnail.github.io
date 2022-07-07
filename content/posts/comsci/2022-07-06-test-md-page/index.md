@@ -4,6 +4,7 @@ description = "A Markdown document that tests various properties of a static sit
 date = "2022-07-06"
 slug = "test-md-page"
 tags = ["computer-science"]
+images = ["./cover.svg"]
 draft = true
 +++
 
@@ -31,7 +32,7 @@ A paragraph under a sixth level heading.
 
 **This is a long paragraph. (Content from _Pride and Prejudice_)**
 
-An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.[^1]
+An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.[^austen]
 
 **This is a succession of paragraphs that each contains a short sentence, but not with an extra white line. According to convention, they should be rendered as a single paragraph.**
 
@@ -102,7 +103,7 @@ A regular line.
 
 A very long blockquote:
 
-> Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.[^1]
+> Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.[^austen]
 
 ## Images
 
@@ -175,6 +176,10 @@ def block_with_a_language(python):
                     print(" ")
 ```
 
+```
+Block with no language set that is super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long.
+```
+
 ```python
 print("A block with a super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long line")
 ```
@@ -205,9 +210,9 @@ A table with many columns
 
 A table with a very fat column:
 
-| fat | column  |
-| ------ | ------ |
-| item 1 | item 2 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long  |
+| fat    | column                                                                                                                                                                         |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| item 1 | item 2 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long |
 
 ## Some random tests
 
@@ -216,6 +221,6 @@ A table with a very fat column:
 - References[^3]
 
 
-[^1]: Austen, J. (2014). Pride and Prejudice (Vintage Classics Austen Series). Random House.
-[^2]: Poetry, by T. S. Eliot. (n.d.). Retrieved July 6, 2022, from https://standardebooks.org/ebooks/t-s-eliot/poetry
+[^austen]: Austen, Jane. *Pride and Prejudice*. Standard Ebooks, 2014.
+[^2]: Eliot, T. S. *Poetry*. Standard Ebooks, 2017.
 [^3]: A test for reference

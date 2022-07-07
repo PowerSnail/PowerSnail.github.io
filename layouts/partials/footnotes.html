@@ -1,0 +1,5 @@
+{{- $re_foot_notes := `(?ms)^<div class="footnotes" role="doc-endnotes">\s*<hr>\s*(.*)\s</div>` -}} 
+{{- $footnotes := findRE $re_foot_notes . 1 -}}
+{{- with (index $footnotes 0) -}}
+    {{ replaceRE $re_foot_notes "$1" . | safeHTML}}
+{{- end  -}}

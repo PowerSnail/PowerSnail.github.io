@@ -2,12 +2,17 @@
 <article>
   {{- partial "article_header.html" . -}}
 
-  {{- partial "hacks.html" . }}
-  {{/*  {{ $re_foot_notes := `(?ms)^<section class="footnotes" role="doc-endnotes">\s*(.*)\s</section>` }} 
-  {{ $wrappedTable := printf "<div class=table-wrapper> ${1} </div>" }}
-  {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | replaceRE $re_foot_notes "{$1}" | safeHTML }}  */}}
+  {{ if and (isset .Params "images") (gt (len .Params.images) 0) }}
+    <img id="cover" src="{{ index .Params.images 0 }}">
+  {{ end }}
 
-  {{ partial "cc.html" . }}
+  {{- partial "hacks.html" . }}
+
+  <footer>
+    {{- partial "footnotes.html" .Content -}}
+    {{ partial "cc.html" . }}
+  </footer>
+
 </article>
 
 {{ end }}

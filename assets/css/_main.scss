@@ -47,10 +47,15 @@ main {
 
   article {
     font-size: 1.1em;
-    margin: 0 2ch 0 2ch;
+    margin: 0;
     display: grid;
-    align-content: space-around;
+    grid-template-columns: 2ch auto 2ch;
     row-gap: 1rem;
+    padding: 2rem 0 1rem 0;
+
+    &>* {
+      grid-column: 2;
+    }
 
     header {
       display: grid;
@@ -73,18 +78,18 @@ main {
         flex-wrap: wrap;
         column-gap: 2em;
         align-self: stretch;
-  
+
         .icon-prefix::before {
           background-color: var(--accent);
           margin-right: 1ch;
         }
-  
+
         .tag-list {
           display: flex;
           justify-content: start;
           flex-flow: row wrap;
           column-gap: 1ch;
-  
+
           a::before {
             content: "#";
           }
@@ -96,6 +101,7 @@ main {
     ol {
       display: grid;
       row-gap: 0.5rem;
+      padding-left: 1em;
     }
 
     hr {
@@ -154,7 +160,8 @@ main {
     }
 
     div.highlight {
-      display: contents;
+      max-width: 100%;
+      overflow-x: scroll;
     }
 
     pre {
@@ -188,6 +195,30 @@ main {
         color: var(--text-alt);
         font-size: 0.9em;
       }
+
+    }
+
+    img#cover {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
+    footer {
+      grid-column: 1 / -1;
+      margin-top: 2rem;
+      padding: 1rem 2ch 0 2ch;
+      border-top: solid 1px var(--text-alt);
+      display: grid;
+      row-gap: 2rem;
+
+      #cc {
+        font-style: italic;
+
+        img {
+          vertical-align: text-bottom;
+        }
+      }
+
     }
   }
 }
