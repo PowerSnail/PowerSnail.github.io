@@ -1,8 +1,9 @@
 ---
 title: Chinese Caramel Color
-description: Making Chinese Caramel Color, 糖色, a type of natural food coloring commonly used in Chinese cooking, for example red braised pork belly
+description: Making Chinese Caramel Color, 糖色, a type of natural food coloring commonly used in Chinese cooking, for example red braised pork belly.
 date: 2022-02-02
 slug: chinese-caramel-color
+isCJK: true
 tags: ["Chinese"]
 draft: false
 ---

@@ -2,10 +2,6 @@
 <article>
   {{- partial "article_header.html" . -}}
 
-  {{ if and (isset .Params "images") (gt (len .Params.images) 0) }}
-    <img id="cover" src="{{ index .Params.images 0 }}">
-  {{ end }}
-
   {{- partial "hacks.html" . }}
 
   <footer>

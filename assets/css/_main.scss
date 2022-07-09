@@ -59,7 +59,9 @@ main {
 
     header {
       display: grid;
-      row-gap: 2rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      row-gap: 1rem;
 
       h1 {
         text-align: center;
@@ -68,31 +70,29 @@ main {
       hr {
         background-color: var(--text);
         width: 33%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 2rem auto;
       }
 
       .metadata {
-        color: var(--text);
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 2em;
+        color: var(--text-alt);
+        font-size: 0.85rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: flex-start;
+        justify-items: flex-start;
+        column-gap: 2rem;
         align-self: stretch;
 
         .icon-prefix::before {
           background-color: var(--accent);
-          margin-right: 1ch;
         }
 
         .tag-list {
+          grid-column: 1 / -1;
           display: flex;
           justify-content: start;
           flex-flow: row wrap;
           column-gap: 1ch;
-
-          a::before {
-            content: "#";
-          }
         }
       }
     }
@@ -196,6 +196,12 @@ main {
         font-size: 0.9em;
       }
 
+    }
+
+    #summary {
+      color: var(--text-alt);
+      font-size: 0.5em;
+      font-weight: lighter;
     }
 
     img#cover {

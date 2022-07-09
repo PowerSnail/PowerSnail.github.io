@@ -34,7 +34,7 @@ DEFAULT = {
     "bg": "#fafafa",
     "text": "#000000",
     "bg-alt": "#f6e5df",
-    "text-alt": "#3D405B",
+    "text-alt": "#645551",
     "bg-attention": "#C6FED2",
     "code": "#1A2D29",
     "link": "#AF3000",
