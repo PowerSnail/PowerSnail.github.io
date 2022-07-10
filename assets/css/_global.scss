@@ -112,8 +112,11 @@ h6 {
   padding-bottom: 1em;
 }
 
-
 .card {
   background-color: var(--bg-alt);
   padding: 2ch;
+}
+
+mark {
+  background-color: var(--bg-attention);
 }
