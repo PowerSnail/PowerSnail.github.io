@@ -7,7 +7,7 @@ description = "A collection of sheet music I made"
 
   Arranged for violin by Nathan Milstein
 
-  Download: [MuseScore](./Chopin%20-%20Nocturne%20in%20C%23%20Minor.mscx) [PDF](./Chopin%20-%20Nocturne%20in%20C%23%20Minor.pdf')
+  Download: [MuseScore](./Chopin%20-%20Nocturne%20in%20C%23%20Minor.mscx) [PDF](./Chopin%20-%20Nocturne%20in%20C%23%20Minor.pdf)
 
 - *Bowing Plane Exercise* by me
   
