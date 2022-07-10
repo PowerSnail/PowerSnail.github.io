@@ -17,6 +17,8 @@
       <enableVerticalSpread>1</enableVerticalSpread>
       <useStandardNoteNames>0</useStandardNoteNames>
       <createMultiMeasureRests>1</createMultiMeasureRests>
+      <footerOddEven>0</footerOddEven>
+      <oddFooterC></oddFooterC>
       <tupletFontFace>EB Garamond</tupletFontFace>
       <titleFontFace>EB Garamond</titleFontFace>
       <subTitleFontFace>EB Garamond</subTitleFontFace>
@@ -681,7 +683,7 @@
             <durationType>half</durationType>
             <Note>
               <Fingering>
-                <text>4</text>
+                <text>3</text>
                 </Fingering>
               <pitch>80</pitch>
               <tpc>22</tpc>
@@ -1346,6 +1348,9 @@
                   </location>
                 </next>
               </Spanner>
+            <Articulation>
+              <subtype>articTenutoAbove</subtype>
+              </Articulation>
             <Note>
               <pitch>73</pitch>
               <tpc>21</tpc>
@@ -1353,6 +1358,9 @@
             </Chord>
           <Chord>
             <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>articTenutoAbove</subtype>
+              </Articulation>
             <Note>
               <Accidental>
                 <subtype>accidentalNatural</subtype>
@@ -1363,6 +1371,9 @@
             </Chord>
           <Chord>
             <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>articTenutoAbove</subtype>
+              </Articulation>
             <Note>
               <pitch>73</pitch>
               <tpc>21</tpc>
@@ -1804,6 +1815,9 @@
                   </location>
                 </next>
               </Spanner>
+            <Articulation>
+              <subtype>articTenutoBelow</subtype>
+              </Articulation>
             <Note>
               <pitch>69</pitch>
               <tpc>17</tpc>
@@ -1811,6 +1825,9 @@
             </Chord>
           <Chord>
             <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>articTenutoBelow</subtype>
+              </Articulation>
             <Note>
               <pitch>71</pitch>
               <tpc>19</tpc>
@@ -1818,6 +1835,9 @@
             </Chord>
           <Chord>
             <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>articTenutoBelow</subtype>
+              </Articulation>
             <Note>
               <pitch>69</pitch>
               <tpc>17</tpc>
@@ -2887,14 +2907,14 @@
               </Number>
             </Tuplet>
           <Chord>
-            <BeamMode>no</BeamMode>
+            <BeamMode>begin</BeamMode>
             <durationType>16th</durationType>
             <Spanner type="Slur">
               <Slur>
                 </Slur>
               <next>
                 <location>
-                  <fractions>1/4</fractions>
+                  <fractions>5/24</fractions>
                   </location>
                 </next>
               </Spanner>
@@ -2904,6 +2924,7 @@
               </Note>
             </Chord>
           <Chord>
+            <BeamMode>mid</BeamMode>
             <durationType>16th</durationType>
             <Note>
               <pitch>75</pitch>
@@ -2936,6 +2957,13 @@
             </Chord>
           <Chord>
             <durationType>16th</durationType>
+            <Spanner type="Slur">
+              <prev>
+                <location>
+                  <fractions>-5/24</fractions>
+                  </location>
+                </prev>
+              </Spanner>
             <Note>
               <pitch>81</pitch>
               <tpc>17</tpc>
@@ -2954,13 +2982,6 @@
           <Chord>
             <BeamMode>begin</BeamMode>
             <durationType>eighth</durationType>
-            <Spanner type="Slur">
-              <prev>
-                <location>
-                  <fractions>-1/4</fractions>
-                  </location>
-                </prev>
-              </Spanner>
             <Note>
               <pitch>80</pitch>
               <tpc>22</tpc>
