@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>parsing on SnailShell</title><link>https://powersnail.com/tags/parsing/</link><description>Recent content in parsing on SnailShell</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright @ PowerSnail 2016-2022</copyright><lastBuildDate>Fri, 26 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://powersnail.com/tags/parsing/index.xml" rel="self" type="application/rss+xml"/><item><title>Production of Sentences and Properties of Languages: Parsing Techniques Notes (2)</title><link>https://powersnail.com/2016/parsing-techniques-notes02/</link><pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/parsing-techniques-notes02/</guid><description>&lt;h2 id="generating-sentences">Generating Sentences&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>sentence &lt;em>vs.&lt;/em> sentential&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>sentence&lt;/td>
+&lt;td>all symbols belongs to terminals (a valid element of the language)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sentential&lt;/td>
+&lt;td>may contain non-terminals, an intermediate form during sentence production&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="example">Example:&lt;/h4>
+&lt;p>For a language where $V_N = {P, Q} \land V_T = {a, b, c, d}$, a valid sentential would be $aP$; a valid sentence would be $ac$.&lt;/p>
+&lt;h3 id="type-0-and-type-1-cs-languages">Type 0 and Type 1 (CS) Languages&lt;/h3>
+&lt;p>&lt;strong>Breadth-first Production&lt;/strong>: for each sentential, make copies of it for each applicable rule. Then, repeat the operation on each copy. If there is no &lt;em>non-terminal&lt;/em> in the sentential, it is then a sentence, and could be printed and discarded in the production.&lt;/p>
+&lt;p>This process may be infinitely long, but it is guaranteed that an arbitrary sentence will definitely be produced.&lt;/p>
+&lt;h4 id="two-remarks-about-cs-language-sentence-production">Two Remarks about CS Language Sentence Production&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>We cannot decide whether a CS language is empty, i.e. whether its rules could produce a sentence. &lt;br> The process takes infinite time, and therefore is &lt;em>undecidable&lt;/em>.&lt;/p>
+&lt;ul>
+&lt;li>It is possible to prove a CS language being non-empty by giving an example of sentence it generates.&lt;/li>
+&lt;li>It is impossible to prove a CS language is empty.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>General parsing of CS language is &lt;em>unsolvable&lt;/em>. We cannot produce a list of sentences in a CS language in order by length. Because it is context-sensitive, the length of the sentence could &amp;ldquo;shrink&amp;rdquo; suddenly and unpredictably. &lt;br> As a result, we cannot determine a sentence is not in the language; there is always possibility that it may show up in further production.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>Type 0 language has the same properties.&lt;/p>
+&lt;h3 id="type-2-cf-language">Type 2 (CF) Language&lt;/h3>
+&lt;p>Monotonic nature of CF language means that the length of sentence will not &amp;ldquo;shrink&amp;rdquo;. Therefore, we could solve the two problems of CS language by a rather simple algorithm:&lt;/p>
+&lt;ol>
+&lt;li>Scan rules that have terminal on right-hand side,&lt;/li>
+&lt;li>marking those as productive;&lt;/li>
+&lt;li>scan rules that have productive on right-hand side,&lt;/li>
+&lt;li>repeat 2, 3 until meeting the start symbol or no new productive symbols could be found&lt;/li>
+&lt;/ol>
+&lt;p>If the above process is able to reach the start symbol then it is not empty; otherwise, it finds no way up to the start symbol, the language is empty.&lt;/p>
+&lt;p>The length of sentence does not shrink in CF language. Therefore, we could determine a sentence&amp;rsquo;s existence. If we meet the sentence obviously, it belongs to the language. If we keep producing and exceed the length of the sentence, then further production on the sentential will definitely not produce the sentence. We could therefore decide the inclusion of an arbitrary sentence of finite length in finite time.&lt;/p>
+&lt;h3 id="type-3-regular-language">Type 3 (Regular) Language&lt;/h3>
+&lt;p>Regular language has rules that right-hand side contains at most one non-terminal, and it should be the rightmost symbol. Regular language could be written as regular expressions that is composed of only terminals and regular operators. As a result, if a non-empty regular expression could be constructed, then the language is non-empty.&lt;/p>
+&lt;p>It is also possible to enumerate sentences without breath-first production, as only one non-terminal could be replaced in each sentential. When looking for a sentence $K$ of length $l$, if the length of sentential exceeds $l$, then $K$ cannot be included in the language. Finding any sentence in the process would prove that the language is not empty.&lt;/p>
+&lt;!-- page --></description></item><item><title>Generative Grammar and Four Types of Grammars: Parsing Techniques Notes (1)</title><link>https://powersnail.com/2016/parsing-techniques-notes01/</link><pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/parsing-techniques-notes01/</guid><description>&lt;h2 id="generative-grammar">Generative Grammar&lt;/h2>
+&lt;p>There are several views of defining a language. The computer science and formal linguistics perspective:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>terms&lt;/th>
+&lt;th>definition&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Language&lt;/td>
+&lt;td>a set of sentences&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Sentence&lt;/td>
+&lt;td>a &lt;strong>sequence&lt;/strong> of symbols&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Alphabet&lt;/td>
+&lt;td>a set of all symbols&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The semantics - meaning - of a sentence is described by its tokens cooperating with its structure.&lt;/p>
+&lt;p>Grammar is the set of rules describing a language.
+&lt;strong>Generative Grammar&lt;/strong> is&lt;/p>
+&lt;ul>
+&lt;li>exact&lt;/li>
+&lt;li>fixed-sized&lt;/li>
+&lt;/ul>
+&lt;h3 id="language-can-be-specified-by-infinite-bit-string">Language can be specified by infinite Bit-String&lt;/h3>
+&lt;p>Sorted Alphabet: $\Sigma$
+Language $\Sigma^{* }$ contains all combinations of symbols in $\Sigma$&lt;/p>
+&lt;p>The order of sentences in $\Sigma^* $ follows that:&lt;/p>
+&lt;p>&lt;em>from length $l = 0$&lt;/em>&lt;/p>
+&lt;ol>
+&lt;li>Enumerate all combinations that of length $l$&lt;/li>
+&lt;li>these combinations are listed according to alphabetical order (lexicographical sorting)&lt;/li>
+&lt;li>increment $l$ and repeat from 1.&lt;/li>
+&lt;/ol>
+&lt;p>This will form an infinitely long sorted list. Every language composed by alphabet $\Sigma$ can be identified by choosing from $\Sigma^* $. If we encode this by binary representation, 0 → not including, 1 → including, we can create an infinitely long bit string that indicates every sentence the language contains.&lt;/p>
+&lt;blockquote>
+&lt;p>For example:
+Language $L = 010010110&amp;hellip;$&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="formal-grammar">Formal Grammar&lt;/h3>
+&lt;p>Recipe of replacing symbols:&lt;/p>
+&lt;pre tabindex="0">&lt;code>Name -&amp;gt; tom | dick | harry // Name may be replaced by tom, dick or harry
+...
+&lt;/code>&lt;/pre>&lt;p>A grammar is a &lt;em>4-tuple&lt;/em> $(V_N, V_T, R, S)$:&lt;/p>
+&lt;ul>
+&lt;li>$V_N$ non-terminals, $V_T$ terminals are finite sets of symbols&lt;/li>
+&lt;li>$V_N \cap V_T = \varnothing$ terminals and non-terminals cannot have common symbols&lt;/li>
+&lt;li>$R$ is the set of rules, a set that contains ordered pairs: ${(P, Q) \mid P\in (V_N\cup V_T)^+ \land Q\in (V_N \cup V_T)^* }$&lt;/li>
+&lt;li>$S$ is the start symbol, $S\in V_N$&lt;/li>
+&lt;/ul>
+&lt;h2 id="four-types-of-grammars">Four types of Grammars&lt;/h2>
+&lt;h3 id="type-0-phrase-structure-grammar-ps-grammar">Type 0: Phrase Structure Grammar (PS Grammar)&lt;/h3>
+&lt;p>Most freedom. Follows &lt;em>4-tuple&lt;/em> $(V_N, V_T, R, S)$, without further restriction.
+Represented as &lt;code>Directed Acyclic Graph&lt;/code>: No cycle exists&lt;/p>
+&lt;h3 id="type-1-context-sensitive-grammar-cs-grammar">Type 1: Context-Sensitive Grammar (CS Grammar)&lt;/h3>
+&lt;p>There are two equivalent definitions: &lt;code>Monotonic&lt;/code> and &lt;code>Context-Sensitive&lt;/code>.
+Can be represented by a DAG, similar to PS Grammar.&lt;/p>
+&lt;h4 id="monotonic">Monotonic&lt;/h4>
+&lt;p>For each rule, left-hand side has more or equal number of symbols to right-hand side.&lt;/p>
+&lt;h4 id="context-sensitive">Context-Sensitive&lt;/h4>
+&lt;p>Every rule is context-sensitive.&lt;/p>
+&lt;ul>
+&lt;li>Left-hand side contains only one symbol to be changed in the right-hand side.&lt;/li>
+&lt;/ul>
+&lt;h3 id="type-2-context-free-grammar-cf-grammar">Type 2: Context-Free Grammar (CF Grammar)&lt;/h3>
+&lt;p>LHS could only contain one non-terminal symbol. (Thus not related to neighboring symbols).
+Represented by a tree, as branches of a node is not relevant to other nodes.&lt;/p>
+&lt;p>The generative power of CF Grammar comes from two operations:&lt;/p>
+&lt;ul>
+&lt;li>Concatenation&lt;/li>
+&lt;li>Choice (choosing from one of the alternatives in the RHS)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>NT -&amp;gt; tom | NT dick | ...&lt;/code>&lt;/p>
+&lt;h3 id="type-3-regular-grammar">Type 3: Regular Grammar&lt;/h3>
+&lt;p>Mostly referring to &lt;code>right regular grammar&lt;/code>.
+Each rule could only contain one non-terminal, as the rightmost item.
+Represented by a list, because each sentential has only one replaceable item (non-terminal), or in a production chain.&lt;/p>
+&lt;p>All regular grammar can be expressed in a regular expression, which sufficiently equal to all rules in the grammar.&lt;/p>
+&lt;p>Regular Expression Notation Styles:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Notation&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>$^{+ }$&lt;/td>
+&lt;td>One or more instances of the left-adjacent item&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$^{* }$&lt;/td>
+&lt;td>Zero or more instances of the left-adjacent item&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$^{? }$&lt;/td>
+&lt;td>Zero or one instance of the left-adjacent item&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$[abc]$&lt;/td>
+&lt;td>Choosing one from $(a, b, c)$, i.e., $(a\mid b\mid c)$&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Example:&lt;/p>
+&lt;p>$S_S\to(([tdh],)^{* }[tdh] &amp;amp; )^{? }[tdh]$&lt;/p>
+&lt;h3 id="type-4-finite-choice-grammar-fc-grammar">Type 4: Finite Choice Grammar (FC Grammar)&lt;/h3>
+&lt;p>Each rule could have only terminals in right-hand side.
+Very limited expressive power.&lt;/p></description></item></channel></rss>

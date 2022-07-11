@@ -33,5 +33,6 @@ serve-at target:
 deploy-test base destination:
     hugo --baseURL {{ base }} --destination {{ destination }} --forceSyncStatic -w --noChmod --gc --ignoreCache --buildDrafts 
 
-deploy destination:
-    hugo --destination {{ destination }} --noChmod --gc --ignoreCache --cleanDestinationDir
+deploy:
+    hugo --minify
+    python tool_scripts/check_dead_links.py public/

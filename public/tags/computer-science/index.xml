@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>computer science on SnailShell</title><link>https://powersnail.com/tags/computer-science/</link><description>Recent content in computer science on SnailShell</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright @ PowerSnail 2016-2022</copyright><lastBuildDate>Wed, 06 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://powersnail.com/tags/computer-science/index.xml" rel="self" type="application/rss+xml"/><item><title>Test Md Page</title><link>https://powersnail.com/2022/test-md-page/</link><pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate><guid>https://powersnail.com/2022/test-md-page/</guid><description>&lt;p>When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon to break pages that you are not looking. Maybe tables lose their responsiveness, sentences are too close together, empty pages look weird, etc. I&amp;rsquo;ve written this document to test some common pitfalls that I experienced when I was tweaking my own blog.&lt;/p>
+&lt;h2 id="this-is-a-second-level-heading">This is a second-level heading&lt;/h2>
+&lt;h3 id="this-is-a-third-level-heading">This is a third-level heading&lt;/h3>
+&lt;h4 id="this-is-a-fourth-level-heading">This is a fourth-level heading&lt;/h4>
+&lt;p>A paragraph under a fourth level heading.&lt;/p>
+&lt;h5 id="this-is-a-fifth-level-heading">This is a fifth-level heading&lt;/h5>
+&lt;p>A paragraph under a fifth level heading.&lt;/p>
+&lt;h6 id="this-is-a-sixth-level-heading">This is a sixth-level heading&lt;/h6>
+&lt;p>A paragraph under a sixth level heading.&lt;/p>
+&lt;h3 id="a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading">A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading&lt;/h3>
+&lt;h2 id="shapes-of-paragraphs">Shapes of paragraphs&lt;/h2>
+&lt;p>&lt;strong>This is a long paragraph. (Content from &lt;em>Pride and Prejudice&lt;/em>)&lt;/strong>&lt;/p>
+&lt;p>An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>&lt;strong>This is a succession of paragraphs that each contains a short sentence, but not with an extra white line. According to convention, they should be rendered as a single paragraph.&lt;/strong>&lt;/p>
+&lt;p>A dog is here.
+A cat is there.
+Look at that.
+A spoon drops into the lake.
+Ripples radiate to the shore.
+The moon wrinkled in the water.&lt;/p>
+&lt;p>&lt;strong>This is a succession of paragraphs that each contains a short sentence, with an extra line in between.&lt;/strong>&lt;/p>
+&lt;p>Twelve o’clock.&lt;/p>
+&lt;p>Along the reaches of the street&lt;/p>
+&lt;p>Held in a lunar synthesis,&lt;/p>
+&lt;p>Whispering lunar incantations&lt;/p>
+&lt;p>Disolve the floors of memory&lt;/p>
+&lt;p>And all its clear relations,&lt;/p>
+&lt;p>Its divisions and precisions,&lt;/p>
+&lt;p>Every street lamp that I pass&lt;/p>
+&lt;p>Beats like a fatalistic drum,&lt;/p>
+&lt;p>And through the spaces of the dark&lt;/p>
+&lt;p>Midnight shakes the memory&lt;/p>
+&lt;p>As a madman shakes a dead geranium.&lt;/p>
+&lt;p>by T.S. Eliot, &lt;em>Rhapsody on a Windy Night&lt;/em>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;h2 id="punctuations">Punctuations&lt;/h2>
+&lt;ul>
+&lt;li>&amp;ldquo;Quotations marks &amp;lsquo;rocks&amp;rsquo;&amp;rdquo;&lt;/li>
+&lt;li>Question mark?&lt;/li>
+&lt;li>Bang!&lt;/li>
+&lt;li>Comma, period.&lt;/li>
+&lt;li>Ellipses&amp;hellip;&amp;hellip;&lt;/li>
+&lt;li>Semicolons;&lt;/li>
+&lt;li>Various dashes:
+&lt;ul>
+&lt;li>A single, all-too-lonely dash (usually rendered as a &lt;strong>hyphen&lt;/strong>).&lt;/li>
+&lt;li>Two consecutive hyphens, 1&amp;ndash;2 (usually rendered as an &lt;strong>En Dash&lt;/strong>).&lt;/li>
+&lt;li>Three consecutive hyphens&amp;mdash;usually rendered as an &lt;strong>em dash&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>It&amp;rsquo;s an apostrophe&lt;/li>
+&lt;li>Look: colon.&lt;/li>
+&lt;li>Some brackets (regular ones), [square ones], {curly ones}&lt;/li>
+&lt;li>Slash/forward\backward&lt;/li>
+&lt;/ul>
+&lt;h2 id="block-quote">Block quote&lt;/h2>
+&lt;blockquote>
+&lt;p>Blockquote directly under a title&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Multiline blockquote
+Without extra line in between&lt;/p>
+&lt;/blockquote>
+&lt;p>A regular line.&lt;/p>
+&lt;blockquote>
+&lt;p>Multiline blockquote&lt;/p>
+&lt;p>With extra line in between&lt;/p>
+&lt;/blockquote>
+&lt;p>A very long blockquote:&lt;/p>
+&lt;blockquote>
+&lt;p>Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="images">Images&lt;/h2>
+&lt;p>Here is an inline image &lt;img src="./snail-small.webp"
+alt="test image"width="128"height="128">
+. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p>
+&lt;p>Images put on their own line is better:&lt;/p>
+&lt;p>&lt;img src="./snail-small.webp"
+alt="test image"width="128"height="128">
+&lt;/p>
+&lt;p>A bigger image:&lt;/p>
+&lt;p>&lt;img src="./snail-big.webp"
+alt="test image"width="400"height="400">
+&lt;/p>
+&lt;p>A gigantic image:&lt;/p>
+&lt;p>&lt;img src="./snail-gigantic.webp"
+alt="test image"width="4000"height="4000">
+&lt;/p>
+&lt;p>A svg image:&lt;/p>
+&lt;p>&lt;img src="./snail.svg"
+alt="svg image"style="width:100%; height: auto;"width="0"height="0">
+&lt;/p>
+&lt;p>A figure written in HTML:&lt;/p>
+&lt;figure>
+&lt;img alt="Image inside a figure"
+src="./snail-big.webp">
+&lt;figcaption>
+Image inside a figure
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Some Markdown parser will always treat images as an inline element. There&amp;rsquo;s nothing an SSG or theme maker can do. So this &lt;code>figure&lt;/code> is written as raw HTML.&lt;/p>
+&lt;h2 id="lists">Lists&lt;/h2>
+&lt;ol>
+&lt;li>A numbered list&lt;/li>
+&lt;li>With many elements&lt;/li>
+&lt;li>And a multi-
+line item&lt;/li>
+&lt;li>Then, some
+&lt;ol>
+&lt;li>sub&lt;/li>
+&lt;li>items&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>An unnumbered list
+&lt;ul>
+&lt;li>sub list
+&lt;ul>
+&lt;li>sub sub list&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>A lot of levels
+&lt;ul>
+&lt;li>interlacing with
+&lt;ul>
+&lt;li>other
+&lt;ul>
+&lt;li>going deeper&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>shalower
+&lt;ul>
+&lt;li>deeper
+&lt;ul>
+&lt;li>and deeper&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Back out again&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>And see if the rendering is sensible&lt;/li>
+&lt;/ul>
+&lt;h2 id="code-blocks">Code blocks&lt;/h2>
+&lt;pre tabindex="0">&lt;code>Block with no language set.
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">block_with_a_language&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">python&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">indent&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;multi&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;level&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;code&amp;#34;&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">space&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">indent&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">space&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">space&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">5&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>Block with no language set that is super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long.
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;A block with a super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long line&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tables">Tables&lt;/h2>
+&lt;p>A simple table with very few columns and rows:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>simple&lt;/th>
+&lt;th>table&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>item 1&lt;/td>
+&lt;td>item 2&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>A table with alignment parameters:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">alignment&lt;/th>
+&lt;th style="text-align:center">test&lt;/th>
+&lt;th style="text-align:right">table&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">item 1&lt;/td>
+&lt;td style="text-align:center">item 2&lt;/td>
+&lt;td style="text-align:right">item3&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">item 1&lt;/td>
+&lt;td style="text-align:center">item 2&lt;/td>
+&lt;td style="text-align:right">item3&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">item 1&lt;/td>
+&lt;td style="text-align:center">item 2&lt;/td>
+&lt;td style="text-align:right">item3&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">item 1&lt;/td>
+&lt;td style="text-align:center">item 2&lt;/td>
+&lt;td style="text-align:right">item3&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>A table with many columns&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>A table with a very fat column:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>fat&lt;/th>
+&lt;th>column&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>item 1&lt;/td>
+&lt;td>item 2 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="some-random-tests">Some random tests&lt;/h2>
+&lt;ul>
+&lt;li>Language: 中文测试&lt;/li>
+&lt;li>HTML embeded: &lt;br>&lt;strong>&lt;code>&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;&lt;/code>&lt;/strong>&lt;/li>
+&lt;li>References&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/li>
+&lt;/ul>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Austen, Jane. &lt;em>Pride and Prejudice&lt;/em>. Standard Ebooks, 2014.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>Eliot, T. S. &lt;em>Poetry&lt;/em>. Standard Ebooks, 2017.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>A test for reference&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Theme-less Hugo, Almost Pure HTML, Styled with MVP CSS</title><link>https://powersnail.com/2022/hugo-mvp-css/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://powersnail.com/2022/hugo-mvp-css/</guid><description>&lt;h2 id="theme-less-hugo">Theme-less Hugo&lt;/h2>
+&lt;p>As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else. From WordPress to Jekyll to Hugo, no theme ever stopped me from tinkering with the underlying templates and CSS, during which, the theme inevitably becomes more coupled with my blog and content. This is because while the templates are usually generic enough for the body of blog articles, they are often quite specific on other elements: about, headers, footers, navigation bars, etc. And to customize those elements, I&amp;rsquo;m practically re-writing the website.&lt;/p>
+&lt;p>When I started with Hugo, I chose the theme &lt;a href="https://github.com/mavidser/hugo-rocinante">Rocinante&lt;/a>, for its clean appearance, and partially for its name, which comes from one of my favorite novels of all time. I forked the theme, and kept maintaining two repositories: the blog itself, and the theme. As more modifications were made, the two codebases tangled with each other so deeply, that I often wonder where I should put a certain element.&lt;/p>
+&lt;p>I decided to go theme-less, when the theme no longer bear any resemblance to the original Rocinante. There&amp;rsquo;s no point in maintaining two sets of code if they cannot be decoupled.&lt;/p>
+&lt;p>Theme-less Hugo is easy: I just needed the templates, everything in the &lt;code>layouts&lt;/code> directory, to scaffold the site. So, I copied the skeleton code&amp;mdash;&lt;code>layouts&lt;/code>, and &lt;code>assets&lt;/code> for the styles&amp;mdash;into my blog, and removed the &lt;code>themes&lt;/code> directory.&lt;/p>
+&lt;p>In fact, I think if one has finished theme-shopping, and would like to start making customizations, the first thing to do is to copy the theme into their main project, and delete &lt;code>themes&lt;/code>. It makes the website whole, the workflow more coherent, the workspace better organized, the commit history saner.&lt;/p>
+&lt;h2 id="semantic-html-and-mvpcss">Semantic HTML and MVP.CSS&lt;/h2>
+&lt;p>I have very little need for advanced topography or animations. My blog is just a bunch of static files hosted on GitHub Pages; nothing Fancy.&lt;/p>
+&lt;p>This is, therefore, a very suitable use case for a classless CSS framework like &lt;a href="https://andybrewer.github.io/mvp/">MVP.CSS&lt;/a>. Overall, I think MVP does a fantastic job.&lt;/p>
+&lt;p>A few things that I don&amp;rsquo;t like about it:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Block quotes. MVP centers and enlarges the text in block quote, as if I&amp;rsquo;m hanging an inspirational epigram on the wall, which doesn&amp;rsquo;t fit the semantic role of block quotes. It&amp;rsquo;s simply a quotation that occupies a paragraph; it&amp;rsquo;s part of my content, a link in the linear chain of words, not a flyout or illustration. MVP already has &lt;code>&amp;lt;section&amp;gt;&amp;lt;aside&amp;gt;&lt;/code> to deal with that.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Links without underlines. This makes the website less accessible to color-blind readers, or anyone who reads on a monochrome monitor.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Alternating table row colors. Not a fault of MVP. This is merely a pet peeve of mine.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>With regard to code blocks, Hugo defaults to rendering code highlighting with inline style of fixed colors, which is awkward when MVP can react to system-wise dark theme. So, I configured Hugo to output code blocks with CSS classes, and output two themes, &lt;code>friendly&lt;/code> and &lt;code>dracula&lt;/code>, for light and dark themes respectively.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># To generate the CSS files&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo gen chromastyles --style&lt;span class="o">=&lt;/span>friendly &amp;gt; assets/css/_friendly.css
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo gen chromastyles --style&lt;span class="o">=&lt;/span>dracula &amp;gt; assets/css/_dracula.css
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-scss" data-lang="scss">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// style.scss
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// To include both themes
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">@import&lt;/span> &lt;span class="s2">&amp;#34;friendly&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">@media&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">prefers-color-scheme&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">dark&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">@import&lt;/span> &lt;span class="s2">&amp;#34;dracula&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># config.toml&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">markup&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="nx">markup&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">highlight&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">noClasses&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I then colored the website with a dark banner image of Bach&amp;rsquo;s manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with &lt;a href="https://bottosson.github.io/posts/oklab/">Oklab&lt;/a> color space, and it seems to be passing accessibility tests so far. It might be a total overkill though, since a few colors on the spectrum are used. But what is a personal project without a few overkills?&lt;/p>
+&lt;h2 id="mathjax-and-a-little-grievance-of-hugo">MathJax, and a Little Grievance of Hugo&lt;/h2>
+&lt;p>The only JavaScript I use is &lt;a href="https://www.mathjax.org/">MathJax&lt;/a>. I&amp;rsquo;ve been considering to use its server-side rendering, but it seems that at the moment of writing this blog, Hugo does not support its use.&lt;/p>
+&lt;p>In fact, Hugo does not support running its output HTML through an arbitrary command, and I think it&amp;rsquo;s a shame. There is a limit to what the &lt;code>replace&lt;/code> and &lt;code>replaceRE&lt;/code> could accomplish, which can be supplemented by custom filters written by other users.&lt;/p>
+&lt;p>For instance, math equations can be easily rendered with LaTeX and converted to SVG. This will enable the embedding of arbitrary Tex elements, not just what MathJax supports, and at the same time, eliminates the need to bundle a JS library for client-side rendering.&lt;/p>
+&lt;p>One thing that I can do is to add an extra step to &lt;code>hugo build&lt;/code>, and iterate through all the output HTML with whatever post-processing I want. But I do hope that this could be integrated into Hugo, so I don&amp;rsquo;t have to further butcher the GitHub Action file.&lt;/p>
+&lt;h2 id="final-thoughts">Final Thoughts&lt;/h2>
+&lt;p>You can find all the code to my blog &lt;a href="https://github.com/PowerSnail/PowerSnail.github.io">here&lt;/a>. My modifications to the theme, up to the point that I moved everything into the main repository, can be found &lt;a href="https://github.com/PowerSnail/hugo-rocinante">here&lt;/a>.&lt;/p></description></item><item><title>A Constant Solution to Code-Fights Apple Boxes Problem</title><link>https://powersnail.com/2017/apple-box/</link><pubDate>Fri, 06 Jan 2017 00:00:00 +0000</pubDate><guid>https://powersnail.com/2017/apple-box/</guid><description>&lt;h2 id="the-apple-boxes-problem">The Apple Boxes Problem&lt;/h2>
+&lt;p>The problem can be simply put:&lt;/p>
+&lt;blockquote>
+&lt;p>Input: $k$&lt;/p>
+&lt;p>Output: let $r$ be the sum of the square of each &lt;em>even&lt;/em> integer no larger than $k$, and $y$ be that of the &lt;em>odd&lt;/em>. Return $r - y$.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="the-naive-solution">The Naive Solution&lt;/h2>
+&lt;p>We can loop through 1 to $k$, alternating between adding and subtracting.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">val&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mf">1.&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">val&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">i&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">val&lt;/span> &lt;span class="o">-=&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">i&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">return&lt;/span> &lt;span class="n">val&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>There could be various optimizations, but nevertheless, the algorithm is linear with regard to $k$.&lt;/p>
+&lt;h2 id="constant-solution">Constant Solution&lt;/h2>
+&lt;p>First, assume $k$ is even, so that we can perfectly pair up terms in $r$ and $y$. Observe that each pair is in the form of $x^2 - (x - 1)^2$. This can be transformed to $(x + x - 1)\cdot(x - x + 1) = (x - 1) + x$. When we add all pairs, it becomes a simple series: $1 + 2 + 3 + &amp;hellip; + k$. For example, for $k = 6$:&lt;/p>
+&lt;p>$$
+\begin{align*}
+r &amp;amp;= 2^2 + 4^2 + 6^2 \\
+y &amp;amp;= 1^2 + 3^2 + 5^2 \\
+r - y &amp;amp;= (2^2 + 4^2 + 6^2) - (1^2 + 3^2 + 5^2) \\
+&amp;amp;= (2^2 - 1^2) + (4^2 - 2^2) + (6^2 - 5^2) \\
+&amp;amp;= 1 + 2 + 3 + 4 + 5 + 6 \\
+&amp;amp;= \dfrac{6(1 + 6)}{2} \\
+&amp;amp;= 21
+\end{align*}
+$$&lt;/p>
+&lt;p>Thus, we can return $\dfrac{k(1 + k)}{2}$ for arbitrary &lt;em>even&lt;/em> $k$.&lt;/p>
+&lt;p>What about &lt;em>odd&lt;/em> $k$? We can adjust the pairing a bit, and easily find that now we have $-\dfrac{k(1 + k)}{2}$.&lt;/p>
+&lt;h2 id="c-source-code">C++ Source Code&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">appleBoxes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">k&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">sum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">k&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">k&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="nl">sum&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">sum&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Count 1s in Range</title><link>https://powersnail.com/2017/range-count-1/</link><pubDate>Fri, 06 Jan 2017 00:00:00 +0000</pubDate><guid>https://powersnail.com/2017/range-count-1/</guid><description>&lt;p>在 codefights 上做到了一个很有意思的题。给你 a, b 两个数，假设你构建了一个从 a 到 b 的 array，所有这些数的 binary representation 里面有多少个 1？&lt;/p>
+&lt;h1 id="naive-solution">Naive Solution&lt;/h1>
+&lt;p>最简单的办法 (随手翻了两个别人的答案都是这个), 就是一个数一个数查有多少 1. 笨一点的手工查, 聪明一点的用 built-in function 查. 但是无论如何, 复杂度都是 O(b - a).&lt;/p>
+&lt;h1 id="logn-solution">Log(n) Solution&lt;/h1>
+&lt;p>我们先思考一个简化版本的问题: 所有 &lt;code>unsigned int (c++)&lt;/code> 里面有多少 1? 答案是所有的 bit / 2, 因为当我们把所有数都写成 2 进制, 一半是 1, 一半是0.&lt;/p>
+&lt;p>我们 generalize 一下: 对于任意的 $m$, 所有 $m$ 位的正整数里有 $(2^m * m) / 2$.&lt;/p>
+&lt;p>当我们的上限不是&lt;em>位数&lt;/em>，而是一个数字 $b$, 我们可以把 $b$ 分成 3 各部分。假设 $b$ 不为 0, $b$ 的二进制形式应该是 $1xxxx$&amp;hellip; 假设 $b$ 有 $m + 1$ 位.&lt;/p>
+&lt;p>现在以 $100&amp;hellip;0$ 为 &lt;code>line&lt;/code>:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>line&lt;/strong> 一个 &amp;lsquo;1&amp;rsquo;&lt;/li>
+&lt;li>&lt;strong>below line&lt;/strong>: 所有 $m$ 位数有$ (2^m * m) / 2$ 个 &amp;lsquo;1&amp;rsquo;. 这个数从前面的结论得来.&lt;/li>
+&lt;li>&lt;strong>above line&lt;/strong>: 除去最左边的 $1$， 右边的部分又变成从 $0$ 开始查. 我们可以用一个简单地递归来解决这个部分。&lt;/li>
+&lt;/ol>
+&lt;p>pseudo code:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="n">function&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="sr">//&lt;/span> &lt;span class="err">不考虑负数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="sr">//&lt;/span> &lt;span class="ss">basecase&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="err">只有一位&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">m&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">num_of_bits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">line&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">onesBelowLine&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">m&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">line&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">onesAboveLine&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">line&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">line&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">onesBelowLine&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">onesAboveLine&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>下面回到原始问题，给定底线和上限，a, b， 我们可以简单地转换一下：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="n">function&lt;/span> &lt;span class="n">rangeBitCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="复杂度证明">复杂度证明&lt;/h1>
+&lt;p>这个算法的复杂度很简单，因为这个 recursion 可以很容易的转换成 tail recursion，再变成复杂度相同的 iteration. 这个 iteration 每次去掉最高位的 1，因此最多有 $\log(b)$ 次循环；每次循环做了 constant 的基本算数，因此最后的复杂度应该是 $\log(b)$。&lt;/p>
+&lt;h1 id="c-source-code">C++ Source Code&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">num_bit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">31&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">__builtin_clz&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="kt">unsigned&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">line&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">num_bit&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">count_below&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">num_bit&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">line&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">above&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">line&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">count_above&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">above&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">above&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">count_above&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">count_below&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">rangeBitCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Valid Number - By DFA</title><link>https://powersnail.com/2016/valid-number/</link><pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/valid-number/</guid><description>&lt;h2 id="introduction-to-the-problem">Introduction to the Problem&lt;/h2>
+&lt;p>The question asks the programmer to validate whether a string is a valid representation of a number. After some trials, we find that the question accepts a few formats:&lt;/p>
+&lt;ol>
+&lt;li>pure integer&lt;/li>
+&lt;li>real number (decimal representation), including omitted zero, for example &amp;ldquo;.5&amp;rdquo;, &amp;ldquo;12.&amp;rdquo;&lt;/li>
+&lt;li>scientific number, that looks like &amp;ldquo;{Real Number}e{Integer}&amp;rdquo;&lt;/li>
+&lt;li>integer and real number can be signed&lt;/li>
+&lt;li>ignore any surrounding white spaces&lt;/li>
+&lt;/ol>
+&lt;p>In order to solve the problem in linear time, most solutions set a few flags. This is simple, and quite efficient in both time and space. In fact, I don&amp;rsquo;t really consider this problem qualified for &lt;em>hard&lt;/em>.&lt;/p>
+&lt;p>Just to add some fun, this problem can be solved using a very textbook DFA. The code is elegant, less space efficient (but only for a constant amount) than the flag algorithm. In fact, the latter is just a compact, specialized DFA in essence. The trade-off is more variables and branching.&lt;/p>
+&lt;h2 id="the-algorithm">The Algorithm&lt;/h2>
+&lt;p>The first step, we trim the string. There is probably not efficient in bringing white space processing into the DFA.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">static&lt;/span> &lt;span class="kr">inline&lt;/span> &lt;span class="n">string&lt;/span> &lt;span class="nf">trim&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">string&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]),&lt;/span> &lt;span class="c1">// starting pointer
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">length&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// ending pointer
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="sc">&amp;#39;\0&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">isspace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">isspace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">d&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="n">d&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sc">&amp;#39;\0&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">string&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="dfa---states">DFA - States&lt;/h3>
+&lt;p>Any accepted string can be divided into a few parts:&lt;/p>
+&lt;ol>
+&lt;li>before decimal, the left part of a real number&lt;/li>
+&lt;li>decimal&lt;/li>
+&lt;li>after decimal, the right part of a real number&lt;/li>
+&lt;li>e character&lt;/li>
+&lt;li>the exponent, the right to &amp;rsquo;e'&lt;/li>
+&lt;/ol>
+&lt;p>Any part could potentially empty. The (1) and (5) could potentially be preceded with a sign (&amp;rsquo;+&amp;rsquo; or &amp;lsquo;-&amp;rsquo;).&lt;/p>
+&lt;p>Then, we can collect all states based on the grammar:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>state&lt;/th>
+&lt;th>meaning&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>START&lt;/code>&lt;/td>
+&lt;td>starting state&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>REALLEFT&lt;/code>&lt;/td>
+&lt;td>before encountering any decimal&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>DOT&lt;/code>&lt;/td>
+&lt;td>encounter a regular decimal&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>E&lt;/code>&lt;/td>
+&lt;td>encounter an &amp;rsquo;e&amp;rsquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>REALRIGHT&lt;/code>&lt;/td>
+&lt;td>have encountered a decimal&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>DOT_E&lt;/code>&lt;/td>
+&lt;td>have encountered a decimal whose left is omitted&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ERIGHT&lt;/code>&lt;/td>
+&lt;td>have encountered &amp;rsquo;e&amp;rsquo;, and is therefore part of the exponent&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>SIGN1&lt;/code>&lt;/td>
+&lt;td>the sign on the left of the &amp;rsquo;e'&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>SIGN2&lt;/code>&lt;/td>
+&lt;td>the sign on the right of the &amp;rsquo;e'&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>FAULT&lt;/code>&lt;/td>
+&lt;td>the faulty state&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The starting state is &lt;code>START&lt;/code>.&lt;/p>
+&lt;p>&lt;code>FAULT&lt;/code> is a special state, that the DFA will halt whenever it meets &lt;code>FAULT&lt;/code>, so that we do not have to process the rest of the string.&lt;/p>
+&lt;h3 id="dfa---transition">DFA - Transition&lt;/h3>
+&lt;p>The transition function is a matrix that maps (state, input char) to state.&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/valid-number-DFA.svg"
+alt="DFA Transformation matrix"style="width:100%; height: auto;"width="106.062271"height="69.394768">
+&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;em>states&lt;/em>&lt;/th>
+&lt;th>DIGIT&lt;/th>
+&lt;th>SIGN&lt;/th>
+&lt;th>DOT&lt;/th>
+&lt;th>E&lt;/th>
+&lt;th>NDIGIT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>START&lt;/td>
+&lt;td>REALLEFT&lt;/td>
+&lt;td>SIGN1&lt;/td>
+&lt;td>DOT_E&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>REALLEFT&lt;/td>
+&lt;td>REALLEFT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>DOT&lt;/td>
+&lt;td>E&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DOT&lt;/td>
+&lt;td>REALRIGHT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>E&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>E&lt;/td>
+&lt;td>ERIGHT&lt;/td>
+&lt;td>SIGN2&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>REALRIGHT&lt;/td>
+&lt;td>REALRIGHT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>E&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DOT_E&lt;/td>
+&lt;td>REALRIGHT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ERIGHT&lt;/td>
+&lt;td>ERIGHT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SIGN1&lt;/td>
+&lt;td>REALLEFT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>DOT_E&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SIGN2&lt;/td>
+&lt;td>ERIGHT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;td>FAULT&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="https://powersnail.com/images/valid_number_dfa.svg"
+alt="grammar"style="width:100%; height: auto;"width="0"height="0">
+&lt;/p>
+&lt;h3 id="dfa---termination">DFA - Termination&lt;/h3>
+&lt;p>The DFA will terminate when&lt;/p>
+&lt;ul>
+&lt;li>input is depleted&lt;/li>
+&lt;li>state is &lt;code>FAULT&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The string will be accepted if the termination state is one of following:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>REALLEFT&lt;/code>&lt;/li>
+&lt;li>&lt;code>REALRIGHT&lt;/code>&lt;/li>
+&lt;li>&lt;code>ERIGHT&lt;/code>&lt;/li>
+&lt;li>&lt;code>DOT&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>In all other cases, the format is somewhat faulty. For example, if the DFA ended at &lt;code>E&lt;/code>, then the string looks like &lt;code>&amp;quot;{some number}e&amp;quot;&lt;/code>, which is not acceptable.&lt;/p>
+&lt;hr>
+&lt;p>The running of the DFA is easy. Simply iterate over the input, and let the transition matrix do its magic.&lt;/p>
+&lt;h2 id="complete-code">Complete Code:&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">static&lt;/span> &lt;span class="kr">inline&lt;/span> &lt;span class="n">string&lt;/span> &lt;span class="nf">trim&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">string&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">*&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">length&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="sc">&amp;#39;\0&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">isspace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">c&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">isspace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">d&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">d&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sc">&amp;#39;\0&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">string&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">START&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">REALLEFT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">DOT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">E&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">REALRIGHT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">DOT_E&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">ERIGHT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">SIGN1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">SIGN2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">FAULT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">DIGIT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">NDIGIT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">SIGN&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">G&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="c1">// DIGIT SIGN DOT E NDIGIT
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">REALLEFT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">SIGN1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">DOT_E&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">REALLEFT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">DOT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">E&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">REALRIGHT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">E&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ERIGHT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">SIGN2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">REALRIGHT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">E&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">REALRIGHT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ERIGHT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">REALLEFT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">DOT_E&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ERIGHT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">FAULT&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">bool&lt;/span> &lt;span class="n">isNumber&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">string&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">trim&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sc">&amp;#39;\0&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">state&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">START&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">auto&lt;/span> &lt;span class="nl">c&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">state&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">isdigit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nl">DIGIT&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">:&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="sc">&amp;#39;.&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nl">DOT&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">:&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="sc">&amp;#39;e&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nl">E&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">:&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="sc">&amp;#39;+&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nl">SIGN&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">:&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="sc">&amp;#39;-&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nl">SIGN&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">:&lt;/span> &lt;span class="n">NDIGIT&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">state&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">G&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">state&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">5&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">ch&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">state&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">E&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">state&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">DOT_E&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">state&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">SIGN1&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">state&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">SIGN2&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">state&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">START&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">state&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">FAULT&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Exceptional Control Flow</title><link>https://powersnail.com/2016/control-flow-exception/</link><pubDate>Tue, 15 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/control-flow-exception/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called &lt;em>control transfer&lt;/em>. The sequence of transfers is called &lt;em>control flow&lt;/em>. The control flow is smooth when the transitions are always to the adjacent address. Operations such as &lt;code>jump&lt;/code>, &lt;code>call&lt;/code>, etc. will cause the control flow to be abrupt.&lt;/p>
+&lt;p>There are other situations where the control flow is abruptly changed. For example, hardware timer, network packet arrival, etc. are events that have to be dealt with but not necessarily a part of the execution of the program. The system will likely deal with such situations with &lt;em>exceptional control flow&lt;/em> (ECF), a disruption to the control flow.&lt;/p>
+&lt;ul>
+&lt;li>Application Level ECF: inter-process &lt;em>signal&lt;/em>&lt;/li>
+&lt;li>OS kernel Level ECF: context switches&lt;/li>
+&lt;/ul>
+&lt;h2 id="exceptions">Exceptions&lt;/h2>
+&lt;h3 id="definition">Definition&lt;/h3>
+&lt;p>An &lt;em>exception&lt;/em> is an abrupt change in the control flow in response to some change in the processor&amp;rsquo;s state.&lt;/p>
+&lt;p>An &lt;em>event&lt;/em> is a change in the processor&amp;rsquo;s state.&lt;/p>
+&lt;h3 id="exception-happening">Exception Happening&lt;/h3>
+&lt;p>When the application is executing instruction $I_{curr}$, there is an event occurred.&lt;/p>
+&lt;p>The event could be either caused by the instruction just occurred, or completely unrelated to the application. The processor will look up the &lt;em>exception table&lt;/em>, and make a procedure call to the &lt;em>exception handler&lt;/em>, which will process the particular kind of event. Then, depending on the event, three things can occur:&lt;/p>
+&lt;ol>
+&lt;li>The handler returns, to $I_{curr}$&lt;/li>
+&lt;li>The handler returns, to $I_{next}$&lt;/li>
+&lt;li>The handler aborts the program&lt;/li>
+&lt;/ol>
+&lt;h3 id="exception-handling">Exception Handling&lt;/h3>
+&lt;p>The handling of exception involves both hardware and software.&lt;/p>
+&lt;p>Each type of exception is assigned an integer &lt;em>exception number&lt;/em>, assigned by:&lt;/p>
+&lt;ul>
+&lt;li>The designer of the processor
+&lt;ul>
+&lt;li>divide by zero&lt;/li>
+&lt;li>page faults&lt;/li>
+&lt;li>memory access violations&lt;/li>
+&lt;li>break-points&lt;/li>
+&lt;li>arithmetic overflows&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The OS kernel
+&lt;ul>
+&lt;li>system calls&lt;/li>
+&lt;li>signals from external I/O devices&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>At &lt;strong>Boot time&lt;/strong>, the OS creates the exception table, mapping each exception number to the address of the exception handler for the particular type of exception.&lt;/p>
+&lt;p>The table&amp;rsquo;s base address is contained in a CPU register, &lt;em>exception table base register&lt;/em>.&lt;/p>
+&lt;p>At &lt;strong>Run time&lt;/strong>, the processor detects the event, and determines the exception number $k$. Then it makes an indirect procedure call through the address in table[$k$].&lt;/p>
+&lt;p>The procedure call is accompanied by a few operations:&lt;/p>
+&lt;ul>
+&lt;li>The processor pushes the address of $I_{curr}$ or $I_{next}$ on to the &lt;strong>kernel stack&lt;/strong>&lt;/li>
+&lt;li>the control is transferred to the kernel, which means the exception handlers run in &lt;strong>kernel mode&lt;/strong>, that they have access to all system resources.&lt;/li>
+&lt;/ul>
+&lt;p>The return is a special operation &lt;code>return from interrupt&lt;/code>, which restores kernel mode to user mode.&lt;/p>
+&lt;h3 id="class-of-exceptions">Class of Exceptions&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Class&lt;/th>
+&lt;th>Cause&lt;/th>
+&lt;th>Async/Sync&lt;/th>
+&lt;th>Return behavior&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Interrupt&lt;/td>
+&lt;td>Signal from I/O device&lt;/td>
+&lt;td>Async&lt;/td>
+&lt;td>Always returns to next instruction&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Trap&lt;/td>
+&lt;td>Intentional exception&lt;/td>
+&lt;td>Sync&lt;/td>
+&lt;td>Always returns to next instruction&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Fault&lt;/td>
+&lt;td>Potentially recoverable error&lt;/td>
+&lt;td>Sync&lt;/td>
+&lt;td>Might return to current instruction&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Abort&lt;/td>
+&lt;td>Nonrecoverable error&lt;/td>
+&lt;td>Sync&lt;/td>
+&lt;td>Never returns&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Table 1: Classes of Exceptions &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>&lt;em>Async&lt;/em>: means that the event (IO Interrupt) is not caused by execution of any instruction, but rather an asynchronous signal that an external IO device sends to the processor.&lt;/p>
+&lt;h4 id="interrupt-handling">Interrupt Handling&lt;/h4>
+&lt;p>The handling of interrupt runs independent of the program. It is not caused by, has no impact on the current program. The processor notices the interrupt pin is set, and jumps to the interrupt handler. The handler will return to $I_{next}$, as though nothing has happened.&lt;/p>
+&lt;h4 id="traps-and-system-calls">Traps and System Calls&lt;/h4>
+&lt;p>Traps are intentional exceptions, likely to help interface between user program and the kernel, which is a &lt;em>system call&lt;/em>. Trap handlers also return to $I_{next}$ like interrupt handlers.&lt;/p>
+&lt;p>System Calls:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>read&lt;/code>: file reading&lt;/li>
+&lt;li>&lt;code>fork&lt;/code>: create a new process&lt;/li>
+&lt;li>&lt;code>execve&lt;/code>: loading a new program&lt;/li>
+&lt;li>&lt;code>exit&lt;/code>: terminating the current process&lt;/li>
+&lt;/ul>
+&lt;p>Remember that syscall runs in kernal mode and is thus different from normal procedure calls.&lt;/p>
+&lt;h4 id="faults">Faults&lt;/h4>
+&lt;p>Faults are error conditions that a handler might be able to correct. If the error is corrected, the handler will return to $I_{curr}$ (the faulting instruction), so it is re-executed. Otherwise, the handler will return to an abort routine to terminate the program&lt;/p>
+&lt;h4 id="aborts">Aborts&lt;/h4>
+&lt;p>Aborts result from unrecoverable fatal errors, for example, DRAM bits corruption.&lt;/p>
+&lt;h3 id="example-exceptions-in-linuxx86-64-systems">Example Exceptions in Linux/x86-64 Systems&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Divide error&lt;/strong>: divide by zero, usually ends up in &lt;code>abort&lt;/code>. (Floating exceptions)&lt;/li>
+&lt;li>&lt;strong>General protection fault&lt;/strong>: usually because the program references an undefined area of virtual memory, or tries to write to read-only text segment. Usually ends up in &lt;code>abort&lt;/code>. (Segmentation Fault)&lt;/li>
+&lt;li>&lt;strong>Page Fault&lt;/strong>: Page of virtual memory is not resident in memory, needs to be retrieved from disk. The exception is &lt;code>fault&lt;/code>, and the handler will re-execute the faulting instruction after loading the page.&lt;/li>
+&lt;li>&lt;strong>Machine check&lt;/strong>: Fatal hardware error is detected during execution of the faulting instruction. It directly goes to &lt;code>abort&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>Syscalls:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Number&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>0&lt;/td>
+&lt;td>&lt;code>read&lt;/code>&lt;/td>
+&lt;td>Read file&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>&lt;code>write&lt;/code>&lt;/td>
+&lt;td>write file&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>&lt;code>open&lt;/code>&lt;/td>
+&lt;td>open file&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>&lt;code>close&lt;/code>&lt;/td>
+&lt;td>close file&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>&lt;code>stat&lt;/code>&lt;/td>
+&lt;td>Get info about file&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>&lt;code>mmap&lt;/code>&lt;/td>
+&lt;td>map memory page to file&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>&lt;code>brk&lt;/code>&lt;/td>
+&lt;td>Reset the top the heap&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>32&lt;/td>
+&lt;td>&lt;code>dup2&lt;/code>&lt;/td>
+&lt;td>copy file descriptor&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>33&lt;/td>
+&lt;td>&lt;code>pause&lt;/code>&lt;/td>
+&lt;td>suspend process until signal arrives&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>37&lt;/td>
+&lt;td>&lt;code>alarm&lt;/code>&lt;/td>
+&lt;td>schedule delivery of alarm signal&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>39&lt;/td>
+&lt;td>&lt;code>getpid&lt;/code>&lt;/td>
+&lt;td>get process ID&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>57&lt;/td>
+&lt;td>&lt;code>fork&lt;/code>&lt;/td>
+&lt;td>create process&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>59&lt;/td>
+&lt;td>&lt;code>execve&lt;/code>&lt;/td>
+&lt;td>execute a program&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>60&lt;/td>
+&lt;td>&lt;code>_exit&lt;/code>&lt;/td>
+&lt;td>terminate process&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>61&lt;/td>
+&lt;td>&lt;code>wait4&lt;/code>&lt;/td>
+&lt;td>wait for a process to terminate&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>62&lt;/td>
+&lt;td>&lt;code>kill&lt;/code>&lt;/td>
+&lt;td>send a signal to a process&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="c-and-syscalls">C and Syscalls&lt;/h3>
+&lt;p>C/C++ programs can call syscall directly. For example,&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hello, world&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">_exit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In syscall, the syscall ID is passed in &lt;code>%rax&lt;/code>, and arguments are passed through &lt;code>%rdi&lt;/code>, &lt;code>%rsi&lt;/code>, &lt;code>%rdi&lt;/code>, &lt;code>%r10&lt;/code>, &lt;code>%r8&lt;/code>, &lt;code>%r9&lt;/code>, in order.&lt;/p>
+&lt;p>Equivalent Assembly Program&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-nasm" data-lang="nasm">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">.section&lt;/span> &lt;span class="nv">.data&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nl">string:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">.ascii&lt;/span> &lt;span class="s">&amp;#34;hello, world\n&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nl">string_end:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">.equ&lt;/span> &lt;span class="nv">len&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">string_end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nv">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">.section&lt;/span> &lt;span class="nv">.text&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">.global&lt;/span> &lt;span class="nv">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nl">main:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="kc">$&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nb">rax&lt;/span> &lt;span class="err">#&lt;/span> &lt;span class="nv">syscall&lt;/span> &lt;span class="nv">code&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nv">write&lt;/span> &lt;span class="err">=&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="kc">$&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nb">rdi&lt;/span> &lt;span class="err">#&lt;/span> &lt;span class="nv">Arg1&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nv">stdout&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="kc">$&lt;/span>&lt;span class="nv">string&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nb">rsi&lt;/span> &lt;span class="err">#&lt;/span> &lt;span class="nv">Arg2&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nv">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="kc">$&lt;/span>&lt;span class="nv">len&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nb">rdx&lt;/span> &lt;span class="err">#&lt;/span> &lt;span class="nv">Arg3&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nv">length&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">syscall&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="kc">$&lt;/span>&lt;span class="mi">60&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nb">rax&lt;/span> &lt;span class="err">#&lt;/span> &lt;span class="nv">syscall&lt;/span> &lt;span class="nv">code&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nv">_exit&lt;/span> &lt;span class="err">=&lt;/span> &lt;span class="mi">60&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="kc">$&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nb">rdi&lt;/span> &lt;span class="err">#&lt;/span> &lt;span class="nv">Arg1&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nv">exist&lt;/span> &lt;span class="nv">status&lt;/span> &lt;span class="err">=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">syscall&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="processes">Processes&lt;/h2>
+&lt;p>The concept of &lt;em>process&lt;/em> provides the illusion of&lt;/p>
+&lt;ul>
+&lt;li>our program has exclusive use of CPU and memory&lt;/li>
+&lt;li>the processor executes the instructions of our program without interruption&lt;/li>
+&lt;li>the code and data of the program appear to be the only objects in memory&lt;/li>
+&lt;/ul>
+&lt;p>A process is an instance of a program in execution. This means it includes:&lt;/p>
+&lt;ul>
+&lt;li>the code in memory,&lt;/li>
+&lt;li>the data in memory,&lt;/li>
+&lt;li>the stack of the program&lt;/li>
+&lt;li>the general-purpose registers&lt;/li>
+&lt;li>the program counters&lt;/li>
+&lt;li>environment variables&lt;/li>
+&lt;li>the set of open file descriptors&lt;/li>
+&lt;/ul>
+&lt;p>These states are the &lt;em>context&lt;/em> of the program.&lt;/p>
+&lt;h3 id="logical-control-flow">Logical Control Flow&lt;/h3>
+&lt;p>We perceive the illusionary control flow, that registers, memory, etc. are changed step by step completely according to the instruction set of our program. This control flow is called &lt;strong>Logical Control Flow&lt;/strong>.&lt;/p>
+&lt;p>In reality, processes take turns to use the processor. Each process runs for a short period of time and is preempted (temporarily suspended), until the next turn.&lt;/p>
+&lt;p>This short time period is called &lt;em>time slice&lt;/em>.&lt;/p>
+&lt;h3 id="concurrent-flows">Concurrent Flows&lt;/h3>
+&lt;p>A logical flow whose execution overlaps in time with another flow is called a concurrent flow. Two flows run &lt;em>concurrently&lt;/em>.&lt;/p>
+&lt;h3 id="parallel-flows">Parallel Flows&lt;/h3>
+&lt;p>The concurrent flows that run on different processor cores or computers are called &lt;em>parallel flows&lt;/em>.&lt;/p>
+&lt;h3 id="private-address-space">Private Address Space&lt;/h3>
+&lt;p>The illusion that the program has exclusive use of address space is provided by &lt;em>private address space&lt;/em>. This &amp;ldquo;space&amp;rdquo; of addresses cannot be read/written by other programs, and therefore is exclusive to the program.&lt;/p>
+&lt;h3 id="user-mode-vs-kernel-mode">User Mode vs Kernel Mode&lt;/h3>
+&lt;p>The OS restricts each process what instructions can be executed and what memory space can be accessed. The processor provides the capability with a &lt;code>mode bit&lt;/code>.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;code>mode bit&lt;/code>&lt;/th>
+&lt;th>Mode&lt;/th>
+&lt;th>Instruction&lt;/th>
+&lt;th>Memory Space&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>Kernel Mode&lt;/td>
+&lt;td>Any Instruction&lt;/td>
+&lt;td>Any Memory&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>0&lt;/td>
+&lt;td>User Mode&lt;/td>
+&lt;td>No Privileged Instruction&lt;/td>
+&lt;td>No reference to code/data in kernel area&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Privileged Instruction: &lt;code>syscall&lt;/code> functions, including halt, change mode, I/O op, etc.&lt;/p>
+&lt;h4 id="proc">/proc&lt;/h4>
+&lt;p>&lt;code>/proc&lt;/code> is a Linux file system mount of the kernal data structure. It allows the user to access general system attributes.&lt;/p>
+&lt;h3 id="context-switch">Context Switch&lt;/h3>
+&lt;p>The kernel maintains a context for each process. The context is the state that the kernel needs to restart a preempted process.&lt;/p>
+&lt;ul>
+&lt;li>Values of general-purpose registers,&lt;/li>
+&lt;li>floating-point registers&lt;/li>
+&lt;li>program counter&lt;/li>
+&lt;li>user&amp;rsquo;s stack&lt;/li>
+&lt;li>status registers&lt;/li>
+&lt;li>kernel&amp;rsquo;s stack&lt;/li>
+&lt;li>various kernel data structure
+&lt;ul>
+&lt;li>page table&lt;/li>
+&lt;li>process table&lt;/li>
+&lt;li>file table&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Scheduling&lt;/strong>, deciding to preempt a process and restart a preempted process. This is handled by &lt;strong>scheduler&lt;/strong>, a code in the kernel.&lt;/p>
+&lt;p>The kernel can decide to switch when the process is waiting for a read. The IO device can take care of the work, so the kernel will switch to another process, until the IO device sends an interrupt signalling successful transfer of data into the memory.&lt;/p>
+&lt;h2 id="system-call-error-handling">System Call Error Handling&lt;/h2>
+&lt;p>When a system level function encounter an error, they return $-1$, and set the global integer variable &lt;code>errno&lt;/code> to indicate what went wrong.&lt;/p>
+&lt;p>An error checking fork function:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">unix_error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">char&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">msg&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fprintf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stderr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;%s: %s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">msg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">strerror&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">errno&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">pid_t&lt;/span> &lt;span class="nf">Fork&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pid_t&lt;/span> &lt;span class="n">pid&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">((&lt;/span>&lt;span class="n">pid&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">fork&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// &amp;lt;- check for error return value
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">unix_error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Fork error&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">pid&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="signals">Signals&lt;/h2>
+&lt;p>A signal is a small message that notifies a process that an event of some type has occurred in the system.&lt;/p>
+&lt;h3 id="sending-signal">Sending Signal&lt;/h3>
+&lt;p>The kernel sends a signal because:&lt;/p>
+&lt;ul>
+&lt;li>the kernel detects a system event&lt;/li>
+&lt;li>a process invoked &lt;code>kill&lt;/code> function&lt;/li>
+&lt;/ul>
+&lt;h4 id="process-group">Process Group&lt;/h4>
+&lt;p>Each process belongs to exactly one process group. By default, a child process belongs to the same group as its parent.&lt;/p>
+&lt;p>The Process Group ID can be read/write using &lt;code>getpgrp&lt;/code> and &lt;code>setpgid&lt;/code>.&lt;/p>
+&lt;h4 id="binkill">&lt;code>/bin/kill&lt;/code>&lt;/h4>
+&lt;p>&lt;code>/bin/kill -9 15213&lt;/code> sends a signal 9 (SIGKILL) to process 15213.&lt;/p>
+&lt;p>&lt;code>/bin/kill -9 -15213&lt;/code> sends a signal 9 to ever process in group 15213&lt;/p>
+&lt;h4 id="from-keyboard">from Keyboard&lt;/h4>
+&lt;p>A Unix shell has at most 1 foreground job and zero or more background jobs. Typing &lt;kbd>ctrl&lt;/kbd> + &lt;kbd>c&lt;/kbd> causes the kernel to send SIGINT to every process in the foreground process group. &lt;kbd>ctrl&lt;/kbd> + &lt;kbd>z&lt;/kbd> sends SIGTSTP signal to every process in the foreground process group, which pauses them.&lt;/p>
+&lt;h4 id="calling-kill-function">Calling &lt;code>kill&lt;/code> function&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;sys/types.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;signal.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">kill&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pid_t&lt;/span> &lt;span class="n">pid&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">sig&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If :&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>pid&lt;/code> &amp;gt; 0, send &lt;code>sig&lt;/code> to process[&lt;code>pid&lt;/code>]&lt;/li>
+&lt;li>&lt;code>pid&lt;/code> = 0, send &lt;code>sig&lt;/code> to process group that current process belongs&lt;/li>
+&lt;li>&lt;code>pid&lt;/code> &amp;lt; 0, send &lt;code>sig&lt;/code> to process group [|&lt;code>pid&lt;/code>|]&lt;/li>
+&lt;/ul>
+&lt;h4 id="calling-alarm-function">Calling &lt;code>alarm&lt;/code> function&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;unistd.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="nf">alarm&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">secs&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Arranges the kernel to send SIGALRM signal to the calling process in &lt;code>secs&lt;/code> seconds. If secs == 0, then no new alarm is scheduled.&lt;/p>
+&lt;p>It returns the remaining seconds of previous alarm.&lt;/p>
+&lt;p>A call of &lt;code>alarm&lt;/code> cancels all previous &lt;code>alarm&lt;/code>s.&lt;/p>
+&lt;h3 id="receiving-signal">Receiving Signal&lt;/h3>
+&lt;p>The kernel checks for any &lt;em>pending and not blocked&lt;/em> signals, when switching a process from kernel mode to user mode, i.e. from an Interrupt, syscall, or context switching.&lt;/p>
+&lt;p>If there is no such signals, then it will proceed to $I_{next}$. Otherwise, the kernel will choose a signal and force the process to receive it. The receipt will trigger some action, and once the action is completed, the kernel proceeds to $I_{next}$.&lt;/p>
+&lt;p>There is a default action associated with each signal; the user program can change it by using a &lt;code>signal&lt;/code> function&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;signal.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="nf">void&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">sighandler_t&lt;/span>&lt;span class="p">)(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sighandler_t&lt;/span> &lt;span class="nf">signal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">signum&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sighandler_t&lt;/span> &lt;span class="n">handler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then &lt;code>handler&lt;/code> can be SIG_IGN (ignore), SIG_DFL (default), or the address of a user-defined function, a *signal handler.&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Figure 8.5, CSAPP&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Binary Search Tree implemented by C++</title><link>https://powersnail.com/2016/binary-search-tree/</link><pubDate>Sat, 27 Feb 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/binary-search-tree/</guid><description>&lt;p>This is a simple implementation of binary search tree implemented by C++. Here are the methods of my BST:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Node&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Node&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">left&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">right&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">parent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">BST&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">private&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Node&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">nil&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">BST&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nf">root&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Traversals
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">inorder&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">inorderIter&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">preOrder&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">preOrderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">postOrder&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">postOrderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Search Operations
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nf">find&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nf">minimum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nf">maximum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nf">successor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nf">predecessor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Element Operation
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">transplant&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">bool&lt;/span> &lt;span class="nf">empty&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I will talk about some of the implementations. The complete source file can be found in my &lt;a href="https://github.com/PowerSnail/Algorithms-Practices">algorithm repository&lt;/a>. If you found any problem with the implementation, or anything that is worth adding to this, please leave a comment under this article or open an issue in the algorithm repository. This BST does not insert repeated element.&lt;/p>
+&lt;h2 id="basic-idea">Basic Idea&lt;/h2>
+&lt;p>Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p>
+&lt;p>In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/binarysearchtree.jpg"
+alt="Binary Search Tree"width="2445"height="2308">
+&lt;/p>
+&lt;p>The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code>nil&lt;/code> sentinel node, which is not in the data structure but a &lt;a href="#sentinelNode">useful element&lt;/a> in our program.&lt;/p>
+&lt;h2 id="traversals">Traversals&lt;/h2>
+&lt;p>The recursive in-order traversal is easy to implement:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="n">BST&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">node&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">left&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">node&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">key&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The iterative algorithm is slightly more complex. It involves two pointers, marking the current and previous position of our traversal. Although this is not recursive, we could still think of it using an inductive reasoning. We first set the initial states to root and nil (who is the parent of root):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For an arbitrary iteration, there are three possibilities:&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>prev&lt;/code> is the parent of &lt;code>x&lt;/code>. It means we have been going downwards in the tree, and both left branch and right branch of &lt;code>x&lt;/code> has not yet been explored; then as in-order traversal requires, we go left from here.&lt;/li>
+&lt;li>&lt;code>prev&lt;/code> is the left child of &lt;code>x&lt;/code>. This means we have just come back from the left branch, implying that the left is already printed. Now we have to print &lt;code>x&lt;/code> itself and going to the right.&lt;/li>
+&lt;li>&lt;code>prev&lt;/code> is the right child of &lt;code>x&lt;/code>. This means we have printed everything in the subtree rooted at &lt;code>x&lt;/code>, and should now go up.&lt;/li>
+&lt;/ol>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;code>prev&lt;/code> pointing at&lt;/th>
+&lt;th>printed subtree&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>-&amp;gt; parent&lt;/code>&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>-&amp;gt; left&lt;/code>&lt;/td>
+&lt;td>rooted at &lt;code>left&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>-&amp;gt; right&lt;/code>&lt;/td>
+&lt;td>rooted at &lt;code>x&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The trick here is to 1) progress the printing and 2) ensure that at the end of each iteration, the &lt;em>invariant&lt;/em> is preserved, i.e. the situation falls into one of the situations.&lt;/p>
+&lt;h4 id="prev-pointing-at-parent">&lt;code>prev&lt;/code> Pointing at Parent&lt;/h4>
+&lt;p>Nothing has been printed, so we go to left directly;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">left&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We need to consider the case where &lt;code>left&lt;/code> is nil, but this is easy because we can just throw &lt;code>prev&lt;/code> to left. This works because if we examine the &lt;em>loop invariant&lt;/em>, now the tree complies with the second situation.&lt;/p>
+&lt;h4 id="prev-pointing-at-left">&lt;code>prev&lt;/code> Pointing at left&lt;/h4>
+&lt;p>Left tree is already printed (we consider &lt;code>nil&lt;/code> as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code>x&lt;/code> before entering right.&lt;/p>
+&lt;p>There is a slight complication if &lt;code>x&lt;/code> is a leaf, as both children are &lt;code>nil&lt;/code>. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code>x&lt;/code> forever.&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/fromlefttoright.jpg"
+alt="From Left to Right"width="2441"height="2067">
+{:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p>
+&lt;p>The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">key&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span> &lt;span class="c1">// right branch is nil
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">parent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="prev-pointing-at-right">&lt;code>prev&lt;/code> Pointing at Right&lt;/h4>
+&lt;p>We know &lt;code>x&lt;/code> subtree is all printed, so all we need to do is to move &lt;code>x&lt;/code> upwards.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">parent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="insertion">Insertion&lt;/h2>
+&lt;p>Insertion always occur at leaf in a BST. Generally, we need to 1) find a proper leaf as the parent of our new node and 2) insert it into the proper child of the leaf.&lt;/p>
+&lt;h2 id="a-namesentinelnodea-sentinel-node">&lt;a name="sentinelNode">&lt;/a> Sentinel Node&lt;/h2>
+&lt;p>How is a sentinel node useful? There are several uses of it, and the most important one is to replace &lt;code>NULL&lt;/code> for representing a non-existing element. It guards against null pointers.&lt;/p>
+&lt;p>&lt;code>NULL&lt;/code> is a very bad design from the very beginning, as it is passed into a function as &lt;code>pointer type&lt;/code> but is not a &lt;code>pointer&lt;/code> at all. Any attempt to call a member function will cause a crush. It is also hard to debug, especially when there are layers of function calls. You cannot dereference a null pointer in debugger; it points to 0x00000000, which has no useful information at all.&lt;/p>
+&lt;p>A sentinel &lt;code>nil&lt;/code> on the other hand is a legitimate &lt;code>Node&lt;/code> object. It has all functions supported, and could be more useful for debugging. Debugging-wise, it is printable and assignable.&lt;/p>
+&lt;p>It is also used as the parent of &lt;code>root&lt;/code> in our tree. This eliminates the difference between an empty tree and non-empty tree, so insertion and removal of &lt;code>root&lt;/code> could be carried out without an extra conditional branch.&lt;/p>
+&lt;h2 id="codes">Codes&lt;/h2>
+&lt;!-- --></description></item><item><title>Production of Sentences and Properties of Languages: Parsing Techniques Notes (2)</title><link>https://powersnail.com/2016/parsing-techniques-notes02/</link><pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/parsing-techniques-notes02/</guid><description>&lt;h2 id="generating-sentences">Generating Sentences&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>sentence &lt;em>vs.&lt;/em> sentential&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>sentence&lt;/td>
+&lt;td>all symbols belongs to terminals (a valid element of the language)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sentential&lt;/td>
+&lt;td>may contain non-terminals, an intermediate form during sentence production&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="example">Example:&lt;/h4>
+&lt;p>For a language where $V_N = {P, Q} \land V_T = {a, b, c, d}$, a valid sentential would be $aP$; a valid sentence would be $ac$.&lt;/p>
+&lt;h3 id="type-0-and-type-1-cs-languages">Type 0 and Type 1 (CS) Languages&lt;/h3>
+&lt;p>&lt;strong>Breadth-first Production&lt;/strong>: for each sentential, make copies of it for each applicable rule. Then, repeat the operation on each copy. If there is no &lt;em>non-terminal&lt;/em> in the sentential, it is then a sentence, and could be printed and discarded in the production.&lt;/p>
+&lt;p>This process may be infinitely long, but it is guaranteed that an arbitrary sentence will definitely be produced.&lt;/p>
+&lt;h4 id="two-remarks-about-cs-language-sentence-production">Two Remarks about CS Language Sentence Production&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>We cannot decide whether a CS language is empty, i.e. whether its rules could produce a sentence. &lt;br> The process takes infinite time, and therefore is &lt;em>undecidable&lt;/em>.&lt;/p>
+&lt;ul>
+&lt;li>It is possible to prove a CS language being non-empty by giving an example of sentence it generates.&lt;/li>
+&lt;li>It is impossible to prove a CS language is empty.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>General parsing of CS language is &lt;em>unsolvable&lt;/em>. We cannot produce a list of sentences in a CS language in order by length. Because it is context-sensitive, the length of the sentence could &amp;ldquo;shrink&amp;rdquo; suddenly and unpredictably. &lt;br> As a result, we cannot determine a sentence is not in the language; there is always possibility that it may show up in further production.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>Type 0 language has the same properties.&lt;/p>
+&lt;h3 id="type-2-cf-language">Type 2 (CF) Language&lt;/h3>
+&lt;p>Monotonic nature of CF language means that the length of sentence will not &amp;ldquo;shrink&amp;rdquo;. Therefore, we could solve the two problems of CS language by a rather simple algorithm:&lt;/p>
+&lt;ol>
+&lt;li>Scan rules that have terminal on right-hand side,&lt;/li>
+&lt;li>marking those as productive;&lt;/li>
+&lt;li>scan rules that have productive on right-hand side,&lt;/li>
+&lt;li>repeat 2, 3 until meeting the start symbol or no new productive symbols could be found&lt;/li>
+&lt;/ol>
+&lt;p>If the above process is able to reach the start symbol then it is not empty; otherwise, it finds no way up to the start symbol, the language is empty.&lt;/p>
+&lt;p>The length of sentence does not shrink in CF language. Therefore, we could determine a sentence&amp;rsquo;s existence. If we meet the sentence obviously, it belongs to the language. If we keep producing and exceed the length of the sentence, then further production on the sentential will definitely not produce the sentence. We could therefore decide the inclusion of an arbitrary sentence of finite length in finite time.&lt;/p>
+&lt;h3 id="type-3-regular-language">Type 3 (Regular) Language&lt;/h3>
+&lt;p>Regular language has rules that right-hand side contains at most one non-terminal, and it should be the rightmost symbol. Regular language could be written as regular expressions that is composed of only terminals and regular operators. As a result, if a non-empty regular expression could be constructed, then the language is non-empty.&lt;/p>
+&lt;p>It is also possible to enumerate sentences without breath-first production, as only one non-terminal could be replaced in each sentential. When looking for a sentence $K$ of length $l$, if the length of sentential exceeds $l$, then $K$ cannot be included in the language. Finding any sentence in the process would prove that the language is not empty.&lt;/p>
+&lt;!-- page --></description></item><item><title>Generative Grammar and Four Types of Grammars: Parsing Techniques Notes (1)</title><link>https://powersnail.com/2016/parsing-techniques-notes01/</link><pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/parsing-techniques-notes01/</guid><description>&lt;h2 id="generative-grammar">Generative Grammar&lt;/h2>
+&lt;p>There are several views of defining a language. The computer science and formal linguistics perspective:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>terms&lt;/th>
+&lt;th>definition&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Language&lt;/td>
+&lt;td>a set of sentences&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Sentence&lt;/td>
+&lt;td>a &lt;strong>sequence&lt;/strong> of symbols&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Alphabet&lt;/td>
+&lt;td>a set of all symbols&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The semantics - meaning - of a sentence is described by its tokens cooperating with its structure.&lt;/p>
+&lt;p>Grammar is the set of rules describing a language.
+&lt;strong>Generative Grammar&lt;/strong> is&lt;/p>
+&lt;ul>
+&lt;li>exact&lt;/li>
+&lt;li>fixed-sized&lt;/li>
+&lt;/ul>
+&lt;h3 id="language-can-be-specified-by-infinite-bit-string">Language can be specified by infinite Bit-String&lt;/h3>
+&lt;p>Sorted Alphabet: $\Sigma$
+Language $\Sigma^{* }$ contains all combinations of symbols in $\Sigma$&lt;/p>
+&lt;p>The order of sentences in $\Sigma^* $ follows that:&lt;/p>
+&lt;p>&lt;em>from length $l = 0$&lt;/em>&lt;/p>
+&lt;ol>
+&lt;li>Enumerate all combinations that of length $l$&lt;/li>
+&lt;li>these combinations are listed according to alphabetical order (lexicographical sorting)&lt;/li>
+&lt;li>increment $l$ and repeat from 1.&lt;/li>
+&lt;/ol>
+&lt;p>This will form an infinitely long sorted list. Every language composed by alphabet $\Sigma$ can be identified by choosing from $\Sigma^* $. If we encode this by binary representation, 0 → not including, 1 → including, we can create an infinitely long bit string that indicates every sentence the language contains.&lt;/p>
+&lt;blockquote>
+&lt;p>For example:
+Language $L = 010010110&amp;hellip;$&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="formal-grammar">Formal Grammar&lt;/h3>
+&lt;p>Recipe of replacing symbols:&lt;/p>
+&lt;pre tabindex="0">&lt;code>Name -&amp;gt; tom | dick | harry // Name may be replaced by tom, dick or harry
+...
+&lt;/code>&lt;/pre>&lt;p>A grammar is a &lt;em>4-tuple&lt;/em> $(V_N, V_T, R, S)$:&lt;/p>
+&lt;ul>
+&lt;li>$V_N$ non-terminals, $V_T$ terminals are finite sets of symbols&lt;/li>
+&lt;li>$V_N \cap V_T = \varnothing$ terminals and non-terminals cannot have common symbols&lt;/li>
+&lt;li>$R$ is the set of rules, a set that contains ordered pairs: ${(P, Q) \mid P\in (V_N\cup V_T)^+ \land Q\in (V_N \cup V_T)^* }$&lt;/li>
+&lt;li>$S$ is the start symbol, $S\in V_N$&lt;/li>
+&lt;/ul>
+&lt;h2 id="four-types-of-grammars">Four types of Grammars&lt;/h2>
+&lt;h3 id="type-0-phrase-structure-grammar-ps-grammar">Type 0: Phrase Structure Grammar (PS Grammar)&lt;/h3>
+&lt;p>Most freedom. Follows &lt;em>4-tuple&lt;/em> $(V_N, V_T, R, S)$, without further restriction.
+Represented as &lt;code>Directed Acyclic Graph&lt;/code>: No cycle exists&lt;/p>
+&lt;h3 id="type-1-context-sensitive-grammar-cs-grammar">Type 1: Context-Sensitive Grammar (CS Grammar)&lt;/h3>
+&lt;p>There are two equivalent definitions: &lt;code>Monotonic&lt;/code> and &lt;code>Context-Sensitive&lt;/code>.
+Can be represented by a DAG, similar to PS Grammar.&lt;/p>
+&lt;h4 id="monotonic">Monotonic&lt;/h4>
+&lt;p>For each rule, left-hand side has more or equal number of symbols to right-hand side.&lt;/p>
+&lt;h4 id="context-sensitive">Context-Sensitive&lt;/h4>
+&lt;p>Every rule is context-sensitive.&lt;/p>
+&lt;ul>
+&lt;li>Left-hand side contains only one symbol to be changed in the right-hand side.&lt;/li>
+&lt;/ul>
+&lt;h3 id="type-2-context-free-grammar-cf-grammar">Type 2: Context-Free Grammar (CF Grammar)&lt;/h3>
+&lt;p>LHS could only contain one non-terminal symbol. (Thus not related to neighboring symbols).
+Represented by a tree, as branches of a node is not relevant to other nodes.&lt;/p>
+&lt;p>The generative power of CF Grammar comes from two operations:&lt;/p>
+&lt;ul>
+&lt;li>Concatenation&lt;/li>
+&lt;li>Choice (choosing from one of the alternatives in the RHS)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>NT -&amp;gt; tom | NT dick | ...&lt;/code>&lt;/p>
+&lt;h3 id="type-3-regular-grammar">Type 3: Regular Grammar&lt;/h3>
+&lt;p>Mostly referring to &lt;code>right regular grammar&lt;/code>.
+Each rule could only contain one non-terminal, as the rightmost item.
+Represented by a list, because each sentential has only one replaceable item (non-terminal), or in a production chain.&lt;/p>
+&lt;p>All regular grammar can be expressed in a regular expression, which sufficiently equal to all rules in the grammar.&lt;/p>
+&lt;p>Regular Expression Notation Styles:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Notation&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>$^{+ }$&lt;/td>
+&lt;td>One or more instances of the left-adjacent item&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$^{* }$&lt;/td>
+&lt;td>Zero or more instances of the left-adjacent item&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$^{? }$&lt;/td>
+&lt;td>Zero or one instance of the left-adjacent item&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$[abc]$&lt;/td>
+&lt;td>Choosing one from $(a, b, c)$, i.e., $(a\mid b\mid c)$&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Example:&lt;/p>
+&lt;p>$S_S\to(([tdh],)^{* }[tdh] &amp;amp; )^{? }[tdh]$&lt;/p>
+&lt;h3 id="type-4-finite-choice-grammar-fc-grammar">Type 4: Finite Choice Grammar (FC Grammar)&lt;/h3>
+&lt;p>Each rule could have only terminals in right-hand side.
+Very limited expressive power.&lt;/p></description></item></channel></rss>
