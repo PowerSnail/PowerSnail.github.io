@@ -3,7 +3,7 @@ title = "Test Md Page"
 description = "A Markdown document that tests various properties of a static site generator."
 date = "2022-07-06"
 slug = "test-md-page"
-tags = ["computer-science"]
+tags = ["computer-science", "markdown", "blog"]
 images = ["./cover.svg"]
 draft = false
 +++
