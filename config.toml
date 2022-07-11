@@ -2,9 +2,9 @@ baseURL = "https://powersnail.com/"
 languageCode = "en-us"
 title = "SnailShell"
 hasCJKLanguage = true
-paginate = 20
-ignorefiles = ["output"] 
-summaryLength = 12
+paginate = 16
+ignorefiles = ["output"]
+summaryLength = 20
 copyright = "Copyright @ PowerSnail 2016-2022"
 
 [markup]
@@ -25,8 +25,8 @@ tabWidth = 4
 name = "PowerSnail"
 
 [outputs]
-  posts     = ["HTML", "RSS"]
-  section  = ["HTML"]
+posts = ["HTML", "RSS"]
+section = ["HTML"]
 
 [params]
 about = "I'm PowerSnail. A coder, music lover, and an enthusiastic cook."
@@ -34,4 +34,4 @@ favicon = "/images/snail.svg"
 lang = "en"
 
 [permalinks]
-posts= "/:year/:slug/"
+posts = "/:year/:slug/"

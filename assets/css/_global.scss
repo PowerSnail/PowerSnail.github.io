@@ -72,12 +72,27 @@ h6 {
 }
 
 .paginator {
-  margin: 0;
-  margin-top: 3em;
+  grid-column: 1 / -1;
   display: flex;
   flex-flow: row wrap;
-  gap: 1em;
-  align-self: center;
+  column-gap: 1em;
+  justify-content: center;
+  margin: 1rem;
+  align-items: baseline;
+  justify-items: center;
+
+  a,
+  span {
+    padding: 2px 2px;
+  }
+
+  #newer::before {
+    content: "🞀 ";
+  }
+
+  #older::after {
+    content: " 🞂";
+  }
 }
 
 .goatcounter {
