@@ -45,7 +45,38 @@ Chicken Abodo is a famous dish from the Philippines, which I first saw on [J. Ke
 
 Since then, I've nailed down the quantities of the ingredients more precisely. To re-document this recipe, I wrote this Latex document:
 
-{{< codefile latex "static/latex/chicken-abodo.tex" >}}
+```latex
+\documentclass{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{palatino}
+\thispagestyle{empty}
+
+\setlength{\tabcolsep}{16pt}
+\newcommand{\tabletitle}[1]{\midrule\multicolumn{3}{l}{\textbf{\color{BrickRed} \MakeUppercase{#1}}}}
+
+\begin{document}
+
+\begin{tabular}{lll} \toprule
+  \textbf{Ingredients} & \textbf{Quantity} & \textbf{Instruction}                   \\
+  \tabletitle{Chicken Preparation}                                                  \\
+  Chicken Drumstick    & 6                 & Salt and sear the chicken              \\
+  Garlic               & 10 cloves         & Crush the garlic                       \\
+  Black Pepper         & A bunch           & Grind half of the pepper corns         \\
+                       &                   & Put the garlic and pepper into the pan \\
+  \tabletitle{Sauce}                                                                \\
+  Vinegar              & 48g               & Pour in the sauce                      \\
+  Soy Sauce            & 32g               &                                        \\
+  Sugar                & 32g               &                                        \\
+  \tabletitle{Simmering}                                                            \\
+                       &                   & Add water to cover 2/3 of the chicken  \\
+                       &                   & Bring to a boil; simmer for 1 hour     \\
+  \bottomrule
+\end{tabular}
+
+\end{document}
+```
 
 And to convert this into an image, which tightly bounds the table rather than being a full letter sized white page, I rendered the document into a `DVI` file and converted it into `SVG` with `dvisvgm`. The tool automatically crops the image, so it doesn't end being a full letter sized page.
 

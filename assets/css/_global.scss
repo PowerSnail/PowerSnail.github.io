@@ -10,11 +10,12 @@ body {
   justify-items: stretch;
   line-height: 1.6;
   font-family: 'Noto Serif', 'Noto Sans CJK SC', serif;
-  background-color: var(--bg);
+  background-color: var(--bg-alt);
   color: var(--text);
 }
 
 body>* {
+  background-color: var(--bg);
   grid-column: 2;
   margin: 0;
 }

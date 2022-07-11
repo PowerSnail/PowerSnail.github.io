@@ -33,7 +33,7 @@ DEFAULT = {
     "accent": "#af3000",
     "bg": "#fafafa",
     "text": "#000000",
-    "bg-alt": "#f6e5df",
+    "bg-alt": "#efeeee",
     "text-alt": "#645551",
     "bg-attention": "#C6FED2",
     "code": "#1A2D29",
@@ -48,7 +48,11 @@ def invert(c: str) -> str:
     return inverted.hex()
 
 
-DARK = {key: invert(value) for key, value in DEFAULT.items()}
+DARK = {
+    key: 
+    "#000" if key == "shadow" else
+    invert(value)  for key, value in DEFAULT.items()
+}
 
 
 def main():
