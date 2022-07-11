@@ -36,3 +36,7 @@ deploy-test base destination:
 deploy:
     hugo --minify
     python tool_scripts/check_dead_links.py public/
+    touch public/.nojekyll
+
+publish:
+    git subtree push --prefix public origin gh-pages
