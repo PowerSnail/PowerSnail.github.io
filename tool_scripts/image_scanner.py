@@ -3,7 +3,7 @@ import pathlib
 import itertools
 import re
 
-image_extensions = ["jpg", "jpeg", "png", "svg", "ico"]
+image_extensions = ["jpg", "jpeg", "png", "svg", "ico", "webp"]
 image_extensions = image_extensions + [s.upper() for s in image_extensions]
 
 img_re = re.compile(r"[a-zA-Z0-9_\-/\.:]+\.(" + "|".join(image_extensions) + ")")
