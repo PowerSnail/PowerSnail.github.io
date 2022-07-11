@@ -147,17 +147,47 @@ line item&lt;/li>
 &lt;li>And see if the rendering is sensible&lt;/li>
 &lt;/ul>
 &lt;h2 id="code-blocks">Code blocks&lt;/h2>
-&lt;pre tabindex="0">&lt;code>Block with no language set.
-&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">block_with_a_language&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">python&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">Block with no language set.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">block_with_a_language&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">python&lt;/span>&lt;span class="p">):&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">indent&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;multi&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;level&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;code&amp;#34;&lt;/span>&lt;span class="p">]:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">space&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">indent&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">space&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">space&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">5&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>Block with no language set that is super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long.
-&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;A block with a super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long line&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tables">Tables&lt;/h2>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">Block with no language set that is super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;A block with a super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long line&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="tables">Tables&lt;/h2>
 &lt;p>A simple table with very few columns and rows:&lt;/p>
 &lt;table>
 &lt;thead>
@@ -414,21 +444,50 @@ alt="Deconstruction of a Chord"style="width:100%; height: auto;"width="0"height=
 &lt;/li>
 &lt;/ol>
 &lt;p>With regard to code blocks, Hugo defaults to rendering code highlighting with inline style of fixed colors, which is awkward when MVP can react to system-wise dark theme. So, I configured Hugo to output code blocks with CSS classes, and output two themes, &lt;code>friendly&lt;/code> and &lt;code>dracula&lt;/code>, for light and dark themes respectively.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># To generate the CSS files&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># To generate the CSS files&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo gen chromastyles --style&lt;span class="o">=&lt;/span>friendly &amp;gt; assets/css/_friendly.css
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo gen chromastyles --style&lt;span class="o">=&lt;/span>dracula &amp;gt; assets/css/_dracula.css
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-scss" data-lang="scss">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// style.scss
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo gen chromastyles --style&lt;span class="o">=&lt;/span>dracula &amp;gt; assets/css/_dracula.css&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scss" data-lang="scss">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// style.scss
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// To include both themes
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">@import&lt;/span> &lt;span class="s2">&amp;#34;friendly&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">@media&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">prefers-color-scheme&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">dark&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">@import&lt;/span> &lt;span class="s2">&amp;#34;dracula&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># config.toml&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># config.toml&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">markup&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="nx">markup&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">highlight&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">noClasses&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">false&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I then colored the website with a dark banner image of Bach&amp;rsquo;s manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with &lt;a href="https://bottosson.github.io/posts/oklab/">Oklab&lt;/a> color space, and it seems to be passing accessibility tests so far. It might be a total overkill though, since a few colors on the spectrum are used. But what is a personal project without a few overkills?&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">noClasses&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">false&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>I then colored the website with a dark banner image of Bach&amp;rsquo;s manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with &lt;a href="https://bottosson.github.io/posts/oklab/">Oklab&lt;/a> color space, and it seems to be passing accessibility tests so far. It might be a total overkill though, since a few colors on the spectrum are used. But what is a personal project without a few overkills?&lt;/p>
 &lt;h2 id="mathjax-and-a-little-grievance-of-hugo">MathJax, and a Little Grievance of Hugo&lt;/h2>
 &lt;p>The only JavaScript I use is &lt;a href="https://www.mathjax.org/">MathJax&lt;/a>. I&amp;rsquo;ve been considering to use its server-side rendering, but it seems that at the moment of writing this blog, Hugo does not support its use.&lt;/p>
 &lt;p>In fact, Hugo does not support running its output HTML through an arbitrary command, and I think it&amp;rsquo;s a shame. There is a limit to what the &lt;code>replace&lt;/code> and &lt;code>replaceRE&lt;/code> could accomplish, which can be supplemented by custom filters written by other users.&lt;/p>
@@ -466,14 +525,59 @@ alt="Summary Card"style="width:100%; height: auto;"width="543.371536"height="236
 &lt;p>So, I decided to go with the Modernist&amp;rsquo;s approach.&lt;/p>
 &lt;h2 id="chicken-abodo">Chicken Abodo&lt;/h2>
 &lt;p>Chicken Abodo is a famous dish from the Philippines, which I first saw on &lt;a href="http://www.kenjilopezalt.com/">J. Kenji López-Alt&lt;/a>&amp;rsquo;s YouTube channel. At the time I took some short notes on my phone:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Sear the chicken, lightly salted
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Sear the chicken, lightly salted
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Prepare a bunch of garlic, bay leaves, sugar, black pepper
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Add ground pepper and pepper corns
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Add garlic, bay leaves, sugar, and sauce,
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">-&lt;/span> Ratio by weight: 1 vinegar : 2/3 soy sauce : 2/3 sugar
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Simmer for 1 hour
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Since then, I&amp;rsquo;ve nailed down the quantities of the ingredients more precisely. To re-document this recipe, I wrote this Latex document:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\documentclass&lt;/span>&lt;span class="nb">{&lt;/span>article&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Simmer for 1 hour&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Since then, I&amp;rsquo;ve nailed down the quantities of the ingredients more precisely. To re-document this recipe, I wrote this Latex document:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\documentclass&lt;/span>&lt;span class="nb">{&lt;/span>article&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="na">[dvipsnames]&lt;/span>&lt;span class="nb">{&lt;/span>xcolor&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>booktabs&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>multirow&lt;span class="nb">}&lt;/span>
@@ -502,18 +606,28 @@ alt="Summary Card"style="width:100%; height: auto;"width="543.371536"height="236
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\bottomrule&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>tabular&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;p>And to convert this into an image, which tightly bounds the table rather than being a full letter sized white page, I rendered the document into a &lt;code>DVI&lt;/code> file and converted it into &lt;code>SVG&lt;/code> with &lt;code>dvisvgm&lt;/code>. The tool automatically crops the image, so it doesn&amp;rsquo;t end being a full letter sized page.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>And to convert this into an image, which tightly bounds the table rather than being a full letter sized white page, I rendered the document into a &lt;code>DVI&lt;/code> file and converted it into &lt;code>SVG&lt;/code> with &lt;code>dvisvgm&lt;/code>. The tool automatically crops the image, so it doesn&amp;rsquo;t end being a full letter sized page.&lt;/p>
 &lt;p>&lt;img src="https://powersnail.com/images/chicken-abodo.svg"
 alt="Recipe Summary for Chicken Abodo"style="width:100%; height: auto;"width="389.795196"height="176.521182">
 &lt;/p>
 &lt;p>This is the final result of a printable, succinct, summary card for my chicken abodo recipe. After reading on the web (and fiddling with HTML and CSS) for so long, there&amp;rsquo;s something very satisfying about LaTeX. It just looks nice.&lt;/p>
 &lt;p>I then wrote a &lt;a href="https://github.com/casey/just">Justfile&lt;/a> recipe to automate the process:&lt;/p>
-&lt;pre tabindex="0">&lt;code>latex-svg name:
-mkdir -p output
-latex --output-directory=output/ --output-format=dvi static/latex/{{ name }}.tex
-dvisvgm --stdout -O -n output/{{ name }}.dvi &amp;gt; static/images/{{ name }}.svg
-&lt;/code>&lt;/pre>&lt;p>The option &lt;code>-n&lt;/code> causes the SVG to turn all the glyphs into paths. Using fonts causes the browser to substitute the fonts, which is desirable in some cases, but not in a LaTeX document where the placement of elements are fixed.&lt;/p></description></item><item><title>"And Then There Were None" Reading Notes</title><link>https://powersnail.com/2021/and-then-there-were-none/</link><pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate><guid>https://powersnail.com/2021/and-then-there-were-none/</guid><description>&lt;h1 id="summary">Summary&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">latex-svg name:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mkdir -p output
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> latex --output-directory=output/ --output-format=dvi static/latex/{{ name }}.tex
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dvisvgm --stdout -O -n output/{{ name }}.dvi &amp;gt; static/images/{{ name }}.svg&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>The option &lt;code>-n&lt;/code> causes the SVG to turn all the glyphs into paths. Using fonts causes the browser to substitute the fonts, which is desirable in some cases, but not in a LaTeX document where the placement of elements are fixed.&lt;/p></description></item><item><title>"And Then There Were None" Reading Notes</title><link>https://powersnail.com/2021/and-then-there-were-none/</link><pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate><guid>https://powersnail.com/2021/and-then-there-were-none/</guid><description>&lt;h1 id="summary">Summary&lt;/h1>
 &lt;p>The book was the execution of ten people, carried out on an isolated island. Ten people of very different backgrounds were invited, by various ruses, to come on to the island. A recorded voice blared out accusations, that each of them had committed a murder and escaped the punishment of the law. One by one, they started dying, in the same manner as described by a nursery rhyme that was carved in their bedrooms. A rich young man died by poison. The maid died by sleeping pill overdose. No one else was on the island, so the murderer must be among themselves, but despite their effort at self-preservation, the killing continued. The general was killed by the sea. The butler was chopped by an axe. The old distinguished lady was again poisoned with cyanide, while a bumblebee was present, as a symbol for bee sting. They searched for poisons and weapons, but then, the Judge was shot when they rushed to help the young lady. The doctor ran out of the house and vanished at midnight. The ex-policeman was killed by a bear-shaped clock dropped from a window. The last two, Vera the young lady, and Lombard the shady hard man, found the corpse of the doctor floating in the sea. Now that there was no other option, Vera though Lombard was the murderer. She cheated him, stole his gun, and shot him dead. Then, as she came back to her room, she was so moved by the murder, the shooting, and the guilt, she committed suicide.&lt;/p>
 &lt;p>The judge was the mastermind. His death was faked by the doctor, who was convinced that faking the death would help draw out the real murderer.&lt;/p>
 &lt;h1 id="head-hopping">Head Hopping&lt;/h1>
@@ -803,15 +917,28 @@ dvisvgm --stdout -O -n output/{{ name }}.dvi &amp;gt; static/images/{{ name }}.s
 &lt;/blockquote>
 &lt;h2 id="the-naive-solution">The Naive Solution&lt;/h2>
 &lt;p>We can loop through 1 to $k$, alternating between adding and subtracting.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">val&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">val&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mf">1.&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">k&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">val&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">i&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">val&lt;/span> &lt;span class="o">-=&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">i&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">return&lt;/span> &lt;span class="n">val&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>There could be various optimizations, but nevertheless, the algorithm is linear with regard to $k$.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">return&lt;/span> &lt;span class="n">val&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>There could be various optimizations, but nevertheless, the algorithm is linear with regard to $k$.&lt;/p>
 &lt;h2 id="constant-solution">Constant Solution&lt;/h2>
 &lt;p>First, assume $k$ is even, so that we can perfectly pair up terms in $r$ and $y$. Observe that each pair is in the form of $x^2 - (x - 1)^2$. This can be transformed to $(x + x - 1)\cdot(x - x + 1) = (x - 1) + x$. When we add all pairs, it becomes a simple series: $1 + 2 + 3 + &amp;hellip; + k$. For example, for $k = 6$:&lt;/p>
 &lt;p>$$
@@ -828,11 +955,20 @@ $$&lt;/p>
 &lt;p>Thus, we can return $\dfrac{k(1 + k)}{2}$ for arbitrary &lt;em>even&lt;/em> $k$.&lt;/p>
 &lt;p>What about &lt;em>odd&lt;/em> $k$? We can adjust the pairing a bit, and easily find that now we have $-\dfrac{k(1 + k)}{2}$.&lt;/p>
 &lt;h2 id="c-source-code">C++ Source Code&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">appleBoxes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">k&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">appleBoxes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">k&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">sum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">k&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">k&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">2&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="nl">sum&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">sum&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Count 1s in Range</title><link>https://powersnail.com/2017/range-count-1/</link><pubDate>Fri, 06 Jan 2017 00:00:00 +0000</pubDate><guid>https://powersnail.com/2017/range-count-1/</guid><description>&lt;p>在 codefights 上做到了一个很有意思的题。给你 a, b 两个数，假设你构建了一个从 a 到 b 的 array，所有这些数的 binary representation 里面有多少个 1？&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Count 1s in Range</title><link>https://powersnail.com/2017/range-count-1/</link><pubDate>Fri, 06 Jan 2017 00:00:00 +0000</pubDate><guid>https://powersnail.com/2017/range-count-1/</guid><description>&lt;p>在 codefights 上做到了一个很有意思的题。给你 a, b 两个数，假设你构建了一个从 a 到 b 的 array，所有这些数的 binary representation 里面有多少个 1？&lt;/p>
 &lt;h1 id="naive-solution">Naive Solution&lt;/h1>
 &lt;p>最简单的办法 (随手翻了两个别人的答案都是这个), 就是一个数一个数查有多少 1. 笨一点的手工查, 聪明一点的用 built-in function 查. 但是无论如何, 复杂度都是 O(b - a).&lt;/p>
 &lt;h1 id="logn-solution">Log(n) Solution&lt;/h1>
@@ -846,7 +982,22 @@ $$&lt;/p>
 &lt;li>&lt;strong>above line&lt;/strong>: 除去最左边的 $1$， 右边的部分又变成从 $0$ 开始查. 我们可以用一个简单地递归来解决这个部分。&lt;/li>
 &lt;/ol>
 &lt;p>pseudo code:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="n">function&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="n">function&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="sr">//&lt;/span> &lt;span class="err">不考虑负数&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="sr">//&lt;/span> &lt;span class="ss">basecase&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="err">只有一位&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -856,16 +1007,44 @@ $$&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">onesAboveLine&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">line&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">line&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">onesBelowLine&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">onesAboveLine&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>下面回到原始问题，给定底线和上限，a, b， 我们可以简单地转换一下：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="n">function&lt;/span> &lt;span class="n">rangeBitCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>下面回到原始问题，给定底线和上限，a, b， 我们可以简单地转换一下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="n">function&lt;/span> &lt;span class="n">rangeBitCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="复杂度证明">复杂度证明&lt;/h1>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="复杂度证明">复杂度证明&lt;/h1>
 &lt;p>这个算法的复杂度很简单，因为这个 recursion 可以很容易的转换成 tail recursion，再变成复杂度相同的 iteration. 这个 iteration 每次去掉最高位的 1，因此最多有 $\log(b)$ 次循环；每次循环做了 constant 的基本算数，因此最后的复杂度应该是 $\log(b)$。&lt;/p>
 &lt;h1 id="c-source-code">C++ Source Code&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">num_bit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">31&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">__builtin_clz&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="kt">unsigned&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
@@ -878,8 +1057,9 @@ $$&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">rangeBitCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">allBits&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Valid Number - By DFA</title><link>https://powersnail.com/2016/valid-number/</link><pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/valid-number/</guid><description>&lt;h2 id="introduction-to-the-problem">Introduction to the Problem&lt;/h2>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Valid Number - By DFA</title><link>https://powersnail.com/2016/valid-number/</link><pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/valid-number/</guid><description>&lt;h2 id="introduction-to-the-problem">Introduction to the Problem&lt;/h2>
 &lt;p>The question asks the programmer to validate whether a string is a valid representation of a number. After some trials, we find that the question accepts a few formats:&lt;/p>
 &lt;ol>
 &lt;li>pure integer&lt;/li>
@@ -892,7 +1072,25 @@ $$&lt;/p>
 &lt;p>Just to add some fun, this problem can be solved using a very textbook DFA. The code is elegant, less space efficient (but only for a constant amount) than the flag algorithm. In fact, the latter is just a compact, specialized DFA in essence. The trade-off is more variables and branching.&lt;/p>
 &lt;h2 id="the-algorithm">The Algorithm&lt;/h2>
 &lt;p>The first step, we trim the string. There is probably not efficient in bringing white space processing into the DFA.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">static&lt;/span> &lt;span class="kr">inline&lt;/span> &lt;span class="n">string&lt;/span> &lt;span class="nf">trim&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">string&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">static&lt;/span> &lt;span class="kr">inline&lt;/span> &lt;span class="n">string&lt;/span> &lt;span class="nf">trim&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">string&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -905,8 +1103,9 @@ $$&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">d&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sc">&amp;#39;\0&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">string&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="dfa---states">DFA - States&lt;/h3>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="dfa---states">DFA - States&lt;/h3>
 &lt;p>Any accepted string can be divided into a few parts:&lt;/p>
 &lt;ol>
 &lt;li>before decimal, the left part of a real number&lt;/li>
@@ -1080,7 +1279,86 @@ alt="grammar"style="width:100%; height: auto;"width="0"height="0">
 &lt;hr>
 &lt;p>The running of the DFA is easy. Simply iterate over the input, and let the transition matrix do its magic.&lt;/p>
 &lt;h2 id="complete-code">Complete Code:&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">static&lt;/span> &lt;span class="kr">inline&lt;/span> &lt;span class="n">string&lt;/span> &lt;span class="nf">trim&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">string&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
@@ -1154,8 +1432,9 @@ alt="grammar"style="width:100%; height: auto;"width="0"height="0">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Exceptional Control Flow</title><link>https://powersnail.com/2016/control-flow-exception/</link><pubDate>Tue, 15 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/control-flow-exception/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Exceptional Control Flow</title><link>https://powersnail.com/2016/control-flow-exception/</link><pubDate>Tue, 15 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/control-flow-exception/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called &lt;em>control transfer&lt;/em>. The sequence of transfers is called &lt;em>control flow&lt;/em>. The control flow is smooth when the transitions are always to the adjacent address. Operations such as &lt;code>jump&lt;/code>, &lt;code>call&lt;/code>, etc. will cause the control flow to be abrupt.&lt;/p>
 &lt;p>There are other situations where the control flow is abruptly changed. For example, hardware timer, network packet arrival, etc. are events that have to be dealt with but not necessarily a part of the execution of the program. The system will likely deal with such situations with &lt;em>exceptional control flow&lt;/em> (ECF), a disruption to the control flow.&lt;/p>
 &lt;ul>
@@ -1359,14 +1638,45 @@ alt="grammar"style="width:100%; height: auto;"width="0"height="0">
 &lt;/table>
 &lt;h3 id="c-and-syscalls">C and Syscalls&lt;/h3>
 &lt;p>C/C++ programs can call syscall directly. For example,&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hello, world&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">_exit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In syscall, the syscall ID is passed in &lt;code>%rax&lt;/code>, and arguments are passed through &lt;code>%rdi&lt;/code>, &lt;code>%rsi&lt;/code>, &lt;code>%rdi&lt;/code>, &lt;code>%r10&lt;/code>, &lt;code>%r8&lt;/code>, &lt;code>%r9&lt;/code>, in order.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>In syscall, the syscall ID is passed in &lt;code>%rax&lt;/code>, and arguments are passed through &lt;code>%rdi&lt;/code>, &lt;code>%rsi&lt;/code>, &lt;code>%rdi&lt;/code>, &lt;code>%r10&lt;/code>, &lt;code>%r8&lt;/code>, &lt;code>%r9&lt;/code>, in order.&lt;/p>
 &lt;p>Equivalent Assembly Program&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-nasm" data-lang="nasm">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">.section&lt;/span> &lt;span class="nv">.data&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-nasm" data-lang="nasm">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">.section&lt;/span> &lt;span class="nv">.data&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nl">string:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">.ascii&lt;/span> &lt;span class="s">&amp;#34;hello, world\n&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nl">string_end:&lt;/span>
@@ -1382,8 +1692,9 @@ alt="grammar"style="width:100%; height: auto;"width="0"height="0">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="kc">$&lt;/span>&lt;span class="mi">60&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nb">rax&lt;/span> &lt;span class="err">#&lt;/span> &lt;span class="nv">syscall&lt;/span> &lt;span class="nv">code&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nv">_exit&lt;/span> &lt;span class="err">=&lt;/span> &lt;span class="mi">60&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="kc">$&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nb">rdi&lt;/span> &lt;span class="err">#&lt;/span> &lt;span class="nv">Arg1&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nv">exist&lt;/span> &lt;span class="nv">status&lt;/span> &lt;span class="err">=&lt;/span> &lt;span class="mi">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">syscall&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="processes">Processes&lt;/h2>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">syscall&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="processes">Processes&lt;/h2>
 &lt;p>The concept of &lt;em>process&lt;/em> provides the illusion of&lt;/p>
 &lt;ul>
 &lt;li>our program has exclusive use of CPU and memory&lt;/li>
@@ -1462,7 +1773,24 @@ alt="grammar"style="width:100%; height: auto;"width="0"height="0">
 &lt;h2 id="system-call-error-handling">System Call Error Handling&lt;/h2>
 &lt;p>When a system level function encounter an error, they return $-1$, and set the global integer variable &lt;code>errno&lt;/code> to indicate what went wrong.&lt;/p>
 &lt;p>An error checking fork function:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">unix_error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">char&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">msg&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">unix_error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">char&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">msg&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fprintf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stderr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;%s: %s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">msg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">strerror&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">errno&lt;/span>&lt;span class="p">));&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
@@ -1474,8 +1802,9 @@ alt="grammar"style="width:100%; height: auto;"width="0"height="0">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">((&lt;/span>&lt;span class="n">pid&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">fork&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// &amp;lt;- check for error return value
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">unix_error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Fork error&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">pid&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="signals">Signals&lt;/h2>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="signals">Signals&lt;/h2>
 &lt;p>A signal is a small message that notifies a process that an event of some type has occurred in the system.&lt;/p>
 &lt;h3 id="sending-signal">Sending Signal&lt;/h3>
 &lt;p>The kernel sends a signal because:&lt;/p>
@@ -1492,33 +1821,60 @@ alt="grammar"style="width:100%; height: auto;"width="0"height="0">
 &lt;h4 id="from-keyboard">from Keyboard&lt;/h4>
 &lt;p>A Unix shell has at most 1 foreground job and zero or more background jobs. Typing &lt;kbd>ctrl&lt;/kbd> + &lt;kbd>c&lt;/kbd> causes the kernel to send SIGINT to every process in the foreground process group. &lt;kbd>ctrl&lt;/kbd> + &lt;kbd>z&lt;/kbd> sends SIGTSTP signal to every process in the foreground process group, which pauses them.&lt;/p>
 &lt;h4 id="calling-kill-function">Calling &lt;code>kill&lt;/code> function&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;sys/types.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;sys/types.h&amp;gt;&lt;/span>&lt;span class="cp">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;signal.h&amp;gt;&lt;/span>&lt;span class="cp">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">kill&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pid_t&lt;/span> &lt;span class="n">pid&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">sig&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If :&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">kill&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pid_t&lt;/span> &lt;span class="n">pid&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">sig&lt;/span>&lt;span class="p">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>If :&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>pid&lt;/code> &amp;gt; 0, send &lt;code>sig&lt;/code> to process[&lt;code>pid&lt;/code>]&lt;/li>
 &lt;li>&lt;code>pid&lt;/code> = 0, send &lt;code>sig&lt;/code> to process group that current process belongs&lt;/li>
 &lt;li>&lt;code>pid&lt;/code> &amp;lt; 0, send &lt;code>sig&lt;/code> to process group [|&lt;code>pid&lt;/code>|]&lt;/li>
 &lt;/ul>
 &lt;h4 id="calling-alarm-function">Calling &lt;code>alarm&lt;/code> function&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;unistd.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;unistd.h&amp;gt;&lt;/span>&lt;span class="cp">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="nf">alarm&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">secs&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Arranges the kernel to send SIGALRM signal to the calling process in &lt;code>secs&lt;/code> seconds. If secs == 0, then no new alarm is scheduled.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="nf">alarm&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">secs&lt;/span>&lt;span class="p">);&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Arranges the kernel to send SIGALRM signal to the calling process in &lt;code>secs&lt;/code> seconds. If secs == 0, then no new alarm is scheduled.&lt;/p>
 &lt;p>It returns the remaining seconds of previous alarm.&lt;/p>
 &lt;p>A call of &lt;code>alarm&lt;/code> cancels all previous &lt;code>alarm&lt;/code>s.&lt;/p>
 &lt;h3 id="receiving-signal">Receiving Signal&lt;/h3>
 &lt;p>The kernel checks for any &lt;em>pending and not blocked&lt;/em> signals, when switching a process from kernel mode to user mode, i.e. from an Interrupt, syscall, or context switching.&lt;/p>
 &lt;p>If there is no such signals, then it will proceed to $I_{next}$. Otherwise, the kernel will choose a signal and force the process to receive it. The receipt will trigger some action, and once the action is completed, the kernel proceeds to $I_{next}$.&lt;/p>
 &lt;p>There is a default action associated with each signal; the user program can change it by using a &lt;code>signal&lt;/code> function&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;signal.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;signal.h&amp;gt;&lt;/span>&lt;span class="cp">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="nf">void&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">sighandler_t&lt;/span>&lt;span class="p">)(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sighandler_t&lt;/span> &lt;span class="nf">signal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">signum&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sighandler_t&lt;/span> &lt;span class="n">handler&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then &lt;code>handler&lt;/code> can be SIG_IGN (ignore), SIG_DFL (default), or the address of a user-defined function, a *signal handler.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sighandler_t&lt;/span> &lt;span class="nf">signal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">signum&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sighandler_t&lt;/span> &lt;span class="n">handler&lt;/span>&lt;span class="p">);&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Then &lt;code>handler&lt;/code> can be SIG_IGN (ignore), SIG_DFL (default), or the address of a user-defined function, a *signal handler.&lt;/p>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
@@ -1527,15 +1883,35 @@ alt="grammar"style="width:100%; height: auto;"width="0"height="0">
 &lt;/li>
 &lt;/ol>
 &lt;/div></description></item><item><title>Code Optimizations</title><link>https://powersnail.com/2016/optimization/</link><pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/optimization/</guid><description>&lt;p>An example: &lt;strong>Transpose&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="n">rows&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="n">rows&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="n">cols&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">][&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>However, it might be the case that we do not know the size at &lt;em>compilation time&lt;/em>, so we cannot statically declare this 2D array. Therefore, for this to work, &lt;code>b[i][j]&lt;/code> needs to be a pointer to an array.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">][&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">]&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>However, it might be the case that we do not know the size at &lt;em>compilation time&lt;/em>, so we cannot statically declare this 2D array. Therefore, for this to work, &lt;code>b[i][j]&lt;/code> needs to be a pointer to an array.&lt;/p>
 &lt;p>To optimize, we use a 1-D array by flattening the table:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">N&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">]&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In order to make this statement more readable, we define a macro:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp"># define RIDX(i, j, N) (i * N + j)
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This macro will do a pure text replacement that replace all occurrence of &lt;code>RIDX(i, j, N)&lt;/code> by &lt;code>(i * N + j)&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">N&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">]&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>In order to make this statement more readable, we define a macro:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp"># define RIDX(i, j, N) (i * N + j)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>This macro will do a pure text replacement that replace all occurrence of &lt;code>RIDX(i, j, N)&lt;/code> by &lt;code>(i * N + j)&lt;/code>.&lt;/p>
 &lt;p>For readability, let us assume that we can write &lt;code>b[i, j]&lt;/code> for this.&lt;/p>
 &lt;h3 id="which-one-is-better">Which one is better?&lt;/h3>
 &lt;p>&lt;code>b[i, j] = a[j, i]&lt;/code> vs. &lt;code>b[j, i] = a[i, j]&lt;/code>&lt;/p>
@@ -1583,11 +1959,32 @@ if &lt;code>block.size&lt;/code> is $N$, this is also meaningless.&lt;/p>
 &lt;p>&lt;strong>Good!&lt;/strong>: &lt;code>block.size&lt;/code> = $k \times ${cache line size}$&lt;/p>
 &lt;p>&lt;em>NOTE: although it is not possible to optimize the performance without benchmarking on the machine, we can generally optimize it based on some trials.&lt;/em>&lt;/p>
 &lt;h3 id="implementation">Implementation&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">each&lt;/span> &lt;span class="n">block&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-ruby" data-lang="ruby">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">each&lt;/span> &lt;span class="n">block&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">each&lt;/span> &lt;span class="n">cell&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># do something&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In valid C language, this looks like&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">B_i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">B_i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">B_i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># do something&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>In valid C language, this looks like&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">B_i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">B_i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">B_i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">B_j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">B_j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">B_j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">B_i&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">B_i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">B_size&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">B_j&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">B_j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">B_j&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">B_size&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
@@ -1595,8 +1992,9 @@ if &lt;code>block.size&lt;/code> is $N$, this is also meaningless.&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="how-is-this-better">How is this better?&lt;/h3>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="how-is-this-better">How is this better?&lt;/h3>
 &lt;p>If we only look at the inner loop, it still looks like we do not have spatial locality for at least one query. However, because of blocking, all information are in cache and locality does not matter anymore.&lt;/p>
 &lt;h3 id="loop-variables">Loop variables&lt;/h3>
 &lt;p>&lt;code>B_j + B_size&lt;/code> is run every time with the loop.
@@ -1613,26 +2011,73 @@ If we use a variable to store the value, the performance will increase.&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;p>For example,&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">a&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will be optimized.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">float&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">1e50&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">1e50&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will not be optimized. Because this will actually result in &lt;code>c = 0&lt;/code> instead of &lt;code>c = 1&lt;/code> as in optimized code.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">b&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">a&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>This will be optimized.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">float&lt;/span> &lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">1e50&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">1e50&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>This will not be optimized. Because this will actually result in &lt;code>c = 0&lt;/code> instead of &lt;code>c = 1&lt;/code> as in optimized code.&lt;/p>
 &lt;h2 id="loop-unrolling">Loop Unrolling&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="o">++&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="nl">Loop:&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="o">++&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="nl">Loop:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">cmp&lt;/span> &lt;span class="nv">%rdi&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">%rax&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">jeg&lt;/span> &lt;span class="no">End&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">addq&lt;/span> &lt;span class="nv">%rdi&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">%rsi&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">irmovq&lt;/span> &lt;span class="no">$1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">%rcx&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">add&lt;/span> &lt;span class="nv">%rcx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">%rdi&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">jmp&lt;/span> &lt;span class="no">Loop&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nl">End:&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Only 2/5 of the operations are doing the actual work! The bookkeeping is taking a great portion of our time.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nl">End:&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Only 2/5 of the operations are doing the actual work! The bookkeeping is taking a great portion of our time.&lt;/p>
 &lt;p>The simple solution is to put more operations into the loop:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">)&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">i&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
@@ -1640,8 +2085,9 @@ If we use a variable to store the value, the performance will increase.&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">i&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">i&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Caveat&lt;/strong>: the unrolled loop operations might exceed &lt;code>N&lt;/code>, therefore we need to change the boundary: &lt;code>for (int i = 0; i &amp;lt; N - 2; )&lt;/code>.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>Caveat&lt;/strong>: the unrolled loop operations might exceed &lt;code>N&lt;/code>, therefore we need to change the boundary: &lt;code>for (int i = 0; i &amp;lt; N - 2; )&lt;/code>.&lt;/p>
 &lt;p>If &lt;code>N&lt;/code> is big, this should not hurt the performance overall. The advantage of unrolling loops will be more important.&lt;/p>
 &lt;p>&lt;strong>Unrolling Too Much&lt;/strong>: instruction cache miss (But this is unlikely, as it would take quite a number of unrolling to do that)&lt;/p>
 &lt;h2 id="function-inlining">Function Inlining&lt;/h2>
@@ -1654,18 +2100,38 @@ If we use a variable to store the value, the performance will increase.&lt;/p>
 &lt;/blockquote>
 &lt;p>These are tedious work to store register values. In order to avoid this, we inline functions.&lt;/p>
 &lt;p>For example,&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">char&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">char&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// doing something
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">...&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We place the content of &lt;code>strlen&lt;/code> before x, saving the return value as a variable and replace the call with the variable.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// doing something
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>We place the content of &lt;code>strlen&lt;/code> before x, saving the return value as a variable and replace the call with the variable.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// doing something
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">ans&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">retVal&lt;/span> &lt;span class="c1">// instead of return
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">ans&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Fractals</title><link>https://powersnail.com/2016/fractals/</link><pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/fractals/</guid><description>&lt;h1 id="fractal">Fractal&lt;/h1>
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">ans&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Fractals</title><link>https://powersnail.com/2016/fractals/</link><pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/fractals/</guid><description>&lt;h1 id="fractal">Fractal&lt;/h1>
 &lt;p>naming: fractional dimension&lt;/p>
 &lt;h2 id="definition">Definition:&lt;/h2>
 &lt;p>self-similar $$\to$ when zoomed in, look the same&lt;/p>
@@ -1715,14 +2181,26 @@ alt="Koch Snowflake"width="2000"height="2000">
 &lt;p>Recursive Tree: &lt;strong>Tree&lt;/strong> := Stick + &lt;strong>Tree&lt;/strong> + &lt;strong>Tree&lt;/strong>&lt;/p>
 &lt;p>Moreover, we need to take care of the angles, length and returning position.&lt;/p>
 &lt;p>It becomes:&lt;/p>
-&lt;pre tabindex="0">&lt;code>- Stick
-- Turn
-- Tree -&amp;gt; this will expand to the same routine
-- Turn
-- Tree -&amp;gt; this will expand to the same routine
-- Turn
-- Backwards
-&lt;/code>&lt;/pre>&lt;h3 id="l-system">L-System&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">- Stick
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Turn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Tree -&amp;gt; this will expand to the same routine
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Turn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Tree -&amp;gt; this will expand to the same routine
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Turn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Backwards&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="l-system">L-System&lt;/h3>
 &lt;p>The above process can be described by CFG:&lt;/p>
 &lt;p>$$T:S\leftarrow T \rightarrow \rightarrow T \leftarrow \overline{S}$&lt;/p>
 &lt;p>This use of CFG is called L-System.&lt;/p>
@@ -1735,11 +2213,20 @@ alt="Koch Snowflake"width="2000"height="2000">
 &lt;p>However, sadly trees don&amp;rsquo;t grow by the fractal model.&lt;/p>
 &lt;h2 id="incorporating-randomness-into-fractals">Incorporating Randomness Into Fractals&lt;/h2>
 &lt;p>Example Algorithm (&lt;em>Subdivide and Offset&lt;/em>)&lt;/p>
-&lt;pre tabindex="0">&lt;code>repeat
-foreach segment
-offset midpoint for random distance
-hence create two segments
-&lt;/code>&lt;/pre>&lt;ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">repeat
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> foreach segment
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> offset midpoint for random distance
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> hence create two segments&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
 &lt;li>deeper repetition: bumpier&lt;/li>
 &lt;/ul>
 &lt;p>More sophisticated examples:&lt;/p>
@@ -1789,14 +2276,26 @@ alt="Diamond Square"width="300"height="225">
 &lt;li>apply gradient detection convolution&lt;/li>
 &lt;li>find where gradient appears&lt;/li>
 &lt;/ul>
-&lt;pre tabindex="0">&lt;code>
-/ \ / \ / \ / \
-| | | |
-_____________________________ &amp;lt;- at this line, the gradient is extreme
-******************************
-******************************
-******************************
-&lt;/code>&lt;/pre>&lt;ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> / \ / \ / \ / \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | | | |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _____________________________ &amp;lt;- at this line, the gradient is extreme
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ******************************
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ******************************
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ******************************&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
 &lt;li>find maximum gradient points&lt;/li>
 &lt;li>edge is perpendicular to gradients&lt;/li>
 &lt;/ul>
@@ -1926,7 +2425,51 @@ OUTPUT: find a path(curve) that is following edge as much as possible&lt;/p>
 &lt;/ul>
 &lt;/li>
 &lt;/ul></description></item><item><title>Binary Search Tree implemented by C++</title><link>https://powersnail.com/2016/binary-search-tree/</link><pubDate>Sat, 27 Feb 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/binary-search-tree/</guid><description>&lt;p>This is a simple implementation of binary search tree implemented by C++. Here are the methods of my BST:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Node&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Node&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Node&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">left&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">right&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">parent&lt;/span>&lt;span class="p">;&lt;/span>
@@ -1965,8 +2508,9 @@ OUTPUT: find a path(curve) that is following edge as much as possible&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">transplant&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">bool&lt;/span> &lt;span class="nf">empty&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I will talk about some of the implementations. The complete source file can be found in my &lt;a href="https://github.com/PowerSnail/Algorithms-Practices">algorithm repository&lt;/a>. If you found any problem with the implementation, or anything that is worth adding to this, please leave a comment under this article or open an issue in the algorithm repository. This BST does not insert repeated element.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>I will talk about some of the implementations. The complete source file can be found in my &lt;a href="https://github.com/PowerSnail/Algorithms-Practices">algorithm repository&lt;/a>. If you found any problem with the implementation, or anything that is worth adding to this, please leave a comment under this article or open an issue in the algorithm repository. This BST does not insert repeated element.&lt;/p>
 &lt;h2 id="basic-idea">Basic Idea&lt;/h2>
 &lt;p>Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p>
 &lt;p>In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p>
@@ -1976,7 +2520,20 @@ alt="Binary Search Tree"width="2445"height="2308">
 &lt;p>The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code>nil&lt;/code> sentinel node, which is not in the data structure but a &lt;a href="#sentinelNode">useful element&lt;/a> in our program.&lt;/p>
 &lt;h2 id="traversals">Traversals&lt;/h2>
 &lt;p>The recursive in-order traversal is easy to implement:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="n">BST&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">node&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="n">BST&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">node&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
@@ -1984,11 +2541,19 @@ alt="Binary Search Tree"width="2445"height="2308">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">node&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">key&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The iterative algorithm is slightly more complex. It involves two pointers, marking the current and previous position of our traversal. Although this is not recursive, we could still think of it using an inductive reasoning. We first set the initial states to root and nil (who is the parent of root):&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For an arbitrary iteration, there are three possibilities:&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>The iterative algorithm is slightly more complex. It involves two pointers, marking the current and previous position of our traversal. Although this is not recursive, we could still think of it using an inductive reasoning. We first set the initial states to root and nil (who is the parent of root):&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>For an arbitrary iteration, there are three possibilities:&lt;/p>
 &lt;ol>
 &lt;li>&lt;code>prev&lt;/code> is the parent of &lt;code>x&lt;/code>. It means we have been going downwards in the tree, and both left branch and right branch of &lt;code>x&lt;/code> has not yet been explored; then as in-order traversal requires, we go left from here.&lt;/li>
 &lt;li>&lt;code>prev&lt;/code> is the left child of &lt;code>x&lt;/code>. This means we have just come back from the left branch, implying that the left is already printed. Now we have to print &lt;code>x&lt;/code> itself and going to the right.&lt;/li>
@@ -2019,9 +2584,16 @@ alt="Binary Search Tree"width="2445"height="2308">
 &lt;p>The trick here is to 1) progress the printing and 2) ensure that at the end of each iteration, the &lt;em>invariant&lt;/em> is preserved, i.e. the situation falls into one of the situations.&lt;/p>
 &lt;h4 id="prev-pointing-at-parent">&lt;code>prev&lt;/code> Pointing at Parent&lt;/h4>
 &lt;p>Nothing has been printed, so we go to left directly;&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">left&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We need to consider the case where &lt;code>left&lt;/code> is nil, but this is easy because we can just throw &lt;code>prev&lt;/code> to left. This works because if we examine the &lt;em>loop invariant&lt;/em>, now the tree complies with the second situation.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">left&lt;/span>&lt;span class="p">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>We need to consider the case where &lt;code>left&lt;/code> is nil, but this is easy because we can just throw &lt;code>prev&lt;/code> to left. This works because if we examine the &lt;em>loop invariant&lt;/em>, now the tree complies with the second situation.&lt;/p>
 &lt;h4 id="prev-pointing-at-left">&lt;code>prev&lt;/code> Pointing at left&lt;/h4>
 &lt;p>Left tree is already printed (we consider &lt;code>nil&lt;/code> as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code>x&lt;/code> before entering right.&lt;/p>
 &lt;p>There is a slight complication if &lt;code>x&lt;/code> is a leaf, as both children are &lt;code>nil&lt;/code>. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code>x&lt;/code> forever.&lt;/p>
@@ -2029,7 +2601,22 @@ alt="Binary Search Tree"width="2445"height="2308">
 alt="From Left to Right"width="2441"height="2067">
 {:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p>
 &lt;p>The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">key&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">key&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span> &lt;span class="c1">// right branch is nil
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
@@ -2039,12 +2626,20 @@ alt="From Left to Right"width="2441"height="2067">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="prev-pointing-at-right">&lt;code>prev&lt;/code> Pointing at Right&lt;/h4>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="prev-pointing-at-right">&lt;code>prev&lt;/code> Pointing at Right&lt;/h4>
 &lt;p>We know &lt;code>x&lt;/code> subtree is all printed, so all we need to do is to move &lt;code>x&lt;/code> upwards.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">parent&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="insertion">Insertion&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">parent&lt;/span>&lt;span class="p">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="insertion">Insertion&lt;/h2>
 &lt;p>Insertion always occur at leaf in a BST. Generally, we need to 1) find a proper leaf as the parent of our new node and 2) insert it into the proper child of the leaf.&lt;/p>
 &lt;h2 id="a-namesentinelnodea-sentinel-node">&lt;a name="sentinelNode">&lt;/a> Sentinel Node&lt;/h2>
 &lt;p>How is a sentinel node useful? There are several uses of it, and the most important one is to replace &lt;code>NULL&lt;/code> for representing a non-existing element. It guards against null pointers.&lt;/p>
@@ -2151,9 +2746,16 @@ Language $L = 010010110&amp;hellip;$&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="formal-grammar">Formal Grammar&lt;/h3>
 &lt;p>Recipe of replacing symbols:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Name -&amp;gt; tom | dick | harry // Name may be replaced by tom, dick or harry
-...
-&lt;/code>&lt;/pre>&lt;p>A grammar is a &lt;em>4-tuple&lt;/em> $(V_N, V_T, R, S)$:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">Name -&amp;gt; tom | dick | harry // Name may be replaced by tom, dick or harry
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">...&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>A grammar is a &lt;em>4-tuple&lt;/em> $(V_N, V_T, R, S)$:&lt;/p>
 &lt;ul>
 &lt;li>$V_N$ non-terminals, $V_T$ terminals are finite sets of symbols&lt;/li>
 &lt;li>$V_N \cap V_T = \varnothing$ terminals and non-terminals cannot have common symbols&lt;/li>

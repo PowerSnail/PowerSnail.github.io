@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Structure on SnailShell</title><link>https://powersnail.com/tags/data-structure/</link><description>Recent content in Data Structure on SnailShell</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright @ PowerSnail 2016-2022</copyright><lastBuildDate>Sat, 27 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://powersnail.com/tags/data-structure/index.xml" rel="self" type="application/rss+xml"/><item><title>Binary Search Tree implemented by C++</title><link>https://powersnail.com/2016/binary-search-tree/</link><pubDate>Sat, 27 Feb 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/binary-search-tree/</guid><description>&lt;p>This is a simple implementation of binary search tree implemented by C++. Here are the methods of my BST:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Node&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Node&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Node&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">left&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">right&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">parent&lt;/span>&lt;span class="p">;&lt;/span>
@@ -38,8 +82,9 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">transplant&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">bool&lt;/span> &lt;span class="nf">empty&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I will talk about some of the implementations. The complete source file can be found in my &lt;a href="https://github.com/PowerSnail/Algorithms-Practices">algorithm repository&lt;/a>. If you found any problem with the implementation, or anything that is worth adding to this, please leave a comment under this article or open an issue in the algorithm repository. This BST does not insert repeated element.&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>I will talk about some of the implementations. The complete source file can be found in my &lt;a href="https://github.com/PowerSnail/Algorithms-Practices">algorithm repository&lt;/a>. If you found any problem with the implementation, or anything that is worth adding to this, please leave a comment under this article or open an issue in the algorithm repository. This BST does not insert repeated element.&lt;/p>
 &lt;h2 id="basic-idea">Basic Idea&lt;/h2>
 &lt;p>Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p>
 &lt;p>In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p>
@@ -49,7 +94,20 @@ alt="Binary Search Tree"width="2445"height="2308">
 &lt;p>The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code>nil&lt;/code> sentinel node, which is not in the data structure but a &lt;a href="#sentinelNode">useful element&lt;/a> in our program.&lt;/p>
 &lt;h2 id="traversals">Traversals&lt;/h2>
 &lt;p>The recursive in-order traversal is easy to implement:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="n">BST&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">node&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="n">BST&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">node&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
@@ -57,11 +115,19 @@ alt="Binary Search Tree"width="2445"height="2308">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">node&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">key&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">inorderRec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The iterative algorithm is slightly more complex. It involves two pointers, marking the current and previous position of our traversal. Although this is not recursive, we could still think of it using an inductive reasoning. We first set the initial states to root and nil (who is the parent of root):&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For an arbitrary iteration, there are three possibilities:&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>The iterative algorithm is slightly more complex. It involves two pointers, marking the current and previous position of our traversal. Although this is not recursive, we could still think of it using an inductive reasoning. We first set the initial states to root and nil (who is the parent of root):&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">auto&lt;/span> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>For an arbitrary iteration, there are three possibilities:&lt;/p>
 &lt;ol>
 &lt;li>&lt;code>prev&lt;/code> is the parent of &lt;code>x&lt;/code>. It means we have been going downwards in the tree, and both left branch and right branch of &lt;code>x&lt;/code> has not yet been explored; then as in-order traversal requires, we go left from here.&lt;/li>
 &lt;li>&lt;code>prev&lt;/code> is the left child of &lt;code>x&lt;/code>. This means we have just come back from the left branch, implying that the left is already printed. Now we have to print &lt;code>x&lt;/code> itself and going to the right.&lt;/li>
@@ -92,9 +158,16 @@ alt="Binary Search Tree"width="2445"height="2308">
 &lt;p>The trick here is to 1) progress the printing and 2) ensure that at the end of each iteration, the &lt;em>invariant&lt;/em> is preserved, i.e. the situation falls into one of the situations.&lt;/p>
 &lt;h4 id="prev-pointing-at-parent">&lt;code>prev&lt;/code> Pointing at Parent&lt;/h4>
 &lt;p>Nothing has been printed, so we go to left directly;&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">left&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We need to consider the case where &lt;code>left&lt;/code> is nil, but this is easy because we can just throw &lt;code>prev&lt;/code> to left. This works because if we examine the &lt;em>loop invariant&lt;/em>, now the tree complies with the second situation.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">left&lt;/span>&lt;span class="p">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>We need to consider the case where &lt;code>left&lt;/code> is nil, but this is easy because we can just throw &lt;code>prev&lt;/code> to left. This works because if we examine the &lt;em>loop invariant&lt;/em>, now the tree complies with the second situation.&lt;/p>
 &lt;h4 id="prev-pointing-at-left">&lt;code>prev&lt;/code> Pointing at left&lt;/h4>
 &lt;p>Left tree is already printed (we consider &lt;code>nil&lt;/code> as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code>x&lt;/code> before entering right.&lt;/p>
 &lt;p>There is a slight complication if &lt;code>x&lt;/code> is a leaf, as both children are &lt;code>nil&lt;/code>. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code>x&lt;/code> forever.&lt;/p>
@@ -102,7 +175,22 @@ alt="Binary Search Tree"width="2445"height="2308">
 alt="From Left to Right"width="2441"height="2067">
 {:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p>
 &lt;p>The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">key&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">key&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span> &lt;span class="c1">// right branch is nil
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
@@ -112,12 +200,20 @@ alt="From Left to Right"width="2441"height="2067">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="prev-pointing-at-right">&lt;code>prev&lt;/code> Pointing at Right&lt;/h4>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="prev-pointing-at-right">&lt;code>prev&lt;/code> Pointing at Right&lt;/h4>
 &lt;p>We know &lt;code>x&lt;/code> subtree is all printed, so all we need to do is to move &lt;code>x&lt;/code> upwards.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">parent&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="insertion">Insertion&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">prev&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">parent&lt;/span>&lt;span class="p">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="insertion">Insertion&lt;/h2>
 &lt;p>Insertion always occur at leaf in a BST. Generally, we need to 1) find a proper leaf as the parent of our new node and 2) insert it into the proper child of the leaf.&lt;/p>
 &lt;h2 id="a-namesentinelnodea-sentinel-node">&lt;a name="sentinelNode">&lt;/a> Sentinel Node&lt;/h2>
 &lt;p>How is a sentinel node useful? There are several uses of it, and the most important one is to replace &lt;code>NULL&lt;/code> for representing a non-existing element. It guards against null pointers.&lt;/p>
