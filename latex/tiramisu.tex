@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[T1]{fontenc}
+\usepackage{tgbonum}
+\thispagestyle{empty}
+
+\setlength{\tabcolsep}{16pt}
+\newcommand{\tabletitle}[1]{\midrule\multicolumn{3}{l}{\textbf{\color{BrickRed} \MakeUppercase{#1}}}}
+
+\begin{document}
+
+\begin{tabular}{lll} 
+  \toprule
+  \textbf{\MakeUppercase{Ingredients}}     & \textbf{\MakeUppercase{Quantity}} & \textbf{\MakeUppercase{Instruction}}                                      \\
+  \tabletitle{Cream}                                                                                       \\
+  Egg yolks                & 4                 & Bring water to a boil and turn down to a simmer;          \\
+  Sugar                    & 60g               & Beat egg yolks in a bowl over steam, gradually add sugar; \\
+  Mascarpone               & 450g              & Whip for 10 minutes, until light yellow;                  \\
+  Egg whites               & 4                 & Remove from heat, and whip until cool;                    \\
+                           &                   & Lightly whisk the mascarpone and fold into the yolks;     \\
+                           &                   & Beat egg whites to stiff peak;                            \\
+                           &                   & Fold in egg whites;                                       \\
+  \tabletitle{Coffee}                                                                                      \\
+  Espresso/Strong coffee   & 250g              & Make coffee;                                              \\
+  Liquor or liquor extract & A bit             & Mix in liquor or liquor extract;                          \\
+  Tea bag                  & 1                 & Optional: steep the tea bag for 2 minutes;                \\
+  \tabletitle{Assemble}                                                                                    \\
+  Ladyfinger               & 48                & Dip ladyfingers in coffee;                                \\
+                           &                   & Place a layer of ladyfingers;                             \\
+                           &                   & Spread a layer of cream;                                  \\
+                           &                   & Repeat \& refrigerate                                     \\
+  \bottomrule
+\end{tabular}
+
+\end{document}

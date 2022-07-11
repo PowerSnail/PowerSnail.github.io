@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{palatino}
+\thispagestyle{empty}
+
+\setlength{\tabcolsep}{16pt}
+\newcommand{\tabletitle}[1]{\midrule\multicolumn{3}{l}{\textbf{\color{BrickRed} \MakeUppercase{#1}}}}
+
+\begin{document}
+
+\begin{tabular}{lll} \toprule
+  \textbf{Ingredients} & \textbf{Quantity} & \textbf{Instruction}                   \\
+  \tabletitle{Chicken Preparation}                                                  \\
+  Chicken Drumstick    & 6                 & Salt and sear the chicken              \\
+  Garlic               & 10 cloves         & Crush the garlic                       \\
+  Black Pepper         & A bunch           & Grind half of the pepper corns         \\
+                       &                   & Put the garlic and pepper into the pan \\
+  \tabletitle{Sauce}                                                                \\
+  Vinegar              & 48g               & Pour in the sauce                      \\
+  Soy Sauce            & 32g               &                                        \\
+  Sugar                & 32g               &                                        \\
+  \tabletitle{Simmering}                                                            \\
+                       &                   & Add water to cover 2/3 of the chicken  \\
+                       &                   & Bring to a boil; simmer for 1 hour     \\
+  \bottomrule
+\end{tabular}
+
+\end{document}

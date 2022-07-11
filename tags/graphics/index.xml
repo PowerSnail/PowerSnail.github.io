@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>graphics on SnailShell</title><link>https://powersnail.com/tags/graphics/</link><description>Recent content in graphics on SnailShell</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright @ PowerSnail 2016-2022</copyright><lastBuildDate>Tue, 08 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://powersnail.com/tags/graphics/index.xml" rel="self" type="application/rss+xml"/><item><title>Fractals</title><link>https://powersnail.com/2016/fractals/</link><pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/fractals/</guid><description>&lt;h1 id="fractal">Fractal&lt;/h1>
+&lt;p>naming: fractional dimension&lt;/p>
+&lt;h2 id="definition">Definition:&lt;/h2>
+&lt;p>self-similar $$\to$ when zoomed in, look the same&lt;/p>
+&lt;h2 id="types">Types:&lt;/h2>
+&lt;ol>
+&lt;li>Exactly self-similar&lt;/li>
+&lt;li>Statistically self-similar&lt;/li>
+&lt;/ol>
+&lt;h2 id="exactly-self-similar">Exactly Self-similar&lt;/h2>
+&lt;p>If zoomed in, there is no way to tell that we have zoomed in.&lt;/p>
+&lt;h3 id="sierpinski-carpet">Sierpinski Carpet&lt;/h3>
+&lt;p>&lt;img src="https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg"
+alt="Sierpinski Carpet"width="600"height="600">
+&lt;/p>
+&lt;ul>
+&lt;li>A square divided into 9 squares&lt;/li>
+&lt;li>The center square is empty&lt;/li>
+&lt;li>Each other square is divided again&lt;/li>
+&lt;/ul>
+&lt;h3 id="koch-snowflake">Koch Snowflake&lt;/h3>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png"
+alt="Koch Snowflake"width="2000"height="2000">
+&lt;/p>
+&lt;ul>
+&lt;li>Chop the lines into 3 Segments&lt;/li>
+&lt;li>replace the middle one with equal lateral triangle&lt;/li>
+&lt;li>Chop and replace each segment&lt;/li>
+&lt;/ul>
+&lt;p>The important property is that when we zoom in on an edge, it is arbitrarily &amp;ldquo;bumpy&amp;rdquo; - non-smooth. This is similar to things like shorelines. There is a self-similarity in natural shorelines.&lt;/p>
+&lt;p>However, shorelines are not as bumpy as Koch Snowflakes. They are smoother. Hence, we need a concept to describe the bumpiness.&lt;/p>
+&lt;h3 id="length-of-koch-snowflake">Length of Koch Snowflake&lt;/h3>
+&lt;p>Each Step increases the length to $$\dfrac{4}{3} \times$ original. Hence, Koch Snowflake is infinitely long.&lt;/p>
+&lt;p>$$l_k = \dfrac{4}{3} l_{k-1}$&lt;/p>
+&lt;p>Question: How quickly does Koch Snowflake&amp;rsquo;s length converge to infinity?&lt;/p>
+&lt;h3 id="measuring-length-of-fractal-line">Measuring Length of Fractal Line&lt;/h3>
+&lt;p>Different measuring scales lead to different length.&lt;/p>
+&lt;p>From the starting point, jump a fixed distance, $$d_u$, and measure how many $d_u$ are there in the line.&lt;/p>
+&lt;p>Each different $$d_u$ results in a unique length, and as $d_u$ approaches 0, the length measured approaches $\infty$&lt;/p>
+&lt;p>The scale is related to length and this function describes the bumpiness of a fractal line. This is called &lt;strong>Fractal Dimension&lt;/strong>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>Higher&lt;/em> Fractal Dimension means more &lt;em>bumpiness&lt;/em>&lt;/li>
+&lt;li>&lt;em>Lower&lt;/em> Fractal Dimension means less &lt;em>bumpiness&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h3 id="shorelinemountain-topology">Shoreline/Mountain Topology&lt;/h3>
+&lt;p>Use fractal dimension to model a bumpy line, and computationally derive the line, rather than describing more details.&lt;/p>
+&lt;h2 id="statistically-self-similar">Statistically Self-similar&lt;/h2>
+&lt;p>Recursive Tree: &lt;strong>Tree&lt;/strong> := Stick + &lt;strong>Tree&lt;/strong> + &lt;strong>Tree&lt;/strong>&lt;/p>
+&lt;p>Moreover, we need to take care of the angles, length and returning position.&lt;/p>
+&lt;p>It becomes:&lt;/p>
+&lt;pre tabindex="0">&lt;code>- Stick
+- Turn
+- Tree -&amp;gt; this will expand to the same routine
+- Turn
+- Tree -&amp;gt; this will expand to the same routine
+- Turn
+- Backwards
+&lt;/code>&lt;/pre>&lt;h3 id="l-system">L-System&lt;/h3>
+&lt;p>The above process can be described by CFG:&lt;/p>
+&lt;p>$$T:S\leftarrow T \rightarrow \rightarrow T \leftarrow \overline{S}$&lt;/p>
+&lt;p>This use of CFG is called L-System.&lt;/p>
+&lt;h3 id="improvement-to-l-system-tree">Improvement to L-System Tree&lt;/h3>
+&lt;ul>
+&lt;li>Randomness : This introduces &lt;strong>Statistically similar&lt;/strong> fractal image.&lt;/li>
+&lt;/ul>
+&lt;p>The sub-parts are statistically similar to the original image, but not exactly the same.&lt;/p>
+&lt;p>To create a nice tree, it is important to examine each tree. There is a &lt;strong>grammar&lt;/strong> to each type of tree, describing its patterns.&lt;/p>
+&lt;p>However, sadly trees don&amp;rsquo;t grow by the fractal model.&lt;/p>
+&lt;h2 id="incorporating-randomness-into-fractals">Incorporating Randomness Into Fractals&lt;/h2>
+&lt;p>Example Algorithm (&lt;em>Subdivide and Offset&lt;/em>)&lt;/p>
+&lt;pre tabindex="0">&lt;code>repeat
+foreach segment
+offset midpoint for random distance
+hence create two segments
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>deeper repetition: bumpier&lt;/li>
+&lt;/ul>
+&lt;p>More sophisticated examples:&lt;/p>
+&lt;h3 id="height-map">Height Map&lt;/h3>
+&lt;p>A raster vector of height&lt;/p>
+&lt;ul>
+&lt;li>Can represent any terrain with no overlapping height (not bumpy topology, water, etc.)&lt;/li>
+&lt;li>Cannot represent extremely rocky terrain&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Diamond Square&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png"
+alt="Level 0"width="2998"height="640">
+&lt;/p>
+&lt;ul>
+&lt;li>Level 0: Four corners set to $$h = 0$&lt;/li>
+&lt;li>Level 1: Mid-point $$m_1$ set to $h_1 += random$&lt;/li>
+&lt;li>Level 2: Point on Edges aligned with $$m_1$, offset randomly&lt;/li>
+&lt;li>Level 3: Mid-point of each sub-square, offset randomly&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;p>The result could look something like:&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif"
+alt="Diamond Square"width="300"height="225">
+&lt;/p>
+&lt;p>The problem is the grid pattern is visible. There are &amp;lsquo;+&amp;rsquo; in the graph, so rotating the graph will be noticed (not entirely natural)&lt;/p>
+&lt;p>&lt;strong>Solution&lt;/strong>: Use&lt;/p>
+&lt;p>&lt;strong>Applications&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>NOT good for terrain. Natural terrain has very few local minima. The minima will drain, and become global minima. This is not reflected by diamond square subdivision.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Clouds. Clouds density is similar to the patterns generated from diamond square subdivision.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Dirt. This could create &amp;ldquo;dirty&amp;rdquo; texture to human-created objects.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="perlin-fractal">Perlin Fractal&lt;/h3>
+&lt;p>A perlin fractal is created by taking in a height map, downsize it, and fill itself with the small height map.&lt;/p></description></item><item><title>Gradient Detection Convolutions, Seam Carving, and Patch March</title><link>https://powersnail.com/2016/image-manipulation/</link><pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/image-manipulation/</guid><description>&lt;h2 id="gradient-detection-convolutions">Gradient detection convolutions&lt;/h2>
+&lt;p>Square instead of rectangle: to avoid problems concerning diagonal&lt;/p>
+&lt;ul>
+&lt;li>usually 3 x 3&lt;/li>
+&lt;/ul>
+&lt;h2 id="edge-detection">edge detection&lt;/h2>
+&lt;ul>
+&lt;li>apply gradient detection convolution&lt;/li>
+&lt;li>find where gradient appears&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>
+/ \ / \ / \ / \
+| | | |
+_____________________________ &amp;lt;- at this line, the gradient is extreme
+******************************
+******************************
+******************************
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>find maximum gradient points&lt;/li>
+&lt;li>edge is perpendicular to gradients&lt;/li>
+&lt;/ul>
+&lt;h2 id="segmentation-intelligent-scissors">Segmentation: Intelligent Scissors&lt;/h2>
+&lt;p>INPUT: a set of points
+OUTPUT: find a path(curve) that is following edge as much as possible&lt;/p>
+&lt;p>This is a graph traversal problem. Each pixel has some neighbors, and we choose points based on gradient at each point.&lt;/p>
+&lt;p>ALGORITHM&lt;/p>
+&lt;ul>
+&lt;li>treat the picture as a graph&lt;/li>
+&lt;li>each pixel is connected to neighboring pixels&lt;/li>
+&lt;li>cost minimization
+&lt;ul>
+&lt;li>cost = 1 - gradient // higher gradient, better to choose&lt;/li>
+&lt;li>optionally, cost for diagonal is higher, etc.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>simply adding up cost of each step&lt;/li>
+&lt;/ul>
+&lt;h2 id="segmentation-k-means">Segmentation: k-means&lt;/h2>
+&lt;p>automatic algorithm: k neighbor&lt;/p>
+&lt;p>It finds pixels that are close in color-space &amp;amp; geometry, and connect them. By tweaking the weight of adjacency and color-space closeness, we can have different results. This can be used in color reduction. It reduces the amount of gradient exists in the graph.&lt;/p>
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Image_segmentation">Segmentation&lt;/a>&lt;/p>
+&lt;h2 id="image-processing-algorithms-machine-learning">Image Processing Algorithms: Machine Learning&lt;/h2>
+&lt;h3 id="machine-learning-model">Machine Learning Model&lt;/h3>
+&lt;p>A black box, that takes in independent and dependent vars, and output a function that describes the relationship between those.&lt;/p>
+&lt;p>$$Black-Box(x, y) \to y = f(x)$$&lt;/p>
+&lt;h3 id="in-image-processing">In Image Processing&lt;/h3>
+&lt;ul>
+&lt;li>Independent var: features of the image&lt;/li>
+&lt;li>Dependent var: classification(is it a dog?)&lt;/li>
+&lt;/ul>
+&lt;p>To find features, we try to find patterns of gradient in the image.&lt;/p>
+&lt;p>There are parts of the image that are more informative than others. It contains patterns that are robust against small changes. It will be stable across different images sharing the same pattern, despite small differences.&lt;/p>
+&lt;p>This could be represented by:&lt;/p>
+&lt;ul>
+&lt;li>maxima of gradient&lt;/li>
+&lt;li>area of gradient turns&lt;/li>
+&lt;/ul>
+&lt;p>These are works for feature detection algorithms.&lt;/p>
+&lt;p>For example, a gray box.&lt;/p>
+&lt;p>This is easily identified, because the right angles of the square corners are a robust feature. The change in gradient pattern is consistent in different images.&lt;/p>
+&lt;h2 id="seam-carving">Seam Carving&lt;/h2>
+&lt;ul>
+&lt;li>INPUT: Image&lt;/li>
+&lt;li>OUTPUT: Smaller image, that does not look distorted.&lt;/li>
+&lt;/ul>
+&lt;p>Requirement:&lt;/p>
+&lt;ul>
+&lt;li>focus objects are in frame&lt;/li>
+&lt;li>no obvious distortion&lt;/li>
+&lt;li>only boring parts are cut off&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Seam_carving">Seam Carving&lt;/a>&lt;/p>
+&lt;p>Use magnitude of gradient to approximate the &amp;ldquo;interestingness&amp;rdquo;.&lt;/p>
+&lt;ul>
+&lt;li>large gradient: an object -&amp;gt; interest&lt;/li>
+&lt;li>low gradient: same across image -&amp;gt; less information&lt;/li>
+&lt;/ul>
+&lt;p>In order to get a better estimate, we might need to blur the image a little bit.&lt;/p>
+&lt;p>&lt;em>NOTE: the reason that the gradient image on Wikipedia has squares is because JPEG compression&lt;/em>&lt;/p>
+&lt;p>&lt;strong>How to decide what to remove?&lt;/strong>&lt;/p>
+&lt;p>In order to narrow an image for 1 pixel, every row needs to be smaller by 1 pixel.&lt;/p>
+&lt;ol>
+&lt;li>For each row, pick the least interesting pixel&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>[FAILED]&lt;/li>
+&lt;li>line shifts, and the image will be distorted&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>Select one vertical line&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>[FAILED]&lt;/li>
+&lt;li>This will create a visible vertical line of discontinuous&lt;/li>
+&lt;/ul>
+&lt;ol start="3">
+&lt;li>Make sure that pixels removed are &lt;em>adjacent&lt;/em> to each other&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>[CORRECT]&lt;/li>
+&lt;li>After selecting one pixel, select one of the 3 pixels below it.&lt;/li>
+&lt;li>Pick first pixel:
+&lt;ul>
+&lt;li>dynamic programming&lt;/li>
+&lt;li>minimize cost from first row to each pixel of the next row&lt;/li>
+&lt;li>for each pixel, we have a &lt;code>prev&lt;/code>, and a minimized accumulative cost&lt;/li>
+&lt;li>at the last row, find the smallest accumulative cost, and follow the &lt;code>prev&lt;/code>s back up to generate the path to be cut.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Enlarging the image with the same algorithm&lt;/strong>&lt;/p>
+&lt;p>Duplicate paths, from the lowest cost path to higher ones in the &lt;strong>original image&lt;/strong>.&lt;/p>
+&lt;p>But this is less well-defined. Because we need to add details, there are many complications. The one rule is not to duplicate the same path over and over again.&lt;/p>
+&lt;h2 id="patch-march">Patch March&lt;/h2>
+&lt;ul>
+&lt;li>look at the hole&amp;rsquo;s boundary&lt;/li>
+&lt;li>find patches in the image that matches the best with the boundary&amp;rsquo;s patches&lt;/li>
+&lt;li>fill the area with the patches inwards&lt;/li>
+&lt;/ul>
+&lt;h3 id="find-one-patch">find one patch&lt;/h3>
+&lt;ul>
+&lt;li>||patch - image||&lt;/li>
+&lt;li>||patch.gradient - image.gradient||&lt;/li>
+&lt;/ul>
+&lt;h3 id="the-whole-hole">the whole hole&lt;/h3>
+&lt;p>It is only after the hole is filled, do we know whether this is done well.&lt;/p>
+&lt;p>It works well when there are plenty of similar patterns, it will work well.&lt;/p>
+&lt;p>Removing a part of a critical component, nose from the face for example, cannot work.&lt;/p>
+&lt;h3 id="random-selection-of-patches">random selection of patches&lt;/h3>
+&lt;p>Randomly replacing patches with better patches, until the whole patched area is smoothly integrated.&lt;/p>
+&lt;p>Because there are too many choices, we use randomized search to iteratively improve the patch quality.&lt;/p>
+&lt;p>Heuristics, for example interpolated color gradient, can be used as an initial guess.&lt;/p>
+&lt;p>Another improvement could be giving the algorithm more images to draw patches from.&lt;/p>
+&lt;h3 id="applications">applications&lt;/h3>
+&lt;ul>
+&lt;li>remove whole persons from the scene&lt;/li>
+&lt;li>replace a person from the scene&lt;/li>
+&lt;/ul>
+&lt;h3 id="computer-detection-of-tempering">computer detection of tempering&lt;/h3>
+&lt;ul>
+&lt;li>Although human cannot see some anomalies, computers can detect them&lt;/li>
+&lt;li>3D Geometric features:
+&lt;ul>
+&lt;li>shadow length / light source angle&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>
