@@ -54,6 +54,8 @@ main {
     row-gap: 1rem;
     padding: 2rem 0 2rem 0;
     box-shadow: 0px 3px 3px 0px var(--shadow);
+    min-height: 100%;
+    align-content: start;
 
     &>* {
       grid-column: 2;
