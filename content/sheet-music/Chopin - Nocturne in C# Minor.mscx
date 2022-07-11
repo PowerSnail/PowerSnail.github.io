@@ -180,19 +180,15 @@
       </Part>
     <Staff id="1">
       <VBox>
-        <height>9.3</height>
+        <height>6.32214</height>
         <boxAutoSize>0</boxAutoSize>
         <Text>
           <style>Title</style>
           <text>Nocturne C# Minor</text>
           </Text>
         <Text>
-          <style>Subtitle</style>
-          <text>Arrangement by Nathan Milstein</text>
-          </Text>
-        <Text>
           <style>Composer</style>
-          <text>Chopin</text>
+          <text>Chopin (arr. Nathan Milstein)</text>
           </Text>
         </VBox>
       <Measure>

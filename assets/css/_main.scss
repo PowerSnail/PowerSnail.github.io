@@ -51,10 +51,23 @@ main {
     display: grid;
     grid-template-columns: 2ch auto 2ch;
     row-gap: 1rem;
-    padding: 2rem 0 1rem 0;
+    padding: 2rem 0 2rem 0;
 
     &>* {
       grid-column: 2;
+    }
+
+    dl {
+      display: grid;
+
+      dt:not(:first-child) {
+        margin-top: 1rem;
+      }
+      
+      dd {
+        color: var(--text-alt);
+        margin-left: 0;
+      }
     }
 
     header {
