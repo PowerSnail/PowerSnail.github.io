@@ -3,7 +3,7 @@
     {{ if eq .Kind "term" }}
     <a href="/tags/">Tags /</a>
     {{ end }}
-    {{ .Title }}
+    {{ .Title | markdownify }}
     {{ if .Paginator }}
     {{ if ne .Paginator.PageNumber 1 }}
     <small>/ Page {{.Paginator.PageNumber}}</small>
