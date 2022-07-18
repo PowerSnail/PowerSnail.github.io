@@ -1,10 +1,10 @@
 +++
 title = "Reading _Steal Like an Artist_"
-description = ""
+description = "A short, inspirational book about how to be a productive artist."
 date = "2022-07-17"
 slug = "steal-like-an-artist"
 tags = ["reading"]
-draft = true
+draft = false
 +++
 
 ## Summary
@@ -26,7 +26,9 @@ Create what you like. Write the book that you would want to read. Make the softw
 
 Creating what you like is in itself a form of imitation, since your taste is formed by appreciating existing arts. This warm and inviting advice deviates from the traditional and stern directive that writers sometimes throw about: "Write what you know", and I think the deviation is a valuable one.
 
-Indeed, writing what you know is not the best writing advice out there. Imagination and words doesn't come from nowhere; they grow from what's in your brain, so in a way, regardless of what you write, you are writing what you know. It's not really a meaningful guideline. It's an inevitability. On the other hand, it can also be perceived to mean something else: you shouldn't write about something that you're not familiar with, which is just unnecessarily limiting, and obviously not true considering how many great fictions contain utterly fictional world and creatures.
+There are different interpretations of "writing what you know", (some would insist that you should never make things up when you include something from the real world in your fiction), but if you think about it, all we *can* write, is what we know. Like J.R.R. Tolkein said, "there is no 'invention' in the void". It's not much of a guideline for writers. It's just the nature of our thought process. 
+
+That's why to "create what you like" is a better advice. It actually tells you how to narrow down your choice. From the vast gallery of life experiences, pick the ones that you enjoy the most, immerse yourself in it, and make something out of it.
 
 ## Reference
 
