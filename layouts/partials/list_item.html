@@ -2,6 +2,6 @@
 <span class="post-time">{{ .Format "2006-01-02" }}</span>
 {{ end }}
 <div class="post-list-item">
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
     <p>{{ .Summary }}</p>
 </div>
