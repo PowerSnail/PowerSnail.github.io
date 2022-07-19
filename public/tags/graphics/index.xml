@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>graphics on SnailShell</title><link>https://powersnail.com/tags/graphics/</link><description>Recent content in graphics on SnailShell</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright @ PowerSnail 2016-2022</copyright><lastBuildDate>Tue, 08 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://powersnail.com/tags/graphics/index.xml" rel="self" type="application/rss+xml"/><item><title>Fractals</title><link>https://powersnail.com/2016/fractals/</link><pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/fractals/</guid><description>&lt;h1 id="fractal">Fractal&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns="http://www.w3.org/2005/Atom"><title>graphics on SnailShell</title><link>https://powersnail.com/tags/graphics/</link><link rel="self" href="https://powersnail.com/tags/graphics/index.xml"/><updated>Tue, 08 Nov 2016 00:00:00 +0000</updated><id>https://powersnail.com/tags/graphics/</id><author><name>PowerSnail</name></author><icon>https://powersnail.com/favicon.ico</icon><description>Recent content in graphics on SnailShell</description><generator>Hugo -- gohugo.io</generator><copyright>en-us</copyright><entry><author><name>PowerSnail</name></author><title type="html">Fractals</title><link rel="alternate">https://powersnail.com/2016/fractals/</link><published>Tue, 08 Nov 2016 00:00:00 +0000</published><updated>Tue, 08 Nov 2016 00:00:00 +0000</updated><id>https://powersnail.com/2016/fractals/</id><summary type="html">Fractal naming: fractional dimension
+Definition: self-similar $$\to$ when zoomed in, look the same
+Types: Exactly self-similar Statistically self-similar Exactly Self-similar If zoomed in, there is no way to tell that we have zoomed in.</summary><content type="html">&lt;h1 id="fractal">Fractal&lt;/h1>
 &lt;p>naming: fractional dimension&lt;/p>
 &lt;h2 id="definition">Definition:&lt;/h2>
 &lt;p>self-similar $$\to$ when zoomed in, look the same&lt;/p>
@@ -133,7 +135,8 @@ alt="Diamond Square"width="300"height="225">
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="perlin-fractal">Perlin Fractal&lt;/h3>
-&lt;p>A perlin fractal is created by taking in a height map, downsize it, and fill itself with the small height map.&lt;/p></description></item><item><title>Gradient Detection Convolutions, Seam Carving, and Patch March</title><link>https://powersnail.com/2016/image-manipulation/</link><pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate><guid>https://powersnail.com/2016/image-manipulation/</guid><description>&lt;h2 id="gradient-detection-convolutions">Gradient detection convolutions&lt;/h2>
+&lt;p>A perlin fractal is created by taking in a height map, downsize it, and fill itself with the small height map.&lt;/p></content><category>posts</category></entry><entry><author><name>PowerSnail</name></author><title type="html">Gradient Detection Convolutions, Seam Carving, and Patch March</title><link rel="alternate">https://powersnail.com/2016/image-manipulation/</link><published>Thu, 03 Nov 2016 00:00:00 +0000</published><updated>Thu, 03 Nov 2016 00:00:00 +0000</updated><id>https://powersnail.com/2016/image-manipulation/</id><summary type="html">Gradient detection convolutions Square instead of rectangle: to avoid problems concerning diagonal
+usually 3 x 3 edge detection apply gradient detection convolution find where gradient appears 1 2 3 4 5 6 7 / \ / \ / \ / \ | | | | _____________________________ &amp;lt;- at this line, the gradient is extreme ****************************** ****************************** ****************************** find maximum gradient points edge is perpendicular to gradients Segmentation: Intelligent Scissors INPUT: a set of points OUTPUT: find a path(curve) that is following edge as much as possible</summary><content type="html">&lt;h2 id="gradient-detection-convolutions">Gradient detection convolutions&lt;/h2>
 &lt;p>Square instead of rectangle: to avoid problems concerning diagonal&lt;/p>
 &lt;ul>
 &lt;li>usually 3 x 3&lt;/li>
@@ -291,4 +294,4 @@ OUTPUT: find a path(curve) that is following edge as much as possible&lt;/p>
 &lt;li>shadow length / light source angle&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></content><category>posts</category></entry></feed>
