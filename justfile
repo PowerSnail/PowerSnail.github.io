@@ -39,5 +39,5 @@ deploy:
     touch public/.nojekyll
 
 publish:
-    git add public/ && git commit -m "deployment" || true
+    git add public/ && git commit -m "deployment" && git push || true
     git subtree push --prefix public origin gh-pages
