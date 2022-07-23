@@ -18,8 +18,11 @@ build-ts file:
 generate-icon-css:
     python3 tool_scripts/social_icon.py > assets/css/_icons.scss
 
-new-post category slug type="single":
-    hugo new --kind "post" content/posts/{{ category }}/{{ `date +%Y-%m-%d` }}-{{slug}}{{ if type == "bundle" { "" } else { ".md" } }}
+new-post category slug:
+    hugo new --kind "post" content/posts/{{ category }}/{{ `date +%Y-%m-%d` }}-{{slug}}.md
+
+new-bundle category slug type="single":
+    hugo new --kind "post" content/posts/{{ category }}/{{ `date +%Y-%m-%d` }}-{{slug}}
 
 new-status:
     hugo new --kind "status" content/status/{{ `date +%Y-%m-%d-%H-%M` }}.md
