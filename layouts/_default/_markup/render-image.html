@@ -2,7 +2,8 @@
 {{- $height := 0 -}}
 {{- $isSvg := false -}}
 {{- $isLocal := true -}}
-{{- $path := (.Destination | safeURL) -}}
+{{- $url := .Destination -}}
+{{- $path := .Destination -}}
 
 {{- if strings.HasPrefix $path "/images" -}}
     {{- $path = add "/static" $path -}}
@@ -12,6 +13,7 @@
     {{- $isLocal = true -}}
 {{- else if strings.HasPrefix $path "./" -}}
     {{- $path = add "/content/" (add .Page.File.Dir $path) -}}
+    {{- $url = add .Page.RelPermalink (substr $url 2) -}}
     {{- $isLocal = true -}}
 {{- else -}}
     {{- $isLocal = false -}}
@@ -42,7 +44,7 @@
     {{- end -}}
 {{- end -}}
 
-<img src="{{- .Destination | safeURL -}}" 
+<img src="{{- $url -}}" 
     alt="{{- .Text -}}"
     {{- if $isSvg -}}
     style="width:100%; height: auto;"
