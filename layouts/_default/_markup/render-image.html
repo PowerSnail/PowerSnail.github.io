@@ -1,54 +1,22 @@
-{{- $width := 0 -}}
-{{- $height := 0 -}}
-{{- $isSvg := false -}}
-{{- $isLocal := true -}}
-{{- $url := .Destination -}}
-{{- $path := .Destination -}}
+{{- $image_source := partial "image_source.html" . }}
+{{- $image_size := partial "image_size.html" $image_source }}
 
-{{- if strings.HasPrefix $path "/images" -}}
-    {{- $path = add "/static" $path -}}
-    {{- $isLocal = true -}}
-{{- else if strings.HasPrefix $path "/" -}}
-    {{- $path = add "/content" $path -}}
-    {{- $isLocal = true -}}
-{{- else if strings.HasPrefix $path "./" -}}
-    {{- $path = add "/content/" (add .Page.File.Dir $path) -}}
-    {{- $url = add .Page.RelPermalink (substr $url 2) -}}
-    {{- $isLocal = true -}}
-{{- else -}}
-    {{- $isLocal = false -}}
+{{- with .Title -}}
+<figure>
+{{- end -}}
+
+<img src="{{- $image_source.url | safeURL -}}" alt="{{- .Text -}}"
+    {{- with $image_size.isSvg }} style="width:100%; height: auto;" {{ end -}}
+    {{- with $image_size.width }} width="{{- . -}}" {{ end -}}
+    {{- with $image_size.height }} height="{{- . -}}" {{ end -}}
+>
+
+{{- if .Title -}}
+    <figcaption>
+        {{ .Title | .Page.RenderString (dict "display" "block" "markup" "markdown") }}
+    </figcaption>
+</figure>
 {{- end -}}
 
 
-{{- if (strings.HasSuffix $path ".svg") -}}
-    {{- $isSvg = true -}}
-    {{- $svgContent := "" -}}
-    {{- if $isLocal -}}
-        {{- $svgContent = os.ReadFile $path -}}
-    {{- else -}}
-        {{- $svgContent:= (resources.GetRemote $path).Content -}}
-    {{- end -}}
-    {{- $viewBoxSizes := split (index (split (index (split $svgContent `viewBox=`) 1) `'`) 1) ` ` -}}
-    {{- $width = float (index $viewBoxSizes 2) -}}
-    {{- $height = float (index $viewBoxSizes 3) -}}
-{{- else -}}
-    {{- if $isLocal -}}
-        {{- with (imageConfig $path) -}}
-            {{- $width = .Width -}}
-            {{- $height = .Height -}}
-        {{- end -}}
-    {{- else -}}
-        {{- $image := (resources.GetRemote $path) -}}
-        {{- $width = $image.Width -}}
-        {{- $height = $image.Height -}}
-    {{- end -}}
-{{- end -}}
 
-<img src="{{- $url -}}" 
-    alt="{{- .Text -}}"
-    {{- if $isSvg -}}
-    style="width:100%; height: auto;"
-    {{- end -}}
-    {{- if not (eq $width 0) -}} width="{{- $width -}}" {{- end -}}
-    {{- if not (eq $height 0) -}} height="{{- $height -}}" {{- end -}}
->   
