@@ -4,12 +4,11 @@ description = "How to shift cleanly in the bariolage section."
 date = "2022-07-22"
 slug = "bach-preludio-sneaky-shift"
 tags = ["violin", "music", "fingering"]
-draft = true
 +++
 
 *Preludio* (*Prelude* in some version) is one of Bach's best violin pieces. From measure 17 to 28, a bariolage among three strings brings us a sublime polyphonic experience, with only single notes played detaché. The focus is usually on the bowing, but the left hand is not without challenge either, especially at speed.
 
-![Sheet music of the bariolage section](./bariolage-full.webp "Snippet from Preludio[^1]")
+![Sheet music of the bariolage section](./bariolage-full.webp "Snippet from Preludio")
 
 From measure 20 to 28, the left hand descends one position every two measures. The most straightforward way is to shift at the beginning of measure 21, 23, 25, 27, and 28, using the third finger on A string, the first finger always pressing the lower note on D string, as shown below:
 
@@ -34,4 +33,4 @@ At the end of the day, it all depends on what kind of phrasing and tone you have
 
 ## Reference
 
-[^1]: Bach, Johann Sebastian. *Drei Sonaten Und Drei Partiten Fur Violino Solo*. Bärenreiter Verlag, 1720, [6 Violin Sonatas and Partitas, BWV 1001-1006 (Bach, Johann Sebastian) - IMSLP: Free Sheet Music PDF Download](https://imslp.org/wiki/6_Violin_Sonatas_and_Partitas,_BWV_1001-1006_(Bach,_Johann_Sebastian)).
+Bach, Johann Sebastian. *Drei Sonaten Und Drei Partiten Fur Violino Solo*. Bärenreiter Verlag, 1720, [6 Violin Sonatas and Partitas, BWV 1001-1006 (Bach, Johann Sebastian) - IMSLP: Free Sheet Music PDF Download](https://imslp.org/wiki/6_Violin_Sonatas_and_Partitas,_BWV_1001-1006_(Bach,_Johann_Sebastian)).
