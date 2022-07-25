@@ -75,7 +75,6 @@ main {
     header {
       display: grid;
       row-gap: 1rem;
-      padding-top: 1rem;
 
       h1 {
         text-align: center;
@@ -268,7 +267,7 @@ main {
     footer {
       grid-column: 1 / -1;
       margin-top: 2rem;
-      padding: 1rem 2ch 1rem 2ch;
+      padding: 1rem 2ch 0 2ch;
       border-top: solid 1px var(--text-alt);
       display: grid;
       row-gap: 2rem;
