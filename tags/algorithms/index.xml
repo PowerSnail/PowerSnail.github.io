@@ -89,9 +89,7 @@
 &lt;h2 id="basic-idea">Basic Idea&lt;/h2>
 &lt;p>Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p>
 &lt;p>In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/binarysearchtree.jpg"
-alt="Binary Search Tree"width="2445"height="2308">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/binarysearchtree.jpg" alt="Binary Search Tree" width="2445" height="2308" >&lt;/p>
 &lt;p>The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code>nil&lt;/code> sentinel node, which is not in the data structure but a &lt;a href="#sentinelNode">useful element&lt;/a> in our program.&lt;/p>
 &lt;h2 id="traversals">Traversals&lt;/h2>
 &lt;p>The recursive in-order traversal is easy to implement:&lt;/p>
@@ -172,9 +170,7 @@ alt="Binary Search Tree"width="2445"height="2308">
 &lt;h4 id="prev-pointing-at-left">&lt;code>prev&lt;/code> Pointing at left&lt;/h4>
 &lt;p>Left tree is already printed (we consider &lt;code>nil&lt;/code> as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code>x&lt;/code> before entering right.&lt;/p>
 &lt;p>There is a slight complication if &lt;code>x&lt;/code> is a leaf, as both children are &lt;code>nil&lt;/code>. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code>x&lt;/code> forever.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/fromlefttoright.jpg"
-alt="From Left to Right"width="2441"height="2067">
-{:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/fromlefttoright.jpg" alt="From Left to Right" width="2441" height="2067" >{:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p>
 &lt;p>The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

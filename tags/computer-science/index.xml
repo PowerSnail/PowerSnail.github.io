@@ -70,25 +70,15 @@ Without extra line in between&lt;/p>
 &lt;p>Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="images">Images&lt;/h2>
-&lt;p>Here is an inline image &lt;img src="./snail-small.webp"
-alt="test image"width="128"height="128">
-. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p>
+&lt;p>Here is an inline image &lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" width="128" height="128" >. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p>
 &lt;p>Images put on their own line is better:&lt;/p>
-&lt;p>&lt;img src="./snail-small.webp"
-alt="test image"width="128"height="128">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" width="128" height="128" >&lt;/p>
 &lt;p>A bigger image:&lt;/p>
-&lt;p>&lt;img src="./snail-big.webp"
-alt="test image"width="400"height="400">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-big.webp" alt="test image" width="400" height="400" >&lt;/p>
 &lt;p>A gigantic image:&lt;/p>
-&lt;p>&lt;img src="./snail-gigantic.webp"
-alt="test image"width="4000"height="4000">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-gigantic.webp" alt="test image" width="4000" height="4000" >&lt;/p>
 &lt;p>A svg image:&lt;/p>
-&lt;p>&lt;img src="./snail.svg"
-alt="svg image"style="width:100%; height: auto;"width="0"height="0">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail.svg" alt="svg image" style="width:100%; height: auto;" >&lt;/p>
 &lt;p>A figure written in HTML:&lt;/p>
 &lt;figure>
 &lt;img alt="Image inside a figure"
@@ -659,9 +649,7 @@ $$&lt;/p>
 &lt;p>&lt;code>FAULT&lt;/code> is a special state, that the DFA will halt whenever it meets &lt;code>FAULT&lt;/code>, so that we do not have to process the rest of the string.&lt;/p>
 &lt;h3 id="dfa---transition">DFA - Transition&lt;/h3>
 &lt;p>The transition function is a matrix that maps (state, input char) to state.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/valid-number-DFA.svg"
-alt="DFA Transformation matrix"style="width:100%; height: auto;"width="106.062271"height="69.394768">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/valid-number-DFA.svg" alt="DFA Transformation matrix" style="width:100%; height: auto;" width="106.062271" height="69.394768" >&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -748,9 +736,7 @@ alt="DFA Transformation matrix"style="width:100%; height: auto;"width="106.06227
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="https://powersnail.com/images/valid_number_dfa.svg"
-alt="grammar"style="width:100%; height: auto;"width="0"height="0">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/valid_number_dfa.svg" alt="grammar" style="width:100%; height: auto;" >&lt;/p>
 &lt;h3 id="dfa---termination">DFA - Termination&lt;/h3>
 &lt;p>The DFA will terminate when&lt;/p>
 &lt;ul>
@@ -1462,9 +1448,7 @@ alt="grammar"style="width:100%; height: auto;"width="0"height="0">
 &lt;h2 id="basic-idea">Basic Idea&lt;/h2>
 &lt;p>Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p>
 &lt;p>In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/binarysearchtree.jpg"
-alt="Binary Search Tree"width="2445"height="2308">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/binarysearchtree.jpg" alt="Binary Search Tree" width="2445" height="2308" >&lt;/p>
 &lt;p>The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code>nil&lt;/code> sentinel node, which is not in the data structure but a &lt;a href="#sentinelNode">useful element&lt;/a> in our program.&lt;/p>
 &lt;h2 id="traversals">Traversals&lt;/h2>
 &lt;p>The recursive in-order traversal is easy to implement:&lt;/p>
@@ -1545,9 +1529,7 @@ alt="Binary Search Tree"width="2445"height="2308">
 &lt;h4 id="prev-pointing-at-left">&lt;code>prev&lt;/code> Pointing at left&lt;/h4>
 &lt;p>Left tree is already printed (we consider &lt;code>nil&lt;/code> as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code>x&lt;/code> before entering right.&lt;/p>
 &lt;p>There is a slight complication if &lt;code>x&lt;/code> is a leaf, as both children are &lt;code>nil&lt;/code>. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code>x&lt;/code> forever.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/fromlefttoright.jpg"
-alt="From Left to Right"width="2441"height="2067">
-{:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/fromlefttoright.jpg" alt="From Left to Right" width="2441" height="2067" >{:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p>
 &lt;p>The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
