@@ -70,25 +70,15 @@ Without extra line in between&lt;/p>
 &lt;p>Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="images">Images&lt;/h2>
-&lt;p>Here is an inline image &lt;img src="./snail-small.webp"
-alt="test image"width="128"height="128">
-. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p>
+&lt;p>Here is an inline image &lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" width="128" height="128" >. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p>
 &lt;p>Images put on their own line is better:&lt;/p>
-&lt;p>&lt;img src="./snail-small.webp"
-alt="test image"width="128"height="128">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" width="128" height="128" >&lt;/p>
 &lt;p>A bigger image:&lt;/p>
-&lt;p>&lt;img src="./snail-big.webp"
-alt="test image"width="400"height="400">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-big.webp" alt="test image" width="400" height="400" >&lt;/p>
 &lt;p>A gigantic image:&lt;/p>
-&lt;p>&lt;img src="./snail-gigantic.webp"
-alt="test image"width="4000"height="4000">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-gigantic.webp" alt="test image" width="4000" height="4000" >&lt;/p>
 &lt;p>A svg image:&lt;/p>
-&lt;p>&lt;img src="./snail.svg"
-alt="svg image"style="width:100%; height: auto;"width="0"height="0">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail.svg" alt="svg image" style="width:100%; height: auto;" >&lt;/p>
 &lt;p>A figure written in HTML:&lt;/p>
 &lt;figure>
 &lt;img alt="Image inside a figure"

@@ -921,18 +921,14 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;h2 id="exactly-self-similar">Exactly Self-similar&lt;/h2>
 &lt;p>If zoomed in, there is no way to tell that we have zoomed in.&lt;/p>
 &lt;h3 id="sierpinski-carpet">Sierpinski Carpet&lt;/h3>
-&lt;p>&lt;img src="https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg"
-alt="Sierpinski Carpet"width="600"height="600">
-&lt;/p>
+&lt;p>&lt;img src="https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg" alt="Sierpinski Carpet" width="600" height="600" >&lt;/p>
 &lt;ul>
 &lt;li>A square divided into 9 squares&lt;/li>
 &lt;li>The center square is empty&lt;/li>
 &lt;li>Each other square is divided again&lt;/li>
 &lt;/ul>
 &lt;h3 id="koch-snowflake">Koch Snowflake&lt;/h3>
-&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png"
-alt="Koch Snowflake"width="2000"height="2000">
-&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png" alt="Koch Snowflake" width="2000" height="2000" >&lt;/p>
 &lt;ul>
 &lt;li>Chop the lines into 3 Segments&lt;/li>
 &lt;li>replace the middle one with equal lateral triangle&lt;/li>
@@ -1015,9 +1011,7 @@ alt="Koch Snowflake"width="2000"height="2000">
 &lt;li>Cannot represent extremely rocky terrain&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Diamond Square&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png"
-alt="Level 0"width="2998"height="640">
-&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png" alt="Level 0" width="2998" height="640" >&lt;/p>
 &lt;ul>
 &lt;li>Level 0: Four corners set to $$h = 0$&lt;/li>
 &lt;li>Level 1: Mid-point $$m_1$ set to $h_1 += random$&lt;/li>
@@ -1026,9 +1020,7 @@ alt="Level 0"width="2998"height="640">
 &lt;li>&amp;hellip;&lt;/li>
 &lt;/ul>
 &lt;p>The result could look something like:&lt;/p>
-&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif"
-alt="Diamond Square"width="300"height="225">
-&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif" alt="Diamond Square" width="300" height="225" >&lt;/p>
 &lt;p>The problem is the grid pattern is visible. There are &amp;lsquo;+&amp;rsquo; in the graph, so rotating the graph will be noticed (not entirely natural)&lt;/p>
 &lt;p>&lt;strong>Solution&lt;/strong>: Use&lt;/p>
 &lt;p>&lt;strong>Applications&lt;/strong>:&lt;/p>

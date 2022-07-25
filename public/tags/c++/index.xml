@@ -261,9 +261,7 @@ $$&lt;/p>
 &lt;p>&lt;code>FAULT&lt;/code> is a special state, that the DFA will halt whenever it meets &lt;code>FAULT&lt;/code>, so that we do not have to process the rest of the string.&lt;/p>
 &lt;h3 id="dfa---transition">DFA - Transition&lt;/h3>
 &lt;p>The transition function is a matrix that maps (state, input char) to state.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/valid-number-DFA.svg"
-alt="DFA Transformation matrix"style="width:100%; height: auto;"width="106.062271"height="69.394768">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/valid-number-DFA.svg" alt="DFA Transformation matrix" style="width:100%; height: auto;" width="106.062271" height="69.394768" >&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -350,9 +348,7 @@ alt="DFA Transformation matrix"style="width:100%; height: auto;"width="106.06227
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="https://powersnail.com/images/valid_number_dfa.svg"
-alt="grammar"style="width:100%; height: auto;"width="0"height="0">
-&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/valid_number_dfa.svg" alt="grammar" style="width:100%; height: auto;" >&lt;/p>
 &lt;h3 id="dfa---termination">DFA - Termination&lt;/h3>
 &lt;p>The DFA will terminate when&lt;/p>
 &lt;ul>
