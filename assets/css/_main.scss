@@ -52,9 +52,8 @@ main {
     display: grid;
     grid-template-columns: 2ch auto 2ch;
     row-gap: 1rem;
-    padding: 1rem 0 1rem 0;
+    padding: 0;
     align-content: start;
-    height: 100%;
 
     &>* {
       grid-column: 2;
@@ -76,6 +75,7 @@ main {
     header {
       display: grid;
       row-gap: 1rem;
+      padding-top: 1rem;
 
       h1 {
         text-align: center;
@@ -90,16 +90,23 @@ main {
       #metadata {
         color: var(--text-alt);
         font-size: 0.85rem;
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        justify-content: flex-start;
-        justify-items: flex-start;
-        column-gap: 2rem;
-        align-self: stretch;
-        align-items: flex-start;
+        display: flex;
+        gap: 2ch;
+        flex-flow: row wrap;
+        align-items: center;
 
-        .icon-prefix::before {
-          background-color: var(--accent);
+        span, summary {
+          display: grid;
+          grid-auto-flow: column;
+          align-items: center;
+        }
+
+        label {
+          display:contents;
+        }
+        
+        svg {
+          height: 1em;
         }
 
         .tag-list {
@@ -108,7 +115,6 @@ main {
           display: grid;
           position: absolute;
           box-shadow: 0px 1px 6px var(--shadow);
-          border-radius: 1rem;
           row-gap: 1px;
           overflow: hidden;
           margin-top: 1ch;
@@ -116,9 +122,9 @@ main {
           a {
             background-color: var(--bg);
             padding: 0.5rem 1rem;
-            color: var(--text);
+            color: var(--text-alt);
             text-decoration: none;
-            min-width: 36ch;
+            min-width: 18ch;
             border: none;
           }
 
@@ -136,18 +142,18 @@ main {
 
         details>summary::after {
           font-family: monospace;
-          content: "»";
-          transform: rotate(90deg);
+          content: "🞃";
         }
 
         details[open]>summary::after {
-          transform: rotate(90deg) rotateY(180deg);
+          content: "🞁";
         }
       }
 
       #metadata-summary {
-        color: var(--text-alt);
-        font-size: 0.5em;
+        font-size: large;
+        text-align: center;
+        font-weight: bold;
       }
     }
 
@@ -159,8 +165,9 @@ main {
     }
 
     hr {
-      width: 100%;
-      background-color: var(--bg-alt);
+      background-color: var(--text);
+      width: 33%;
+      margin: 1rem auto;
     }
 
 
@@ -261,7 +268,7 @@ main {
     footer {
       grid-column: 1 / -1;
       margin-top: 2rem;
-      padding: 1rem 2ch 0 2ch;
+      padding: 1rem 2ch 1rem 2ch;
       border-top: solid 1px var(--text-alt);
       display: grid;
       row-gap: 2rem;
@@ -274,7 +281,6 @@ main {
           vertical-align: text-bottom;
         }
       }
-
     }
   }
 }
