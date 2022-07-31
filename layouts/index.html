@@ -1,5 +1,6 @@
 {{ define "main" }}
 <article>
+    {{ .Content }}
     <h2>Recent status</h2>
     <div class="status-container">
         {{ range first 2 (where .Site.RegularPages "Section" "status") }}

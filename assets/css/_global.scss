@@ -8,7 +8,7 @@ body {
   grid-template-rows: min-content 1fr min-content;
   grid-template-columns: 1fr calc(min(var(--width-content), 100%)) 1fr;
   justify-items: stretch;
-  row-gap: 1rem;
+  row-gap: 2rem;
   line-height: 1.6;
   font-family: 'Noto Serif', 'Noto Sans CJK SC', serif;
   background-color: var(--bg);
