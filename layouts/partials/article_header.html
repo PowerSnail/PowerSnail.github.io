@@ -94,5 +94,6 @@
 </header>
 
 {{ if and (isset .Params "images") (gt (len .Params.images) 0) }}
-<img id="cover" src="{{ index .Params.images 0 }}">
+{{ $image := printf "![Cover Image](%s)" (index .Params.images 0) }}
+{{ $image | .RenderString }}
 {{ end }}
