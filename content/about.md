@@ -11,7 +11,8 @@ I made this blog with [Hugo](https://gohugo.io/). The theme is derived from the 
 
 On the top of this page, is the manuscript of Bach's Sarabande in B Minor, from one of his famous [Six Sonatas and Partitas for Solo Violin](<https://imslp.org/wiki/6_Violin_Sonatas_and_Partitas%2C_BWV_1001-1006_(Bach%2C_Johann_Sebastian)>). This is my favorite piece to play on the violin.
 
-## Mini-projects on this site
+## Also on this site
 
+[Some free, cleanly typeset violin sheet music](/sheet-music)  
 [Randomly Moving Red Dot for Cat](/cat_dot)  
 [Game of life](/game_of_life)
