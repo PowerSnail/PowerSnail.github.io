@@ -27,6 +27,14 @@ So, I decided to build something similar for ABC Notation. It allows you to ente
 
 Since there's no need to store any file, the project can be entirely server-less. All it takes is a base64 decoder and abcjs; it can all be done in the frontend. This is why I've decided to use the query parameter, so there's no need for routing. The page takes a single parameter `s`, which contains the encoded score. 
 
+```ts
+// Encoding
+window.atob(encoded);
+
+// Decoding
+window.btoa(content);
+```
+
 The code is [here](https://github.com/PowerSnail/ScoreInUrl). Bundled by [vite.js], everything compiles down to a pair of HTML and JS file. No backend, no cookies, no tracking, no storage. It lives entirely inside that one browser tab.
 
 This approach of course has its own caveat: there's a significant size limit. URLs are traditionally at most 2048 characters. How many pages of sheet music you get from those 2048 characters depend on your score, but the spirit of **Score In URL** is to share short snippets of sheet music, not to be a full-fledged music editor. There are much better tools out there for composing.
@@ -58,9 +66,7 @@ Thanks to [abcjs](https://www.abcjs.net/), it's super easy to embed such a syste
 
 ## Text Editing
 
-The original abcjs editor is written with a simple `textarea`, where errors are shown in a separate `div`.
-
-To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, the text area is replaced by [CodeMirror](https://codemirror.net/). 
+To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, [CodeMirror](https://codemirror.net/) is used. You can see the errors marked by red dots, like a real text editor used by programmers. 
 
 ![Screenshot showcasing error reporting](./Screenshot_error.webp)
 
