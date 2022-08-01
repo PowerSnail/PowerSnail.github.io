@@ -108,6 +108,10 @@ main {
           height: 1em;
         }
 
+        .icon-prefix::before {
+          background-color: var(--text-alt);
+        }
+
         .tag-list {
           grid-column: 1 / -1;
           background-color: var(--bg-alt);

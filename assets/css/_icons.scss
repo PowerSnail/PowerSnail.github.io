@@ -1,28 +1,32 @@
-.brand-github::before {
+.icon-prefix.brand-github::before {
   mask-image: url(/icons/brand-github.svg);
   -webkit-mask-image: url(/icons/brand-github.svg);
 }
-.calculator::before {
+.icon-prefix.calculator::before {
   mask-image: url(/icons/calculator.svg);
   -webkit-mask-image: url(/icons/calculator.svg);
 }
-.calendar-event::before {
+.icon-prefix.calendar-event::before {
   mask-image: url(/icons/calendar-event.svg);
   -webkit-mask-image: url(/icons/calendar-event.svg);
 }
-.clock::before {
+.icon-prefix.clock::before {
   mask-image: url(/icons/clock.svg);
   -webkit-mask-image: url(/icons/clock.svg);
 }
-.mail::before {
+.icon-prefix.mail::before {
   mask-image: url(/icons/mail.svg);
   -webkit-mask-image: url(/icons/mail.svg);
 }
-.rss::before {
+.icon-prefix.rss::before {
   mask-image: url(/icons/rss.svg);
   -webkit-mask-image: url(/icons/rss.svg);
 }
-.tags::before {
+.icon-prefix.tags::before {
   mask-image: url(/icons/tags.svg);
   -webkit-mask-image: url(/icons/tags.svg);
+}
+.icon-prefix.document::before {
+  mask-image: url(/icons/document.svg);
+  -webkit-mask-image: url(/icons/document.svg);
 }
