@@ -38,7 +38,7 @@ DEFAULT = {
     "bg-attention": "#C6FED2",
     "code": "#1A2D29",
     "link": "#AF3000",
-    "shadow": "#1E212B",
+    "shadow": "#AAAAAA",
 }
 
 
