@@ -13,17 +13,19 @@
     <meta name="description" content="{{ . }}">
     {{ end }}
     {{ hugo.Generator }}
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#af3000">
+    <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#af3000">
 
     <title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
     
     {{ partial "default_css.html" }}
     <link rel="canonical" href="{{ .Permalink }}"/>
-
-    <link rel="shortcut icon" sizes="any" href="/images/snail.svg" type="image/svg+xml">
-    <link rel="icon" sizes="any" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/snail-180x180.png">
-    <link rel="mask-icon" href="/images/snail.svg" color="#af3000">
 
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
