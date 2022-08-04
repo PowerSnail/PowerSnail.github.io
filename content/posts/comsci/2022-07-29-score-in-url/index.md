@@ -27,20 +27,20 @@ So, I decided to build something similar for ABC Notation. It allows you to ente
 Since there's no need to store any file, the project can be entirely server-less. All it takes is a base64 decoder and abcjs, which can all be done in the frontend. This is why I've decided to use the query parameter, eliminating the need for server-side routing. The page takes a single parameter `s`, which contains the encoded score. 
 
 ```ts
-export function decodeScore() {
-  const params = new URL(document.location.href).searchParams;
+function decodeScore(): string {
+  const params = new URLSearchParams(window.location.search)
   const encoded = params.get("s");
-  if (encoded == null) {
-    return null;
+  if (encoded != null) {
+    try {
+      return window.atob(encoded);
+    } catch (e) {
+      alert("URL not valid. Showing default score...");
+    }
   }
-  try {
-    return window.atob(encoded);
-  } catch (e) {
-    return null;
-  }
+  return DEFAULT_SCORE
 }
 
-export function encodeScore(content: string) {
+function encodeScore(content: string) {
   const encoded = window.btoa(content);
   const url = new URL(document.location.href);
   url.searchParams.set("s", encoded);
@@ -48,7 +48,7 @@ export function encodeScore(content: string) {
 }
 ```
 
-The code is [here](https://github.com/PowerSnail/ScoreInUrl). Bundled by [vite.js], everything compiles down to a pair of HTML and JS file. No backend, no cookies, no tracking, no storage. It lives entirely inside that one browser tab.
+The code for _Score In URL_ is [here](https://github.com/PowerSnail/ScoreInUrl). Bundled by [vite.js], everything compiles down to a pair of HTML and JS file. No backend, no cookies, no tracking, no storage. It lives entirely inside that one browser tab.
 
 This approach has its own caveat: size limit. URLs are traditionally at most 2048 characters. How many pages of sheet music you get from those 2048 characters depend on your score, but the spirit of **Score In URL** is to share short snippets of sheet music, not to be a full-fledged music editor. There are much better tools out there for composing.
 
