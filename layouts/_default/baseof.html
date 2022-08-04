@@ -10,7 +10,7 @@
     
     <meta name="author" content="PowerSnail">
     {{ with .Description }}
-    <meta name="description" content="{{ . }}">
+    <meta name="description" content="{{ . | markdownify | plainify }}">
     {{ end }}
     {{ hugo.Generator }}
 
@@ -22,7 +22,7 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#af3000">
 
-    <title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
+    <title>{{ if ne .Title .Site.Title }}{{ .Title | markdownify | plainify }} · {{ end }}{{ .Site.Title }}</title>
     
     {{ partial "default_css.html" }}
     <link rel="canonical" href="{{ .Permalink }}"/>
