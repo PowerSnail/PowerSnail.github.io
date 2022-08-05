@@ -1,5 +1,5 @@
 +++
-title = "Sheet Music"
+title = "Free Sheet Music"
 description = "A collection of sheet music I made"
 +++
 

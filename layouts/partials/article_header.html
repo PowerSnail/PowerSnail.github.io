@@ -10,8 +10,8 @@
     {{ partial "draft.html" .}}
   </h1>
 
-  {{ if isset .Params "description" }}
-    <div id="metadata-summary">{{ .Params.description | .RenderString }}</div>
+  {{ if isset .Params "subtitle" }}
+    <div id="title-subtitle">{{ .Params.subtitle | .RenderString }}</div>
   {{ end }}
 
   <hr />
