@@ -31,7 +31,7 @@
     <author>
       <name>{{ .Site.Author.name }}</name>
     </author>
-    <title type="html">{{ .Title | html }}</title>
+    <title type="html">{{ .Title | markdownify | html }}</title>
     <link rel="alternate">{{ .Permalink }}</link>
     <published>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</published>
     <updated>{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</updated>
