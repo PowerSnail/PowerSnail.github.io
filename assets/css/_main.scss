@@ -225,16 +225,13 @@ main {
 
     div.highlight {
       max-width: 100%;
-      grid-column: 1 / -1;
       overflow-x: scroll;
-
-      td.lntd {
-        padding-right: 1ch;
-      }
     }
 
     pre {
       font-size: 0.9rem;
+      padding: 1rem;
+
     }
 
     pre code {

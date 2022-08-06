@@ -1,4 +1,4 @@
-{{- $option := "lineNos=true,noClasses=false,tabWidth=2" -}}
+{{- $option := "noClasses=false,tabWidth=2" -}}
 {{- if eq .Type "" -}}
   {{ transform.Highlight .Inner "plaintext" $option }}
 {{- else -}}
