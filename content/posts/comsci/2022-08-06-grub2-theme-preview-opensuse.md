@@ -5,14 +5,13 @@ date: 2022-08-06
 slug: grub2-theme-preview-opensuse
 tags:
     - computer science
-draft: true
 ---
 
 **TLDR**: To use [grub2-theme-preview](https://github.com/hartwork/grub2-theme-preview) on openSUSE, you need to override the paths of firmware and ovmf:
 
 ```sh
-G2TP_GRUB_LIB=/usr/share/grub2
-G2TP_OVMF_IMAGE=/usr/share/qemu/ovmf-x86_64-code.bin
+export G2TP_GRUB_LIB=/usr/share/grub2
+export G2TP_OVMF_IMAGE=/usr/share/qemu/ovmf-x86_64-code.bin
 ```
 
 ---
