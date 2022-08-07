@@ -98,16 +98,8 @@ Language $L = 010010110&amp;hellip;$&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="formal-grammar">Formal Grammar&lt;/h3>
 &lt;p>Recipe of replacing symbols:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">Name -&amp;gt; tom | dick | harry // Name may be replaced by tom, dick or harry
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">...&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>A grammar is a &lt;em>4-tuple&lt;/em> $(V_N, V_T, R, S)$:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">Name -&amp;gt; tom | dick | harry // Name may be replaced by tom, dick or harry
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">...&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A grammar is a &lt;em>4-tuple&lt;/em> $(V_N, V_T, R, S)$:&lt;/p>
 &lt;ul>
 &lt;li>$V_N$ non-terminals, $V_T$ terminals are finite sets of symbols&lt;/li>
 &lt;li>$V_N \cap V_T = \varnothing$ terminals and non-terminals cannot have common symbols&lt;/li>

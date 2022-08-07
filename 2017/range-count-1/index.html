@@ -1,19 +1,8 @@
 <!doctype html><html lang=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-security-policy content="default-src 'self'; img-src 'self' https://snailshell.goatcounter.com/count https://mirrors.creativecommons.org/; style-src 'self' 'unsafe-inline'"><meta http-equiv=content-type content="text/html;charset=utf-8;x-content-type-options=nosniff"><meta name=author content="PowerSnail"><meta name=generator content="Hugo 0.101.0"><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#af3000><meta name=msapplication-TileColor content="#000000"><meta name=theme-color content="#af3000"><title>Count 1s in Range · SnailShell</title><link rel=stylesheet href=https://powersnail.com/style.css><link rel=canonical href=https://powersnail.com/2017/range-count-1/><script type=text/javascript id=MathJax-script src=/js/bundle.cc6d92b034817d3a3e6e3835b40e09bd99b88fcbe2b160a0dd4220b82b21c3cc.js defer></script></head><body><header><div class=site-title><a href=https://powersnail.com/>SnailShell</a></div><nav><a type=button href=/posts/>Posts</a>
 <a type=button href=/status/>Status</a>
 <a type=button href=/about/>About</a></nav></header><img class=goatcounter alt width=1 height=1 src="https://snailshell.goatcounter.com/count?p=%2f2017%2frange-count-1%2f&t=Count%201s%20in%20Range"><main><article><header><h1>Count 1s in Range</h1><hr><div id=metadata><details><summary class="icon-prefix tags">Tags</summary><div class=tag-list><a class=tag href=/tags/computer-science>computer science</a> <a class=tag href=/tags/algorithm>algorithm</a> <a class=tag href=/tags/codefights>codefights</a> <a class=tag href=/tags/c++>C++</a></div></details><span class="icon-prefix calendar-event">2017-01-06</span>
-<span class="icon-prefix calculator">676 words</span>
-<span class="icon-prefix clock">2 minutes read</span></div></header><p>在 codefights 上做到了一个很有意思的题。给你 a, b 两个数，假设你构建了一个从 a 到 b 的 array，所有这些数的 binary representation 里面有多少个 1？</p><h1 id=naive-solution>Naive Solution</h1><p>最简单的办法 (随手翻了两个别人的答案都是这个), 就是一个数一个数查有多少 1. 笨一点的手工查, 聪明一点的用 built-in function 查. 但是无论如何, 复杂度都是 O(b - a).</p><h1 id=logn-solution>Log(n) Solution</h1><p>我们先思考一个简化版本的问题: 所有 <code>unsigned int (c++)</code> 里面有多少 1? 答案是所有的 bit / 2, 因为当我们把所有数都写成 2 进制, 一半是 1, 一半是0.</p><p>我们 generalize 一下: 对于任意的 $m$, 所有 $m$ 位的正整数里有 $(2^m * m) / 2$.</p><p>当我们的上限不是<em>位数</em>，而是一个数字 $b$, 我们可以把 $b$ 分成 3 各部分。假设 $b$ 不为 0, $b$ 的二进制形式应该是 $1xxxx$&mldr; 假设 $b$ 有 $m + 1$ 位.</p><p>现在以 $100&mldr;0$ 为 <code>line</code>:</p><ol><li><strong>line</strong> 一个 &lsquo;1&rsquo;</li><li><strong>below line</strong>: 所有 $m$ 位数有$ (2^m * m) / 2$ 个 &lsquo;1&rsquo;. 这个数从前面的结论得来.</li><li><strong>above line</strong>: 除去最左边的 $1$， 右边的部分又变成从 $0$ 开始查. 我们可以用一个简单地递归来解决这个部分。</li></ol><p>pseudo code:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>function</span> <span class=n>allBits</span><span class=p>(</span><span class=n>b</span><span class=p>)</span> <span class=p>{</span>
+<span class="icon-prefix calculator">647 words</span>
+<span class="icon-prefix clock">2 minutes read</span></div></header><p>在 codefights 上做到了一个很有意思的题。给你 a, b 两个数，假设你构建了一个从 a 到 b 的 array，所有这些数的 binary representation 里面有多少个 1？</p><h1 id=naive-solution>Naive Solution</h1><p>最简单的办法 (随手翻了两个别人的答案都是这个), 就是一个数一个数查有多少 1. 笨一点的手工查, 聪明一点的用 built-in function 查. 但是无论如何, 复杂度都是 O(b - a).</p><h1 id=logn-solution>Log(n) Solution</h1><p>我们先思考一个简化版本的问题: 所有 <code>unsigned int (c++)</code> 里面有多少 1? 答案是所有的 bit / 2, 因为当我们把所有数都写成 2 进制, 一半是 1, 一半是0.</p><p>我们 generalize 一下: 对于任意的 $m$, 所有 $m$ 位的正整数里有 $(2^m * m) / 2$.</p><p>当我们的上限不是<em>位数</em>，而是一个数字 $b$, 我们可以把 $b$ 分成 3 各部分。假设 $b$ 不为 0, $b$ 的二进制形式应该是 $1xxxx$&mldr; 假设 $b$ 有 $m + 1$ 位.</p><p>现在以 $100&mldr;0$ 为 <code>line</code>:</p><ol><li><strong>line</strong> 一个 &lsquo;1&rsquo;</li><li><strong>below line</strong>: 所有 $m$ 位数有$ (2^m * m) / 2$ 个 &lsquo;1&rsquo;. 这个数从前面的结论得来.</li><li><strong>above line</strong>: 除去最左边的 $1$， 右边的部分又变成从 $0$ 开始查. 我们可以用一个简单地递归来解决这个部分。</li></ol><p>pseudo code:</p><div class=highlight><pre class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>function</span> <span class=n>allBits</span><span class=p>(</span><span class=n>b</span><span class=p>)</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>b</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=k>return</span> <span class=mi>0</span><span class=p>;</span> <span class=sr>//</span> <span class=err>不考虑负数</span>
 </span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>b</span> <span class=o>&lt;</span> <span class=mi>2</span><span class=p>)</span> <span class=k>return</span> <span class=n>b</span><span class=p>;</span> <span class=sr>//</span> <span class=ss>basecase</span><span class=p>:</span> <span class=err>只有一位</span>
 </span></span><span class=line><span class=cl>
@@ -23,28 +12,10 @@
 </span></span><span class=line><span class=cl>    <span class=n>onesAboveLine</span> <span class=o>=</span> <span class=n>allBits</span><span class=p>(</span><span class=n>b</span> <span class=o>-</span> <span class=n>line</span><span class=p>)</span> <span class=o>+</span> <span class=p>(</span><span class=n>b</span> <span class=o>-</span> <span class=n>line</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>1</span> <span class=o>+</span> <span class=n>onesBelowLine</span> <span class=o>+</span> <span class=n>onesAboveLine</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><p>下面回到原始问题，给定底线和上限，a, b， 我们可以简单地转换一下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>function</span> <span class=n>rangeBitCount</span><span class=p>(</span><span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></div><p>下面回到原始问题，给定底线和上限，a, b， 我们可以简单地转换一下：</p><div class=highlight><pre class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>function</span> <span class=n>rangeBitCount</span><span class=p>(</span><span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>)</span>
 </span></span><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>allBits</span><span class=p>(</span><span class=n>b</span><span class=p>)</span> <span class=o>-</span> <span class=n>allBits</span><span class=p>(</span><span class=n>a</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h1 id=复杂度证明>复杂度证明</h1><p>这个算法的复杂度很简单，因为这个 recursion 可以很容易的转换成 tail recursion，再变成复杂度相同的 iteration. 这个 iteration 每次去掉最高位的 1，因此最多有 $\log(b)$ 次循环；每次循环做了 constant 的基本算数，因此最后的复杂度应该是 $\log(b)$。</p><h1 id=c-source-code>C++ Source Code</h1><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=kt>int</span> <span class=nf>allBits</span><span class=p>(</span><span class=kt>int</span> <span class=n>b</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></div><h1 id=复杂度证明>复杂度证明</h1><p>这个算法的复杂度很简单，因为这个 recursion 可以很容易的转换成 tail recursion，再变成复杂度相同的 iteration. 这个 iteration 每次去掉最高位的 1，因此最多有 $\log(b)$ 次循环；每次循环做了 constant 的基本算数，因此最后的复杂度应该是 $\log(b)$。</p><h1 id=c-source-code>C++ Source Code</h1><div class=highlight><pre class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=kt>int</span> <span class=nf>allBits</span><span class=p>(</span><span class=kt>int</span> <span class=n>b</span><span class=p>)</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>b</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>b</span> <span class=o>&lt;</span> <span class=mi>2</span><span class=p>)</span> <span class=k>return</span> <span class=n>b</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>num_bit</span> <span class=o>=</span> <span class=mi>31</span> <span class=o>-</span> <span class=n>__builtin_clz</span><span class=p>((</span><span class=kt>unsigned</span><span class=p>)</span> <span class=n>b</span><span class=p>);</span>
@@ -57,7 +28,7 @@
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>rangeBitCount</span><span class=p>(</span><span class=kt>int</span> <span class=n>a</span><span class=p>,</span> <span class=kt>int</span> <span class=n>b</span><span class=p>)</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>allBits</span><span class=p>(</span><span class=n>b</span><span class=p>)</span> <span class=o>-</span> <span class=n>allBits</span><span class=p>(</span><span class=n>a</span> <span class=o>-</span> <span class=mi>1</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><footer><p id=cc>This work is licensed under
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></div><footer><p id=cc>This work is licensed under
 <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target=_blank rel="license noopener noreferrer" style=display:inline-block>CC BY-SA 4.0
 <img alt="Creative Commons License CC BY-SA 4.0" src=/images/cc-all.svg style=height:1.2em;width:auto loading=lazy width=29.633333 height=10.583333></a></p></footer></article></main><footer><nav><a href=https://gohugo.io/>This blog is Powered by Hugo</a>
 <a class="icon-prefix rss" href=/index.xml class=social-rss>RSS</a>
