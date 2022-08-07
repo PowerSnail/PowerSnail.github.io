@@ -1,22 +1,8 @@
 <!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-security-policy content="default-src 'self'; img-src 'self' https://snailshell.goatcounter.com/count https://mirrors.creativecommons.org/; style-src 'self' 'unsafe-inline'"><meta http-equiv=content-type content="text/html;charset=utf-8;x-content-type-options=nosniff"><meta name=author content="PowerSnail"><meta name=generator content="Hugo 0.101.0"><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#af3000><meta name=msapplication-TileColor content="#000000"><meta name=theme-color content="#af3000"><title>Valid Number - By DFA · SnailShell</title><link rel=stylesheet href=https://powersnail.com/style.css><link rel=canonical href=https://powersnail.com/2016/valid-number/><script type=text/javascript id=MathJax-script src=/js/bundle.cc6d92b034817d3a3e6e3835b40e09bd99b88fcbe2b160a0dd4220b82b21c3cc.js defer></script></head><body><header><div class=site-title><a href=https://powersnail.com/>SnailShell</a></div><nav><a type=button href=/posts/>Posts</a>
 <a type=button href=/status/>Status</a>
 <a type=button href=/about/>About</a></nav></header><img class=goatcounter alt width=1 height=1 src="https://snailshell.goatcounter.com/count?p=%2f2016%2fvalid-number%2f&t=Valid%20Number%20-%20By%20DFA"><main><article><header><h1>Valid Number - By DFA</h1><hr><div id=metadata><details><summary class="icon-prefix tags">Tags</summary><div class=tag-list><a class=tag href=/tags/computer-science>computer science</a> <a class=tag href=/tags/algorithm>algorithm</a> <a class=tag href=/tags/leetcode>leetcode</a> <a class=tag href=/tags/c++>C++</a></div></details><span class="icon-prefix calendar-event">2016-11-27</span>
-<span class="icon-prefix calculator">898 words</span>
-<span class="icon-prefix clock">5 minutes read</span></div></header><h2 id=introduction-to-the-problem>Introduction to the Problem</h2><p>The question asks the programmer to validate whether a string is a valid representation of a number. After some trials, we find that the question accepts a few formats:</p><ol><li>pure integer</li><li>real number (decimal representation), including omitted zero, for example &ldquo;.5&rdquo;, &ldquo;12.&rdquo;</li><li>scientific number, that looks like &ldquo;{Real Number}e{Integer}&rdquo;</li><li>integer and real number can be signed</li><li>ignore any surrounding white spaces</li></ol><p>In order to solve the problem in linear time, most solutions set a few flags. This is simple, and quite efficient in both time and space. In fact, I don&rsquo;t really consider this problem qualified for <em>hard</em>.</p><p>Just to add some fun, this problem can be solved using a very textbook DFA. The code is elegant, less space efficient (but only for a constant amount) than the flag algorithm. In fact, the latter is just a compact, specialized DFA in essence. The trade-off is more variables and branching.</p><h2 id=the-algorithm>The Algorithm</h2><p>The first step, we trim the string. There is probably not efficient in bringing white space processing into the DFA.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=k>static</span> <span class=kr>inline</span> <span class=n>string</span> <span class=nf>trim</span><span class=p>(</span><span class=n>string</span> <span class=n>s</span><span class=p>)</span>
+<span class="icon-prefix calculator">808 words</span>
+<span class="icon-prefix clock">4 minutes read</span></div></header><h2 id=introduction-to-the-problem>Introduction to the Problem</h2><p>The question asks the programmer to validate whether a string is a valid representation of a number. After some trials, we find that the question accepts a few formats:</p><ol><li>pure integer</li><li>real number (decimal representation), including omitted zero, for example &ldquo;.5&rdquo;, &ldquo;12.&rdquo;</li><li>scientific number, that looks like &ldquo;{Real Number}e{Integer}&rdquo;</li><li>integer and real number can be signed</li><li>ignore any surrounding white spaces</li></ol><p>In order to solve the problem in linear time, most solutions set a few flags. This is simple, and quite efficient in both time and space. In fact, I don&rsquo;t really consider this problem qualified for <em>hard</em>.</p><p>Just to add some fun, this problem can be solved using a very textbook DFA. The code is elegant, less space efficient (but only for a constant amount) than the flag algorithm. In fact, the latter is just a compact, specialized DFA in essence. The trade-off is more variables and branching.</p><h2 id=the-algorithm>The Algorithm</h2><p>The first step, we trim the string. There is probably not efficient in bringing white space processing into the DFA.</p><div class=highlight><pre class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=k>static</span> <span class=kr>inline</span> <span class=n>string</span> <span class=nf>trim</span><span class=p>(</span><span class=n>string</span> <span class=n>s</span><span class=p>)</span>
 </span></span><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>s</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span> <span class=k>return</span> <span class=n>s</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
@@ -29,82 +15,7 @@
 </span></span><span class=line><span class=cl>    <span class=o>*</span><span class=p>(</span><span class=n>d</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>=</span> <span class=sc>&#39;\0&#39;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>string</span><span class=p>(</span><span class=n>c</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h3 id=dfa---states>DFA - States</h3><p>Any accepted string can be divided into a few parts:</p><ol><li>before decimal, the left part of a real number</li><li>decimal</li><li>after decimal, the right part of a real number</li><li>e character</li><li>the exponent, the right to &rsquo;e'</li></ol><p>Any part could potentially empty. The (1) and (5) could potentially be preceded with a sign (&rsquo;+&rsquo; or &lsquo;-&rsquo;).</p><p>Then, we can collect all states based on the grammar:</p><div class=table-wrapper><table><thead><tr><th>state</th><th>meaning</th></tr></thead><tbody><tr><td><code>START</code></td><td>starting state</td></tr><tr><td><code>REALLEFT</code></td><td>before encountering any decimal</td></tr><tr><td><code>DOT</code></td><td>encounter a regular decimal</td></tr><tr><td><code>E</code></td><td>encounter an &rsquo;e&rsquo;</td></tr><tr><td><code>REALRIGHT</code></td><td>have encountered a decimal</td></tr><tr><td><code>DOT_E</code></td><td>have encountered a decimal whose left is omitted</td></tr><tr><td><code>ERIGHT</code></td><td>have encountered &rsquo;e&rsquo;, and is therefore part of the exponent</td></tr><tr><td><code>SIGN1</code></td><td>the sign on the left of the &rsquo;e'</td></tr><tr><td><code>SIGN2</code></td><td>the sign on the right of the &rsquo;e'</td></tr><tr><td><code>FAULT</code></td><td>the faulty state</td></tr></tbody></table></div><p>The starting state is <code>START</code>.</p><p><code>FAULT</code> is a special state, that the DFA will halt whenever it meets <code>FAULT</code>, so that we do not have to process the rest of the string.</p><h3 id=dfa---transition>DFA - Transition</h3><p>The transition function is a matrix that maps (state, input char) to state.</p><p><img src=/images/valid-number-DFA.svg alt="DFA Transformation matrix" style=width:100%;height:auto width=106.062271 height=69.394768></p><div class=table-wrapper><table><thead><tr><th><em>states</em></th><th>DIGIT</th><th>SIGN</th><th>DOT</th><th>E</th><th>NDIGIT</th></tr></thead><tbody><tr><td>START</td><td>REALLEFT</td><td>SIGN1</td><td>DOT_E</td><td>FAULT</td><td>FAULT</td></tr><tr><td>REALLEFT</td><td>REALLEFT</td><td>FAULT</td><td>DOT</td><td>E</td><td>FAULT</td></tr><tr><td>DOT</td><td>REALRIGHT</td><td>FAULT</td><td>FAULT</td><td>E</td><td>FAULT</td></tr><tr><td>E</td><td>ERIGHT</td><td>SIGN2</td><td>FAULT</td><td>FAULT</td><td>FAULT</td></tr><tr><td>REALRIGHT</td><td>REALRIGHT</td><td>FAULT</td><td>FAULT</td><td>E</td><td>FAULT</td></tr><tr><td>DOT_E</td><td>REALRIGHT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td></tr><tr><td>ERIGHT</td><td>ERIGHT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td></tr><tr><td>SIGN1</td><td>REALLEFT</td><td>FAULT</td><td>DOT_E</td><td>FAULT</td><td>FAULT</td></tr><tr><td>SIGN2</td><td>ERIGHT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td></tr></tbody></table></div><p><img src=/images/valid_number_dfa.svg alt=grammar style=width:100%;height:auto></p><h3 id=dfa---termination>DFA - Termination</h3><p>The DFA will terminate when</p><ul><li>input is depleted</li><li>state is <code>FAULT</code></li></ul><p>The string will be accepted if the termination state is one of following:</p><ul><li><code>REALLEFT</code></li><li><code>REALRIGHT</code></li><li><code>ERIGHT</code></li><li><code>DOT</code></li></ul><p>In all other cases, the format is somewhat faulty. For example, if the DFA ended at <code>E</code>, then the string looks like <code>"{some number}e"</code>, which is not acceptable.</p><hr><p>The running of the DFA is easy. Simply iterate over the input, and let the transition matrix do its magic.</p><h2 id=complete-code>Complete Code:</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span><span class=lnt>40
-</span><span class=lnt>41
-</span><span class=lnt>42
-</span><span class=lnt>43
-</span><span class=lnt>44
-</span><span class=lnt>45
-</span><span class=lnt>46
-</span><span class=lnt>47
-</span><span class=lnt>48
-</span><span class=lnt>49
-</span><span class=lnt>50
-</span><span class=lnt>51
-</span><span class=lnt>52
-</span><span class=lnt>53
-</span><span class=lnt>54
-</span><span class=lnt>55
-</span><span class=lnt>56
-</span><span class=lnt>57
-</span><span class=lnt>58
-</span><span class=lnt>59
-</span><span class=lnt>60
-</span><span class=lnt>61
-</span><span class=lnt>62
-</span><span class=lnt>63
-</span><span class=lnt>64
-</span><span class=lnt>65
-</span><span class=lnt>66
-</span><span class=lnt>67
-</span><span class=lnt>68
-</span><span class=lnt>69
-</span><span class=lnt>70
-</span><span class=lnt>71
-</span><span class=lnt>72
-</span><span class=lnt>73
-</span><span class=lnt>74
-</span><span class=lnt>75
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></div><h3 id=dfa---states>DFA - States</h3><p>Any accepted string can be divided into a few parts:</p><ol><li>before decimal, the left part of a real number</li><li>decimal</li><li>after decimal, the right part of a real number</li><li>e character</li><li>the exponent, the right to &rsquo;e'</li></ol><p>Any part could potentially empty. The (1) and (5) could potentially be preceded with a sign (&rsquo;+&rsquo; or &lsquo;-&rsquo;).</p><p>Then, we can collect all states based on the grammar:</p><div class=table-wrapper><table><thead><tr><th>state</th><th>meaning</th></tr></thead><tbody><tr><td><code>START</code></td><td>starting state</td></tr><tr><td><code>REALLEFT</code></td><td>before encountering any decimal</td></tr><tr><td><code>DOT</code></td><td>encounter a regular decimal</td></tr><tr><td><code>E</code></td><td>encounter an &rsquo;e&rsquo;</td></tr><tr><td><code>REALRIGHT</code></td><td>have encountered a decimal</td></tr><tr><td><code>DOT_E</code></td><td>have encountered a decimal whose left is omitted</td></tr><tr><td><code>ERIGHT</code></td><td>have encountered &rsquo;e&rsquo;, and is therefore part of the exponent</td></tr><tr><td><code>SIGN1</code></td><td>the sign on the left of the &rsquo;e'</td></tr><tr><td><code>SIGN2</code></td><td>the sign on the right of the &rsquo;e'</td></tr><tr><td><code>FAULT</code></td><td>the faulty state</td></tr></tbody></table></div><p>The starting state is <code>START</code>.</p><p><code>FAULT</code> is a special state, that the DFA will halt whenever it meets <code>FAULT</code>, so that we do not have to process the rest of the string.</p><h3 id=dfa---transition>DFA - Transition</h3><p>The transition function is a matrix that maps (state, input char) to state.</p><p><img src=/images/valid-number-DFA.svg alt="DFA Transformation matrix" style=width:100%;height:auto width=106.062271 height=69.394768></p><div class=table-wrapper><table><thead><tr><th><em>states</em></th><th>DIGIT</th><th>SIGN</th><th>DOT</th><th>E</th><th>NDIGIT</th></tr></thead><tbody><tr><td>START</td><td>REALLEFT</td><td>SIGN1</td><td>DOT_E</td><td>FAULT</td><td>FAULT</td></tr><tr><td>REALLEFT</td><td>REALLEFT</td><td>FAULT</td><td>DOT</td><td>E</td><td>FAULT</td></tr><tr><td>DOT</td><td>REALRIGHT</td><td>FAULT</td><td>FAULT</td><td>E</td><td>FAULT</td></tr><tr><td>E</td><td>ERIGHT</td><td>SIGN2</td><td>FAULT</td><td>FAULT</td><td>FAULT</td></tr><tr><td>REALRIGHT</td><td>REALRIGHT</td><td>FAULT</td><td>FAULT</td><td>E</td><td>FAULT</td></tr><tr><td>DOT_E</td><td>REALRIGHT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td></tr><tr><td>ERIGHT</td><td>ERIGHT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td></tr><tr><td>SIGN1</td><td>REALLEFT</td><td>FAULT</td><td>DOT_E</td><td>FAULT</td><td>FAULT</td></tr><tr><td>SIGN2</td><td>ERIGHT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td><td>FAULT</td></tr></tbody></table></div><p><img src=/images/valid_number_dfa.svg alt=grammar style=width:100%;height:auto></p><h3 id=dfa---termination>DFA - Termination</h3><p>The DFA will terminate when</p><ul><li>input is depleted</li><li>state is <code>FAULT</code></li></ul><p>The string will be accepted if the termination state is one of following:</p><ul><li><code>REALLEFT</code></li><li><code>REALRIGHT</code></li><li><code>ERIGHT</code></li><li><code>DOT</code></li></ul><p>In all other cases, the format is somewhat faulty. For example, if the DFA ended at <code>E</code>, then the string looks like <code>"{some number}e"</code>, which is not acceptable.</p><hr><p>The running of the DFA is easy. Simply iterate over the input, and let the transition matrix do its magic.</p><h2 id=complete-code>Complete Code:</h2><div class=highlight><pre class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>static</span> <span class=kr>inline</span> <span class=n>string</span> <span class=nf>trim</span><span class=p>(</span><span class=n>string</span> <span class=n>s</span><span class=p>)</span>
 </span></span><span class=line><span class=cl>    <span class=p>{</span>
@@ -178,7 +89,7 @@
 </span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>};</span></span></span></code></pre></td></tr></table></div></div><footer><p id=cc>This work is licensed under
+</span></span><span class=line><span class=cl><span class=p>};</span></span></span></code></pre></div><footer><p id=cc>This work is licensed under
 <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target=_blank rel="license noopener noreferrer" style=display:inline-block>CC BY-SA 4.0
 <img alt="Creative Commons License CC BY-SA 4.0" src=/images/cc-all.svg style=height:1.2em;width:auto loading=lazy width=29.633333 height=10.583333></a></p></footer></article></main><footer><nav><a href=https://gohugo.io/>This blog is Powered by Hugo</a>
 <a class="icon-prefix rss" href=/index.xml class=social-rss>RSS</a>
