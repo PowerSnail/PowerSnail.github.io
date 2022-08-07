@@ -1,4 +1,4 @@
-+++
-title = "Status"
-description = "A list of short posts"
-+++
+---
+title: Status
+description: A list of short posts
+---

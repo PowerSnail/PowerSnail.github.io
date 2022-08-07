@@ -1,7 +1,7 @@
-+++
-title = "Free Sheet Music"
-description = "A collection of sheet music I made"
-+++
+---
+title: Free Sheet Music
+description: A collection of sheet music I made
+---
 
 <style>
   dt::first-letter {

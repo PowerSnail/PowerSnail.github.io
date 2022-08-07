@@ -3,7 +3,10 @@ title: "A Warm-up for Chords: Bowing Planes Exercise"
 description: An preparatory exercise for playing chords on the violin.
 date: 2022-01-31
 slug: bowing-planes-exercise
-tags: ["violin", "bowing", "Bach"]
+tags: 
+    - violin
+    - bowing
+    - Bach
 draft: false
 ---
 

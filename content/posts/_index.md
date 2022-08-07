@@ -1,4 +1,4 @@
-+++
-title = "Posts"
-description = "A list of all posts"
-+++
+---
+title: Posts
+description: A list of all posts
+---

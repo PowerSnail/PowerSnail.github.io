@@ -4,7 +4,8 @@ description: Making Chinese Caramel Color, 糖色, a type of natural food colori
 date: 2022-02-02
 slug: chinese-caramel-color
 isCJK: true
-tags: ["Chinese"]
+tags: 
+    - Chinese
 draft: false
 ---
 

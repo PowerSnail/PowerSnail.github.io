@@ -1,12 +1,16 @@
-+++
-title = "Test Md Page"
-description = "A Markdown document that tests various properties of a static site generator."
-date = "2022-07-06"
-slug = "test-md-page"
-tags = ["computer science", "markdown", "blog"]
-images = ["./cover.svg"]
-draft = false
-+++
+---
+title: Test Md Page
+description: A Markdown document that tests various properties of a static site generator.
+date: 2022-07-06
+slug: test-md-page
+tags: 
+  - computer science
+  - markdown
+  - blog
+images: 
+  - ./cover.svg
+draft: false
+---
 
 When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon to break pages that you are not looking. Maybe tables lose their responsiveness, sentences are too close together, empty pages look weird, etc. I've written this document to test some common pitfalls that I experienced when I was tweaking my own blog.
 

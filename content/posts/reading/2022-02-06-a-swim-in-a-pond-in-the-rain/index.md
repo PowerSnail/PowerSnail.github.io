@@ -3,7 +3,9 @@ title: A Swim in a Pond in the Rain
 description:
 date: 2022-02-06
 slug: a-swim-in-a-pond-in-the-rain
-tags: ["non-fiction", "writing"]
+tags: 
+    - non-fiction
+    - writing
 draft: true
 ---
 

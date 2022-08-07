@@ -1,10 +1,13 @@
-+++
-title = "Sneaky Shift in Bach's *Preludio* in Partita III"
-description = "How to shift cleanly in the bariolage section."
-date = "2022-07-22"
-slug = "bach-preludio-sneaky-shift"
-tags = ["violin", "music", "fingering"]
-+++
+---
+title: Sneaky Shift in Bach's *Preludio* in Partita III
+description: How to shift cleanly in the bariolage section.
+date: 2022-07-22
+slug: bach-preludio-sneaky-shift
+tags: 
+  - violin
+  - music
+  - fingering
+---
 
 *Preludio* (*Prelude* in some version) is one of Bach's best violin pieces. From measure 17 to 28, a bariolage among three strings brings us a sublime polyphonic experience, with only single notes played detaché. The focus is usually on the bowing, but the left hand is not without challenge either, especially at speed.
 

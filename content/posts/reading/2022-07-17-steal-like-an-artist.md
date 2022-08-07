@@ -1,11 +1,12 @@
-+++
-title = "Reading _Steal Like an Artist_"
-description = "A short, inspirational book about how to be a productive artist."
-date = "2022-07-17"
-slug = "steal-like-an-artist"
-tags = ["reading"]
-draft = false
-+++
+---
+title: Reading _Steal Like an Artist_
+description: A short, inspirational book about how to be a productive artist.
+date: 2022-07-17
+slug: steal-like-an-artist
+tags: 
+    - reading
+draft: false
+---
 
 ## Summary
 
