@@ -89,6 +89,6 @@ INFO: Found OVMF image at '/usr/share/qemu/ovmf-x86_64-code.bin'.
 INFO: Please give GRUB a moment to show up in QEMU...
 ```
 
-_Viola!_
+_Voila!_
 
 ![Screenshot of grub2-theme-preview](/images/opensuse-grub-preview.webp)
