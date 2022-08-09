@@ -3,6 +3,7 @@ title: Fixing Grub2 Theme Preview on Opensuse Tumbleweed
 description: To use Grub2 theme preview on openSUSE, two environment variables needs to be overridden.
 date: 2022-08-06
 slug: grub2-theme-preview-opensuse
+summary: To use Grub2 theme preview on openSUSE, two environment variables needs to be overridden.
 tags:
     - computer science
 ---
