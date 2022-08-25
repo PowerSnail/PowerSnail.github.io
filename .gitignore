@@ -1,10 +1,6 @@
-_site
 .sass-cache
-.jekyll-metadata
 resources/_gen
 .vscode/
-output/
-node_modules
 .hugo_build.lock
 .parcel-cache/
 .python-version
