@@ -1,4 +1,21 @@
-## Source code of powersnail.com
+# Source code of powersnail.com
+
+## Dependencies
+
+- Hugo
+- npm (Hugo requires the following packages for resources post-processing)
+  - autoprefixer
+  - postcss-cli
+- just
+- python (utility scripts)
+  - rich
+  - typer
+  - selectolax
+  - numpy
+  - colour
+  - pymupdf
+
+## Licensing
 
 The articles, sheet musics, image, are licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
 
