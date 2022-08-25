@@ -37,7 +37,10 @@ deploy-test base destination:
     hugo --baseURL {{ base }} --destination {{ destination }} --forceSyncStatic -w --noChmod --gc --ignoreCache --buildDrafts --cleanDestinationDir
 
 deploy:
-    hugo --minify
+    rm -rf public
+    mkdir public
+    hugo --minify 
+    parcel-css -m public/style.css --output-file public/style.css
     python tool_scripts/check_dead_links.py public/
     touch public/.nojekyll
 

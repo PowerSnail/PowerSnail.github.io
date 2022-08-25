@@ -3,9 +3,7 @@
 ## Dependencies
 
 - Hugo
-- npm (Hugo requires the following packages for resources post-processing)
-  - autoprefixer
-  - postcss-cli
+- parcel-css
 - just
 - python (utility scripts)
   - rich
