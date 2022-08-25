@@ -1,7 +1,7 @@
-import sys
-import pathlib
 import itertools
+import pathlib
 import re
+import sys
 
 image_extensions = ["jpg", "jpeg", "png", "svg", "ico", "webp"]
 image_extensions = image_extensions + [s.upper() for s in image_extensions]
@@ -15,8 +15,7 @@ content_dir = pathlib.Path(sys.argv[1])
 image_dir = pathlib.Path(sys.argv[2])
 
 image_files = {
-    "/" + str(img.relative_to(image_dir))
-    for img in itertools.chain(*(image_dir.rglob(glob) for glob in image_globs))
+    "/" + str(img.relative_to(image_dir)) for img in itertools.chain(*(image_dir.rglob(glob) for glob in image_globs))
 }
 images_in_docs = set()
 

@@ -1,12 +1,7 @@
-# Copyright (c) 2022 PowerSnail
-# 
-# This software is released under the MIT License.
-# https://opensource.org/licenses/MIT
+import pathlib
 
 import fitz
 import typer
-import pathlib
-
 
 THUMBNAIL_SIZE = (100, 162)
 

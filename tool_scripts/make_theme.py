@@ -1,7 +1,7 @@
-import typer
-import numpy as np
 import colour
 import more_itertools
+import numpy as np
+import typer
 
 
 class Color:
@@ -48,11 +48,7 @@ def invert(c: str) -> str:
     return inverted.hex()
 
 
-DARK = {
-    key: 
-    "#000" if key == "shadow" else
-    invert(value)  for key, value in DEFAULT.items()
-}
+DARK = {key: "#000" if key == "shadow" else invert(value) for key, value in DEFAULT.items()}
 
 
 def main():
