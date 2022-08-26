@@ -89,7 +89,7 @@
 &lt;h2 id="this-is-a-second-level-heading">This is a second-level heading&lt;/h2>
 &lt;h3 id="this-is-a-third-level-heading">This is a third-level heading&lt;/h3>
 &lt;h4 id="this-is-a-fourth-level-heading">This is a fourth-level heading&lt;/h4>
-&lt;p>A paragraph under a fourth level heading.&lt;/p>
+&lt;p>A paragraph under a fourth level heading. There&amp;rsquo;s really no need to get to this level of heading, however.&lt;/p>
 &lt;h5 id="this-is-a-fifth-level-heading">This is a fifth-level heading&lt;/h5>
 &lt;p>A paragraph under a fifth level heading.&lt;/p>
 &lt;h6 id="this-is-a-sixth-level-heading">This is a sixth-level heading&lt;/h6>
@@ -119,26 +119,38 @@ The moon wrinkled in the water.&lt;/p>
 &lt;p>Midnight shakes the memory&lt;/p>
 &lt;p>As a madman shakes a dead geranium.&lt;/p>
 &lt;p>by T.S. Eliot, &lt;em>Rhapsody on a Windy Night&lt;/em>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;h2 id="length-of-line">Length of line&lt;/h2>
+&lt;p>One line should contain about 2~3 alphabets&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>:&lt;/p>
+&lt;p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz&lt;mark>abcdefghijklmnopqrstuvwxyz&lt;/mark>&lt;/p>
 &lt;h2 id="punctuations">Punctuations&lt;/h2>
+&lt;p>Comma, period, question marks and exclamation marks.&lt;/p>
+&lt;p>&lt;mark>Is this a question mark? Yes!&lt;/mark>&lt;/p>
+&lt;p>Quotation marks should have the correct orientations:&lt;/p>
+&lt;p>&lt;mark>&amp;ldquo;Quotations marks &amp;lsquo;rocks&amp;rsquo;&amp;quot;&lt;/mark>&lt;/p>
+&lt;p>Colon, and semicolon:&lt;/p>
+&lt;p>&lt;mark>Here: a colon; which is nothing like a semicolon.&lt;/mark>&lt;/p>
+&lt;p>Ellipses should be rendered as one character, instead of 3 dots.&lt;/p>
+&lt;p>&lt;mark>Ellipses&amp;hellip;&lt;/mark>&lt;/p>
+&lt;p>Hyphen and dashes. A &lt;strong>hyphen&lt;/strong> is the shortest, an &lt;strong>en dash&lt;/strong> slightly longer, and an &lt;strong>em dash&lt;/strong> twice as long as an &lt;strong>en dash&lt;/strong>.&lt;/p>
 &lt;ul>
-&lt;li>&amp;ldquo;Quotations marks &amp;lsquo;rocks&amp;rsquo;&amp;rdquo;&lt;/li>
-&lt;li>Question mark?&lt;/li>
-&lt;li>Bang!&lt;/li>
-&lt;li>Comma, period.&lt;/li>
-&lt;li>Ellipses&amp;hellip;&amp;hellip;&lt;/li>
-&lt;li>Semicolons;&lt;/li>
-&lt;li>Various dashes:
+&lt;li>&lt;mark>One-year-old puppy&lt;/mark>&lt;/li>
+&lt;li>&lt;mark>1997&amp;ndash;1999&lt;/mark>&lt;/li>
+&lt;li>&lt;mark>but&amp;mdash;&lt;/mark>&lt;/li>
+&lt;/ul>
+&lt;p>Apostrophes should point downwards&lt;/p>
+&lt;p>&lt;mark>It&amp;rsquo;s me. In the &amp;rsquo;70s. Rock &amp;rsquo;n&amp;rsquo; Roll&lt;/mark>&lt;/p>
+&lt;p>Brackets&lt;/p>
+&lt;p>&lt;mark>(regular ones), [square ones], {curly ones}&lt;/mark>&lt;/p>
+&lt;p>Special characters&lt;/p>
 &lt;ul>
-&lt;li>A single, all-too-lonely dash (usually rendered as a &lt;strong>hyphen&lt;/strong>).&lt;/li>
-&lt;li>Two consecutive hyphens, 1&amp;ndash;2 (usually rendered as an &lt;strong>En Dash&lt;/strong>).&lt;/li>
-&lt;li>Three consecutive hyphens&amp;mdash;usually rendered as an &lt;strong>em dash&lt;/strong>.&lt;/li>
+&lt;li>Copyright: &lt;mark>© 2022&lt;/mark> (should appear in line with text)&lt;/li>
+&lt;li>Trademark: &lt;mark>Brand™, and Registered Tradmark®&lt;/mark> (should appear as superscripts)&lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;li>It&amp;rsquo;s an apostrophe&lt;/li>
-&lt;li>Look: colon.&lt;/li>
-&lt;li>Some brackets (regular ones), [square ones], {curly ones}&lt;/li>
-&lt;li>Slash/forward\backward&lt;/li>
-&lt;/ul>
+&lt;p>Slashes&lt;/p>
+&lt;p>&lt;mark>Slash/forward\backward&lt;/mark>&lt;/p>
+&lt;p>Foot and Inches: &lt;mark>12' 13&amp;quot;&lt;/mark>&lt;/p>
+&lt;h2 id="ligatures">Ligatures&lt;/h2>
+&lt;p>There, figure, fft, ffi.&lt;/p>
 &lt;h2 id="block-quote">Block quote&lt;/h2>
 &lt;blockquote>
 &lt;p>Blockquote directly under a title&lt;/p>
@@ -352,7 +364,7 @@ line item&lt;/li>
 &lt;ul>
 &lt;li>Language: 中文测试&lt;/li>
 &lt;li>HTML embeded: &lt;br>&lt;strong>&lt;code>&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;&lt;/code>&lt;/strong>&lt;/li>
-&lt;li>References&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>References&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;/li>
 &lt;/ul>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
@@ -364,7 +376,10 @@ line item&lt;/li>
 &lt;p>Eliot, T. S. &lt;em>Poetry&lt;/em>. Standard Ebooks, 2017.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:3">
-&lt;p>A test for reference&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;p>Butterick, Matthew. &lt;em>Practical Typography&lt;/em>. &lt;a href="https://practicaltypography.com/line-length.html">https://practicaltypography.com/line-length.html&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>A test for reference&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;/div></content><category>posts</category></entry><entry><author><name>PowerSnail</name></author><title type="html">Theme-less Hugo, Almost Pure HTML, Styled with MVP CSS</title><link rel="alternate">https://powersnail.com/2022/hugo-mvp-css/</link><published>Wed, 12 Jan 2022 00:00:00 +0000</published><updated>Wed, 12 Jan 2022 00:00:00 +0000</updated><id>https://powersnail.com/2022/hugo-mvp-css/</id><summary type="html">Theme-less Hugo As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else.</summary><content type="html">&lt;h2 id="theme-less-hugo">Theme-less Hugo&lt;/h2>
