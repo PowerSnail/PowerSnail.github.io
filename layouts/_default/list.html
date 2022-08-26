@@ -2,10 +2,9 @@
 <article>
   {{- partial "article_header.html" . }}
   <div class="post-list">
-    {{ range .Paginator.Pages }}
+    {{ range .Pages }}
     {{ partial "list_item.html" . }}
     {{ end }}
   </div>
-  {{- partial "pagination.html" . -}}
 </article>
 {{ end }}

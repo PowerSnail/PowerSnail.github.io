@@ -1,5 +1,6 @@
 :root {
   --accent: #af3000;
+  --accent-bg: #af300017;
   --bg: #fafafa;
   --text: #000000;
   --bg-alt: #efeeee;
@@ -8,10 +9,12 @@
   --code: #1A2D29;
   --link: #AF3000;
   --shadow: #AAAAAA;
+  --border: #222;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --accent: #f4704c;
+    --accent-bg: #f4704c17;
     --bg: #191919;
     --text: #ffffff;
     --bg-alt: #222121;
@@ -20,5 +23,6 @@
     --code: #d3eae5;
     --link: #f4704c;
     --shadow: #000;
+    --border: #ddd;
   }
 }

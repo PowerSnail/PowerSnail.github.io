@@ -20,7 +20,7 @@ When you are tweaking your blog, creating a new CSS rule, or making a new theme,
 
 #### This is a fourth-level heading
 
-A paragraph under a fourth level heading.
+A paragraph under a fourth level heading. There's really no need to get to this level of heading, however. 
 
 ##### This is a fifth-level heading
 
@@ -75,22 +75,60 @@ As a madman shakes a dead geranium.
 
 by T.S. Eliot, *Rhapsody on a Windy Night*[^2]
 
+## Length of line
+
+One line should contain about 2~3 alphabets[^line-width]:
+
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz<mark>abcdefghijklmnopqrstuvwxyz</mark>
+
+
+
 ## Punctuations
 
-- "Quotations marks 'rocks'"
-- Question mark?
-- Bang!
-- Comma, period.
-- Ellipses......
-- Semicolons; 
-- Various dashes: 
-  - A single, all-too-lonely dash (usually rendered as a **hyphen**).
-  - Two consecutive hyphens, 1--2 (usually rendered as an **En Dash**). 
-  - Three consecutive hyphens---usually rendered as an **em dash**.
-- It's an apostrophe
-- Look: colon.
-- Some brackets (regular ones), [square ones], {curly ones}
-- Slash/forward\backward
+Comma, period, question marks and exclamation marks.
+
+<mark>Is this a question mark? Yes!</mark>
+
+Quotation marks should have the correct orientations:
+
+<mark>"Quotations marks 'rocks'"</mark>
+
+Colon, and semicolon:
+
+<mark>Here: a colon; which is nothing like a semicolon.</mark>
+
+Ellipses should be rendered as one character, instead of 3 dots.
+
+<mark>Ellipses...</mark>
+
+Hyphen and dashes. A **hyphen** is the shortest, an **en dash** slightly longer, and an **em dash** twice as long as an **en dash**. 
+
+- <mark>One-year-old puppy</mark>
+- <mark>1997--1999</mark> 
+- <mark>but---</mark>
+
+Apostrophes should point downwards
+
+<mark>It's me. In the '70s. Rock 'n' Roll</mark>
+
+Brackets 
+
+<mark>(regular ones), [square ones], {curly ones}</mark>
+
+Special characters
+
+- Copyright: <mark>© 2022</mark> (should appear in line with text) 
+- Trademark: <mark>Brand™, and Registered Tradmark®</mark> (should appear as superscripts)
+
+Slashes
+
+<mark>Slash/forward\backward</mark>
+
+Foot and Inches: <mark>12\' 13\"</mark>
+
+## Ligatures
+
+There, figure, fft, ffi.
 
 ## Block quote
 
@@ -218,6 +256,7 @@ A table with a very fat column:
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | item 1 | item 2 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long |
 
+
 ## Some random tests
 
 - Language: 中文测试
@@ -228,3 +267,4 @@ A table with a very fat column:
 [^austen]: Austen, Jane. *Pride and Prejudice*. Standard Ebooks, 2014.
 [^2]: Eliot, T. S. *Poetry*. Standard Ebooks, 2017.
 [^3]: A test for reference
+[^line-width]: Butterick, Matthew. *Practical Typography*. https://practicaltypography.com/line-length.html
