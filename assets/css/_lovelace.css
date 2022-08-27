@@ -1,7 +1,6 @@
 /* Background */ .bg { background-color: var(--bg-alt); }
 /* PreWrapper */ .chroma { background-color: var(--bg-alt); }
 /* Other */ .chroma .x {  }
-/* Error */ .chroma .err { background-color: #4c2c92 }
 /* CodeLine */ .chroma .cl {  }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
