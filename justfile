@@ -34,7 +34,8 @@ serve-at target:
     hugo serve -D --port 1313 --baseURL="{{ target }}" --appendPort=false
 
 deploy-test base destination:
-    hugo --baseURL {{ base }} --destination {{ destination }} --forceSyncStatic -w --noChmod --gc --ignoreCache --buildDrafts --cleanDestinationDir
+    hugo --minify --baseURL {{ base }} --destination {{ destination }} --forceSyncStatic --noChmod --gc --ignoreCache --buildDrafts --cleanDestinationDir
+    parcel-css -m {{ destination }}/style.css --output-file {{ destination }}/style.css
 
 deploy:
     rm -rf public
