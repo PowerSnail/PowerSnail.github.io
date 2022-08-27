@@ -17,18 +17,7 @@
   <hr />
 
   <div id="metadata">
-    {{ with .Params.tags }}
-    <details>
-      <summary class="icon-prefix tags">
-        Tags
-      </summary>
-      <div class="tag-list">
-        {{ $links := apply . "partial" "tag_link.html" "." }}
-        {{ $clean := apply $links "chomp" "." }}
-        {{ delimit $clean " " }}
-      </div>
-    </details>
-    {{ end }}
+
     {{ if and (eq .Kind "page") (eq .Section "posts") }}
     {{ $time := .Params.date }}
 
@@ -42,6 +31,14 @@
 
     <span class="icon-prefix clock">
       {{ .ReadingTime }} minutes read
+    </span>
+    {{ end }}
+    
+    {{ with .Params.tags }}
+    <span class="icon-prefix tags">
+      {{ $links := apply . "partial" "tag_link.html" "." }}
+      {{ $clean := apply $links "chomp" "." }}
+      {{ delimit $clean " " }}
     </span>
     {{ end }}
   </div>

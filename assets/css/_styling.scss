@@ -69,25 +69,16 @@ body>header a.current::after {
 }
 
 #metadata {
-  font-size: 0.9em;
+  font-size: 0.8em;
+  font-family: sans-serif;
 }
 
-.tag-list {
-  background-color: var(--bg-alt);
-  box-shadow: 0px 1px 6px var(--shadow);
-
-  a {
-    background-color: var(--bg);
-    color: var(--text-alt);
-    text-decoration: none;
-  }
+.tag {
+  margin-right: 4px;
 }
 
-.icon-prefix {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  column-gap: 0.5ch;
+.tag::before {
+  content: "#";
 }
 
 .icon-prefix::before {
@@ -97,7 +88,8 @@ body>header a.current::after {
   width: 1em;
   mask-size: cover;
   -webkit-mask-size: cover;
-  vertical-align: middle;
+  vertical-align: text-bottom;
+  margin: 1px;
   background-color: var(--text);
 }
 

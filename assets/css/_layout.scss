@@ -37,10 +37,10 @@ body>header {
 #metadata {
   display: flex;
   flex-flow: row wrap;
-  column-gap: 2em;
+  column-gap: 1em;
   row-gap: 0.5em;
   font-size: 0.95em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 body>footer {
@@ -174,19 +174,4 @@ figure {
 
 figcaption {
   color: var(--text-alt);
-}
-
-.tag-list {
-  display: grid;
-  position: absolute;
-  row-gap: 1px;
-  overflow: hidden;
-  z-index: 20;
-  margin-top: 1ch;
-
-  a {
-    padding: 0.5rem 1rem;
-    min-width: 18ch;
-    border: none;
-  }
 }
