@@ -3,8 +3,8 @@
 {{ if hugo.IsProduction }}
     {{ $tocss_options := (dict "targetPath" "style.css" "enableSourceMap" false ) }}
     {{ $css := $scss | resources.ToCSS $tocss_options }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
 {{ else }}
     {{ $css := $scss | resources.ToCSS }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
 {{ end }}

@@ -4,9 +4,15 @@ body {
   color: var(--text);
   background-color: var(--bg);
 
-  font-family: "Noto Serif", "Noto Sans SC", serif;
-  font-size: 20px;
+  font-family: "Lora", "Noto Sans SC", serif;
+  font-size: calc(max(1rem, min(20px, 4vw)));
   text-rendering: optimizeLegibility;
+
+  // Workaround for iOS bug: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+  text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%; 
+  -moz-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
 
   a {
     color: var(--link);
@@ -37,13 +43,13 @@ body>footer {
 
 body>header a::before {
   content: "\00a0";
-  font-family: monospace;
+  font-family: "Fira Code";
   color: var(--accent);
 }
 
 body>header a::after {
   content: "\00a0";
-  font-family: monospace;
+  font-family: "Fira Code";
   color: var(--accent);
 }
 
@@ -64,15 +70,6 @@ body>header a.current::after {
 
 #metadata {
   font-size: 0.9em;
-
-  details>summary::after {
-    font-family: monospace;
-    content: "🞃";
-  }
-
-  details[open]>summary::after {
-    content: "🞁";
-  }
 }
 
 .tag-list {
@@ -106,8 +103,8 @@ body>header a.current::after {
 
 .post-time,
 .status-time {
-  font-family: monospace;
-  font-size: 0.9em;
+  font-family: "Fira Code";
+  font-size: 0.8em;
 }
 
 .post-list-item {
@@ -153,11 +150,11 @@ mark {
 
 nav {
   text-transform: uppercase;
-  letter-spacing: 0.1ch;
+  letter-spacing: 1px;
 }
 
 code {
+  font-size: 0.8em;
+  font-family: "Fira Code";
   background-color: var(--bg-alt);
-  padding: 0 2px;
-  border-radius: 2px;
 }

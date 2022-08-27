@@ -24,14 +24,18 @@
 
     <title>{{ if ne .Title .Site.Title }}{{ .Title | markdownify | plainify }} · {{ end }}{{ .Site.Title }}</title>
     
+    <link rel="preload" href="/fonts/lora-v26-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="prefetch" href="/images/front-cover.webp" as="image" crossorigin>
     {{ partial "default_css.html" }}
+    <link rel="preload" href="/fonts/lora-v26-latin-700.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="/fonts/lora-v26-latin-italic.woff2" as="font" type="font/woff2">
     <link rel="canonical" href="{{ .Permalink }}"/>
 
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
-    <!-- {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }} -->
+    {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
   </head>
 <body>
   <header>

@@ -5,7 +5,7 @@
 <figure>
 {{- end -}}
 
-<img src="{{- $image_source.url | safeURL -}}" alt="{{- .Text -}}"
+<img src="{{- $image_source.url | safeURL -}}" alt="{{- .Text -}}" loading="lazy"
     {{- with $image_size.isSvg }} style="width:100%; height: auto;" {{ end -}}
     {{- with $image_size.width }} width="{{- . -}}" {{ end -}}
     {{- with $image_size.height }} height="{{- . -}}" {{ end -}}
