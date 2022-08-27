@@ -84,12 +84,12 @@ body>header a.current::after {
 .icon-prefix::before {
   content: "";
   display: inline-block;
-  height: 1em;
-  width: 1em;
+  height: 1.2em;
+  width: 1.2em;
   mask-size: cover;
   -webkit-mask-size: cover;
   vertical-align: text-bottom;
-  margin: 1px;
+  margin: 2px;
   background-color: var(--text);
 }
 
