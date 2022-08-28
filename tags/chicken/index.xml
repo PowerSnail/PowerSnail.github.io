@@ -46,7 +46,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>tabular&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>And to convert this into an image, which tightly bounds the table rather than being a full letter sized white page, I rendered the document into a &lt;code>DVI&lt;/code> file and converted it into &lt;code>SVG&lt;/code> with &lt;code>dvisvgm&lt;/code>. The tool automatically crops the image, so it doesn&amp;rsquo;t end being a full letter sized page.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/chicken-abodo.svg" alt="Recipe Summary for Chicken Abodo" style="width:100%; height: auto;" width="389.795196" height="176.521182" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/chicken-abodo.svg" alt="Recipe Summary for Chicken Abodo" loading="lazy" style="width:100%; height: auto;" width="389.795196" height="176.521182" >&lt;/p>
 &lt;p>This is the final result of a printable, succinct, summary card for my chicken abodo recipe. After reading on the web (and fiddling with HTML and CSS) for so long, there&amp;rsquo;s something very satisfying about LaTeX. It just looks nice.&lt;/p>
 &lt;p>I then wrote a &lt;a href="https://github.com/casey/just">Justfile&lt;/a> recipe to automate the process:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">latex-svg name:
