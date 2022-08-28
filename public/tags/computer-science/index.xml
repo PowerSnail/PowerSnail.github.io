@@ -34,7 +34,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">INFO: Appending to fonts to load: DejaVuSans12.pf2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">INFO: Found OVMF image at &lt;span class="s1">&amp;#39;/usr/share/qemu/ovmf-x86_64-code.bin&amp;#39;&lt;/span>.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">INFO: Please give GRUB a moment to show up in QEMU...&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;em>Voila!&lt;/em>&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/opensuse-grub-preview.webp" alt="Screenshot of grub2-theme-preview" width="1200" height="675" >&lt;/p></content><category>posts</category></entry><entry><author><name>PowerSnail</name></author><title type="html">Making &lt;em>Score In URL&lt;/em></title><link rel="alternate">https://powersnail.com/2022/score-in-url/</link><published>Fri, 29 Jul 2022 00:00:00 +0000</published><updated>Fri, 29 Jul 2022 00:00:00 +0000</updated><id>https://powersnail.com/2022/score-in-url/</id><summary type="html">I&amp;rsquo;m excited to publish my new project, Score In URL, a simple, privacy-friendly, sheet music sharing service, where the entire content is encoded in the URL itself as a query parameter.</summary><content type="html">&lt;p>I&amp;rsquo;m excited to publish my new project, &lt;a href="https://powersnail.com/ScoreInUrl">Score In URL&lt;/a>, a simple, privacy-friendly, sheet music sharing service, where the entire content is encoded in the URL itself as a query parameter. It comes with a decent editor, the score, and the audio.&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/opensuse-grub-preview.webp" alt="Screenshot of grub2-theme-preview" loading="lazy" width="1200" height="675" >&lt;/p></content><category>posts</category></entry><entry><author><name>PowerSnail</name></author><title type="html">Making &lt;em>Score In URL&lt;/em></title><link rel="alternate">https://powersnail.com/2022/score-in-url/</link><published>Fri, 29 Jul 2022 00:00:00 +0000</published><updated>Fri, 29 Jul 2022 00:00:00 +0000</updated><id>https://powersnail.com/2022/score-in-url/</id><summary type="html">I&amp;rsquo;m excited to publish my new project, Score In URL, a simple, privacy-friendly, sheet music sharing service, where the entire content is encoded in the URL itself as a query parameter.</summary><content type="html">&lt;p>I&amp;rsquo;m excited to publish my new project, &lt;a href="https://powersnail.com/ScoreInUrl">Score In URL&lt;/a>, a simple, privacy-friendly, sheet music sharing service, where the entire content is encoded in the URL itself as a query parameter. It comes with a decent editor, the score, and the audio.&lt;/p>
 &lt;h2 id="an-easy-way-to-share-musical-scores">An easy way to share musical scores&lt;/h2>
 &lt;p>The inspiration came to me when I was trying to share a little snippet of music on a forum. It was just a short exercise, but I wanted to deliver both the sheet music and the audio. Most forums don&amp;rsquo;t natively support sharing any form of sheet music notation, apart from just using an image. But to open up a composing program, export to an image, upload that image to Imgur, and finally share that link just for a one-line snippet, it&amp;rsquo;s tedious, and it&amp;rsquo;s an overkill. More importantly, an image has no sound. For that, there are more hoops to jump through.&lt;/p>
 &lt;p>I already knew that abcjs has an editor in browser that can play audio, so what I did was asking them to go to &lt;a href="https://www.abcjs.net/abcjs-editor.html">the abcjs editor&lt;/a>, and then, copy &amp;amp; paste my snippet in there. It works; there&amp;rsquo;s image and there&amp;rsquo;s sound, but it&amp;rsquo;s kinda awkward that they have to manually fill in the score, rather than opening a link with the right content already there.&lt;/p>
@@ -70,13 +70,13 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">L: 1/16
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">M: 2/4
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">C2DE FGAB | c2de fgab | c&amp;#39;2ba gfed | c2BA GFED | C8&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The result looks like:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/score-in-url/c_maj.webp" alt="The rendered score of C Major Scale" width="1200" height="230" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/score-in-url/c_maj.webp" alt="The rendered score of C Major Scale" loading="lazy" width="1200" height="230" >&lt;/p>
 &lt;p>You can visit &lt;a href="https://powersnail.com/ScoreInUrl/?s=VDogQyBNYWpvciBTY2FsZQpMOiAxLzE2Ck06IDIvNApDMkRFIEZHQUIgfCBjMmRlIGZnYWIgfCBjJzJiYSBnZmVkIHwgYzJCQSBHRkVEIHwgQzg%3D">this link&lt;/a> to see and hear the C Major scale on &lt;strong>Score In URL&lt;/strong>. Or a number of other examples: &lt;a href="https://powersnail.com/ScoreInUrl/?s=VDogUGFydGl0YSBJSUkgLSBQcmVsdWRpbwpDOiBKLlMuIEJhY2gKUTogMS80PTEyMApNOiAzLzQKTDogMS8xNgpLOiBFbWFqCnoyIGUnZCcgZScyYjJnMmIyIHwgKGVmZWQgZTIpQjJHMkIyIHwgRUJGQiBHQkFCIEdCRkIgfApFZWRjIEJlZGMgQkFHRiAgICB8IEVCRkIgR0JBQiBHQkZCICB8IEVlZGMgQmVkYyBCQUdGIHwKRUZHQSBCY2RlIGZnYWYgICAgfCBnYmVmIGdhYmMnIGQnZSdjJ2QnICB8IGUnYmFiIGdiYWIgZ2JmYiB8CmVlJ2QnYycgYmVjJ2UgYmVhZXwgZ2JmYiBnYmFiIGdiZmIgIHwgZWUnZCdjJyBiZWMnZSBiZWFlIHwKZ2VlZWRlZWVmZWRlIHwgZWVnZWZlZ2VhZWZlIHwgZ2VlZWRlZWVmZWRlIHwKZWVnZWZlZ2VhZWZlIHwgZ2VnZSBnZWdlIGdlZ2UgfCBnZWdkIGdlZ2QgZ2VnZCB8CmdlZz1kIGdlZ2QgZ2VnZCB8IGFlYWMgYWVhYyBhZWFjIHwgYWVhQiBhZWFCIGFlYUIgfApnZWdCIGdlZ0IgZ2VnQiB8IGdlZ0EgZ2VnQSBnZWdBIHwgZmVmQSBmZWZBIGZlZkEgfApmZWZHIGZlZkcgZmVmRyB8IGVlZUcgZWVlRyBlZWVHIHwgZWVlRiBlZWVGIGVlZUYgfApkZWRGIGRlZEYgZGVkRiB8IEVGRUYgR0JFRiBHQkVGIHwgR0FHQSBCZUdBIEJlR0EgfA%3D%3D">First page of Bach&amp;rsquo;s Preludio&lt;/a>, &lt;a href="https://powersnail.com/ScoreInUrl/?s=VDogQWlyIG9uIEcgU3RyaW5nCkM6IEouUy4gQmFjaCAoYXJyLiBBdWd1c3QgV2lsaGVsbWouKQpROiAiTGVudG8iCk06IDQvNApMOiAxLzE2Cks6IENtYWoKfDogRTE2LSB8IEUyKEFGIERDQixDKSAoIXRyaWxsIUIsNy8yQSwvMikgRyw0IHwgRzgtIEcoRV9CLEEsKSAoRF5DKShHRikgfCAKRjgtIEYoREEsRywpIChDQiwpKEZFKSB8IChFNiBeRkcpIChDMkMvMkQvMkUpIChFRCkoREMpIHwgKEIsQSwpKEEsLzJCLC8yQykgKEMyQixBLCkgRyw4IDp8IAp8OiAoQiw0LUIsQy8yQiwvMkEsLzJCLC8yRywpIChHNiBfQiwyKSB8IChBLDJBMi0gQSkoR0ZFKSB7L0V9RjQtIEYvMihFLzJELzJDLzJCLEEsKSB8IF5HLEEsKEIsMi0gQixDKShEMi0gREUpRjItIEYyRTIgfAooREMpKEIsQSwpIChCLEMvMkQvMkNCLCkgQSw4IHwgKEM0LSBDRURDKSAoQTYgR15GKSB8ICh7L0V9REdHLDIpIChBLDNCLC8yQy8yKSAoQiw3LzJBLC8yKSBHLDQgfCAKQzYgKEVEKSBENiAoRkUpIHwgRTYgKEdGKSBGOCB8IEcsNC0gRyxCLERGIEZERTItIEUyKEVGLzJHLzIpIHwgCihDNC0gQ0VHX0IpIChCMiBBNCBDMikgfCAoQixEIEY0IEEsMikgKEcsMkRFLzJGLzItIEYpKEUyRCB8IEMvMkIsLzIpKEEsMkIsKSAoQiwyey9BLH1CLEMpIEM4IDp8Cg%3D%3D">Air on G String&lt;/a>.&lt;/p>
 &lt;p>To learn more about writing ABC notation, visit their &lt;a href="https://abcnotation.com/">official website&lt;/a>. There are plenty of examples and an exhaustive documentation. For quick references, this &lt;a href="http://www.stephenmerrony.co.uk/uploads/ABCquickRefv0_6.pdf">cheat sheet&lt;/a> is superb.&lt;/p>
 &lt;p>Thanks to &lt;a href="https://www.abcjs.net/">abcjs&lt;/a>, it&amp;rsquo;s super easy to embed such a system in a web page. Abcjs provides rendering, audio, and error messages which integrate nicely with CodeMirror, the text editor.&lt;/p>
 &lt;h2 id="text-editing">Text Editing&lt;/h2>
 &lt;p>To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, &lt;a href="https://codemirror.net/">CodeMirror&lt;/a> is used. You can see the errors marked by red dots, like a real text editor used by programmers.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/score-in-url/Screenshot_error.webp" alt="Screenshot showcasing error reporting" width="1702" height="346" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/score-in-url/Screenshot_error.webp" alt="Screenshot showcasing error reporting" loading="lazy" width="1702" height="346" >&lt;/p>
 &lt;p>The code highlighting is still not comprehensive at the moment. I&amp;rsquo;ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.&lt;/p>
 &lt;h2 id="not-in-the-scope">Not in the scope&lt;/h2>
 &lt;p>I&amp;rsquo;ve decided against using a compression algorithm. A simple base64 encoder is available everywhere, whereas compression requires a 3rd party library, and might be subject to the specific quirks of that implementation. If the compression has a bug, it infects every URL shared from &lt;strong>Score In URL&lt;/strong>. If that algorithm ever gets an update that is not backwards-compatible, all the old URLs are screwed. Furthermore, if &lt;strong>Score In URL&lt;/strong> disappears, a plain base64 string is simple to use: just copy &amp;amp; paste into any base64 decoder. It requires no programming skill, no tool chains, no setup. On the other hand, a compressed string is much harder to decode, especially if the user has no convenient way of installing the exact version of the compression algorithm I used.&lt;/p>
@@ -169,15 +169,15 @@ Without extra line in between&lt;/p>
 &lt;p>Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="images">Images&lt;/h2>
-&lt;p>Here is an inline image &lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" width="128" height="128" >. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p>
+&lt;p>Here is an inline image &lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" loading="lazy" width="128" height="128" >. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p>
 &lt;p>Images put on their own line is better:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" width="128" height="128" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" loading="lazy" width="128" height="128" >&lt;/p>
 &lt;p>A bigger image:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-big.webp" alt="test image" width="400" height="400" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-big.webp" alt="test image" loading="lazy" width="400" height="400" >&lt;/p>
 &lt;p>A gigantic image:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-gigantic.webp" alt="test image" width="4000" height="4000" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-gigantic.webp" alt="test image" loading="lazy" width="4000" height="4000" >&lt;/p>
 &lt;p>A svg image:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail.svg" alt="svg image" style="width:100%; height: auto;" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail.svg" alt="svg image" loading="lazy" style="width:100%; height: auto;" >&lt;/p>
 &lt;p>A figure written in HTML:&lt;/p>
 &lt;figure>
 &lt;img alt="Image inside a figure"
@@ -594,7 +594,7 @@ $$&lt;/p>
 &lt;p>&lt;code>FAULT&lt;/code> is a special state, that the DFA will halt whenever it meets &lt;code>FAULT&lt;/code>, so that we do not have to process the rest of the string.&lt;/p>
 &lt;h3 id="dfa---transition">DFA - Transition&lt;/h3>
 &lt;p>The transition function is a matrix that maps (state, input char) to state.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/valid-number-DFA.svg" alt="DFA Transformation matrix" style="width:100%; height: auto;" width="106.062271" height="69.394768" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/valid-number-DFA.svg" alt="DFA Transformation matrix" loading="lazy" style="width:100%; height: auto;" width="106.062271" height="69.394768" >&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -681,7 +681,7 @@ $$&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="https://powersnail.com/images/valid_number_dfa.svg" alt="grammar" style="width:100%; height: auto;" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/valid_number_dfa.svg" alt="grammar" loading="lazy" style="width:100%; height: auto;" >&lt;/p>
 &lt;h3 id="dfa---termination">DFA - Termination&lt;/h3>
 &lt;p>The DFA will terminate when&lt;/p>
 &lt;ul>
@@ -1183,7 +1183,7 @@ class Node { public: Node *left, *right, *parent; int key; }; class BST { privat
 &lt;h2 id="basic-idea">Basic Idea&lt;/h2>
 &lt;p>Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p>
 &lt;p>In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/binarysearchtree.jpg" alt="Binary Search Tree" width="2445" height="2308" >&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/binarysearchtree.jpg" alt="Binary Search Tree" loading="lazy" width="2445" height="2308" >&lt;/p>
 &lt;p>The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code>nil&lt;/code> sentinel node, which is not in the data structure but a &lt;a href="#sentinelNode">useful element&lt;/a> in our program.&lt;/p>
 &lt;h2 id="traversals">Traversals&lt;/h2>
 &lt;p>The recursive in-order traversal is easy to implement:&lt;/p>
@@ -1233,7 +1233,7 @@ class Node { public: Node *left, *right, *parent; int key; }; class BST { privat
 &lt;h4 id="prev-pointing-at-left">&lt;code>prev&lt;/code> Pointing at left&lt;/h4>
 &lt;p>Left tree is already printed (we consider &lt;code>nil&lt;/code> as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code>x&lt;/code> before entering right.&lt;/p>
 &lt;p>There is a slight complication if &lt;code>x&lt;/code> is a leaf, as both children are &lt;code>nil&lt;/code>. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code>x&lt;/code> forever.&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/images/fromlefttoright.jpg" alt="From Left to Right" width="2441" height="2067" >{:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/images/fromlefttoright.jpg" alt="From Left to Right" loading="lazy" width="2441" height="2067" >{:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p>
 &lt;p>The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">key&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">right&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">nil&lt;/span>&lt;span class="p">)&lt;/span>
