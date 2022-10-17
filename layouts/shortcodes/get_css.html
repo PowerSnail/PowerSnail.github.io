@@ -1,4 +1,0 @@
-{{ with .Get 0 }}
-{{ $css := resources.Get . | resources.Minify | fingerprint }} 
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-{{ end }}

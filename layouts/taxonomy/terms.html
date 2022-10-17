@@ -1,9 +1,0 @@
-{{ define "main" }}
-<article>
-  <h1>Tags</h1>
-  <hr class="title-line" />
-  {{ range .Data.Terms.ByCount }}
-  <p><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></p>
-  {{ end }}
-</article>
-{{ end }}

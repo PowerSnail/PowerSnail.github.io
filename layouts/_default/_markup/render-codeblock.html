@@ -1,6 +1,0 @@
-{{- $option := "noClasses=false,tabWidth=2" -}}
-{{- if eq .Type "" -}}
-  {{ transform.Highlight .Inner "plaintext" $option }}
-{{- else -}}
-  {{ transform.Highlight .Inner .Type $option }}
-{{- end -}}
