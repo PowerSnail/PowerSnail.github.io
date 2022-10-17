@@ -37,14 +37,17 @@ deploy-test base destination:
     hugo --minify --baseURL {{ base }} --destination {{ destination }} --forceSyncStatic --noChmod --gc --ignoreCache --buildDrafts --cleanDestinationDir
     parcel-css -m {{ destination }}/style.css --output-file {{ destination }}/style.css
 
-deploy:
-    rm -rf public
-    mkdir public
-    hugo --minify 
-    parcel-css -m public/style.css --output-file public/style.css
-    python tool_scripts/check_dead_links.py public/
-    touch public/.nojekyll
+build:
+    rm -rf build/public
+    mkdir -p build/public
+    hugo --minify --destination build/public
+    lightningcss -m build/public/style.css --output-file build/public/style.css
+    python tool_scripts/check_dead_links.py build/public/
+    touch build/public/.nojekyll
 
 publish:
-    git add public/ && git commit -m "deployment" && git push || true
-    git subtree push --prefix public origin gh-pages
+    rm -rf build/temp
+    rm -rf build/public/.git
+    git clone --depth 1 --branch gh-pages --single-branch git@github.com:PowerSnail/PowerSnail.github.io.git build/temp
+    mv build/temp/.git build/public/.git
+    cd build/public && git add . && git commit -m "deployment" && git push || true

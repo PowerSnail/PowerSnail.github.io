@@ -6,3 +6,4 @@ resources/_gen
 .python-version
 .mscbackup/
 .venv/
+build/
