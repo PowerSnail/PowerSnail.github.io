@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns="http://www.w3.org/2005/Atom"><title>markdown on SnailShell</title><link>https://powersnail.com/tags/markdown/</link><link rel="self" href="https://powersnail.com/tags/markdown/index.xml"/><updated>Wed, 06 Jul 2022 00:00:00 +0000</updated><id>https://powersnail.com/tags/markdown/</id><author><name>PowerSnail</name></author><icon>https://powersnail.com/favicon.ico</icon><description>Recent content in markdown on SnailShell</description><generator>Hugo -- gohugo.io</generator><copyright>en-us</copyright><entry><author><name>PowerSnail</name></author><title type="html">Test Md Page</title><link rel="alternate">https://powersnail.com/2022/test-md-page/</link><published>Wed, 06 Jul 2022 00:00:00 +0000</published><updated>Wed, 06 Jul 2022 00:00:00 +0000</updated><id>https://powersnail.com/2022/test-md-page/</id><summary type="html">When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon</summary><content type="html">&lt;p>When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon to break pages that you are not looking. Maybe tables lose their responsiveness, sentences are too close together, empty pages look weird, etc. I&amp;rsquo;ve written this document to test some common pitfalls that I experienced when I was tweaking my own blog.&lt;/p>
+&lt;h2 id="this-is-a-second-level-heading">This is a second-level heading&lt;/h2>
+&lt;h3 id="this-is-a-third-level-heading">This is a third-level heading&lt;/h3>
+&lt;h4 id="this-is-a-fourth-level-heading">This is a fourth-level heading&lt;/h4>
+&lt;p>A paragraph under a fourth level heading. There&amp;rsquo;s really no need to get to this level of heading, however.&lt;/p>
+&lt;h5 id="this-is-a-fifth-level-heading">This is a fifth-level heading&lt;/h5>
+&lt;p>A paragraph under a fifth level heading.&lt;/p>
+&lt;h6 id="this-is-a-sixth-level-heading">This is a sixth-level heading&lt;/h6>
+&lt;p>A paragraph under a sixth level heading.&lt;/p>
+&lt;h3 id="a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading">A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading&lt;/h3>
+&lt;h2 id="shapes-of-paragraphs">Shapes of paragraphs&lt;/h2>
+&lt;p>&lt;strong>This is a long paragraph. (Content from &lt;em>Pride and Prejudice&lt;/em>)&lt;/strong>&lt;/p>
+&lt;p>An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>&lt;strong>This is a succession of paragraphs that each contains a short sentence, but not with an extra white line. According to convention, they should be rendered as a single paragraph.&lt;/strong>&lt;/p>
+&lt;p>A dog is here.
+A cat is there.
+Look at that.
+A spoon drops into the lake.
+Ripples radiate to the shore.
+The moon wrinkled in the water.&lt;/p>
+&lt;p>&lt;strong>This is a succession of paragraphs that each contains a short sentence, with an extra line in between.&lt;/strong>&lt;/p>
+&lt;p>Twelve o’clock.&lt;/p>
+&lt;p>Along the reaches of the street&lt;/p>
+&lt;p>Held in a lunar synthesis,&lt;/p>
+&lt;p>Whispering lunar incantations&lt;/p>
+&lt;p>Disolve the floors of memory&lt;/p>
+&lt;p>And all its clear relations,&lt;/p>
+&lt;p>Its divisions and precisions,&lt;/p>
+&lt;p>Every street lamp that I pass&lt;/p>
+&lt;p>Beats like a fatalistic drum,&lt;/p>
+&lt;p>And through the spaces of the dark&lt;/p>
+&lt;p>Midnight shakes the memory&lt;/p>
+&lt;p>As a madman shakes a dead geranium.&lt;/p>
+&lt;p>by T.S. Eliot, &lt;em>Rhapsody on a Windy Night&lt;/em>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;h2 id="length-of-line">Length of line&lt;/h2>
+&lt;p>One line should contain about 2~3 alphabets&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>:&lt;/p>
+&lt;p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz&lt;mark>abcdefghijklmnopqrstuvwxyz&lt;/mark>&lt;/p>
+&lt;h2 id="punctuations">Punctuations&lt;/h2>
+&lt;p>Comma, period, question marks and exclamation marks.&lt;/p>
+&lt;p>&lt;mark>Is this a question mark? Yes!&lt;/mark>&lt;/p>
+&lt;p>Quotation marks should have the correct orientations:&lt;/p>
+&lt;p>&lt;mark>&amp;ldquo;Quotations marks &amp;lsquo;rocks&amp;rsquo;&amp;quot;&lt;/mark>&lt;/p>
+&lt;p>Colon, and semicolon:&lt;/p>
+&lt;p>&lt;mark>Here: a colon; which is nothing like a semicolon.&lt;/mark>&lt;/p>
+&lt;p>Ellipses should be rendered as one character, instead of 3 dots.&lt;/p>
+&lt;p>&lt;mark>Ellipses&amp;hellip;&lt;/mark>&lt;/p>
+&lt;p>Hyphen and dashes. A &lt;strong>hyphen&lt;/strong> is the shortest, an &lt;strong>en dash&lt;/strong> slightly longer, and an &lt;strong>em dash&lt;/strong> twice as long as an &lt;strong>en dash&lt;/strong>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;mark>One-year-old puppy&lt;/mark>&lt;/li>
+&lt;li>&lt;mark>1997&amp;ndash;1999&lt;/mark>&lt;/li>
+&lt;li>&lt;mark>but&amp;mdash;&lt;/mark>&lt;/li>
+&lt;/ul>
+&lt;p>Apostrophes should point downwards&lt;/p>
+&lt;p>&lt;mark>It&amp;rsquo;s me. In the &amp;rsquo;70s. Rock &amp;rsquo;n&amp;rsquo; Roll&lt;/mark>&lt;/p>
+&lt;p>Brackets&lt;/p>
+&lt;p>&lt;mark>(regular ones), [square ones], {curly ones}&lt;/mark>&lt;/p>
+&lt;p>Special characters&lt;/p>
+&lt;ul>
+&lt;li>Copyright: &lt;mark>© 2022&lt;/mark> (should appear in line with text)&lt;/li>
+&lt;li>Trademark: &lt;mark>Brand™, and Registered Tradmark®&lt;/mark> (should appear as superscripts)&lt;/li>
+&lt;/ul>
+&lt;p>Slashes&lt;/p>
+&lt;p>&lt;mark>Slash/forward\backward&lt;/mark>&lt;/p>
+&lt;p>Foot and Inches: &lt;mark>12' 13&amp;quot;&lt;/mark>&lt;/p>
+&lt;h2 id="ligatures">Ligatures&lt;/h2>
+&lt;p>There, figure, fft, ffi.&lt;/p>
+&lt;h2 id="block-quote">Block quote&lt;/h2>
+&lt;blockquote>
+&lt;p>Blockquote directly under a title&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Multiline blockquote
+Without extra line in between&lt;/p>
+&lt;/blockquote>
+&lt;p>A regular line.&lt;/p>
+&lt;blockquote>
+&lt;p>Multiline blockquote&lt;/p>
+&lt;p>With extra line in between&lt;/p>
+&lt;/blockquote>
+&lt;p>A very long blockquote:&lt;/p>
+&lt;blockquote>
+&lt;p>Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="images">Images&lt;/h2>
+&lt;p>Here is an inline image &lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" loading="lazy" width="128" height="128" >. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p>
+&lt;p>Images put on their own line is better:&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" loading="lazy" width="128" height="128" >&lt;/p>
+&lt;p>A bigger image:&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-big.webp" alt="test image" loading="lazy" width="400" height="400" >&lt;/p>
+&lt;p>A gigantic image:&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-gigantic.webp" alt="test image" loading="lazy" width="4000" height="4000" >&lt;/p>
+&lt;p>A svg image:&lt;/p>
+&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail.svg" alt="svg image" loading="lazy" style="width:100%; height: auto;" >&lt;/p>
+&lt;p>A figure written in HTML:&lt;/p>
+&lt;figure>
+&lt;img alt="Image inside a figure"
+src="./snail-big.webp">
+&lt;figcaption>
+Image inside a figure
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Some Markdown parser will always treat images as an inline element. There&amp;rsquo;s nothing an SSG or theme maker can do. So this &lt;code>figure&lt;/code> is written as raw HTML.&lt;/p>
+&lt;h2 id="lists">Lists&lt;/h2>
+&lt;ol>
+&lt;li>A numbered list&lt;/li>
+&lt;li>With many elements&lt;/li>
+&lt;li>And a multi-
+line item&lt;/li>
+&lt;li>Then, some
+&lt;ol>
+&lt;li>sub&lt;/li>
+&lt;li>items&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>An unnumbered list
+&lt;ul>
+&lt;li>sub list
+&lt;ul>
+&lt;li>sub sub list&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>A lot of levels
+&lt;ul>
+&lt;li>interlacing with
+&lt;ul>
+&lt;li>other
+&lt;ul>
+&lt;li>going deeper&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>shalower
+&lt;ul>
+&lt;li>deeper
+&lt;ul>
+&lt;li>and deeper&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Back out again&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>And see if the rendering is sensible&lt;/li>
+&lt;/ul>
+&lt;h2 id="code-blocks">Code blocks&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">Block with no language set.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">block_with_a_language&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">python&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">indent&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;multi&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;level&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;code&amp;#34;&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">space&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">indent&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">space&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">space&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">5&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">Block with no language set that is super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;A block with a super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long line&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tables">Tables&lt;/h2>
+&lt;p>A simple table with very few columns and rows:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>simple&lt;/th>
+&lt;th>table&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>item 1&lt;/td>
+&lt;td>item 2&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>A table with alignment parameters:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">alignment&lt;/th>
+&lt;th style="text-align:center">test&lt;/th>
+&lt;th style="text-align:right">table&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">item 1&lt;/td>
+&lt;td style="text-align:center">item 2&lt;/td>
+&lt;td style="text-align:right">item3&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">item 1&lt;/td>
+&lt;td style="text-align:center">item 2&lt;/td>
+&lt;td style="text-align:right">item3&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">item 1&lt;/td>
+&lt;td style="text-align:center">item 2&lt;/td>
+&lt;td style="text-align:right">item3&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">item 1&lt;/td>
+&lt;td style="text-align:center">item 2&lt;/td>
+&lt;td style="text-align:right">item3&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>A table with many columns&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;th>table&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;td>row 1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;td>row 2&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>A table with a very fat column:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>fat&lt;/th>
+&lt;th>column&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>item 1&lt;/td>
+&lt;td>item 2 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="some-random-tests">Some random tests&lt;/h2>
+&lt;ul>
+&lt;li>Language: 中文测试&lt;/li>
+&lt;li>HTML embeded: &lt;br>&lt;strong>&lt;code>&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;&lt;/code>&lt;/strong>&lt;/li>
+&lt;li>References&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;/li>
+&lt;/ul>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Austen, Jane. &lt;em>Pride and Prejudice&lt;/em>. Standard Ebooks, 2014.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>Eliot, T. S. &lt;em>Poetry&lt;/em>. Standard Ebooks, 2017.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>Butterick, Matthew. &lt;em>Practical Typography&lt;/em>. &lt;a href="https://practicaltypography.com/line-length.html">https://practicaltypography.com/line-length.html&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>A test for reference&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></content><category>posts</category></entry></feed>
