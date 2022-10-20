@@ -35,7 +35,8 @@ serve-at target:
 
 deploy-test base destination:
     hugo --minify --baseURL {{ base }} --destination {{ destination }} --forceSyncStatic --noChmod --gc --ignoreCache --buildDrafts --cleanDestinationDir
-    parcel-css -m {{ destination }}/style.css --output-file {{ destination }}/style.css
+    lightningcss -m {{ destination }}/style.css --output-file {{ destination }}/style.css
+    python tool_scripts/check_dead_links.py {{ destination }}
 
 build:
     rm -rf build/public
