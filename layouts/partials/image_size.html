@@ -11,8 +11,8 @@
         {{- $svgContent:= (resources.GetRemote .path).Content -}}
     {{- end -}}
     {{- $viewBoxSizes := split (index (split (index (split $svgContent `viewBox=`) 1) `'`) 1) ` ` -}}
-    {{- $width = float (index $viewBoxSizes 2) -}}
-    {{- $height = float (index $viewBoxSizes 3) -}}
+    {{- $width = math.Round (float (index $viewBoxSizes 2)) -}}
+    {{- $height = math.Round (float (index $viewBoxSizes 3)) -}}
 {{- else -}}
     {{- if .isLocal -}}
         {{- with (imageConfig .path) -}}
