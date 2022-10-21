@@ -10,7 +10,6 @@
     {{ with .Description }}
     <meta name="description" content="{{ . | markdownify | plainify }}">
     {{ end }}
-    {{ hugo.Generator }}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,11 +21,8 @@
 
     <title>{{ if ne .Title .Site.Title }}{{ .Title | markdownify | plainify }} · {{ end }}{{ .Site.Title }}</title>
     
-    <link rel="preload" href="/fonts/lora-v26-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="prefetch" href="/images/front-cover.webp" as="image" crossorigin>
     {{ partial "default_css.html" }}
-    <link rel="preload" href="/fonts/lora-v26-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/lora-v26-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="canonical" href="{{ .Permalink }}"/>
 
     {{ range .AlternativeOutputFormats -}}
