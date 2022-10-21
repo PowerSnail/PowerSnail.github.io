@@ -34,16 +34,15 @@ serve-at target:
     hugo serve -D --port 1313 --baseURL="{{ target }}" --appendPort=false
 
 deploy-test base destination:
-    hugo --minify --baseURL {{ base }} --destination {{ destination }} --forceSyncStatic --noChmod --gc --ignoreCache --buildDrafts --cleanDestinationDir
-    lightningcss -m {{ destination }}/style.css --output-file {{ destination }}/style.css
-    python tool_scripts/check_dead_links.py {{ destination }}
+    hugo --baseURL {{ base }} --destination {{ destination }} --forceSyncStatic --noChmod --gc --ignoreCache --buildDrafts --cleanDestinationDir
+    just post-process {{ destination }}
 
 build:
+    hugo mod clean
     rm -rf build/public
     mkdir -p build/public
-    hugo --minify --destination build/public
-    lightningcss -m build/public/style.css --output-file build/public/style.css
-    python tool_scripts/check_dead_links.py build/public/
+    hugo --destination build/public
+    just post-process build/public
     touch build/public/.nojekyll
 
 publish:
@@ -52,3 +51,18 @@ publish:
     git clone --depth 1 --branch gh-pages --single-branch git@github.com:PowerSnail/PowerSnail.github.io.git build/temp
     mv build/temp/.git build/public/.git
     cd build/public && git add . && git commit -m "deployment" && git push || true
+
+post-process sitedir:
+    lightningcss -m "{{ sitedir }}/style.css" --output-file "{{ sitedir }}/style.css"
+    python tool_scripts/check_dead_links.py "{{ sitedir }}/"
+    fd ".html" "{{ sitedir }}/"  --exec just format-html 
+
+format-html path:
+    #!/bin/bash
+    output=$(tidy --wrap 0 --indent yes --drop-empty-elements no -m -q {{ path }} 2>&1)
+    if [[ $? != 0 ]] 
+    then
+        echo {{ path }}
+        echo $output
+    fi
+    
