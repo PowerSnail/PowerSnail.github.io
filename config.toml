@@ -2,7 +2,6 @@ baseURL = "https://powersnail.com/"
 languageCode = "en-us"
 title = "SnailShell"
 hasCJKLanguage = true
-paginate = 16
 ignorefiles = ["output"]
 summaryLength = 20
 
