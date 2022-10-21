@@ -151,7 +151,7 @@ x = x -> parent;
 
 Insertion always occur at leaf in a BST. Generally, we need to 1) find a proper leaf as the parent of our new node and 2) insert it into the proper child of the leaf.
 
-## <a name="sentinelNode"></a> Sentinel Node
+## <a id="sentinelNode"></a> Sentinel Node
 
 How is a sentinel node useful? There are several uses of it, and the most important one is to replace `NULL` for representing a non-existing element. It guards against null pointers.
 
