@@ -5,7 +5,7 @@
 
 {{- return (
     .Content 
-    | replaceRE $re_table "<div class=table-wrapper> ${1} </div>" 
+    | replaceRE $re_table "<div class=table-wrapper\"> ${1} </div>" 
     | replaceRE $re_foot_notes ""
     | replaceRE $re_figure "${1}"
     | replaceRE $re_code_block_tabindex "${1}"
