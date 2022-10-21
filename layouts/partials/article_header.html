@@ -4,9 +4,6 @@
       <a href="/tags/">Tags /</a>
     {{ end }}
     {{ .Title | .RenderString }}
-    {{ if and .Paginator (ne .Paginator.PageNumber 1) }}
-      <small>/ Page {{.Paginator.PageNumber}}</small>
-    {{ end }}
     {{ partial "draft.html" .}}
   </h1>
 
