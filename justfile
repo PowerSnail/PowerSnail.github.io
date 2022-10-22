@@ -33,21 +33,22 @@ serve:
 serve-at target:
     hugo serve -D --port 1313 --baseURL="{{ target }}" --appendPort=false
 
-deploy-test base destination:
-    hugo --baseURL {{ base }} --destination {{ destination }} --forceSyncStatic --noChmod --gc --ignoreCache --buildDrafts --cleanDestinationDir
-    just post-process {{ destination }}
-
-build:
+build *flags:
     hugo mod clean
     rm -rf build/public
     mkdir -p build/public
-    hugo --destination build/public
+    hugo --destination build/public {{flags}}
     just post-process build/public
-    touch build/public/.nojekyll
+
+deploy-debug destination:
+    just build --buildDrafts
+    rm -rf "{{ destination }}/*"
+    cp -r build/public/* "{{ destination }}/"
 
 publish:
+    just build
+    touch build/public/.nojekyll
     rm -rf build/temp
-    rm -rf build/public/.git
     git clone --depth 1 --branch gh-pages --single-branch git@github.com:PowerSnail/PowerSnail.github.io.git build/temp
     mv build/temp/.git build/public/.git
     cd build/public && git add . && git commit -m "deployment" && git push || true
