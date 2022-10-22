@@ -54,6 +54,7 @@ publish:
 
 post-process sitedir:
     lightningcss -m "{{ sitedir }}/style.css" --output-file "{{ sitedir }}/style.css"
+    python tool_scripts/generate_responsive_images.py "{{ sitedir }}/"
     python tool_scripts/check_dead_links.py "{{ sitedir }}/"
     fd ".html" "{{ sitedir }}/"  --exec just format-html 
 

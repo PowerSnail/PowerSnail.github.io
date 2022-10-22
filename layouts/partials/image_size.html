@@ -1,6 +1,9 @@
 {{- $width := 0 -}}
 {{- $height := 0 -}}
 {{- $isSvg := false -}}
+{{- $img480w := false -}}
+{{- $img800w := false -}}
+{{- $img1200w := false -}}
 
 {{- if (strings.HasSuffix .path ".svg") -}}
     {{- $isSvg = true -}}
@@ -18,6 +21,18 @@
         {{- with (imageConfig .path) -}}
             {{- $width = .Width -}}
             {{- $height = .Height -}}
+            {{- end -}}
+        {{- if gt $width 480 -}}
+            {{- $new_name := printf "%s%s%s" (path.BaseName .path) "-480w" (path.Ext .path) -}}
+            {{- $img480w = replace .url (path.Base .path) $new_name -}}
+        {{- end -}}
+        {{- if gt $width 800 -}}
+            {{- $new_name := printf "%s%s%s" (path.BaseName .path) "-800w" (path.Ext .path) -}}
+            {{- $img800w = replace .url (path.Base .path) $new_name -}}
+        {{- end -}}
+        {{- if gt $width 1200 -}}
+            {{- $new_name := printf "%s%s%s" (path.BaseName .path) "-1200w" (path.Ext .path) -}}
+            {{- $img1200w = replace .url (path.Base .path) $new_name -}}
         {{- end -}}
     {{- else -}}
         {{- $image := (resources.GetRemote .path) -}}
@@ -26,4 +41,4 @@
     {{- end -}}
 {{- end -}}
 
-{{- return dict "width" $width "height" $height "isSvg" $isSvg -}}
+{{- return dict "width" $width "height" $height "isSvg" $isSvg "img480w" $img480w "img800w" $img800w "img1200w" $img1200w -}}

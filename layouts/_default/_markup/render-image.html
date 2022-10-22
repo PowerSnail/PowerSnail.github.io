@@ -6,6 +6,11 @@
 {{- end -}}
 
 <img src="{{- $image_source.url | safeURL -}}" alt="{{- .Text -}}"
+    srcset="
+        {{- with $image_size.img480w }}{{ . }} 480w,{{- end -}}
+        {{- with $image_size.img800w }}{{ . }} 800w,{{- end -}}
+        {{- with $image_size.img1200w }}{{ . }} 1200w,{{- end -}}
+    {{ $image_source.url }} {{ $image_size.width }}w"
     {{- with $image_size.isSvg }} style="width:100%; height: auto;" {{ end -}}
     {{- with $image_size.width }} width="{{- . -}}" {{ end -}}
     {{- with $image_size.height }} height="{{- . -}}" {{ end -}}
