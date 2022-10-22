@@ -1,5 +1,5 @@
 {{ $re_foot_notes := `(?ms)^<div class="footnotes" role="doc-endnotes">\s*<hr>\s*(.*)\s</div>` }} 
-{{ $re_figure := `(?ms)^<p>\s*(<figure>\s*.*\s*</figure>)\s*</p>` }} 
+{{ $re_figure := "<p>(<figure>(?:.|\n)+?</figure>)</p>" }} 
 {{ $re_table := "(<table>(?:.|\n)+?</table>)" }} 
 {{ $re_code_block_tabindex := `(<pre )(tabindex="0")` }} 
 
