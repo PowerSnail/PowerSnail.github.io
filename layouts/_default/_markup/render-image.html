@@ -18,7 +18,7 @@
 
 {{- if .Title -}}
     <figcaption>
-        {{ .Title | .Page.RenderString (dict "display" "block" "markup" "markdown") }}
+        {{ .Title | .Page.RenderString (dict "markup" "markdown") }}
     </figcaption>
 </figure>
 {{- end -}}
