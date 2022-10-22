@@ -1,10 +1,9 @@
-  <div id="site-title" >
-    <a href="{{ .Site.BaseURL }}"
-      {{ if eq .RelPermalink "/" }}
-        class="current"
-      {{ end }}
-    >{{ .Site.Title }}</a>
-  </div>
+<a href="{{ .Site.BaseURL }}"
+  {{ if eq .RelPermalink "/" }}
+    class="current"
+  {{ end }}
+  id="site-title"
+>{{ .Site.Title }}</a>
 <nav>
   <a type="button" href="/posts/"
     {{ if eq .RelPermalink "/posts/" }}

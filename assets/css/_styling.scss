@@ -27,17 +27,18 @@ body>header,
 body>footer {
   border-top: 1px solid var(--border);
   border-bottom: 1.7px solid var(--border);
+  background: url(/images/front-cover.webp) no-repeat;
+  background-size: cover;
+  background-color: var(--bg);
 
   a {
     text-decoration: none;
+    text-align: center;
     color: var(--text);
   }
 }
 
-#site-title,
-body>footer {
-  background: url(/images/front-cover.webp) no-repeat;
-  background-size: cover;
+header nav {
   background-color: var(--bg);
 }
 
