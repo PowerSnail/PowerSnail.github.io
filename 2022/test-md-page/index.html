@@ -1,23 +1,685 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-security-policy content="default-src 'self'; img-src 'self' https://snailshell.goatcounter.com/count https://mirrors.creativecommons.org/; style-src 'self' 'unsafe-inline'"><meta http-equiv=content-type content="text/html;charset=utf-8;x-content-type-options=nosniff"><meta name=author content="PowerSnail"><meta name=description content="A Markdown document that tests various properties of a static site generator."><meta name=generator content="Hugo 0.104.1"><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#af3000><meta name=msapplication-TileColor content="#000000"><meta name=theme-color content="#af3000"><title>Test Md Page · SnailShell</title><link rel=preload href=/fonts/lora-v26-latin-regular.woff2 as=font type=font/woff2 crossorigin><link rel=prefetch href=/images/front-cover.webp as=image crossorigin><link rel=stylesheet href=/style.css><link rel=preload href=/fonts/lora-v26-latin-700.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/lora-v26-latin-italic.woff2 as=font type=font/woff2 crossorigin><link rel=canonical href=https://powersnail.com/2022/test-md-page/></head><body><header><div id=site-title><a href=https://powersnail.com/>SnailShell</a></div><nav><a type=button href=/posts/>Posts</a>
-<a type=button href=/status/>Status</a>
-<a type=button href=/about/>About</a></nav></header><img class=goatcounter alt width=1 height=1 src="https://snailshell.goatcounter.com/count?p=%2f2022%2ftest-md-page%2f&t=Test%20Md%20Page"><main><article><header><h1>Test Md Page</h1><hr><div id=metadata><span class="icon-prefix calendar-event">2022-07-06</span>
-<span class="icon-prefix calculator">1271 words</span>
-<span class="icon-prefix clock">3 minutes read</span>
-<span class="icon-prefix tags"><a class=tag href=/tags/computer-science>computer science</a> <a class=tag href=/tags/markdown>markdown</a> <a class=tag href=/tags/blog>blog</a></span></div></header><img src=/2022/test-md-page/cover.svg alt="Cover Image" loading=lazy style=width:100%;height:auto><p>When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon to break pages that you are not looking. Maybe tables lose their responsiveness, sentences are too close together, empty pages look weird, etc. I&rsquo;ve written this document to test some common pitfalls that I experienced when I was tweaking my own blog.</p><h2 id=this-is-a-second-level-heading>This is a second-level heading</h2><h3 id=this-is-a-third-level-heading>This is a third-level heading</h3><h4 id=this-is-a-fourth-level-heading>This is a fourth-level heading</h4><p>A paragraph under a fourth level heading. There&rsquo;s really no need to get to this level of heading, however.</p><h5 id=this-is-a-fifth-level-heading>This is a fifth-level heading</h5><p>A paragraph under a fifth level heading.</p><h6 id=this-is-a-sixth-level-heading>This is a sixth-level heading</h6><p>A paragraph under a sixth level heading.</p><h3 id=a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading>A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading</h3><h2 id=shapes-of-paragraphs>Shapes of paragraphs</h2><p><strong>This is a long paragraph. (Content from <em>Pride and Prejudice</em>)</strong></p><p>An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup></p><p><strong>This is a succession of paragraphs that each contains a short sentence, but not with an extra white line. According to convention, they should be rendered as a single paragraph.</strong></p><p>A dog is here.
-A cat is there.
-Look at that.
-A spoon drops into the lake.
-Ripples radiate to the shore.
-The moon wrinkled in the water.</p><p><strong>This is a succession of paragraphs that each contains a short sentence, with an extra line in between.</strong></p><p>Twelve o’clock.</p><p>Along the reaches of the street</p><p>Held in a lunar synthesis,</p><p>Whispering lunar incantations</p><p>Disolve the floors of memory</p><p>And all its clear relations,</p><p>Its divisions and precisions,</p><p>Every street lamp that I pass</p><p>Beats like a fatalistic drum,</p><p>And through the spaces of the dark</p><p>Midnight shakes the memory</p><p>As a madman shakes a dead geranium.</p><p>by T.S. Eliot, <em>Rhapsody on a Windy Night</em><sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup></p><h2 id=length-of-line>Length of line</h2><p>One line should contain about 2~3 alphabets<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>:</p><p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz<mark>abcdefghijklmnopqrstuvwxyz</mark></p><h2 id=punctuations>Punctuations</h2><p>Comma, period, question marks and exclamation marks.</p><p><mark>Is this a question mark? Yes!</mark></p><p>Quotation marks should have the correct orientations:</p><p><mark>&ldquo;Quotations marks &lsquo;rocks&rsquo;"</mark></p><p>Colon, and semicolon:</p><p><mark>Here: a colon; which is nothing like a semicolon.</mark></p><p>Ellipses should be rendered as one character, instead of 3 dots.</p><p><mark>Ellipses&mldr;</mark></p><p>Hyphen and dashes. A <strong>hyphen</strong> is the shortest, an <strong>en dash</strong> slightly longer, and an <strong>em dash</strong> twice as long as an <strong>en dash</strong>.</p><ul><li><mark>One-year-old puppy</mark></li><li><mark>1997&ndash;1999</mark></li><li><mark>but&mdash;</mark></li></ul><p>Apostrophes should point downwards</p><p><mark>It&rsquo;s me. In the &rsquo;70s. Rock &rsquo;n&rsquo; Roll</mark></p><p>Brackets</p><p><mark>(regular ones), [square ones], {curly ones}</mark></p><p>Special characters</p><ul><li>Copyright: <mark>© 2022</mark> (should appear in line with text)</li><li>Trademark: <mark>Brand™, and Registered Tradmark®</mark> (should appear as superscripts)</li></ul><p>Slashes</p><p><mark>Slash/forward\backward</mark></p><p>Foot and Inches: <mark>12' 13"</mark></p><h2 id=ligatures>Ligatures</h2><p>There, figure, fft, ffi.</p><h2 id=block-quote>Block quote</h2><blockquote><p>Blockquote directly under a title</p></blockquote><blockquote><p>Multiline blockquote
-Without extra line in between</p></blockquote><p>A regular line.</p><blockquote><p>Multiline blockquote</p><p>With extra line in between</p></blockquote><p>A very long blockquote:</p><blockquote><p>Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.<sup id=fnref1:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup></p></blockquote><h2 id=images>Images</h2><p>Here is an inline image <img src=/2022/test-md-page/snail-small.webp alt="test image" loading=lazy width=128 height=128>. There isn&rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&rsquo;s just a wacky form of content allowed by the HTML.</p><p>Images put on their own line is better:</p><p><img src=/2022/test-md-page/snail-small.webp alt="test image" loading=lazy width=128 height=128></p><p>A bigger image:</p><p><img src=/2022/test-md-page/snail-big.webp alt="test image" loading=lazy width=400 height=400></p><p>A gigantic image:</p><p><img src=/2022/test-md-page/snail-gigantic.webp alt="test image" loading=lazy width=4000 height=4000></p><p>A svg image:</p><p><img src=/2022/test-md-page/snail.svg alt="svg image" loading=lazy style=width:100%;height:auto></p><p>A figure written in HTML:</p><figure><img alt="Image inside a figure" src=./snail-big.webp><figcaption>Image inside a figure</figcaption></figure><p>Some Markdown parser will always treat images as an inline element. There&rsquo;s nothing an SSG or theme maker can do. So this <code>figure</code> is written as raw HTML.</p><h2 id=lists>Lists</h2><ol><li>A numbered list</li><li>With many elements</li><li>And a multi-
-line item</li><li>Then, some<ol><li>sub</li><li>items</li></ol></li></ol><ul><li>An unnumbered list<ul><li>sub list<ul><li>sub sub list</li></ul></li></ul></li><li>A lot of levels<ul><li>interlacing with<ul><li>other<ul><li>going deeper</li></ul></li><li>shalower<ul><li>deeper<ul><li>and deeper</li></ul></li></ul></li></ul></li><li>Back out again</li></ul></li><li>And see if the rendering is sensible</li></ul><h2 id=code-blocks>Code blocks</h2><div class=highlight><pre class=chroma><code class=language-plaintext data-lang=plaintext><span class=line><span class=cl>Block with no language set.</span></span></code></pre></div><div class=highlight><pre class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>block_with_a_language</span><span class=p>(</span><span class=n>python</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>()</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>indent</span> <span class=k>for</span> <span class=p>[</span><span class=s2>&#34;multi&#34;</span><span class=p>,</span> <span class=s2>&#34;level&#34;</span><span class=p>,</span> <span class=s2>&#34;code&#34;</span><span class=p>]:</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>space</span> <span class=ow>in</span> <span class=n>indent</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nb>ord</span><span class=p>(</span><span class=n>space</span><span class=p>)</span> <span class=o>%</span> <span class=mi>2</span> <span class=o>==</span> <span class=mi>0</span><span class=p>:</span> 
-</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=nb>ord</span><span class=p>(</span><span class=n>space</span><span class=p>)</span> <span class=o>%</span> <span class=mi>5</span> <span class=o>==</span> <span class=mi>0</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>                    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34; &#34;</span><span class=p>)</span></span></span></code></pre></div><div class=highlight><pre class=chroma><code class=language-plaintext data-lang=plaintext><span class=line><span class=cl>Block with no language set that is super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long.</span></span></code></pre></div><div class=highlight><pre class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;A block with a super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long line&#34;</span><span class=p>)</span></span></span></code></pre></div><h2 id=tables>Tables</h2><p>A simple table with very few columns and rows:</p><div class=table-wrapper><table><thead><tr><th>simple</th><th>table</th></tr></thead><tbody><tr><td>item 1</td><td>item 2</td></tr></tbody></table></div><p>A table with alignment parameters:</p><div class=table-wrapper><table><thead><tr><th style=text-align:left>alignment</th><th style=text-align:center>test</th><th style=text-align:right>table</th></tr></thead><tbody><tr><td style=text-align:left>item 1</td><td style=text-align:center>item 2</td><td style=text-align:right>item3</td></tr><tr><td style=text-align:left>item 1</td><td style=text-align:center>item 2</td><td style=text-align:right>item3</td></tr><tr><td style=text-align:left>item 1</td><td style=text-align:center>item 2</td><td style=text-align:right>item3</td></tr><tr><td style=text-align:left>item 1</td><td style=text-align:center>item 2</td><td style=text-align:right>item3</td></tr></tbody></table></div><p>A table with many columns</p><div class=table-wrapper><table><thead><tr><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th><th>table</th></tr></thead><tbody><tr><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td><td>row 1</td></tr><tr><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td><td>row 2</td></tr></tbody></table></div><p>A table with a very fat column:</p><div class=table-wrapper><table><thead><tr><th>fat</th><th>column</th></tr></thead><tbody><tr><td>item 1</td><td>item 2 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long</td></tr></tbody></table></div><h2 id=some-random-tests>Some random tests</h2><ul><li>Language: 中文测试</li><li>HTML embeded:<br><strong><code>&lt;br>&lt;strong></code></strong></li><li>References<sup id=fnref:4><a href=#fn:4 class=footnote-ref role=doc-noteref>4</a></sup></li></ul><footer><ol><li id=fn:1><p>Austen, Jane. <em>Pride and Prejudice</em>. Standard Ebooks, 2014.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a>&#160;<a href=#fnref1:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>Eliot, T. S. <em>Poetry</em>. Standard Ebooks, 2017.&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p>Butterick, Matthew. <em>Practical Typography</em>. <a href=https://practicaltypography.com/line-length.html>https://practicaltypography.com/line-length.html</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:4><p>A test for reference&#160;<a href=#fnref:4 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol><p id=cc>This work is licensed under
-<a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target=_blank rel="license noopener noreferrer" style=display:inline-block>CC BY-SA 4.0
-<img alt="Creative Commons License CC BY-SA 4.0" src=/images/cc-all.svg style=height:1.4em;width:auto loading=lazy width=29.633333 height=10.583333></a></p></footer></article></main><footer><nav><a class="icon-prefix rss" href=/index.xml class=social-rss>RSS</a>
-<a class="icon-prefix brand-github" href=https://github.com/PowerSnail/>Github</a>
-<a class="icon-prefix mail" href=mailto:hj@powersnail.com>hj@powersnail.com</a></nav><div>© PowerSnail 2022</div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://snailshell.goatcounter.com/count https://mirrors.creativecommons.org/; style-src 'self' 'unsafe-inline'">
+    <meta name="author" content="PowerSnail">
+    <meta name="description" content="A Markdown document that tests various properties of a static site generator.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#af3000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#af3000">
+    <title>
+      Test Md Page · SnailShell
+    </title>
+    <link rel="prefetch" href="/images/front-cover.webp" as="image" crossorigin="">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="canonical" href="https://powersnail.com/2022/test-md-page/">
+  </head>
+  <body>
+    <header>
+      <a href="https://powersnail.com/" id="site-title">SnailShell</a>
+      <nav>
+        <a type="button" href="/posts/">Posts</a> <a type="button" href="/status/">Status</a> <a type="button" href="/about/">About</a>
+      </nav>
+    </header><img class="goatcounter" alt="" width="1" height="1" src="https://snailshell.goatcounter.com/count?p=%2f2022%2ftest-md-page%2f&amp;t=Test%20Md%20Page">
+    <main>
+      <article>
+        <header>
+          <h1>
+            Test Md Page
+          </h1>
+          <hr>
+          <div id="metadata">
+            <span class="icon-prefix calendar-event">2022-07-06</span> <span class="icon-prefix calculator">1271 words</span> <span class="icon-prefix clock">3 minutes read</span> <span class="icon-prefix tags"><a class="tag" href="/tags/computer-science">computer science</a> <a class="tag" href="/tags/markdown">markdown</a> <a class="tag" href="/tags/blog">blog</a></span>
+          </div>
+        </header><img src="/2022/test-md-page/cover.svg" alt="Cover Image" srcset="/2022/test-md-page/cover.svg 0w" style="width:100%; height: auto;">
+        <p>
+          When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon to break pages that you are not looking. Maybe tables lose their responsiveness, sentences are too close together, empty pages look weird, etc. I’ve written this document to test some common pitfalls that I experienced when I was tweaking my own blog.
+        </p>
+        <h2 id="this-is-a-second-level-heading">
+          This is a second-level heading
+        </h2>
+        <h3 id="this-is-a-third-level-heading">
+          This is a third-level heading
+        </h3>
+        <h4 id="this-is-a-fourth-level-heading">
+          This is a fourth-level heading
+        </h4>
+        <p>
+          A paragraph under a fourth level heading. There’s really no need to get to this level of heading, however.
+        </p>
+        <h5 id="this-is-a-fifth-level-heading">
+          This is a fifth-level heading
+        </h5>
+        <p>
+          A paragraph under a fifth level heading.
+        </p>
+        <h6 id="this-is-a-sixth-level-heading">
+          This is a sixth-level heading
+        </h6>
+        <p>
+          A paragraph under a sixth level heading.
+        </p>
+        <h3 id="a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading">
+          A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading
+        </h3>
+        <h2 id="shapes-of-paragraphs">
+          Shapes of paragraphs
+        </h2>
+        <p>
+          <strong>This is a long paragraph. (Content from <em>Pride and Prejudice</em>)</strong>
+        </p>
+        <p>
+          An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+        </p>
+        <p>
+          <strong>This is a succession of paragraphs that each contains a short sentence, but not with an extra white line. According to convention, they should be rendered as a single paragraph.</strong>
+        </p>
+        <p>
+          A dog is here. A cat is there. Look at that. A spoon drops into the lake. Ripples radiate to the shore. The moon wrinkled in the water.
+        </p>
+        <p>
+          <strong>This is a succession of paragraphs that each contains a short sentence, with an extra line in between.</strong>
+        </p>
+        <p>
+          Twelve o’clock.
+        </p>
+        <p>
+          Along the reaches of the street
+        </p>
+        <p>
+          Held in a lunar synthesis,
+        </p>
+        <p>
+          Whispering lunar incantations
+        </p>
+        <p>
+          Disolve the floors of memory
+        </p>
+        <p>
+          And all its clear relations,
+        </p>
+        <p>
+          Its divisions and precisions,
+        </p>
+        <p>
+          Every street lamp that I pass
+        </p>
+        <p>
+          Beats like a fatalistic drum,
+        </p>
+        <p>
+          And through the spaces of the dark
+        </p>
+        <p>
+          Midnight shakes the memory
+        </p>
+        <p>
+          As a madman shakes a dead geranium.
+        </p>
+        <p>
+          by T.S. Eliot, <em>Rhapsody on a Windy Night</em><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
+        </p>
+        <h2 id="length-of-line">
+          Length of line
+        </h2>
+        <p>
+          One line should contain about 2~3 alphabets<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>:
+        </p>
+        <p>
+          abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz<mark>abcdefghijklmnopqrstuvwxyz</mark>
+        </p>
+        <h2 id="punctuations">
+          Punctuations
+        </h2>
+        <p>
+          Comma, period, question marks and exclamation marks.
+        </p>
+        <p>
+          <mark>Is this a question mark? Yes!</mark>
+        </p>
+        <p>
+          Quotation marks should have the correct orientations:
+        </p>
+        <p>
+          <mark>“Quotations marks ‘rocks’"</mark>
+        </p>
+        <p>
+          Colon, and semicolon:
+        </p>
+        <p>
+          <mark>Here: a colon; which is nothing like a semicolon.</mark>
+        </p>
+        <p>
+          Ellipses should be rendered as one character, instead of 3 dots.
+        </p>
+        <p>
+          <mark>Ellipses…</mark>
+        </p>
+        <p>
+          Hyphen and dashes. A <strong>hyphen</strong> is the shortest, an <strong>en dash</strong> slightly longer, and an <strong>em dash</strong> twice as long as an <strong>en dash</strong>.
+        </p>
+        <ul>
+          <li>
+            <mark>One-year-old puppy</mark>
+          </li>
+          <li>
+            <mark>1997–1999</mark>
+          </li>
+          <li>
+            <mark>but—</mark>
+          </li>
+        </ul>
+        <p>
+          Apostrophes should point downwards
+        </p>
+        <p>
+          <mark>It’s me. In the ’70s. Rock ’n’ Roll</mark>
+        </p>
+        <p>
+          Brackets
+        </p>
+        <p>
+          <mark>(regular ones), [square ones], {curly ones}</mark>
+        </p>
+        <p>
+          Special characters
+        </p>
+        <ul>
+          <li>Copyright: <mark>© 2022</mark> (should appear in line with text)
+          </li>
+          <li>Trademark: <mark>Brand™, and Registered Tradmark®</mark> (should appear as superscripts)
+          </li>
+        </ul>
+        <p>
+          Slashes
+        </p>
+        <p>
+          <mark>Slash/forward\backward</mark>
+        </p>
+        <p>
+          Foot and Inches: <mark>12' 13"</mark>
+        </p>
+        <h2 id="ligatures">
+          Ligatures
+        </h2>
+        <p>
+          There, figure, fft, ffi.
+        </p>
+        <h2 id="block-quote">
+          Block quote
+        </h2>
+        <blockquote>
+          <p>
+            Blockquote directly under a title
+          </p>
+        </blockquote>
+        <blockquote>
+          <p>
+            Multiline blockquote Without extra line in between
+          </p>
+        </blockquote>
+        <p>
+          A regular line.
+        </p>
+        <blockquote>
+          <p>
+            Multiline blockquote
+          </p>
+          <p>
+            With extra line in between
+          </p>
+        </blockquote>
+        <p>
+          A very long blockquote:
+        </p>
+        <blockquote>
+          <p>
+            Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr.&nbsp;Darcy, her sister scarcely less so; and as for Mr.&nbsp;Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+          </p>
+        </blockquote>
+        <h2 id="images">
+          Images
+        </h2>
+        <p>
+          Here is an inline image <img src="/2022/test-md-page/snail-small.webp" alt="test image" srcset="/2022/test-md-page/snail-small.webp 128w" width="128" height="128">. There isn’t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It’s just a wacky form of content allowed by the HTML.
+        </p>
+        <p>
+          Images put on their own line is better:
+        </p>
+        <p>
+          <img src="/2022/test-md-page/snail-small.webp" alt="test image" srcset="/2022/test-md-page/snail-small.webp 128w" width="128" height="128">
+        </p>
+        <p>
+          A bigger image:
+        </p>
+        <p>
+          <img src="/2022/test-md-page/snail-big.webp" alt="test image" srcset="/2022/test-md-page/snail-big.webp 400w" width="400" height="400">
+        </p>
+        <p>
+          A gigantic image:
+        </p>
+        <p>
+          <img src="/2022/test-md-page/snail-gigantic.webp" alt="test image" srcset="/2022/test-md-page/snail-gigantic-480w.webp 480w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w" width="4000" height="4000">
+        </p>
+        <p>
+          A svg image:
+        </p>
+        <p>
+          <img src="/2022/test-md-page/snail.svg" alt="svg image" srcset="/2022/test-md-page/snail.svg 0w" style="width:100%; height: auto;">
+        </p>
+        <p>
+          A figure written in HTML:
+        </p>
+        <figure>
+          <img alt="Image inside a figure" src="./snail-big.webp">
+          <figcaption>
+            Image inside a figure
+          </figcaption>
+        </figure>
+        <p>
+          Some Markdown parser will always treat images as an inline element. There’s nothing an SSG or theme maker can do. So this <code>figure</code> is written as raw HTML.
+        </p>
+        <h2 id="lists">
+          Lists
+        </h2>
+        <ol>
+          <li>A numbered list
+          </li>
+          <li>With many elements
+          </li>
+          <li>And a multi- line item
+          </li>
+          <li>Then, some
+            <ol>
+              <li>sub
+              </li>
+              <li>items
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <ul>
+          <li>An unnumbered list
+            <ul>
+              <li>sub list
+                <ul>
+                  <li>sub sub list
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>A lot of levels
+            <ul>
+              <li>interlacing with
+                <ul>
+                  <li>other
+                    <ul>
+                      <li>going deeper
+                      </li>
+                    </ul>
+                  </li>
+                  <li>shalower
+                    <ul>
+                      <li>deeper
+                        <ul>
+                          <li>and deeper
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Back out again
+              </li>
+            </ul>
+          </li>
+          <li>And see if the rendering is sensible
+          </li>
+        </ul>
+        <h2 id="code-blocks">
+          Code blocks
+        </h2>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">Block with no language set.</span></span></code></pre>
+        </div>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">block_with_a_language</span><span class="p">(</span><span class="n">python</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">indent</span> <span class="k">for</span> <span class="p">[</span><span class="s2">"multi"</span><span class="p">,</span> <span class="s2">"level"</span><span class="p">,</span> <span class="s2">"code"</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">space</span> <span class="ow">in</span> <span class="n">indent</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">space</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">space</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span></span></span></code></pre>
+        </div>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">Block with no language set that is super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long.</span></span></code></pre>
+        </div>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">"A block with a super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long line"</span><span class="p">)</span></span></span></code></pre>
+        </div>
+        <h2 id="tables">
+          Tables
+        </h2>
+        <p>
+          A simple table with very few columns and rows:
+        </p>
+        <div class="table-wrapper&quot;">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  simple
+                </th>
+                <th>
+                  table
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  item 1
+                </td>
+                <td>
+                  item 2
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          A table with alignment parameters:
+        </p>
+        <div class="table-wrapper&quot;">
+          <table>
+            <thead>
+              <tr>
+                <th style="text-align:left">
+                  alignment
+                </th>
+                <th style="text-align:center">
+                  test
+                </th>
+                <th style="text-align:right">
+                  table
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align:left">
+                  item 1
+                </td>
+                <td style="text-align:center">
+                  item 2
+                </td>
+                <td style="text-align:right">
+                  item3
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align:left">
+                  item 1
+                </td>
+                <td style="text-align:center">
+                  item 2
+                </td>
+                <td style="text-align:right">
+                  item3
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align:left">
+                  item 1
+                </td>
+                <td style="text-align:center">
+                  item 2
+                </td>
+                <td style="text-align:right">
+                  item3
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align:left">
+                  item 1
+                </td>
+                <td style="text-align:center">
+                  item 2
+                </td>
+                <td style="text-align:right">
+                  item3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          A table with many columns
+        </p>
+        <div class="table-wrapper&quot;">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+                <th>
+                  table
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+                <td>
+                  row 1
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+                <td>
+                  row 2
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          A table with a very fat column:
+        </p>
+        <div class="table-wrapper&quot;">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  fat
+                </th>
+                <th>
+                  column
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  item 1
+                </td>
+                <td>
+                  item 2 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="some-random-tests">
+          Some random tests
+        </h2>
+        <ul>
+          <li>Language: 中文测试
+          </li>
+          <li>HTML embeded:<br>
+            <strong><code>&lt;br&gt;&lt;strong&gt;</code></strong>
+          </li>
+          <li>References<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>
+          </li>
+        </ul>
+        <footer>
+          <ol>
+            <li id="fn:1">
+              <p>
+                Austen, Jane. <em>Pride and Prejudice</em>. Standard Ebooks, 2014.&nbsp;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a>&nbsp;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">↩︎</a>
+              </p>
+            </li>
+            <li id="fn:2">
+              <p>
+                Eliot, T. S. <em>Poetry</em>. Standard Ebooks, 2017.&nbsp;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">↩︎</a>
+              </p>
+            </li>
+            <li id="fn:3">
+              <p>
+                Butterick, Matthew. <em>Practical Typography</em>. <a href="https://practicaltypography.com/line-length.html">https://practicaltypography.com/line-length.html</a>&nbsp;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">↩︎</a>
+              </p>
+            </li>
+            <li id="fn:4">
+              <p>
+                A test for reference&nbsp;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">↩︎</a>
+              </p>
+            </li>
+          </ol>
+          <p id="cc">
+            This work is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0 <img alt="Creative Commons License CC BY-SA 4.0" src="/images/cc-all.svg" style="height:1.4em; width: auto;" loading="lazy" width="30" height="11"></a>
+          </p>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <nav>
+        <a class="icon-prefix rss" href="/index.xml">RSS</a> <a class="icon-prefix brand-github" href="https://github.com/PowerSnail/">Github</a> <a class="icon-prefix mail" href="mailto:hj@powersnail.com">hj@powersnail.com</a>
+      </nav>
+      <div>
+        © PowerSnail 2022
+      </div>
+    </footer>
+  </body>
+</html>

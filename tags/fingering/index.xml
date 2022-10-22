@@ -1,17 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns="http://www.w3.org/2005/Atom"><title>fingering on SnailShell</title><link>https://powersnail.com/tags/fingering/</link><link rel="self" href="https://powersnail.com/tags/fingering/index.xml"/><updated>Fri, 22 Jul 2022 00:00:00 +0000</updated><id>https://powersnail.com/tags/fingering/</id><author><name>PowerSnail</name></author><icon>https://powersnail.com/favicon.ico</icon><description>Recent content in fingering on SnailShell</description><generator>Hugo -- gohugo.io</generator><copyright>en-us</copyright><entry><author><name>PowerSnail</name></author><title type="html">Sneaky Shift in Bach&amp;rsquo;s &lt;em>Preludio&lt;/em> in Partita III</title><link rel="alternate">https://powersnail.com/2022/bach-preludio-sneaky-shift/</link><published>Fri, 22 Jul 2022 00:00:00 +0000</published><updated>Fri, 22 Jul 2022 00:00:00 +0000</updated><id>https://powersnail.com/2022/bach-preludio-sneaky-shift/</id><summary type="html">Preludio (Prelude in some version) is one of Bach&amp;rsquo;s best violin pieces. From measure 17 to 28, a bariolage among three strings brings us a sublime polyphonic experience, with only single notes played detaché.</summary><content type="html">&lt;p>&lt;em>Preludio&lt;/em> (&lt;em>Prelude&lt;/em> in some version) is one of Bach&amp;rsquo;s best violin pieces. From measure 17 to 28, a bariolage among three strings brings us a sublime polyphonic experience, with only single notes played detaché. The focus is usually on the bowing, but the left hand is not without challenge either, especially at speed.&lt;/p>
-&lt;p>&lt;figure>&lt;img src="https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full.webp" alt="Sheet music of the bariolage section" loading="lazy" width="1912" height="1156" >&lt;figcaption>
-&lt;p>Snippet from Preludio&lt;/p>
-&lt;/figcaption>
-&lt;/figure>&lt;/p>
-&lt;p>From measure 20 to 28, the left hand descends one position every two measures. The most straightforward way is to shift at the beginning of measure 21, 23, 25, 27, and 28, using the third finger on A string, the first finger always pressing the lower note on D string, as shown below:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift.webp" alt="The straight-forward version" loading="lazy" width="2693" height="258" >&lt;/p>
-&lt;p>There are two ways to hide this shift. The first is to squeeze your 3rd finger inward without shifting when the bow is still on the D string, and then to complete the shift by moving the 1st finger while playing the other three notes. But given how cramped the notes are on higher positions, that squeeze might be a bit awkward.&lt;/p>
-&lt;p>The second way is to delay the shift and hide it using the open E. In measure 20, the 1st finger is on C♯, the 2nd finger on A. If we don&amp;rsquo;t shift, we&amp;rsquo;ll begin measure 21 with 2nd finger on A, too. Then, when the bow is on the open E, shift the entire hand down a position, and substitute the 3rd finger on A, the 1st finger naturally falling on B. If you can shift within the duration of that E, there will be no audible shift. And this way, there is no squeezing, or awkward hand frame. Like this:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift.webp" alt="The sneaky version" loading="lazy" width="2693" height="269" >&lt;/p>
-&lt;p>Then, in the measure 22, no shift is needed. In measure 23, begin with 2nd finger on G♯, shift during the open string E, and end with 3rd finger on G♯. So on, and so on.&lt;/p>
-&lt;p>There are many opportunities in this piece to use the sneaky shift. Measure 67 begins a bariolage that exactly mirrors this sections on the lower strings, so does the technique. The two-string bariolages, like the ones from measure 13~16, also have a few places for sneaky shift.&lt;/p>
-&lt;hr>
-&lt;p>If you study the fingering of great violinists, you&amp;rsquo;ll see a lot of creativity in how they achieve the balance between techniques, musicality, and ergonomics. Szeryng&amp;rsquo;s fingering of solo Bach is famous for its clever problem-solving skills, using tiny slides to avoid awkward string crossing, using stretches to avoid slides, etc.&lt;/p>
-&lt;p>At the end of the day, it all depends on what kind of phrasing and tone you have in mind. A sneaky shift is great for that clean crisp sound, and an over-slide might be just what you need in a lyrical moment. Fingering is personal, because style is personal.&lt;/p>
-&lt;h2 id="reference">Reference&lt;/h2>
-&lt;p>Bach, Johann Sebastian. &lt;em>Drei Sonaten Und Drei Partiten Fur Violino Solo&lt;/em>. Bärenreiter Verlag, 1720, &lt;a href="https://imslp.org/wiki/6_Violin_Sonatas_and_Partitas,_BWV_1001-1006_(Bach,_Johann_Sebastian)">6 Violin Sonatas and Partitas, BWV 1001-1006 (Bach, Johann Sebastian) - IMSLP: Free Sheet Music PDF Download&lt;/a>.&lt;/p></content><category>posts</category></entry></feed>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>fingering on SnailShell</title>
+  <link>https://powersnail.com/tags/fingering/</link><link rel="self" href="https://powersnail.com/tags/fingering/index.xml"></link><updated>Fri, 22 Jul 2022 00:00:00 +0000</updated>
+  <id>https://powersnail.com/tags/fingering/</id>
+
+  <author>
+    <name>PowerSnail</name>
+  </author>
+
+  <icon>https://powersnail.com/favicon.ico</icon>
+
+  <description>Recent content in fingering on SnailShell</description>
+  <generator>Hugo -- gohugo.io</generator>
+  <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Sneaky Shift in Bach&amp;rsquo;s &lt;em&gt;Preludio&lt;/em&gt; in Partita III</title>
+    <link rel="alternate">https://powersnail.com/2022/bach-preludio-sneaky-shift/</link>
+    <published>Fri, 22 Jul 2022 00:00:00 +0000</published>
+    <updated>Fri, 22 Jul 2022 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2022/bach-preludio-sneaky-shift/</id>
+    <summary type="html">Preludio (Prelude in some version) is one of Bach&amp;rsquo;s best violin pieces. From measure 17 to 28, a bariolage among three strings brings us a sublime polyphonic experience, with only single notes played detaché.</summary>
+    <content type="html">&lt;p&gt;&lt;em&gt;Preludio&lt;/em&gt; (&lt;em&gt;Prelude&lt;/em&gt; in some version) is one of Bach&amp;rsquo;s best violin pieces. From measure 17 to 28, a bariolage among three strings brings us a sublime polyphonic experience, with only single notes played detaché. The focus is usually on the bowing, but the left hand is not without challenge either, especially at speed.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full.webp&#34; alt=&#34;Sheet music of the bariolage section&#34;
+    srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full-480w.webp 480w,/2022/bach-preludio-sneaky-shift/bariolage-full-800w.webp 800w,/2022/bach-preludio-sneaky-shift/bariolage-full-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/bariolage-full.webp 1912w&#34; width=&#34;1912&#34;  height=&#34;1156&#34; &gt;&lt;figcaption&gt;
+        Snippet from Preludio
+    &lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;From measure 20 to 28, the left hand descends one position every two measures. The most straightforward way is to shift at the beginning of measure 21, 23, 25, 27, and 28, using the third finger on A string, the first finger always pressing the lower note on D string, as shown below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift.webp&#34; alt=&#34;The straight-forward version&#34;
+    srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift-480w.webp 480w,/2022/bach-preludio-sneaky-shift/straightforward-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/straightforward-shift-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/straightforward-shift.webp 2693w&#34; width=&#34;2693&#34;  height=&#34;258&#34; &gt;&lt;/p&gt;
+&lt;p&gt;There are two ways to hide this shift. The first is to squeeze your 3rd finger inward without shifting when the bow is still on the D string, and then to complete the shift by moving the 1st finger while playing the other three notes. But given how cramped the notes are on higher positions, that squeeze might be a bit awkward.&lt;/p&gt;
+&lt;p&gt;The second way is to delay the shift and hide it using the open E. In measure 20, the 1st finger is on C♯, the 2nd finger on A. If we don&amp;rsquo;t shift, we&amp;rsquo;ll begin measure 21 with 2nd finger on A, too. Then, when the bow is on the open E, shift the entire hand down a position, and substitute the 3rd finger on A, the 1st finger naturally falling on B. If you can shift within the duration of that E, there will be no audible shift. And this way, there is no squeezing, or awkward hand frame. Like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift.webp&#34; alt=&#34;The sneaky version&#34;
+    srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift-480w.webp 480w,/2022/bach-preludio-sneaky-shift/sneaky-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/sneaky-shift-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/sneaky-shift.webp 2693w&#34; width=&#34;2693&#34;  height=&#34;269&#34; &gt;&lt;/p&gt;
+&lt;p&gt;Then, in the measure 22, no shift is needed. In measure 23, begin with 2nd finger on G♯, shift during the open string E, and end with 3rd finger on G♯. So on, and so on.&lt;/p&gt;
+&lt;p&gt;There are many opportunities in this piece to use the sneaky shift. Measure 67 begins a bariolage that exactly mirrors this sections on the lower strings, so does the technique. The two-string bariolages, like the ones from measure 13~16, also have a few places for sneaky shift.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you study the fingering of great violinists, you&amp;rsquo;ll see a lot of creativity in how they achieve the balance between techniques, musicality, and ergonomics. Szeryng&amp;rsquo;s fingering of solo Bach is famous for its clever problem-solving skills, using tiny slides to avoid awkward string crossing, using stretches to avoid slides, etc.&lt;/p&gt;
+&lt;p&gt;At the end of the day, it all depends on what kind of phrasing and tone you have in mind. A sneaky shift is great for that clean crisp sound, and an over-slide might be just what you need in a lyrical moment. Fingering is personal, because style is personal.&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;Bach, Johann Sebastian. &lt;em&gt;Drei Sonaten Und Drei Partiten Fur Violino Solo&lt;/em&gt;. Bärenreiter Verlag, 1720, &lt;a href=&#34;https://imslp.org/wiki/6_Violin_Sonatas_and_Partitas,_BWV_1001-1006_(Bach,_Johann_Sebastian)&#34;&gt;6 Violin Sonatas and Partitas, BWV 1001-1006 (Bach, Johann Sebastian) - IMSLP: Free Sheet Music PDF Download&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
+  
+</feed>

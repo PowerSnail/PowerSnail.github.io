@@ -1,338 +1,392 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns="http://www.w3.org/2005/Atom"><title>blog on SnailShell</title><link>https://powersnail.com/tags/blog/</link><link rel="self" href="https://powersnail.com/tags/blog/index.xml"/><updated>Wed, 06 Jul 2022 00:00:00 +0000</updated><id>https://powersnail.com/tags/blog/</id><author><name>PowerSnail</name></author><icon>https://powersnail.com/favicon.ico</icon><description>Recent content in blog on SnailShell</description><generator>Hugo -- gohugo.io</generator><copyright>en-us</copyright><entry><author><name>PowerSnail</name></author><title type="html">Test Md Page</title><link rel="alternate">https://powersnail.com/2022/test-md-page/</link><published>Wed, 06 Jul 2022 00:00:00 +0000</published><updated>Wed, 06 Jul 2022 00:00:00 +0000</updated><id>https://powersnail.com/2022/test-md-page/</id><summary type="html">When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon</summary><content type="html">&lt;p>When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon to break pages that you are not looking. Maybe tables lose their responsiveness, sentences are too close together, empty pages look weird, etc. I&amp;rsquo;ve written this document to test some common pitfalls that I experienced when I was tweaking my own blog.&lt;/p>
-&lt;h2 id="this-is-a-second-level-heading">This is a second-level heading&lt;/h2>
-&lt;h3 id="this-is-a-third-level-heading">This is a third-level heading&lt;/h3>
-&lt;h4 id="this-is-a-fourth-level-heading">This is a fourth-level heading&lt;/h4>
-&lt;p>A paragraph under a fourth level heading. There&amp;rsquo;s really no need to get to this level of heading, however.&lt;/p>
-&lt;h5 id="this-is-a-fifth-level-heading">This is a fifth-level heading&lt;/h5>
-&lt;p>A paragraph under a fifth level heading.&lt;/p>
-&lt;h6 id="this-is-a-sixth-level-heading">This is a sixth-level heading&lt;/h6>
-&lt;p>A paragraph under a sixth level heading.&lt;/p>
-&lt;h3 id="a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading">A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading&lt;/h3>
-&lt;h2 id="shapes-of-paragraphs">Shapes of paragraphs&lt;/h2>
-&lt;p>&lt;strong>This is a long paragraph. (Content from &lt;em>Pride and Prejudice&lt;/em>)&lt;/strong>&lt;/p>
-&lt;p>An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
-&lt;p>&lt;strong>This is a succession of paragraphs that each contains a short sentence, but not with an extra white line. According to convention, they should be rendered as a single paragraph.&lt;/strong>&lt;/p>
-&lt;p>A dog is here.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>blog on SnailShell</title>
+  <link>https://powersnail.com/tags/blog/</link><link rel="self" href="https://powersnail.com/tags/blog/index.xml"></link><updated>Wed, 06 Jul 2022 00:00:00 +0000</updated>
+  <id>https://powersnail.com/tags/blog/</id>
+
+  <author>
+    <name>PowerSnail</name>
+  </author>
+
+  <icon>https://powersnail.com/favicon.ico</icon>
+
+  <description>Recent content in blog on SnailShell</description>
+  <generator>Hugo -- gohugo.io</generator>
+  <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Test Md Page</title>
+    <link rel="alternate">https://powersnail.com/2022/test-md-page/</link>
+    <published>Wed, 06 Jul 2022 00:00:00 +0000</published>
+    <updated>Wed, 06 Jul 2022 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2022/test-md-page/</id>
+    <summary type="html">When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon</summary>
+    <content type="html">&lt;p&gt;When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon to break pages that you are not looking. Maybe tables lose their responsiveness, sentences are too close together, empty pages look weird, etc. I&amp;rsquo;ve written this document to test some common pitfalls that I experienced when I was tweaking my own blog.&lt;/p&gt;
+&lt;h2 id=&#34;this-is-a-second-level-heading&#34;&gt;This is a second-level heading&lt;/h2&gt;
+&lt;h3 id=&#34;this-is-a-third-level-heading&#34;&gt;This is a third-level heading&lt;/h3&gt;
+&lt;h4 id=&#34;this-is-a-fourth-level-heading&#34;&gt;This is a fourth-level heading&lt;/h4&gt;
+&lt;p&gt;A paragraph under a fourth level heading. There&amp;rsquo;s really no need to get to this level of heading, however.&lt;/p&gt;
+&lt;h5 id=&#34;this-is-a-fifth-level-heading&#34;&gt;This is a fifth-level heading&lt;/h5&gt;
+&lt;p&gt;A paragraph under a fifth level heading.&lt;/p&gt;
+&lt;h6 id=&#34;this-is-a-sixth-level-heading&#34;&gt;This is a sixth-level heading&lt;/h6&gt;
+&lt;p&gt;A paragraph under a sixth level heading.&lt;/p&gt;
+&lt;h3 id=&#34;a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading&#34;&gt;A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading&lt;/h3&gt;
+&lt;h2 id=&#34;shapes-of-paragraphs&#34;&gt;Shapes of paragraphs&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;This is a long paragraph. (Content from &lt;em&gt;Pride and Prejudice&lt;/em&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This is a succession of paragraphs that each contains a short sentence, but not with an extra white line. According to convention, they should be rendered as a single paragraph.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A dog is here.
 A cat is there.
 Look at that.
 A spoon drops into the lake.
 Ripples radiate to the shore.
-The moon wrinkled in the water.&lt;/p>
-&lt;p>&lt;strong>This is a succession of paragraphs that each contains a short sentence, with an extra line in between.&lt;/strong>&lt;/p>
-&lt;p>Twelve o’clock.&lt;/p>
-&lt;p>Along the reaches of the street&lt;/p>
-&lt;p>Held in a lunar synthesis,&lt;/p>
-&lt;p>Whispering lunar incantations&lt;/p>
-&lt;p>Disolve the floors of memory&lt;/p>
-&lt;p>And all its clear relations,&lt;/p>
-&lt;p>Its divisions and precisions,&lt;/p>
-&lt;p>Every street lamp that I pass&lt;/p>
-&lt;p>Beats like a fatalistic drum,&lt;/p>
-&lt;p>And through the spaces of the dark&lt;/p>
-&lt;p>Midnight shakes the memory&lt;/p>
-&lt;p>As a madman shakes a dead geranium.&lt;/p>
-&lt;p>by T.S. Eliot, &lt;em>Rhapsody on a Windy Night&lt;/em>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
-&lt;h2 id="length-of-line">Length of line&lt;/h2>
-&lt;p>One line should contain about 2~3 alphabets&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>:&lt;/p>
-&lt;p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz&lt;mark>abcdefghijklmnopqrstuvwxyz&lt;/mark>&lt;/p>
-&lt;h2 id="punctuations">Punctuations&lt;/h2>
-&lt;p>Comma, period, question marks and exclamation marks.&lt;/p>
-&lt;p>&lt;mark>Is this a question mark? Yes!&lt;/mark>&lt;/p>
-&lt;p>Quotation marks should have the correct orientations:&lt;/p>
-&lt;p>&lt;mark>&amp;ldquo;Quotations marks &amp;lsquo;rocks&amp;rsquo;&amp;quot;&lt;/mark>&lt;/p>
-&lt;p>Colon, and semicolon:&lt;/p>
-&lt;p>&lt;mark>Here: a colon; which is nothing like a semicolon.&lt;/mark>&lt;/p>
-&lt;p>Ellipses should be rendered as one character, instead of 3 dots.&lt;/p>
-&lt;p>&lt;mark>Ellipses&amp;hellip;&lt;/mark>&lt;/p>
-&lt;p>Hyphen and dashes. A &lt;strong>hyphen&lt;/strong> is the shortest, an &lt;strong>en dash&lt;/strong> slightly longer, and an &lt;strong>em dash&lt;/strong> twice as long as an &lt;strong>en dash&lt;/strong>.&lt;/p>
-&lt;ul>
-&lt;li>&lt;mark>One-year-old puppy&lt;/mark>&lt;/li>
-&lt;li>&lt;mark>1997&amp;ndash;1999&lt;/mark>&lt;/li>
-&lt;li>&lt;mark>but&amp;mdash;&lt;/mark>&lt;/li>
-&lt;/ul>
-&lt;p>Apostrophes should point downwards&lt;/p>
-&lt;p>&lt;mark>It&amp;rsquo;s me. In the &amp;rsquo;70s. Rock &amp;rsquo;n&amp;rsquo; Roll&lt;/mark>&lt;/p>
-&lt;p>Brackets&lt;/p>
-&lt;p>&lt;mark>(regular ones), [square ones], {curly ones}&lt;/mark>&lt;/p>
-&lt;p>Special characters&lt;/p>
-&lt;ul>
-&lt;li>Copyright: &lt;mark>© 2022&lt;/mark> (should appear in line with text)&lt;/li>
-&lt;li>Trademark: &lt;mark>Brand™, and Registered Tradmark®&lt;/mark> (should appear as superscripts)&lt;/li>
-&lt;/ul>
-&lt;p>Slashes&lt;/p>
-&lt;p>&lt;mark>Slash/forward\backward&lt;/mark>&lt;/p>
-&lt;p>Foot and Inches: &lt;mark>12' 13&amp;quot;&lt;/mark>&lt;/p>
-&lt;h2 id="ligatures">Ligatures&lt;/h2>
-&lt;p>There, figure, fft, ffi.&lt;/p>
-&lt;h2 id="block-quote">Block quote&lt;/h2>
-&lt;blockquote>
-&lt;p>Blockquote directly under a title&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Multiline blockquote
-Without extra line in between&lt;/p>
-&lt;/blockquote>
-&lt;p>A regular line.&lt;/p>
-&lt;blockquote>
-&lt;p>Multiline blockquote&lt;/p>
-&lt;p>With extra line in between&lt;/p>
-&lt;/blockquote>
-&lt;p>A very long blockquote:&lt;/p>
-&lt;blockquote>
-&lt;p>Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="images">Images&lt;/h2>
-&lt;p>Here is an inline image &lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" loading="lazy" width="128" height="128" >. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p>
-&lt;p>Images put on their own line is better:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-small.webp" alt="test image" loading="lazy" width="128" height="128" >&lt;/p>
-&lt;p>A bigger image:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-big.webp" alt="test image" loading="lazy" width="400" height="400" >&lt;/p>
-&lt;p>A gigantic image:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail-gigantic.webp" alt="test image" loading="lazy" width="4000" height="4000" >&lt;/p>
-&lt;p>A svg image:&lt;/p>
-&lt;p>&lt;img src="https://powersnail.com/2022/test-md-page/snail.svg" alt="svg image" loading="lazy" style="width:100%; height: auto;" >&lt;/p>
-&lt;p>A figure written in HTML:&lt;/p>
-&lt;figure>
-&lt;img alt="Image inside a figure"
-src="./snail-big.webp">
-&lt;figcaption>
-Image inside a figure
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>Some Markdown parser will always treat images as an inline element. There&amp;rsquo;s nothing an SSG or theme maker can do. So this &lt;code>figure&lt;/code> is written as raw HTML.&lt;/p>
-&lt;h2 id="lists">Lists&lt;/h2>
-&lt;ol>
-&lt;li>A numbered list&lt;/li>
-&lt;li>With many elements&lt;/li>
-&lt;li>And a multi-
-line item&lt;/li>
-&lt;li>Then, some
-&lt;ol>
-&lt;li>sub&lt;/li>
-&lt;li>items&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;/ol>
-&lt;ul>
-&lt;li>An unnumbered list
-&lt;ul>
-&lt;li>sub list
-&lt;ul>
-&lt;li>sub sub list&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>A lot of levels
-&lt;ul>
-&lt;li>interlacing with
-&lt;ul>
-&lt;li>other
-&lt;ul>
-&lt;li>going deeper&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>shalower
-&lt;ul>
-&lt;li>deeper
-&lt;ul>
-&lt;li>and deeper&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Back out again&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>And see if the rendering is sensible&lt;/li>
-&lt;/ul>
-&lt;h2 id="code-blocks">Code blocks&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">Block with no language set.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">block_with_a_language&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">python&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">indent&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;multi&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;level&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;code&amp;#34;&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">space&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">indent&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">space&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">space&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">5&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-plaintext" data-lang="plaintext">&lt;span class="line">&lt;span class="cl">Block with no language set that is super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;A block with a super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, super, long line&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tables">Tables&lt;/h2>
-&lt;p>A simple table with very few columns and rows:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>simple&lt;/th>
-&lt;th>table&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>item 1&lt;/td>
-&lt;td>item 2&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>A table with alignment parameters:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align:left">alignment&lt;/th>
-&lt;th style="text-align:center">test&lt;/th>
-&lt;th style="text-align:right">table&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align:left">item 1&lt;/td>
-&lt;td style="text-align:center">item 2&lt;/td>
-&lt;td style="text-align:right">item3&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">item 1&lt;/td>
-&lt;td style="text-align:center">item 2&lt;/td>
-&lt;td style="text-align:right">item3&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">item 1&lt;/td>
-&lt;td style="text-align:center">item 2&lt;/td>
-&lt;td style="text-align:right">item3&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">item 1&lt;/td>
-&lt;td style="text-align:center">item 2&lt;/td>
-&lt;td style="text-align:right">item3&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>A table with many columns&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;th>table&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;td>row 1&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;td>row 2&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>A table with a very fat column:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>fat&lt;/th>
-&lt;th>column&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>item 1&lt;/td>
-&lt;td>item 2 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="some-random-tests">Some random tests&lt;/h2>
-&lt;ul>
-&lt;li>Language: 中文测试&lt;/li>
-&lt;li>HTML embeded: &lt;br>&lt;strong>&lt;code>&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;&lt;/code>&lt;/strong>&lt;/li>
-&lt;li>References&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;/li>
-&lt;/ul>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr>
-&lt;ol>
-&lt;li id="fn:1">
-&lt;p>Austen, Jane. &lt;em>Pride and Prejudice&lt;/em>. Standard Ebooks, 2014.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2">
-&lt;p>Eliot, T. S. &lt;em>Poetry&lt;/em>. Standard Ebooks, 2017.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:3">
-&lt;p>Butterick, Matthew. &lt;em>Practical Typography&lt;/em>. &lt;a href="https://practicaltypography.com/line-length.html">https://practicaltypography.com/line-length.html&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:4">
-&lt;p>A test for reference&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/div></content><category>posts</category></entry><entry><author><name>PowerSnail</name></author><title type="html">Theme-less Hugo, Almost Pure HTML, Styled with MVP CSS</title><link rel="alternate">https://powersnail.com/2022/hugo-mvp-css/</link><published>Wed, 12 Jan 2022 00:00:00 +0000</published><updated>Wed, 12 Jan 2022 00:00:00 +0000</updated><id>https://powersnail.com/2022/hugo-mvp-css/</id><summary type="html">Theme-less Hugo As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else.</summary><content type="html">&lt;h2 id="theme-less-hugo">Theme-less Hugo&lt;/h2>
-&lt;p>As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else. From WordPress to Jekyll to Hugo, no theme ever stopped me from tinkering with the underlying templates and CSS, during which, the theme inevitably becomes more coupled with my blog and content. This is because while the templates are usually generic enough for the body of blog articles, they are often quite specific on other elements: about, headers, footers, navigation bars, etc. And to customize those elements, I&amp;rsquo;m practically re-writing the website.&lt;/p>
-&lt;p>When I started with Hugo, I chose the theme &lt;a href="https://github.com/mavidser/hugo-rocinante">Rocinante&lt;/a>, for its clean appearance, and partially for its name, which comes from one of my favorite novels of all time. I forked the theme, and kept maintaining two repositories: the blog itself, and the theme. As more modifications were made, the two codebases tangled with each other so deeply, that I often wonder where I should put a certain element.&lt;/p>
-&lt;p>I decided to go theme-less, when the theme no longer bear any resemblance to the original Rocinante. There&amp;rsquo;s no point in maintaining two sets of code if they cannot be decoupled.&lt;/p>
-&lt;p>Theme-less Hugo is easy: I just needed the templates, everything in the &lt;code>layouts&lt;/code> directory, to scaffold the site. So, I copied the skeleton code&amp;mdash;&lt;code>layouts&lt;/code>, and &lt;code>assets&lt;/code> for the styles&amp;mdash;into my blog, and removed the &lt;code>themes&lt;/code> directory.&lt;/p>
-&lt;p>In fact, I think if one has finished theme-shopping, and would like to start making customizations, the first thing to do is to copy the theme into their main project, and delete &lt;code>themes&lt;/code>. It makes the website whole, the workflow more coherent, the workspace better organized, the commit history saner.&lt;/p>
-&lt;h2 id="semantic-html-and-mvpcss">Semantic HTML and MVP.CSS&lt;/h2>
-&lt;p>I have very little need for advanced topography or animations. My blog is just a bunch of static files hosted on GitHub Pages; nothing Fancy.&lt;/p>
-&lt;p>This is, therefore, a very suitable use case for a classless CSS framework like &lt;a href="https://andybrewer.github.io/mvp/">MVP.CSS&lt;/a>. Overall, I think MVP does a fantastic job.&lt;/p>
-&lt;p>A few things that I don&amp;rsquo;t like about it:&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>Block quotes. MVP centers and enlarges the text in block quote, as if I&amp;rsquo;m hanging an inspirational epigram on the wall, which doesn&amp;rsquo;t fit the semantic role of block quotes. It&amp;rsquo;s simply a quotation that occupies a paragraph; it&amp;rsquo;s part of my content, a link in the linear chain of words, not a flyout or illustration. MVP already has &lt;code>&amp;lt;section&amp;gt;&amp;lt;aside&amp;gt;&lt;/code> to deal with that.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Links without underlines. This makes the website less accessible to color-blind readers, or anyone who reads on a monochrome monitor.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Alternating table row colors. Not a fault of MVP. This is merely a pet peeve of mine.&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>With regard to code blocks, Hugo defaults to rendering code highlighting with inline style of fixed colors, which is awkward when MVP can react to system-wise dark theme. So, I configured Hugo to output code blocks with CSS classes, and output two themes, &lt;code>friendly&lt;/code> and &lt;code>dracula&lt;/code>, for light and dark themes respectively.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># To generate the CSS files&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo gen chromastyles --style&lt;span class="o">=&lt;/span>friendly &amp;gt; assets/css/_friendly.css
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo gen chromastyles --style&lt;span class="o">=&lt;/span>dracula &amp;gt; assets/css/_dracula.css&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-scss" data-lang="scss">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// style.scss
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// To include both themes
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">@import&lt;/span> &lt;span class="s2">&amp;#34;friendly&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">@media&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">prefers-color-scheme&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">dark&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">@import&lt;/span> &lt;span class="s2">&amp;#34;dracula&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># config.toml&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">markup&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="nx">markup&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">highlight&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">noClasses&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">false&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I then colored the website with a dark banner image of Bach&amp;rsquo;s manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with &lt;a href="https://bottosson.github.io/posts/oklab/">Oklab&lt;/a> color space, and it seems to be passing accessibility tests so far. It might be a total overkill though, since a few colors on the spectrum are used. But what is a personal project without a few overkills?&lt;/p>
-&lt;h2 id="mathjax-and-a-little-grievance-of-hugo">MathJax, and a Little Grievance of Hugo&lt;/h2>
-&lt;p>The only JavaScript I use is &lt;a href="https://www.mathjax.org/">MathJax&lt;/a>. I&amp;rsquo;ve been considering to use its server-side rendering, but it seems that at the moment of writing this blog, Hugo does not support its use.&lt;/p>
-&lt;p>In fact, Hugo does not support running its output HTML through an arbitrary command, and I think it&amp;rsquo;s a shame. There is a limit to what the &lt;code>replace&lt;/code> and &lt;code>replaceRE&lt;/code> could accomplish, which can be supplemented by custom filters written by other users.&lt;/p>
-&lt;p>For instance, math equations can be easily rendered with LaTeX and converted to SVG. This will enable the embedding of arbitrary Tex elements, not just what MathJax supports, and at the same time, eliminates the need to bundle a JS library for client-side rendering.&lt;/p>
-&lt;p>One thing that I can do is to add an extra step to &lt;code>hugo build&lt;/code>, and iterate through all the output HTML with whatever post-processing I want. But I do hope that this could be integrated into Hugo, so I don&amp;rsquo;t have to further butcher the GitHub Action file.&lt;/p>
-&lt;h2 id="final-thoughts">Final Thoughts&lt;/h2>
-&lt;p>You can find all the code to my blog &lt;a href="https://github.com/PowerSnail/PowerSnail.github.io">here&lt;/a>. My modifications to the theme, up to the point that I moved everything into the main repository, can be found &lt;a href="https://github.com/PowerSnail/hugo-rocinante">here&lt;/a>.&lt;/p></content><category>posts</category></entry></feed>
+The moon wrinkled in the water.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This is a succession of paragraphs that each contains a short sentence, with an extra line in between.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Twelve o’clock.&lt;/p&gt;
+&lt;p&gt;Along the reaches of the street&lt;/p&gt;
+&lt;p&gt;Held in a lunar synthesis,&lt;/p&gt;
+&lt;p&gt;Whispering lunar incantations&lt;/p&gt;
+&lt;p&gt;Disolve the floors of memory&lt;/p&gt;
+&lt;p&gt;And all its clear relations,&lt;/p&gt;
+&lt;p&gt;Its divisions and precisions,&lt;/p&gt;
+&lt;p&gt;Every street lamp that I pass&lt;/p&gt;
+&lt;p&gt;Beats like a fatalistic drum,&lt;/p&gt;
+&lt;p&gt;And through the spaces of the dark&lt;/p&gt;
+&lt;p&gt;Midnight shakes the memory&lt;/p&gt;
+&lt;p&gt;As a madman shakes a dead geranium.&lt;/p&gt;
+&lt;p&gt;by T.S. Eliot, &lt;em&gt;Rhapsody on a Windy Night&lt;/em&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;length-of-line&#34;&gt;Length of line&lt;/h2&gt;
+&lt;p&gt;One line should contain about 2~3 alphabets&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz&lt;mark&gt;abcdefghijklmnopqrstuvwxyz&lt;/mark&gt;&lt;/p&gt;
+&lt;h2 id=&#34;punctuations&#34;&gt;Punctuations&lt;/h2&gt;
+&lt;p&gt;Comma, period, question marks and exclamation marks.&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;Is this a question mark? Yes!&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;Quotation marks should have the correct orientations:&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;&amp;ldquo;Quotations marks &amp;lsquo;rocks&amp;rsquo;&amp;quot;&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;Colon, and semicolon:&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;Here: a colon; which is nothing like a semicolon.&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;Ellipses should be rendered as one character, instead of 3 dots.&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;Ellipses&amp;hellip;&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;Hyphen and dashes. A &lt;strong&gt;hyphen&lt;/strong&gt; is the shortest, an &lt;strong&gt;en dash&lt;/strong&gt; slightly longer, and an &lt;strong&gt;em dash&lt;/strong&gt; twice as long as an &lt;strong&gt;en dash&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;mark&gt;One-year-old puppy&lt;/mark&gt;&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;1997&amp;ndash;1999&lt;/mark&gt;&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;but&amp;mdash;&lt;/mark&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Apostrophes should point downwards&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;It&amp;rsquo;s me. In the &amp;rsquo;70s. Rock &amp;rsquo;n&amp;rsquo; Roll&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;Brackets&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;(regular ones), [square ones], {curly ones}&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;Special characters&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copyright: &lt;mark&gt;© 2022&lt;/mark&gt; (should appear in line with text)&lt;/li&gt;
+&lt;li&gt;Trademark: &lt;mark&gt;Brand™, and Registered Tradmark®&lt;/mark&gt; (should appear as superscripts)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Slashes&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;Slash/forward\backward&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;Foot and Inches: &lt;mark&gt;12&#39; 13&amp;quot;&lt;/mark&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ligatures&#34;&gt;Ligatures&lt;/h2&gt;
+&lt;p&gt;There, figure, fft, ffi.&lt;/p&gt;
+&lt;h2 id=&#34;block-quote&#34;&gt;Block quote&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Blockquote directly under a title&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Multiline blockquote
+Without extra line in between&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A regular line.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Multiline blockquote&lt;/p&gt;
+&lt;p&gt;With extra line in between&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A very long blockquote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
+&lt;p&gt;Here is an inline image &lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
+    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; &gt;. There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p&gt;
+&lt;p&gt;Images put on their own line is better:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
+    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; &gt;&lt;/p&gt;
+&lt;p&gt;A bigger image:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
+    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34; width=&#34;400&#34;  height=&#34;400&#34; &gt;&lt;/p&gt;
+&lt;p&gt;A gigantic image:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
+    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-480w.webp 480w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w&#34; width=&#34;4000&#34;  height=&#34;4000&#34; &gt;&lt;/p&gt;
+&lt;p&gt;A svg image:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34;
+    srcset=&#34;https://powersnail.com/2022/test-md-page/snail.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;&lt;/p&gt;
+&lt;p&gt;A figure written in HTML:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img alt=&#34;Image inside a figure&#34; 
+        src=&#34;./snail-big.webp&#34;&gt;
+    &lt;figcaption&gt;
+        Image inside a figure
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Some Markdown parser will always treat images as an inline element. There&amp;rsquo;s nothing an SSG or theme maker can do. So this &lt;code&gt;figure&lt;/code&gt; is written as raw HTML.&lt;/p&gt;
+&lt;h2 id=&#34;lists&#34;&gt;Lists&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;A numbered list&lt;/li&gt;
+&lt;li&gt;With many elements&lt;/li&gt;
+&lt;li&gt;And a multi-
+line item&lt;/li&gt;
+&lt;li&gt;Then, some
+&lt;ol&gt;
+&lt;li&gt;sub&lt;/li&gt;
+&lt;li&gt;items&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;An unnumbered list
+&lt;ul&gt;
+&lt;li&gt;sub list
+&lt;ul&gt;
+&lt;li&gt;sub sub list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A lot of levels
+&lt;ul&gt;
+&lt;li&gt;interlacing with
+&lt;ul&gt;
+&lt;li&gt;other
+&lt;ul&gt;
+&lt;li&gt;going deeper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;shalower
+&lt;ul&gt;
+&lt;li&gt;deeper
+&lt;ul&gt;
+&lt;li&gt;and deeper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Back out again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;And see if the rendering is sensible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;code-blocks&#34;&gt;Code blocks&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Block with no language set.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;block_with_a_language&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indent&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;multi&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;level&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;space&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Block with no language set that is super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;A block with a super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long line&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
+&lt;p&gt;A simple table with very few columns and rows:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;simple&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;item 1&lt;/td&gt;
+&lt;td&gt;item 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A table with alignment parameters:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;alignment&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;test&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;table&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;item 1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;item 2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;item3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;item 1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;item 2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;item3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;item 1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;item 2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;item3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;item 1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;item 2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;item3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A table with many columns&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;td&gt;row 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;td&gt;row 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A table with a very fat column:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;fat&lt;/th&gt;
+&lt;th&gt;column&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;item 1&lt;/td&gt;
+&lt;td&gt;item 2 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;some-random-tests&#34;&gt;Some random tests&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Language: 中文测试&lt;/li&gt;
+&lt;li&gt;HTML embeded: &lt;br&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;References&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Austen, Jane. &lt;em&gt;Pride and Prejudice&lt;/em&gt;. Standard Ebooks, 2014.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Eliot, T. S. &lt;em&gt;Poetry&lt;/em&gt;. Standard Ebooks, 2017.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;Butterick, Matthew. &lt;em&gt;Practical Typography&lt;/em&gt;. &lt;a href=&#34;https://practicaltypography.com/line-length.html&#34;&gt;https://practicaltypography.com/line-length.html&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;A test for reference&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    <category>posts</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Theme-less Hugo, Almost Pure HTML, Styled with MVP CSS</title>
+    <link rel="alternate">https://powersnail.com/2022/hugo-mvp-css/</link>
+    <published>Wed, 12 Jan 2022 00:00:00 +0000</published>
+    <updated>Wed, 12 Jan 2022 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2022/hugo-mvp-css/</id>
+    <summary type="html">Theme-less Hugo As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else.</summary>
+    <content type="html">&lt;h2 id=&#34;theme-less-hugo&#34;&gt;Theme-less Hugo&lt;/h2&gt;
+&lt;p&gt;As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else. From WordPress to Jekyll to Hugo, no theme ever stopped me from tinkering with the underlying templates and CSS, during which, the theme inevitably becomes more coupled with my blog and content. This is because while the templates are usually generic enough for the body of blog articles, they are often quite specific on other elements: about, headers, footers, navigation bars, etc. And to customize those elements, I&amp;rsquo;m practically re-writing the website.&lt;/p&gt;
+&lt;p&gt;When I started with Hugo, I chose the theme &lt;a href=&#34;https://github.com/mavidser/hugo-rocinante&#34;&gt;Rocinante&lt;/a&gt;, for its clean appearance, and partially for its name, which comes from one of my favorite novels of all time. I forked the theme, and kept maintaining two repositories: the blog itself, and the theme. As more modifications were made, the two codebases tangled with each other so deeply, that I often wonder where I should put a certain element.&lt;/p&gt;
+&lt;p&gt;I decided to go theme-less, when the theme no longer bear any resemblance to the original Rocinante. There&amp;rsquo;s no point in maintaining two sets of code if they cannot be decoupled.&lt;/p&gt;
+&lt;p&gt;Theme-less Hugo is easy: I just needed the templates, everything in the &lt;code&gt;layouts&lt;/code&gt; directory, to scaffold the site. So, I copied the skeleton code&amp;mdash;&lt;code&gt;layouts&lt;/code&gt;, and &lt;code&gt;assets&lt;/code&gt; for the styles&amp;mdash;into my blog, and removed the &lt;code&gt;themes&lt;/code&gt; directory.&lt;/p&gt;
+&lt;p&gt;In fact, I think if one has finished theme-shopping, and would like to start making customizations, the first thing to do is to copy the theme into their main project, and delete &lt;code&gt;themes&lt;/code&gt;. It makes the website whole, the workflow more coherent, the workspace better organized, the commit history saner.&lt;/p&gt;
+&lt;h2 id=&#34;semantic-html-and-mvpcss&#34;&gt;Semantic HTML and MVP.CSS&lt;/h2&gt;
+&lt;p&gt;I have very little need for advanced topography or animations. My blog is just a bunch of static files hosted on GitHub Pages; nothing Fancy.&lt;/p&gt;
+&lt;p&gt;This is, therefore, a very suitable use case for a classless CSS framework like &lt;a href=&#34;https://andybrewer.github.io/mvp/&#34;&gt;MVP.CSS&lt;/a&gt;. Overall, I think MVP does a fantastic job.&lt;/p&gt;
+&lt;p&gt;A few things that I don&amp;rsquo;t like about it:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Block quotes. MVP centers and enlarges the text in block quote, as if I&amp;rsquo;m hanging an inspirational epigram on the wall, which doesn&amp;rsquo;t fit the semantic role of block quotes. It&amp;rsquo;s simply a quotation that occupies a paragraph; it&amp;rsquo;s part of my content, a link in the linear chain of words, not a flyout or illustration. MVP already has &lt;code&gt;&amp;lt;section&amp;gt;&amp;lt;aside&amp;gt;&lt;/code&gt; to deal with that.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Links without underlines. This makes the website less accessible to color-blind readers, or anyone who reads on a monochrome monitor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Alternating table row colors. Not a fault of MVP. This is merely a pet peeve of mine.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With regard to code blocks, Hugo defaults to rendering code highlighting with inline style of fixed colors, which is awkward when MVP can react to system-wise dark theme. So, I configured Hugo to output code blocks with CSS classes, and output two themes, &lt;code&gt;friendly&lt;/code&gt; and &lt;code&gt;dracula&lt;/code&gt;, for light and dark themes respectively.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# To generate the CSS files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo gen chromastyles --style&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;friendly &amp;gt; assets/css/_friendly.css
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo gen chromastyles --style&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;dracula &amp;gt; assets/css/_dracula.css&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scss&#34; data-lang=&#34;scss&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// style.scss
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// To include both themes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;@import&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;friendly&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;@media&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prefers-color-scheme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ni&#34;&gt;dark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;@import&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;dracula&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# config.toml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;markup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;markup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;highlight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;noClasses&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I then colored the website with a dark banner image of Bach&amp;rsquo;s manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with &lt;a href=&#34;https://bottosson.github.io/posts/oklab/&#34;&gt;Oklab&lt;/a&gt; color space, and it seems to be passing accessibility tests so far. It might be a total overkill though, since a few colors on the spectrum are used. But what is a personal project without a few overkills?&lt;/p&gt;
+&lt;h2 id=&#34;mathjax-and-a-little-grievance-of-hugo&#34;&gt;MathJax, and a Little Grievance of Hugo&lt;/h2&gt;
+&lt;p&gt;The only JavaScript I use is &lt;a href=&#34;https://www.mathjax.org/&#34;&gt;MathJax&lt;/a&gt;. I&amp;rsquo;ve been considering to use its server-side rendering, but it seems that at the moment of writing this blog, Hugo does not support its use.&lt;/p&gt;
+&lt;p&gt;In fact, Hugo does not support running its output HTML through an arbitrary command, and I think it&amp;rsquo;s a shame. There is a limit to what the &lt;code&gt;replace&lt;/code&gt; and &lt;code&gt;replaceRE&lt;/code&gt; could accomplish, which can be supplemented by custom filters written by other users.&lt;/p&gt;
+&lt;p&gt;For instance, math equations can be easily rendered with LaTeX and converted to SVG. This will enable the embedding of arbitrary Tex elements, not just what MathJax supports, and at the same time, eliminates the need to bundle a JS library for client-side rendering.&lt;/p&gt;
+&lt;p&gt;One thing that I can do is to add an extra step to &lt;code&gt;hugo build&lt;/code&gt;, and iterate through all the output HTML with whatever post-processing I want. But I do hope that this could be integrated into Hugo, so I don&amp;rsquo;t have to further butcher the GitHub Action file.&lt;/p&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;Final Thoughts&lt;/h2&gt;
+&lt;p&gt;You can find all the code to my blog &lt;a href=&#34;https://github.com/PowerSnail/PowerSnail.github.io&#34;&gt;here&lt;/a&gt;. My modifications to the theme, up to the point that I moved everything into the main repository, can be found &lt;a href=&#34;https://github.com/PowerSnail/hugo-rocinante&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
+  
+</feed>
