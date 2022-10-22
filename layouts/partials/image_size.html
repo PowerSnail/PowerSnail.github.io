@@ -21,7 +21,7 @@
         {{- with (imageConfig .path) -}}
             {{- $width = .Width -}}
             {{- $height = .Height -}}
-            {{- end -}}
+        {{- end -}}
         {{- if gt $width 480 -}}
             {{- $new_name := printf "%s%s%s" (path.BaseName .path) "-480w" (path.Ext .path) -}}
             {{- $img480w = replace .url (path.Base .path) $new_name -}}
