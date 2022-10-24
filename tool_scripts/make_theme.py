@@ -73,6 +73,11 @@ class Colorscheme:
         vibrant[1:] *= 0.22 / np.sqrt(vibrant[1] ** 2 + vibrant[2] ** 2)
         translucent = AlphaColor(Color(vibrant), alpha=0.1)
 
+        grayed = accent.data.copy()
+        grayed[1:] *= 0.01 / np.sqrt(grayed[1] ** 2 + grayed[2] ** 2)
+
+        text_alt = Color(np.array([0.3, grayed[1], grayed[2]]))
+        background_alt = Color(np.array([0.95, grayed[1], grayed[2]]))
 
         light = 0.4
         chroma = 0.25
@@ -86,8 +91,8 @@ class Colorscheme:
             translucent=translucent,
             text=text,
             background=background,
-            text_alt=Color(text.data * 0.9 + accent.data * 0.1),
-            background_alt=Color(background.data * 0.9 + accent.data * 0.1),
+            text_alt=text_alt,
+            background_alt=background_alt,
             gray=Color(np.array([light, 0.0, 0.0])),
             red=terminals[0],
             yellow=terminals[1],
