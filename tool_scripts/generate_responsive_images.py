@@ -1,6 +1,10 @@
+from collections import Counter
+import itertools
 import pathlib
 import re
 from typing import Iterable
+import multiprocessing as mp
+import more_itertools
 
 import typer
 from PIL import Image
@@ -30,6 +34,20 @@ def not_none(i: Iterable):
     return filter(lambda x: x is not None, i)
 
 
+SIZES = [480, 800]
+
+
+def generate_image(path) -> list[int]:
+    img = Image.open(path)
+    output_sizes = []
+    for width in SIZES:
+        if img.width > width:
+            img.resize((width, int(img.height / img.width * width))).save(
+                path.with_name(path.stem + f"-{width}w" + path.suffix), method=6, quality=95)
+            output_sizes.append(width)
+    return output_sizes
+
+
 def main(path):
     root = pathlib.Path(path)
 
@@ -39,20 +57,12 @@ def main(path):
         with open(html_path) as file:
             page = LexborHTMLParser(file.read())
         links = not_none(tag.attrs.get("src") for tag in page.css("img"))
-        paths.update(not_none(to_path(link, root, html_path) for link in links))
+        paths.update(not_none(to_path(link, root, html_path) for link in links if not link.endswith(".svg")))
     
-    counts = {480: 0, 800: 0}
-    for p in sorted(paths):
-        try:
-            img = Image.open(p)
-        except:
-            continue
-        
-        for width in counts:
-            if img.width > width:
-                img.resize((width, int(img.height / img.width * width))).save(p.with_name(p.stem + f"-{width}w" + p.suffix), method=6, quality=95)
-                counts[width] += 1
-    print(f"Generated {counts[480]} 480w images, {counts[800]} 800w images.")
+    pool = mp.Pool(8)
+    counts = sorted(Counter(more_itertools.flatten(pool.imap_unordered(generate_image, paths))).items())
+
+    print("Generated responsive images: " + ", ".join(f"{k}w: {v}" for k, v in counts))
 
 
 typer.run(main)
