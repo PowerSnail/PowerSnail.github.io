@@ -11,22 +11,3 @@
 {{ end }}
 
 <hr />
-
-<div id="metadata">
-
-  {{ if and (eq .Kind "page") (eq .Section "posts") }}
-  {{ $time := .Params.date }}
-
-  <span class="icon-prefix calendar-event">
-    {{ $time.Format "2006-01-02" }}
-  </span>
-
-  <span class="icon-prefix calculator">    
-    {{ .WordCount }} words
-  </span>
-
-  <span class="icon-prefix clock">
-    {{ .ReadingTime }} minutes read
-  </span>
-  {{ end }}
-</div>
