@@ -4,7 +4,7 @@
     <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://snailshell.goatcounter.com/count https://mirrors.creativecommons.org/; style-src 'self' 'unsafe-inline'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://snailshell.goatcounter.com/count https://mirrors.creativecommons.org/; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'">
     <meta name="author" content="PowerSnail">
     <meta name="description" content="To use Grub2 theme preview on openSUSE, two environment variables needs to be overridden.">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -13,32 +13,30 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#af3000">
     <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#af3000">
+    <meta name="theme-color" content="#1C4652">
     <title>
       Fixing Grub2 Theme Preview on Opensuse Tumbleweed · SnailShell
     </title>
     <link rel="prefetch" href="/images/front-cover.webp" as="image" crossorigin="">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="canonical" href="https://powersnail.com/2022/grub2-theme-preview-opensuse/">
   </head>
   <body>
     <header>
-      <a href="https://powersnail.com/" id="site-title">SnailShell</a>
+      <a href="/">SnailShell</a>
       <nav>
         <a type="button" href="/posts/">Posts</a> <a type="button" href="/status/">Status</a> <a type="button" href="/about/">About</a>
       </nav>
     </header><img class="goatcounter" alt="" width="1" height="1" src="https://snailshell.goatcounter.com/count?p=%2f2022%2fgrub2-theme-preview-opensuse%2f&amp;t=Fixing%20Grub2%20Theme%20Preview%20on%20Opensuse%20Tumbleweed">
     <main>
       <article>
-        <header>
-          <h1>
-            Fixing Grub2 Theme Preview on Opensuse Tumbleweed
-          </h1>
-          <hr>
-          <div id="metadata">
-            <span class="icon-prefix calendar-event">2022-08-06</span> <span class="icon-prefix calculator">345 words</span> <span class="icon-prefix clock">2 minutes read</span> <span class="icon-prefix tags"><a class="tag" href="/tags/computer-science">computer science</a></span>
-          </div>
-        </header>
+        <h1>
+          Fixing Grub2 Theme Preview on Opensuse Tumbleweed
+        </h1>
+        <hr>
+        <div id="metadata">
+          <span class="icon-prefix calendar-event">2022-08-06</span> <span class="icon-prefix calculator">345 words</span> <span class="icon-prefix clock">2 minutes read</span>
+        </div>
         <p>
           <strong>TLDR</strong>: To use <a href="https://github.com/hartwork/grub2-theme-preview">grub2-theme-preview</a> on openSUSE, you need to override the paths of firmware and ovmf:
         </p>
@@ -127,6 +125,9 @@
         <p>
           <img src="/images/opensuse-grub-preview.webp" alt="Screenshot of grub2-theme-preview" srcset="/images/opensuse-grub-preview-480w.webp 480w,/images/opensuse-grub-preview-800w.webp 800w,/images/opensuse-grub-preview.webp 1200w" width="1200" height="675">
         </p>
+        <div>
+          <a class="tag" href="/tags/computer-science">computer science</a>
+        </div>
         <footer>
           <p id="cc">
             This work is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0 <img alt="Creative Commons License CC BY-SA 4.0" src="/images/cc-all.svg" style="height:1.4em; width: auto;" loading="lazy" width="30" height="11"></a>
