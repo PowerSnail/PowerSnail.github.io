@@ -41,7 +41,7 @@ def main(path):
         links = not_none(tag.attrs.get("src") for tag in page.css("img"))
         paths.update(not_none(to_path(link, root, html_path) for link in links))
     
-    counts = {480: 0, 800: 0, 1200: 0}
+    counts = {480: 0, 800: 0}
     for p in sorted(paths):
         try:
             img = Image.open(p)

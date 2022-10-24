@@ -1,6 +1,19 @@
 /* Layout, sizing, margins */
 
+@import "font";
+@import "icons";
+
 body {
+  font-family: "Crimson Text", "Noto Sans SC", serif;
+  font-size: calc(max(1rem, min(20px, 4vw)));
+  text-rendering: optimizeLegibility;
+  
+  // Workaround for iOS bug: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  
   padding: 0;
   margin: 0;
   min-height: 100vh; 
@@ -20,18 +33,6 @@ body>header {
   display: grid;
   grid-template-rows: auto auto;
   justify-items: stretch;
-
-  nav {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    padding: 2px;
-  }
-}
-
-#site-title {
-  text-align: center;
-  padding: 0.2em;
 }
 
 #metadata {
@@ -173,4 +174,121 @@ figure {
 
 figcaption {
   color: var(--text-alt);
+}
+
+body > header a::before {
+  content: "\00a0";
+  font-family: "Fira Code";
+  color: var(--accent);
+}
+
+body > header a::after {
+  content: "\00a0";
+  font-family: "Fira Code";
+  color: var(--accent);
+}
+
+
+body > header a.current::before {
+  content: "<";
+}
+
+body > header a.current::after {
+  content: ">";
+}
+
+body > header,
+body > footer {
+  border-top: 1px solid var(--text);
+  border-bottom: 1.7px solid var(--text);
+  a {
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+
+#metadata {
+  font-size: 0.8em;
+  font-family: sans-serif;
+}
+
+.tag {
+  margin-right: 4px;
+}
+
+.tag::before {
+  content: "#";
+}
+
+.icon-prefix::before {
+  content: "";
+  display: inline-block;
+  height: 1.2em;
+  width: 1.2em;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  vertical-align: text-bottom;
+  margin: 2px;
+  background-color: var(--text);
+}
+
+code {
+  font-size: 0.8em;
+  font-family: "Fira Code";
+  background-color: var(--background_alt);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.post-time,
+.status-time {
+  font-family: "Fira Code";
+  font-size: 0.8em;
+}
+
+.post-list-item {
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  p {
+    font-size: 0.9em;
+    line-height: 1.3;
+    margin: 0.2em 0 0 0;
+    color: var(--text_alt);
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-top: 2px solid var(--text);
+  border-bottom: 2px solid var(--text);
+}
+
+thead {
+  border-bottom: 1px solid var(--text);
+  font-weight: 700;
+}
+
+article > footer {
+  font-size: 0.85em;
+  border-top: solid 1px var(--text);
+  line-height: 1.2;
+}
+
+.status-card {
+  border-left: solid 2px var(--accent);
 }

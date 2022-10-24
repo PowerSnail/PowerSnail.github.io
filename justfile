@@ -9,9 +9,6 @@ latex-svg name:
 mathjax-update:
     wget --output-document "themes/rocinante/assets/js/tex-svg.js" "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js"
 
-change-color:
-    python3 tool_scripts/make_theme.py > assets/css/_color.scss
-
 build-ts file:
     parcel build "{{ file }}" --dist-dir "$(filenametool parent {{ file }})"
 
@@ -34,14 +31,14 @@ serve-at target:
     hugo serve -D --port 1313 --baseURL="{{ target }}" --appendPort=false
 
 build *flags:
-    hugo mod clean
+    hugo mod clean --all && rm -r public
     rm -rf build/public
     mkdir -p build/public
     hugo --destination build/public {{flags}}
     just post-process build/public
 
 deploy-debug destination:
-    just build --buildDrafts
+    just build --buildDrafts --environment "development"
     rm -rf "{{ destination }}/*"
     cp -r build/public/* "{{ destination }}/"
 
@@ -54,7 +51,7 @@ publish:
     cd build/public && git add . && git commit -m "deployment" && git push || true
 
 post-process sitedir:
-    lightningcss -m "{{ sitedir }}/style.css" --output-file "{{ sitedir }}/style.css"
+    fd "\.css" {{ sitedir }} --exec lightningcss -m "{}" --output-file "{}"
     python tool_scripts/generate_responsive_images.py "{{ sitedir }}/"
     python tool_scripts/check_dead_links.py "{{ sitedir }}/"
     fd ".html" "{{ sitedir }}/"  --exec just format-html 
