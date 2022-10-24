@@ -3,12 +3,19 @@
   {{- partial "article_header.html" . -}}
 
   {{- partial "hacks.html" . }}
-
+  
+  {{ with .Params.tags }}
+  <div>
+    {{ $links := apply . "partial" "tag_link.html" "." }}
+    {{ $clean := apply $links "chomp" "." }}
+    {{ delimit $clean " " }}
+  </div>
+  {{ end }}
+  
   <footer>
     {{- partial "footnotes.html" .Content -}}
     {{ partial "cc.html" . }}
   </footer>
-
 </article>
 
 {{ end }}
