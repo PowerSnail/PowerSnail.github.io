@@ -1,50 +1,46 @@
-/* Layout, sizing, margins */
-
 @import "font";
 @import "icons";
+@import "color";
+@import "codescheme";
 
+/* Layout, sizing, margins */
 body {
   font-family: "Crimson Text", "Noto Sans SC", serif;
   font-size: calc(max(1rem, min(20px, 4vw)));
   text-rendering: optimizeLegibility;
-  
+
   // Workaround for iOS bug: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  
+
   padding: 0;
   margin: 0;
-  min-height: 100vh; 
+  min-height: 100vh;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
   overflow-wrap: anywhere;
 }
 
-body>main {
+main {
   margin-left: auto;
   margin-right: auto;
   max-width: calc(min(60ch, 92vw));
 }
 
-body>header {
-  display: grid;
-  grid-template-rows: auto auto;
-  justify-items: stretch;
+header,
+footer {
+  border-top: 1px solid var(--text);
+  border-bottom: 1.7px solid var(--text);
+  a {
+    text-decoration: none;
+    text-align: center;
+  }
 }
 
-#metadata {
-  display: flex;
-  flex-flow: row wrap;
-  column-gap: 1em;
-  row-gap: 0.5em;
-  font-size: 0.95em;
-  margin-bottom: 2em;
-}
-
-body>footer {
+body > footer {
   margin-top: 2em;
   display: grid;
   justify-items: center;
@@ -60,13 +56,23 @@ body>footer {
   }
 }
 
-p, ul, ol, div.highlight, div.table-wrapper, blockquote {
+p,
+ul,
+ol,
+div.highlight,
+div.table-wrapper,
+blockquote {
   margin-top: 0.8em;
   margin-bottom: 0.8em;
   line-height: 1.4;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 1.5em;
   margin-bottom: 1em;
 }
@@ -76,7 +82,9 @@ blockquote {
   margin-left: 0;
   padding-left: 1em;
 
-  p, ul, ol {
+  p,
+  ul,
+  ol {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
@@ -104,7 +112,7 @@ img {
   height: auto;
 }
 
-pre  {
+pre {
   margin: 0;
   overflow-x: auto;
   padding: 1ch;
@@ -119,7 +127,8 @@ pre code {
   padding: 0;
 }
 
-.table-wrapper, .highlight {
+.table-wrapper,
+.highlight {
   overflow-x: auto;
 }
 
@@ -136,7 +145,7 @@ img {
   vertical-align: text-bottom;
 }
 
-article>footer {
+article > footer {
   margin-bottom: 1em;
   margin-top: 3em;
 }
@@ -150,7 +159,7 @@ article>footer {
   gap: 2em;
 }
 
-.status-card>p {
+.status-card > p {
   margin-bottom: 0;
 }
 
@@ -162,7 +171,7 @@ code {
   font-size: 0.9em;
 }
 
-article>*:first-child {
+article > *:first-child {
   margin-top: 2em;
 }
 
@@ -172,45 +181,34 @@ figure {
   overflow-x: auto;
 }
 
+header {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: stretch;
+}
+
 figcaption {
   color: var(--text-alt);
 }
 
-body > header a::before {
+header a::before {
   content: "\00a0";
   font-family: "Fira Code";
   color: var(--accent);
 }
 
-body > header a::after {
+header a::after {
   content: "\00a0";
   font-family: "Fira Code";
   color: var(--accent);
 }
 
-
-body > header a.current::before {
+header a.current::before {
   content: "<";
 }
 
-body > header a.current::after {
+header a.current::after {
   content: ">";
-}
-
-body > header,
-body > footer {
-  border-top: 1px solid var(--text);
-  border-bottom: 1.7px solid var(--text);
-  a {
-    text-decoration: none;
-    text-align: center;
-  }
-}
-
-
-#metadata {
-  font-size: 0.8em;
-  font-family: sans-serif;
 }
 
 .tag {
@@ -291,4 +289,49 @@ article > footer {
 
 .status-card {
   border-left: solid 2px var(--accent);
+}
+
+/* Coloring */
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  background-color: var(--translucent);
+}
+
+body > header,
+body > footer {
+  background: url(/images/front-cover.webp) no-repeat;
+  background-size: cover;
+  background-color: var(--background);
+
+  a {
+    color: var(--text);
+  }
+}
+
+header nav {
+  background-color: var(--background);
+}
+
+mark {
+  background-color: var(--translucent);
+  color: var(--text);
+}
+
+#metadata {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 1em;
+  row-gap: 0.5em;
+  font-size: 0.95em;
+  margin-bottom: 2em;
+  font-family: sans-serif;
 }
