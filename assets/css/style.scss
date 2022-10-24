@@ -179,7 +179,7 @@ header {
 }
 
 figcaption {
-  color: var(--text-alt);
+  color: var(--text_alt);
 }
 
 header a::before {
@@ -265,9 +265,10 @@ mark {
   flex-flow: row wrap;
   column-gap: 1em;
   row-gap: 0.5em;
-  font-size: 0.8em;
+  font-size: 12px;
   margin-bottom: 2em;
-  font-family: sans-serif;
+  font-family: "Fira Code";
+  color: var(--text_alt)
 }
 
 .post-time,
