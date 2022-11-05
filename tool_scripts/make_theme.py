@@ -1,4 +1,5 @@
 import dataclasses
+import sys
 import colour
 import more_itertools
 import numpy as np
@@ -109,17 +110,22 @@ class Colorscheme:
         return Colorscheme(**{k: v.invert() for k, v in dataclasses.asdict(self).items()})
 
 
-def main(accent: str):
+def main(accent: str, output: str = ""):
     color_scheme = Colorscheme.from_accent(accent)
-    print(":root {")
-    print(str(color_scheme))
-    print("}")
+    out = sys.stdout 
+    if output:
+        out = open(output, mode="a")
 
-    print("@media (prefers-color-scheme: dark) {")
-    print("  :root {")
-    print(str(color_scheme.invert()))
-    print("  }")
-    print("}")
+    out.write(":root {")
+    out.write(str(color_scheme))
+    out.write("}")
+
+    out.write("@media (prefers-color-scheme: dark) {")
+    out.write("  :root {")
+    out.write(str(color_scheme.invert()))
+    out.write("  }")
+    out.write("}")
+    out.close()
 
 
 if __name__ == "__main__":

@@ -49,6 +49,7 @@ publish: build
     cd build/public && git add . && git commit -m "deployment" && git push || true
 
 post-process sitedir:
+    fd "style.css" {{ sitedir }} --exec python tool_scripts/make_theme.py "$(rg 'theme_color = "(.*)+"' -r '$1' config.toml)" --output
     fd "\.css" {{ sitedir }} --exec lightningcss -m "{}" --output-file "{}"
     python tool_scripts/generate_responsive_images.py "{{ sitedir }}/"
     python tool_scripts/check_dead_links.py "{{ sitedir }}/"
