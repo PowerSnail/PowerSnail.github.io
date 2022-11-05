@@ -6,7 +6,7 @@
 /* Layout, sizing, margins */
 body {
   font-family: "Crimson Text", "Noto Sans SC", serif;
-  font-size: calc(max(1rem, min(20px, 4vw)));
+  font-size: 1.2rem;
   text-rendering: optimizeLegibility;
 
   // Workaround for iOS bug: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
