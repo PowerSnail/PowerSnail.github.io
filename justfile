@@ -37,13 +37,11 @@ build *flags:
     hugo --destination build/public {{flags}}
     just post-process build/public
 
-deploy-debug destination:
-    just build --buildDrafts --environment "development"
+deploy-debug destination: (build "--buildDrafts" "--environment" "development")
     rm -rf "{{ destination }}/*"
     cp -r build/public/* "{{ destination }}/"
 
-publish:
-    just build
+publish: build
     touch build/public/.nojekyll
     rm -rf build/temp
     git clone --depth 1 --branch gh-pages --single-branch git@github.com:PowerSnail/PowerSnail.github.io.git build/temp
