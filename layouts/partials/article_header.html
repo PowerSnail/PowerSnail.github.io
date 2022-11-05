@@ -1,7 +1,4 @@
 <h1>
-  {{ if eq .Kind "term" }}
-    <a href="/tags/">Tags /</a>
-  {{ end }}
   {{ .Title | .RenderString }}
   {{ partial "draft.html" .}}
 </h1>
