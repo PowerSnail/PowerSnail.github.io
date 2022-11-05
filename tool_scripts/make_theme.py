@@ -75,9 +75,9 @@ class Colorscheme:
         translucent = AlphaColor(Color(vibrant), alpha=0.1)
 
         grayed = accent.data.copy()
-        grayed[1:] *= 0.01 / np.sqrt(grayed[1] ** 2 + grayed[2] ** 2)
+        grayed[1:] *= 0.05 / np.sqrt(grayed[1] ** 2 + grayed[2] ** 2)
 
-        text_alt = Color(np.array([0.3, grayed[1], grayed[2]]))
+        text_alt = Color(np.array([0.4, grayed[1], grayed[2]]))
         background_alt = Color(np.array([0.95, grayed[1], grayed[2]]))
 
         light = 0.4

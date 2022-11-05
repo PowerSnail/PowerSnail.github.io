@@ -259,37 +259,31 @@ mark {
   color: var(--text);
 }
 
-#metadata {
+.metadata {
   display: flex;
+  text-transform: uppercase;
   flex-flow: row wrap;
   column-gap: 1em;
   row-gap: 0.5em;
   font-size: 12px;
   margin-bottom: 2em;
   font-family: "Fira Code";
-  color: var(--text_alt);
+  color: var(--gray);
 }
 
-.post-time,
-.status-time {
-  font-family: "Fira Code";
-  font-size: 0.8em;
+.post-list {
+  display: grid;
+  row-gap: 1em;
 }
 
-.post-list-item {
-  width: 100%;
+.post-list a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: var(--text);
+}
 
-  a {
-    text-decoration: none;
-    color: var(--text);
-  }
-
-  p {
-    font-size: 0.9em;
-    line-height: 1.3;
-    margin: 0.2em 0 0 0;
-    color: var(--text_alt);
-  }
+.post-list p {
+  margin: 0;
 }
 
 .status-container {
@@ -303,14 +297,6 @@ mark {
 
 .status-card {
   padding-left: 2ch;
-}
-
-.post-list {
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 1em;
-  row-gap: 2em;
-  align-items: baseline;
 }
 
 .tag {
