@@ -268,7 +268,7 @@ mark {
   font-size: 12px;
   margin-bottom: 2em;
   font-family: "Fira Code";
-  color: var(--text_alt)
+  color: var(--text_alt);
 }
 
 .post-time,
@@ -304,10 +304,6 @@ mark {
 
 .status-card {
   padding-left: 2ch;
-}
-
-#cc {
-  margin: 2em 2ch 0 2ch;
 }
 
 .post-list {
