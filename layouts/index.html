@@ -5,7 +5,7 @@
     <div class="status-container">
         {{ range first 2 (where .Site.RegularPages "Section" "status") }}
         <div class="status-card">
-            <div class="status-time">
+            <div class="metadata">
                 {{ with .Params.date }}
                 <strong>{{ .Format "15:04" }}</strong> {{ .Format "2006-01-02" }} 
                 {{ end }}
