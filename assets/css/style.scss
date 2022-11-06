@@ -254,14 +254,13 @@ mark {
   column-gap: 1em;
   row-gap: 0.5em;
   font-size: 12px;
-  margin-bottom: 2em;
   font-family: "Fira Code";
   color: var(--gray);
 }
 
 .post-list {
   display: grid;
-  row-gap: 1em;
+  row-gap: 2em;
 }
 
 .post-list a {
