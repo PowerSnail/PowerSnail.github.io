@@ -155,6 +155,10 @@ img {
   vertical-align: text-bottom;
 }
 
+dt {
+  margin-top: 1em;
+}
+
 article > p:first-of-type::first-letter {
   font-size: 400%;
   color: var(--accent);
