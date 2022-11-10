@@ -7,6 +7,7 @@ tags:
   - Data Structure
 date: "2016-02-27"
 slug: "binary-search-tree"
+summary: This is a simple implementation of binary search tree implemented by C++. 
 ---
 
 This is a simple implementation of binary search tree implemented by C++. Here are the methods of my BST:
