@@ -66,7 +66,7 @@ class Colorscheme:
     @classmethod
     def from_accent(cls, accent_hex: str):
         accent = Color.from_hex(accent_hex)
-        accent.data[0] = 0.4
+        # accent.data[0] = 0.4
         text = Color.from_hex("#000000")
         background = Color.from_hex("#fafafa")
 

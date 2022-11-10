@@ -27,11 +27,12 @@ body {
 }
 
 article {
-  display: grid;
   width: 60ch;
-  row-gap: 1em;
   max-width: calc(100vw - 16px);
   margin: auto;
+  display: grid;
+  row-gap: 1em;
+  padding: 32px 0;
 }
 
 article > * {
@@ -41,10 +42,12 @@ article > * {
 
 nav {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   text-transform: uppercase;
   padding: 2px;
-  gap: 1em;
+  column-gap: 1em;
+  row-gap: 0.5em;
 }
 
 nav a {
@@ -91,8 +94,9 @@ blockquote {
   line-height: 1.4;
 }
 
-ul, ol {
-  padding-left: 16px;
+ul,
+ol {
+  padding-left: 18px;
 }
 
 blockquote {
@@ -103,16 +107,22 @@ blockquote {
 
 hr {
   width: 33%;
-  margin: 2em auto;
+  margin: 1em auto;
 }
 
 h1 {
   text-align: center;
+  font-size: 2em;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+img,
+.highlight {
+  border-radius: 5px;
 }
 
 code {
@@ -136,7 +146,6 @@ table {
   border-bottom: 2px solid var(--text);
 }
 
-
 td,
 th {
   padding: 0.2em 0.4em 0.2em 0.4em;
@@ -146,6 +155,13 @@ img {
   vertical-align: text-bottom;
 }
 
+article > p:first-of-type::first-letter {
+  font-size: 400%;
+  color: var(--accent);
+  float: left;
+  margin-right: 5px;
+}
+
 article > footer {
   margin-bottom: 1em;
   margin-top: 3em;
@@ -153,10 +169,6 @@ article > footer {
 
 code {
   font-size: 0.9em;
-}
-
-article > *:first-child {
-  margin-top: 2em;
 }
 
 figure {
@@ -252,7 +264,6 @@ mark {
   text-transform: uppercase;
   flex-flow: row wrap;
   column-gap: 1em;
-  row-gap: 0.5em;
   font-size: 12px;
   font-family: "Fira Code";
   color: var(--gray);
@@ -263,6 +274,11 @@ mark {
   row-gap: 2em;
 }
 
+.post-list section {
+  display: grid;
+  row-gap: 4px;
+}
+
 .post-list a {
   text-decoration: none;
   font-size: 1.2em;
@@ -271,11 +287,13 @@ mark {
 
 .post-list p {
   margin: 0;
+  color: var(--text_alt);
+  font-size: 0.95em;
 }
 
 .status-container {
   display: grid;
-  gap: 2em;
+  gap: 1em;
 }
 
 .status-card > p {
@@ -292,6 +310,10 @@ mark {
 
 .tag::before {
   content: "#";
+}
+
+.icon-prefix {
+  white-space: pre;
 }
 
 .icon-prefix::before {
