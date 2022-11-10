@@ -1300,8 +1300,7 @@ $$&lt;/p&gt;
     <updated>Sat, 27 Feb 2016 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2016/binary-search-tree/</id>
-    <summary type="html">This is a simple implementation of binary search tree implemented by C++. Here are the methods of my BST:
-class Node { public: Node *left, *right, *parent; int key; }; class BST { private: Node *nil; public: BST(); Node* root(); // Traversals void inorder(); void inorderRec(Node*); void inorderIter(); void preOrder(); void preOrderRec(Node*); void postOrder(); void postOrderRec(Node*); // Search Operations Node* find(int); Node* minimum(Node*); Node* maximum(Node*); Node* successor(Node*); Node* predecessor(Node*); // Element Operation void insert(int); void insert(Node*); void remove(int); void remove(Node*); void transplant(Node*, Node*); bool empty(); };I will talk about some of the implementations.</summary>
+    <summary type="html">This is a simple implementation of binary search tree implemented by C++.</summary>
     <content type="html">&lt;p&gt;This is a simple implementation of binary search tree implemented by C++. Here are the methods of my BST:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;

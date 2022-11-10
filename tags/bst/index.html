@@ -12,7 +12,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#af3000">
     <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#1C4652">
+    <meta name="theme-color" content="#C73403">
     <title>
       BST · SnailShell
     </title>
@@ -31,17 +31,18 @@
     <main>
       <article>
         <h1>
-          <a href="/tags/">Tags /</a> BST
+          <a href="/tags/">Tags</a>/#BST
         </h1>
-        <hr>
         <div class="post-list">
-          <span class="post-time">2016-02-27</span>
-          <div class="post-list-item">
+          <section>
             <a href="/2016/binary-search-tree/">Binary Search Tree implemented by C++</a>
+            <div class="metadata">
+              2016-02-27 · 948 words · 5 minutes read
+            </div>
             <p>
-              This is a simple implementation of binary search tree implemented by C++. Here are the methods of my BST: class Node { public: Node *left, *right, *parent; int key; }; class BST { private: Node *nil; public: BST(); Node* root(); // Traversals void inorder(); void inorderRec(Node*); void inorderIter(); void preOrder(); void preOrderRec(Node*); void postOrder(); void postOrderRec(Node*); // Search Operations Node* find(int); Node* minimum(Node*); Node* maximum(Node*); Node* successor(Node*); Node* predecessor(Node*); // Element Operation void insert(int); void insert(Node*); void remove(int); void remove(Node*); void transplant(Node*, Node*); bool empty(); };I will talk about some of the implementations.
+              This is a simple implementation of binary search tree implemented by C++.
             </p>
-          </div>
+          </section>
         </div>
       </article>
     </main>
