@@ -1,0 +1,65 @@
+{{- $isLocal := true -}}
+{{- $path := .src -}}
+{{- $url := .src -}}
+
+{{- if strings.HasPrefix $path "/images" -}}
+    {{- $path = add "/static" $path -}}
+    {{- $isLocal = true -}}
+{{- else if strings.HasPrefix $path "/" -}}
+    {{- $path = add "/content" $path -}}
+    {{- $isLocal = true -}}
+{{- else if strings.HasPrefix $path "./" -}}
+    {{- $path = add "/content/" (add .page.File.Dir $path) -}}
+    {{- $url = add .page.RelPermalink (substr $url 2) -}}
+    {{- $isLocal = true -}}
+{{- else -}}
+    {{- $isLocal = false -}}
+{{- end -}}
+
+{{- $width := 0 -}}
+{{- $height := 0 -}}
+{{- $isSvg := false -}}
+{{- $img480w := false -}}
+{{- $img800w := false -}}
+
+{{- if (strings.HasSuffix $path ".svg") -}}
+    {{- $isSvg = true -}}
+    {{- $svgContent := "" -}}
+    {{- if $isLocal -}}
+        {{- $svgContent = os.ReadFile $path -}}
+    {{- else -}}
+        {{- $svgContent:= (resources.GetRemote $path).Content -}}
+    {{- end -}}
+    {{- $viewBoxSizes := split (index (split (index (split $svgContent `viewBox=`) 1) `'`) 1) ` ` -}}
+    {{- $width = math.Round (float (index $viewBoxSizes 2)) -}}
+    {{- $height = math.Round (float (index $viewBoxSizes 3)) -}}
+{{- else -}}
+    {{- if $isLocal -}}
+        {{- with (imageConfig $path) -}}
+            {{- $width = .Width -}}
+            {{- $height = .Height -}}
+        {{- end -}}
+        {{- if gt $width 480 -}}
+            {{- $new_name := printf "%s%s%s" (path.BaseName $path) "-480w" (path.Ext $path) -}}
+            {{- $img480w = replace $url (path.Base $path) $new_name -}}
+        {{- end -}}
+        {{- if gt $width 800 -}}
+            {{- $new_name := printf "%s%s%s" (path.BaseName $path) "-800w" (path.Ext $path) -}}
+            {{- $img800w = replace $url (path.Base $path) $new_name -}}
+        {{- end -}}
+    {{- else -}}
+        {{- $image := (resources.GetRemote $path) -}}
+        {{- $width = $image.Width -}}
+        {{- $height = $image.Height -}}
+    {{- end -}}
+{{- end -}}
+
+<img src="{{- $url | safeURL -}}" alt="{{- .alt -}}"
+    srcset="
+        {{- with $img480w }}{{ . }} 480w,{{- end -}}
+        {{- with $img800w }}{{ . }} 800w,{{- end -}}
+        {{ $url }} {{ $width }}w"
+    {{- with $isSvg }} style="width:100%; height: auto;" {{ end -}}
+    {{- with $width }} width="{{- . -}}" {{ end -}}
+    {{- with $height }} height="{{- . -}}" {{ end -}}
+>

@@ -176,7 +176,6 @@ code {
 }
 
 figure {
-  margin: 1em 0;
   max-width: 100%;
   overflow-x: auto;
 }
@@ -189,6 +188,7 @@ header {
 
 figcaption {
   color: var(--text_alt);
+  font-size: 0.9rem;
 }
 
 header a::before {
