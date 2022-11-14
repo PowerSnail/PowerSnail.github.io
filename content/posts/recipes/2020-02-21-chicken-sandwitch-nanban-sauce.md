@@ -3,6 +3,7 @@ title: "南蛮鸡肉三明治 Chicken Sandwich with Nanban Sauce"
 description: "Pan-fried chicken thigh, immersed in Nanban Sauce"
 tags:
     - Japanese
+    - recipe
 date: "2020-02-21"
 lang: zh
 slug: "chicken-sandwitch-nanban-sauce"

@@ -6,6 +6,7 @@ slug: chinese-caramel-color
 isCJK: true
 tags: 
     - Chinese
+    - recipe
 draft: false
 ---
 

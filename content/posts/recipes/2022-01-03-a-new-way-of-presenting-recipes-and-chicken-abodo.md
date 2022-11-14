@@ -2,8 +2,8 @@
 title: A New Way of Presenting Recipes and Chicken Abodo
 description: Sour, sweet, succulent chicken from the Philippines
 tags:
-  - Recipe
-  - Chicken
+  - recipe
+  - chicken
 date: "2022-01-05"
 slug: "a-new-way-of-presenting-recipes-and-chicken-abodo"
 ---
