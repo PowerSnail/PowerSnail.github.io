@@ -28,7 +28,7 @@
       </nav>
     </header><img class="goatcounter" alt="" width="1" height="1" src="https://snailshell.goatcounter.com/count?p=%2f2016%2fbinary-search-tree%2f&amp;t=Binary%20Search%20Tree%20implemented%20by%20C%2b%2b">
     <main>
-      <article>
+      <article id="post-main">
         <h1>
           Binary Search Tree implemented by C++
         </h1>
@@ -203,7 +203,7 @@
           There is a slight complication if <code>x</code> is a leaf, as both children are <code>nil</code>. We would not be able to know whether we have come back from left or right! The traversal will circle around at <code>x</code> forever.
         </p>
         <p>
-          <img src="/images/fromlefttoright.jpg" alt="From Left to Right" srcset="/images/fromlefttoright-480w.jpg 480w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright.jpg 2441w" width="2441" height="2067">{:width=“36px”}.
+          <img src="/images/fromlefttoright.jpg" alt="From Left to Right" srcset="/images/fromlefttoright-480w.jpg 480w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright.jpg 2441w" width="2441" height="2067"> {:width=“36px”}.
         </p>
         <p>
           The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.

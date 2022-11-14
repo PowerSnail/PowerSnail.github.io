@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Recipe on SnailShell</title>
-  <link>https://powersnail.com/tags/recipe/</link><link rel="self" href="https://powersnail.com/tags/recipe/index.xml"></link><updated>Sun, 09 Jan 2022 00:00:00 +0000</updated>
+  <title>recipe on SnailShell</title>
+  <link>https://powersnail.com/tags/recipe/</link><link rel="self" href="https://powersnail.com/tags/recipe/index.xml"></link><updated>Wed, 02 Feb 2022 00:00:00 +0000</updated>
   <id>https://powersnail.com/tags/recipe/</id>
 
   <author>
@@ -11,9 +11,67 @@
 
   <icon>https://powersnail.com/favicon.ico</icon>
 
-  <description>Recent content in Recipe on SnailShell</description>
+  <description>Recent content in recipe on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Chinese Caramel Color</title>
+    <link rel="alternate">https://powersnail.com/2022/chinese-caramel-color/</link>
+    <published>Wed, 02 Feb 2022 00:00:00 +0000</published>
+    <updated>Wed, 02 Feb 2022 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2022/chinese-caramel-color/</id>
+    <summary type="html">糖色: Chinese Caramel Color The iconic Chinese cuisine Red Braised Pork Belly has an appetizing, deep, brick-red color.</summary>
+    <content type="html">&lt;h2 id=&#34;糖色-chinese-caramel-color&#34;&gt;糖色: Chinese Caramel Color&lt;/h2&gt;
+&lt;p&gt;The iconic Chinese cuisine Red Braised Pork Belly has an appetizing, deep, brick-red color. This comes from 糖色(tang se): caramel color. Sugar crystals are heated to a deep red color, and diluted with water. The result is a translucent shimmery red solution, more natural and appetizing than the pinkish red of 红曲粉 (red yeast rice powder), which is found on some Cantonese Char Siu.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly.webp&#34; alt=&#34;Caramel color vs. red yeast rice powder&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly-480w.webp 480w,/2022/chinese-caramel-color/red-braised-pork-belly.webp 512w&#34; width=&#34;512&#34;  height=&#34;256&#34; &gt;
+&lt;/p&gt;
+&lt;p&gt;We can roughly break the process down to four stages: melting, bubbling, turning yellow, and turning red.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp&#34; alt=&#34;Melting sugar&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp 256w&#34; width=&#34;256&#34;  height=&#34;143&#34; &gt;
+&lt;/p&gt;
+&lt;p&gt;To melt the sugar, turn on low heat and toss &lt;strong&gt;30 grams of sugar crystals&lt;/strong&gt; in the pot, with &lt;strong&gt;1 teaspoon of oil&lt;/strong&gt;, and &lt;strong&gt;30 grams of water&lt;/strong&gt;. Keep stirring, and knocking on the crystals with the back of your spoon (or spatula) to break them apart.&lt;/p&gt;
+&lt;p&gt;You can use just the oil, or just the water, too; I find oil &amp;amp; water mixture to be easier to work with. Water makes it easier to melt the sugar in the initial stage, and oil helps to buffer the heat when the sugar starts caramelizing.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp&#34; alt=&#34;Bubbling sugar&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp 256w&#34; width=&#34;256&#34;  height=&#34;220&#34; &gt;
+&lt;/p&gt;
+&lt;p&gt;After the sugar melt, the syrup will start to bubble. Keep stirring.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp&#34; alt=&#34;Syrup turning yellow&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp 256w&#34; width=&#34;256&#34;  height=&#34;193&#34; &gt;
+&lt;/p&gt;
+&lt;p&gt;When the syrup turns #97843A (light yellow), caramelization has begun. Continue to stir, and be extra careful now, because the syrup will change color very rapidly.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp&#34; alt=&#34;Syrup&amp;amp;rsquo;s yellow color deepens&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp 256w&#34; width=&#34;256&#34;  height=&#34;174&#34; &gt;
+&lt;/p&gt;
+&lt;p&gt;When the syrup turns #996118 (dark yellow), turn off the heat. The residual heat is enough to cook the caramel.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp&#34; alt=&#34;Syrup turning red&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp 256w&#34; width=&#34;256&#34;  height=&#34;172&#34; &gt;
+&lt;/p&gt;
+&lt;p&gt;When the syrup turns #420C00 (brick-red), pour 400 grams of boiling water into the pot to stop the cooking. Be careful: some violent splattering is to be expected. Give the solution a few more rounds of stirring to ensure that it is even.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp&#34; alt=&#34;Syrup diluted with water&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp 256w&#34; width=&#34;256&#34;  height=&#34;192&#34; &gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;finalizing&#34;&gt;Finalizing&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp&#34; alt=&#34;Caramel color in a bowl&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp 256w&#34; width=&#34;256&#34;  height=&#34;206&#34; &gt;
+&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s our finished Chinese caramel color in a bowl. To use it, scoop a generous amount into your braised dish at the beginning of cooking.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp&#34; alt=&#34;Caramel color as compared with black tea&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp 256w&#34; width=&#34;256&#34;  height=&#34;202&#34; &gt;
+&lt;/p&gt;
+&lt;p&gt;The caramel color should be roughly the same color as a cup of black tea. That&amp;rsquo;s Earl Grey in the metal spoon for your reference.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-color.svg&#34; alt=&#34;Caramel Color Summary&#34;
+    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-color.svg 393w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;393&#34;  height=&#34;160&#34; &gt;
+&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
   
   <entry>
     <author>
@@ -45,7 +103,8 @@ The Cream To me, the essence of tiramisu is mascarpone.</summary>
 &lt;h2 id=&#34;summary-card&#34;&gt;Summary Card&lt;/h2&gt;
 &lt;p&gt;Here is a printable summary card for the recipe:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34;
-    srcset=&#34;https://powersnail.com/images/tiramisu.svg 543w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;543&#34;  height=&#34;236&#34; &gt;&lt;/p&gt;
+    srcset=&#34;https://powersnail.com/images/tiramisu.svg 543w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;543&#34;  height=&#34;236&#34; &gt;
+&lt;/p&gt;
 </content>
     <category>posts</category>
   </entry>
@@ -113,13 +172,101 @@ The Cream To me, the essence of tiramisu is mascarpone.</summary>
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And to convert this into an image, which tightly bounds the table rather than being a full letter sized white page, I rendered the document into a &lt;code&gt;DVI&lt;/code&gt; file and converted it into &lt;code&gt;SVG&lt;/code&gt; with &lt;code&gt;dvisvgm&lt;/code&gt;. The tool automatically crops the image, so it doesn&amp;rsquo;t end being a full letter sized page.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/chicken-abodo.svg&#34; alt=&#34;Recipe Summary for Chicken Abodo&#34;
-    srcset=&#34;https://powersnail.com/images/chicken-abodo.svg 390w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;390&#34;  height=&#34;177&#34; &gt;&lt;/p&gt;
+    srcset=&#34;https://powersnail.com/images/chicken-abodo.svg 390w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;390&#34;  height=&#34;177&#34; &gt;
+&lt;/p&gt;
 &lt;p&gt;This is the final result of a printable, succinct, summary card for my chicken abodo recipe. After reading on the web (and fiddling with HTML and CSS) for so long, there&amp;rsquo;s something very satisfying about LaTeX. It just looks nice.&lt;/p&gt;
 &lt;p&gt;I then wrote a &lt;a href=&#34;https://github.com/casey/just&#34;&gt;Justfile&lt;/a&gt; recipe to automate the process:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;latex-svg name:
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    mkdir -p output
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    latex --output-directory=output/ --output-format=dvi static/latex/{{ name }}.tex
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    dvisvgm --stdout -O -n output/{{ name }}.dvi &amp;gt; static/images/{{ name }}.svg&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The option &lt;code&gt;-n&lt;/code&gt; causes the SVG to turn all the glyphs into paths. Using fonts causes the browser to substitute the fonts, which is desirable in some cases, but not in a LaTeX document where the placement of elements are fixed.&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">南蛮鸡肉三明治 Chicken Sandwich with Nanban Sauce</title>
+    <link rel="alternate">https://powersnail.com/2020/chicken-sandwitch-nanban-sauce/</link>
+    <published>Fri, 21 Feb 2020 00:00:00 +0000</published>
+    <updated>Fri, 21 Feb 2020 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2020/chicken-sandwitch-nanban-sauce/</id>
+    <summary type="html">菜谱改编自 MASAの料理ABC1. 材料 /</summary>
+    <content type="html">&lt;p&gt;菜谱改编自 &lt;em&gt;MASAの料理ABC&lt;/em&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;材料--material&#34;&gt;材料 / Material&lt;/h2&gt;
+&lt;h3 id=&#34;南蛮酱--nanban-sauce&#34;&gt;南蛮酱 / Nanban Sauce&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;米淋, 一大勺 / Mirin, One table spoon&lt;/li&gt;
+&lt;li&gt;酱油, 两大勺 / Soy Sauce, Two table spoon&lt;/li&gt;
+&lt;li&gt;白醋, 两大勺 / White Vinegar, Two table spoon&lt;/li&gt;
+&lt;li&gt;糖, 小半勺 / Sugar, Less than Half table spoon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;煎鸡肉--pan-fried-chicken&#34;&gt;煎鸡肉 / Pan-fried Chicken&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;带皮去骨鸡腿肉 / Chicken Thigh, boneless, with skin&lt;/li&gt;
+&lt;li&gt;盐 / Salt&lt;/li&gt;
+&lt;li&gt;黑胡椒 / Black pepper&lt;/li&gt;
+&lt;li&gt;淀粉或者面粉 / Starch or flour&lt;/li&gt;
+&lt;li&gt;面包 / Bread&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;烹调--cooking&#34;&gt;烹调 / Cooking&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;鸡腿肉皮朝下，把厚的地方蝴蝶切，摊平&lt;/p&gt;
+&lt;p&gt;Place the chicken thigh skin-side down; butterfly-cut to flatten the thigh.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用刀尖浅戳鸡肉，断筋&lt;/p&gt;
+&lt;p&gt;Poke the muscle with the tip of the knife lightly multiple times to cut connective tissues.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;均匀涂抹盐和胡椒，腌制 15 分钟，使鸡肉基本恢复成室温&lt;/p&gt;
+&lt;p&gt;Evenly rub salt and pepper into the chicken thigh; rest for 15 minutes so the chicken gets to room temperature.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;热锅，少油，中大火，将鸡肉均匀沾粉，皮朝下放入锅中&lt;/p&gt;
+&lt;p&gt;Hot pan, a little oil, medium-high heat. Cover the chicken with starch or flour. Into the pan skin-side down.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;煎至金黄，翻面&lt;/p&gt;
+&lt;p&gt;Flip when the skin becomes golden.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两面都金黄以后，加入酱汁，调成中火&lt;/p&gt;
+&lt;p&gt;Add sauce when both sides are golden; turn heat to medium.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拨动、翻面，让鸡肉吸收酱汁&lt;/p&gt;
+&lt;p&gt;Move around and flip the chicken so it absorbs the sauce.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关火，在锅中静置 5 分钟&lt;/p&gt;
+&lt;p&gt;Turn off heat and rest for 5 minutes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;切两片面包，将多余的酱汁涂在内侧，夹好鸡肉&lt;/p&gt;
+&lt;p&gt;Prepare two slices of bread, and spread extra sauce onto the slices. Place the chicken thigh between the slices.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;南蛮鸡肉三明治，完成！&lt;/p&gt;
+&lt;p&gt;Chicken Sandwich with Nanban Sauce, Done!&lt;/p&gt;
+&lt;h2 id=&#34;总结--summary&#34;&gt;总结 / Summary&lt;/h2&gt;
+&lt;p&gt;经过实验，沾粉的步骤只是为了吸收更多酱汁，淀粉和面粉区别不大。&lt;/p&gt;
+&lt;p&gt;According to my experiments, it makes no difference using starch or flour, since the goal is to absorb more sauce.&lt;/p&gt;
+&lt;p&gt;原版菜谱加了半勺糖，我减少了一点，更能突出酸味和鲜味。&lt;/p&gt;
+&lt;p&gt;The original Nanban sauce recipe had half a table spoon of sugar. I used a little less than that to emphasize more on the acidity and umami.&lt;/p&gt;
+&lt;h2 id=&#34;参考资料--references&#34;&gt;参考资料 / References&lt;/h2&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;MASA. (2018, October 16). 宮崎風酸甜雞腿丼飯/Miyazaki Style Nanban Chicken Don |MASAの料理ABC - YouTube. &lt;a href=&#34;https://www.youtube.com/watch?v=p7BaHCJ6xiI&amp;amp;t=335s&#34;&gt;https://www.youtube.com/watch?v=p7BaHCJ6xiI&amp;amp;t=335s&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </content>
     <category>posts</category>
   </entry>

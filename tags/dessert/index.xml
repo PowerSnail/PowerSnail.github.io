@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Dessert on SnailShell</title>
+  <title>dessert on SnailShell</title>
   <link>https://powersnail.com/tags/dessert/</link><link rel="self" href="https://powersnail.com/tags/dessert/index.xml"></link><updated>Sun, 09 Jan 2022 00:00:00 +0000</updated>
   <id>https://powersnail.com/tags/dessert/</id>
 
@@ -11,7 +11,7 @@
 
   <icon>https://powersnail.com/favicon.ico</icon>
 
-  <description>Recent content in Dessert on SnailShell</description>
+  <description>Recent content in dessert on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
   
@@ -45,7 +45,8 @@ The Cream To me, the essence of tiramisu is mascarpone.</summary>
 &lt;h2 id=&#34;summary-card&#34;&gt;Summary Card&lt;/h2&gt;
 &lt;p&gt;Here is a printable summary card for the recipe:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34;
-    srcset=&#34;https://powersnail.com/images/tiramisu.svg 543w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;543&#34;  height=&#34;236&#34; &gt;&lt;/p&gt;
+    srcset=&#34;https://powersnail.com/images/tiramisu.svg 543w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;543&#34;  height=&#34;236&#34; &gt;
+&lt;/p&gt;
 </content>
     <category>posts</category>
   </entry>
