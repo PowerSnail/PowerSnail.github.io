@@ -1,5 +1,4 @@
 @import "font";
-@import "icons";
 @import "codescheme";
 
 * {
@@ -40,7 +39,7 @@ article > * {
   overflow-x: auto;
 }
 
-nav {
+header nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -48,6 +47,19 @@ nav {
   padding: 2px;
   column-gap: 1em;
   row-gap: 0.5em;
+}
+
+footer nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 1em;
+  row-gap: 0.5em;
+}
+
+.social {
+  display: flex;
+  align-items: center;
 }
 
 nav a {

@@ -5,6 +5,10 @@
   {{- partial "metadata.html" . -}}
 
   {{- partial "hacks.html" . }}
+
+  {{ with .Params.commentid }}
+    <a href="https://c.im/@powersnail/{{ . }}">Make a comment on Mastodon</a>
+  {{ end }}
   
   {{ with .Params.tags }}
   <div>
