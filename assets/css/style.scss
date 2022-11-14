@@ -159,11 +159,13 @@ dt {
   margin-top: 1em;
 }
 
-article > p:first-of-type::first-letter {
-  font-size: 400%;
+article > p:first-of-type:first-letter {
+  font-size: 5em;
   color: var(--accent);
+  text-indent: 0;
   float: left;
   margin-right: 5px;
+  line-height: 0.7em;
 }
 
 article > footer {
