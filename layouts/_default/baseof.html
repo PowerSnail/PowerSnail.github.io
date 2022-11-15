@@ -7,9 +7,6 @@
     {{ partial "csp.html" }}
     
     <meta name="author" content="PowerSnail">
-    {{ with .Description }}
-    <meta name="description" content="{{ . | markdownify | plainify }}">
-    {{ end }}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -20,6 +17,20 @@
     <meta name="theme-color" content="{{ .Site.Params.theme_color }}">
 
     <title>{{ if ne .Title .Site.Title }}{{ .Title | markdownify | plainify }} · {{ end }}{{ .Site.Title }}</title>
+
+    <meta property="og:title" content="{{ .Title | markdownify | plainify }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    {{ if .Params.Get "cover" }}
+    <meta property="og:image" content="{{ .Permalink }}" />
+    {{ end }}
+
+    {{ with .Description }}
+      {{ $description := . | markdownify | plainify }}
+      <meta name="description" content="{{ $description }}">
+      <meta property="og:description" content="{{ $description }}" />
+    {{ end }}
     
     <link rel="prefetch" href="/images/front-cover.webp" as="image" crossorigin>
     {{ partial "default_css.html" }}
