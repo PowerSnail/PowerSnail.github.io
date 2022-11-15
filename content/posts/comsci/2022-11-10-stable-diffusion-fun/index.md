@@ -6,7 +6,8 @@ slug: stable-diffusion-fun
 tags: 
   - machine learning
   - computer science
-draft: true
+draft: false
+commentid: 109347083954475895
 ---
 
 Standing opposed to OpenAI's DALL-E and Midjourney, is the open sourced model Stable Diffusion[^rombach2021highresolution]. Some of the images it painted are genuinely impressive, coherent, and free of artifacts (at least at first glance). But those are almost always the result of prompt engineering: an Edisonian process of random search through the infinite linguistic space. Or in other words, people trying different words until they get a desirable result.
