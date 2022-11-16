@@ -1,3 +1,10 @@
-{{ if hugo.IsProduction }}
-<img class="goatcounter" alt="" width="1" height="1" src="https://snailshell.goatcounter.com/count?p={{ .RelPermalink | safeHTML }}&amp;t={{ .Title }}">
-{{ end }}
+<script data-goatcounter="https://analytics.powersnail.com/count"
+        async src="https://analytics.powersnail.com/count.js" ></script>
+<noscript>
+    <img 
+        class="goatcounter" 
+        alt="" 
+        width="1" 
+        height="1" 
+        src="https://analytics.powersnail.com/count?p={{ .RelPermalink | safeHTML }}&amp;t={{ .Title }}">
+</noscript>

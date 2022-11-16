@@ -46,10 +46,10 @@
   <header>
     {{ partial "header.html" . }}
   </header>
-  {{ partial "goatcounter.html" . }}
   <main>
     {{- block "main" . }}{{- end }}
   </main>
+  {{ partial "goatcounter.html" . }}
   <footer>
     {{- partial "footer.html" . -}}
   </footer>
