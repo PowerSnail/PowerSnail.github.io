@@ -1,5 +1,10 @@
-{{ $config := resources.Get "js/goatcounter_config.js" }}
-{{ $counter := resources.Get "js/count.js" }} 
-{{ $goatcounter := slice $config $counter | resources.Concat "goat.js" | js.Build (dict "minify" true) }}
-<script data-goatcounter="https://analytics.powersnail.com/count"
-        async src="{{ $goatcounter.RelPermalink }}" ></script>
+{{ if hugo.IsProduction }}
+  {{ $config := resources.Get "js/goatcounter_config.js" }}
+  {{ $counter := resources.Get "js/count.js" }} 
+  {{ $goatcounter := slice $config $counter | resources.Concat "goat.js" | js.Build (dict "minify" true) }}
+  <script 
+    async 
+    data-goatcounter="https://analytics.powersnail.com/count"
+    src="{{ $goatcounter.RelPermalink }}" 
+  ></script>
+{{ end }}
