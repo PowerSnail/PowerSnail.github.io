@@ -27,7 +27,7 @@ body {
 
 article {
   width: 60ch;
-  max-width: calc(100vw - 16px);
+  max-width: calc(100vw - 32px);
   margin: auto;
   display: grid;
   row-gap: 1em;
@@ -176,13 +176,16 @@ dt {
   color: var(--accent);
   text-indent: 0;
   float: left;
-  margin-right: 5px;
   line-height: 0.7em;
+  margin: 0.1em 0.1em 0 0;
 }
 
 article > footer {
   margin-bottom: 1em;
   margin-top: 3em;
+  display: flex;
+  flex-flow: column;
+  row-gap: 1em;
 }
 
 code {
