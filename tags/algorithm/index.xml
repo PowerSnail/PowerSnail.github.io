@@ -228,8 +228,11 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;FAULT&lt;/code&gt; is a special state, that the DFA will halt whenever it meets &lt;code&gt;FAULT&lt;/code&gt;, so that we do not have to process the rest of the string.&lt;/p&gt;
 &lt;h3 id=&#34;dfa---transition&#34;&gt;DFA - Transition&lt;/h3&gt;
 &lt;p&gt;The transition function is a matrix that maps (state, input char) to state.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34;
-    srcset=&#34;https://powersnail.com/images/valid-number-DFA.svg 106w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;106&#34;  height=&#34;69&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+     width=&#34;106&#34;  height=&#34;69&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -317,8 +320,11 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34;
-    srcset=&#34;https://powersnail.com/images/valid_number_dfa.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;dfa---termination&#34;&gt;DFA - Termination&lt;/h3&gt;
 &lt;p&gt;The DFA will terminate when&lt;/p&gt;

@@ -32,8 +32,11 @@
 &lt;h2 id=&#34;literatures-quotes-and-illustrations&#34;&gt;Literatures, Quotes, and Illustrations&lt;/h2&gt;
 &lt;p&gt;It gives you the quote right back:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1.webp&#34; alt=&#34;Generated image from Oscar Wilde&amp;amp;rsquo;s quote&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1-480w.webp 480w,/2022/stable-diffusion-fun/quote-1-800w.webp 800w,/2022/stable-diffusion-fun/quote-1.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1.webp&#34; alt=&#34;Generated image from Oscar Wilde&amp;amp;rsquo;s quote&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1-400w.webp 400w,/2022/stable-diffusion-fun/quote-1-600w.webp 600w,/2022/stable-diffusion-fun/quote-1-800w.webp 800w,/2022/stable-diffusion-fun/quote-1-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-1-1200w.webp 1200w,/2022/stable-diffusion-fun/quote-1.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;Questions are never indiscreet; answers sometimes are.&lt;br&gt;
@@ -43,8 +46,11 @@
 &lt;p&gt;&amp;hellip;&amp;hellip;Not quite verbatim, but close enough. Similar to how &amp;ldquo;4k&amp;rdquo; nudges the model towards higher quality, if you sound like Brainy Quotes, it will paint like Brainy Quotes for you.&lt;/p&gt;
 &lt;p&gt;Sometimes, it will go a different route, and illustrate like a book of classics:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2.webp&#34; alt=&#34;Generated image from Oscar Wilde Quote&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2-480w.webp 480w,/2022/stable-diffusion-fun/quote-2-800w.webp 800w,/2022/stable-diffusion-fun/quote-2.webp 1024w&#34; width=&#34;1024&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2.webp&#34; alt=&#34;Generated image from Oscar Wilde Quote&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2-400w.webp 400w,/2022/stable-diffusion-fun/quote-2-600w.webp 600w,/2022/stable-diffusion-fun/quote-2-800w.webp 800w,/2022/stable-diffusion-fun/quote-2-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-2.webp 1024w&#34;
+     width=&#34;1024&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;If the lower classes don&amp;rsquo;t set us a good example what on earth is the use of them? They seem, as a class, to have absolutely no sense of moral responsibility.&lt;br&gt;
@@ -54,8 +60,11 @@
 &lt;p&gt;Now, this is just a silly experimentation. The model is trained on descriptions of images. It&amp;rsquo;s not surprising that it wouldn&amp;rsquo;t do well on metaphysical epigrams depicting no concrete objects. In fact, if you give me drawing prompt &amp;ldquo;Questions are never indiscreet; answers sometimes are&amp;rdquo;, I&amp;rsquo;d probably ask you clarify just what the hell you want me to draw.&lt;/p&gt;
 &lt;h2 id=&#34;where-is-the-cicada&#34;&gt;Where is the cicada?&lt;/h2&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-480w.webp 480w,/2022/stable-diffusion-fun/cicada-800w.webp 800w,/2022/stable-diffusion-fun/cicada.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-400w.webp 400w,/2022/stable-diffusion-fun/cicada-600w.webp 600w,/2022/stable-diffusion-fun/cicada-800w.webp 800w,/2022/stable-diffusion-fun/cicada-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;Waxwings are berry-pecking / a cicada sings.&lt;br&gt;
@@ -66,8 +75,11 @@
 &lt;p&gt;A beautiful line of poetry, &amp;ldquo;Waxwings are berry-pecking / a cicada sings&amp;rdquo;, is not as abstract as the previous section. It depicts two subjects, a bird and a bug, and yet Stable Diffusion absolutely refuses to recognize the existence of the latter.&lt;/p&gt;
 &lt;p&gt;Could it be the position of the two words in the sentence? Let&amp;rsquo;s try reversing it:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse.webp&#34; alt=&#34;Generated image from reversing a quote taken from Pale Fire&amp;amp;quot;&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse-480w.webp 480w,/2022/stable-diffusion-fun/cicada-reverse-800w.webp 800w,/2022/stable-diffusion-fun/cicada-reverse.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse.webp&#34; alt=&#34;Generated image from reversing a quote taken from Pale Fire&amp;amp;quot;&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse-400w.webp 400w,/2022/stable-diffusion-fun/cicada-reverse-600w.webp 600w,/2022/stable-diffusion-fun/cicada-reverse-800w.webp 800w,/2022/stable-diffusion-fun/cicada-reverse-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-reverse-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-reverse.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;A cicada sings / Waxwings are berry-pecking.&lt;/p&gt;
@@ -75,22 +87,31 @@
 &lt;p&gt;Nope. Only the bird itself. Beautifully drawn, but missing its companion.&lt;/p&gt;
 &lt;p&gt;Maybe it&amp;rsquo;s the realistic style which it&amp;rsquo;s going for? Let&amp;rsquo;s try adding some stylistic modifiers to the prompt:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration.webp&#34; alt=&#34;Added illustration to the prompt.&amp;amp;quot;&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration-480w.webp 480w,/2022/stable-diffusion-fun/cicada-illustration-800w.webp 800w,/2022/stable-diffusion-fun/cicada-illustration.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration.webp&#34; alt=&#34;Added illustration to the prompt.&amp;amp;quot;&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration-400w.webp 400w,/2022/stable-diffusion-fun/cicada-illustration-600w.webp 600w,/2022/stable-diffusion-fun/cicada-illustration-800w.webp 800w,/2022/stable-diffusion-fun/cicada-illustration-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-illustration-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-illustration.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt; 
 &lt;p&gt;Waxwings are berry-pecking / a cicada sings. Illustration.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil.webp&#34; alt=&#34;Added oil painting to the prompt.&amp;amp;quot;&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil-480w.webp 480w,/2022/stable-diffusion-fun/cicada-oil-800w.webp 800w,/2022/stable-diffusion-fun/cicada-oil.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil.webp&#34; alt=&#34;Added oil painting to the prompt.&amp;amp;quot;&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil-400w.webp 400w,/2022/stable-diffusion-fun/cicada-oil-600w.webp 600w,/2022/stable-diffusion-fun/cicada-oil-800w.webp 800w,/2022/stable-diffusion-fun/cicada-oil-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-oil-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-oil.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt; 
 &lt;p&gt;Waxwings are berry-pecking / a cicada sings. Oil painting.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo.webp&#34; alt=&#34;Added photo to the prompt.&amp;amp;quot;&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo-480w.webp 480w,/2022/stable-diffusion-fun/cicada-photo-800w.webp 800w,/2022/stable-diffusion-fun/cicada-photo.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo.webp&#34; alt=&#34;Added photo to the prompt.&amp;amp;quot;&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo-400w.webp 400w,/2022/stable-diffusion-fun/cicada-photo-600w.webp 600w,/2022/stable-diffusion-fun/cicada-photo-800w.webp 800w,/2022/stable-diffusion-fun/cicada-photo-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-photo-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-photo.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt; 
 &lt;p&gt;Waxwings are berry-pecking / a cicada sings. Photo.&lt;/p&gt;
@@ -105,8 +126,11 @@
 &lt;p&gt;&amp;ndash;Vonnegut, &lt;em&gt;Player Piano&lt;/em&gt;&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano.webp&#34; alt=&#34;Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano-480w.webp 480w,/2022/stable-diffusion-fun/robot-playing-the-piano.webp 600w&#34; width=&#34;600&#34;  height=&#34;400&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano.webp&#34; alt=&#34;Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano-400w.webp 400w,/2022/stable-diffusion-fun/robot-playing-the-piano.webp 600w&#34;
+     width=&#34;600&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;Generated by Stable Diffusion: A robot playing the piano, 4k, detailed, by Studio Ghibli&lt;/p&gt;
@@ -185,8 +209,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Appending to fonts to load: DejaVuSans12.pf2
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Found OVMF image at &lt;span class=&#34;s1&#34;&gt;&amp;#39;/usr/share/qemu/ovmf-x86_64-code.bin&amp;#39;&lt;/span&gt;.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Please give GRUB a moment to show up in QEMU...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Voila!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/opensuse-grub-preview.webp&#34; alt=&#34;Screenshot of grub2-theme-preview&#34;
-    srcset=&#34;https://powersnail.com/images/opensuse-grub-preview-480w.webp 480w,/images/opensuse-grub-preview-800w.webp 800w,/images/opensuse-grub-preview.webp 1200w&#34; width=&#34;1200&#34;  height=&#34;675&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/opensuse-grub-preview.webp&#34; alt=&#34;Screenshot of grub2-theme-preview&#34;
+        srcset=&#34;https://powersnail.com/images/opensuse-grub-preview-400w.webp 400w,/images/opensuse-grub-preview-600w.webp 600w,/images/opensuse-grub-preview-800w.webp 800w,/images/opensuse-grub-preview-1000w.webp 1000w,/images/opensuse-grub-preview.webp 1200w&#34;
+     width=&#34;1200&#34;  height=&#34;675&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 </content>
     <category>posts</category>
@@ -239,16 +266,22 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;L: 1/16
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M: 2/4
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C2DE FGAB | c2de fgab | c&amp;#39;2ba gfed | c2BA GFED | C8&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/score-in-url/c_maj.webp&#34; alt=&#34;The rendered score of C Major Scale&#34;
-    srcset=&#34;https://powersnail.com/2022/score-in-url/c_maj-480w.webp 480w,/2022/score-in-url/c_maj-800w.webp 800w,/2022/score-in-url/c_maj.webp 1200w&#34; width=&#34;1200&#34;  height=&#34;230&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/score-in-url/c_maj.webp&#34; alt=&#34;The rendered score of C Major Scale&#34;
+        srcset=&#34;https://powersnail.com/2022/score-in-url/c_maj-400w.webp 400w,/2022/score-in-url/c_maj-600w.webp 600w,/2022/score-in-url/c_maj-800w.webp 800w,/2022/score-in-url/c_maj-1000w.webp 1000w,/2022/score-in-url/c_maj.webp 1200w&#34;
+     width=&#34;1200&#34;  height=&#34;230&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;You can visit &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQyBNYWpvciBTY2FsZQpMOiAxLzE2Ck06IDIvNApDMkRFIEZHQUIgfCBjMmRlIGZnYWIgfCBjJzJiYSBnZmVkIHwgYzJCQSBHRkVEIHwgQzg%3D&#34;&gt;this link&lt;/a&gt; to see and hear the C Major scale on &lt;strong&gt;Score In URL&lt;/strong&gt;. Or a number of other examples: &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogUGFydGl0YSBJSUkgLSBQcmVsdWRpbwpDOiBKLlMuIEJhY2gKUTogMS80PTEyMApNOiAzLzQKTDogMS8xNgpLOiBFbWFqCnoyIGUnZCcgZScyYjJnMmIyIHwgKGVmZWQgZTIpQjJHMkIyIHwgRUJGQiBHQkFCIEdCRkIgfApFZWRjIEJlZGMgQkFHRiAgICB8IEVCRkIgR0JBQiBHQkZCICB8IEVlZGMgQmVkYyBCQUdGIHwKRUZHQSBCY2RlIGZnYWYgICAgfCBnYmVmIGdhYmMnIGQnZSdjJ2QnICB8IGUnYmFiIGdiYWIgZ2JmYiB8CmVlJ2QnYycgYmVjJ2UgYmVhZXwgZ2JmYiBnYmFiIGdiZmIgIHwgZWUnZCdjJyBiZWMnZSBiZWFlIHwKZ2VlZWRlZWVmZWRlIHwgZWVnZWZlZ2VhZWZlIHwgZ2VlZWRlZWVmZWRlIHwKZWVnZWZlZ2VhZWZlIHwgZ2VnZSBnZWdlIGdlZ2UgfCBnZWdkIGdlZ2QgZ2VnZCB8CmdlZz1kIGdlZ2QgZ2VnZCB8IGFlYWMgYWVhYyBhZWFjIHwgYWVhQiBhZWFCIGFlYUIgfApnZWdCIGdlZ0IgZ2VnQiB8IGdlZ0EgZ2VnQSBnZWdBIHwgZmVmQSBmZWZBIGZlZkEgfApmZWZHIGZlZkcgZmVmRyB8IGVlZUcgZWVlRyBlZWVHIHwgZWVlRiBlZWVGIGVlZUYgfApkZWRGIGRlZEYgZGVkRiB8IEVGRUYgR0JFRiBHQkVGIHwgR0FHQSBCZUdBIEJlR0EgfA%3D%3D&#34;&gt;First page of Bach&amp;rsquo;s Preludio&lt;/a&gt;, &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQWlyIG9uIEcgU3RyaW5nCkM6IEouUy4gQmFjaCAoYXJyLiBBdWd1c3QgV2lsaGVsbWouKQpROiAiTGVudG8iCk06IDQvNApMOiAxLzE2Cks6IENtYWoKfDogRTE2LSB8IEUyKEFGIERDQixDKSAoIXRyaWxsIUIsNy8yQSwvMikgRyw0IHwgRzgtIEcoRV9CLEEsKSAoRF5DKShHRikgfCAKRjgtIEYoREEsRywpIChDQiwpKEZFKSB8IChFNiBeRkcpIChDMkMvMkQvMkUpIChFRCkoREMpIHwgKEIsQSwpKEEsLzJCLC8yQykgKEMyQixBLCkgRyw4IDp8IAp8OiAoQiw0LUIsQy8yQiwvMkEsLzJCLC8yRywpIChHNiBfQiwyKSB8IChBLDJBMi0gQSkoR0ZFKSB7L0V9RjQtIEYvMihFLzJELzJDLzJCLEEsKSB8IF5HLEEsKEIsMi0gQixDKShEMi0gREUpRjItIEYyRTIgfAooREMpKEIsQSwpIChCLEMvMkQvMkNCLCkgQSw4IHwgKEM0LSBDRURDKSAoQTYgR15GKSB8ICh7L0V9REdHLDIpIChBLDNCLC8yQy8yKSAoQiw3LzJBLC8yKSBHLDQgfCAKQzYgKEVEKSBENiAoRkUpIHwgRTYgKEdGKSBGOCB8IEcsNC0gRyxCLERGIEZERTItIEUyKEVGLzJHLzIpIHwgCihDNC0gQ0VHX0IpIChCMiBBNCBDMikgfCAoQixEIEY0IEEsMikgKEcsMkRFLzJGLzItIEYpKEUyRCB8IEMvMkIsLzIpKEEsMkIsKSAoQiwyey9BLH1CLEMpIEM4IDp8Cg%3D%3D&#34;&gt;Air on G String&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To learn more about writing ABC notation, visit their &lt;a href=&#34;https://abcnotation.com/&#34;&gt;official website&lt;/a&gt;. There are plenty of examples and an exhaustive documentation. For quick references, this &lt;a href=&#34;http://www.stephenmerrony.co.uk/uploads/ABCquickRefv0_6.pdf&#34;&gt;cheat sheet&lt;/a&gt; is superb.&lt;/p&gt;
 &lt;p&gt;Thanks to &lt;a href=&#34;https://www.abcjs.net/&#34;&gt;abcjs&lt;/a&gt;, it&amp;rsquo;s super easy to embed such a system in a web page. Abcjs provides rendering, audio, and error messages which integrate nicely with CodeMirror, the text editor.&lt;/p&gt;
 &lt;h2 id=&#34;text-editing&#34;&gt;Text Editing&lt;/h2&gt;
 &lt;p&gt;To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, &lt;a href=&#34;https://codemirror.net/&#34;&gt;CodeMirror&lt;/a&gt; is used. You can see the errors marked by red dots, like a real text editor used by programmers.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error.webp&#34; alt=&#34;Screenshot showcasing error reporting&#34;
-    srcset=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error-480w.webp 480w,/2022/score-in-url/Screenshot_error-800w.webp 800w,/2022/score-in-url/Screenshot_error.webp 1702w&#34; width=&#34;1702&#34;  height=&#34;346&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error.webp&#34; alt=&#34;Screenshot showcasing error reporting&#34;
+        srcset=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error-400w.webp 400w,/2022/score-in-url/Screenshot_error-600w.webp 600w,/2022/score-in-url/Screenshot_error-800w.webp 800w,/2022/score-in-url/Screenshot_error-1000w.webp 1000w,/2022/score-in-url/Screenshot_error-1200w.webp 1200w,/2022/score-in-url/Screenshot_error.webp 1702w&#34;
+     width=&#34;1702&#34;  height=&#34;346&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;The code highlighting is still not comprehensive at the moment. I&amp;rsquo;ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.&lt;/p&gt;
 &lt;h2 id=&#34;not-in-the-scope&#34;&gt;Not in the scope&lt;/h2&gt;
@@ -275,17 +308,26 @@
     <id>https://powersnail.com/2022/bach-preludio-sneaky-shift/</id>
     <summary type="html">Preludio (Prelude in some version) is one of Bach&amp;rsquo;s best violin pieces. From measure 17 to 28, a bariolage among three strings brings us a sublime polyphonic experience, with only single notes played detaché.</summary>
     <content type="html">&lt;p&gt;&lt;em&gt;Preludio&lt;/em&gt; (&lt;em&gt;Prelude&lt;/em&gt; in some version) is one of Bach&amp;rsquo;s best violin pieces. From measure 17 to 28, a bariolage among three strings brings us a sublime polyphonic experience, with only single notes played detaché. The focus is usually on the bowing, but the left hand is not without challenge either, especially at speed.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full.webp&#34; alt=&#34;Sheet music of the bariolage section&#34;
-    srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full-480w.webp 480w,/2022/bach-preludio-sneaky-shift/bariolage-full-800w.webp 800w,/2022/bach-preludio-sneaky-shift/bariolage-full.webp 1912w&#34; width=&#34;1912&#34;  height=&#34;1156&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full.webp&#34; alt=&#34;Sheet music of the bariolage section&#34;
+        srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full-400w.webp 400w,/2022/bach-preludio-sneaky-shift/bariolage-full-600w.webp 600w,/2022/bach-preludio-sneaky-shift/bariolage-full-800w.webp 800w,/2022/bach-preludio-sneaky-shift/bariolage-full-1000w.webp 1000w,/2022/bach-preludio-sneaky-shift/bariolage-full-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/bariolage-full.webp 1912w&#34;
+     width=&#34;1912&#34;  height=&#34;1156&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;From measure 20 to 28, the left hand descends one position every two measures. The most straightforward way is to shift at the beginning of measure 21, 23, 25, 27, and 28, using the third finger on A string, the first finger always pressing the lower note on D string, as shown below:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift.webp&#34; alt=&#34;The straight-forward version&#34;
-    srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift-480w.webp 480w,/2022/bach-preludio-sneaky-shift/straightforward-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/straightforward-shift.webp 2693w&#34; width=&#34;2693&#34;  height=&#34;258&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift.webp&#34; alt=&#34;The straight-forward version&#34;
+        srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift-400w.webp 400w,/2022/bach-preludio-sneaky-shift/straightforward-shift-600w.webp 600w,/2022/bach-preludio-sneaky-shift/straightforward-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/straightforward-shift-1000w.webp 1000w,/2022/bach-preludio-sneaky-shift/straightforward-shift-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/straightforward-shift.webp 2693w&#34;
+     width=&#34;2693&#34;  height=&#34;258&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;There are two ways to hide this shift. The first is to squeeze your 3rd finger inward without shifting when the bow is still on the D string, and then to complete the shift by moving the 1st finger while playing the other three notes. But given how cramped the notes are on higher positions, that squeeze might be a bit awkward.&lt;/p&gt;
 &lt;p&gt;The second way is to delay the shift and hide it using the open E. In measure 20, the 1st finger is on C♯, the 2nd finger on A. If we don&amp;rsquo;t shift, we&amp;rsquo;ll begin measure 21 with 2nd finger on A, too. Then, when the bow is on the open E, shift the entire hand down a position, and substitute the 3rd finger on A, the 1st finger naturally falling on B. If you can shift within the duration of that E, there will be no audible shift. And this way, there is no squeezing, or awkward hand frame. Like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift.webp&#34; alt=&#34;The sneaky version&#34;
-    srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift-480w.webp 480w,/2022/bach-preludio-sneaky-shift/sneaky-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/sneaky-shift.webp 2693w&#34; width=&#34;2693&#34;  height=&#34;269&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift.webp&#34; alt=&#34;The sneaky version&#34;
+        srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift-400w.webp 400w,/2022/bach-preludio-sneaky-shift/sneaky-shift-600w.webp 600w,/2022/bach-preludio-sneaky-shift/sneaky-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/sneaky-shift-1000w.webp 1000w,/2022/bach-preludio-sneaky-shift/sneaky-shift-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/sneaky-shift.webp 2693w&#34;
+     width=&#34;2693&#34;  height=&#34;269&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;Then, in the measure 22, no shift is needed. In measure 23, begin with 2nd finger on G♯, shift during the open string E, and end with 3rd finger on G♯. So on, and so on.&lt;/p&gt;
 &lt;p&gt;There are many opportunities in this piece to use the sneaky shift. Measure 67 begins a bariolage that exactly mirrors this sections on the lower strings, so does the technique. The two-string bariolages, like the ones from measure 13~16, also have a few places for sneaky shift.&lt;/p&gt;
@@ -424,24 +466,39 @@ Without extra line in between&lt;/p&gt;
 &lt;p&gt;Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
-&lt;p&gt;Here is an inline image &lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; &gt;
+&lt;p&gt;Here is an inline image &lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
+     width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;
+&gt;
 . There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p&gt;
 &lt;p&gt;Images put on their own line is better:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
+     width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A bigger image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34; width=&#34;400&#34;  height=&#34;400&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34;
+     width=&#34;400&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A gigantic image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-480w.webp 480w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic.webp 4000w&#34; width=&#34;4000&#34;  height=&#34;4000&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-400w.webp 400w,/2022/test-md-page/snail-gigantic-600w.webp 600w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1000w.webp 1000w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w&#34;
+     width=&#34;4000&#34;  height=&#34;4000&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A svg image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A figure written in HTML:&lt;/p&gt;
 &lt;figure&gt;
@@ -665,46 +722,76 @@ line item&lt;/li&gt;
     <summary type="html">糖色: Chinese Caramel Color The iconic Chinese cuisine Red Braised Pork Belly has an appetizing, deep, brick-red color.</summary>
     <content type="html">&lt;h2 id=&#34;糖色-chinese-caramel-color&#34;&gt;糖色: Chinese Caramel Color&lt;/h2&gt;
 &lt;p&gt;The iconic Chinese cuisine Red Braised Pork Belly has an appetizing, deep, brick-red color. This comes from 糖色(tang se): caramel color. Sugar crystals are heated to a deep red color, and diluted with water. The result is a translucent shimmery red solution, more natural and appetizing than the pinkish red of 红曲粉 (red yeast rice powder), which is found on some Cantonese Char Siu.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly.webp&#34; alt=&#34;Caramel color vs. red yeast rice powder&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly-480w.webp 480w,/2022/chinese-caramel-color/red-braised-pork-belly.webp 512w&#34; width=&#34;512&#34;  height=&#34;256&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly.webp&#34; alt=&#34;Caramel color vs. red yeast rice powder&#34;
+        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly-400w.webp 400w,/2022/chinese-caramel-color/red-braised-pork-belly.webp 512w&#34;
+     width=&#34;512&#34;  height=&#34;256&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;We can roughly break the process down to four stages: melting, bubbling, turning yellow, and turning red.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp&#34; alt=&#34;Melting sugar&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp 256w&#34; width=&#34;256&#34;  height=&#34;143&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp&#34; alt=&#34;Melting sugar&#34;
+        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp 256w&#34;
+     width=&#34;256&#34;  height=&#34;143&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;To melt the sugar, turn on low heat and toss &lt;strong&gt;30 grams of sugar crystals&lt;/strong&gt; in the pot, with &lt;strong&gt;1 teaspoon of oil&lt;/strong&gt;, and &lt;strong&gt;30 grams of water&lt;/strong&gt;. Keep stirring, and knocking on the crystals with the back of your spoon (or spatula) to break them apart.&lt;/p&gt;
 &lt;p&gt;You can use just the oil, or just the water, too; I find oil &amp;amp; water mixture to be easier to work with. Water makes it easier to melt the sugar in the initial stage, and oil helps to buffer the heat when the sugar starts caramelizing.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp&#34; alt=&#34;Bubbling sugar&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp 256w&#34; width=&#34;256&#34;  height=&#34;220&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp&#34; alt=&#34;Bubbling sugar&#34;
+        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp 256w&#34;
+     width=&#34;256&#34;  height=&#34;220&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;After the sugar melt, the syrup will start to bubble. Keep stirring.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp&#34; alt=&#34;Syrup turning yellow&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp 256w&#34; width=&#34;256&#34;  height=&#34;193&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp&#34; alt=&#34;Syrup turning yellow&#34;
+        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp 256w&#34;
+     width=&#34;256&#34;  height=&#34;193&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;When the syrup turns #97843A (light yellow), caramelization has begun. Continue to stir, and be extra careful now, because the syrup will change color very rapidly.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp&#34; alt=&#34;Syrup&amp;amp;rsquo;s yellow color deepens&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp 256w&#34; width=&#34;256&#34;  height=&#34;174&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp&#34; alt=&#34;Syrup&amp;amp;rsquo;s yellow color deepens&#34;
+        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp 256w&#34;
+     width=&#34;256&#34;  height=&#34;174&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;When the syrup turns #996118 (dark yellow), turn off the heat. The residual heat is enough to cook the caramel.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp&#34; alt=&#34;Syrup turning red&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp 256w&#34; width=&#34;256&#34;  height=&#34;172&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp&#34; alt=&#34;Syrup turning red&#34;
+        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp 256w&#34;
+     width=&#34;256&#34;  height=&#34;172&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;When the syrup turns #420C00 (brick-red), pour 400 grams of boiling water into the pot to stop the cooking. Be careful: some violent splattering is to be expected. Give the solution a few more rounds of stirring to ensure that it is even.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp&#34; alt=&#34;Syrup diluted with water&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp 256w&#34; width=&#34;256&#34;  height=&#34;192&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp&#34; alt=&#34;Syrup diluted with water&#34;
+        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp 256w&#34;
+     width=&#34;256&#34;  height=&#34;192&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;finalizing&#34;&gt;Finalizing&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp&#34; alt=&#34;Caramel color in a bowl&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp 256w&#34; width=&#34;256&#34;  height=&#34;206&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp&#34; alt=&#34;Caramel color in a bowl&#34;
+        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp 256w&#34;
+     width=&#34;256&#34;  height=&#34;206&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s our finished Chinese caramel color in a bowl. To use it, scoop a generous amount into your braised dish at the beginning of cooking.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp&#34; alt=&#34;Caramel color as compared with black tea&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp 256w&#34; width=&#34;256&#34;  height=&#34;202&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp&#34; alt=&#34;Caramel color as compared with black tea&#34;
+        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp 256w&#34;
+     width=&#34;256&#34;  height=&#34;202&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;The caramel color should be roughly the same color as a cup of black tea. That&amp;rsquo;s Earl Grey in the metal spoon for your reference.&lt;/p&gt;
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-color.svg&#34; alt=&#34;Caramel Color Summary&#34;
-    srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-color.svg 393w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;393&#34;  height=&#34;160&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-color.svg&#34; alt=&#34;Caramel Color Summary&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+     width=&#34;393&#34;  height=&#34;160&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 </content>
     <category>posts</category>
@@ -730,8 +817,11 @@ line item&lt;/li&gt;
 &lt;p&gt;It takes persistent practice to reach such a mastery command of the bow. But even if you&amp;rsquo;ve put in the time and effort, sometimes you can still get the feeling that your bow arm can&amp;rsquo;t find the planes. We naturally get rusty from time to time, and it shows when we play something chord heavy like Bach.&lt;/p&gt;
 &lt;p&gt;Here is a little warm-up exercise that I use to prepare myself for chord-extensive pieces. It gives some anchors to where each plane is.&lt;/p&gt;
 &lt;h2 id=&#34;exercise-one&#34;&gt;Exercise One&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/bow-planes-exercise-legato.svg&#34; alt=&#34;Legato Exercise&#34;
-    srcset=&#34;https://powersnail.com/images/bow-planes-exercise-legato.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/bow-planes-exercise-legato.svg&#34; alt=&#34;Legato Exercise&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;First, play a simple legato exercise, connecting each plane to the next. Since we are warming up the bow arm, keep your torso stationary. Change the plane with your elbow level only. The aim of this exercise is to find where the planes are, and get used to moving between them swiftly.&lt;/p&gt;
 &lt;p&gt;When you cross from a single string to a double-stop, the double-stop must immediately ring. For instance, when crossing from G to GD, you must hear both G and D equally well. If D is airy, the elbow hasn&amp;rsquo;t dropped far enough. If G is airy, the elbow has overshot. The same principle applies for when crossing from GD to D. G must stop immediately.&lt;/p&gt;
@@ -744,22 +834,31 @@ line item&lt;/li&gt;
 &lt;h2 id=&#34;exercise-two-dotted-rhythm&#34;&gt;Exercise Two: Dotted Rhythm&lt;/h2&gt;
 &lt;p&gt;When breaking a chord, we must choose where and when to move from one plane to the next. An early break can make the chord sound more unified and with a stronger momentum. A late break put more emphasis on the first few notes, which is crucial for phrasing in some situations.&lt;/p&gt;
 &lt;p&gt;Ideally, you should be able to break the chord anywhere on the bow. In his masterclass, soloist Kerson Leung instructed a student do a simple exercise for Bach: break the chord as early as you can; shorten the first double-stop as much as possible, while still make them ring. The aim, of course, is not to play every chord curtly, but to acquire the capability of breaking a chord at an arbitrary place without damaging the tone quality.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/bow-planes-exercise-dotted-rhythm.svg&#34; alt=&#34;Dotted Rhythm Exercise&#34;
-    srcset=&#34;https://powersnail.com/images/bow-planes-exercise-dotted-rhythm.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/bow-planes-exercise-dotted-rhythm.svg&#34; alt=&#34;Dotted Rhythm Exercise&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;We can reify this exercise with dotted rhythm. Again, play with the same requirement as the first exercise: clean, immediate string crossing. Snap into the plane and draw the bow as steady as possible. Don&amp;rsquo;t fidget with the elbow level; if you didn&amp;rsquo;t arrive at the plane accurately, take a step back and redo the measure. Remember, the goal is to anchor your elbow.&lt;/p&gt;
 &lt;p&gt;Increase the dotted ratio as needed.&lt;/p&gt;
 &lt;h2 id=&#34;exercise-three-advanced-string-crossings&#34;&gt;Exercise Three: Advanced String Crossings&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/bow-planes-exercise-string-crossings.svg&#34; alt=&#34;Advanced String Crossings&#34;
-    srcset=&#34;https://powersnail.com/images/bow-planes-exercise-string-crossings.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/bow-planes-exercise-string-crossings.svg&#34; alt=&#34;Advanced String Crossings&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;So far, we have limited ourselves in moving between neighboring planes. But chords can span up to seven planes, depending on the phrasing. Therefore, the third exercise is jumping from G-string to every other plane, and then jumping from E string backwards.&lt;/p&gt;
 &lt;p&gt;To make a clean sound this time, we have one additional restraint. The passing planes in-between your targets must not make a sound. Your forearm still can&amp;rsquo;t stop, while your elbow level needs to jump through a bigger gap.&lt;/p&gt;
 &lt;p&gt;From my experience, this is the part where you can &lt;em&gt;really&lt;/em&gt; drill in the anchor of each plane.&lt;/p&gt;
 &lt;h2 id=&#34;applying-the-exercise&#34;&gt;Applying the Exercise&lt;/h2&gt;
 &lt;p&gt;Take a chord from your repertoire, and deconstruct the chord into separated planes.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/deconstructing-a-chord.svg&#34; alt=&#34;Deconstruction of a Chord&#34;
-    srcset=&#34;https://powersnail.com/images/deconstructing-a-chord.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/deconstructing-a-chord.svg&#34; alt=&#34;Deconstruction of a Chord&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;For example, to deconstruct the first chord of Bach&amp;rsquo;s Sarabande of B Minor, we separate the chord into double-stops and single notes, according to what phrasing you&amp;rsquo;d like. Use dotted rhythm to experiment with different momentum and emphasis.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
@@ -855,8 +954,11 @@ The Cream To me, the essence of tiramisu is mascarpone.</summary>
 &lt;p&gt;On top them, spread a thick layer of cream. And layer the ladyfingers and creams until everything is used up.&lt;/p&gt;
 &lt;h2 id=&#34;summary-card&#34;&gt;Summary Card&lt;/h2&gt;
 &lt;p&gt;Here is a printable summary card for the recipe:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34;
-    srcset=&#34;https://powersnail.com/images/tiramisu.svg 543w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;543&#34;  height=&#34;236&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+     width=&#34;543&#34;  height=&#34;236&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 </content>
     <category>posts</category>
@@ -924,8 +1026,11 @@ The Cream To me, the essence of tiramisu is mascarpone.</summary>
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tabular&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And to convert this into an image, which tightly bounds the table rather than being a full letter sized white page, I rendered the document into a &lt;code&gt;DVI&lt;/code&gt; file and converted it into &lt;code&gt;SVG&lt;/code&gt; with &lt;code&gt;dvisvgm&lt;/code&gt;. The tool automatically crops the image, so it doesn&amp;rsquo;t end being a full letter sized page.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/chicken-abodo.svg&#34; alt=&#34;Recipe Summary for Chicken Abodo&#34;
-    srcset=&#34;https://powersnail.com/images/chicken-abodo.svg 390w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;390&#34;  height=&#34;177&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/chicken-abodo.svg&#34; alt=&#34;Recipe Summary for Chicken Abodo&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+     width=&#34;390&#34;  height=&#34;177&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;This is the final result of a printable, succinct, summary card for my chicken abodo recipe. After reading on the web (and fiddling with HTML and CSS) for so long, there&amp;rsquo;s something very satisfying about LaTeX. It just looks nice.&lt;/p&gt;
 &lt;p&gt;I then wrote a &lt;a href=&#34;https://github.com/casey/just&#34;&gt;Justfile&lt;/a&gt; recipe to automate the process:&lt;/p&gt;
@@ -1496,8 +1601,11 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;FAULT&lt;/code&gt; is a special state, that the DFA will halt whenever it meets &lt;code&gt;FAULT&lt;/code&gt;, so that we do not have to process the rest of the string.&lt;/p&gt;
 &lt;h3 id=&#34;dfa---transition&#34;&gt;DFA - Transition&lt;/h3&gt;
 &lt;p&gt;The transition function is a matrix that maps (state, input char) to state.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34;
-    srcset=&#34;https://powersnail.com/images/valid-number-DFA.svg 106w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;106&#34;  height=&#34;69&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+     width=&#34;106&#34;  height=&#34;69&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1585,8 +1693,11 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34;
-    srcset=&#34;https://powersnail.com/images/valid_number_dfa.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;dfa---termination&#34;&gt;DFA - Termination&lt;/h3&gt;
 &lt;p&gt;The DFA will terminate when&lt;/p&gt;
@@ -2232,8 +2343,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;h2 id=&#34;exactly-self-similar&#34;&gt;Exactly Self-similar&lt;/h2&gt;
 &lt;p&gt;If zoomed in, there is no way to tell that we have zoomed in.&lt;/p&gt;
 &lt;h3 id=&#34;sierpinski-carpet&#34;&gt;Sierpinski Carpet&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg&#34; alt=&#34;Sierpinski Carpet&#34;
-    srcset=&#34;https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg 600w&#34; width=&#34;600&#34;  height=&#34;600&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg&#34; alt=&#34;Sierpinski Carpet&#34;
+        srcset=&#34;https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg 600w&#34;
+     width=&#34;600&#34;  height=&#34;600&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A square divided into 9 squares&lt;/li&gt;
@@ -2241,8 +2355,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;li&gt;Each other square is divided again&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;koch-snowflake&#34;&gt;Koch Snowflake&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png&#34; alt=&#34;Koch Snowflake&#34;
-    srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w&#34; width=&#34;2000&#34;  height=&#34;2000&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png&#34; alt=&#34;Koch Snowflake&#34;
+        srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w&#34;
+     width=&#34;2000&#34;  height=&#34;2000&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Chop the lines into 3 Segments&lt;/li&gt;
@@ -2303,8 +2420,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;li&gt;Cannot represent extremely rocky terrain&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Diamond Square&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png&#34; alt=&#34;Level 0&#34;
-    srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png 2998w&#34; width=&#34;2998&#34;  height=&#34;640&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png&#34; alt=&#34;Level 0&#34;
+        srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png 2998w&#34;
+     width=&#34;2998&#34;  height=&#34;640&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Level 0: Four corners set to $$h = 0$&lt;/li&gt;
@@ -2314,8 +2434,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;li&gt;&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The result could look something like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif&#34; alt=&#34;Diamond Square&#34;
-    srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif 300w&#34; width=&#34;300&#34;  height=&#34;225&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif&#34; alt=&#34;Diamond Square&#34;
+        srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif 300w&#34;
+     width=&#34;300&#34;  height=&#34;225&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;The problem is the grid pattern is visible. There are &amp;lsquo;+&amp;rsquo; in the graph, so rotating the graph will be noticed (not entirely natural)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;: Use&lt;/p&gt;
@@ -2392,8 +2515,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;h2 id=&#34;basic-idea&#34;&gt;Basic Idea&lt;/h2&gt;
 &lt;p&gt;Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p&gt;
 &lt;p&gt;In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/binarysearchtree.jpg&#34; alt=&#34;Binary Search Tree&#34;
-    srcset=&#34;https://powersnail.com/images/binarysearchtree-480w.jpg 480w,/images/binarysearchtree-800w.jpg 800w,/images/binarysearchtree.jpg 2445w&#34; width=&#34;2445&#34;  height=&#34;2308&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/binarysearchtree.jpg&#34; alt=&#34;Binary Search Tree&#34;
+        srcset=&#34;https://powersnail.com/images/binarysearchtree-400w.jpg 400w,/images/binarysearchtree-600w.jpg 600w,/images/binarysearchtree-800w.jpg 800w,/images/binarysearchtree-1000w.jpg 1000w,/images/binarysearchtree-1200w.jpg 1200w,/images/binarysearchtree.jpg 2445w&#34;
+     width=&#34;2445&#34;  height=&#34;2308&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code&gt;nil&lt;/code&gt; sentinel node, which is not in the data structure but a &lt;a href=&#34;#sentinelNode&#34;&gt;useful element&lt;/a&gt; in our program.&lt;/p&gt;
 &lt;h2 id=&#34;traversals&#34;&gt;Traversals&lt;/h2&gt;
@@ -2444,8 +2570,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;h4 id=&#34;prev-pointing-at-left&#34;&gt;&lt;code&gt;prev&lt;/code&gt; Pointing at left&lt;/h4&gt;
 &lt;p&gt;Left tree is already printed (we consider &lt;code&gt;nil&lt;/code&gt; as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code&gt;x&lt;/code&gt; before entering right.&lt;/p&gt;
 &lt;p&gt;There is a slight complication if &lt;code&gt;x&lt;/code&gt; is a leaf, as both children are &lt;code&gt;nil&lt;/code&gt;. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code&gt;x&lt;/code&gt; forever.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/fromlefttoright.jpg&#34; alt=&#34;From Left to Right&#34;
-    srcset=&#34;https://powersnail.com/images/fromlefttoright-480w.jpg 480w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright.jpg 2441w&#34; width=&#34;2441&#34;  height=&#34;2067&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/fromlefttoright.jpg&#34; alt=&#34;From Left to Right&#34;
+        srcset=&#34;https://powersnail.com/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w&#34;
+     width=&#34;2441&#34;  height=&#34;2067&#34; loading=&#34;lazy&#34;
+&gt;
 {:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p&gt;
 &lt;p&gt;The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;

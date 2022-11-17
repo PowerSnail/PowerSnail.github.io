@@ -110,24 +110,39 @@ Without extra line in between&lt;/p&gt;
 &lt;p&gt;Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
-&lt;p&gt;Here is an inline image &lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; &gt;
+&lt;p&gt;Here is an inline image &lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
+     width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;
+&gt;
 . There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p&gt;
 &lt;p&gt;Images put on their own line is better:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
+     width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A bigger image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34; width=&#34;400&#34;  height=&#34;400&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34;
+     width=&#34;400&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A gigantic image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-480w.webp 480w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic.webp 4000w&#34; width=&#34;4000&#34;  height=&#34;4000&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-400w.webp 400w,/2022/test-md-page/snail-gigantic-600w.webp 600w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1000w.webp 1000w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w&#34;
+     width=&#34;4000&#34;  height=&#34;4000&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A svg image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A figure written in HTML:&lt;/p&gt;
 &lt;figure&gt;

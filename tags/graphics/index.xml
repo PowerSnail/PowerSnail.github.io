@@ -40,8 +40,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;h2 id=&#34;exactly-self-similar&#34;&gt;Exactly Self-similar&lt;/h2&gt;
 &lt;p&gt;If zoomed in, there is no way to tell that we have zoomed in.&lt;/p&gt;
 &lt;h3 id=&#34;sierpinski-carpet&#34;&gt;Sierpinski Carpet&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg&#34; alt=&#34;Sierpinski Carpet&#34;
-    srcset=&#34;https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg 600w&#34; width=&#34;600&#34;  height=&#34;600&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg&#34; alt=&#34;Sierpinski Carpet&#34;
+        srcset=&#34;https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg 600w&#34;
+     width=&#34;600&#34;  height=&#34;600&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A square divided into 9 squares&lt;/li&gt;
@@ -49,8 +52,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;li&gt;Each other square is divided again&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;koch-snowflake&#34;&gt;Koch Snowflake&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png&#34; alt=&#34;Koch Snowflake&#34;
-    srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w&#34; width=&#34;2000&#34;  height=&#34;2000&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png&#34; alt=&#34;Koch Snowflake&#34;
+        srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w&#34;
+     width=&#34;2000&#34;  height=&#34;2000&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Chop the lines into 3 Segments&lt;/li&gt;
@@ -111,8 +117,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;li&gt;Cannot represent extremely rocky terrain&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Diamond Square&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png&#34; alt=&#34;Level 0&#34;
-    srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png 2998w&#34; width=&#34;2998&#34;  height=&#34;640&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png&#34; alt=&#34;Level 0&#34;
+        srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png 2998w&#34;
+     width=&#34;2998&#34;  height=&#34;640&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Level 0: Four corners set to $$h = 0$&lt;/li&gt;
@@ -122,8 +131,11 @@ Types: Exactly self-similar Statistically self-similar Exactly Self-similar If z
 &lt;li&gt;&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The result could look something like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif&#34; alt=&#34;Diamond Square&#34;
-    srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif 300w&#34; width=&#34;300&#34;  height=&#34;225&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif&#34; alt=&#34;Diamond Square&#34;
+        srcset=&#34;https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif 300w&#34;
+     width=&#34;300&#34;  height=&#34;225&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;The problem is the grid pattern is visible. There are &amp;lsquo;+&amp;rsquo; in the graph, so rotating the graph will be noticed (not entirely natural)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;: Use&lt;/p&gt;

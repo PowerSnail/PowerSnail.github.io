@@ -32,8 +32,11 @@
 &lt;h2 id=&#34;literatures-quotes-and-illustrations&#34;&gt;Literatures, Quotes, and Illustrations&lt;/h2&gt;
 &lt;p&gt;It gives you the quote right back:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1.webp&#34; alt=&#34;Generated image from Oscar Wilde&amp;amp;rsquo;s quote&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1-480w.webp 480w,/2022/stable-diffusion-fun/quote-1-800w.webp 800w,/2022/stable-diffusion-fun/quote-1.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1.webp&#34; alt=&#34;Generated image from Oscar Wilde&amp;amp;rsquo;s quote&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1-400w.webp 400w,/2022/stable-diffusion-fun/quote-1-600w.webp 600w,/2022/stable-diffusion-fun/quote-1-800w.webp 800w,/2022/stable-diffusion-fun/quote-1-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-1-1200w.webp 1200w,/2022/stable-diffusion-fun/quote-1.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;Questions are never indiscreet; answers sometimes are.&lt;br&gt;
@@ -43,8 +46,11 @@
 &lt;p&gt;&amp;hellip;&amp;hellip;Not quite verbatim, but close enough. Similar to how &amp;ldquo;4k&amp;rdquo; nudges the model towards higher quality, if you sound like Brainy Quotes, it will paint like Brainy Quotes for you.&lt;/p&gt;
 &lt;p&gt;Sometimes, it will go a different route, and illustrate like a book of classics:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2.webp&#34; alt=&#34;Generated image from Oscar Wilde Quote&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2-480w.webp 480w,/2022/stable-diffusion-fun/quote-2-800w.webp 800w,/2022/stable-diffusion-fun/quote-2.webp 1024w&#34; width=&#34;1024&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2.webp&#34; alt=&#34;Generated image from Oscar Wilde Quote&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2-400w.webp 400w,/2022/stable-diffusion-fun/quote-2-600w.webp 600w,/2022/stable-diffusion-fun/quote-2-800w.webp 800w,/2022/stable-diffusion-fun/quote-2-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-2.webp 1024w&#34;
+     width=&#34;1024&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;If the lower classes don&amp;rsquo;t set us a good example what on earth is the use of them? They seem, as a class, to have absolutely no sense of moral responsibility.&lt;br&gt;
@@ -54,8 +60,11 @@
 &lt;p&gt;Now, this is just a silly experimentation. The model is trained on descriptions of images. It&amp;rsquo;s not surprising that it wouldn&amp;rsquo;t do well on metaphysical epigrams depicting no concrete objects. In fact, if you give me drawing prompt &amp;ldquo;Questions are never indiscreet; answers sometimes are&amp;rdquo;, I&amp;rsquo;d probably ask you clarify just what the hell you want me to draw.&lt;/p&gt;
 &lt;h2 id=&#34;where-is-the-cicada&#34;&gt;Where is the cicada?&lt;/h2&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-480w.webp 480w,/2022/stable-diffusion-fun/cicada-800w.webp 800w,/2022/stable-diffusion-fun/cicada.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-400w.webp 400w,/2022/stable-diffusion-fun/cicada-600w.webp 600w,/2022/stable-diffusion-fun/cicada-800w.webp 800w,/2022/stable-diffusion-fun/cicada-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;Waxwings are berry-pecking / a cicada sings.&lt;br&gt;
@@ -66,8 +75,11 @@
 &lt;p&gt;A beautiful line of poetry, &amp;ldquo;Waxwings are berry-pecking / a cicada sings&amp;rdquo;, is not as abstract as the previous section. It depicts two subjects, a bird and a bug, and yet Stable Diffusion absolutely refuses to recognize the existence of the latter.&lt;/p&gt;
 &lt;p&gt;Could it be the position of the two words in the sentence? Let&amp;rsquo;s try reversing it:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse.webp&#34; alt=&#34;Generated image from reversing a quote taken from Pale Fire&amp;amp;quot;&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse-480w.webp 480w,/2022/stable-diffusion-fun/cicada-reverse-800w.webp 800w,/2022/stable-diffusion-fun/cicada-reverse.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse.webp&#34; alt=&#34;Generated image from reversing a quote taken from Pale Fire&amp;amp;quot;&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse-400w.webp 400w,/2022/stable-diffusion-fun/cicada-reverse-600w.webp 600w,/2022/stable-diffusion-fun/cicada-reverse-800w.webp 800w,/2022/stable-diffusion-fun/cicada-reverse-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-reverse-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-reverse.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;A cicada sings / Waxwings are berry-pecking.&lt;/p&gt;
@@ -75,22 +87,31 @@
 &lt;p&gt;Nope. Only the bird itself. Beautifully drawn, but missing its companion.&lt;/p&gt;
 &lt;p&gt;Maybe it&amp;rsquo;s the realistic style which it&amp;rsquo;s going for? Let&amp;rsquo;s try adding some stylistic modifiers to the prompt:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration.webp&#34; alt=&#34;Added illustration to the prompt.&amp;amp;quot;&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration-480w.webp 480w,/2022/stable-diffusion-fun/cicada-illustration-800w.webp 800w,/2022/stable-diffusion-fun/cicada-illustration.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration.webp&#34; alt=&#34;Added illustration to the prompt.&amp;amp;quot;&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration-400w.webp 400w,/2022/stable-diffusion-fun/cicada-illustration-600w.webp 600w,/2022/stable-diffusion-fun/cicada-illustration-800w.webp 800w,/2022/stable-diffusion-fun/cicada-illustration-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-illustration-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-illustration.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt; 
 &lt;p&gt;Waxwings are berry-pecking / a cicada sings. Illustration.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil.webp&#34; alt=&#34;Added oil painting to the prompt.&amp;amp;quot;&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil-480w.webp 480w,/2022/stable-diffusion-fun/cicada-oil-800w.webp 800w,/2022/stable-diffusion-fun/cicada-oil.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil.webp&#34; alt=&#34;Added oil painting to the prompt.&amp;amp;quot;&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil-400w.webp 400w,/2022/stable-diffusion-fun/cicada-oil-600w.webp 600w,/2022/stable-diffusion-fun/cicada-oil-800w.webp 800w,/2022/stable-diffusion-fun/cicada-oil-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-oil-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-oil.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt; 
 &lt;p&gt;Waxwings are berry-pecking / a cicada sings. Oil painting.&lt;/p&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo.webp&#34; alt=&#34;Added photo to the prompt.&amp;amp;quot;&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo-480w.webp 480w,/2022/stable-diffusion-fun/cicada-photo-800w.webp 800w,/2022/stable-diffusion-fun/cicada-photo.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo.webp&#34; alt=&#34;Added photo to the prompt.&amp;amp;quot;&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo-400w.webp 400w,/2022/stable-diffusion-fun/cicada-photo-600w.webp 600w,/2022/stable-diffusion-fun/cicada-photo-800w.webp 800w,/2022/stable-diffusion-fun/cicada-photo-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-photo-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-photo.webp 2560w&#34;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt; 
 &lt;p&gt;Waxwings are berry-pecking / a cicada sings. Photo.&lt;/p&gt;
@@ -105,8 +126,11 @@
 &lt;p&gt;&amp;ndash;Vonnegut, &lt;em&gt;Player Piano&lt;/em&gt;&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano.webp&#34; alt=&#34;Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli&#34;
-    srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano-480w.webp 480w,/2022/stable-diffusion-fun/robot-playing-the-piano.webp 600w&#34; width=&#34;600&#34;  height=&#34;400&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano.webp&#34; alt=&#34;Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli&#34;
+        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano-400w.webp 400w,/2022/stable-diffusion-fun/robot-playing-the-piano.webp 600w&#34;
+     width=&#34;600&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;Generated by Stable Diffusion: A robot playing the piano, 4k, detailed, by Studio Ghibli&lt;/p&gt;
@@ -185,8 +209,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Appending to fonts to load: DejaVuSans12.pf2
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Found OVMF image at &lt;span class=&#34;s1&#34;&gt;&amp;#39;/usr/share/qemu/ovmf-x86_64-code.bin&amp;#39;&lt;/span&gt;.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Please give GRUB a moment to show up in QEMU...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Voila!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/opensuse-grub-preview.webp&#34; alt=&#34;Screenshot of grub2-theme-preview&#34;
-    srcset=&#34;https://powersnail.com/images/opensuse-grub-preview-480w.webp 480w,/images/opensuse-grub-preview-800w.webp 800w,/images/opensuse-grub-preview.webp 1200w&#34; width=&#34;1200&#34;  height=&#34;675&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/opensuse-grub-preview.webp&#34; alt=&#34;Screenshot of grub2-theme-preview&#34;
+        srcset=&#34;https://powersnail.com/images/opensuse-grub-preview-400w.webp 400w,/images/opensuse-grub-preview-600w.webp 600w,/images/opensuse-grub-preview-800w.webp 800w,/images/opensuse-grub-preview-1000w.webp 1000w,/images/opensuse-grub-preview.webp 1200w&#34;
+     width=&#34;1200&#34;  height=&#34;675&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 </content>
     <category>posts</category>
@@ -239,16 +266,22 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;L: 1/16
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M: 2/4
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C2DE FGAB | c2de fgab | c&amp;#39;2ba gfed | c2BA GFED | C8&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/score-in-url/c_maj.webp&#34; alt=&#34;The rendered score of C Major Scale&#34;
-    srcset=&#34;https://powersnail.com/2022/score-in-url/c_maj-480w.webp 480w,/2022/score-in-url/c_maj-800w.webp 800w,/2022/score-in-url/c_maj.webp 1200w&#34; width=&#34;1200&#34;  height=&#34;230&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/score-in-url/c_maj.webp&#34; alt=&#34;The rendered score of C Major Scale&#34;
+        srcset=&#34;https://powersnail.com/2022/score-in-url/c_maj-400w.webp 400w,/2022/score-in-url/c_maj-600w.webp 600w,/2022/score-in-url/c_maj-800w.webp 800w,/2022/score-in-url/c_maj-1000w.webp 1000w,/2022/score-in-url/c_maj.webp 1200w&#34;
+     width=&#34;1200&#34;  height=&#34;230&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;You can visit &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQyBNYWpvciBTY2FsZQpMOiAxLzE2Ck06IDIvNApDMkRFIEZHQUIgfCBjMmRlIGZnYWIgfCBjJzJiYSBnZmVkIHwgYzJCQSBHRkVEIHwgQzg%3D&#34;&gt;this link&lt;/a&gt; to see and hear the C Major scale on &lt;strong&gt;Score In URL&lt;/strong&gt;. Or a number of other examples: &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogUGFydGl0YSBJSUkgLSBQcmVsdWRpbwpDOiBKLlMuIEJhY2gKUTogMS80PTEyMApNOiAzLzQKTDogMS8xNgpLOiBFbWFqCnoyIGUnZCcgZScyYjJnMmIyIHwgKGVmZWQgZTIpQjJHMkIyIHwgRUJGQiBHQkFCIEdCRkIgfApFZWRjIEJlZGMgQkFHRiAgICB8IEVCRkIgR0JBQiBHQkZCICB8IEVlZGMgQmVkYyBCQUdGIHwKRUZHQSBCY2RlIGZnYWYgICAgfCBnYmVmIGdhYmMnIGQnZSdjJ2QnICB8IGUnYmFiIGdiYWIgZ2JmYiB8CmVlJ2QnYycgYmVjJ2UgYmVhZXwgZ2JmYiBnYmFiIGdiZmIgIHwgZWUnZCdjJyBiZWMnZSBiZWFlIHwKZ2VlZWRlZWVmZWRlIHwgZWVnZWZlZ2VhZWZlIHwgZ2VlZWRlZWVmZWRlIHwKZWVnZWZlZ2VhZWZlIHwgZ2VnZSBnZWdlIGdlZ2UgfCBnZWdkIGdlZ2QgZ2VnZCB8CmdlZz1kIGdlZ2QgZ2VnZCB8IGFlYWMgYWVhYyBhZWFjIHwgYWVhQiBhZWFCIGFlYUIgfApnZWdCIGdlZ0IgZ2VnQiB8IGdlZ0EgZ2VnQSBnZWdBIHwgZmVmQSBmZWZBIGZlZkEgfApmZWZHIGZlZkcgZmVmRyB8IGVlZUcgZWVlRyBlZWVHIHwgZWVlRiBlZWVGIGVlZUYgfApkZWRGIGRlZEYgZGVkRiB8IEVGRUYgR0JFRiBHQkVGIHwgR0FHQSBCZUdBIEJlR0EgfA%3D%3D&#34;&gt;First page of Bach&amp;rsquo;s Preludio&lt;/a&gt;, &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQWlyIG9uIEcgU3RyaW5nCkM6IEouUy4gQmFjaCAoYXJyLiBBdWd1c3QgV2lsaGVsbWouKQpROiAiTGVudG8iCk06IDQvNApMOiAxLzE2Cks6IENtYWoKfDogRTE2LSB8IEUyKEFGIERDQixDKSAoIXRyaWxsIUIsNy8yQSwvMikgRyw0IHwgRzgtIEcoRV9CLEEsKSAoRF5DKShHRikgfCAKRjgtIEYoREEsRywpIChDQiwpKEZFKSB8IChFNiBeRkcpIChDMkMvMkQvMkUpIChFRCkoREMpIHwgKEIsQSwpKEEsLzJCLC8yQykgKEMyQixBLCkgRyw4IDp8IAp8OiAoQiw0LUIsQy8yQiwvMkEsLzJCLC8yRywpIChHNiBfQiwyKSB8IChBLDJBMi0gQSkoR0ZFKSB7L0V9RjQtIEYvMihFLzJELzJDLzJCLEEsKSB8IF5HLEEsKEIsMi0gQixDKShEMi0gREUpRjItIEYyRTIgfAooREMpKEIsQSwpIChCLEMvMkQvMkNCLCkgQSw4IHwgKEM0LSBDRURDKSAoQTYgR15GKSB8ICh7L0V9REdHLDIpIChBLDNCLC8yQy8yKSAoQiw3LzJBLC8yKSBHLDQgfCAKQzYgKEVEKSBENiAoRkUpIHwgRTYgKEdGKSBGOCB8IEcsNC0gRyxCLERGIEZERTItIEUyKEVGLzJHLzIpIHwgCihDNC0gQ0VHX0IpIChCMiBBNCBDMikgfCAoQixEIEY0IEEsMikgKEcsMkRFLzJGLzItIEYpKEUyRCB8IEMvMkIsLzIpKEEsMkIsKSAoQiwyey9BLH1CLEMpIEM4IDp8Cg%3D%3D&#34;&gt;Air on G String&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To learn more about writing ABC notation, visit their &lt;a href=&#34;https://abcnotation.com/&#34;&gt;official website&lt;/a&gt;. There are plenty of examples and an exhaustive documentation. For quick references, this &lt;a href=&#34;http://www.stephenmerrony.co.uk/uploads/ABCquickRefv0_6.pdf&#34;&gt;cheat sheet&lt;/a&gt; is superb.&lt;/p&gt;
 &lt;p&gt;Thanks to &lt;a href=&#34;https://www.abcjs.net/&#34;&gt;abcjs&lt;/a&gt;, it&amp;rsquo;s super easy to embed such a system in a web page. Abcjs provides rendering, audio, and error messages which integrate nicely with CodeMirror, the text editor.&lt;/p&gt;
 &lt;h2 id=&#34;text-editing&#34;&gt;Text Editing&lt;/h2&gt;
 &lt;p&gt;To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, &lt;a href=&#34;https://codemirror.net/&#34;&gt;CodeMirror&lt;/a&gt; is used. You can see the errors marked by red dots, like a real text editor used by programmers.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error.webp&#34; alt=&#34;Screenshot showcasing error reporting&#34;
-    srcset=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error-480w.webp 480w,/2022/score-in-url/Screenshot_error-800w.webp 800w,/2022/score-in-url/Screenshot_error.webp 1702w&#34; width=&#34;1702&#34;  height=&#34;346&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error.webp&#34; alt=&#34;Screenshot showcasing error reporting&#34;
+        srcset=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error-400w.webp 400w,/2022/score-in-url/Screenshot_error-600w.webp 600w,/2022/score-in-url/Screenshot_error-800w.webp 800w,/2022/score-in-url/Screenshot_error-1000w.webp 1000w,/2022/score-in-url/Screenshot_error-1200w.webp 1200w,/2022/score-in-url/Screenshot_error.webp 1702w&#34;
+     width=&#34;1702&#34;  height=&#34;346&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;The code highlighting is still not comprehensive at the moment. I&amp;rsquo;ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.&lt;/p&gt;
 &lt;h2 id=&#34;not-in-the-scope&#34;&gt;Not in the scope&lt;/h2&gt;
@@ -358,24 +391,39 @@ Without extra line in between&lt;/p&gt;
 &lt;p&gt;Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
-&lt;p&gt;Here is an inline image &lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; &gt;
+&lt;p&gt;Here is an inline image &lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
+     width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;
+&gt;
 . There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p&gt;
 &lt;p&gt;Images put on their own line is better:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
+     width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A bigger image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34; width=&#34;400&#34;  height=&#34;400&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34;
+     width=&#34;400&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A gigantic image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-480w.webp 480w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic.webp 4000w&#34; width=&#34;4000&#34;  height=&#34;4000&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
+        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-400w.webp 400w,/2022/test-md-page/snail-gigantic-600w.webp 600w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1000w.webp 1000w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w&#34;
+     width=&#34;4000&#34;  height=&#34;4000&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A svg image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34;
-    srcset=&#34;https://powersnail.com/2022/test-md-page/snail.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;A figure written in HTML:&lt;/p&gt;
 &lt;figure&gt;
@@ -855,8 +903,11 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;FAULT&lt;/code&gt; is a special state, that the DFA will halt whenever it meets &lt;code&gt;FAULT&lt;/code&gt;, so that we do not have to process the rest of the string.&lt;/p&gt;
 &lt;h3 id=&#34;dfa---transition&#34;&gt;DFA - Transition&lt;/h3&gt;
 &lt;p&gt;The transition function is a matrix that maps (state, input char) to state.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34;
-    srcset=&#34;https://powersnail.com/images/valid-number-DFA.svg 106w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;106&#34;  height=&#34;69&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+     width=&#34;106&#34;  height=&#34;69&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -944,8 +995,11 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34;
-    srcset=&#34;https://powersnail.com/images/valid_number_dfa.svg 0w&#34; style=&#34;width:100%; height: auto;&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+    loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;dfa---termination&#34;&gt;DFA - Termination&lt;/h3&gt;
 &lt;p&gt;The DFA will terminate when&lt;/p&gt;
@@ -1478,8 +1532,11 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;basic-idea&#34;&gt;Basic Idea&lt;/h2&gt;
 &lt;p&gt;Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p&gt;
 &lt;p&gt;In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/binarysearchtree.jpg&#34; alt=&#34;Binary Search Tree&#34;
-    srcset=&#34;https://powersnail.com/images/binarysearchtree-480w.jpg 480w,/images/binarysearchtree-800w.jpg 800w,/images/binarysearchtree.jpg 2445w&#34; width=&#34;2445&#34;  height=&#34;2308&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/binarysearchtree.jpg&#34; alt=&#34;Binary Search Tree&#34;
+        srcset=&#34;https://powersnail.com/images/binarysearchtree-400w.jpg 400w,/images/binarysearchtree-600w.jpg 600w,/images/binarysearchtree-800w.jpg 800w,/images/binarysearchtree-1000w.jpg 1000w,/images/binarysearchtree-1200w.jpg 1200w,/images/binarysearchtree.jpg 2445w&#34;
+     width=&#34;2445&#34;  height=&#34;2308&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 &lt;p&gt;The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code&gt;nil&lt;/code&gt; sentinel node, which is not in the data structure but a &lt;a href=&#34;#sentinelNode&#34;&gt;useful element&lt;/a&gt; in our program.&lt;/p&gt;
 &lt;h2 id=&#34;traversals&#34;&gt;Traversals&lt;/h2&gt;
@@ -1530,8 +1587,11 @@ $$&lt;/p&gt;
 &lt;h4 id=&#34;prev-pointing-at-left&#34;&gt;&lt;code&gt;prev&lt;/code&gt; Pointing at left&lt;/h4&gt;
 &lt;p&gt;Left tree is already printed (we consider &lt;code&gt;nil&lt;/code&gt; as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code&gt;x&lt;/code&gt; before entering right.&lt;/p&gt;
 &lt;p&gt;There is a slight complication if &lt;code&gt;x&lt;/code&gt; is a leaf, as both children are &lt;code&gt;nil&lt;/code&gt;. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code&gt;x&lt;/code&gt; forever.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/fromlefttoright.jpg&#34; alt=&#34;From Left to Right&#34;
-    srcset=&#34;https://powersnail.com/images/fromlefttoright-480w.jpg 480w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright.jpg 2441w&#34; width=&#34;2441&#34;  height=&#34;2067&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/fromlefttoright.jpg&#34; alt=&#34;From Left to Right&#34;
+        srcset=&#34;https://powersnail.com/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w&#34;
+     width=&#34;2441&#34;  height=&#34;2067&#34; loading=&#34;lazy&#34;
+&gt;
 {:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p&gt;
 &lt;p&gt;The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;

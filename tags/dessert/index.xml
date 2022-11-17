@@ -44,8 +44,11 @@ The Cream To me, the essence of tiramisu is mascarpone.</summary>
 &lt;p&gt;On top them, spread a thick layer of cream. And layer the ladyfingers and creams until everything is used up.&lt;/p&gt;
 &lt;h2 id=&#34;summary-card&#34;&gt;Summary Card&lt;/h2&gt;
 &lt;p&gt;Here is a printable summary card for the recipe:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34;
-    srcset=&#34;https://powersnail.com/images/tiramisu.svg 543w&#34; style=&#34;width:100%; height: auto;&#34;  width=&#34;543&#34;  height=&#34;236&#34; &gt;
+&lt;p&gt;&lt;img
+    src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34; 
+        style=&#34;width:100%; height: auto;&#34;
+     width=&#34;543&#34;  height=&#34;236&#34; loading=&#34;lazy&#34;
+&gt;
 &lt;/p&gt;
 </content>
     <category>posts</category>
