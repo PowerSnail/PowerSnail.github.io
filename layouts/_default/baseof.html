@@ -39,6 +39,7 @@
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
+    <a rel="me" href="https://c.im/@powersnail">Mastodon</a>
 
     {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
   </head>
