@@ -1,5 +1,5 @@
 from collections import Counter
-import itertools
+import toml
 import pathlib
 import re
 from typing import Iterable
@@ -34,13 +34,12 @@ def not_none(i: Iterable):
     return filter(lambda x: x is not None, i)
 
 
-SIZES = [480, 800]
-
-
 def generate_image(path) -> list[int]:
     img = Image.open(path)
     output_sizes = []
-    for width in SIZES:
+    with open("config.toml") as file:
+        sizes = toml.load(file)["params"]["responsiveImageSizes"]
+    for width in sizes:
         if img.width > width:
             img.resize((width, int(img.height / img.width * width))).save(
                 path.with_name(path.stem + f"-{width}w" + path.suffix), method=6, quality=95)
