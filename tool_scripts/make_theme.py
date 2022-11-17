@@ -66,26 +66,26 @@ class Colorscheme:
     @classmethod
     def from_accent(cls, accent_hex: str):
         accent = Color.from_hex(accent_hex)
-        # accent.data[0] = 0.4
         text = Color.from_hex("#000000")
         background = Color.from_hex("#fafafa")
 
         vibrant = accent.data.copy()
-        vibrant[1:] *= 0.22 / np.sqrt(vibrant[1] ** 2 + vibrant[2] ** 2)
-        translucent = AlphaColor(Color(vibrant), alpha=0.1)
+        vibrant[1:] *= 0.25 / np.sqrt(vibrant[1] ** 2 + vibrant[2] ** 2)
+        translucent = AlphaColor(Color(accent.data.copy()), alpha=0.15)
 
         grayed = accent.data.copy()
-        grayed[1:] *= 0.005 / np.sqrt(grayed[1] ** 2 + grayed[2] ** 2)
+        grayed[1:] *= 0.01 / np.sqrt(grayed[1] ** 2 + grayed[2] ** 2)
 
         text_alt = Color(np.array([0.4, grayed[1], grayed[2]]))
         background_alt = Color(np.array([0.95, grayed[1], grayed[2]]))
-
+        
         light = 0.4
         chroma = 0.25
         terminals = [
             Color(np.array([light, np.cos(angle) * chroma, np.sin(angle) * chroma]))
             for angle in np.linspace(0, 2 * np.pi, 6, endpoint=False)
         ]
+
 
         return cls(
             accent=accent,

@@ -4,6 +4,7 @@
 * {
   padding: 0;
   margin: 0;
+  accent-color: var(--accent);
 }
 
 /* Layout, sizing, margins */
@@ -23,6 +24,11 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   overflow-wrap: anywhere;
+}
+
+::selection {
+  // color: var(--background);
+  background: var(--translucent);
 }
 
 article {
@@ -100,7 +106,7 @@ body > footer {
 p,
 ul,
 ol,
-div.highlight,
+.chroma,
 div.table-wrapper,
 blockquote {
   line-height: 1.4;
@@ -133,7 +139,7 @@ img {
 }
 
 img,
-.highlight {
+.chroma {
   border-radius: 5px;
 }
 
@@ -141,8 +147,11 @@ code {
   padding: 0 2px;
 }
 
-.highlight {
+.chroma {
   padding: 8px;
+  background-color: var(--background_alt);
+  border: 1px solid var(--accent);
+  width: fit-content;
 }
 
 pre code {
@@ -235,6 +244,7 @@ header a.current::after {
 code {
   font-size: 0.8em;
   font-family: "Fira Code";
+  border-radius: 5px;
   background-color: var(--background_alt);
 }
 
