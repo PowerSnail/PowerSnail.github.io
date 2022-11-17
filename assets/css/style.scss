@@ -171,6 +171,10 @@ dt {
   margin-top: 1em;
 }
 
+#post-main > p:first-of-type {
+  overflow-y: clip; // So that Dropped capital letter don't make a scrollbar in chrome & safari
+}
+
 #post-main > p:first-of-type:first-letter {
   font-size: 5em;
   color: var(--accent);
