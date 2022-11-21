@@ -42,7 +42,7 @@ def generate_image(path) -> list[int]:
     for width in sizes:
         if img.width > width:
             img.resize((width, int(img.height / img.width * width))).save(
-                path.with_name(path.stem + f"-{width}w" + path.suffix), method=6, quality=95)
+                path.with_name(path.stem + f"-{width}w" + path.suffix), method=6, quality=70)
             output_sizes.append(width)
     return output_sizes
 
