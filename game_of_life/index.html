@@ -35,6 +35,12 @@
   <body>
     <canvas id="mainCanvas"></canvas>
     <script src="game_of_life.js"></script> 
-    <script async data-goatcounter="https://analytics.powersnail.com/count" src="/goat.js"></script>
+    <script>
+
+    window.goatcounter = {
+        path: function(p) { return location.host + p }
+    }
+    </script> 
+    <script async data-goatcounter="https://analytics.powersnail.com/count" src="//analytics.powersnail.com/count.js"></script>
   </body>
 </html>

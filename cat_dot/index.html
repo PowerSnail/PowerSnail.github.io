@@ -96,6 +96,12 @@
       <canvas id="mainCanvas" style="display: block; margin: auto; width: 100%; height: 100%"></canvas>
     </main>
     <script src="./cat_dot.js"></script> 
-    <script async data-goatcounter="https://analytics.powersnail.com/count" src="/goat.js"></script>
+    <script>
+
+    window.goatcounter = {
+        path: function(p) { return location.host + p }
+    }
+    </script> 
+    <script async data-goatcounter="https://analytics.powersnail.com/count" src="//analytics.powersnail.com/count.js"></script>
   </body>
 </html>
