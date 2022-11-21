@@ -208,7 +208,7 @@
           There is a slight complication if <code>x</code> is a leaf, as both children are <code>nil</code>. We would not be able to know whether we have come back from left or right! The traversal will circle around at <code>x</code> forever.
         </p>
         <p>
-          <img src="/images/fromlefttoright.jpg" alt="From Left to Right" srcset="/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w" width="2441" height="2067"> {:width=“36px”}.
+          <img src="/images/fromlefttoright.jpg" alt="From Left to Right" srcset="/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w" width="2441" height="2067" loading="lazy"> {:width=“36px”}.
         </p>
         <p>
           The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.

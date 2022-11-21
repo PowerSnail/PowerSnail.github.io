@@ -120,28 +120,28 @@ Without extra line in between&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
-     width=&#34;128&#34;  height=&#34;128&#34; &gt;
+     width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;A bigger image:&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34;
-     width=&#34;400&#34;  height=&#34;400&#34; &gt;
+     width=&#34;400&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;A gigantic image:&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-400w.webp 400w,/2022/test-md-page/snail-gigantic-600w.webp 600w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1000w.webp 1000w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w&#34;
-     width=&#34;4000&#34;  height=&#34;4000&#34; &gt;
+     width=&#34;4000&#34;  height=&#34;4000&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;A svg image:&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34; 
         style=&#34;width:100%; height: auto;&#34;
-    &gt;
+    loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;A figure written in HTML:&lt;/p&gt;

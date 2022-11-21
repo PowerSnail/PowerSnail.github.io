@@ -49,7 +49,7 @@
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2.webp&#34; alt=&#34;Generated image from Oscar Wilde Quote&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2-400w.webp 400w,/2022/stable-diffusion-fun/quote-2-600w.webp 600w,/2022/stable-diffusion-fun/quote-2-800w.webp 800w,/2022/stable-diffusion-fun/quote-2-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-2.webp 1024w&#34;
-     width=&#34;1024&#34;  height=&#34;512&#34; &gt;
+     width=&#34;1024&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;figcaption&gt;
@@ -63,7 +63,7 @@
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-400w.webp 400w,/2022/stable-diffusion-fun/cicada-600w.webp 600w,/2022/stable-diffusion-fun/cicada-800w.webp 800w,/2022/stable-diffusion-fun/cicada-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;figcaption&gt;
@@ -78,7 +78,7 @@
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse.webp&#34; alt=&#34;Generated image from reversing a quote taken from Pale Fire&amp;amp;quot;&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse-400w.webp 400w,/2022/stable-diffusion-fun/cicada-reverse-600w.webp 600w,/2022/stable-diffusion-fun/cicada-reverse-800w.webp 800w,/2022/stable-diffusion-fun/cicada-reverse-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-reverse-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-reverse.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;figcaption&gt;
@@ -90,7 +90,7 @@
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration.webp&#34; alt=&#34;Added illustration to the prompt.&amp;amp;quot;&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration-400w.webp 400w,/2022/stable-diffusion-fun/cicada-illustration-600w.webp 600w,/2022/stable-diffusion-fun/cicada-illustration-800w.webp 800w,/2022/stable-diffusion-fun/cicada-illustration-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-illustration-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-illustration.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;figcaption&gt; 
@@ -100,7 +100,7 @@
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil.webp&#34; alt=&#34;Added oil painting to the prompt.&amp;amp;quot;&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil-400w.webp 400w,/2022/stable-diffusion-fun/cicada-oil-600w.webp 600w,/2022/stable-diffusion-fun/cicada-oil-800w.webp 800w,/2022/stable-diffusion-fun/cicada-oil-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-oil-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-oil.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;figcaption&gt; 
@@ -110,7 +110,7 @@
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo.webp&#34; alt=&#34;Added photo to the prompt.&amp;amp;quot;&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo-400w.webp 400w,/2022/stable-diffusion-fun/cicada-photo-600w.webp 600w,/2022/stable-diffusion-fun/cicada-photo-800w.webp 800w,/2022/stable-diffusion-fun/cicada-photo-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-photo-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-photo.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;figcaption&gt; 
@@ -129,7 +129,7 @@
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano.webp&#34; alt=&#34;Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano-400w.webp 400w,/2022/stable-diffusion-fun/robot-playing-the-piano.webp 600w&#34;
-     width=&#34;600&#34;  height=&#34;400&#34; &gt;
+     width=&#34;600&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;figcaption&gt;
@@ -280,7 +280,7 @@
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error.webp&#34; alt=&#34;Screenshot showcasing error reporting&#34;
         srcset=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error-400w.webp 400w,/2022/score-in-url/Screenshot_error-600w.webp 600w,/2022/score-in-url/Screenshot_error-800w.webp 800w,/2022/score-in-url/Screenshot_error-1000w.webp 1000w,/2022/score-in-url/Screenshot_error-1200w.webp 1200w,/2022/score-in-url/Screenshot_error.webp 1702w&#34;
-     width=&#34;1702&#34;  height=&#34;346&#34; &gt;
+     width=&#34;1702&#34;  height=&#34;346&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;The code highlighting is still not comprehensive at the moment. I&amp;rsquo;ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.&lt;/p&gt;
@@ -401,28 +401,28 @@ Without extra line in between&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
-     width=&#34;128&#34;  height=&#34;128&#34; &gt;
+     width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;A bigger image:&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34;
-     width=&#34;400&#34;  height=&#34;400&#34; &gt;
+     width=&#34;400&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;A gigantic image:&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-400w.webp 400w,/2022/test-md-page/snail-gigantic-600w.webp 600w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1000w.webp 1000w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w&#34;
-     width=&#34;4000&#34;  height=&#34;4000&#34; &gt;
+     width=&#34;4000&#34;  height=&#34;4000&#34; loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;A svg image:&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34; 
         style=&#34;width:100%; height: auto;&#34;
-    &gt;
+    loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;p&gt;A figure written in HTML:&lt;/p&gt;
@@ -998,7 +998,7 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34; 
         style=&#34;width:100%; height: auto;&#34;
-    &gt;
+    loading=&#34;lazy&#34;&gt;
 
 &lt;/p&gt;
 &lt;h3 id=&#34;dfa---termination&#34;&gt;DFA - Termination&lt;/h3&gt;
@@ -1590,7 +1590,7 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/images/fromlefttoright.jpg&#34; alt=&#34;From Left to Right&#34;
         srcset=&#34;https://powersnail.com/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w&#34;
-     width=&#34;2441&#34;  height=&#34;2067&#34; &gt;
+     width=&#34;2441&#34;  height=&#34;2067&#34; loading=&#34;lazy&#34;&gt;
 
 {:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p&gt;
 &lt;p&gt;The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p&gt;
