@@ -122,6 +122,7 @@
         style=&#34;width:100%; height: auto;&#34;
      width=&#34;106&#34;  height=&#34;69&#34; loading=&#34;lazy&#34;
 &gt;
+
 &lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -214,6 +215,7 @@
         style=&#34;width:100%; height: auto;&#34;
     loading=&#34;lazy&#34;
 &gt;
+
 &lt;/p&gt;
 &lt;h3 id=&#34;dfa---termination&#34;&gt;DFA - Termination&lt;/h3&gt;
 &lt;p&gt;The DFA will terminate when&lt;/p&gt;

@@ -82,6 +82,7 @@
         style=&#34;width:100%; height: auto;&#34;
      width=&#34;390&#34;  height=&#34;177&#34; loading=&#34;lazy&#34;
 &gt;
+
 &lt;/p&gt;
 &lt;p&gt;This is the final result of a printable, succinct, summary card for my chicken abodo recipe. After reading on the web (and fiddling with HTML and CSS) for so long, there&amp;rsquo;s something very satisfying about LaTeX. It just looks nice.&lt;/p&gt;
 &lt;p&gt;I then wrote a &lt;a href=&#34;https://github.com/casey/just&#34;&gt;Justfile&lt;/a&gt; recipe to automate the process:&lt;/p&gt;

@@ -4,7 +4,7 @@
     <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://*; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://*.powersnail.com">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self' 'strict-dynamic' https://*.powersnail.com">
     <meta name="author" content="PowerSnail">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -12,7 +12,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#af3000">
     <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#C73403">
+    <meta name="theme-color" content="#C93703">
     <title>
       Fractals · SnailShell
     </title>
@@ -21,6 +21,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://powersnail.com/2016/fractals/">
     <link rel="prefetch" href="/images/front-cover.webp" as="image" crossorigin="">
+    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="canonical" href="https://powersnail.com/2016/fractals/">
   </head>
@@ -71,7 +72,7 @@
           Sierpinski Carpet
         </h3>
         <p>
-          <img src="https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg" alt="Sierpinski Carpet" srcset="https://fractalfoundation.org/OFCA/Sierpinski_carpet.jpg 600w" width="600" height="600" loading="lazy">
+          <img src="/images/Sierpinski_carpet.jpg" alt="Sierpinski Carpet" srcset="/images/Sierpinski_carpet-400w.jpg 400w,/images/Sierpinski_carpet.jpg 600w" width="600" height="600" loading="lazy">
         </p>
         <ul>
           <li>A square divided into 9 squares
@@ -85,7 +86,7 @@
           Koch Snowflake
         </h3>
         <p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png" alt="Koch Snowflake" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Koch_Snowflake_7th_iteration.svg/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w" width="2000" height="2000" loading="lazy">
+          <img src="/images/2000px-Koch_Snowflake_7th_iteration.svg.png" alt="Koch Snowflake" srcset="/images/2000px-Koch_Snowflake_7th_iteration.svg-400w.png 400w,/images/2000px-Koch_Snowflake_7th_iteration.svg-600w.png 600w,/images/2000px-Koch_Snowflake_7th_iteration.svg-800w.png 800w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1000w.png 1000w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1200w.png 1200w,/images/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w" width="2000" height="2000" loading="lazy">
         </p>
         <ul>
           <li>Chop the lines into 3 Segments
@@ -226,7 +227,7 @@
           <strong>Diamond Square</strong>
         </p>
         <p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png" alt="Level 0" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Diamond_Square.svg/2998px-Diamond_Square.svg.png 2998w" width="2998" height="640" loading="lazy">
+          <img src="/images/2998px-Diamond_Square.svg.png" alt="Level 0" srcset="/images/2998px-Diamond_Square.svg-400w.png 400w,/images/2998px-Diamond_Square.svg-600w.png 600w,/images/2998px-Diamond_Square.svg-800w.png 800w,/images/2998px-Diamond_Square.svg-1000w.png 1000w,/images/2998px-Diamond_Square.svg-1200w.png 1200w,/images/2998px-Diamond_Square.svg.png 2998w" width="2998" height="640" loading="lazy">
         </p>
         <ul>
           <li>Level 0: Four corners set to $$h = 0$
@@ -244,7 +245,7 @@
           The result could look something like:
         </p>
         <p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif" alt="Diamond Square" srcset="https://upload.wikimedia.org/wikipedia/commons/9/96/Plasmafractal.gif 300w" width="300" height="225" loading="lazy">
+          <img src="/images/Plasmafractal.gif" alt="Diamond Square" srcset="/images/Plasmafractal.gif 300w" width="300" height="225" loading="lazy">
         </p>
         <p>
           The problem is the grid pattern is visible. There are ‘+’ in the graph, so rotating the graph will be noticed (not entirely natural)
@@ -279,11 +280,11 @@
           A perlin fractal is created by taking in a height map, downsize it, and fill itself with the small height map.
         </p>
         <div>
-          <a class="tag" href="/tags/graphics">graphics</a> <a class="tag" href="/tags/notes">notes</a>
+          <a class="tag" href="/tags/graphics">#graphics</a> <a class="tag" href="/tags/notes">#notes</a>
         </div>
         <footer>
-          <p id="cc">
-            This work is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0 <img alt="Creative Commons License CC BY-SA 4.0" src="/images/cc-all.svg" style="height:1.4em; width: auto;" loading="lazy" width="30" height="11"></a>
+          <p>
+            This work is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0 <img class="inline-icon" alt="Icons for Creative Commons's BY-SA 4.0 license" src="/images/cc-all.svg" loading="lazy"></a>
           </p>
         </footer>
       </article>
