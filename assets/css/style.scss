@@ -7,7 +7,6 @@
   accent-color: var(--accent);
 }
 
-/* Layout, sizing, margins */
 body {
   font-family: "Crimson Text", "Noto Sans SC", serif;
   font-size: 1.2rem;
@@ -24,10 +23,13 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   overflow-wrap: anywhere;
+
+  color: var(--text);
+  background-color: var(--background);
 }
 
+
 ::selection {
-  // color: var(--background);
   background: var(--translucent);
 }
 
@@ -252,7 +254,7 @@ h1,
 h2,
 h3 {
   font-weight: normal;
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 li {
@@ -269,13 +271,6 @@ article > footer {
   font-size: 0.85em;
   border-top: solid 1px var(--text);
   line-height: 1.2;
-}
-
-/* Coloring */
-
-body {
-  color: var(--text);
-  background-color: var(--background);
 }
 
 a {
@@ -338,26 +333,3 @@ mark {
   padding: 8px;
 }
 
-.tag {
-  margin-right: 4px;
-}
-
-.tag::before {
-  content: "#";
-}
-
-.icon-prefix {
-  white-space: pre;
-}
-
-.icon-prefix::before {
-  content: "";
-  display: inline-block;
-  height: 1.2em;
-  width: 1.2em;
-  mask-size: cover;
-  -webkit-mask-size: cover;
-  vertical-align: text-bottom;
-  margin: 2px;
-  background-color: var(--text);
-}
