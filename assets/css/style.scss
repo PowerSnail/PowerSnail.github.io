@@ -174,10 +174,6 @@ th {
   padding: 0.2em 0.4em 0.2em 0.4em;
 }
 
-img {
-  vertical-align: text-bottom;
-}
-
 dt {
   margin-top: 1em;
 }
@@ -333,3 +329,7 @@ mark {
   padding: 8px;
 }
 
+.inline-icon {
+  height: 1em;
+  vertical-align: text-top;
+}
