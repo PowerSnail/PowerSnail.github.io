@@ -2,6 +2,7 @@
 {{ $re_figure := "<p>(<figure>(?:.|\n)+?</figure>)</p>" }} 
 {{ $re_table := "(<table>(?:.|\n)+?</table>)" }} 
 {{ $re_code_block_tabindex := `(<pre )(tabindex="0")` }} 
+{{ $re_table_align := `<(t[hd]) style="text-align:(.*)">` }}
 
 {{- return (
     .Content 
@@ -9,5 +10,6 @@
     | replaceRE $re_foot_notes ""
     | replaceRE $re_figure "${1}"
     | replaceRE $re_code_block_tabindex "${1}"
+    | replaceRE $re_table_align "<${1} class=\"table-align-${2}\">"
     | safeHTML) 
 -}}
