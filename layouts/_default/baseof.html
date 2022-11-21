@@ -48,9 +48,9 @@
     {{ partial "header.html" . }}
   </header>
   <main>
+    {{- .Scratch.Set "imageCount" 0 -}}
     {{- block "main" . }}{{- end }}
   </main>
-  {{ partial "goatcounter.html" . }}
   <footer>
     {{- partial "footer.html" . -}}
   </footer>

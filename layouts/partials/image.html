@@ -1,3 +1,5 @@
+{{- $imageCount := add (int (.page.Scratch.Get "imageCount")) 1 -}}
+{{- .page.Scratch.Set "imageCount" $imageCount -}}
 {{- $path := .src -}}
 {{- $url := .src -}}
 
@@ -49,5 +51,7 @@
     {{ end -}}
     {{- with $width }} width="{{- . -}}" {{ end -}}
     {{- with $height }} height="{{- . -}}" {{ end -}}
-    loading="lazy"
+    {{- if (gt $imageCount 1) -}}
+      loading="lazy"
+    {{- end -}}
 >
