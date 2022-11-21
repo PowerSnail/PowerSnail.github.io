@@ -1,6 +1,6 @@
 ## Overview
 
-Generated at: {{ .Site.LastChange }}, with Hugo (version={{hugo.Version}}), in 
+Generated at: {{ now.UTC.Format "02 Jan 06 15:04 MST" }}, with Hugo (version={{hugo.Version}}), in 
 {{ if hugo.IsProduction }}_Production_{{ else }}_Development_{{end}} mode.
 
 ## Pages
@@ -22,20 +22,13 @@ Counts (>1):
 | Tag | Item Count |
 | --- | ---------- |
 {{ range (where $tags.Data.Terms.ByCount "Count" ">" 1) -}}
-| {{ .Page.Title }} | {{ .Count }} | 
+| [{{ .Page.Title }}]({{ .Page.RelPermalink }}) | {{ .Count }} | 
 {{ end }}
 
 Orphaned Tags:
 
-{{ $orphanedTags := dict }}
 {{ range (where $tags.Data.Terms.ByCount "Count" "==" 1) -}}
-{{ $page := index .Pages 0 }}
-{{ $array := index $orphanedTags $page.File.Path }}
-{{ $array = $array | append . }}
-{{ $orphanedTags = merge $orphanedTags ( dict $page.File.Path $array ) }}
-{{ end }}
+{{- $page := index .Pages 0 -}}
+- {{ .Page.Title }}: [{{ $page.File.Path }}]({{ $page.RelPermalink }})
+{{ end -}}
 
-{{ range $key, $value := $orphanedTags -}}
-- {{ $key }} {{ range $value }}
-  - {{ .Page.Title }} {{ end }}
-{{ end }}
