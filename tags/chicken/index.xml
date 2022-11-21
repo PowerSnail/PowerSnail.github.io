@@ -80,8 +80,7 @@
 &lt;p&gt;&lt;img
     src=&#34;https://powersnail.com/images/chicken-abodo.svg&#34; alt=&#34;Recipe Summary for Chicken Abodo&#34; 
         style=&#34;width:100%; height: auto;&#34;
-     width=&#34;390&#34;  height=&#34;177&#34; loading=&#34;lazy&#34;
-&gt;
+     width=&#34;390&#34;  height=&#34;177&#34; &gt;
 
 &lt;/p&gt;
 &lt;p&gt;This is the final result of a printable, succinct, summary card for my chicken abodo recipe. After reading on the web (and fiddling with HTML and CSS) for so long, there&amp;rsquo;s something very satisfying about LaTeX. It just looks nice.&lt;/p&gt;
