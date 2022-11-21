@@ -4,6 +4,7 @@
   {{ $goatcounter := slice $config $counter | resources.Concat "goat.js" | js.Build (dict "minify" true) }}
   <script 
     async 
+    nonce="goatcounterjs"
     data-goatcounter="https://analytics.powersnail.com/count"
     src="{{ $goatcounter.RelPermalink }}" 
   ></script>
