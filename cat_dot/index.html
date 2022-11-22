@@ -1,78 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' https:">
     <meta name="author" content="PowerSnail">
-    <meta name="generator" content="Hugo 0.106.0">
-    <meta name="theme-color" content="#af3000">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#af3000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#C93703">
     <title>
       Cat Dots · SnailShell
     </title>
+    <meta property="og:title" content="Cat Dots">
+    <meta property="og:site_name" content="SnailShell">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://powersnail.com/cat_dot/">
     <link rel="canonical" href="https://powersnail.com/cat_dot/">
-    <link rel="shortcut icon" sizes="any" href="/images/snail.svg" type="image/svg+xml">
-    <link rel="icon" sizes="any" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/snail-180x180.png">
-    <link rel="mask-icon" href="/images/snail.svg" color="#af3000">
-    <style>
-    body {
-      min-height: 100vh;
-      display: grid;
-      grid-template-rows: min-content auto;
-      padding: 0;
-      margin: 0;
-    }
-
-    header {
-      background-color: #faebe6;
-      border-bottom: solid 2px #f5713e44;
-    }
-
-    canvas {
-      background-color: black;
-    }
-
-    label {
-      white-space: nowrap;
-    }
-
-    header {
-      display: grid;
-      grid-template-columns: min-content 1fr min-content;
-      gap: 1em;
-      padding: 1em;
-    }
-
-    header>section {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      gap: 1em;
-    }
-
-    header>section>div {
-      display: flex;
-      flex-flow: row nowrap;
-      gap: 0.5em;
-      align-items: baseline;
-    }
-
-    header>a {
-      align-self: center;
-    }
-
-    header>a>img {
-      height: 3em;
-    }
-
-    input,
-    button {
-      font-size: 1rem;
-      width: 6rem;
-    }
-    </style>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <header>
@@ -93,7 +42,7 @@
       </section>
     </header>
     <main>
-      <canvas id="mainCanvas" style="display: block; margin: auto; width: 100%; height: 100%"></canvas>
+      <canvas id="mainCanvas"></canvas>
     </main>
     <script src="./cat_dot.js"></script>
   </body>
