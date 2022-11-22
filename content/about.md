@@ -14,6 +14,7 @@ You can find me also at:
 | Github   | [https://github.com/PowerSnail/](https://github.com/PowerSnail/) |
 | Email    | [hj@powersnail.com](mailto:hj@powersnail.com)                    |
 | Mastodon | [@powersnail@c.im](https://c.im/@powersnail)                     |
+| Bookwyrm | [PowerSnail@books.theunseen.city](https://books.theunseen.city/user/PowerSnail)                     |
 
 ## About this blog
 
