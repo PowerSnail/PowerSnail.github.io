@@ -19,8 +19,8 @@
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ if .Params.Get "cover" }}
-<meta property="og:image" content="{{ .Permalink }}" />
+{{ with .Params.Get "cover" }}
+<meta property="og:image" content="{{ . }}" />
 {{ end }}
 
 {{ with .Description }}

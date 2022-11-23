@@ -8,6 +8,7 @@ tags:
   - music
   - bowing
 commentid: 109390122026357521
+cover: /images/covers/violin-bow-frog.webp
 draft: false
 ---
 
