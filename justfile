@@ -50,6 +50,7 @@ _post-process sitedir:
     fd "\.css" {{ sitedir }} --exec lightningcss -m "{}" --output-file "{}"
     python tool_scripts/generate_responsive_images.py "{{ sitedir }}/"
     python tool_scripts/check_dead_links.py "{{ sitedir }}/"
+    # python tool_scripts/make_screenshot.py "{{ sitedir }}"
     fd ".html" "{{ sitedir }}/" --exec just _format-html 
 
 _format-html path:

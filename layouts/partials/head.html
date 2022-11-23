@@ -19,8 +19,9 @@
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ with .Params.Get "cover" }}
-<meta property="og:image" content="{{ . }}" />
+
+{{ with resources.Get "icons/snail.svg" }}
+  <meta property="og:image" content="{{ .Permalink }}" />
 {{ end }}
 
 {{ with .Description }}
