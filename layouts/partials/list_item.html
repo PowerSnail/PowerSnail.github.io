@@ -5,5 +5,5 @@
     {{ partial "draft.html" .}}
 </a>
 {{ partial "metadata.html" . }}
-<p>{{ .Summary }}</p>
+<p>{{ if .Description }}{{ .Description | .RenderString }}{{else}}{{ .Summary | .RenderString }}{{ end }}</p>
 </section>
