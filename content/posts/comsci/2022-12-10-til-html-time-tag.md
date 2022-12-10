@@ -8,6 +8,7 @@ tags:
     - computer science
     - TIL
 draft: false
+commentid: 109488773969656531
 ---
 
 Today I learned that HTML has a `<time>` tag which supplements a written date and time with a machine-readable format.[^1] Supposedly, this helps with parsability, and in turn, good for accessibility. I've added this into my Hugo template for metadata.
