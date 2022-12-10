@@ -13,7 +13,7 @@
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="theme-color" content="{{ .Site.Params.theme_color }}">
 
-<title>{{ if ne .Title .Site.Title }}{{ .Title | markdownify | plainify }} · {{ end }}{{ .Site.Title }}</title>
+<title>{{ if ne .Title .Site.Title }}{{ .Title | markdownify | plainify | safeHTML }} · {{ end }}{{ .Site.Title }}</title>
 
 <meta property="og:title" content="{{ .Title | markdownify | plainify }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
