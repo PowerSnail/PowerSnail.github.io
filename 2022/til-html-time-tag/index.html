@@ -14,15 +14,14 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#C93703">
     <title>
-      frontend · SnailShell
+      TIL: HTML Has a &lt;time&gt; Tag · SnailShell
     </title>
-    <meta property="og:title" content="frontend">
+    <meta property="og:title" content="TIL: HTML Has a &amp;lt;time&amp;gt; Tag">
     <meta property="og:site_name" content="SnailShell">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://powersnail.com/tags/frontend/">
+    <meta property="og:url" content="https://powersnail.com/2022/til-html-time-tag/">
     <meta property="og:image" content="https://powersnail.com/icons/snail.svg">
-    <link rel="canonical" href="https://powersnail.com/tags/frontend/">
-    <link rel="alternate" type="application/rss+xml" href="https://powersnail.com/tags/frontend/index.xml" title="SnailShell">
+    <link rel="canonical" href="https://powersnail.com/2022/til-html-time-tag/">
     <link rel="prefetch" href="/images/front-cover.webp" as="image" crossorigin="">
     <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
@@ -35,21 +34,42 @@
       <link rel="stylesheet" href="/css/style.css">
     </header>
     <main>
-      <article>
+      <article id="post-main">
         <h1>
-          <a href="/tags/">Tags</a>/#frontend
+          TIL: HTML Has a <code>&lt;time&gt;</code> Tag
         </h1>
-        <div class="post-list">
-          <section>
-            <a href="/2022/score-in-url/">Making <em>Score In URL</em></a>
-            <div class="metadata">
-              <time datetime="2022-07-29T00:00:00Z">29 Jul 2022</time> · 1198 words · 6 minutes read
-            </div>
-            <p>
-              Announcing <a href="https://powersnail.com/ScoreInUrl"><em>Score In URL</em></a>, a sheet music editor where the content is stored in the URL.
-            </p>
-          </section>
+        <hr>
+        <div class="metadata">
+          <time datetime="2022-12-10T09:41:12Z">10 Dec 2022</time> · 66 words · 1 minutes read
         </div>
+        <p>
+          Today I learned that HTML has a <code>&lt;time&gt;</code> tag which supplements a written date and time with a machine-readable format.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Supposedly, this helps with parsability, and in turn, good for accessibility. I’ve added this into my Hugo template for metadata.
+        </p>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $isoFormat := "2006-01-02T15:04:05" -}}
+</span></span><span class="line"><span class="cl">{{- $humanFormat := "02 Jan 2006" -}}
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"{{ .Params.date.Format $isoFormat }}"</span><span class="p">&gt;</span>{{ .Params.date.Format $humanFormat }}<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">...</span></span></code></pre>
+        </div>
+        <div class="footnotes" role="doc-endnotes">
+          <hr>
+          <ol>
+            <li id="fn:1">
+              <p>
+                MDN Web Docs. <em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time</a></em>&nbsp;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a>
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <a class="tag" href="/tags/html">#html</a> <a class="tag" href="/tags/computer-science">#computer science</a> <a class="tag" href="/tags/til">#TIL</a>
+        </div>
+        <footer>
+          <p>
+            This work is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0 <img class="inline-icon" alt="Icons for Creative Commons's BY-SA 4.0 license" src="/images/cc-all.svg" loading="lazy"></a>
+          </p>
+        </footer>
       </article>
     </main>
     <footer>

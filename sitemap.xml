@@ -2,22 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://powersnail.com/tags/computer-science/</loc>
+    <lastmod>2022-12-10T09:41:12+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/</loc>
+    <lastmod>2022-12-10T09:41:12+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/html/</loc>
+    <lastmod>2022-12-10T09:41:12+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/posts/</loc>
+    <lastmod>2022-12-10T09:41:12+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/</loc>
+    <lastmod>2022-12-10T09:41:12+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/til/</loc>
+    <lastmod>2022-12-10T09:41:12+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/2022/til-html-time-tag/</loc>
+    <lastmod>2022-12-10T09:41:12+00:00</lastmod>
+  </url><url>
     <loc>https://powersnail.com/tags/bowing/</loc>
     <lastmod>2022-11-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/2022/engage-pinky-in-bow-change/</loc>
     <lastmod>2022-11-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://powersnail.com/</loc>
-    <lastmod>2022-11-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://powersnail.com/tags/music/</loc>
-    <lastmod>2022-11-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://powersnail.com/posts/</loc>
-    <lastmod>2022-11-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://powersnail.com/tags/</loc>
     <lastmod>2022-11-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/tags/violin/</loc>
@@ -30,9 +42,6 @@
     <lastmod>2022-11-14T02:18:49-08:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/2022/stable-diffusion-fun/</loc>
-    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://powersnail.com/tags/computer-science/</loc>
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/tags/machine-learning/</loc>
@@ -94,9 +103,6 @@
   </url><url>
     <loc>https://powersnail.com/tags/bach/</loc>
     <lastmod>2022-01-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://powersnail.com/tags/html/</loc>
-    <lastmod>2022-01-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/tags/hugo/</loc>
     <lastmod>2022-01-12T00:00:00+00:00</lastmod>

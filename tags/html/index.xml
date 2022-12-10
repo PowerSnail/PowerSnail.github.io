@@ -2,7 +2,7 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>html on SnailShell</title>
-  <link>https://powersnail.com/tags/html/</link><link rel="self" href="https://powersnail.com/tags/html/index.xml"></link><updated>Wed, 12 Jan 2022 00:00:00 +0000</updated>
+  <link>https://powersnail.com/tags/html/</link><link rel="self" href="https://powersnail.com/tags/html/index.xml"></link><updated>Sat, 10 Dec 2022 09:41:12 +0000</updated>
   <id>https://powersnail.com/tags/html/</id>
 
   <author>
@@ -14,6 +14,34 @@
   <description>Recent content in html on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">TIL: HTML Has a &lt;code&gt;&amp;lt;time&amp;gt;&lt;/code&gt; Tag</title>
+    <link rel="alternate">https://powersnail.com/2022/til-html-time-tag/</link>
+    <published>Sat, 10 Dec 2022 09:41:12 +0000</published>
+    <updated>Sat, 10 Dec 2022 09:41:12 +0000</updated>
+    
+    <id>https://powersnail.com/2022/til-html-time-tag/</id>
+    <summary type="html">Today I learned that HTML has a &amp;lt;time&amp;gt; tag which supplements a written date and time with a machine-readable format.1 Supposedly, this helps with parsability, and in turn, good for accessibility.</summary>
+    <content type="html">&lt;p&gt;Today I learned that HTML has a &lt;code&gt;&amp;lt;time&amp;gt;&lt;/code&gt; tag which supplements a written date and time with a machine-readable format.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Supposedly, this helps with parsability, and in turn, good for accessibility. I&amp;rsquo;ve added this into my Hugo template for metadata.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- $isoFormat := &amp;#34;2006-01-02T15:04:05&amp;#34; -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- $humanFormat := &amp;#34;02 Jan 2006&amp;#34; -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;time&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;{{ .Params.date.Format $isoFormat }}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;{{ .Params.date.Format $humanFormat }}&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;MDN Web Docs. &lt;em&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time&lt;/a&gt;&lt;/em&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    <category>posts</category>
+  </entry>
   
   <entry>
     <author>
