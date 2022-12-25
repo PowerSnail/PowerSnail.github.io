@@ -12,9 +12,9 @@ draft: true
 
 The book: [The Pragmatic Programmer](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/).
 
-What a informative, well-written book. I found this gem while I was combing through the Newark Public Library, which is not so big, but still has quite a few good books. 
+What an informative, well-written book. I found this gem while I was combing through the Newark Public Library, which is not so big, but still has quite a few good books. 
 
-_The Pragmatic Programmer_ is not only packed with information, but also supplies real-code example (not pseudo-code, not English description of algorithm) to demonstrate what it means. I don't want to over-sell the book; they are short, toy examples. If one wants to fully grasp the how and why of all the concepts, one needs to read more and code more. But the snippets of real code provides a comfortable starting point.
+_The Pragmatic Programmer_ is not only packed with information, but also supplies real-code example (not pseudocode, not English description of algorithm) to demonstrate what it means. I don't want to over-sell the book; they are short, toy examples. If one wants to fully grasp the how and why of all the concepts, one needs to read more and code more. But the snippets of real code provides a comfortable starting point.
 
 At 40 USD, this is a book that I would recommend keeping on your shelf, if shelf space isn't too much of a problem. Leafing through the book once a while can be a good reminder of some of the most important disciplines in software development.
 
