@@ -32,7 +32,7 @@ favicon = "/images/snail.svg"
 lang = "en"
 theme_color = "#C93703"
 responsiveImageSizes = [400, 600, 800, 1000, 1200]
-christmas = true
+# christmas = true
 
 [permalinks]
 posts = "/:year/:slug/"
