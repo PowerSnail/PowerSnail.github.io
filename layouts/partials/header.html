@@ -1,22 +1,30 @@
 <a href="/"
   {{ if eq .RelPermalink "/" }}
-    class="current"
+    class="nav-link current"
+  {{ else }}
+    class="nav-link"
   {{ end }}
 >{{ .Site.Title }}</a>
 <nav>
-  <a type="button" href="/posts/"
+  <a href="/posts/"
     {{ if eq .RelPermalink "/posts/" }}
-      class="current"
+      class="nav-link current"
+    {{ else }}
+      class="nav-link"
     {{ end }}
   >Posts</a>
-  <a type="button" href="/status/"
-  {{ if eq .RelPermalink "/status/" }}
-    class="current"
-  {{ end }}
+  <a href="/status/"
+    {{ if eq .RelPermalink "/status/" }}
+      class="nav-link current"
+    {{ else }}
+      class="nav-link"
+    {{ end }}
   >Status</a>
-  <a type="button" href="/about/"
-  {{ if eq .RelPermalink "/about/" }}
-    class="current"
-  {{ end }}
+  <a href="/about/"
+    {{ if eq .RelPermalink "/about/" }}
+      class="nav-link current"
+    {{ else }}
+      class="nav-link"
+    {{ end }}
   >About</a>
 </nav>

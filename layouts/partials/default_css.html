@@ -1,3 +1,5 @@
-{{ $tocss_options := (dict "enableSourceMap" false ) }}
-{{ $css := resources.Get "css/style.scss" | resources.ToCSS $tocss_options }}
+{{- $cssMain := resources.Get "css/style.css" -}}
+{{- $cssCode := resources.Get "css/code_scheme.css" -}}
+{{- $cssFont := resources.Get "css/font.css" -}}
+{{- $css := slice $cssCode $cssFont $cssMain | resources.Concat "css/style.css" -}}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">

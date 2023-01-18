@@ -1,6 +1,3 @@
-@import "font";
-@import "codescheme";
-
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +9,7 @@ body {
   font-size: 1.2rem;
   text-rendering: optimizeLegibility;
 
-  // Workaround for iOS bug: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+  /* Workaround for iOS bug: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -47,7 +44,7 @@ article > * {
   overflow-x: auto;
 }
 
-header nav {
+nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -70,7 +67,7 @@ footer nav {
   align-items: center;
 }
 
-nav a {
+.nav-link {
   text-decoration: none;
   text-align: center;
   color: var(--text);
@@ -182,7 +179,8 @@ dt {
 }
 
 #post-main > p:first-of-type {
-  overflow-y: clip; // So that Dropped capital letter don't make a scrollbar in chrome & safari
+  /* So that Dropped capital letter don't make a scrollbar in chrome & safari */
+  overflow-y: clip; 
 }
 
 #post-main > p:first-of-type:first-letter {
@@ -222,23 +220,23 @@ figcaption {
   font-size: 0.9rem;
 }
 
-header a::before {
+.nav-link::before {
   content: "\00a0";
   font-family: "Fira Code";
   color: var(--accent);
 }
 
-header a::after {
+.nav-link::after {
   content: "\00a0";
   font-family: "Fira Code";
   color: var(--accent);
 }
 
-header a.current::before {
+.nav-link.current::before {
   content: "<";
 }
 
-header a.current::after {
+.nav-link.current::after {
   content: ">";
 }
 

@@ -1,0 +1,63 @@
+/* crimson-text-regular - latin */
+@font-face {
+  font-family: "Crimson Text";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Crimson Text"), url("/fonts/crimson-text.woff2") format("woff2"),
+    url("/fonts/crimson-text.woff") format("woff");
+}
+
+/* crimson-text-italic - latin */
+@font-face {
+  font-family: "Crimson Text";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Crimson Text"),
+    url("/fonts/crimson-text-italic.woff2") format("woff2"),
+    url("/fonts/crimson-text-italic.woff") format("woff");
+}
+
+/* crimson-text-700 - latin */
+@font-face {
+  font-family: "Crimson Text";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Crimson Text"),
+    url("/fonts/crimson-text-700.woff2") format("woff2"),
+    url("/fonts/crimson-text-700.woff") format("woff");
+}
+
+/* noto-sans-sc-regular - chinese-simplified */
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+
+  src: local("Noto Sans SC"), url("/fonts/noto-sans-sc.woff2") format("woff2"),
+    url("/fonts/noto-sans-sc.woff") format("woff");
+}
+
+/* noto-sans-sc-700 - chinese-simplified */
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Noto Sans SC"),
+    url("/fonts/noto-sans-sc-700.woff2") format("woff2"),
+    url("/fonts/noto-sans-sc-700.woff") format("woff");
+}
+
+/* fira-code-regular - latin */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Fira Code"), url("/fonts/fira-code.woff2") format("woff2"),
+    url("/fonts/fira-code.woff") format("woff");
+}
