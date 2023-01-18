@@ -1,31 +1,51 @@
 import dataclasses
 import sys
-import colour
 import more_itertools
 import numpy as np
 import typer
 from dataclasses import dataclass
 
 
+def parse_hex(hex_string: str) -> np.ndarray:
+    return np.array([int(hex_string[i:i+2], 16) for i in range(0, len(hex_string), 2)])
+
+
 class Color:
+    M1 = np.array([
+        [0.4122214708,0.5363325363,0.0514459929],
+        [0.2119034982,0.6806995451,0.1073969566],
+        [0.0883024619,0.2817188376,0.6299787005],
+    ])
+    M2 = np.array([
+        [0.2104542553, + 0.7936177850, - 0.0040720468],
+        [1.9779984951, - 2.4285922050, + 0.4505937099],
+        [0.0259040371, + 0.7827717662, - 0.8086757660],
+    ])
+    M1_inv = np.linalg.inv(M1)
+    M2_inv = np.linalg.inv(M2)
+
     def __init__(self, data):
         self.data = data
-
+    
     @classmethod
     def from_hex(cls, hex: str):
-        values = hex.lstrip("#")
-        values = more_itertools.chunked(values, 2)
-        values = (int("0x{}{}".format(*v), 16) for v in values)
-        rgb = np.array([n / 255 for n in values])
-        xyz = colour.sRGB_to_XYZ(rgb)
-        lab = colour.XYZ_to_Oklab(xyz)
-        return cls(np.array(lab))
+        rgb = parse_hex(hex.lstrip("#")) / 255.0
+        linear_rgb = ((rgb + 0.055) / 1.055) ** 2.4 * (rgb >= 0.04045) + rgb / 12.92 * (rgb < 0.04045)
+        lms = np.matmul(Color.M1, linear_rgb.reshape(-1, 1))
+        lms = np.cbrt(lms)
+        lab = np.matmul(Color.M2, lms)
+        
+        return cls(lab.reshape(-1))
 
     def hex(self) -> str:
-        xyz = colour.Oklab_to_XYZ(self.data)
-        rgb = colour.XYZ_to_sRGB(xyz)
-        rgb = (min(1.0, max(0.0, v)) for v in rgb)
-        rgb = (int(v * 255) for v in rgb)
+        lms = np.matmul(Color.M2_inv, self.data.reshape(-1, 1))
+        lms = lms ** 3
+        linear_rgb = np.matmul(Color.M1_inv, lms)
+        linear_rgb = np.clip(linear_rgb, 0.0, 1.0)
+        rgb = linear_rgb * 12.92 * (linear_rgb < 0.0031308) + ((1.055 * np.power(linear_rgb, 1. / 2.4)) - 0.055) * (linear_rgb >= 0.0031308)
+        rgb = np.clip(rgb, 0.0, 1.0)
+        rgb = np.round(rgb * 255).astype(np.uint8)
+        rgb = rgb.reshape(-1)
         return "#{:02x}{:02x}{:02x}".format(*rgb)
 
     def invert(self) -> "Color":
@@ -124,8 +144,8 @@ def main(accent: str, output: str = ""):
     out.write("  :root {")
     out.write(str(color_scheme.invert()))
     out.write("  }")
-    out.write("}")
-    out.close()
+    out.write("}\n")
+    out.flush()
 
 
 if __name__ == "__main__":
