@@ -42,3 +42,4 @@
   {{ $css := resources.Get "css/christmas.scss" | resources.ToCSS $tocss_options }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 {{ end}}
+{{ partial "default_css.html" }}

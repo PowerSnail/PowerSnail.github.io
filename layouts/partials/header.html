@@ -1,30 +1,32 @@
-<a href="/"
-  {{ if eq .RelPermalink "/" }}
-    class="nav-link current"
-  {{ else }}
-    class="nav-link"
-  {{ end }}
->{{ .Site.Title }}</a>
-<nav>
-  <a href="/posts/"
-    {{ if eq .RelPermalink "/posts/" }}
-      class="nav-link current"
-    {{ else }}
-      class="nav-link"
-    {{ end }}
-  >Posts</a>
-  <a href="/status/"
-    {{ if eq .RelPermalink "/status/" }}
-      class="nav-link current"
-    {{ else }}
-      class="nav-link"
-    {{ end }}
-  >Status</a>
-  <a href="/about/"
-    {{ if eq .RelPermalink "/about/" }}
-      class="nav-link current"
-    {{ else }}
-      class="nav-link"
-    {{ end }}
-  >About</a>
-</nav>
+{{- define "partials/add-current.html" -}}
+  {{- $current := "" -}}
+  {{- if . -}}
+    {{- $current = " current" -}}
+  {{- end -}}
+  {{- return $current -}}
+{{- end -}}
+
+{{- $current := dict .RelPermalink " current" -}}
+
+<header>
+  <div class="site-title bg-cover">
+    <a 
+      href="/" 
+      class="nav-link {{- index $current "/" -}}"
+    >{{ .Site.Title }}</a>
+  </div>
+  <nav>
+    <a 
+      href="/posts/"
+      class="nav-link {{- index $current "/posts/" -}}"
+    >Posts</a>
+    <a 
+      href="/status/"
+      class="nav-link {{- index $current "/status/" -}}"
+    >Status</a>
+    <a 
+      href="/about/"
+      class="nav-link {{- index $current "/about/" -}}"
+    >About</a>
+  </nav>
+</header>

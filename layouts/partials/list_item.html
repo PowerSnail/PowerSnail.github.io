@@ -1,9 +1,10 @@
-<section>
+<section class="post-item">
 <a 
+    class="post-item-title"
     href="{{ .RelPermalink }}">
     {{ .Title | .RenderString }}
     {{ partial "draft.html" .}}
 </a>
 {{ partial "metadata.html" . }}
-<p>{{ if .Description }}{{ .Description | .RenderString }}{{else}}{{ .Summary | .RenderString }}{{ end }}</p>
+<p class="post-item-summary">{{ if .Description }}{{ .Description | .RenderString }}{{else}}{{ .Summary | .RenderString }}{{ end }}</p>
 </section>

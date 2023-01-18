@@ -9,16 +9,11 @@
   {{ if .Site.Params.christmas }}
     {{ partial "specials/christmas.html"}}
   {{ end}}
-  <header>
-    {{ partial "header.html" . }}
-    {{ partial "default_css.html" }}
-  </header>
+  {{ partial "header.html" . }}
   <main>
     {{- .Scratch.Set "imageCount" 0 -}}
     {{- block "main" . }}{{- end }}
   </main>
-  <footer>
-    {{- partial "footer.html" . -}}
-  </footer>
+  {{- partial "footer.html" . -}}
 </body>
 </html>

@@ -54,7 +54,7 @@ nav {
   row-gap: 0.5em;
 }
 
-footer nav {
+.social-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -73,17 +73,11 @@ footer nav {
   color: var(--text);
 }
 
-body > header {
+header {
   border-bottom: 1.7px solid var(--text);
 }
 
-body > header > a {
-  color: var(--text);
-  font-size: 2.4em;
-  border-bottom: solid 1px var(--text);
-  text-align: center;
-  padding: 0.2em;
-  text-decoration: none;
+.bg-cover {
   background: url(/images/c.webp) no-repeat;
   background-size: cover;
   background-color: var(--background);
@@ -96,10 +90,19 @@ body > footer {
   justify-items: center;
   gap: 0.5em;
   padding: 0.5em;
+}
 
-  background: url(/images/c.webp) no-repeat;
-  background-size: cover;
-  background-color: var(--background);
+.site-title {
+  font-size: 2.4em;
+  border-bottom: solid 1px var(--text);
+}
+
+header {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: stretch;
+  color: var(--text);
+  text-align: center;
 }
 
 p,
@@ -209,12 +212,6 @@ figure {
   overflow-x: auto;
 }
 
-header {
-  display: grid;
-  grid-template-rows: auto auto;
-  justify-items: stretch;
-}
-
 figcaption {
   color: var(--text_alt);
   font-size: 0.9rem;
@@ -298,18 +295,18 @@ mark {
   row-gap: 2em;
 }
 
-.post-list section {
+.post-item {
   display: grid;
   row-gap: 4px;
 }
 
-.post-list a {
+.post-item-title {
   text-decoration: none;
   font-size: 1.2em;
   color: var(--text);
 }
 
-.post-list p {
+.post-item-summary {
   margin: 0;
   color: var(--text_alt);
   font-size: 0.95em;
