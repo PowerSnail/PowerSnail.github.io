@@ -280,6 +280,10 @@ mark {
   color: var(--text);
 }
 
+dt::first-letter {
+  font-size: 1.5rem;
+}
+
 .metadata {
   display: flex;
   text-transform: uppercase;

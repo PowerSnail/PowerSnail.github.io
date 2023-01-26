@@ -1,13 +1,8 @@
 ---
 title: Free Sheet Music
 description: A collection of sheet music I made
----
 
-<style>
-  dt::first-letter {
-    font-size: 1.5rem;
-  }
-</style>
+---
 
 Typeset in MuseScore, here are some free violin sheet music. 
 
@@ -22,6 +17,10 @@ Rachmaninoff - *Vocalise*
 C.W. Gluck - *Melodie*
 : Arranged for violin by Fritz Kreisler  
 : Download: [[MuseScore]](./Gluck%20-%20Melodie.mscx) [[PDF]](./Gluck%20-%20Melodie.pdf)
+
+Carl Flesch Urstudien (Left hand exercises only)
+: Source: [[Github]](https://github.com/PowerSnail/sheet-music/tree/master/Carl%20Flesch%20-%20Urstudien%20-%20Left%20hand)
+: Download: [[PDF]](./Carl%20Flesch%20-%20Urstudien%20-%20Left%20hand.pdf)
 
 PowerSnail - *Bowing Plane Exercise*
 : See [this bowing plane exercise](/2022/bowing-planes-exercise)
