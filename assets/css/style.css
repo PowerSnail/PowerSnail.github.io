@@ -161,6 +161,7 @@ code {
 
 pre code {
   white-space: pre;
+  font-size: 0.7em;
   padding: 0;
 }
 
