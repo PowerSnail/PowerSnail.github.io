@@ -10,7 +10,7 @@ tags:
     - Javascript
     - Plasma
     - KDE
-draft: true
+draft: false
 ---
 
 ## The Problem
@@ -19,7 +19,7 @@ KDE Plasma is my favorite Linux DE, and it has its quirks and warts.
 The support for multiple monitors, for example, is fairly buggy at times,
 especially when monitors are turned on and off.
 The way it deals with multiple monitors seems to be based on some sort of
-numerical index that doesn't map itself to the monitors' UUIDs, which means
+numerical index that doesn't map itself to the monitors' UUIDs, so
 when the configuration changes, desktop settings can be shifted around.
 
 I have wallpapers of different shapes on each monitor, because my left
@@ -41,7 +41,7 @@ the wallpapers with a script.
 Plasma can be scripted with JavaScript through its DBus interface, and there's
 a fairly comprehensive documentation (The KDE Community, 2023).
 
-The first piece of the puzzle is getting the desktops in a deterministic order.
+The first step is getting the desktops in a deterministic order.
 Desktops can be retrieved by a global function `desktops()` which "returns an 
 array of all desktops that currently exist"(The KDE Community, 2023).
 Each `Desktop` object has a `screen` property, a numerical ID of the 
@@ -74,7 +74,7 @@ function setWallpaper(desktop, path) {
 }
 ```
 
-To set an array of images as the wallpapers:
+To assign a list of images to all the desktops one by one:
 
 ```javascript
 // Imagine we have a variable called imageList, an array containing the 
@@ -84,7 +84,7 @@ getDesktops().forEach(
 );
 ```
 
-To set one image of one specific desktop:
+To set one wallpaper for one specific desktop:
 
 ```javascript
 // Assume the variable `desktop_id` is the (0-based) index of the
@@ -105,16 +105,24 @@ qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "..."
 ...or invoke it with your favorite DBus tooling.
 
 
-## Gluing them together
+## Parameterize
 
-The final piece of the puzzle is to supply the actual parameters in some way.
-`evaluateScript` only accepts a self-contained script, so you'll have to find a
-way of generating the script on the fly.
+`evaluateScript` only accepts a self-contained script.
+You can hard code the path of the images, but there's no way to supply the image 
+paths as arguments to it, so some sort of string manipulation is required if you
+want to point Plasma to some arbitrary image.
+
 For me, someone whose home directory is already filled with various Python
 glues and _ad hoc_ scripts, nothing beats some composable _f-strings_, string
 replacements, and a nice familiar command-line interface.
 Any language good with string manipulation and a convenient DBus interface is
 a suitable tool for this step.
+Or, alternatively, you could also leave the path hard-coded, and place or link
+different images to that path before calling the script.
+
+Here's my script. I can set wallpapers to all the desktops by calling 
+`python wallpaper.py all image1.jpg image2.jpg ...`, and set wallpaper for the 2nd
+monitor from the left with `python wallpaper.py one 1 image1.jpg`.
 
 
 ```python
