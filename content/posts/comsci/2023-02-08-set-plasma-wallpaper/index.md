@@ -1,5 +1,5 @@
 ---
-title: Setting Wallpaper for Multiple Physical Screens through DBus for KDE Plasma
+title: Setting Wallpapers for Multiple Monitors through DBus for KDE Plasma
 description: 
 date: 2023-02-08
 slug: set-plasma-wallpaper
