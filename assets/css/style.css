@@ -197,11 +197,13 @@ dt {
 }
 
 article > footer {
-  margin-bottom: 1em;
-  margin-top: 3em;
-  display: flex;
+  margin: 3em 0 1em 0;
+  display: grid;
   flex-flow: column;
   row-gap: 1em;
+  font-size: 0.85em;
+  border-top: solid 1px var(--text);
+  padding: 1em 0 1em 0;
 }
 
 code {
@@ -262,11 +264,6 @@ thead {
   font-weight: 700;
 }
 
-article > footer {
-  font-size: 0.85em;
-  border-top: solid 1px var(--text);
-  line-height: 1.2;
-}
 
 a {
   color: var(--accent);
@@ -353,4 +350,13 @@ dt::first-letter {
   font-size: 1.2em;
   color: var(--text_alt);
   text-align: center;
+}
+
+.tag {
+  background-color: var(--background_alt);
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  padding: 0.2em 0.4em;
+  text-decoration: none;
+
 }
