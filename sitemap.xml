@@ -2,13 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://powersnail.com/tags/computer/</loc>
+    <lastmod>2023-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/</loc>
+    <lastmod>2023-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/2023/youtube-music-album-download/</loc>
+    <lastmod>2023-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/posts/</loc>
+    <lastmod>2023-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/</loc>
+    <lastmod>2023-02-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://powersnail.com/tags/computer-science/</loc>
     <lastmod>2023-02-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/tags/dbus/</loc>
-    <lastmod>2023-02-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://powersnail.com/</loc>
     <lastmod>2023-02-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/tags/javascript/</loc>
@@ -20,16 +32,10 @@
     <loc>https://powersnail.com/tags/plasma/</loc>
     <lastmod>2023-02-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://powersnail.com/posts/</loc>
-    <lastmod>2023-02-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://powersnail.com/tags/python/</loc>
     <lastmod>2023-02-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/2023/set-plasma-wallpaper/</loc>
-    <lastmod>2023-02-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://powersnail.com/tags/</loc>
     <lastmod>2023-02-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/tags/html/</loc>
