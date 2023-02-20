@@ -36,7 +36,6 @@ Here's the config file:
 # Misc
 --no-overwrites
 --concurrent-fragments 4
-
 ```
 
 ## The Explanation
@@ -91,7 +90,7 @@ According to `yt-dlp`'s README:
 
 `EmbedThumbnail` and `ThumbnailsConvertor` must be the two relevant options, so I gave the latter a try: `--ppa "ThumbnailsConvertor+ffmpeg_o:-c:v png -vf crop=\"'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\""`. And, _hooray_, it works!
 
-My guess is that there's some sort of conflict amongst the sequence converting the image to the right format, embedding the image, and post-processing the image. In a way, I think it makes sense that thumbnail convertor post processor is the right option here, as it implies that we are processing **after the conversion** and **before the embedding**, whereas post-processing `EmbedThumbnail` would suggest that we are cropping after the embedding occurs, which would be rather not useful. But this is just a speculation. Without digging into the code, it's impossible to tell what exactly is happening here.
+My guess is that there's some sort of conflict amongst the sequence of converting the image to the right format, embedding the image, and post-processing the image. In a way, I think it makes sense that thumbnail convertor post processor is the right option here, as it implies that we are processing **after the conversion** and **before the embedding**, whereas post-processing `EmbedThumbnail` would suggest that we are cropping after the embedding occurs, which would be rather not useful. But this is just a speculation. Without digging into the code, it's impossible to tell what exactly is happening here.
 
 
 ### Miscellaneous
