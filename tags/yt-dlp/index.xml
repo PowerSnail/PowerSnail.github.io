@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>yt-dlp on SnailShell</title>
+  <link>https://powersnail.com/tags/yt-dlp/</link><link rel="self" href="https://powersnail.com/tags/yt-dlp/index.xml"></link><updated>Sun, 19 Feb 2023 00:00:00 +0000</updated>
+  <id>https://powersnail.com/tags/yt-dlp/</id>
+
+  <author>
+    <name>PowerSnail</name>
+  </author>
+
+  <icon>https://powersnail.com/favicon.ico</icon>
+
+  <description>Recent content in yt-dlp on SnailShell</description>
+  <generator>Hugo -- gohugo.io</generator>
+  <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">My Config File for Downloading Albums from YouTube Music</title>
+    <link rel="alternate">https://powersnail.com/2023/youtube-music-album-download/</link>
+    <published>Sun, 19 Feb 2023 00:00:00 +0000</published>
+    <updated>Sun, 19 Feb 2023 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2023/youtube-music-album-download/</id>
+    <summary type="html">The Config File Here&amp;rsquo;s the config file:
+# yt-dlp.conf # Output format: album/tracks.format -o &amp;#34;%(album,playlist_title)U - [%(playlist_id)s]/%(track_number,playlist_index)s - %(title)U - [%(id)s].</summary>
+    <content type="html">&lt;h2 id=&#34;the-config-file&#34;&gt;The Config File&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s the config file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# yt-dlp.conf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Output format: album/tracks.format&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-o &lt;span class=&#34;s2&#34;&gt;&amp;#34;%(album,playlist_title)U - [%(playlist_id)s]/%(track_number,playlist_index)s - %(title)U - [%(id)s].%(ext)s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--windows-filenames 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# --restrict-filenames &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Extract audio&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-f bestaudio
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--extract-audio
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Thumbnail squared&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--convert-thumbnails png
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--ppa &lt;span class=&#34;s2&#34;&gt;&amp;#34;ThumbnailsConvertor+ffmpeg_o:-c:v png -vf crop=\&amp;#34;&amp;#39;if(gt(ih,iw),iw,ih)&amp;#39;:&amp;#39;if(gt(iw,ih),ih,iw)&amp;#39;\&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--embed-thumbnail
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Metadata, with playlist number as track number if the latter is missing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--embed-metadata
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--parse-metadata &lt;span class=&#34;s2&#34;&gt;&amp;#34;playlist_index:%(track_number)s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Misc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--no-overwrites
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--concurrent-fragments &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;the-explanation&#34;&gt;The Explanation&lt;/h2&gt;
+&lt;h3 id=&#34;output-formats&#34;&gt;Output formats.&lt;/h3&gt;
+&lt;p&gt;The files are organized into one-directory-per-album, like the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── Bach, J.S.： Sonatas &amp;amp; Partitas - [OLAK5uy_nd-ZT5mVVQ4tFm_6FsJWbj-u6GypaFYe8]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── 01 - J.S. Bach： Sonata for Violin Solo No. 1 in G Minor, BWV 1001 - I. Adagio - [ZePaXgWY7-Q].opus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── 02 - J.S. Bach： Sonata for Violin Solo No. 1 in G Minor, BWV 1001 - II. Fuga. Allegro - [93p59vL87cE].opus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── 03 - J.S. Bach： Sonata for Violin Solo No. 1 in G Minor, BWV 1001 - III. Siciliana - [BRssao79MDM].opus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── 04 - J.S. Bach： Sonata for Violin Solo No. 1 in G Minor, BWV 1001 - IV. Presto - [NP_LSvkqLjg].opus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── 05 - J.S. Bach： Partita for Violin Solo No. 1 in B Minor, BWV 1002 - Ia. Allemanda - [4C8pA-8Hy8Q].opus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── 06 - J.S. Bach： Partita for Violin Solo No. 1 in B Minor, BWV 1002 - Ib. Double - [vy43_64aax8].opus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── 07 - J.S. Bach： Partita for Violin Solo No. 1 in B Minor, BWV 1002 - IIa. Corrente - [yiHc8-quDIc].opus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The output template: &lt;code&gt;&amp;quot;%(album,playlist_title)U - [%(playlist_id)s]/%(track_number,playlist_index)s - %(title)U - [%(id)s].%(ext)s&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%(album,playlist_title)U&lt;/code&gt; tells &lt;code&gt;yt-dlp&lt;/code&gt; to use the album&amp;rsquo;s name, and if that does not exist, use the playlist&amp;rsquo;s title, the trailing &amp;ldquo;U&amp;rdquo; indicating that the string should be normalized.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%(track_number,playlist_index)s&lt;/code&gt; means that the file name begins with the track number, which makes it easier to sort the files, if the file manager or app is not metadata-aware.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%(title)U&lt;/code&gt; is the title normalized.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%(ext)s&lt;/code&gt; is the extension.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%(id)s&lt;/code&gt; and &lt;code&gt;%(playlist_id)s&lt;/code&gt; are the unique ID that YouTube assigns to the file and the playlist respectively, which might be useful if later I need to get more data from YouTube.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sanitizing filenames&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;--restrict-filenames&lt;/code&gt; sanitizes the string of illegal characters. Some file systems support more characters than others, so in theory, it makes sense to err on the side of caution. However, this flag replaces all non-ASCII characters and even special ASCII characters with underscores, which is way too aggressive. While it makes file systems very happy, (an incompatibility is basically impossible), all titles, except the pure English ones, get mangled. &amp;ldquo;Dvořák&amp;rdquo; becomes &amp;ldquo;Dvor_k&amp;rdquo;, &amp;ldquo;Ysaÿe&amp;rdquo; now read &amp;ldquo;Ysa_e&amp;rdquo;, and some titles started making funny faces: &lt;code&gt;-___-&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;--windows-filenames&lt;/code&gt; does exactly what it says on the tin: it makes the string Windows-compatible. I&amp;rsquo;d prefer if it is a little bit more aggressive, for instance, removing &lt;code&gt;&amp;amp;&lt;/code&gt; which some cloud drives don&amp;rsquo;t support, but it&amp;rsquo;s a good enough trade-off.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;metadata&#34;&gt;Metadata&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;--embed-metadata&lt;/code&gt; tells &lt;code&gt;yt-dlp&lt;/code&gt; to embed metadata. Some albums don&amp;rsquo;t have the proper track number set up, which means that when you import the files into a music player, the order of the album gets scrambled up.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--parse-metadata &amp;quot;playlist_index:%(track_number)s&amp;quot;&lt;/code&gt; uses the playlist index, which should always be present when downloading a playlist, to fill the track number.&lt;/p&gt;
+&lt;h3 id=&#34;thumbnails&#34;&gt;Thumbnails&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--embed-thumbnail&lt;/code&gt; tells &lt;code&gt;yt-dlp&lt;/code&gt; to embed a thumbnail;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--convert-thumbnails png&lt;/code&gt; indicates that the format of the thumbnail should be &lt;code&gt;png&lt;/code&gt;. &lt;code&gt;webp&lt;/code&gt; is possibly the best image format available in &lt;code&gt;yt-dlp&lt;/code&gt;, but its popularity being so recent, I&amp;rsquo;m wary of its compatibility with music players. Either &lt;code&gt;png&lt;/code&gt; or &lt;code&gt;jpeg&lt;/code&gt; should be fine.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By default, YouTube provides a padded, rectangular image. To cut off the padding, we can use &lt;code&gt;ffmpeg&lt;/code&gt; in post-processing. In this &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp/issues/429&#34;&gt;Github Issue&lt;/a&gt;, pukkandan(2021) gave a solution: &lt;code&gt;--ppa &amp;quot;EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf crop=\&amp;quot;&#39;if(gt(ih,iw),iw,ih)&#39;:&#39;if(gt(iw,ih),ih,iw)&#39;\&amp;quot;&amp;quot;&lt;/code&gt;. But on my machine, &lt;code&gt;yt-dlp&lt;/code&gt; seems to ignore this instruction. Even with &lt;code&gt;--verbose&lt;/code&gt; turned on, I could see no log about cropping the thumbnail, and if I mangle the command deliberately, no error is produced, either. All I get is the same padded rectangular image in the end.&lt;/p&gt;
+&lt;p&gt;According to &lt;code&gt;yt-dlp&lt;/code&gt;&amp;rsquo;s README:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Supported PP are: Merger, ModifyChapters, SplitChapters, ExtractAudio, VideoRemuxer, VideoConvertor, Metadata, EmbedSubtitle, &lt;strong&gt;EmbedThumbnail&lt;/strong&gt;, SubtitlesConvertor, &lt;strong&gt;ThumbnailsConvertor&lt;/strong&gt;, FixupStretched, FixupM4a, FixupM3u8, FixupTimestamp and FixupDuration.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;EmbedThumbnail&lt;/code&gt; and &lt;code&gt;ThumbnailsConvertor&lt;/code&gt; must be the two relevant options, so I gave the latter a try: &lt;code&gt;--ppa &amp;quot;ThumbnailsConvertor+ffmpeg_o:-c:v png -vf crop=\&amp;quot;&#39;if(gt(ih,iw),iw,ih)&#39;:&#39;if(gt(iw,ih),ih,iw)&#39;\&amp;quot;&amp;quot;&lt;/code&gt;. And, &lt;em&gt;hooray&lt;/em&gt;, it works!&lt;/p&gt;
+&lt;p&gt;My guess is that there&amp;rsquo;s some sort of conflict amongst the sequence of converting the image to the right format, embedding the image, and post-processing the image. In a way, I think it makes sense that thumbnail convertor post processor is the right option here, as it implies that we are processing &lt;strong&gt;after the conversion&lt;/strong&gt; and &lt;strong&gt;before the embedding&lt;/strong&gt;, whereas post-processing &lt;code&gt;EmbedThumbnail&lt;/code&gt; would suggest that we are cropping after the embedding occurs, which would be rather not useful. But this is just a speculation. Without digging into the code, it&amp;rsquo;s impossible to tell what exactly is happening here.&lt;/p&gt;
+&lt;h3 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;--no-overwrites&lt;/code&gt;: Don&amp;rsquo;t overwrite files.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--concurrent-fragments 4&lt;/code&gt;: Download 4 fragments concurrently to speed up the process.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;pukkandan. (2021, June 23). &lt;em&gt;Comment on [Feature Request] Crop to square thumbnail when embedding in MP3s&lt;/em&gt;. &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp/issues/429#issuecomment-866836396&#34;&gt;[Feature Request] Crop to square thumbnail when embedding in MP3s · Issue #429 · yt-dlp/yt-dlp · GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;yt-dlp. (2023). &lt;em&gt;Yt-dlp&lt;/em&gt; [Python]. yt-dlp. &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;GitHub - yt-dlp/yt-dlp: A youtube-dl fork with additional features and fixes&lt;/a&gt; (Original work published 2020)&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
+  
+</feed>
