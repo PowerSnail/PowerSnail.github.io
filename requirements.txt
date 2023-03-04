@@ -6,4 +6,3 @@ rich==12.6.0
 scipy==1.9.3
 selectolax==0.3.11
 typer==0.7.0
-toml==0.10.2

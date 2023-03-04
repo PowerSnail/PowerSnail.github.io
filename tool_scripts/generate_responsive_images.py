@@ -1,7 +1,7 @@
 from collections import Counter
 import hashlib
 import shutil
-import toml
+import tomllib
 import pathlib
 import re
 import appdirs
@@ -19,8 +19,8 @@ RE_UNSAFE = re.compile(r"%(20|22|3C|3E|23|25|7C)")
 CACHE_DIR = pathlib.Path(appdirs.user_cache_dir("com.powersnail.www")) / "images"
 
 
-with open("config.toml") as file:
-    OUTPUT_SIZES = sorted(toml.load(file)["params"]["responsiveImageSizes"])
+with open("config.toml", "rb") as file:
+    OUTPUT_SIZES = sorted(tomllib.load(file)["params"]["responsiveImageSizes"])
 
 
 def is_external(link: str):
