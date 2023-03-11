@@ -31,13 +31,14 @@ new-bundle category slug type="single":
 new-status:
     hugo new --kind "status" content/status/{{ `date +%Y-%m-%d-%H-%M` }}.md
 
-# Building and Deployment
+# Building
 build *flags:
     rm -rf build/public
     mkdir -p build/public
     hugo --destination build/public {{flags}}
     just _post-process build/public
 
+# Push the new site to Github
 publish: build
     touch build/public/.nojekyll
     rm -rf build/temp
@@ -45,24 +46,28 @@ publish: build
     mv build/temp/.git build/public/.git
     cd build/public && git add . && git commit -m "deployment" && git push || true
 
-# Debugging process
+# Build a debug version (with drafts and environment set to 'development')
 build-debug: (build "--buildDrafts" "--environment" "development")
 
+# Watch the directory for change and rebuild
 watch-debug:
     inotifywait --recursive --monitor --event close_write,move,create,delete --exclude "(/\.|/build)" . | while read changed; do echo $changed; just build-debug; done
 
+# Run a caddy server, with filewatching, and auto-reload. (Port=12000)
 serve-debug: build-debug
     just watch-debug &
     caddy file-server --root build/public --listen 127.0.0.1:12000
 
+# Deploy the debug version of the site to a folder
 deploy-debug destination: build-debug
     rm -rf "{{ destination }}/*"
     cp -r build/public/* "{{ destination }}/"
 
 # Internal commands
+
 _post-process sitedir:
     just _post-process-css "{{ sitedir }}" & just _post-process-html "{{ sitedir }}" && wait
-    echo "{ \"last_modified\": \"$(date --rfc-3339=seconds --utc)\" }" > {{ sitedir }}/_last_modified.json
+    echo "$(date --rfc-3339=seconds --utc)" > {{ sitedir }}/_last_modified.txt
 
 _post-process-css sitedir:
     fd "style.css" {{ sitedir }} --exec python tool_scripts/make_theme.py "$(rg 'theme_color = "(.*)+"' -r '$1' config.toml)" --output
