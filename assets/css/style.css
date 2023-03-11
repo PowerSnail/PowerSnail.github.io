@@ -157,6 +157,8 @@ code {
   background-color: var(--background_alt);
   border: 1px solid var(--accent);
   width: fit-content;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 pre code {
