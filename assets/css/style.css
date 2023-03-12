@@ -360,5 +360,10 @@ dt::first-letter {
   border-radius: 5px;
   padding: 0.2em 0.4em;
   text-decoration: none;
+}
 
+.tag-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5em;
 }
