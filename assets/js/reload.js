@@ -6,7 +6,7 @@ function mainLoop() {
       lastModified = newTime;
     } else if (newTime !== lastModified) {
       clearInterval(interval);
-      window.location.reload();
+      setTimeout(() => window.location.reload(), 500);
     }
   }
 
