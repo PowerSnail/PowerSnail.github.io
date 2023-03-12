@@ -33,15 +33,13 @@
       {{ end }}
     </div>
   
-  <div>
-    {{ with .Params.tags }}
-    <div>
-      {{ $links := apply . "partial" "tag_link.html" "." }}
-      {{ $clean := apply $links "chomp" "." }}
-      {{ delimit $clean " " }}
-    </div>
-    {{ end }}
+  {{ with .Params.tags }}
+  <div class="tag-list">
+    {{ $links := apply . "partial" "tag_link.html" "." }}
+    {{ $clean := apply $links "chomp" "." }}
+    {{ delimit $clean " " }}
   </div>
+  {{ end }}
   </footer>
 </article>
 
