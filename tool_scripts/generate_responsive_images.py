@@ -61,7 +61,8 @@ def generate_image(path) -> list[int]:
         fname = path.stem + f"-{width}w" + path.suffix
         cached_path = CACHE_DIR / hash_value / fname
         if not cached_path.exists():
-            img.resize((width, width)).save(cached_path)
+            height = int(img.height * width / img.width)
+            img.resize((width, height)).save(cached_path)
         target_path = path.with_name(fname)
         shutil.copyfile(cached_path, target_path)
         output_sizes.append(width)
