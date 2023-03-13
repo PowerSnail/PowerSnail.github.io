@@ -353,11 +353,6 @@ dt::first-letter {
 }
 
 .footer-meta {
-  display: grid;
-  text-decoration: none;
-  grid-template-columns: auto 1fr;
-  gap: 0.5em;
-  align-items: center;
   color: var(--text_alt);
 }
 
