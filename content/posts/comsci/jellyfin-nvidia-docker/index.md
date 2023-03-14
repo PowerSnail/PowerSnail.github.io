@@ -18,7 +18,7 @@ references: |
   <div class="csl-entry">NVIDIA Corporation. (2023a, March 8). <i>Installation Guide—NVIDIA Cloud Native Technologies&nbsp; documentation</i>. <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html</a></div>
   <div class="csl-entry">NVIDIA Corporation. (2023b, March 8). <i>User Guide—NVIDIA Cloud Native Technologies documentation</i>. <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html</a></div>
   <div class="csl-entry">openSUSE contributors &amp; others. (2020, July 22). <i>SDB:NVIDIA drivers—OpenSUSE Wiki</i>. <a href="https://en.opensuse.org/SDB:NVIDIA_drivers">https://en.opensuse.org/SDB:NVIDIA_drivers</a></div>
-draft: true
+draft: false
 ---
 
 ## What is it all about?
