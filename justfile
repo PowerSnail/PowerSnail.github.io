@@ -41,7 +41,8 @@ build *flags:
 # Push the new site to Github
 publish: build
     touch build/public/.nojekyll
-    git clone --depth 1 --branch gh-pages --single-branch --no-checkout git@github.com:PowerSnail/PowerSnail.github.io.git build/public
+    git clone --depth 1 --branch gh-pages --single-branch --no-checkout git@github.com:PowerSnail/PowerSnail.github.io.git build/temp/
+    mv build/temp/.git build/public/
     cd build/public && git add . && git commit -m "deployment" && git push || true
 
 # Build a debug version (with drafts and environment set to 'development')
