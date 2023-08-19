@@ -1,4 +1,0 @@
-{{ $tex_config := resources.Get "js/tex-config.js" }}
-{{ $tex_svg := resources.Get "js/tex-svg.js" }}
-{{ $math_js := slice $tex_config $tex_svg | resources.Concat "js/bundle.js" | js.Build (dict "minify" true) | fingerprint }}
-<script type="text/javascript" id="MathJax-script" src="{{ $math_js.RelPermalink }}" defer></script>

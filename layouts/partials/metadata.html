@@ -1,9 +1,0 @@
-{{- $isoFormat := "2006-01-02T15:04:05Z" -}}
-{{- $humanFormat := "02 Jan 2006" -}}
-<div class="metadata">
-    <time datetime="{{ .Params.date.Format $isoFormat }}">{{ .Params.date.Format $humanFormat }}</time>
-    ·
-    {{ .WordCount }} words
-    ·
-    {{ .ReadingTime }} minutes read
-</div>
