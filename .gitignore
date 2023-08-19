@@ -7,3 +7,7 @@ resources/_gen
 .mscbackup/
 .venv/
 build/
+
+# Added by cargo
+
+/target

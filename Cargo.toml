@@ -1,0 +1,20 @@
+[package]
+name = "powersnail-dot-com"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.75"
+axum = { version = "0.6.20", features = ["macros"] }
+chrono = "0.4.26"
+comrak = "0.18.0"
+dateparser = "0.2.0"
+futures = "0.3.28"
+maud = { version = "0.25.0", features = ["axum"] }
+serde = { version = "1.0.183", features = ["serde_derive"] }
+serde_json = "1.0.105"
+tokio = { version = "1.32.0", features = ["full"] }
+tower-http = { version = "0.4.3", features = ["fs"] }
+walkdir = "2.3.3"
