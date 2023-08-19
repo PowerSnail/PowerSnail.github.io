@@ -5,6 +5,7 @@ tags:
   - notes
 date: "2016-11-08"
 slug: "optimization"
+description: ""
 ---
 
 An example: **Transpose**

@@ -5,6 +5,7 @@ tags:
     - study
 date: "2019-09-17"
 slug: "price-and-prejudice-reading-notes"
+description: ""
 ---
 
 ## Summary of _Pride and Prejudice_
