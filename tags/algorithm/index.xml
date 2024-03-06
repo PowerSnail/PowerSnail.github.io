@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>algorithm on SnailShell</title>
+  <title>Algorithm on SnailShell</title>
   <link>https://powersnail.com/tags/algorithm/</link><link rel="self" href="https://powersnail.com/tags/algorithm/index.xml"></link><updated>Fri, 06 Jan 2017 00:00:00 +0000</updated>
   <id>https://powersnail.com/tags/algorithm/</id>
 
@@ -11,7 +11,7 @@
 
   <icon>https://powersnail.com/favicon.ico</icon>
 
-  <description>Recent content in algorithm on SnailShell</description>
+  <description>Recent content in Algorithm on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
   

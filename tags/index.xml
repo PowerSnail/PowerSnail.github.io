@@ -2,7 +2,7 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tags on SnailShell</title>
-  <link>https://powersnail.com/tags/</link><link rel="self" href="https://powersnail.com/tags/index.xml"></link><updated>Sun, 12 Mar 2023 00:00:00 +0000</updated>
+  <link>https://powersnail.com/tags/</link><link rel="self" href="https://powersnail.com/tags/index.xml"></link><updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
   <id>https://powersnail.com/tags/</id>
 
   <author>
@@ -14,6 +14,111 @@
   <description>Recent content in Tags on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Editor</title>
+    <link rel="alternate">https://powersnail.com/tags/editor/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/editor/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Image</title>
+    <link rel="alternate">https://powersnail.com/tags/image/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/image/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Lua</title>
+    <link rel="alternate">https://powersnail.com/tags/lua/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/lua/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Neovim</title>
+    <link rel="alternate">https://powersnail.com/tags/neovim/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/neovim/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Pdf</title>
+    <link rel="alternate">https://powersnail.com/tags/pdf/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/pdf/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">System</title>
+    <link rel="alternate">https://powersnail.com/tags/system/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/system/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Text Editing</title>
+    <link rel="alternate">https://powersnail.com/tags/text-editing/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/text-editing/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
   
   <entry>
     <author>
@@ -79,7 +184,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">openSUSE</title>
+    <title type="html">OpenSUSE</title>
     <link rel="alternate">https://powersnail.com/tags/opensuse/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 12 Mar 2023 00:00:00 +0000</updated>
@@ -94,7 +199,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">system administration</title>
+    <title type="html">System Administration</title>
     <link rel="alternate">https://powersnail.com/tags/system-administration/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 12 Mar 2023 00:00:00 +0000</updated>
@@ -109,7 +214,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">technology</title>
+    <title type="html">Technology</title>
     <link rel="alternate">https://powersnail.com/tags/technology/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 12 Mar 2023 00:00:00 +0000</updated>
@@ -124,7 +229,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">audio</title>
+    <title type="html">Audio</title>
     <link rel="alternate">https://powersnail.com/tags/audio/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 19 Feb 2023 00:00:00 +0000</updated>
@@ -139,7 +244,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">computer</title>
+    <title type="html">Computer</title>
     <link rel="alternate">https://powersnail.com/tags/computer/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 19 Feb 2023 00:00:00 +0000</updated>
@@ -154,7 +259,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">youtube music</title>
+    <title type="html">Youtube Music</title>
     <link rel="alternate">https://powersnail.com/tags/youtube-music/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 19 Feb 2023 00:00:00 +0000</updated>
@@ -169,7 +274,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">yt-dlp</title>
+    <title type="html">Yt-Dlp</title>
     <link rel="alternate">https://powersnail.com/tags/yt-dlp/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 19 Feb 2023 00:00:00 +0000</updated>
@@ -184,7 +289,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">computer science</title>
+    <title type="html">Computer Science</title>
     <link rel="alternate">https://powersnail.com/tags/computer-science/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Wed, 08 Feb 2023 00:00:00 +0000</updated>
@@ -274,7 +379,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">html</title>
+    <title type="html">Html</title>
     <link rel="alternate">https://powersnail.com/tags/html/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sat, 10 Dec 2022 09:41:12 +0000</updated>
@@ -304,7 +409,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">bowing</title>
+    <title type="html">Bowing</title>
     <link rel="alternate">https://powersnail.com/tags/bowing/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Tue, 22 Nov 2022 00:00:00 +0000</updated>
@@ -319,7 +424,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">music</title>
+    <title type="html">Music</title>
     <link rel="alternate">https://powersnail.com/tags/music/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Tue, 22 Nov 2022 00:00:00 +0000</updated>
@@ -334,7 +439,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">violin</title>
+    <title type="html">Violin</title>
     <link rel="alternate">https://powersnail.com/tags/violin/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Tue, 22 Nov 2022 00:00:00 +0000</updated>
@@ -349,7 +454,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">machine learning</title>
+    <title type="html">Machine Learning</title>
     <link rel="alternate">https://powersnail.com/tags/machine-learning/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Thu, 10 Nov 2022 00:00:00 +0000</updated>
@@ -364,7 +469,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">frontend</title>
+    <title type="html">Frontend</title>
     <link rel="alternate">https://powersnail.com/tags/frontend/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Fri, 29 Jul 2022 00:00:00 +0000</updated>
@@ -379,7 +484,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">fingering</title>
+    <title type="html">Fingering</title>
     <link rel="alternate">https://powersnail.com/tags/fingering/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Fri, 22 Jul 2022 00:00:00 +0000</updated>
@@ -394,7 +499,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">reading</title>
+    <title type="html">Reading</title>
     <link rel="alternate">https://powersnail.com/tags/reading/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 17 Jul 2022 00:00:00 +0000</updated>
@@ -409,7 +514,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">blog</title>
+    <title type="html">Blog</title>
     <link rel="alternate">https://powersnail.com/tags/blog/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Wed, 06 Jul 2022 00:00:00 +0000</updated>
@@ -424,7 +529,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">markdown</title>
+    <title type="html">Markdown</title>
     <link rel="alternate">https://powersnail.com/tags/markdown/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Wed, 06 Jul 2022 00:00:00 +0000</updated>
@@ -454,7 +559,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">recipe</title>
+    <title type="html">Recipe</title>
     <link rel="alternate">https://powersnail.com/tags/recipe/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Wed, 02 Feb 2022 00:00:00 +0000</updated>
@@ -484,7 +589,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">hugo</title>
+    <title type="html">Hugo</title>
     <link rel="alternate">https://powersnail.com/tags/hugo/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Wed, 12 Jan 2022 00:00:00 +0000</updated>
@@ -499,7 +604,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">dessert</title>
+    <title type="html">Dessert</title>
     <link rel="alternate">https://powersnail.com/tags/dessert/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 09 Jan 2022 00:00:00 +0000</updated>
@@ -514,7 +619,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">chicken</title>
+    <title type="html">Chicken</title>
     <link rel="alternate">https://powersnail.com/tags/chicken/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Wed, 05 Jan 2022 00:00:00 +0000</updated>
@@ -529,7 +634,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">notes</title>
+    <title type="html">Notes</title>
     <link rel="alternate">https://powersnail.com/tags/notes/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Wed, 24 Feb 2021 00:00:00 +0000</updated>
@@ -544,7 +649,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">study</title>
+    <title type="html">Study</title>
     <link rel="alternate">https://powersnail.com/tags/study/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Wed, 24 Feb 2021 00:00:00 +0000</updated>
@@ -574,7 +679,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">algorithm</title>
+    <title type="html">Algorithm</title>
     <link rel="alternate">https://powersnail.com/tags/algorithm/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Fri, 06 Jan 2017 00:00:00 +0000</updated>
@@ -604,7 +709,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">codefights</title>
+    <title type="html">Codefights</title>
     <link rel="alternate">https://powersnail.com/tags/codefights/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Fri, 06 Jan 2017 00:00:00 +0000</updated>
@@ -619,7 +724,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">leetcode</title>
+    <title type="html">Leetcode</title>
     <link rel="alternate">https://powersnail.com/tags/leetcode/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Sun, 27 Nov 2016 00:00:00 +0000</updated>
@@ -634,7 +739,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">csapp</title>
+    <title type="html">Csapp</title>
     <link rel="alternate">https://powersnail.com/tags/csapp/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Tue, 15 Nov 2016 00:00:00 +0000</updated>
@@ -649,7 +754,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">reading notes</title>
+    <title type="html">Reading Notes</title>
     <link rel="alternate">https://powersnail.com/tags/reading-notes/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Tue, 15 Nov 2016 00:00:00 +0000</updated>
@@ -664,7 +769,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">com arc</title>
+    <title type="html">Com Arc</title>
     <link rel="alternate">https://powersnail.com/tags/com-arc/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Tue, 08 Nov 2016 00:00:00 +0000</updated>
@@ -679,7 +784,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">graphics</title>
+    <title type="html">Graphics</title>
     <link rel="alternate">https://powersnail.com/tags/graphics/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Tue, 08 Nov 2016 00:00:00 +0000</updated>
@@ -739,7 +844,7 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">parsing</title>
+    <title type="html">Parsing</title>
     <link rel="alternate">https://powersnail.com/tags/parsing/</link>
     <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
     <updated>Fri, 26 Feb 2016 00:00:00 +0000</updated>

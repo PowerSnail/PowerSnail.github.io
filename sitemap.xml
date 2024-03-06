@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://powersnail.com/tags/editor/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/2024/open-binary-files-external/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/image/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/lua/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/neovim/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/pdf/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/posts/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/system/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://powersnail.com/tags/text-editing/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://powersnail.com/tags/docker/</loc>
     <lastmod>2023-03-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -9,9 +42,6 @@
     <lastmod>2023-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/2023/jellyfin-nvidia-docker/</loc>
-    <lastmod>2023-03-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://powersnail.com/</loc>
     <lastmod>2023-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/tags/jellyfin/</loc>
@@ -23,13 +53,7 @@
     <loc>https://powersnail.com/tags/opensuse/</loc>
     <lastmod>2023-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://powersnail.com/posts/</loc>
-    <lastmod>2023-03-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://powersnail.com/tags/system-administration/</loc>
-    <lastmod>2023-03-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://powersnail.com/tags/</loc>
     <lastmod>2023-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://powersnail.com/tags/technology/</loc>

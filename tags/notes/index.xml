@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>notes on SnailShell</title>
+  <title>Notes on SnailShell</title>
   <link>https://powersnail.com/tags/notes/</link><link rel="self" href="https://powersnail.com/tags/notes/index.xml"></link><updated>Wed, 24 Feb 2021 00:00:00 +0000</updated>
   <id>https://powersnail.com/tags/notes/</id>
 
@@ -11,7 +11,7 @@
 
   <icon>https://powersnail.com/favicon.ico</icon>
 
-  <description>Recent content in notes on SnailShell</description>
+  <description>Recent content in Notes on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
   
