@@ -29,7 +29,7 @@
         {{ end }}
         {{ $links := apply . "partial" "tag_link.html" "." }}
         {{ $clean := apply $links "chomp" "." }}
-        {{ delimit $clean ", " }}
+        {{ delimit $clean ", " |safeHTML }}
       </p>
       {{ end }}
 
