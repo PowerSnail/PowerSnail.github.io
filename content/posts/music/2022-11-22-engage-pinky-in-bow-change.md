@@ -11,14 +11,7 @@ commentid: 109390122026357521
 draft: false
 ---
 
-<figure>
-
-![A picture of violinist Nathan Cole playing during his master class, in green T-shirt.](/images/nathan-cole.webp)
-<figcaption>
-
-Nathan Cole talking about shifting the balance to the pinky during one of his master classes.[^nathan]
-</figcaption>
-</figure>
+![A picture of violinist Nathan Cole playing during his master class, in green T-shirt.](/images/nathan-cole.webp "Nathan Cole talking about shifting the balance to the pinky during one of his master classes.[^nathan]")
 
 During one of his masterclasses, [Nathan Cole](https://www.natesviolin.com/) was helping a student with landing the a soft note after a series of _spiccato_. She couldn't get that note _piano_ enough, because the bow coming down from the air carried its own momentum that was out of her control. Nathan offered two major insights: first, don't think of it as "landing", but instead, a rolling motion that morphs into coasting rather than sticking a landing; and second, engage the pinky to lighten weight of the bow, so the bow keeps its angle constant. What she had been doing up to that point, was raising her arm to lighten the note, which lifted the frog of the bow, causing the bow to rotate slightly, the tip to drop, and then the bow would slap the string harder than she wanted as it engaged the string at a more direct angle. When she engaged the pinky and started to think about the control of the tip, the problem went away instantly.
 

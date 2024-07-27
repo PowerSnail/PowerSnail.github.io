@@ -134,34 +134,14 @@ It's important to know which codec to enable, because Jellyfin blindly trusts th
 
 Here's the CPU usage---specifically the usage of core 13, 14, and 15---when playing a H.265 video, **without** hardware acceleration:
 
-<figure>
 
-![An image showing that the usages of the three cores are above 80% during transcoding](./cpu-usage-no-gpu.webp) 
-<figcaption>
-
-CPU usage without hardware acceleration
-</figcaption>
-</figure>
+![An image showing that the usages of the three cores are above 80% during transcoding](./cpu-usage-no-gpu.webp "CPU usage without hardware acceleration")
 
 After enabling hardware acceleration, when playing the same video, the core usages drop to below 40%, and you can see from the `nvtop` (a tool which displays GPU usage), that a FFmpeg process is utilizing the GPU. Now, obviously this data is just a snapshot and is noisy, given all the other processes running on the machine. Although I don't have a clean, isolated, long-lasting series of data showing the history of CPU usage, it is my observation that the drop is both significant and consistent through time. For one, it no longer causes FPS to fluctuate, when a video starts to play while I'm in the middle of a game.
 
-<figure>
+![An image showing that the three cores are utilized below 40%](./cpu-usage-with-gpu.webp "CPU usage with hardware acceleration")
 
-![An image showing that the three cores are utilized below 40%](./cpu-usage-with-gpu.webp) 
-<figcaption>
-
-CPU usage with hardware acceleration
-</figcaption>
-</figure>
-
-<figure>
-
-![An image showing GPU usage during transcoding, highlighted is a process of FFmpeg utilizing](./gpu-usage.webp)
-<figcaption>
-
-GPU usage during transcoding
-</figcaption>
-</figure>
+![An image showing GPU usage during transcoding, highlighted is a process of FFmpeg utilizing](./gpu-usage.webp "GPU usage during transcoding")
 
 And of course, hardware acceleration isn't just making the GPU busier and the CPU idler; another benefit is that, titularly, the video is transcoded faster. This isn't noticeable in the middle of playing a video, because Jellyfin would, like any competent streaming software, transcode the next chunk when you are still watching the previous one. 
 

@@ -1,10 +1,14 @@
-<section class="post-item">
-<a 
-    class="post-item-title"
-    href="{{ .RelPermalink }}">
-    {{ .Title | .RenderString }}
-    {{ partial "draft.html" .}}
-</a>
-{{ partial "metadata.html" . }}
-<p class="post-item-summary">{{ if .Description }}{{ .Description | .RenderString }}{{else}}{{ .Summary | .RenderString }}{{ end }}</p>
-</section>
+{{- $isoFormat := "2006-01-02T15:04:05Z" -}} {{- $humanFormat := "02 Jan 2006"
+-}}
+<div class="post-item">
+  <time class="post-item-time" datetime="{{ .Params.date.Format $isoFormat }}"
+    >{{ .Params.date.Format $humanFormat }}</time
+  >
+  <a class="post-item-title" href="{{ .RelPermalink }}">
+    {{ .Title | .RenderString }} {{ partial "draft.html" .}}
+  </a>
+  <div class="post-item-summary">
+    {{ if .Description }}{{ .Description | .RenderString }}{{else}}{{ .Summary |
+    .RenderString }}{{ end }}
+  </div>
+</div>

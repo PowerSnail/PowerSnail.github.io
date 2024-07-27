@@ -66,7 +66,7 @@ deploy-debug destination: build-debug
 
 _post-process sitedir:
     just _post-process-css "{{ sitedir }}" & just _post-process-html "{{ sitedir }}" && wait
-    echo "$(date --rfc-3339=seconds --utc)" > {{ sitedir }}/_last_modified.txt
+    # echo "$(date --rfc-3339=seconds --utc)" > {{ sitedir }}/_last_modified.txt
 
 _post-process-css sitedir:
     fd "style.css" {{ sitedir }} --exec python tool_scripts/make_theme.py "$(rg 'theme_color = "(.*)+"' -r '$1' config.toml)" --output

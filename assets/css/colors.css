@@ -1,0 +1,23 @@
+:root {
+  --primary: #3040ae;
+  --secondary: #e7073f;
+
+  --accent: oklch(from var(--secondary) 0.5 c h);
+  --border: oklch(from var(--primary) 0.5 c h);
+  --translucent: oklch(from var(--accent) l c h / 10%);
+  --text: oklch(from var(--secondary) 1% calc(c / 8) h);
+  --background: oklch(from var(--primary) 99% calc(c / 10) h);
+  --text-alt: oklch(from var(--secondary) 40% calc(c / 20) h);
+  --background-alt: oklch(from var(--primary) 95% calc(c / 10) h);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: oklch(from var(--secondary) 0.7 c h);
+    --border: oklch(from var(--primary) 0.7 c h);
+    --translucent: oklch(from var(--accent) l c h / 20%);
+    --text: oklch(from var(--secondary) 99% calc(c / 10) h);
+    --background: oklch(from var(--primary) 20% calc(c / 10) h);
+    --text-alt: oklch(from var(--secondary) 85% calc(c / 20) h);
+    --background-alt: oklch(from var(--primary) 10% calc(c / 10) h);
+  }
+}

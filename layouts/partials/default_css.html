@@ -1,5 +1,6 @@
+{{- $cssColors := resources.Get "css/colors.css" -}}
 {{- $cssMain := resources.Get "css/style.css" -}}
 {{- $cssCode := resources.Get "css/code_scheme.css" -}}
 {{- $cssFont := resources.Get "css/font.css" -}}
-{{- $css := slice $cssCode $cssFont $cssMain | resources.Concat "css/style.css" -}}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- $css := slice $cssColors $cssCode $cssFont $cssMain | resources.Concat "css/style.css" -}}
+<link id="main-css" rel="stylesheet" href="{{ $css.RelPermalink }}">

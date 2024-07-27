@@ -9,24 +9,21 @@
 {{- $current := dict .RelPermalink " current" -}}
 
 <header>
-  <div class="site-title bg-cover">
-    <a 
-      href="/" 
-      class="nav-link {{- index $current "/" -}}"
-    >{{ .Site.Title }}</a>
-  </div>
-  <nav>
-    <a 
-      href="/posts/"
-      class="nav-link {{- index $current "/posts/" -}}"
-    >Posts</a>
-    <a 
-      href="/status/"
-      class="nav-link {{- index $current "/status/" -}}"
-    >Status</a>
-    <a 
-      href="/about/"
-      class="nav-link {{- index $current "/about/" -}}"
-    >About</a>
-  </nav>
+  <article>
+    <nav class="site-nav">
+      <a 
+          href="/" 
+          class="site-title nav-link {{- index $current "/" -}}"
+        >{{ .Site.Title }}
+      </a>
+      <a 
+        href="/posts/"
+        class="nav-link {{- index $current "/posts/" -}}"
+      >Posts</a>
+      <a 
+        href="/about/"
+        class="nav-link {{- index $current "/about/" -}}"
+      >About</a>
+    </nav>
+  </article>
 </header>

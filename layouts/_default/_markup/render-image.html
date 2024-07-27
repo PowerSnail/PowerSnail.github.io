@@ -1,1 +1,10 @@
-{{ partial "image.html" (dict "src" .Destination "alt" .Text "page" .Page)}}
+{{- if .IsBlock -}}
+  <figure>
+    {{ partial "image.html" (dict "src" .Destination "alt" .Text "page" .Page)}}
+    <figcaption>{{ .Title | .Page.RenderString }}</figcaption>
+  </figure>
+{{- else -}}
+    {{ partial "image.html" (dict "src" .Destination "alt" .Text "page" .Page)}}
+{{- end -}}
+
+
