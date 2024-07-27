@@ -1,6 +1,6 @@
 <footer>
   <article>
-    <div class="column-center social-list">
+    <nav class="column-center social-list">
       <a href="/index.xml" class="social nav-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,6 @@
         </svg>
         RSS
       </a>
-      /
       <a href="https://github.com/PowerSnail/" class="social nav-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +43,6 @@
         </svg>
         Github
       </a>
-      /
       <a href="mailto:hj@powersnail.com" class="social nav-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +63,6 @@
         </svg>
         hj@powersnail.com
       </a>
-      /
       <a rel="me" href="https://c.im/@powersnail" class="social nav-link">
         <svg
           class="icon"
@@ -83,7 +80,7 @@
         </svg>
         @powersnail@c.im
       </a>
-    </div>
+    </nav>
     {{- $date := or (or .Lastmod .Date) now -}}
     <div>© PowerSnail {{ $date.Format "2006" }}</div>
   </article>

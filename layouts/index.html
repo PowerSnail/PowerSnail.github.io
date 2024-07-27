@@ -1,19 +1,6 @@
 {{ define "main" }}
 <article>
     {{ .Content }}
-    <h2>Recent status</h2>
-    <div class="status-container">
-        {{ range first 2 (where .Site.RegularPages "Section" "status") }}
-        <div class="status-card">
-            <div class="metadata">
-                {{ with .Params.date }}
-                <strong>{{ .Format "15:04" }}</strong> {{ .Format "2006-01-02" }} 
-                {{ end }}
-            </div>
-            {{ .Content }}
-        </div>
-        {{ end }}
-    </div>
     <h2>Recent posts</h2>
     <div class="post-list">
         {{ range first 5 (where .Site.RegularPages "Section" "posts") }}

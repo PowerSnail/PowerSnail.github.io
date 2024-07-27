@@ -8,9 +8,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#af3000">
-<meta name="msapplication-TileColor" content="#000000">
 <meta name="theme-color" content="{{ .Site.Params.theme_color }}">
 
 <title>{{ if ne .Title .Site.Title }}{{ .Title | markdownify | plainify | safeHTML }} · {{ end }}{{ .Site.Title }}</title>
@@ -42,10 +39,15 @@
   {{ $css := resources.Get "css/christmas.scss" | resources.ToCSS $tocss_options }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 {{ end}}
-{{ partial "default_css.html" }}
+{{ if eq .Type "blank" }}
+  {{ $css := resources.Get "css/basic.css" }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{ else }}
+  {{ partial "default_css.html" }}
+{{ end }}
 
-<!-- {{ if not hugo.IsProduction }} -->
-<!--   {{ with resources.Get "js/reload.js"}} -->
-<!--     <script src="{{ .RelPermalink }}">  </script> -->
-<!--   {{ end }} -->
-<!-- {{ end }} -->
+{{ if not hugo.IsProduction }}
+  {{ with resources.Get "js/reload.js"}}
+    <script src="{{ .RelPermalink }}">  </script>
+  {{ end }}
+{{ end }}

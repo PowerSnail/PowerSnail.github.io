@@ -6,6 +6,12 @@
 }
 
 /* Layout and Typography */
+html {
+  width: 100vw;
+  height: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 body {
   font-family: "Crimson Text", "Noto Sans SC", serif;
   font-size: 1.2rem;
@@ -17,12 +23,12 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
-  min-height: 100vh;
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
 
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr 8px min(68ch, 100vw - 16px) 8px 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: auto 8px minmax(0px, 68ch) 8px auto;
   overflow-wrap: anywhere;
   row-gap: 16px;
 
@@ -47,7 +53,6 @@ body > header, body > main, body > footer {
 }
 
 article {
-  margin: auto;
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
@@ -145,6 +150,26 @@ figcaption {
   font-size: 1rem;
 }
 
+dt {
+  margin-top: 0.5em;
+}
+
+dd {
+  padding-left: 16px;
+}
+
+dd::before {
+  content: " ¦ ";
+  color: var(--text-alt);
+}
+
+blockquote {
+  margin: 0 16px;
+}
+
+code {
+  text-wrap: wrap;
+}
 
 /* Specific tweaks for non-standard elements */
 body > header, body > footer, nav-link {
@@ -195,8 +220,27 @@ body > header, body > footer, nav-link {
 
 /* icon in the footer */
 .icon {
+  color: var(--accent);
   height: 1cap;
   width: 1cap;
+}
+
+.social-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 68ch) {
+  .social-list {
+    grid-template-columns: 1fr auto 1fr;
+    justify-items: start;
+  }
+
+  .social-list > * {
+    grid-column: 2;
+  }
 }
 
 /* Foot notes */
@@ -248,4 +292,3 @@ h1, #title-subtitle {
 footer > article {
   justify-items: center;
 }
-

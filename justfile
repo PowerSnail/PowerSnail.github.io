@@ -50,12 +50,12 @@ build-debug: (build "--buildDrafts" "--environment" "development")
 
 # Watch the directory for change and rebuild
 watch-debug:
-    inotifywait --recursive --monitor --event close_write,move,create,delete --exclude "(/\.|/build)" . | while read changed; do echo $changed; just build-debug; done
+    python tool_scripts/watch.py | while read changed; do echo "Changed $changed"; just build-debug; done
 
 # Run a caddy server, with filewatching, and auto-reload. (Port=12000)
 serve-debug: build-debug
     just watch-debug &
-    caddy file-server --root build/public --listen 127.0.0.1:12000
+    caddy file-server --root build/public --listen 0.0.0.0:12000
 
 # Deploy the debug version of the site to a folder
 deploy-debug destination: build-debug
@@ -66,7 +66,7 @@ deploy-debug destination: build-debug
 
 _post-process sitedir:
     just _post-process-css "{{ sitedir }}" & just _post-process-html "{{ sitedir }}" && wait
-    # echo "$(date --rfc-3339=seconds --utc)" > {{ sitedir }}/_last_modified.txt
+    echo "$(date --rfc-3339=seconds --utc)" > {{ sitedir }}/_last_modified.txt
 
 _post-process-css sitedir:
     fd "style.css" {{ sitedir }} --exec python tool_scripts/make_theme.py "$(rg 'theme_color = "(.*)+"' -r '$1' config.toml)" --output
