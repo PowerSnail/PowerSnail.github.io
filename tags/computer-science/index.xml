@@ -220,90 +220,73 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;h2 id=&#34;literatures-quotes-and-illustrations&#34;&gt;Literatures, Quotes, and Illustrations&lt;/h2&gt;
 &lt;p&gt;It gives you the quote right back:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img
+    &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1.webp&#34; alt=&#34;Generated image from Oscar Wilde&amp;amp;rsquo;s quote&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1-400w.webp 400w,/2022/stable-diffusion-fun/quote-1-600w.webp 600w,/2022/stable-diffusion-fun/quote-1-800w.webp 800w,/2022/stable-diffusion-fun/quote-1-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-1-1200w.webp 1200w,/2022/stable-diffusion-fun/quote-1.webp 2560w&#34;
      width=&#34;2560&#34;  height=&#34;512&#34; &gt;
 
-&lt;/p&gt;
-&lt;figcaption&gt;
-&lt;p&gt;Questions are never indiscreet; answers sometimes are.&lt;br&gt;
-&amp;ndash;Oscar Wilde&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;Questions are never indiscreet; answers sometimes are.&lt;/p&gt;
+&lt;p&gt;&amp;ndash;Oscar Wilde&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;&amp;hellip;&amp;hellip;Not quite verbatim, but close enough. Similar to how &amp;ldquo;4k&amp;rdquo; nudges the model towards higher quality, if you sound like Brainy Quotes, it will paint like Brainy Quotes for you.&lt;/p&gt;
 &lt;p&gt;Sometimes, it will go a different route, and illustrate like a book of classics:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img
+    &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2.webp&#34; alt=&#34;Generated image from Oscar Wilde Quote&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2-400w.webp 400w,/2022/stable-diffusion-fun/quote-2-600w.webp 600w,/2022/stable-diffusion-fun/quote-2-800w.webp 800w,/2022/stable-diffusion-fun/quote-2-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-2.webp 1024w&#34;
      width=&#34;1024&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;figcaption&gt;
-&lt;p&gt;If the lower classes don&amp;rsquo;t set us a good example what on earth is the use of them? They seem, as a class, to have absolutely no sense of moral responsibility.&lt;br&gt;
-&amp;ndash;Oscar Wilde&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;If the lower classes don&amp;rsquo;t set us a good example what on earth is the use of them? They seem, as a class, to have absolutely no sense of moral responsibility.&lt;/p&gt;
+&lt;p&gt;&amp;ndash;Oscar Wilde&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Now, this is just a silly experimentation. The model is trained on descriptions of images. It&amp;rsquo;s not surprising that it wouldn&amp;rsquo;t do well on metaphysical epigrams depicting no concrete objects. In fact, if you give me drawing prompt &amp;ldquo;Questions are never indiscreet; answers sometimes are&amp;rdquo;, I&amp;rsquo;d probably ask you clarify just what the hell you want me to draw.&lt;/p&gt;
 &lt;h2 id=&#34;where-is-the-cicada&#34;&gt;Where is the cicada?&lt;/h2&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img
+    &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-400w.webp 400w,/2022/stable-diffusion-fun/cicada-600w.webp 600w,/2022/stable-diffusion-fun/cicada-800w.webp 800w,/2022/stable-diffusion-fun/cicada-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada.webp 2560w&#34;
      width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;figcaption&gt;
-&lt;p&gt;Waxwings are berry-pecking / a cicada sings.&lt;br&gt;
-&amp;ndash;Nabokov, &lt;em&gt;Pale Fire&lt;/em&gt;&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings.&lt;/p&gt;
+&lt;p&gt;&amp;ndash;Nabokov, &lt;em&gt;Pale Fire&lt;/em&gt;&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Another limitation I found is that Stable Diffusion sometimes ignores parts of the prompt. This is quite interesting because it obviously is capable of juxtaposing unrelated elements together, as demonstrated by the famous example of an astronaut riding a horse, in its &lt;a href=&#34;https://github.com/CompVis/stable-diffusion&#34;&gt;repository&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;A beautiful line of poetry, &amp;ldquo;Waxwings are berry-pecking / a cicada sings&amp;rdquo;, is not as abstract as the previous section. It depicts two subjects, a bird and a bug, and yet Stable Diffusion absolutely refuses to recognize the existence of the latter.&lt;/p&gt;
 &lt;p&gt;Could it be the position of the two words in the sentence? Let&amp;rsquo;s try reversing it:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img
+    &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse.webp&#34; alt=&#34;Generated image from reversing a quote taken from Pale Fire&amp;amp;quot;&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse-400w.webp 400w,/2022/stable-diffusion-fun/cicada-reverse-600w.webp 600w,/2022/stable-diffusion-fun/cicada-reverse-800w.webp 800w,/2022/stable-diffusion-fun/cicada-reverse-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-reverse-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-reverse.webp 2560w&#34;
      width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;figcaption&gt;
-&lt;p&gt;A cicada sings / Waxwings are berry-pecking.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;A cicada sings / Waxwings are berry-pecking.&lt;/p&gt;
 &lt;p&gt;Nope. Only the bird itself. Beautifully drawn, but missing its companion.&lt;/p&gt;
 &lt;p&gt;Maybe it&amp;rsquo;s the realistic style which it&amp;rsquo;s going for? Let&amp;rsquo;s try adding some stylistic modifiers to the prompt:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img
+    &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration.webp&#34; alt=&#34;Added illustration to the prompt.&amp;amp;quot;&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration-400w.webp 400w,/2022/stable-diffusion-fun/cicada-illustration-600w.webp 600w,/2022/stable-diffusion-fun/cicada-illustration-800w.webp 800w,/2022/stable-diffusion-fun/cicada-illustration-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-illustration-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-illustration.webp 2560w&#34;
      width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;figcaption&gt; 
-&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Illustration.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Illustration.&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img
+    &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil.webp&#34; alt=&#34;Added oil painting to the prompt.&amp;amp;quot;&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil-400w.webp 400w,/2022/stable-diffusion-fun/cicada-oil-600w.webp 600w,/2022/stable-diffusion-fun/cicada-oil-800w.webp 800w,/2022/stable-diffusion-fun/cicada-oil-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-oil-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-oil.webp 2560w&#34;
      width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;figcaption&gt; 
-&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Oil painting.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Oil painting.&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img
+    &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo.webp&#34; alt=&#34;Added photo to the prompt.&amp;amp;quot;&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo-400w.webp 400w,/2022/stable-diffusion-fun/cicada-photo-600w.webp 600w,/2022/stable-diffusion-fun/cicada-photo-800w.webp 800w,/2022/stable-diffusion-fun/cicada-photo-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-photo-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-photo.webp 2560w&#34;
      width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;figcaption&gt; 
-&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Photo.&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Photo.&lt;/p&gt;
 &lt;p&gt;Still, the cicada is nowhere to be found. And if you look carefully, you&amp;rsquo;ll notice that even &amp;ldquo;berry&amp;rdquo; isn&amp;rsquo;t always there. The model concentrates on &amp;ldquo;waxwings&amp;rdquo;, and that&amp;rsquo;s the only thing it seems to &lt;em&gt;care&lt;/em&gt; about, if you&amp;rsquo;ll excuse the inaccurately personified verb. Perhaps the model has a bias in its training set, some objects being more likely to appear than others, and thus carrying a heavier weight. An image with waxwings, berries, and a cicada is less likely than an image with just a waxwing, even given a prompt that includes all three elements. Is this a fundamental limitation on the model, or is it a deficiency in the training data?&lt;/p&gt;
 &lt;h2 id=&#34;last-word&#34;&gt;Last word&lt;/h2&gt;
 &lt;p&gt;Stable Diffusion, like many other machine learning models dabbling in art, astonishes the programmer part of my brain. It&amp;rsquo;s utterly ridiculous that we can prompt the program to generate coherent images, without hard-coding any rule about what it means for an image to be coherent. We give zero &lt;em&gt;a priori&lt;/em&gt; to the model on what constitutes a photo or an oil painting, or the anatomy of waxwings, or the color of trees and leaves, and yet, it does show a level of understanding of all those concepts. Put aside the thorny question of &amp;ldquo;how do you define &amp;lsquo;understand&amp;rsquo;?&amp;rdquo;, if we merely judge the program by its performance, it is capable of generating images where a human would recognize the objects, styles, lighting conditions, etc. to be the same as what the prompt describes. And again, without codifying such objects or styles by a human.&lt;/p&gt;
@@ -314,15 +297,13 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;p&gt;&amp;ndash;Vonnegut, &lt;em&gt;Player Piano&lt;/em&gt;&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img
+    &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano.webp&#34; alt=&#34;Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli&#34;
         srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano-400w.webp 400w,/2022/stable-diffusion-fun/robot-playing-the-piano.webp 600w&#34;
      width=&#34;600&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;figcaption&gt;
-&lt;p&gt;Generated by Stable Diffusion: A robot playing the piano, 4k, detailed, by Studio Ghibli&lt;/p&gt;
-&lt;/figcaption&gt;&lt;/figure&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;Generated by Stable Diffusion: A robot playing the piano, 4k, detailed, by Studio Ghibli&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -397,13 +378,14 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Appending to fonts to load: DejaVuSans12.pf2
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Found OVMF image at &lt;span class=&#34;s1&#34;&gt;&amp;#39;/usr/share/qemu/ovmf-x86_64-code.bin&amp;#39;&lt;/span&gt;.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Please give GRUB a moment to show up in QEMU...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Voila!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/images/opensuse-grub-preview.webp&#34; alt=&#34;Screenshot of grub2-theme-preview&#34;
         srcset=&#34;https://powersnail.com/images/opensuse-grub-preview-400w.webp 400w,/images/opensuse-grub-preview-600w.webp 600w,/images/opensuse-grub-preview-800w.webp 800w,/images/opensuse-grub-preview-1000w.webp 1000w,/images/opensuse-grub-preview.webp 1200w&#34;
      width=&#34;1200&#34;  height=&#34;675&#34; &gt;
 
-&lt;/p&gt;
-</content>
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;</content>
     <category>posts</category>
   </entry>
   
@@ -454,24 +436,26 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;L: 1/16
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M: 2/4
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C2DE FGAB | c2de fgab | c&amp;#39;2ba gfed | c2BA GFED | C8&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/2022/score-in-url/c_maj.webp&#34; alt=&#34;The rendered score of C Major Scale&#34;
         srcset=&#34;https://powersnail.com/2022/score-in-url/c_maj-400w.webp 400w,/2022/score-in-url/c_maj-600w.webp 600w,/2022/score-in-url/c_maj-800w.webp 800w,/2022/score-in-url/c_maj-1000w.webp 1000w,/2022/score-in-url/c_maj.webp 1200w&#34;
      width=&#34;1200&#34;  height=&#34;230&#34; &gt;
 
-&lt;/p&gt;
-&lt;p&gt;You can visit &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQyBNYWpvciBTY2FsZQpMOiAxLzE2Ck06IDIvNApDMkRFIEZHQUIgfCBjMmRlIGZnYWIgfCBjJzJiYSBnZmVkIHwgYzJCQSBHRkVEIHwgQzg%3D&#34;&gt;this link&lt;/a&gt; to see and hear the C Major scale on &lt;strong&gt;Score In URL&lt;/strong&gt;. Or a number of other examples: &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogUGFydGl0YSBJSUkgLSBQcmVsdWRpbwpDOiBKLlMuIEJhY2gKUTogMS80PTEyMApNOiAzLzQKTDogMS8xNgpLOiBFbWFqCnoyIGUnZCcgZScyYjJnMmIyIHwgKGVmZWQgZTIpQjJHMkIyIHwgRUJGQiBHQkFCIEdCRkIgfApFZWRjIEJlZGMgQkFHRiAgICB8IEVCRkIgR0JBQiBHQkZCICB8IEVlZGMgQmVkYyBCQUdGIHwKRUZHQSBCY2RlIGZnYWYgICAgfCBnYmVmIGdhYmMnIGQnZSdjJ2QnICB8IGUnYmFiIGdiYWIgZ2JmYiB8CmVlJ2QnYycgYmVjJ2UgYmVhZXwgZ2JmYiBnYmFiIGdiZmIgIHwgZWUnZCdjJyBiZWMnZSBiZWFlIHwKZ2VlZWRlZWVmZWRlIHwgZWVnZWZlZ2VhZWZlIHwgZ2VlZWRlZWVmZWRlIHwKZWVnZWZlZ2VhZWZlIHwgZ2VnZSBnZWdlIGdlZ2UgfCBnZWdkIGdlZ2QgZ2VnZCB8CmdlZz1kIGdlZ2QgZ2VnZCB8IGFlYWMgYWVhYyBhZWFjIHwgYWVhQiBhZWFCIGFlYUIgfApnZWdCIGdlZ0IgZ2VnQiB8IGdlZ0EgZ2VnQSBnZWdBIHwgZmVmQSBmZWZBIGZlZkEgfApmZWZHIGZlZkcgZmVmRyB8IGVlZUcgZWVlRyBlZWVHIHwgZWVlRiBlZWVGIGVlZUYgfApkZWRGIGRlZEYgZGVkRiB8IEVGRUYgR0JFRiBHQkVGIHwgR0FHQSBCZUdBIEJlR0EgfA%3D%3D&#34;&gt;First page of Bach&amp;rsquo;s Preludio&lt;/a&gt;, &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQWlyIG9uIEcgU3RyaW5nCkM6IEouUy4gQmFjaCAoYXJyLiBBdWd1c3QgV2lsaGVsbWouKQpROiAiTGVudG8iCk06IDQvNApMOiAxLzE2Cks6IENtYWoKfDogRTE2LSB8IEUyKEFGIERDQixDKSAoIXRyaWxsIUIsNy8yQSwvMikgRyw0IHwgRzgtIEcoRV9CLEEsKSAoRF5DKShHRikgfCAKRjgtIEYoREEsRywpIChDQiwpKEZFKSB8IChFNiBeRkcpIChDMkMvMkQvMkUpIChFRCkoREMpIHwgKEIsQSwpKEEsLzJCLC8yQykgKEMyQixBLCkgRyw4IDp8IAp8OiAoQiw0LUIsQy8yQiwvMkEsLzJCLC8yRywpIChHNiBfQiwyKSB8IChBLDJBMi0gQSkoR0ZFKSB7L0V9RjQtIEYvMihFLzJELzJDLzJCLEEsKSB8IF5HLEEsKEIsMi0gQixDKShEMi0gREUpRjItIEYyRTIgfAooREMpKEIsQSwpIChCLEMvMkQvMkNCLCkgQSw4IHwgKEM0LSBDRURDKSAoQTYgR15GKSB8ICh7L0V9REdHLDIpIChBLDNCLC8yQy8yKSAoQiw3LzJBLC8yKSBHLDQgfCAKQzYgKEVEKSBENiAoRkUpIHwgRTYgKEdGKSBGOCB8IEcsNC0gRyxCLERGIEZERTItIEUyKEVGLzJHLzIpIHwgCihDNC0gQ0VHX0IpIChCMiBBNCBDMikgfCAoQixEIEY0IEEsMikgKEcsMkRFLzJGLzItIEYpKEUyRCB8IEMvMkIsLzIpKEEsMkIsKSAoQiwyey9BLH1CLEMpIEM4IDp8Cg%3D%3D&#34;&gt;Air on G String&lt;/a&gt;.&lt;/p&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;You can visit &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQyBNYWpvciBTY2FsZQpMOiAxLzE2Ck06IDIvNApDMkRFIEZHQUIgfCBjMmRlIGZnYWIgfCBjJzJiYSBnZmVkIHwgYzJCQSBHRkVEIHwgQzg%3D&#34;&gt;this link&lt;/a&gt; to see and hear the C Major scale on &lt;strong&gt;Score In URL&lt;/strong&gt;. Or a number of other examples: &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogUGFydGl0YSBJSUkgLSBQcmVsdWRpbwpDOiBKLlMuIEJhY2gKUTogMS80PTEyMApNOiAzLzQKTDogMS8xNgpLOiBFbWFqCnoyIGUnZCcgZScyYjJnMmIyIHwgKGVmZWQgZTIpQjJHMkIyIHwgRUJGQiBHQkFCIEdCRkIgfApFZWRjIEJlZGMgQkFHRiAgICB8IEVCRkIgR0JBQiBHQkZCICB8IEVlZGMgQmVkYyBCQUdGIHwKRUZHQSBCY2RlIGZnYWYgICAgfCBnYmVmIGdhYmMnIGQnZSdjJ2QnICB8IGUnYmFiIGdiYWIgZ2JmYiB8CmVlJ2QnYycgYmVjJ2UgYmVhZXwgZ2JmYiBnYmFiIGdiZmIgIHwgZWUnZCdjJyBiZWMnZSBiZWFlIHwKZ2VlZWRlZWVmZWRlIHwgZWVnZWZlZ2VhZWZlIHwgZ2VlZWRlZWVmZWRlIHwKZWVnZWZlZ2VhZWZlIHwgZ2VnZSBnZWdlIGdlZ2UgfCBnZWdkIGdlZ2QgZ2VnZCB8CmdlZz1kIGdlZ2QgZ2VnZCB8IGFlYWMgYWVhYyBhZWFjIHwgYWVhQiBhZWFCIGFlYUIgfApnZWdCIGdlZ0IgZ2VnQiB8IGdlZ0EgZ2VnQSBnZWdBIHwgZmVmQSBmZWZBIGZlZkEgfApmZWZHIGZlZkcgZmVmRyB8IGVlZUcgZWVlRyBlZWVHIHwgZWVlRiBlZWVGIGVlZUYgfApkZWRGIGRlZEYgZGVkRiB8IEVGRUYgR0JFRiBHQkVGIHwgR0FHQSBCZUdBIEJlR0EgfA%3D%3D&#34;&gt;First page of Bach&amp;rsquo;s Preludio&lt;/a&gt;, &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQWlyIG9uIEcgU3RyaW5nCkM6IEouUy4gQmFjaCAoYXJyLiBBdWd1c3QgV2lsaGVsbWouKQpROiAiTGVudG8iCk06IDQvNApMOiAxLzE2Cks6IENtYWoKfDogRTE2LSB8IEUyKEFGIERDQixDKSAoIXRyaWxsIUIsNy8yQSwvMikgRyw0IHwgRzgtIEcoRV9CLEEsKSAoRF5DKShHRikgfCAKRjgtIEYoREEsRywpIChDQiwpKEZFKSB8IChFNiBeRkcpIChDMkMvMkQvMkUpIChFRCkoREMpIHwgKEIsQSwpKEEsLzJCLC8yQykgKEMyQixBLCkgRyw4IDp8IAp8OiAoQiw0LUIsQy8yQiwvMkEsLzJCLC8yRywpIChHNiBfQiwyKSB8IChBLDJBMi0gQSkoR0ZFKSB7L0V9RjQtIEYvMihFLzJELzJDLzJCLEEsKSB8IF5HLEEsKEIsMi0gQixDKShEMi0gREUpRjItIEYyRTIgfAooREMpKEIsQSwpIChCLEMvMkQvMkNCLCkgQSw4IHwgKEM0LSBDRURDKSAoQTYgR15GKSB8ICh7L0V9REdHLDIpIChBLDNCLC8yQy8yKSAoQiw3LzJBLC8yKSBHLDQgfCAKQzYgKEVEKSBENiAoRkUpIHwgRTYgKEdGKSBGOCB8IEcsNC0gRyxCLERGIEZERTItIEUyKEVGLzJHLzIpIHwgCihDNC0gQ0VHX0IpIChCMiBBNCBDMikgfCAoQixEIEY0IEEsMikgKEcsMkRFLzJGLzItIEYpKEUyRCB8IEMvMkIsLzIpKEEsMkIsKSAoQiwyey9BLH1CLEMpIEM4IDp8Cg%3D%3D&#34;&gt;Air on G String&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To learn more about writing ABC notation, visit their &lt;a href=&#34;https://abcnotation.com/&#34;&gt;official website&lt;/a&gt;. There are plenty of examples and an exhaustive documentation. For quick references, this &lt;a href=&#34;http://www.stephenmerrony.co.uk/uploads/ABCquickRefv0_6.pdf&#34;&gt;cheat sheet&lt;/a&gt; is superb.&lt;/p&gt;
 &lt;p&gt;Thanks to &lt;a href=&#34;https://www.abcjs.net/&#34;&gt;abcjs&lt;/a&gt;, it&amp;rsquo;s super easy to embed such a system in a web page. Abcjs provides rendering, audio, and error messages which integrate nicely with CodeMirror, the text editor.&lt;/p&gt;
 &lt;h2 id=&#34;text-editing&#34;&gt;Text Editing&lt;/h2&gt;
 &lt;p&gt;To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, &lt;a href=&#34;https://codemirror.net/&#34;&gt;CodeMirror&lt;/a&gt; is used. You can see the errors marked by red dots, like a real text editor used by programmers.&lt;/p&gt;
-&lt;p&gt;&lt;img
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error.webp&#34; alt=&#34;Screenshot showcasing error reporting&#34;
         srcset=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error-400w.webp 400w,/2022/score-in-url/Screenshot_error-600w.webp 600w,/2022/score-in-url/Screenshot_error-800w.webp 800w,/2022/score-in-url/Screenshot_error-1000w.webp 1000w,/2022/score-in-url/Screenshot_error-1200w.webp 1200w,/2022/score-in-url/Screenshot_error.webp 1702w&#34;
      width=&#34;1702&#34;  height=&#34;346&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;p&gt;The code highlighting is still not comprehensive at the moment. I&amp;rsquo;ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.&lt;/p&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;The code highlighting is still not comprehensive at the moment. I&amp;rsquo;ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.&lt;/p&gt;
 &lt;h2 id=&#34;not-in-the-scope&#34;&gt;Not in the scope&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;ve decided against using a compression algorithm. A simple base64 encoder is available everywhere, whereas compression requires a 3rd party library, and might be subject to the specific quirks of that implementation. If the compression has a bug, it infects every URL shared from &lt;strong&gt;Score In URL&lt;/strong&gt;. If that algorithm ever gets an update that is not backwards-compatible, all the old URLs are screwed. Furthermore, if &lt;strong&gt;Score In URL&lt;/strong&gt; disappears, a plain base64 string is simple to use: just copy &amp;amp; paste into any base64 decoder. It requires no programming skill, no tool chains, no setup. On the other hand, a compressed string is much harder to decode, especially if the user has no convenient way of installing the exact version of the compression algorithm I used.&lt;/p&gt;
 &lt;p&gt;Despite the existence of a &amp;ldquo;Print&amp;rdquo; button, printing likely won&amp;rsquo;t be perfect, especially if you have more than one page of scores. Again, the project is meant for sharing snippets of music, not for typesetting a multipage score. The whole thing is rendered on to a single image, and as long as that image looks alright in the browser, that&amp;rsquo;s all it matters to me.&lt;/p&gt;
@@ -583,37 +567,40 @@ Without extra line in between&lt;/p&gt;
     src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
      width=&#34;128&#34;  height=&#34;128&#34; &gt;
-
 . There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p&gt;
 &lt;p&gt;Images put on their own line is better:&lt;/p&gt;
-&lt;p&gt;&lt;img
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
      width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;p&gt;A bigger image:&lt;/p&gt;
-&lt;p&gt;&lt;img
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;A bigger image:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34;
      width=&#34;400&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;p&gt;A gigantic image:&lt;/p&gt;
-&lt;p&gt;&lt;img
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;A gigantic image:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-400w.webp 400w,/2022/test-md-page/snail-gigantic-600w.webp 600w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1000w.webp 1000w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w&#34;
      width=&#34;4000&#34;  height=&#34;4000&#34; loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;p&gt;A svg image:&lt;/p&gt;
-&lt;p&gt;&lt;img
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;A svg image:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34; 
         style=&#34;width:100%; height: auto;&#34;
     loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;p&gt;A figure written in HTML:&lt;/p&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;A figure written in HTML:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img alt=&#34;Image inside a figure&#34; 
         src=&#34;./snail-big.webp&#34;&gt;
@@ -1091,13 +1078,14 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;FAULT&lt;/code&gt; is a special state, that the DFA will halt whenever it meets &lt;code&gt;FAULT&lt;/code&gt;, so that we do not have to process the rest of the string.&lt;/p&gt;
 &lt;h3 id=&#34;dfa---transition&#34;&gt;DFA - Transition&lt;/h3&gt;
 &lt;p&gt;The transition function is a matrix that maps (state, input char) to state.&lt;/p&gt;
-&lt;p&gt;&lt;img
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34; 
         style=&#34;width:100%; height: auto;&#34;
      width=&#34;106&#34;  height=&#34;69&#34; &gt;
 
-&lt;/p&gt;
-&lt;table&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;&lt;em&gt;states&lt;/em&gt;&lt;/th&gt;
@@ -1183,13 +1171,14 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34; 
         style=&#34;width:100%; height: auto;&#34;
     loading=&#34;lazy&#34;&gt;
 
-&lt;/p&gt;
-&lt;h3 id=&#34;dfa---termination&#34;&gt;DFA - Termination&lt;/h3&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;h3 id=&#34;dfa---termination&#34;&gt;DFA - Termination&lt;/h3&gt;
 &lt;p&gt;The DFA will terminate when&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;input is depleted&lt;/li&gt;
@@ -1720,13 +1709,14 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;basic-idea&#34;&gt;Basic Idea&lt;/h2&gt;
 &lt;p&gt;Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p&gt;
 &lt;p&gt;In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p&gt;
-&lt;p&gt;&lt;img
+&lt;figure&gt;
+    &lt;img
     src=&#34;https://powersnail.com/images/binarysearchtree.jpg&#34; alt=&#34;Binary Search Tree&#34;
         srcset=&#34;https://powersnail.com/images/binarysearchtree-400w.jpg 400w,/images/binarysearchtree-600w.jpg 600w,/images/binarysearchtree-800w.jpg 800w,/images/binarysearchtree-1000w.jpg 1000w,/images/binarysearchtree-1200w.jpg 1200w,/images/binarysearchtree.jpg 2445w&#34;
      width=&#34;2445&#34;  height=&#34;2308&#34; &gt;
 
-&lt;/p&gt;
-&lt;p&gt;The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code&gt;nil&lt;/code&gt; sentinel node, which is not in the data structure but a &lt;a href=&#34;#sentinelNode&#34;&gt;useful element&lt;/a&gt; in our program.&lt;/p&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code&gt;nil&lt;/code&gt; sentinel node, which is not in the data structure but a &lt;a href=&#34;#sentinelNode&#34;&gt;useful element&lt;/a&gt; in our program.&lt;/p&gt;
 &lt;h2 id=&#34;traversals&#34;&gt;Traversals&lt;/h2&gt;
 &lt;p&gt;The recursive in-order traversal is easy to implement:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inorderRec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -1779,7 +1769,6 @@ $$&lt;/p&gt;
     src=&#34;https://powersnail.com/images/fromlefttoright.jpg&#34; alt=&#34;From Left to Right&#34;
         srcset=&#34;https://powersnail.com/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w&#34;
      width=&#34;2441&#34;  height=&#34;2067&#34; loading=&#34;lazy&#34;&gt;
-
 {:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p&gt;
 &lt;p&gt;The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;

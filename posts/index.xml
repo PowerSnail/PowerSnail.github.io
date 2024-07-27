@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Homepage on SnailShell</title>
-  <link>https://powersnail.com/</link><link rel="self" href="https://powersnail.com/index.xml"></link><updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
-  <id>https://powersnail.com/</id>
+  <title>Posts on SnailShell</title>
+  <link>https://powersnail.com/posts/</link><link rel="self" href="https://powersnail.com/posts/index.xml"></link><updated>Tue, 05 Mar 2024 00:00:00 +0000</updated>
+  <id>https://powersnail.com/posts/</id>
 
   <author>
     <name>PowerSnail</name>
@@ -11,7 +11,7 @@
 
   <icon>https://powersnail.com/favicon.ico</icon>
 
-  <description>Recent content in Homepage on SnailShell</description>
+  <description>Recent content in Posts on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
   
