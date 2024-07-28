@@ -8,7 +8,7 @@
 /* Layout and Typography */
 html {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -24,10 +24,11 @@ body {
   -webkit-text-size-adjust: 100%;
 
   width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
 
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 8px minmax(0px, 68ch) 8px auto;
   overflow-wrap: anywhere;
   row-gap: 16px;
@@ -36,7 +37,12 @@ body {
   background-color: var(--background);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding-top: 1cap;
 }
 
@@ -44,7 +50,9 @@ a {
   color: var(--accent);
 }
 
-body > header, body > main, body > footer {
+body > header,
+body > main,
+body > footer {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
@@ -74,8 +82,8 @@ img {
 /* Code blocks */
 .highlight {
   padding: 8px;
-  border-top: 1px solid var(--text);
-  border-bottom: 1px solid var(--text);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   background-color: var(--background-alt);
 }
 
@@ -86,23 +94,29 @@ code {
 }
 
 /* Filling containers */
-.highlight, .table-wrapper, figure {
+.highlight,
+.table-wrapper,
+figure {
   width: 100%;
 }
 
 @media (max-width: 68ch) {
-  .highlight, .table-wrapper, figure {
+  .highlight,
+  .table-wrapper,
+  figure {
     grid-column: 2 / 4;
   }
 }
 
 /* Possibly overflowing content */
-.highlight, .table-wrapper {
+.highlight,
+.table-wrapper {
   overflow-x: auto;
 }
 
 /* Fix list indentation */
-ol, ul {
+ol,
+ul {
   padding-left: revert;
 }
 
@@ -113,17 +127,18 @@ li {
 /* Table */
 table {
   min-width: 100%;
-  border-top: 1.5px solid var(--text);
-  border-bottom: 1.5px solid var(--text);
+  border-top: 1.5px solid var(--border);
+  border-bottom: 1.5px solid var(--border);
   border-collapse: collapse;
   width: max-content;
 }
 
 thead {
-  border-bottom: 1px solid var(--text);
+  border-bottom: 1px solid var(--border);
 }
 
-td, th {
+td,
+th {
   padding: 4px 8px;
   text-align: left;
 }
@@ -172,7 +187,9 @@ code {
 }
 
 /* Specific tweaks for non-standard elements */
-body > header, body > footer, nav-link {
+body > header,
+body > footer,
+nav-link {
   background-color: var(--background-alt);
   color: var(--text-alt);
 }
@@ -180,6 +197,9 @@ body > header, body > footer, nav-link {
 .site-title {
   font-size: 2rem;
   margin-right: auto;
+  background-image: linear-gradient(6deg, var(--accent) 0%, var(--accent) 50%, var(--primary) 50%, var(--primary) 100%);
+  color: transparent !important;
+  background-clip: text;
 }
 
 .site-nav {
@@ -201,21 +221,21 @@ body > header, body > footer, nav-link {
 .nav-link::before {
   content: "<";
   padding-right: 4px;
-  color: transparent;
+  color: transparent !important;
 }
 
 .nav-link::after {
   content: ">";
   padding: 4px;
-  color: transparent;
+  color: transparent !important;
 }
 
 .current::before {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
 .current::after {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
 /* icon in the footer */
@@ -226,14 +246,20 @@ body > header, body > footer, nav-link {
 }
 
 .social-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  display: flex;
   align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 4px;
+}
+
+.social-list > * {
+  grid-column: unset;
 }
 
 @media (max-width: 68ch) {
   .social-list {
+    display: grid;
     grid-template-columns: 1fr auto 1fr;
     justify-items: start;
   }
@@ -245,7 +271,7 @@ body > header, body > footer, nav-link {
 
 /* Foot notes */
 article > footer {
-  border-top: 1px solid var(--text);
+  border-top: 1px solid var(--border);
   padding: 1em 0;
   font-size: 1rem;
 }
@@ -266,12 +292,13 @@ article > footer {
 .post-item-time {
   grid-column: 1;
   font-size: 1rem;
+  color: var(--text-alt);
 }
 
 .post-item-title {
   color: var(--text);
   grid-column: 2;
-  text-decoration-color: var(--translucent);
+  text-decoration: none;
 }
 
 .post-item-summary {
@@ -281,7 +308,8 @@ article > footer {
   font-size: 1rem;
 }
 
-h1, #title-subtitle {
+h1,
+#title-subtitle {
   text-align: center;
 }
 #title-subtitle {
@@ -291,4 +319,11 @@ h1, #title-subtitle {
 
 footer > article {
   justify-items: center;
+}
+
+body > header {
+  border-bottom: 1px solid var(--border);
+}
+body > footer {
+  border-top: 1px solid var(--border);
 }

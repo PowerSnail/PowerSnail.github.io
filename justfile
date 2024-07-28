@@ -69,7 +69,6 @@ _post-process sitedir:
     echo "$(date --rfc-3339=seconds --utc)" > {{ sitedir }}/_last_modified.txt
 
 _post-process-css sitedir:
-    fd "style.css" {{ sitedir }} --exec python tool_scripts/make_theme.py "$(rg 'theme_color = "(.*)+"' -r '$1' config.toml)" --output
     fd "\.css" {{ sitedir }} --exec lightningcss -m "{}" --output-file "{}"
 
 _post-process-html sitedir:
