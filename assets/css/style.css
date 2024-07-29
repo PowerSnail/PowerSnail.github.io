@@ -271,6 +271,8 @@ nav-link {
 
 /* Foot notes */
 article > footer {
+  gap: 1em;
+  display: grid;
   border-top: 1px solid var(--border);
   padding: 1em 0;
   font-size: 1rem;
