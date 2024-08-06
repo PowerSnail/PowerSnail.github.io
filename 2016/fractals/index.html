@@ -1,319 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="PowerSnail">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <meta name="theme-color" content="#bd1b37">
-    <title>
-      Fractals · SnailShell
-    </title>
-    <meta property="og:title" content="Fractals">
-    <meta property="og:site_name" content="SnailShell">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://powersnail.com/2016/fractals/">
-    <meta property="og:image" content="https://powersnail.com/icons/snail.svg">
-    <link rel="canonical" href="https://powersnail.com/2016/fractals/">
-    <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
+    <meta charset="utf-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+<meta name="author" content="PowerSnail">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="theme-color" content="#bd1b37">
+
+<title>Fractals · SnailShell</title>
+
+<meta property="og:title" content="Fractals" />
+<meta property="og:site_name" content="SnailShell" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://powersnail.com/2016/fractals/" />
+
+
+  <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
+
+
+
+
+<link rel="canonical" href="https://powersnail.com/2016/fractals/"/>
+
+
+
+
+  <link id="main-css" rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin>
   </head>
-  <body>
-    <header>
-      <article>
-        <nav class="site-nav">
-          <a href="/" class="site-title">Snail's Shell</a> <a href="/posts/" class="nav-link">Posts</a> <a href="/about/" class="nav-link">About</a>
-        </nav>
-      </article>
-    </header>
-    <main>
-      <article id="post-main">
-        <h1>
-          Fractals
-        </h1>
-        <hr>
-        <div class="metadata">
-          <time datetime="2016-11-08T00:00:00Z">08 Nov 2016</time> · 595 words · 3 minutes read
-        </div>
-        <h1 id="fractal">
-          Fractal
-        </h1>
-        <p>
-          naming: fractional dimension
-        </p>
-        <h2 id="definition">
-          Definition:
-        </h2>
-        <p>
-          self-similar $$\to$ when zoomed in, look the same
-        </p>
-        <h2 id="types">
-          Types:
-        </h2>
-        <ol>
-          <li>Exactly self-similar
-          </li>
-          <li>Statistically self-similar
-          </li>
-        </ol>
-        <h2 id="exactly-self-similar">
-          Exactly Self-similar
-        </h2>
-        <p>
-          If zoomed in, there is no way to tell that we have zoomed in.
-        </p>
-        <h3 id="sierpinski-carpet">
-          Sierpinski Carpet
-        </h3>
-        <figure>
-          <img src="/images/Sierpinski_carpet.jpg" alt="Sierpinski Carpet" srcset="/images/Sierpinski_carpet-400w.jpg 400w,/images/Sierpinski_carpet.jpg 600w" width="600" height="600">
-          <figcaption></figcaption>
-        </figure>
-        <ul>
-          <li>A square divided into 9 squares
-          </li>
-          <li>The center square is empty
-          </li>
-          <li>Each other square is divided again
-          </li>
-        </ul>
-        <h3 id="koch-snowflake">
-          Koch Snowflake
-        </h3>
-        <figure>
-          <img src="/images/2000px-Koch_Snowflake_7th_iteration.svg.png" alt="Koch Snowflake" srcset="/images/2000px-Koch_Snowflake_7th_iteration.svg-400w.png 400w,/images/2000px-Koch_Snowflake_7th_iteration.svg-600w.png 600w,/images/2000px-Koch_Snowflake_7th_iteration.svg-800w.png 800w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1000w.png 1000w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1200w.png 1200w,/images/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w" width="2000" height="2000" loading="lazy">
-          <figcaption></figcaption>
-        </figure>
-        <ul>
-          <li>Chop the lines into 3 Segments
-          </li>
-          <li>replace the middle one with equal lateral triangle
-          </li>
-          <li>Chop and replace each segment
-          </li>
-        </ul>
-        <p>
-          The important property is that when we zoom in on an edge, it is arbitrarily “bumpy” - non-smooth. This is similar to things like shorelines. There is a self-similarity in natural shorelines.
-        </p>
-        <p>
-          However, shorelines are not as bumpy as Koch Snowflakes. They are smoother. Hence, we need a concept to describe the bumpiness.
-        </p>
-        <h3 id="length-of-koch-snowflake">
-          Length of Koch Snowflake
-        </h3>
-        <p>
-          Each Step increases the length to $$\dfrac{4}{3} \times$ original. Hence, Koch Snowflake is infinitely long.
-        </p>
-        <p>
-          $$l_k = \dfrac{4}{3} l_{k-1}$
-        </p>
-        <p>
-          Question: How quickly does Koch Snowflake’s length converge to infinity?
-        </p>
-        <h3 id="measuring-length-of-fractal-line">
-          Measuring Length of Fractal Line
-        </h3>
-        <p>
-          Different measuring scales lead to different length.
-        </p>
-        <p>
-          From the starting point, jump a fixed distance, $$d_u$, and measure how many $d_u$ are there in the line.
-        </p>
-        <p>
-          Each different $$d_u$ results in a unique length, and as $d_u$ approaches 0, the length measured approaches $\infty$
-        </p>
-        <p>
-          The scale is related to length and this function describes the bumpiness of a fractal line. This is called <strong>Fractal Dimension</strong>.
-        </p>
-        <ul>
-          <li>
-            <em>Higher</em> Fractal Dimension means more <em>bumpiness</em>
-          </li>
-          <li>
-            <em>Lower</em> Fractal Dimension means less <em>bumpiness</em>
-          </li>
-        </ul>
-        <h3 id="shorelinemountain-topology">
-          Shoreline/Mountain Topology
-        </h3>
-        <p>
-          Use fractal dimension to model a bumpy line, and computationally derive the line, rather than describing more details.
-        </p>
-        <h2 id="statistically-self-similar">
-          Statistically Self-similar
-        </h2>
-        <p>
-          Recursive Tree: <strong>Tree</strong> := Stick + <strong>Tree</strong> + <strong>Tree</strong>
-        </p>
-        <p>
-          Moreover, we need to take care of the angles, length and returning position.
-        </p>
-        <p>
-          It becomes:
-        </p>
-        <div class="highlight">
-          <pre class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">- Stick
+<body>
+  
+  <header>
+  <article>
+    <nav class="site-nav">
+      <a 
+          href="/" 
+          class="site-title"
+      >Snail's Shell
+      </a>
+      <a 
+        href="/posts/"
+        class="nav-link"
+      >Posts</a>
+      <a 
+        href="/about/"
+        class="nav-link"
+      >About</a>
+    </nav>
+  </article>
+</header>
+
+  <main>
+<article id="post-main"><h1>
+  Fractals
+  
+
+</h1>
+
+
+
+<hr />
+
+<div class="metadata">
+    <time datetime="2016-11-08T00:00:00Z">08 Nov 2016</time>
+    ·
+    595 words
+    ·
+    3 minutes read
+</div><h1 id="fractal">Fractal</h1>
+<p>naming: fractional dimension</p>
+<h2 id="definition">Definition:</h2>
+<p>self-similar $$\to$ when zoomed in, look the same</p>
+<h2 id="types">Types:</h2>
+<ol>
+<li>Exactly self-similar</li>
+<li>Statistically self-similar</li>
+</ol>
+<h2 id="exactly-self-similar">Exactly Self-similar</h2>
+<p>If zoomed in, there is no way to tell that we have zoomed in.</p>
+<h3 id="sierpinski-carpet">Sierpinski Carpet</h3>
+<figure>
+    <img
+    src="/images/Sierpinski_carpet.jpg" alt="Sierpinski Carpet"
+        srcset="/images/Sierpinski_carpet-400w.jpg 400w,/images/Sierpinski_carpet.jpg 600w"
+     width="600"  height="600" >
+
+    <figcaption></figcaption>
+  </figure><ul>
+<li>A square divided into 9 squares</li>
+<li>The center square is empty</li>
+<li>Each other square is divided again</li>
+</ul>
+<h3 id="koch-snowflake">Koch Snowflake</h3>
+<figure>
+    <img
+    src="/images/2000px-Koch_Snowflake_7th_iteration.svg.png" alt="Koch Snowflake"
+        srcset="/images/2000px-Koch_Snowflake_7th_iteration.svg-400w.png 400w,/images/2000px-Koch_Snowflake_7th_iteration.svg-600w.png 600w,/images/2000px-Koch_Snowflake_7th_iteration.svg-800w.png 800w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1000w.png 1000w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1200w.png 1200w,/images/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w"
+     width="2000"  height="2000" loading="lazy">
+
+    <figcaption></figcaption>
+  </figure><ul>
+<li>Chop the lines into 3 Segments</li>
+<li>replace the middle one with equal lateral triangle</li>
+<li>Chop and replace each segment</li>
+</ul>
+<p>The important property is that when we zoom in on an edge, it is arbitrarily &ldquo;bumpy&rdquo; - non-smooth. This is similar to things like shorelines. There is a self-similarity in natural shorelines.</p>
+<p>However, shorelines are not as bumpy as Koch Snowflakes. They are smoother. Hence, we need a concept to describe the bumpiness.</p>
+<h3 id="length-of-koch-snowflake">Length of Koch Snowflake</h3>
+<p>Each Step increases the length to $$\dfrac{4}{3} \times$ original. Hence, Koch Snowflake is infinitely long.</p>
+<p>$$l_k = \dfrac{4}{3} l_{k-1}$</p>
+<p>Question: How quickly does Koch Snowflake&rsquo;s length converge to infinity?</p>
+<h3 id="measuring-length-of-fractal-line">Measuring Length of Fractal Line</h3>
+<p>Different measuring scales lead to different length.</p>
+<p>From the starting point, jump a fixed distance, $$d_u$, and measure how many $d_u$ are there in the line.</p>
+<p>Each different $$d_u$ results in a unique length, and as $d_u$ approaches 0, the length measured approaches $\infty$</p>
+<p>The scale is related to length and this function describes the bumpiness of a fractal line. This is called <strong>Fractal Dimension</strong>.</p>
+<ul>
+<li><em>Higher</em> Fractal Dimension means more <em>bumpiness</em></li>
+<li><em>Lower</em> Fractal Dimension means less <em>bumpiness</em></li>
+</ul>
+<h3 id="shorelinemountain-topology">Shoreline/Mountain Topology</h3>
+<p>Use fractal dimension to model a bumpy line, and computationally derive the line, rather than describing more details.</p>
+<h2 id="statistically-self-similar">Statistically Self-similar</h2>
+<p>Recursive Tree: <strong>Tree</strong> := Stick + <strong>Tree</strong> + <strong>Tree</strong></p>
+<p>Moreover, we need to take care of the angles, length and returning position.</p>
+<p>It becomes:</p>
+<div class="highlight"><pre  class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">- Stick
 </span></span><span class="line"><span class="cl">- Turn
 </span></span><span class="line"><span class="cl">- Tree  -&gt; this will expand to the same routine
 </span></span><span class="line"><span class="cl">- Turn
 </span></span><span class="line"><span class="cl">- Tree  -&gt; this will expand to the same routine
 </span></span><span class="line"><span class="cl">- Turn
-</span></span><span class="line"><span class="cl">- Backwards</span></span></code></pre>
-        </div>
-        <h3 id="l-system">
-          L-System
-        </h3>
-        <p>
-          The above process can be described by CFG:
-        </p>
-        <p>
-          $$T:S\leftarrow T \rightarrow \rightarrow T \leftarrow \overline{S}$
-        </p>
-        <p>
-          This use of CFG is called L-System.
-        </p>
-        <h3 id="improvement-to-l-system-tree">
-          Improvement to L-System Tree
-        </h3>
-        <ul>
-          <li>Randomness : This introduces <strong>Statistically similar</strong> fractal image.
-          </li>
-        </ul>
-        <p>
-          The sub-parts are statistically similar to the original image, but not exactly the same.
-        </p>
-        <p>
-          To create a nice tree, it is important to examine each tree. There is a <strong>grammar</strong> to each type of tree, describing its patterns.
-        </p>
-        <p>
-          However, sadly trees don’t grow by the fractal model.
-        </p>
-        <h2 id="incorporating-randomness-into-fractals">
-          Incorporating Randomness Into Fractals
-        </h2>
-        <p>
-          Example Algorithm (<em>Subdivide and Offset</em>)
-        </p>
-        <div class="highlight">
-          <pre class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">repeat
+</span></span><span class="line"><span class="cl">- Backwards</span></span></code></pre></div><h3 id="l-system">L-System</h3>
+<p>The above process can be described by CFG:</p>
+<p>$$T:S\leftarrow T \rightarrow \rightarrow T \leftarrow \overline{S}$</p>
+<p>This use of CFG is called L-System.</p>
+<h3 id="improvement-to-l-system-tree">Improvement to L-System Tree</h3>
+<ul>
+<li>Randomness : This introduces <strong>Statistically similar</strong> fractal image.</li>
+</ul>
+<p>The sub-parts are statistically similar to the original image, but not exactly the same.</p>
+<p>To create a nice tree, it is important to examine each tree. There is a <strong>grammar</strong> to each type of tree, describing its patterns.</p>
+<p>However, sadly trees don&rsquo;t grow by the fractal model.</p>
+<h2 id="incorporating-randomness-into-fractals">Incorporating Randomness Into Fractals</h2>
+<p>Example Algorithm (<em>Subdivide and Offset</em>)</p>
+<div class="highlight"><pre  class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">repeat
 </span></span><span class="line"><span class="cl">    foreach segment
 </span></span><span class="line"><span class="cl">        offset midpoint for random distance
-</span></span><span class="line"><span class="cl">        hence create two segments</span></span></code></pre>
-        </div>
-        <ul>
-          <li>deeper repetition: bumpier
-          </li>
-        </ul>
-        <p>
-          More sophisticated examples:
-        </p>
-        <h3 id="height-map">
-          Height Map
-        </h3>
-        <p>
-          A raster vector of height
-        </p>
-        <ul>
-          <li>Can represent any terrain with no overlapping height (not bumpy topology, water, etc.)
-          </li>
-          <li>Cannot represent extremely rocky terrain
-          </li>
-        </ul>
-        <p>
-          <strong>Diamond Square</strong>
-        </p>
-        <figure>
-          <img src="/images/2998px-Diamond_Square.svg.png" alt="Level 0" srcset="/images/2998px-Diamond_Square.svg-400w.png 400w,/images/2998px-Diamond_Square.svg-600w.png 600w,/images/2998px-Diamond_Square.svg-800w.png 800w,/images/2998px-Diamond_Square.svg-1000w.png 1000w,/images/2998px-Diamond_Square.svg-1200w.png 1200w,/images/2998px-Diamond_Square.svg.png 2998w" width="2998" height="640" loading="lazy">
-          <figcaption></figcaption>
-        </figure>
-        <ul>
-          <li>Level 0: Four corners set to $$h = 0$
-          </li>
-          <li>Level 1: Mid-point $$m_1$ set to $h_1 += random$
-          </li>
-          <li>Level 2: Point on Edges aligned with $$m_1$, offset randomly
-          </li>
-          <li>Level 3: Mid-point of each sub-square, offset randomly
-          </li>
-          <li>…
-          </li>
-        </ul>
-        <p>
-          The result could look something like:
-        </p>
-        <figure>
-          <img src="/images/Plasmafractal.gif" alt="Diamond Square" srcset="/images/Plasmafractal.gif 300w" width="300" height="225" loading="lazy">
-          <figcaption></figcaption>
-        </figure>
-        <p>
-          The problem is the grid pattern is visible. There are ‘+’ in the graph, so rotating the graph will be noticed (not entirely natural)
-        </p>
-        <p>
-          <strong>Solution</strong>: Use
-        </p>
-        <p>
-          <strong>Applications</strong>:
-        </p>
-        <ul>
-          <li>
-            <p>
-              NOT good for terrain. Natural terrain has very few local minima. The minima will drain, and become global minima. This is not reflected by diamond square subdivision.
-            </p>
-          </li>
-          <li>
-            <p>
-              Clouds. Clouds density is similar to the patterns generated from diamond square subdivision.
-            </p>
-          </li>
-          <li>
-            <p>
-              Dirt. This could create “dirty” texture to human-created objects.
-            </p>
-          </li>
-        </ul>
-        <h3 id="perlin-fractal">
-          Perlin Fractal
-        </h3>
-        <p>
-          A perlin fractal is created by taking in a height map, downsize it, and fill itself with the small height map.
-        </p>
-        <footer>
-          <section class="footer-meta">
-            <p>
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/graphics">graphics</a>, <a href="/tags/notes">notes</a>
-            </p>
-          </section>
-          <section>
-            <p>
-              Leave a comment via email: <a href="mailto:comment.2016.fractals@powersnail.com">comment.2016.fractals@powersnail.com</a>.
-            </p>
-          </section>
-        </footer>
-      </article>
-    </main>
-    <footer>
-      <article>
-        <nav class="column-center social-list">
-          <a href="/index.xml" class="social nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="20" height="20" viewbox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <circle cx="5" cy="19" r="1"></circle>
-          <path d="M4 4a16 16 0 0 1 16 16"></path>
-          <path d="M4 11a9 9 0 0 1 9 9"></path></svg> RSS</a> <a href="https://github.com/PowerSnail/" class="social nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="20" height="20" viewbox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg> Github</a> <a href="mailto:hj@powersnail.com" class="social nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="20" height="20" viewbox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-          <polyline points="3 7 12 13 21 7"></polyline></svg> hj@powersnail.com</a> <a rel="me" href="https://c.im/@powersnail" class="social nav-link"><svg class="icon" width="20" height="20" viewbox="0 0 74 79" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M73.7014 17.4323C72.5616 9.05152 65.1774 2.4469 56.424 1.1671C54.9472 0.950843 49.3518 0.163818 36.3901 0.163818H36.2933C23.3281 0.163818 20.5465 0.950843 19.0697 1.1671C10.56 2.41145 2.78877 8.34604 0.903306 16.826C-0.00357854 21.0022 -0.100361 25.6322 0.068112 29.8793C0.308275 35.9699 0.354874 42.0498 0.91406 48.1156C1.30064 52.1448 1.97502 56.1419 2.93215 60.0769C4.72441 67.3445 11.9795 73.3925 19.0876 75.86C26.6979 78.4332 34.8821 78.8603 42.724 77.0937C43.5866 76.8952 44.4398 76.6647 45.2833 76.4024C47.1867 75.8033 49.4199 75.1332 51.0616 73.9562C51.0841 73.9397 51.1026 73.9184 51.1156 73.8938C51.1286 73.8693 51.1359 73.8421 51.1368 73.8144V67.9366C51.1364 67.9107 51.1302 67.8852 51.1186 67.862C51.1069 67.8388 51.0902 67.8184 51.0695 67.8025C51.0489 67.7865 51.0249 67.7753 50.9994 67.7696C50.9738 67.764 50.9473 67.7641 50.9218 67.7699C45.8976 68.9569 40.7491 69.5519 35.5836 69.5425C26.694 69.5425 24.3031 65.3699 23.6184 63.6327C23.0681 62.1314 22.7186 60.5654 22.5789 58.9744C22.5775 58.9477 22.5825 58.921 22.5934 58.8965C22.6043 58.8721 22.621 58.8505 22.6419 58.8336C22.6629 58.8167 22.6876 58.8049 22.714 58.7992C22.7404 58.7934 22.7678 58.794 22.794 58.8007C27.7345 59.9796 32.799 60.5746 37.8813 60.5733C39.1036 60.5733 40.3223 60.5733 41.5447 60.5414C46.6562 60.3996 52.0437 60.1408 57.0728 59.1694C57.1983 59.1446 57.3237 59.1233 57.4313 59.0914C65.3638 57.5847 72.9128 52.8555 73.6799 40.8799C73.7086 40.4084 73.7803 35.9415 73.7803 35.4523C73.7839 33.7896 74.3216 23.6576 73.7014 17.4323ZM61.4925 47.3144H53.1514V27.107C53.1514 22.8528 51.3591 20.6832 47.7136 20.6832C43.7061 20.6832 41.6988 23.2499 41.6988 28.3194V39.3803H33.4078V28.3194C33.4078 23.2499 31.3969 20.6832 27.3894 20.6832C23.7654 20.6832 21.9552 22.8528 21.9516 27.107V47.3144H13.6176V26.4937C13.6176 22.2395 14.7157 18.8598 16.9118 16.3545C19.1772 13.8552 22.1488 12.5719 25.8373 12.5719C30.1064 12.5719 33.3325 14.1955 35.4832 17.4394L37.5587 20.8853L39.6377 17.4394C41.7884 14.1955 45.0145 12.5719 49.2765 12.5719C52.9614 12.5719 55.9329 13.8552 58.2055 16.3545C60.4017 18.8574 61.4997 22.2371 61.4997 26.4937L61.4925 47.3144Z" fill="inherit"></path></svg> @powersnail@c.im</a>
-        </nav>
-        <div>
-          © PowerSnail 2016
-        </div>
-      </article>
-    </footer>
-  </body>
+</span></span><span class="line"><span class="cl">        hence create two segments</span></span></code></pre></div><ul>
+<li>deeper repetition: bumpier</li>
+</ul>
+<p>More sophisticated examples:</p>
+<h3 id="height-map">Height Map</h3>
+<p>A raster vector of height</p>
+<ul>
+<li>Can represent any terrain with no overlapping height (not bumpy topology, water, etc.)</li>
+<li>Cannot represent extremely rocky terrain</li>
+</ul>
+<p><strong>Diamond Square</strong></p>
+<figure>
+    <img
+    src="/images/2998px-Diamond_Square.svg.png" alt="Level 0"
+        srcset="/images/2998px-Diamond_Square.svg-400w.png 400w,/images/2998px-Diamond_Square.svg-600w.png 600w,/images/2998px-Diamond_Square.svg-800w.png 800w,/images/2998px-Diamond_Square.svg-1000w.png 1000w,/images/2998px-Diamond_Square.svg-1200w.png 1200w,/images/2998px-Diamond_Square.svg.png 2998w"
+     width="2998"  height="640" loading="lazy">
+
+    <figcaption></figcaption>
+  </figure><ul>
+<li>Level 0: Four corners set to $$h = 0$</li>
+<li>Level 1: Mid-point $$m_1$ set to $h_1 += random$</li>
+<li>Level 2: Point on Edges aligned with $$m_1$, offset randomly</li>
+<li>Level 3: Mid-point of each sub-square, offset randomly</li>
+<li>&hellip;</li>
+</ul>
+<p>The result could look something like:</p>
+<figure>
+    <img
+    src="/images/Plasmafractal.gif" alt="Diamond Square"
+        srcset="/images/Plasmafractal.gif 300w"
+     width="300"  height="225" loading="lazy">
+
+    <figcaption></figcaption>
+  </figure><p>The problem is the grid pattern is visible. There are &lsquo;+&rsquo; in the graph, so rotating the graph will be noticed (not entirely natural)</p>
+<p><strong>Solution</strong>: Use</p>
+<p><strong>Applications</strong>:</p>
+<ul>
+<li>
+<p>NOT good for terrain. Natural terrain has very few local minima. The minima will drain, and become global minima. This is not reflected by diamond square subdivision.</p>
+</li>
+<li>
+<p>Clouds. Clouds density is similar to the patterns generated from diamond square subdivision.</p>
+</li>
+<li>
+<p>Dirt. This could create &ldquo;dirty&rdquo; texture to human-created objects.</p>
+</li>
+</ul>
+<h3 id="perlin-fractal">Perlin Fractal</h3>
+<p>A perlin fractal is created by taking in a height map, downsize it, and fill itself with the small height map.</p>
+
+
+  
+
+
+  <footer>
+    
+
+    <section class="footer-meta">
+      
+      <p>
+        
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          width="16"
+          height="16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+            clip-rule="evenodd"
+          />
+        </svg>
+           <a href="/tags/graphics">graphics</a>, <a href="/tags/notes">notes</a>
+      </p>
+      
+    </section>
+
+    <section><p>
+        Leave a comment via email: 
+        <a href="mailto:comment.2016.fractals@powersnail.com">comment.2016.fractals@powersnail.com</a>. 
+      </p>
+    </section>
+  </footer>
+</article>
+
+
+  </main><footer>
+  <article>
+    <nav class="column-center social-list">
+      <a href="/index.xml" class="social nav-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-rss"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="5" cy="19" r="1" />
+          <path d="M4 4a16 16 0 0 1 16 16" />
+          <path d="M4 11a9 9 0 0 1 9 9" />
+        </svg>
+        RSS
+      </a>
+      <a href="https://github.com/PowerSnail/" class="social nav-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-brand-github"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+          />
+        </svg>
+        Github
+      </a>
+      <a href="mailto:hj@powersnail.com" class="social nav-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-mail"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <polyline points="3 7 12 13 21 7" />
+        </svg>
+        hj@powersnail.com
+      </a>
+      <a rel="me" href="https://c.im/@powersnail" class="social nav-link">
+        <svg
+          class="icon"
+          width="20"
+          height="20"
+          viewBox="0 0 74 79"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M73.7014 17.4323C72.5616 9.05152 65.1774 2.4469 56.424 1.1671C54.9472 0.950843 49.3518 0.163818 36.3901 0.163818H36.2933C23.3281 0.163818 20.5465 0.950843 19.0697 1.1671C10.56 2.41145 2.78877 8.34604 0.903306 16.826C-0.00357854 21.0022 -0.100361 25.6322 0.068112 29.8793C0.308275 35.9699 0.354874 42.0498 0.91406 48.1156C1.30064 52.1448 1.97502 56.1419 2.93215 60.0769C4.72441 67.3445 11.9795 73.3925 19.0876 75.86C26.6979 78.4332 34.8821 78.8603 42.724 77.0937C43.5866 76.8952 44.4398 76.6647 45.2833 76.4024C47.1867 75.8033 49.4199 75.1332 51.0616 73.9562C51.0841 73.9397 51.1026 73.9184 51.1156 73.8938C51.1286 73.8693 51.1359 73.8421 51.1368 73.8144V67.9366C51.1364 67.9107 51.1302 67.8852 51.1186 67.862C51.1069 67.8388 51.0902 67.8184 51.0695 67.8025C51.0489 67.7865 51.0249 67.7753 50.9994 67.7696C50.9738 67.764 50.9473 67.7641 50.9218 67.7699C45.8976 68.9569 40.7491 69.5519 35.5836 69.5425C26.694 69.5425 24.3031 65.3699 23.6184 63.6327C23.0681 62.1314 22.7186 60.5654 22.5789 58.9744C22.5775 58.9477 22.5825 58.921 22.5934 58.8965C22.6043 58.8721 22.621 58.8505 22.6419 58.8336C22.6629 58.8167 22.6876 58.8049 22.714 58.7992C22.7404 58.7934 22.7678 58.794 22.794 58.8007C27.7345 59.9796 32.799 60.5746 37.8813 60.5733C39.1036 60.5733 40.3223 60.5733 41.5447 60.5414C46.6562 60.3996 52.0437 60.1408 57.0728 59.1694C57.1983 59.1446 57.3237 59.1233 57.4313 59.0914C65.3638 57.5847 72.9128 52.8555 73.6799 40.8799C73.7086 40.4084 73.7803 35.9415 73.7803 35.4523C73.7839 33.7896 74.3216 23.6576 73.7014 17.4323ZM61.4925 47.3144H53.1514V27.107C53.1514 22.8528 51.3591 20.6832 47.7136 20.6832C43.7061 20.6832 41.6988 23.2499 41.6988 28.3194V39.3803H33.4078V28.3194C33.4078 23.2499 31.3969 20.6832 27.3894 20.6832C23.7654 20.6832 21.9552 22.8528 21.9516 27.107V47.3144H13.6176V26.4937C13.6176 22.2395 14.7157 18.8598 16.9118 16.3545C19.1772 13.8552 22.1488 12.5719 25.8373 12.5719C30.1064 12.5719 33.3325 14.1955 35.4832 17.4394L37.5587 20.8853L39.6377 17.4394C41.7884 14.1955 45.0145 12.5719 49.2765 12.5719C52.9614 12.5719 55.9329 13.8552 58.2055 16.3545C60.4017 18.8574 61.4997 22.2371 61.4997 26.4937L61.4925 47.3144Z"
+            fill="inherit"
+          />
+        </svg>
+        @powersnail@c.im
+      </a>
+    </nav><div>© PowerSnail 2016</div>
+  </article>
+</footer>
+
+</body>
 </html>

@@ -1,0 +1,99 @@
+---
+references:
+- id: dockerincComposeFileDeploy2023
+  abstract: Compose file deploy reference
+  accessed:
+    - year: 2023
+      month: 3
+      day: 10
+  author:
+    - literal: Docker Inc
+  citation-key: dockerincComposeFileDeploy2023
+  container-title: Docker Documentation
+  issued:
+    - year: 2023
+      month: 3
+      day: 10
+  language: en
+  title: Compose file deploy reference
+  type: webpage
+  URL: https://docs.docker.com/compose/compose-file/deploy/
+
+- id: jellyfincommunityDownloadsJellyfin
+  accessed:
+    - year: 2023
+      month: 3
+      day: 10
+  author:
+    - literal: Jellyfin Community
+  citation-key: jellyfincommunityDownloadsJellyfin
+  language: en
+  title: Downloads | Jellyfin
+  type: webpage
+  URL: https://jellyfin.org/downloads/docker/
+
+- id: nvidiacorporationVideoEncodeDecode2020
+  abstract: >-
+    Find the related video encoding and decoding support for all NVIDIA GPU
+    products.
+  accessed:
+    - year: 2023
+      month: 3
+      day: 10
+  author:
+    - literal: NVIDIA Corporation
+  citation-key: nvidiacorporationVideoEncodeDecode2020
+  container-title: NVIDIA Developer
+  issued:
+    - year: 2020
+      month: 9
+      day: 8
+  language: en-US
+  title: Video Encode and Decode GPU Support Matrix
+  type: webpage
+  URL: https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new
+
+- id: opensusecontributors&othersSDBNVIDIADrivers2020
+  accessed:
+    - year: 2023
+      month: 3
+      day: 10
+  author:
+    - literal: openSUSE contributors & others
+  citation-key: opensusecontributors&othersSDBNVIDIADrivers2020
+  issued:
+    - literal: 22 July 2020‎
+  title: SDB:NVIDIA drivers - openSUSE Wiki
+  type: webpage
+  URL: https://en.opensuse.org/SDB:NVIDIA_drivers
+
+- id: nvidiacorporationInstallationGuideNVIDIA2023
+  accessed:
+    - year: 2023
+      month: 3
+      day: 10
+  author:
+    - literal: NVIDIA Corporation
+  citation-key: nvidiacorporationInstallationGuideNVIDIA2023
+  issued:
+    - year: 2023
+      month: 3
+      day: 8
+  title: Installation Guide — NVIDIA Cloud Native Technologies  documentation
+  type: webpage
+  URL: >-
+    https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+
+- id: nvidiacorporationUserGuideNVIDIA2023
+  author:
+    - literal: NVIDIA Corporation
+  citation-key: nvidiacorporationUserGuideNVIDIA2023
+  issued:
+    - year: 2023
+      month: 3
+      day: 8
+  title: User Guide — NVIDIA Cloud Native Technologies documentation
+  type: webpage
+  URL: >-
+    https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html
+...
