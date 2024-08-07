@@ -4,7 +4,7 @@ tags:
     - notes
     - study
 date: "2019-09-17"
-slug: "price-and-prejudice-reading-notes"
+slug: "pride-and-prejudice-reading-notes"
 ---
 
 ## Summary of _Pride and Prejudice_

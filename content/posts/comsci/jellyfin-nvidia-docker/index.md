@@ -11,15 +11,107 @@ tags:
     - technology
     - NVIDIA
     - FFmpeg
-references: |
-  <div class="csl-entry">Docker Inc. (2023, March 10). <i>Compose file deploy reference</i>. Docker Documentation. <a href="https://docs.docker.com/compose/compose-file/deploy/">https://docs.docker.com/compose/compose-file/deploy/</a></div>
-  <div class="csl-entry">Jellyfin Community. (n.d.). <i>Downloads | Jellyfin</i>. Retrieved March 10, 2023, from <a href="https://jellyfin.org/downloads/docker/">https://jellyfin.org/downloads/docker/</a></div>
-  <div class="csl-entry">NVIDIA Corporation. (2020, September 8). <i>Video Encode and Decode GPU Support Matrix</i>. NVIDIA Developer. <a href="https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new">https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new</a></div>
-  <div class="csl-entry">NVIDIA Corporation. (2023a, March 8). <i>Installation Guide—NVIDIA Cloud Native Technologies&nbsp; documentation</i>. <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html</a></div>
-  <div class="csl-entry">NVIDIA Corporation. (2023b, March 8). <i>User Guide—NVIDIA Cloud Native Technologies documentation</i>. <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html</a></div>
-  <div class="csl-entry">openSUSE contributors &amp; others. (2020, July 22). <i>SDB:NVIDIA drivers—OpenSUSE Wiki</i>. <a href="https://en.opensuse.org/SDB:NVIDIA_drivers">https://en.opensuse.org/SDB:NVIDIA_drivers</a></div>
+references:
+    - id: dockerincComposeFileDeploy2023
+      abstract: Compose file deploy reference
+      accessed:
+          - year: 2023
+            month: 3
+            day: 10
+      author:
+          - literal: Docker Inc
+      citation-key: dockerincComposeFileDeploy2023
+      container-title: Docker Documentation
+      issued:
+          - year: 2023
+            month: 3
+            day: 10
+      language: en
+      title: Compose file deploy reference
+      type: webpage
+      URL: https://docs.docker.com/compose/compose-file/deploy/
+
+    - id: jellyfincommunityDownloadsJellyfin
+      accessed:
+          - year: 2023
+            month: 3
+            day: 10
+      author:
+          - literal: Jellyfin Community
+      citation-key: jellyfincommunityDownloadsJellyfin
+      language: en
+      title: Downloads | Jellyfin
+      type: webpage
+      URL: https://jellyfin.org/downloads/docker/
+
+    - id: nvidiacorporationVideoEncodeDecode2020
+      abstract: >-
+          Find the related video encoding and decoding support for all NVIDIA GPU
+          products.
+      accessed:
+          - year: 2023
+            month: 3
+            day: 10
+      author:
+          - literal: NVIDIA Corporation
+      citation-key: nvidiacorporationVideoEncodeDecode2020
+      container-title: NVIDIA Developer
+      issued:
+          - year: 2020
+            month: 9
+            day: 8
+      language: en-US
+      title: Video Encode and Decode GPU Support Matrix
+      type: webpage
+      URL: https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new
+
+    - id: opensusecontributors&othersSDBNVIDIADrivers2020
+      accessed:
+          - year: 2023
+            month: 3
+            day: 10
+      author:
+          - literal: openSUSE contributors & others
+      citation-key: opensusecontributors&othersSDBNVIDIADrivers2020
+      issued:
+          - literal: 22 July 2020‎
+      title: SDB:NVIDIA drivers - openSUSE Wiki
+      type: webpage
+      URL: https://en.opensuse.org/SDB:NVIDIA_drivers
+
+    - id: nvidiacorporationInstallationGuideNVIDIA2023
+      accessed:
+          - year: 2023
+            month: 3
+            day: 10
+      author:
+          - literal: NVIDIA Corporation
+      citation-key: nvidiacorporationInstallationGuideNVIDIA2023
+      issued:
+          - year: 2023
+            month: 3
+            day: 8
+      title: Installation Guide — NVIDIA Cloud Native Technologies  documentation
+      type: webpage
+      URL: >-
+          https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+
+    - id: nvidiacorporationUserGuideNVIDIA2023
+      author:
+          - literal: NVIDIA Corporation
+      citation-key: nvidiacorporationUserGuideNVIDIA2023
+      issued:
+          - year: 2023
+            month: 3
+            day: 8
+      title: User Guide — NVIDIA Cloud Native Technologies documentation
+      type: webpage
+      URL: >-
+          https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html
 draft: false
-commentid: 110019141984588004
+link-citations: true
+nocite: |
+    @*
 ---
 
 ## What is it all about?
@@ -54,7 +146,7 @@ sudo zypper in nvidia-video-G06 nvidia-gl-G06
 
 **Do read the guide carefully**, though, as the instructions differ for different card models. `06` is what works for my card, something else might for yours.
 
-With the proper drivers installed, we also need *NVIDIA's Container Toolkit* to make it work with Docker. The slight problem is that NVIDIA doesn't package this toolkit for Tumbleweed, only Leap, so I'm taking some risks here to use a library for a not-exactly-compatible distribution. Well, if it works, it works. 
+With the proper drivers installed, we also need _NVIDIA's Container Toolkit_ to make it work with Docker. The slight problem is that NVIDIA doesn't package this toolkit for Tumbleweed, only Leap, so I'm taking some risks here to use a library for a not-exactly-compatible distribution. Well, if it works, it works.
 
 Using the [guide for Leap 15](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-on-suse-15):
 
@@ -65,7 +157,7 @@ sudo zypper in nvidia-container-toolkit
 sudo nvidia-ctk runtime configure --runtime=docker
 ```
 
-And I restart the PC at this point, just to make sure that all the enabled services are running. 
+And I restart the PC at this point, just to make sure that all the enabled services are running.
 
 ## Composing Docker for Jellyfin
 
@@ -88,33 +180,33 @@ We have more parameters to pass in and to better manage these options, a compose
 ```yaml
 # docker-compose.yaml
 
-version: '3.3'
+version: "3.3"
 services:
-  jellyfin:
-    volumes:
-      - '/srv/jellyfin/config:/config'
-      - '/srv/jellyfin/cache:/cache'
-      - '/path/to/media:/media'
-    network_mode: host
-    image: 'jellyfin/jellyfin:latest'
-    cpuset: "13-15"
-    environment:
-      - NVIDIA_DRIVER_CAPABILITIES=all
-      - NVIDIA_VISIBLE_DEVICES=all
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+    jellyfin:
+        volumes:
+            - "/srv/jellyfin/config:/config"
+            - "/srv/jellyfin/cache:/cache"
+            - "/path/to/media:/media"
+        network_mode: host
+        image: "jellyfin/jellyfin:latest"
+        cpuset: "13-15"
+        environment:
+            - NVIDIA_DRIVER_CAPABILITIES=all
+            - NVIDIA_VISIBLE_DEVICES=all
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: 1
+                          capabilities: [gpu]
 ```
 
 To put a restriction on the cores used by Jellyfin, the option `cpuset` is used, and I set it to `13-15` which exposes the last three cores, sufficient for my personally use.
 
-To enable hardware acceleration, we give the container permission to use the cards with environment variables (these are for the NVIDIA Container Toolkit). `NVIDIA_DRIVER_CAPABILITIES=all` grants permission to all capabilities. `NVIDIA_VISIBLE_DEVICES=all` grants permission to all cards. You can fine-tune which card and what capabilities Jellyfin has access to, by following NVIDIA's [guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html). 
+To enable hardware acceleration, we give the container permission to use the cards with environment variables (these are for the NVIDIA Container Toolkit). `NVIDIA_DRIVER_CAPABILITIES=all` grants permission to all capabilities. `NVIDIA_VISIBLE_DEVICES=all` grants permission to all cards. You can fine-tune which card and what capabilities Jellyfin has access to, by following NVIDIA's [guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html).
 
-The rest of the options is the Docker Compose's way of giving access of the GPU to the container: <https://docs.docker.com/compose/compose-file/deploy/>.
+The rest of the options is the Docker Compose's way of giving access of the GPU to the container [@dockerincComposeFileDeploy2023].
 
 ## Configuring NVENC and NVDEC in Jellyfin
 
@@ -126,14 +218,13 @@ nvidia-smi -L  # GPU 0: NVIDIA GeForce RTX 2080
 
 The encoding and decoding capabilities of the card can be checked on NVIDIA's website: <https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new>. For my 2080, I've gotten a good list of decode-able codecs (MPEG-1, MPEG-2, VC-1, VP8, VP9, H.264, H.265), and H.264 and H.265 for encoding, which are more than enough. The only thing missing is AV1 support, which is at the moment not that widely used, but whose popularity is on the rise.
 
-In Jellyfin, in the section `Dashboad>Playback>Transcoding`, set "Hardware acceleration" to "Nvidia NVENC", check the boxes for the supported codecs listed above, and tick the options "Enable enhanced NVDEC decoder", and "Enable hardware encoding".  
+In Jellyfin, in the section `Dashboad>Playback>Transcoding`, set "Hardware acceleration" to "Nvidia NVENC", check the boxes for the supported codecs listed above, and tick the options "Enable enhanced NVDEC decoder", and "Enable hardware encoding".
 
 It's important to know which codec to enable, because Jellyfin blindly trusts the configuration, and won't test whether the GPU is actually capable of doing a specific transcoding. If an option were to be mis-selected, there wouldn't be a fallback, and the video would fail to load.
 
 ## How well does it work?
 
 Here's the CPU usage---specifically the usage of core 13, 14, and 15---when playing a H.265 video, **without** hardware acceleration:
-
 
 ![An image showing that the usages of the three cores are above 80% during transcoding](./cpu-usage-no-gpu.webp "CPU usage without hardware acceleration")
 
@@ -143,6 +234,6 @@ After enabling hardware acceleration, when playing the same video, the core usag
 
 ![An image showing GPU usage during transcoding, highlighted is a process of FFmpeg utilizing](./gpu-usage.webp "GPU usage during transcoding")
 
-And of course, hardware acceleration isn't just making the GPU busier and the CPU idler; another benefit is that, titularly, the video is transcoded faster. This isn't noticeable in the middle of playing a video, because Jellyfin would, like any competent streaming software, transcode the next chunk when you are still watching the previous one. 
+And of course, hardware acceleration isn't just making the GPU busier and the CPU idler; another benefit is that, titularly, the video is transcoded faster. This isn't noticeable in the middle of playing a video, because Jellyfin would, like any competent streaming software, transcode the next chunk when you are still watching the previous one.
 
 It shines when **starting** a video, and more importantly, when I'm **jumping around** the progress bar. What used to be a few seconds of spinning circles, is now only a slight punctuation. The improvement on snappiness simply by moving the work from CPU to GPU is, frankly speaking, astonishing.

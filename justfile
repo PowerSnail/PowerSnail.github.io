@@ -72,7 +72,8 @@ _post-process-css sitedir:
     fd "\.css" {{ sitedir }} --exec lightningcss -m "{}" --output-file "{}"
 
 _post-process-html sitedir:
-    fd ".html" "{{ sitedir }}/" --exec just _format-html
+    fd -t f ".html" "{{ sitedir }}/" --exec python tool_scripts/add_bibliography.py
+    fd -t f ".html" "{{ sitedir }}/" --exec just _format-html
     python tool_scripts/generate_responsive_images.py "{{ sitedir }}/"
     python tool_scripts/check_dead_links.py "{{ sitedir }}/"
 

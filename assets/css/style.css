@@ -329,3 +329,16 @@ body > header {
 body > footer {
   border-top: 1px solid var(--border);
 }
+
+#refs {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.csl-entry {
+  margin: 16px;
+}
+
+.citation {
+  font-style: italic;
+}
