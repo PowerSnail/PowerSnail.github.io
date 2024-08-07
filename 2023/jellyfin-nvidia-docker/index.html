@@ -1,111 +1,127 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-
-
-
-<meta name="author" content="PowerSnail">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
-
-<title>Hardware Accelerated Jellyfin, Docker Composed, in openSUSE · SnailShell</title>
-
-<meta property="og:title" content="Hardware Accelerated Jellyfin, Docker Composed, in openSUSE">
-<meta property="og:site_name" content="SnailShell">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://powersnail.com/2023/jellyfin-nvidia-docker/">
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg">
-
-
-
-  
-  <meta name="description" content="Get Hardware-accelerated encoding and decoding working with NVIDIA in Jellyfin running inside a Docker container in openSUSE">
-  <meta property="og:description" content="Get Hardware-accelerated encoding and decoding working with NVIDIA in Jellyfin running inside a Docker container in openSUSE">
-
-
-<link rel="canonical" href="https://powersnail.com/2023/jellyfin-nvidia-docker/">
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="PowerSnail">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="theme-color" content="#bd1b37">
+    <title>
+      Hardware Accelerated Jellyfin, Docker Composed, in openSUSE · SnailShell
+    </title>
+    <meta property="og:title" content="Hardware Accelerated Jellyfin, Docker Composed, in openSUSE">
+    <meta property="og:site_name" content="SnailShell">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://powersnail.com/2023/jellyfin-nvidia-docker/">
+    <meta property="og:image" content="https://powersnail.com/icons/snail.svg">
+    <meta name="description" content="Get Hardware-accelerated encoding and decoding working with NVIDIA in Jellyfin running inside a Docker container in openSUSE">
+    <meta property="og:description" content="Get Hardware-accelerated encoding and decoding working with NVIDIA in Jellyfin running inside a Docker container in openSUSE">
+    <link rel="canonical" href="https://powersnail.com/2023/jellyfin-nvidia-docker/">
+    <link id="main-css" rel="stylesheet" href="/css/style.css">
+    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
-<body>
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">Snail's Shell
-      </a>
-      <a href="/posts/" class="nav-link">Posts</a>
-      <a href="/about/" class="nav-link">About</a>
-    </nav>
-  </article>
-</header>
-
-  <main>
-<article id="post-main"><h1>
-  Hardware Accelerated Jellyfin, Docker Composed, in openSUSE
-  
-
-</h1>
-
-
-  <div id="title-subtitle">Get Hardware-accelerated encoding and decoding working with NVIDIA in Jellyfin running inside a Docker container in openSUSE</div>
-
-
-<hr>
-
-<div class="metadata">
-    <time datetime="2023-03-12T00:00:00Z">12 Mar 2023</time>
-    ·
-    1245 words
-    ·
-    6 minutes read
-</div><h2 id="what-is-it-all-about">What is it all about?</h2>
-<p>Here is what I’m trying to do: I want to watch TV at home. On my hard drive, is a collection of videos, and I’d like to stream them from my PC to mobile devices. The PC runs openSUSE, has an NVIDIA card, and Jellyfin—a sort of self-hosted Netflix—is my choice for managing the multimedia files and the streaming.</p>
-<h2 id="why-am-i-running-jellyfin-in-docker">Why am I Running Jellyfin in Docker</h2>
-<p>You can run Jellyfin just by itself, un-containerized, and tell it to use the dependencies that are installed by your OS’s package manager. It would be more space-efficient. You would need one less moving parts (Docker).</p>
-<p>I run Jellyfin in a Docker container, mainly for the bundled FFmpeg. Jellyfin uses FFmpeg as the underlying tool that does all the heavy-lifting with regard to processing the videos. The problem is that FFmpeg is one of those programs which come with a huge number of compiling options, some of which are turned off by default, some can’t be enabled in certain distributions due to licensing issues. These can’t be tweaked at runtime. I can compile FFmpeg myself, but first, that defeats the purpose of saving space, and it would be a pain to keep it up to date and resolve compatibility issues between it, the OS, and Jellyfin. Using the official docker image will likely be less of a headache.</p>
-<p>Another reason, applicable to software that deals with the file system, is that there’s less of a chance that a bug could affect unrelated files, since Docker only gives it access to specified directories. If Jellyfin messes up, at most my media folder gets obliterated, which I have a backup for, and which is easily rectified when the rest of the file system is left untouched.</p>
-<p>At last, it’s easy to put constraints on how many cores Jellyfin can use. My machine has 16 cores, and really, to enable the transcoding of videos for one or two users, no more than 2 or 3 cores are necessary. However, for some reason, when I ran it bare metal, I was never able to enact that restriction, whether through Jellyfin’s settings, or some other system tools. Docker, on the other hand, can expose a selected set of cores, which as far as all the transcoding processes know, are all the cores existing.</p>
-<h2 id="installing-dependencies">Installing Dependencies</h2>
-<p>To install Docker and Docker Compose,</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo zypper in docker docker-compose
-</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now docker</span></span></code></pre></div><p>To install graphics card drivers (this configuration works only with Nvidia’s proprietary drivers), openSUSE has an <a href="https://en.opensuse.org/SDB:NVIDIA_drivers">official guide</a>, and I use what they call “the easy way”, which means adding a repository that is co-managed by NVIDIA and openSUSE, and installing the driver via <code>zypper</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo zypper addrepo --refresh <span class="s2">"https://download.nvidia.com/opensuse/tumbleweed"</span> NVIDIA
-</span></span><span class="line"><span class="cl">sudo zypper in nvidia-video-G06 nvidia-gl-G06</span></span></code></pre></div><p><strong>Do read the guide carefully</strong>, though, as the instructions differ for different card models. <code>06</code> is what works for my card, something else might for yours.</p>
-<p>With the proper drivers installed, we also need <em>NVIDIA’s Container Toolkit</em> to make it work with Docker. The slight problem is that NVIDIA doesn’t package this toolkit for Tumbleweed, only Leap, so I’m taking some risks here to use a library for a not-exactly-compatible distribution. Well, if it works, it works.</p>
-<p>Using the <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-on-suse-15">guide for Leap 15</a>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo zypper ar <span class="s2">"https://nvidia.github.io/libnvidia-container/opensuse-leap15.1/libnvidia-container.repo"</span>
+  <body>
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">Snail's Shell</a> <a href="/posts/" class="nav-link">Posts</a> <a href="/about/" class="nav-link">About</a>
+        </nav>
+      </article>
+    </header>
+    <main>
+      <article id="post-main">
+        <h1>
+          Hardware Accelerated Jellyfin, Docker Composed, in openSUSE
+        </h1>
+        <div id="title-subtitle">
+          Get Hardware-accelerated encoding and decoding working with NVIDIA in Jellyfin running inside a Docker container in openSUSE
+        </div>
+        <hr>
+        <div class="metadata">
+          <time datetime="2023-03-12T00:00:00Z">12 Mar 2023</time> · 1245 words · 6 minutes read
+        </div>
+        <h2 id="what-is-it-all-about">
+          What is it all about?
+        </h2>
+        <p>
+          Here is what I’m trying to do: I want to watch TV at home. On my hard drive, is a collection of videos, and I’d like to stream them from my PC to mobile devices. The PC runs openSUSE, has an NVIDIA card, and Jellyfin—a sort of self-hosted Netflix—is my choice for managing the multimedia files and the streaming.
+        </p>
+        <h2 id="why-am-i-running-jellyfin-in-docker">
+          Why am I Running Jellyfin in Docker
+        </h2>
+        <p>
+          You can run Jellyfin just by itself, un-containerized, and tell it to use the dependencies that are installed by your OS’s package manager. It would be more space-efficient. You would need one less moving parts (Docker).
+        </p>
+        <p>
+          I run Jellyfin in a Docker container, mainly for the bundled FFmpeg. Jellyfin uses FFmpeg as the underlying tool that does all the heavy-lifting with regard to processing the videos. The problem is that FFmpeg is one of those programs which come with a huge number of compiling options, some of which are turned off by default, some can’t be enabled in certain distributions due to licensing issues. These can’t be tweaked at runtime. I can compile FFmpeg myself, but first, that defeats the purpose of saving space, and it would be a pain to keep it up to date and resolve compatibility issues between it, the OS, and Jellyfin. Using the official docker image will likely be less of a headache.
+        </p>
+        <p>
+          Another reason, applicable to software that deals with the file system, is that there’s less of a chance that a bug could affect unrelated files, since Docker only gives it access to specified directories. If Jellyfin messes up, at most my media folder gets obliterated, which I have a backup for, and which is easily rectified when the rest of the file system is left untouched.
+        </p>
+        <p>
+          At last, it’s easy to put constraints on how many cores Jellyfin can use. My machine has 16 cores, and really, to enable the transcoding of videos for one or two users, no more than 2 or 3 cores are necessary. However, for some reason, when I ran it bare metal, I was never able to enact that restriction, whether through Jellyfin’s settings, or some other system tools. Docker, on the other hand, can expose a selected set of cores, which as far as all the transcoding processes know, are all the cores existing.
+        </p>
+        <h2 id="installing-dependencies">
+          Installing Dependencies
+        </h2>
+        <p>
+          To install Docker and Docker Compose,
+        </p>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo zypper in docker docker-compose
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now docker</span></span></code></pre>
+        </div>
+        <p>
+          To install graphics card drivers (this configuration works only with Nvidia’s proprietary drivers), openSUSE has an <a href="https://en.opensuse.org/SDB:NVIDIA_drivers">official guide</a>, and I use what they call “the easy way”, which means adding a repository that is co-managed by NVIDIA and openSUSE, and installing the driver via <code>zypper</code>.
+        </p>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo zypper addrepo --refresh <span class="s2">"https://download.nvidia.com/opensuse/tumbleweed"</span> NVIDIA
+</span></span><span class="line"><span class="cl">sudo zypper in nvidia-video-G06 nvidia-gl-G06</span></span></code></pre>
+        </div>
+        <p>
+          <strong>Do read the guide carefully</strong>, though, as the instructions differ for different card models. <code>06</code> is what works for my card, something else might for yours.
+        </p>
+        <p>
+          With the proper drivers installed, we also need <em>NVIDIA’s Container Toolkit</em> to make it work with Docker. The slight problem is that NVIDIA doesn’t package this toolkit for Tumbleweed, only Leap, so I’m taking some risks here to use a library for a not-exactly-compatible distribution. Well, if it works, it works.
+        </p>
+        <p>
+          Using the <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-on-suse-15">guide for Leap 15</a>:
+        </p>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo zypper ar <span class="s2">"https://nvidia.github.io/libnvidia-container/opensuse-leap15.1/libnvidia-container.repo"</span>
 </span></span><span class="line"><span class="cl">sudo zypper ref
 </span></span><span class="line"><span class="cl">sudo zypper in nvidia-container-toolkit
-</span></span><span class="line"><span class="cl">sudo nvidia-ctk runtime configure --runtime<span class="o">=</span>docker</span></span></code></pre></div><p>And I restart the PC at this point, just to make sure that all the enabled services are running.</p>
-<h2 id="composing-docker-for-jellyfin">Composing Docker for Jellyfin</h2>
-<p>Here’s what the official Jellyfin guide says:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull jellyfin/jellyfin:latest
+</span></span><span class="line"><span class="cl">sudo nvidia-ctk runtime configure --runtime<span class="o">=</span>docker</span></span></code></pre>
+        </div>
+        <p>
+          And I restart the PC at this point, just to make sure that all the enabled services are running.
+        </p>
+        <h2 id="composing-docker-for-jellyfin">
+          Composing Docker for Jellyfin
+        </h2>
+        <p>
+          Here’s what the official Jellyfin guide says:
+        </p>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull jellyfin/jellyfin:latest
 </span></span><span class="line"><span class="cl">mkdir -p /srv/jellyfin/<span class="o">{</span>config,cache<span class="o">}</span>
 </span></span><span class="line"><span class="cl">docker run -d -v /srv/jellyfin/config:/config <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    -v /srv/jellyfin/cache:/cache <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    -v /media:/media <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    --net<span class="o">=</span>host <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    jellyfin/jellyfin:latest</span></span></code></pre></div><p>From the host OS’s perspective, the configuration files are stored in <code>/srv/jellyfin/config</code>, the caches in <code>/srv/jellyfin/cache</code>, the media files in a hypothetical <code>/media</code> directory. Just use wherever your media is (<code>-v /path/to/media:/media</code>). Inside Jellyfin’s configuration, all the media files are relative to <code>/media</code>.</p>
-<p>We have more parameters to pass in and to better manage these options, a compose file is simpler and cleaner in my opinion than a shell script:</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># docker-compose.yaml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    jellyfin/jellyfin:latest</span></span></code></pre>
+        </div>
+        <p>
+          From the host OS’s perspective, the configuration files are stored in <code>/srv/jellyfin/config</code>, the caches in <code>/srv/jellyfin/cache</code>, the media files in a hypothetical <code>/media</code> directory. Just use wherever your media is (<code>-v /path/to/media:/media</code>). Inside Jellyfin’s configuration, all the media files are relative to <code>/media</code>.
+        </p>
+        <p>
+          We have more parameters to pass in and to better manage these options, a compose file is simpler and cleaner in my opinion than a shell script:
+        </p>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># docker-compose.yaml</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.3"</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
@@ -126,126 +142,125 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="nt">devices</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                        </span>- <span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">nvidia</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                          </span><span class="nt">count</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                          </span><span class="nt">capabilities</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">gpu]</span></span></span></code></pre></div><p>To put a restriction on the cores used by Jellyfin, the option <code>cpuset</code> is used, and I set it to <code>13-15</code> which exposes the last three cores, sufficient for my personally use.</p>
-<p>To enable hardware acceleration, we give the container permission to use the cards with environment variables (these are for the NVIDIA Container Toolkit). <code>NVIDIA_DRIVER_CAPABILITIES=all</code> grants permission to all capabilities. <code>NVIDIA_VISIBLE_DEVICES=all</code> grants permission to all cards. You can fine-tune which card and what capabilities Jellyfin has access to, by following NVIDIA’s <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html">guide</a>.</p>
-<p>The rest of the options is the Docker Compose’s way of giving access of the GPU to the container <span class="citation" data-cites="dockerincComposeFileDeploy2023">[<a href="#ref-dockerincComposeFileDeploy2023" role="doc-biblioref">Docker
-Inc 2023</a>]</span>.</p>
-<h2 id="configuring-nvenc-and-nvdec-in-jellyfin">Configuring NVENC and NVDEC in Jellyfin</h2>
-<p>The model of my graphics card is RTX 2080, which can be checked by running:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvidia-smi -L  <span class="c1"># GPU 0: NVIDIA GeForce RTX 2080</span></span></span></code></pre></div><p>The encoding and decoding capabilities of the card can be checked on NVIDIA’s website: <a href="https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new">https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new</a>. For my 2080, I’ve gotten a good list of decode-able codecs (MPEG-1, MPEG-2, VC-1, VP8, VP9, H.264, H.265), and H.264 and H.265 for encoding, which are more than enough. The only thing missing is AV1 support, which is at the moment not that widely used, but whose popularity is on the rise.</p>
-<p>In Jellyfin, in the section <code>Dashboad&gt;Playback&gt;Transcoding</code>, set “Hardware acceleration” to “Nvidia NVENC”, check the boxes for the supported codecs listed above, and tick the options “Enable enhanced NVDEC decoder”, and “Enable hardware encoding”.</p>
-<p>It’s important to know which codec to enable, because Jellyfin blindly trusts the configuration, and won’t test whether the GPU is actually capable of doing a specific transcoding. If an option were to be mis-selected, there wouldn’t be a fallback, and the video would fail to load.</p>
-<h2 id="how-well-does-it-work">How well does it work?</h2>
-<p>Here’s the CPU usage—specifically the usage of core 13, 14, and 15—when playing a H.265 video, <strong>without</strong> hardware acceleration:</p>
-<figure>
-    <img src="/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp" alt="An image showing that the usages of the three cores are above 80% during transcoding" srcset="/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp 1862w" width="1862" height="162">
-
-    <figcaption>CPU usage without hardware acceleration</figcaption>
-  </figure><p>After enabling hardware acceleration, when playing the same video, the core usages drop to below 40%, and you can see from the <code>nvtop</code> (a tool which displays GPU usage), that a FFmpeg process is utilizing the GPU. Now, obviously this data is just a snapshot and is noisy, given all the other processes running on the machine. Although I don’t have a clean, isolated, long-lasting series of data showing the history of CPU usage, it is my observation that the drop is both significant and consistent through time. For one, it no longer causes FPS to fluctuate, when a video starts to play while I’m in the middle of a game.</p>
-<figure>
-    <img src="/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp" alt="An image showing that the three cores are utilized below 40%" srcset="/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp 1862w" width="1862" height="162" loading="lazy">
-
-    <figcaption>CPU usage with hardware acceleration</figcaption>
-  </figure><figure>
-    <img src="/2023/jellyfin-nvidia-docker/gpu-usage.webp" alt="An image showing GPU usage during transcoding, highlighted is a process of FFmpeg utilizing" srcset="/2023/jellyfin-nvidia-docker/gpu-usage-400w.webp 400w,/2023/jellyfin-nvidia-docker/gpu-usage-600w.webp 600w,/2023/jellyfin-nvidia-docker/gpu-usage-800w.webp 800w,/2023/jellyfin-nvidia-docker/gpu-usage-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/gpu-usage-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/gpu-usage.webp 1916w" width="1916" height="1218" loading="lazy">
-
-    <figcaption>GPU usage during transcoding</figcaption>
-  </figure><p>And of course, hardware acceleration isn’t just making the GPU busier and the CPU idler; another benefit is that, titularly, the video is transcoded faster. This isn’t noticeable in the middle of playing a video, because Jellyfin would, like any competent streaming software, transcode the next chunk when you are still watching the previous one.</p>
-<p>It shines when <strong>starting</strong> a video, and more importantly, when I’m <strong>jumping around</strong> the progress bar. What used to be a few seconds of spinning circles, is now only a slight punctuation. The improvement on snappiness simply by moving the work from CPU to GPU is, frankly speaking, astonishing.</p>
-
-
-  
-  <h2>References</h2>
-  <div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-dockerincComposeFileDeploy2023" class="csl-entry" role="listitem">
-<span class="smallcaps">Docker Inc</span>. 2023. Compose file deploy
-reference. <em>Docker Documentation</em>. <a href="https://docs.docker.com/compose/compose-file/deploy/">https://docs.docker.com/compose/compose-file/deploy/</a>.
-</div>
-<div id="ref-jellyfincommunityDownloadsJellyfin" class="csl-entry" role="listitem">
-<span class="smallcaps">Jellyfin Community</span>. Downloads | Jellyfin.
-<a href="https://jellyfin.org/downloads/docker/">https://jellyfin.org/downloads/docker/</a>.
-</div>
-<div id="ref-nvidiacorporationVideoEncodeDecode2020" class="csl-entry" role="listitem">
-<span class="smallcaps">NVIDIA Corporation</span>. 2020. Video Encode
-and Decode GPU Support Matrix. <em>NVIDIA Developer</em>. <a href="https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new">https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new</a>.
-</div>
-<div id="ref-nvidiacorporationInstallationGuideNVIDIA2023" class="csl-entry" role="listitem">
-<span class="smallcaps">NVIDIA Corporation</span>. 2023a. Installation
-Guide — NVIDIA Cloud Native Technologies documentation. <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html</a>.
-</div>
-<div id="ref-nvidiacorporationUserGuideNVIDIA2023" class="csl-entry" role="listitem">
-<span class="smallcaps">NVIDIA Corporation</span>. 2023b. User Guide —
-NVIDIA Cloud Native Technologies documentation. <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html</a>.
-</div>
-<div id="ref-opensusecontributors&amp;othersSDBNVIDIADrivers2020" class="csl-entry" role="listitem">
-<span class="smallcaps">openSUSE contributors &amp; others</span>.
-SDB:NVIDIA drivers - openSUSE Wiki. <a href="https://en.opensuse.org/SDB:NVIDIA_drivers">https://en.opensuse.org/SDB:NVIDIA_drivers</a>.
-</div>
-</div>
-  
-
-
-  <footer>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-          <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path>
-        </svg>
-           <a href="/tags/docker">Docker</a>, <a href="/tags/jellyfin">Jellyfin</a>, <a href="/tags/opensuse">openSUSE</a>, <a href="/tags/system-administration">system administration</a>, <a href="/tags/technology">technology</a>, <a href="/tags/nvidia">NVIDIA</a>, <a href="/tags/ffmpeg">FFmpeg</a>
-      </p>
-      
-    </section>
-
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2023.jellyfin-nvidia-docker@powersnail.com">comment.2023.jellyfin-nvidia-docker@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
-
-
-  </main><footer>
-  <article>
-    <nav class="column-center social-list">
-      <a href="/index.xml" class="social nav-link">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+</span></span></span><span class="line"><span class="cl"><span class="w">                          </span><span class="nt">capabilities</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">gpu]</span></span></span></code></pre>
+        </div>
+        <p>
+          To put a restriction on the cores used by Jellyfin, the option <code>cpuset</code> is used, and I set it to <code>13-15</code> which exposes the last three cores, sufficient for my personally use.
+        </p>
+        <p>
+          To enable hardware acceleration, we give the container permission to use the cards with environment variables (these are for the NVIDIA Container Toolkit). <code>NVIDIA_DRIVER_CAPABILITIES=all</code> grants permission to all capabilities. <code>NVIDIA_VISIBLE_DEVICES=all</code> grants permission to all cards. You can fine-tune which card and what capabilities Jellyfin has access to, by following NVIDIA’s <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html">guide</a>.
+        </p>
+        <p>
+          The rest of the options is the Docker Compose’s way of giving access of the GPU to the container <span class="citation" data-cites="dockerincComposeFileDeploy2023">[<a href="#ref-dockerincComposeFileDeploy2023" role="doc-biblioref">Docker Inc 2023</a>]</span>.
+        </p>
+        <h2 id="configuring-nvenc-and-nvdec-in-jellyfin">
+          Configuring NVENC and NVDEC in Jellyfin
+        </h2>
+        <p>
+          The model of my graphics card is RTX 2080, which can be checked by running:
+        </p>
+        <div class="highlight">
+          <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvidia-smi -L  <span class="c1"># GPU 0: NVIDIA GeForce RTX 2080</span></span></span></code></pre>
+        </div>
+        <p>
+          The encoding and decoding capabilities of the card can be checked on NVIDIA’s website: <a href="https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new">https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new</a>. For my 2080, I’ve gotten a good list of decode-able codecs (MPEG-1, MPEG-2, VC-1, VP8, VP9, H.264, H.265), and H.264 and H.265 for encoding, which are more than enough. The only thing missing is AV1 support, which is at the moment not that widely used, but whose popularity is on the rise.
+        </p>
+        <p>
+          In Jellyfin, in the section <code>Dashboad&gt;Playback&gt;Transcoding</code>, set “Hardware acceleration” to “Nvidia NVENC”, check the boxes for the supported codecs listed above, and tick the options “Enable enhanced NVDEC decoder”, and “Enable hardware encoding”.
+        </p>
+        <p>
+          It’s important to know which codec to enable, because Jellyfin blindly trusts the configuration, and won’t test whether the GPU is actually capable of doing a specific transcoding. If an option were to be mis-selected, there wouldn’t be a fallback, and the video would fail to load.
+        </p>
+        <h2 id="how-well-does-it-work">
+          How well does it work?
+        </h2>
+        <p>
+          Here’s the CPU usage—specifically the usage of core 13, 14, and 15—when playing a H.265 video, <strong>without</strong> hardware acceleration:
+        </p>
+        <figure>
+          <img src="/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp" alt="An image showing that the usages of the three cores are above 80% during transcoding" srcset="/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp 1862w" width="1862" height="162">
+          <figcaption>
+            CPU usage without hardware acceleration
+          </figcaption>
+        </figure>
+        <p>
+          After enabling hardware acceleration, when playing the same video, the core usages drop to below 40%, and you can see from the <code>nvtop</code> (a tool which displays GPU usage), that a FFmpeg process is utilizing the GPU. Now, obviously this data is just a snapshot and is noisy, given all the other processes running on the machine. Although I don’t have a clean, isolated, long-lasting series of data showing the history of CPU usage, it is my observation that the drop is both significant and consistent through time. For one, it no longer causes FPS to fluctuate, when a video starts to play while I’m in the middle of a game.
+        </p>
+        <figure>
+          <img src="/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp" alt="An image showing that the three cores are utilized below 40%" srcset="/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp 1862w" width="1862" height="162" loading="lazy">
+          <figcaption>
+            CPU usage with hardware acceleration
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="/2023/jellyfin-nvidia-docker/gpu-usage.webp" alt="An image showing GPU usage during transcoding, highlighted is a process of FFmpeg utilizing" srcset="/2023/jellyfin-nvidia-docker/gpu-usage-400w.webp 400w,/2023/jellyfin-nvidia-docker/gpu-usage-600w.webp 600w,/2023/jellyfin-nvidia-docker/gpu-usage-800w.webp 800w,/2023/jellyfin-nvidia-docker/gpu-usage-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/gpu-usage-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/gpu-usage.webp 1916w" width="1916" height="1218" loading="lazy">
+          <figcaption>
+            GPU usage during transcoding
+          </figcaption>
+        </figure>
+        <p>
+          And of course, hardware acceleration isn’t just making the GPU busier and the CPU idler; another benefit is that, titularly, the video is transcoded faster. This isn’t noticeable in the middle of playing a video, because Jellyfin would, like any competent streaming software, transcode the next chunk when you are still watching the previous one.
+        </p>
+        <p>
+          It shines when <strong>starting</strong> a video, and more importantly, when I’m <strong>jumping around</strong> the progress bar. What used to be a few seconds of spinning circles, is now only a slight punctuation. The improvement on snappiness simply by moving the work from CPU to GPU is, frankly speaking, astonishing.
+        </p>
+        <h2>
+          References
+        </h2>
+        <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+          <div id="ref-dockerincComposeFileDeploy2023" class="csl-entry" role="listitem">
+            <span class="smallcaps">Docker Inc</span>. 2023. Compose file deploy reference. <em>Docker Documentation</em>. <a href="https://docs.docker.com/compose/compose-file/deploy/">https://docs.docker.com/compose/compose-file/deploy/</a>.
+          </div>
+          <div id="ref-jellyfincommunityDownloadsJellyfin" class="csl-entry" role="listitem">
+            <span class="smallcaps">Jellyfin Community</span>. Downloads | Jellyfin. <a href="https://jellyfin.org/downloads/docker/">https://jellyfin.org/downloads/docker/</a>.
+          </div>
+          <div id="ref-nvidiacorporationVideoEncodeDecode2020" class="csl-entry" role="listitem">
+            <span class="smallcaps">NVIDIA Corporation</span>. 2020. Video Encode and Decode GPU Support Matrix. <em>NVIDIA Developer</em>. <a href="https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new">https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new</a>.
+          </div>
+          <div id="ref-nvidiacorporationInstallationGuideNVIDIA2023" class="csl-entry" role="listitem">
+            <span class="smallcaps">NVIDIA Corporation</span>. 2023a. Installation Guide — NVIDIA Cloud Native Technologies documentation. <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html</a>.
+          </div>
+          <div id="ref-nvidiacorporationUserGuideNVIDIA2023" class="csl-entry" role="listitem">
+            <span class="smallcaps">NVIDIA Corporation</span>. 2023b. User Guide — NVIDIA Cloud Native Technologies documentation. <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html">https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html</a>.
+          </div>
+          <div id="ref-opensusecontributors&amp;othersSDBNVIDIADrivers2020" class="csl-entry" role="listitem">
+            <span class="smallcaps">openSUSE contributors & others</span>. SDB:NVIDIA drivers - openSUSE Wiki. <a href="https://en.opensuse.org/SDB:NVIDIA_drivers">https://en.opensuse.org/SDB:NVIDIA_drivers</a>.
+          </div>
+        </div>
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/docker">Docker</a>, <a href="/tags/jellyfin">Jellyfin</a>, <a href="/tags/opensuse">openSUSE</a>, <a href="/tags/system-administration">system administration</a>, <a href="/tags/technology">technology</a>, <a href="/tags/nvidia">NVIDIA</a>, <a href="/tags/ffmpeg">FFmpeg</a>
+            </p>
+          </section>
+          <section>
+            <p>
+              Leave a comment via email: <a href="mailto:comment.2023.jellyfin-nvidia-docker@powersnail.com">comment.2023.jellyfin-nvidia-docker@powersnail.com</a>.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article>
+        <nav class="column-center social-list">
+          <a href="/index.xml" class="social nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="20" height="20" viewbox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <circle cx="5" cy="19" r="1"></circle>
           <path d="M4 4a16 16 0 0 1 16 16"></path>
-          <path d="M4 11a9 9 0 0 1 9 9"></path>
-        </svg>
-        RSS
-      </a>
-      <a href="https://github.com/PowerSnail/" class="social nav-link">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 11a9 9 0 0 1 9 9"></path></svg> RSS</a> <a href="https://github.com/PowerSnail/" class="social nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="20" height="20" viewbox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-        </svg>
-        Github
-      </a>
-      <a href="mailto:hj@powersnail.com" class="social nav-link">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg> Github</a> <a href="mailto:hj@powersnail.com" class="social nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="20" height="20" viewbox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-          <polyline points="3 7 12 13 21 7"></polyline>
-        </svg>
-        hj@powersnail.com
-      </a>
-      <a rel="me" href="https://c.im/@powersnail" class="social nav-link">
-        <svg class="icon" width="20" height="20" viewBox="0 0 74 79" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M73.7014 17.4323C72.5616 9.05152 65.1774 2.4469 56.424 1.1671C54.9472 0.950843 49.3518 0.163818 36.3901 0.163818H36.2933C23.3281 0.163818 20.5465 0.950843 19.0697 1.1671C10.56 2.41145 2.78877 8.34604 0.903306 16.826C-0.00357854 21.0022 -0.100361 25.6322 0.068112 29.8793C0.308275 35.9699 0.354874 42.0498 0.91406 48.1156C1.30064 52.1448 1.97502 56.1419 2.93215 60.0769C4.72441 67.3445 11.9795 73.3925 19.0876 75.86C26.6979 78.4332 34.8821 78.8603 42.724 77.0937C43.5866 76.8952 44.4398 76.6647 45.2833 76.4024C47.1867 75.8033 49.4199 75.1332 51.0616 73.9562C51.0841 73.9397 51.1026 73.9184 51.1156 73.8938C51.1286 73.8693 51.1359 73.8421 51.1368 73.8144V67.9366C51.1364 67.9107 51.1302 67.8852 51.1186 67.862C51.1069 67.8388 51.0902 67.8184 51.0695 67.8025C51.0489 67.7865 51.0249 67.7753 50.9994 67.7696C50.9738 67.764 50.9473 67.7641 50.9218 67.7699C45.8976 68.9569 40.7491 69.5519 35.5836 69.5425C26.694 69.5425 24.3031 65.3699 23.6184 63.6327C23.0681 62.1314 22.7186 60.5654 22.5789 58.9744C22.5775 58.9477 22.5825 58.921 22.5934 58.8965C22.6043 58.8721 22.621 58.8505 22.6419 58.8336C22.6629 58.8167 22.6876 58.8049 22.714 58.7992C22.7404 58.7934 22.7678 58.794 22.794 58.8007C27.7345 59.9796 32.799 60.5746 37.8813 60.5733C39.1036 60.5733 40.3223 60.5733 41.5447 60.5414C46.6562 60.3996 52.0437 60.1408 57.0728 59.1694C57.1983 59.1446 57.3237 59.1233 57.4313 59.0914C65.3638 57.5847 72.9128 52.8555 73.6799 40.8799C73.7086 40.4084 73.7803 35.9415 73.7803 35.4523C73.7839 33.7896 74.3216 23.6576 73.7014 17.4323ZM61.4925 47.3144H53.1514V27.107C53.1514 22.8528 51.3591 20.6832 47.7136 20.6832C43.7061 20.6832 41.6988 23.2499 41.6988 28.3194V39.3803H33.4078V28.3194C33.4078 23.2499 31.3969 20.6832 27.3894 20.6832C23.7654 20.6832 21.9552 22.8528 21.9516 27.107V47.3144H13.6176V26.4937C13.6176 22.2395 14.7157 18.8598 16.9118 16.3545C19.1772 13.8552 22.1488 12.5719 25.8373 12.5719C30.1064 12.5719 33.3325 14.1955 35.4832 17.4394L37.5587 20.8853L39.6377 17.4394C41.7884 14.1955 45.0145 12.5719 49.2765 12.5719C52.9614 12.5719 55.9329 13.8552 58.2055 16.3545C60.4017 18.8574 61.4997 22.2371 61.4997 26.4937L61.4925 47.3144Z" fill="inherit"></path>
-        </svg>
-        @powersnail@c.im
-      </a>
-    </nav><div>© PowerSnail 2023</div>
-  </article>
-</footer>
-
-
-
-</body></html>
+          <polyline points="3 7 12 13 21 7"></polyline></svg> hj@powersnail.com</a> <a rel="me" href="https://c.im/@powersnail" class="social nav-link"><svg class="icon" width="20" height="20" viewbox="0 0 74 79" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M73.7014 17.4323C72.5616 9.05152 65.1774 2.4469 56.424 1.1671C54.9472 0.950843 49.3518 0.163818 36.3901 0.163818H36.2933C23.3281 0.163818 20.5465 0.950843 19.0697 1.1671C10.56 2.41145 2.78877 8.34604 0.903306 16.826C-0.00357854 21.0022 -0.100361 25.6322 0.068112 29.8793C0.308275 35.9699 0.354874 42.0498 0.91406 48.1156C1.30064 52.1448 1.97502 56.1419 2.93215 60.0769C4.72441 67.3445 11.9795 73.3925 19.0876 75.86C26.6979 78.4332 34.8821 78.8603 42.724 77.0937C43.5866 76.8952 44.4398 76.6647 45.2833 76.4024C47.1867 75.8033 49.4199 75.1332 51.0616 73.9562C51.0841 73.9397 51.1026 73.9184 51.1156 73.8938C51.1286 73.8693 51.1359 73.8421 51.1368 73.8144V67.9366C51.1364 67.9107 51.1302 67.8852 51.1186 67.862C51.1069 67.8388 51.0902 67.8184 51.0695 67.8025C51.0489 67.7865 51.0249 67.7753 50.9994 67.7696C50.9738 67.764 50.9473 67.7641 50.9218 67.7699C45.8976 68.9569 40.7491 69.5519 35.5836 69.5425C26.694 69.5425 24.3031 65.3699 23.6184 63.6327C23.0681 62.1314 22.7186 60.5654 22.5789 58.9744C22.5775 58.9477 22.5825 58.921 22.5934 58.8965C22.6043 58.8721 22.621 58.8505 22.6419 58.8336C22.6629 58.8167 22.6876 58.8049 22.714 58.7992C22.7404 58.7934 22.7678 58.794 22.794 58.8007C27.7345 59.9796 32.799 60.5746 37.8813 60.5733C39.1036 60.5733 40.3223 60.5733 41.5447 60.5414C46.6562 60.3996 52.0437 60.1408 57.0728 59.1694C57.1983 59.1446 57.3237 59.1233 57.4313 59.0914C65.3638 57.5847 72.9128 52.8555 73.6799 40.8799C73.7086 40.4084 73.7803 35.9415 73.7803 35.4523C73.7839 33.7896 74.3216 23.6576 73.7014 17.4323ZM61.4925 47.3144H53.1514V27.107C53.1514 22.8528 51.3591 20.6832 47.7136 20.6832C43.7061 20.6832 41.6988 23.2499 41.6988 28.3194V39.3803H33.4078V28.3194C33.4078 23.2499 31.3969 20.6832 27.3894 20.6832C23.7654 20.6832 21.9552 22.8528 21.9516 27.107V47.3144H13.6176V26.4937C13.6176 22.2395 14.7157 18.8598 16.9118 16.3545C19.1772 13.8552 22.1488 12.5719 25.8373 12.5719C30.1064 12.5719 33.3325 14.1955 35.4832 17.4394L37.5587 20.8853L39.6377 17.4394C41.7884 14.1955 45.0145 12.5719 49.2765 12.5719C52.9614 12.5719 55.9329 13.8552 58.2055 16.3545C60.4017 18.8574 61.4997 22.2371 61.4997 26.4937L61.4925 47.3144Z" fill="inherit"></path></svg> @powersnail@c.im</a>
+        </nav>
+        <div>
+          © PowerSnail 2023
+        </div>
+      </article>
+    </footer>
+  </body>
+</html>
