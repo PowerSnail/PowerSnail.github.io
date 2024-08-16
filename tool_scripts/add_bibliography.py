@@ -15,7 +15,7 @@ def main(input_file: str):
     md_file = bib_enabled.attrs.get("data-input-file")
 
     bib_output = sp.run(
-        f"pandoc --citeproc {md_file} --csl tool_scripts/acm-siggraph.csl -t html",
+        f"pandoc --citeproc {md_file} --csl tool_scripts/chicago-author-date-no-em-dash.csl -t html",
         shell=True,
         capture_output=True,
     ).stdout.decode("utf-8")

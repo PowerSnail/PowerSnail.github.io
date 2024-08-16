@@ -91,6 +91,7 @@ code {
   white-space: pre;
   font-size: 0.7em;
   padding: 0;
+  font-family: "Fira Code", monospace;
 }
 
 /* Filling containers */
@@ -180,10 +181,6 @@ dd::before {
 
 blockquote {
   margin: 0 16px;
-}
-
-code {
-  text-wrap: wrap;
 }
 
 /* Specific tweaks for non-standard elements */
@@ -336,7 +333,13 @@ body > footer {
 }
 
 .csl-entry {
-  margin: 16px;
+  margin-top: 16px;
+  text-indent: 2em hanging;
+}
+
+.csl-entry:target {
+  background-color: var(--translucent);
+  
 }
 
 .citation {
