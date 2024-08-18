@@ -90,8 +90,13 @@ img {
 code {
   white-space: pre;
   font-size: 0.7em;
-  padding: 0;
+  background-color: var(--background-alt);
+  padding: 0 0.5ch;
   font-family: "Fira Code", monospace;
+}
+
+pre code {
+  padding: 0;
 }
 
 /* Figure */
