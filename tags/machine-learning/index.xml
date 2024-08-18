@@ -29,7 +29,10 @@
     <content type="html">&lt;p&gt;Standing opposed to OpenAI&amp;rsquo;s DALL-E and Midjourney, is the open sourced model Stable Diffusion&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Some of the images it painted are genuinely impressive, coherent, and free of artifacts (at least at first glance). But those are almost always the result of prompt engineering: an Edisonian process of random search through the infinite linguistic space. Or in other words, people trying different words until they get a desirable result.&lt;/p&gt;
 &lt;p&gt;For instance, there&amp;rsquo;s a collection of &amp;ldquo;magic words&amp;rdquo; that improves the quality of the model&amp;rsquo;s output: &amp;ldquo;4k&amp;rdquo;, &amp;ldquo;detailed&amp;rdquo;, etc.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; The model associates these key words with the high quality images in its training set, because that&amp;rsquo;s how people label their own work, and thus tries to be close to those images.&lt;/p&gt;
 &lt;p&gt;What happens if you don&amp;rsquo;t give it a particularly graphic sentence? How does it deal with the abstract, the metaphysical, and the poetic?&lt;/p&gt;
-&lt;h2 id=&#34;literatures-quotes-and-illustrations&#34;&gt;Literatures, Quotes, and Illustrations&lt;/h2&gt;
+&lt;h2 id=&#34;literatures-quotes-and-illustrations&#34;&gt;
+  Literatures, Quotes, and Illustrations
+  &lt;a href=&#34;#literatures-quotes-and-illustrations&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;It gives you the quote right back:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
@@ -52,7 +55,10 @@
   &lt;/figure&gt;&lt;p&gt;If the lower classes don&amp;rsquo;t set us a good example what on earth is the use of them? They seem, as a class, to have absolutely no sense of moral responsibility.&lt;/p&gt;
 &lt;p&gt;&amp;ndash;Oscar Wilde&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Now, this is just a silly experimentation. The model is trained on descriptions of images. It&amp;rsquo;s not surprising that it wouldn&amp;rsquo;t do well on metaphysical epigrams depicting no concrete objects. In fact, if you give me drawing prompt &amp;ldquo;Questions are never indiscreet; answers sometimes are&amp;rdquo;, I&amp;rsquo;d probably ask you clarify just what the hell you want me to draw.&lt;/p&gt;
-&lt;h2 id=&#34;where-is-the-cicada&#34;&gt;Where is the cicada?&lt;/h2&gt;
+&lt;h2 id=&#34;where-is-the-cicada&#34;&gt;
+  Where is the cicada?
+  &lt;a href=&#34;#where-is-the-cicada&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;figure&gt;
     &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;
@@ -100,7 +106,10 @@
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Photo.&lt;/p&gt;
 &lt;p&gt;Still, the cicada is nowhere to be found. And if you look carefully, you&amp;rsquo;ll notice that even &amp;ldquo;berry&amp;rdquo; isn&amp;rsquo;t always there. The model concentrates on &amp;ldquo;waxwings&amp;rdquo;, and that&amp;rsquo;s the only thing it seems to &lt;em&gt;care&lt;/em&gt; about, if you&amp;rsquo;ll excuse the inaccurately personified verb. Perhaps the model has a bias in its training set, some objects being more likely to appear than others, and thus carrying a heavier weight. An image with waxwings, berries, and a cicada is less likely than an image with just a waxwing, even given a prompt that includes all three elements. Is this a fundamental limitation on the model, or is it a deficiency in the training data?&lt;/p&gt;
-&lt;h2 id=&#34;last-word&#34;&gt;Last word&lt;/h2&gt;
+&lt;h2 id=&#34;last-word&#34;&gt;
+  Last word
+  &lt;a href=&#34;#last-word&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Stable Diffusion, like many other machine learning models dabbling in art, astonishes the programmer part of my brain. It&amp;rsquo;s utterly ridiculous that we can prompt the program to generate coherent images, without hard-coding any rule about what it means for an image to be coherent. We give zero &lt;em&gt;a priori&lt;/em&gt; to the model on what constitutes a photo or an oil painting, or the anatomy of waxwings, or the color of trees and leaves, and yet, it does show a level of understanding of all those concepts. Put aside the thorny question of &amp;ldquo;how do you define &amp;lsquo;understand&amp;rsquo;?&amp;rdquo;, if we merely judge the program by its performance, it is capable of generating images where a human would recognize the objects, styles, lighting conditions, etc. to be the same as what the prompt describes. And again, without codifying such objects or styles by a human.&lt;/p&gt;
 &lt;p&gt;But at the same time, the other parts of my brain still smirks a bit at the results. When you jump even slightly out of the box, Stable Diffusion starts to show its limits. And even within the box, it takes a lot of word tweaking and cherry-picking to get some useful images out of the model. A lot of hobbyists left the model to run overnight on a long list of prompts. In other areas, the music generated by machine learnings are still quite bad, and seems to go from nowhere to nowhere, if we judge the music entirely on its own merit. The same goes for text generation.&lt;/p&gt;
 &lt;p&gt;It is quite disquieting to see just how close we are to computer programs surpassing human in the field of creative arts, and perhaps even programming itself. We are not there yet, but I&amp;rsquo;m willing to bet that it&amp;rsquo;s going to happen within the lifetime of my generation. Where would that leave us? To become the Olympians of the machines and reap the fruit of their labor? Or to compete with the machines, and eventually&amp;mdash;inevitably&amp;mdash;become obsolete? Will the society become more equal as the rising productivity and efficiency alleviate scarcity, or will the divide deepen between the wealthy and powerful, and the underprivileged?&lt;/p&gt;

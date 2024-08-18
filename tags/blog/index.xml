@@ -27,16 +27,37 @@
     <id>https://powersnail.com/2022/test-md-page/</id>
     <summary type="html">When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon</summary>
     <content type="html">&lt;p&gt;When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon to break pages that you are not looking. Maybe tables lose their responsiveness, sentences are too close together, empty pages look weird, etc. I&amp;rsquo;ve written this document to test some common pitfalls that I experienced when I was tweaking my own blog.&lt;/p&gt;
-&lt;h2 id=&#34;this-is-a-second-level-heading&#34;&gt;This is a second-level heading&lt;/h2&gt;
-&lt;h3 id=&#34;this-is-a-third-level-heading&#34;&gt;This is a third-level heading&lt;/h3&gt;
-&lt;h4 id=&#34;this-is-a-fourth-level-heading&#34;&gt;This is a fourth-level heading&lt;/h4&gt;
+&lt;h2 id=&#34;this-is-a-second-level-heading&#34;&gt;
+  This is a second-level heading
+  &lt;a href=&#34;#this-is-a-second-level-heading&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;this-is-a-third-level-heading&#34;&gt;
+  This is a third-level heading
+  &lt;a href=&#34;#this-is-a-third-level-heading&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h4 id=&#34;this-is-a-fourth-level-heading&#34;&gt;
+  This is a fourth-level heading
+  &lt;a href=&#34;#this-is-a-fourth-level-heading&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;A paragraph under a fourth level heading. There&amp;rsquo;s really no need to get to this level of heading, however.&lt;/p&gt;
-&lt;h5 id=&#34;this-is-a-fifth-level-heading&#34;&gt;This is a fifth-level heading&lt;/h5&gt;
+&lt;h5 id=&#34;this-is-a-fifth-level-heading&#34;&gt;
+  This is a fifth-level heading
+  &lt;a href=&#34;#this-is-a-fifth-level-heading&#34;&gt;#####&lt;/a&gt;
+&lt;/h5&gt;
 &lt;p&gt;A paragraph under a fifth level heading.&lt;/p&gt;
-&lt;h6 id=&#34;this-is-a-sixth-level-heading&#34;&gt;This is a sixth-level heading&lt;/h6&gt;
+&lt;h6 id=&#34;this-is-a-sixth-level-heading&#34;&gt;
+  This is a sixth-level heading
+  &lt;a href=&#34;#this-is-a-sixth-level-heading&#34;&gt;######&lt;/a&gt;
+&lt;/h6&gt;
 &lt;p&gt;A paragraph under a sixth level heading.&lt;/p&gt;
-&lt;h3 id=&#34;a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading&#34;&gt;A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading&lt;/h3&gt;
-&lt;h2 id=&#34;shapes-of-paragraphs&#34;&gt;Shapes of paragraphs&lt;/h2&gt;
+&lt;h3 id=&#34;a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading&#34;&gt;
+  A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading
+  &lt;a href=&#34;#a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h2 id=&#34;shapes-of-paragraphs&#34;&gt;
+  Shapes of paragraphs
+  &lt;a href=&#34;#shapes-of-paragraphs&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;This is a long paragraph. (Content from &lt;em&gt;Pride and Prejudice&lt;/em&gt;)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;This is a succession of paragraphs that each contains a short sentence, but not with an extra white line. According to convention, they should be rendered as a single paragraph.&lt;/strong&gt;&lt;/p&gt;
@@ -60,10 +81,16 @@ The moon wrinkled in the water.&lt;/p&gt;
 &lt;p&gt;Midnight shakes the memory&lt;/p&gt;
 &lt;p&gt;As a madman shakes a dead geranium.&lt;/p&gt;
 &lt;p&gt;by T.S. Eliot, &lt;em&gt;Rhapsody on a Windy Night&lt;/em&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;h2 id=&#34;length-of-line&#34;&gt;Length of line&lt;/h2&gt;
+&lt;h2 id=&#34;length-of-line&#34;&gt;
+  Length of line
+  &lt;a href=&#34;#length-of-line&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;One line should contain about 2~3 alphabets&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 &lt;p&gt;abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz&lt;mark&gt;abcdefghijklmnopqrstuvwxyz&lt;/mark&gt;&lt;/p&gt;
-&lt;h2 id=&#34;punctuations&#34;&gt;Punctuations&lt;/h2&gt;
+&lt;h2 id=&#34;punctuations&#34;&gt;
+  Punctuations
+  &lt;a href=&#34;#punctuations&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Comma, period, question marks and exclamation marks.&lt;/p&gt;
 &lt;p&gt;&lt;mark&gt;Is this a question mark? Yes!&lt;/mark&gt;&lt;/p&gt;
 &lt;p&gt;Quotation marks should have the correct orientations:&lt;/p&gt;
@@ -90,9 +117,15 @@ The moon wrinkled in the water.&lt;/p&gt;
 &lt;p&gt;Slashes&lt;/p&gt;
 &lt;p&gt;&lt;mark&gt;Slash/forward\backward&lt;/mark&gt;&lt;/p&gt;
 &lt;p&gt;Foot and Inches: &lt;mark&gt;12&#39; 13&amp;quot;&lt;/mark&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ligatures&#34;&gt;Ligatures&lt;/h2&gt;
+&lt;h2 id=&#34;ligatures&#34;&gt;
+  Ligatures
+  &lt;a href=&#34;#ligatures&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;There, figure, fft, ffi.&lt;/p&gt;
-&lt;h2 id=&#34;block-quote&#34;&gt;Block quote&lt;/h2&gt;
+&lt;h2 id=&#34;block-quote&#34;&gt;
+  Block quote
+  &lt;a href=&#34;#block-quote&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Blockquote directly under a title&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -109,7 +142,10 @@ Without extra line in between&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
+&lt;h2 id=&#34;images&#34;&gt;
+  Images
+  &lt;a href=&#34;#images&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Here is an inline image &lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
@@ -156,7 +192,10 @@ Without extra line in between&lt;/p&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Some Markdown parser will always treat images as an inline element. There&amp;rsquo;s nothing an SSG or theme maker can do. So this &lt;code&gt;figure&lt;/code&gt; is written as raw HTML.&lt;/p&gt;
-&lt;h2 id=&#34;lists&#34;&gt;Lists&lt;/h2&gt;
+&lt;h2 id=&#34;lists&#34;&gt;
+  Lists
+  &lt;a href=&#34;#lists&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;A numbered list&lt;/li&gt;
 &lt;li&gt;With many elements&lt;/li&gt;
@@ -204,14 +243,20 @@ line item&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;And see if the rendering is sensible&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;code-blocks&#34;&gt;Code blocks&lt;/h2&gt;
+&lt;h2 id=&#34;code-blocks&#34;&gt;
+  Code blocks
+  &lt;a href=&#34;#code-blocks&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Block with no language set.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;block_with_a_language&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indent&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;multi&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;level&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;space&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Block with no language set that is super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;A block with a super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long line&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Block with no language set that is super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;A block with a super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long line&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tables&#34;&gt;
+  Tables
+  &lt;a href=&#34;#tables&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;A simple table with very few columns and rows:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -329,7 +374,10 @@ line item&lt;/li&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;some-random-tests&#34;&gt;Some random tests&lt;/h2&gt;
+&lt;h2 id=&#34;some-random-tests&#34;&gt;
+  Some random tests
+  &lt;a href=&#34;#some-random-tests&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Language: 中文测试&lt;/li&gt;
 &lt;li&gt;HTML embeded: &lt;br&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
@@ -366,14 +414,20 @@ line item&lt;/li&gt;
     <updated>Wed, 12 Jan 2022 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2022/hugo-mvp-css/</id>
-    <summary type="html">Theme-less Hugo As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else.</summary>
-    <content type="html">&lt;h2 id=&#34;theme-less-hugo&#34;&gt;Theme-less Hugo&lt;/h2&gt;
+    <summary type="html">Theme-less Hugo ## As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else.</summary>
+    <content type="html">&lt;h2 id=&#34;theme-less-hugo&#34;&gt;
+  Theme-less Hugo
+  &lt;a href=&#34;#theme-less-hugo&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else. From WordPress to Jekyll to Hugo, no theme ever stopped me from tinkering with the underlying templates and CSS, during which, the theme inevitably becomes more coupled with my blog and content. This is because while the templates are usually generic enough for the body of blog articles, they are often quite specific on other elements: about, headers, footers, navigation bars, etc. And to customize those elements, I&amp;rsquo;m practically re-writing the website.&lt;/p&gt;
 &lt;p&gt;When I started with Hugo, I chose the theme &lt;a href=&#34;https://github.com/mavidser/hugo-rocinante&#34;&gt;Rocinante&lt;/a&gt;, for its clean appearance, and partially for its name, which comes from one of my favorite novels of all time. I forked the theme, and kept maintaining two repositories: the blog itself, and the theme. As more modifications were made, the two codebases tangled with each other so deeply, that I often wonder where I should put a certain element.&lt;/p&gt;
 &lt;p&gt;I decided to go theme-less, when the theme no longer bear any resemblance to the original Rocinante. There&amp;rsquo;s no point in maintaining two sets of code if they cannot be decoupled.&lt;/p&gt;
 &lt;p&gt;Theme-less Hugo is easy: I just needed the templates, everything in the &lt;code&gt;layouts&lt;/code&gt; directory, to scaffold the site. So, I copied the skeleton code&amp;mdash;&lt;code&gt;layouts&lt;/code&gt;, and &lt;code&gt;assets&lt;/code&gt; for the styles&amp;mdash;into my blog, and removed the &lt;code&gt;themes&lt;/code&gt; directory.&lt;/p&gt;
 &lt;p&gt;In fact, I think if one has finished theme-shopping, and would like to start making customizations, the first thing to do is to copy the theme into their main project, and delete &lt;code&gt;themes&lt;/code&gt;. It makes the website whole, the workflow more coherent, the workspace better organized, the commit history saner.&lt;/p&gt;
-&lt;h2 id=&#34;semantic-html-and-mvpcss&#34;&gt;Semantic HTML and MVP.CSS&lt;/h2&gt;
+&lt;h2 id=&#34;semantic-html-and-mvpcss&#34;&gt;
+  Semantic HTML and MVP.CSS
+  &lt;a href=&#34;#semantic-html-and-mvpcss&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;I have very little need for advanced topography or animations. My blog is just a bunch of static files hosted on GitHub Pages; nothing Fancy.&lt;/p&gt;
 &lt;p&gt;This is, therefore, a very suitable use case for a classless CSS framework like &lt;a href=&#34;https://andybrewer.github.io/mvp/&#34;&gt;MVP.CSS&lt;/a&gt;. Overall, I think MVP does a fantastic job.&lt;/p&gt;
 &lt;p&gt;A few things that I don&amp;rsquo;t like about it:&lt;/p&gt;
@@ -401,12 +455,18 @@ line item&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;markup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;markup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;highlight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;noClasses&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I then colored the website with a dark banner image of Bach&amp;rsquo;s manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with &lt;a href=&#34;https://bottosson.github.io/posts/oklab/&#34;&gt;Oklab&lt;/a&gt; color space, and it seems to be passing accessibility tests so far. It might be a total overkill though, since a few colors on the spectrum are used. But what is a personal project without a few overkills?&lt;/p&gt;
-&lt;h2 id=&#34;mathjax-and-a-little-grievance-of-hugo&#34;&gt;MathJax, and a Little Grievance of Hugo&lt;/h2&gt;
+&lt;h2 id=&#34;mathjax-and-a-little-grievance-of-hugo&#34;&gt;
+  MathJax, and a Little Grievance of Hugo
+  &lt;a href=&#34;#mathjax-and-a-little-grievance-of-hugo&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;The only JavaScript I use is &lt;a href=&#34;https://www.mathjax.org/&#34;&gt;MathJax&lt;/a&gt;. I&amp;rsquo;ve been considering to use its server-side rendering, but it seems that at the moment of writing this blog, Hugo does not support its use.&lt;/p&gt;
 &lt;p&gt;In fact, Hugo does not support running its output HTML through an arbitrary command, and I think it&amp;rsquo;s a shame. There is a limit to what the &lt;code&gt;replace&lt;/code&gt; and &lt;code&gt;replaceRE&lt;/code&gt; could accomplish, which can be supplemented by custom filters written by other users.&lt;/p&gt;
 &lt;p&gt;For instance, math equations can be easily rendered with LaTeX and converted to SVG. This will enable the embedding of arbitrary Tex elements, not just what MathJax supports, and at the same time, eliminates the need to bundle a JS library for client-side rendering.&lt;/p&gt;
 &lt;p&gt;One thing that I can do is to add an extra step to &lt;code&gt;hugo build&lt;/code&gt;, and iterate through all the output HTML with whatever post-processing I want. But I do hope that this could be integrated into Hugo, so I don&amp;rsquo;t have to further butcher the GitHub Action file.&lt;/p&gt;
-&lt;h2 id=&#34;final-thoughts&#34;&gt;Final Thoughts&lt;/h2&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;
+  Final Thoughts
+  &lt;a href=&#34;#final-thoughts&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;You can find all the code to my blog &lt;a href=&#34;https://github.com/PowerSnail/PowerSnail.github.io&#34;&gt;here&lt;/a&gt;. My modifications to the theme, up to the point that I moved everything into the main repository, can be found &lt;a href=&#34;https://github.com/PowerSnail/hugo-rocinante&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </content>
     <category>posts</category>

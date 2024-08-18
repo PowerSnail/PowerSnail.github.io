@@ -42,10 +42,10 @@
         </div>
         <hr>
         <div class="metadata">
-          <time datetime="2016-11-15T00:00:00Z">15 Nov 2016</time> · 1834 words · 9 minutes read
+          <time datetime="2016-11-15T00:00:00Z">15 Nov 2016</time> · 1865 words · 9 minutes read
         </div>
         <h2 id="overview">
-          Overview
+          Overview <a href="#overview">##</a>
         </h2>
         <p>
           A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called <em>control transfer</em>. The sequence of transfers is called <em>control flow</em>. The control flow is smooth when the transitions are always to the adjacent address. Operations such as <code>jump</code>, <code>call</code>, etc. will cause the control flow to be abrupt.
@@ -60,10 +60,10 @@
           </li>
         </ul>
         <h2 id="exceptions">
-          Exceptions
+          Exceptions <a href="#exceptions">##</a>
         </h2>
         <h3 id="definition">
-          Definition
+          Definition <a href="#definition">###</a>
         </h3>
         <p>
           An <em>exception</em> is an abrupt change in the control flow in response to some change in the processor’s state.
@@ -72,7 +72,7 @@
           An <em>event</em> is a change in the processor’s state.
         </p>
         <h3 id="exception-happening">
-          Exception Happening
+          Exception Happening <a href="#exception-happening">###</a>
         </h3>
         <p>
           When the application is executing instruction $I_{curr}$, there is an event occurred.
@@ -89,7 +89,7 @@
           </li>
         </ol>
         <h3 id="exception-handling">
-          Exception Handling
+          Exception Handling <a href="#exception-handling">###</a>
         </h3>
         <p>
           The handling of exception involves both hardware and software.
@@ -143,7 +143,7 @@
           The return is a special operation <code>return from interrupt</code>, which restores kernel mode to user mode.
         </p>
         <h3 id="class-of-exceptions">
-          Class of Exceptions
+          Class of Exceptions <a href="#class-of-exceptions">###</a>
         </h3>
         <div class="table-wrapper">
           <table>
@@ -230,13 +230,13 @@
           <em>Async</em>: means that the event (IO Interrupt) is not caused by execution of any instruction, but rather an asynchronous signal that an external IO device sends to the processor.
         </p>
         <h4 id="interrupt-handling">
-          Interrupt Handling
+          Interrupt Handling <a href="#interrupt-handling">####</a>
         </h4>
         <p>
           The handling of interrupt runs independent of the program. It is not caused by, has no impact on the current program. The processor notices the interrupt pin is set, and jumps to the interrupt handler. The handler will return to $I_{next}$, as though nothing has happened.
         </p>
         <h4 id="traps-and-system-calls">
-          Traps and System Calls
+          Traps and System Calls <a href="#traps-and-system-calls">####</a>
         </h4>
         <p>
           Traps are intentional exceptions, likely to help interface between user program and the kernel, which is a <em>system call</em>. Trap handlers also return to $I_{next}$ like interrupt handlers.
@@ -262,19 +262,19 @@
           Remember that syscall runs in kernal mode and is thus different from normal procedure calls.
         </p>
         <h4 id="faults">
-          Faults
+          Faults <a href="#faults">####</a>
         </h4>
         <p>
           Faults are error conditions that a handler might be able to correct. If the error is corrected, the handler will return to $I_{curr}$ (the faulting instruction), so it is re-executed. Otherwise, the handler will return to an abort routine to terminate the program
         </p>
         <h4 id="aborts">
-          Aborts
+          Aborts <a href="#aborts">####</a>
         </h4>
         <p>
           Aborts result from unrecoverable fatal errors, for example, DRAM bits corruption.
         </p>
         <h3 id="example-exceptions-in-linuxx86-64-systems">
-          Example Exceptions in Linux/x86-64 Systems
+          Example Exceptions in Linux/x86-64 Systems <a href="#example-exceptions-in-linuxx86-64-systems">###</a>
         </h3>
         <ul>
           <li>
@@ -489,7 +489,7 @@
           </table>
         </div>
         <h3 id="c-and-syscalls">
-          C and Syscalls
+          C and Syscalls <a href="#c-and-syscalls">###</a>
         </h3>
         <p>
           C/C++ programs can call syscall directly. For example,
@@ -527,7 +527,7 @@
 </span></span><span class="line"><span class="cl">    <span class="nf">syscall</span></span></span></code></pre>
         </div>
         <h2 id="processes">
-          Processes
+          Processes <a href="#processes">##</a>
         </h2>
         <p>
           The concept of <em>process</em> provides the illusion of
@@ -563,7 +563,7 @@
           These states are the <em>context</em> of the program.
         </p>
         <h3 id="logical-control-flow">
-          Logical Control Flow
+          Logical Control Flow <a href="#logical-control-flow">###</a>
         </h3>
         <p>
           We perceive the illusionary control flow, that registers, memory, etc. are changed step by step completely according to the instruction set of our program. This control flow is called <strong>Logical Control Flow</strong>.
@@ -575,25 +575,25 @@
           This short time period is called <em>time slice</em>.
         </p>
         <h3 id="concurrent-flows">
-          Concurrent Flows
+          Concurrent Flows <a href="#concurrent-flows">###</a>
         </h3>
         <p>
           A logical flow whose execution overlaps in time with another flow is called a concurrent flow. Two flows run <em>concurrently</em>.
         </p>
         <h3 id="parallel-flows">
-          Parallel Flows
+          Parallel Flows <a href="#parallel-flows">###</a>
         </h3>
         <p>
           The concurrent flows that run on different processor cores or computers are called <em>parallel flows</em>.
         </p>
         <h3 id="private-address-space">
-          Private Address Space
+          Private Address Space <a href="#private-address-space">###</a>
         </h3>
         <p>
           The illusion that the program has exclusive use of address space is provided by <em>private address space</em>. This “space” of addresses cannot be read/written by other programs, and therefore is exclusive to the program.
         </p>
         <h3 id="user-mode-vs-kernel-mode">
-          User Mode vs Kernel Mode
+          User Mode vs Kernel Mode <a href="#user-mode-vs-kernel-mode">###</a>
         </h3>
         <p>
           The OS restricts each process what instructions can be executed and what memory space can be accessed. The processor provides the capability with a <code>mode bit</code>.
@@ -652,13 +652,13 @@
           Privileged Instruction: <code>syscall</code> functions, including halt, change mode, I/O op, etc.
         </p>
         <h4 id="proc">
-          /proc
+          /proc <a href="#proc">####</a>
         </h4>
         <p>
           <code>/proc</code> is a Linux file system mount of the kernal data structure. It allows the user to access general system attributes.
         </p>
         <h3 id="context-switch">
-          Context Switch
+          Context Switch <a href="#context-switch">###</a>
         </h3>
         <p>
           The kernel maintains a context for each process. The context is the state that the kernel needs to restart a preempted process.
@@ -694,7 +694,7 @@
           The kernel can decide to switch when the process is waiting for a read. The IO device can take care of the work, so the kernel will switch to another process, until the IO device sends an interrupt signalling successful transfer of data into the memory.
         </p>
         <h2 id="system-call-error-handling">
-          System Call Error Handling
+          System Call Error Handling <a href="#system-call-error-handling">##</a>
         </h2>
         <p>
           When a system level function encounter an error, they return $-1$, and set the global integer variable <code>errno</code> to indicate what went wrong.
@@ -718,13 +718,13 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
         </div>
         <h2 id="signals">
-          Signals
+          Signals <a href="#signals">##</a>
         </h2>
         <p>
           A signal is a small message that notifies a process that an event of some type has occurred in the system.
         </p>
         <h3 id="sending-signal">
-          Sending Signal
+          Sending Signal <a href="#sending-signal">###</a>
         </h3>
         <p>
           The kernel sends a signal because:
@@ -736,7 +736,7 @@
           </li>
         </ul>
         <h4 id="process-group">
-          Process Group
+          Process Group <a href="#process-group">####</a>
         </h4>
         <p>
           Each process belongs to exactly one process group. By default, a child process belongs to the same group as its parent.
@@ -745,7 +745,7 @@
           The Process Group ID can be read/write using <code>getpgrp</code> and <code>setpgid</code>.
         </p>
         <h4 id="binkill">
-          <code>/bin/kill</code>
+          <code>/bin/kill</code> <a href="#binkill">####</a>
         </h4>
         <p>
           <code>/bin/kill -9 15213</code> sends a signal 9 (SIGKILL) to process 15213.
@@ -754,13 +754,13 @@
           <code>/bin/kill -9 -15213</code> sends a signal 9 to ever process in group 15213
         </p>
         <h4 id="from-keyboard">
-          from Keyboard
+          from Keyboard <a href="#from-keyboard">####</a>
         </h4>
         <p>
           A Unix shell has at most 1 foreground job and zero or more background jobs. Typing <kbd>ctrl</kbd> + <kbd>c</kbd> causes the kernel to send SIGINT to every process in the foreground process group. <kbd>ctrl</kbd> + <kbd>z</kbd> sends SIGTSTP signal to every process in the foreground process group, which pauses them.
         </p>
         <h4 id="calling-kill-function">
-          Calling <code>kill</code> function
+          Calling <code>kill</code> function <a href="#calling-kill-function">####</a>
         </h4>
         <div class="highlight">
           <pre class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp">
@@ -783,7 +783,7 @@
           </li>
         </ul>
         <h4 id="calling-alarm-function">
-          Calling <code>alarm</code> function
+          Calling <code>alarm</code> function <a href="#calling-alarm-function">####</a>
         </h4>
         <div class="highlight">
           <pre class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
@@ -800,7 +800,7 @@
           A call of <code>alarm</code> cancels all previous <code>alarm</code>s.
         </p>
         <h3 id="receiving-signal">
-          Receiving Signal
+          Receiving Signal <a href="#receiving-signal">###</a>
         </h3>
         <p>
           The kernel checks for any <em>pending and not blocked</em> signals, when switching a process from kernel mode to user mode, i.e. from an Interrupt, syscall, or context switching.
@@ -833,7 +833,7 @@
           </section>
           <section class="footer-meta">
             <p>
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
+              <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
               <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/notes">notes</a>, <a href="/tags/study">study</a>, <a href="/tags/csapp">csapp</a>, <a href="/tags/reading-notes">reading notes</a>
             </p>
           </section>

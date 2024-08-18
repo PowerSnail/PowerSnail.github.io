@@ -25,8 +25,11 @@
     <updated>Wed, 08 Feb 2023 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2023/set-plasma-wallpaper/</id>
-    <summary type="html">The Problem KDE Plasma is my favorite Linux DE, and it has its quirks and warts. The support for multiple monitors, for example, is fairly buggy at times, especially when monitors are turned on and off.</summary>
-    <content type="html">&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
+    <summary type="html">The Problem ## KDE Plasma is my favorite Linux DE, and it has its quirks and warts. The support for multiple monitors, for example, is fairly buggy at times, especially when monitors are turned on and off.</summary>
+    <content type="html">&lt;h2 id=&#34;the-problem&#34;&gt;
+  The Problem
+  &lt;a href=&#34;#the-problem&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;KDE Plasma is my favorite Linux DE, and it has its quirks and warts.
 The support for multiple monitors, for example, is fairly buggy at times,
 especially when monitors are turned on and off.
@@ -41,7 +44,10 @@ to frequently reset the appropriate wallpapers.&lt;/p&gt;
 &lt;p&gt;Plasma already provides a command-line tool for setting wallpaper:
 &lt;code&gt;plasma-apply-wallpaperimage&lt;/code&gt;, but it doesn&amp;rsquo;t have the ability to address each
 monitor either.&lt;/p&gt;
-&lt;h2 id=&#34;the-solution&#34;&gt;The Solution&lt;/h2&gt;
+&lt;h2 id=&#34;the-solution&#34;&gt;
+  The Solution
+  &lt;a href=&#34;#the-solution&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Fortunately, there&amp;rsquo;s a Band-Aid for every wart, if you are comfortable making
 your own Band-Aid. And in this case, my problem can be &amp;ldquo;fixed&amp;rdquo; by resetting
 the wallpapers with a script.&lt;/p&gt;
@@ -79,11 +85,17 @@ These ideas are stolen from the
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Assume the variable `desktop_id` is the (0-based) index of the
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// monitor, counting from left to right.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// And the variable `image_path` being the path to the image.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;setWallpaper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getDesktops&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;desktop_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;image_path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dbus-interface&#34;&gt;DBus Interface&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;setWallpaper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getDesktops&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;desktop_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;image_path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dbus-interface&#34;&gt;
+  DBus Interface
+  &lt;a href=&#34;#dbus-interface&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;To run this script, we use the DBus Interface of Plasma, which provides a function
 called &lt;code&gt;evaluateScript&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript &lt;span class=&#34;s2&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;hellip;or invoke it with your favorite DBus tooling.&lt;/p&gt;
-&lt;h2 id=&#34;parameterize&#34;&gt;Parameterize&lt;/h2&gt;
+&lt;h2 id=&#34;parameterize&#34;&gt;
+  Parameterize
+  &lt;a href=&#34;#parameterize&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;evaluateScript&lt;/code&gt; only accepts a self-contained script.
 You can hard code the path of the images, but there&amp;rsquo;s no way to supply the image
 paths as arguments to it, so some sort of string manipulation is required if you
@@ -168,7 +180,10 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;
+  References
+  &lt;a href=&#34;#references&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Hänninen, H. (2019). &lt;em&gt;Superpaper&lt;/em&gt; [Python]. &lt;a href=&#34;https://github.com/hhannine/superpaper/blob/219f00aec19a4f0697e37663875eccbfa19b502b/superpaper/wallpaper_processing.py&#34;&gt;superpaper/wallpaper_processing.py at 219f00aec19a4f0697e37663875eccbfa19b502b · hhannine/superpaper · GitHub&lt;/a&gt; (Original work published 2019)&lt;/p&gt;
 &lt;p&gt;The KDE Community. (2023). &lt;em&gt;API documentation for Plasma scripting API&lt;/em&gt;. Developer. &lt;a href=&#34;https://develop.kde.org/docs/extend/plasma/scripting/api/&#34;&gt;API documentation | Developer&lt;/a&gt;&lt;/p&gt;
 </content>
@@ -217,7 +232,10 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
     <content type="html">&lt;p&gt;Standing opposed to OpenAI&amp;rsquo;s DALL-E and Midjourney, is the open sourced model Stable Diffusion&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Some of the images it painted are genuinely impressive, coherent, and free of artifacts (at least at first glance). But those are almost always the result of prompt engineering: an Edisonian process of random search through the infinite linguistic space. Or in other words, people trying different words until they get a desirable result.&lt;/p&gt;
 &lt;p&gt;For instance, there&amp;rsquo;s a collection of &amp;ldquo;magic words&amp;rdquo; that improves the quality of the model&amp;rsquo;s output: &amp;ldquo;4k&amp;rdquo;, &amp;ldquo;detailed&amp;rdquo;, etc.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; The model associates these key words with the high quality images in its training set, because that&amp;rsquo;s how people label their own work, and thus tries to be close to those images.&lt;/p&gt;
 &lt;p&gt;What happens if you don&amp;rsquo;t give it a particularly graphic sentence? How does it deal with the abstract, the metaphysical, and the poetic?&lt;/p&gt;
-&lt;h2 id=&#34;literatures-quotes-and-illustrations&#34;&gt;Literatures, Quotes, and Illustrations&lt;/h2&gt;
+&lt;h2 id=&#34;literatures-quotes-and-illustrations&#34;&gt;
+  Literatures, Quotes, and Illustrations
+  &lt;a href=&#34;#literatures-quotes-and-illustrations&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;It gives you the quote right back:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
@@ -240,7 +258,10 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
   &lt;/figure&gt;&lt;p&gt;If the lower classes don&amp;rsquo;t set us a good example what on earth is the use of them? They seem, as a class, to have absolutely no sense of moral responsibility.&lt;/p&gt;
 &lt;p&gt;&amp;ndash;Oscar Wilde&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Now, this is just a silly experimentation. The model is trained on descriptions of images. It&amp;rsquo;s not surprising that it wouldn&amp;rsquo;t do well on metaphysical epigrams depicting no concrete objects. In fact, if you give me drawing prompt &amp;ldquo;Questions are never indiscreet; answers sometimes are&amp;rdquo;, I&amp;rsquo;d probably ask you clarify just what the hell you want me to draw.&lt;/p&gt;
-&lt;h2 id=&#34;where-is-the-cicada&#34;&gt;Where is the cicada?&lt;/h2&gt;
+&lt;h2 id=&#34;where-is-the-cicada&#34;&gt;
+  Where is the cicada?
+  &lt;a href=&#34;#where-is-the-cicada&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;figure&gt;
     &lt;img
     src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;
@@ -288,7 +309,10 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Photo.&lt;/p&gt;
 &lt;p&gt;Still, the cicada is nowhere to be found. And if you look carefully, you&amp;rsquo;ll notice that even &amp;ldquo;berry&amp;rdquo; isn&amp;rsquo;t always there. The model concentrates on &amp;ldquo;waxwings&amp;rdquo;, and that&amp;rsquo;s the only thing it seems to &lt;em&gt;care&lt;/em&gt; about, if you&amp;rsquo;ll excuse the inaccurately personified verb. Perhaps the model has a bias in its training set, some objects being more likely to appear than others, and thus carrying a heavier weight. An image with waxwings, berries, and a cicada is less likely than an image with just a waxwing, even given a prompt that includes all three elements. Is this a fundamental limitation on the model, or is it a deficiency in the training data?&lt;/p&gt;
-&lt;h2 id=&#34;last-word&#34;&gt;Last word&lt;/h2&gt;
+&lt;h2 id=&#34;last-word&#34;&gt;
+  Last word
+  &lt;a href=&#34;#last-word&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Stable Diffusion, like many other machine learning models dabbling in art, astonishes the programmer part of my brain. It&amp;rsquo;s utterly ridiculous that we can prompt the program to generate coherent images, without hard-coding any rule about what it means for an image to be coherent. We give zero &lt;em&gt;a priori&lt;/em&gt; to the model on what constitutes a photo or an oil painting, or the anatomy of waxwings, or the color of trees and leaves, and yet, it does show a level of understanding of all those concepts. Put aside the thorny question of &amp;ldquo;how do you define &amp;lsquo;understand&amp;rsquo;?&amp;rdquo;, if we merely judge the program by its performance, it is capable of generating images where a human would recognize the objects, styles, lighting conditions, etc. to be the same as what the prompt describes. And again, without codifying such objects or styles by a human.&lt;/p&gt;
 &lt;p&gt;But at the same time, the other parts of my brain still smirks a bit at the results. When you jump even slightly out of the box, Stable Diffusion starts to show its limits. And even within the box, it takes a lot of word tweaking and cherry-picking to get some useful images out of the model. A lot of hobbyists left the model to run overnight on a long list of prompts. In other areas, the music generated by machine learnings are still quite bad, and seems to go from nowhere to nowhere, if we judge the music entirely on its own merit. The same goes for text generation.&lt;/p&gt;
 &lt;p&gt;It is quite disquieting to see just how close we are to computer programs surpassing human in the field of creative arts, and perhaps even programming itself. We are not there yet, but I&amp;rsquo;m willing to bet that it&amp;rsquo;s going to happen within the lifetime of my generation. Where would that leave us? To become the Olympians of the machines and reap the fruit of their labor? Or to compete with the machines, and eventually&amp;mdash;inevitably&amp;mdash;become obsolete? Will the society become more equal as the rising productivity and efficiency alleviate scarcity, or will the divide deepen between the wealthy and powerful, and the underprivileged?&lt;/p&gt;
@@ -401,12 +425,18 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
     <id>https://powersnail.com/2022/score-in-url/</id>
     <summary type="html">I&amp;rsquo;m excited to publish my new project, Score In URL, a simple, privacy-friendly, sheet music sharing service, where the entire content is encoded in the URL itself as a query parameter.</summary>
     <content type="html">&lt;p&gt;I&amp;rsquo;m excited to publish my new project, &lt;a href=&#34;https://powersnail.com/ScoreInUrl&#34;&gt;Score In URL&lt;/a&gt;, a simple, privacy-friendly, sheet music sharing service, where the entire content is encoded in the URL itself as a query parameter. It comes with a decent editor, the score, and the audio.&lt;/p&gt;
-&lt;h2 id=&#34;an-easy-way-to-share-musical-scores&#34;&gt;An easy way to share musical scores&lt;/h2&gt;
+&lt;h2 id=&#34;an-easy-way-to-share-musical-scores&#34;&gt;
+  An easy way to share musical scores
+  &lt;a href=&#34;#an-easy-way-to-share-musical-scores&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;The inspiration came to me when I was trying to share a little snippet of music on a forum. It was just a short exercise, but I wanted to deliver both the sheet music and the audio. Most forums don&amp;rsquo;t natively support sharing any form of sheet music notation, apart from just using an image. But to open up a composing program, export to an image, upload that image to Imgur, and finally share that link just for a one-line snippet, it&amp;rsquo;s tedious, and it&amp;rsquo;s an overkill. More importantly, an image has no sound. For that, there are more hoops to jump through.&lt;/p&gt;
 &lt;p&gt;I already knew that abcjs has an editor in browser that can play audio, so what I did was asking them to go to &lt;a href=&#34;https://www.abcjs.net/abcjs-editor.html&#34;&gt;the abcjs editor&lt;/a&gt;, and then, copy &amp;amp; paste my snippet in there. It works; there&amp;rsquo;s image and there&amp;rsquo;s sound, but it&amp;rsquo;s kinda awkward that they have to manually fill in the score, rather than opening a link with the right content already there.&lt;/p&gt;
 &lt;p&gt;Something came to my mind: &lt;a href=&#34;https://hashify.me/&#34;&gt;hashify&lt;/a&gt; is a website which encodes a Markdown document in its URL. Pretty brilliant idea.&lt;/p&gt;
 &lt;p&gt;So, I decided to build something similar for ABC Notation. It allows you to enter plain text music just like &lt;em&gt;abcjs editor&lt;/em&gt;, while the whole text is encoded into the URL, just like &lt;em&gt;hashify&lt;/em&gt;. All you need to do is copy the URL to your friend, and they get the source, the sheet music, and audio in a single click. It doesn&amp;rsquo;t get any simpler than that.&lt;/p&gt;
-&lt;h2 id=&#34;static-server-less-privacy-friendly&#34;&gt;Static, server-less, privacy-friendly&lt;/h2&gt;
+&lt;h2 id=&#34;static-server-less-privacy-friendly&#34;&gt;
+  Static, server-less, privacy-friendly
+  &lt;a href=&#34;#static-server-less-privacy-friendly&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Since there&amp;rsquo;s no need to store any file, the project can be entirely server-less. All it takes is a base64 decoder and abcjs, which can all be done in the frontend. This is why I&amp;rsquo;ve decided to use the query parameter, eliminating the need for server-side routing. The page takes a single parameter &lt;code&gt;s&lt;/code&gt;, which contains the encoded score.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;decodeScore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;params&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;URLSearchParams&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -428,7 +458,10 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The code for &lt;em&gt;Score In URL&lt;/em&gt; is &lt;a href=&#34;https://github.com/PowerSnail/ScoreInUrl&#34;&gt;here&lt;/a&gt;. Bundled by [vite.js], everything compiles down to a pair of HTML and JS file. No backend, no cookies, no tracking, no storage. It lives entirely inside that one browser tab.&lt;/p&gt;
 &lt;p&gt;This approach has its own caveat: size limit. URLs are traditionally at most 2048 characters. How many pages of sheet music you get from those 2048 characters depend on your score, but the spirit of &lt;strong&gt;Score In URL&lt;/strong&gt; is to share short snippets of sheet music, not to be a full-fledged music editor. There are much better tools out there for composing.&lt;/p&gt;
-&lt;h2 id=&#34;abc-notation-and-abcjs&#34;&gt;ABC Notation and abcjs&lt;/h2&gt;
+&lt;h2 id=&#34;abc-notation-and-abcjs&#34;&gt;
+  ABC Notation and abcjs
+  &lt;a href=&#34;#abc-notation-and-abcjs&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;ABC Notation is possibly the most hand-writable plain text format for composing sheet music. Most engraving software are WYSIWYG (What You See Is What You Get), which means you are directly interacting with the score, requiring a graphical interface. For a composer sitting in front of their workstation, this is fine, but it&amp;rsquo;s too heavy for building a quick, shareable snippet of music. On the other end of the spectrum, ABC Notation is just plain text. For something simple of a few measures long, it does the job better than any other system.&lt;/p&gt;
 &lt;p&gt;Not unlike how people already do in forums, you simply write out the note names: &lt;code&gt;CDEFGAB&lt;/code&gt;. Capital letters denote the range from &lt;code&gt;C4~B4&lt;/code&gt;, lower case letters give you an octave higher, and to get more than that range, put a &lt;code&gt;&#39;&lt;/code&gt; after the note to raise an octave, and a &lt;code&gt;_&lt;/code&gt; to lower one. Note length is simple math: you define a unit length in the beginning, for instance, with &lt;code&gt;L: 1/16&lt;/code&gt;, &lt;code&gt;C&lt;/code&gt; is a 16th note, &lt;code&gt;C2&lt;/code&gt; is an 8th note, &lt;code&gt;C/2&lt;/code&gt; is a 32nd note, and &lt;code&gt;C3/2&lt;/code&gt; is a dotted 16th note.&lt;/p&gt;
 &lt;p&gt;To write a simple C Major scale:&lt;/p&gt;
@@ -446,7 +479,10 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
   &lt;/figure&gt;&lt;p&gt;You can visit &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQyBNYWpvciBTY2FsZQpMOiAxLzE2Ck06IDIvNApDMkRFIEZHQUIgfCBjMmRlIGZnYWIgfCBjJzJiYSBnZmVkIHwgYzJCQSBHRkVEIHwgQzg%3D&#34;&gt;this link&lt;/a&gt; to see and hear the C Major scale on &lt;strong&gt;Score In URL&lt;/strong&gt;. Or a number of other examples: &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogUGFydGl0YSBJSUkgLSBQcmVsdWRpbwpDOiBKLlMuIEJhY2gKUTogMS80PTEyMApNOiAzLzQKTDogMS8xNgpLOiBFbWFqCnoyIGUnZCcgZScyYjJnMmIyIHwgKGVmZWQgZTIpQjJHMkIyIHwgRUJGQiBHQkFCIEdCRkIgfApFZWRjIEJlZGMgQkFHRiAgICB8IEVCRkIgR0JBQiBHQkZCICB8IEVlZGMgQmVkYyBCQUdGIHwKRUZHQSBCY2RlIGZnYWYgICAgfCBnYmVmIGdhYmMnIGQnZSdjJ2QnICB8IGUnYmFiIGdiYWIgZ2JmYiB8CmVlJ2QnYycgYmVjJ2UgYmVhZXwgZ2JmYiBnYmFiIGdiZmIgIHwgZWUnZCdjJyBiZWMnZSBiZWFlIHwKZ2VlZWRlZWVmZWRlIHwgZWVnZWZlZ2VhZWZlIHwgZ2VlZWRlZWVmZWRlIHwKZWVnZWZlZ2VhZWZlIHwgZ2VnZSBnZWdlIGdlZ2UgfCBnZWdkIGdlZ2QgZ2VnZCB8CmdlZz1kIGdlZ2QgZ2VnZCB8IGFlYWMgYWVhYyBhZWFjIHwgYWVhQiBhZWFCIGFlYUIgfApnZWdCIGdlZ0IgZ2VnQiB8IGdlZ0EgZ2VnQSBnZWdBIHwgZmVmQSBmZWZBIGZlZkEgfApmZWZHIGZlZkcgZmVmRyB8IGVlZUcgZWVlRyBlZWVHIHwgZWVlRiBlZWVGIGVlZUYgfApkZWRGIGRlZEYgZGVkRiB8IEVGRUYgR0JFRiBHQkVGIHwgR0FHQSBCZUdBIEJlR0EgfA%3D%3D&#34;&gt;First page of Bach&amp;rsquo;s Preludio&lt;/a&gt;, &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQWlyIG9uIEcgU3RyaW5nCkM6IEouUy4gQmFjaCAoYXJyLiBBdWd1c3QgV2lsaGVsbWouKQpROiAiTGVudG8iCk06IDQvNApMOiAxLzE2Cks6IENtYWoKfDogRTE2LSB8IEUyKEFGIERDQixDKSAoIXRyaWxsIUIsNy8yQSwvMikgRyw0IHwgRzgtIEcoRV9CLEEsKSAoRF5DKShHRikgfCAKRjgtIEYoREEsRywpIChDQiwpKEZFKSB8IChFNiBeRkcpIChDMkMvMkQvMkUpIChFRCkoREMpIHwgKEIsQSwpKEEsLzJCLC8yQykgKEMyQixBLCkgRyw4IDp8IAp8OiAoQiw0LUIsQy8yQiwvMkEsLzJCLC8yRywpIChHNiBfQiwyKSB8IChBLDJBMi0gQSkoR0ZFKSB7L0V9RjQtIEYvMihFLzJELzJDLzJCLEEsKSB8IF5HLEEsKEIsMi0gQixDKShEMi0gREUpRjItIEYyRTIgfAooREMpKEIsQSwpIChCLEMvMkQvMkNCLCkgQSw4IHwgKEM0LSBDRURDKSAoQTYgR15GKSB8ICh7L0V9REdHLDIpIChBLDNCLC8yQy8yKSAoQiw3LzJBLC8yKSBHLDQgfCAKQzYgKEVEKSBENiAoRkUpIHwgRTYgKEdGKSBGOCB8IEcsNC0gRyxCLERGIEZERTItIEUyKEVGLzJHLzIpIHwgCihDNC0gQ0VHX0IpIChCMiBBNCBDMikgfCAoQixEIEY0IEEsMikgKEcsMkRFLzJGLzItIEYpKEUyRCB8IEMvMkIsLzIpKEEsMkIsKSAoQiwyey9BLH1CLEMpIEM4IDp8Cg%3D%3D&#34;&gt;Air on G String&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To learn more about writing ABC notation, visit their &lt;a href=&#34;https://abcnotation.com/&#34;&gt;official website&lt;/a&gt;. There are plenty of examples and an exhaustive documentation. For quick references, this &lt;a href=&#34;http://www.stephenmerrony.co.uk/uploads/ABCquickRefv0_6.pdf&#34;&gt;cheat sheet&lt;/a&gt; is superb.&lt;/p&gt;
 &lt;p&gt;Thanks to &lt;a href=&#34;https://www.abcjs.net/&#34;&gt;abcjs&lt;/a&gt;, it&amp;rsquo;s super easy to embed such a system in a web page. Abcjs provides rendering, audio, and error messages which integrate nicely with CodeMirror, the text editor.&lt;/p&gt;
-&lt;h2 id=&#34;text-editing&#34;&gt;Text Editing&lt;/h2&gt;
+&lt;h2 id=&#34;text-editing&#34;&gt;
+  Text Editing
+  &lt;a href=&#34;#text-editing&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, &lt;a href=&#34;https://codemirror.net/&#34;&gt;CodeMirror&lt;/a&gt; is used. You can see the errors marked by red dots, like a real text editor used by programmers.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
@@ -456,10 +492,16 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;The code highlighting is still not comprehensive at the moment. I&amp;rsquo;ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.&lt;/p&gt;
-&lt;h2 id=&#34;not-in-the-scope&#34;&gt;Not in the scope&lt;/h2&gt;
+&lt;h2 id=&#34;not-in-the-scope&#34;&gt;
+  Not in the scope
+  &lt;a href=&#34;#not-in-the-scope&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;ve decided against using a compression algorithm. A simple base64 encoder is available everywhere, whereas compression requires a 3rd party library, and might be subject to the specific quirks of that implementation. If the compression has a bug, it infects every URL shared from &lt;strong&gt;Score In URL&lt;/strong&gt;. If that algorithm ever gets an update that is not backwards-compatible, all the old URLs are screwed. Furthermore, if &lt;strong&gt;Score In URL&lt;/strong&gt; disappears, a plain base64 string is simple to use: just copy &amp;amp; paste into any base64 decoder. It requires no programming skill, no tool chains, no setup. On the other hand, a compressed string is much harder to decode, especially if the user has no convenient way of installing the exact version of the compression algorithm I used.&lt;/p&gt;
 &lt;p&gt;Despite the existence of a &amp;ldquo;Print&amp;rdquo; button, printing likely won&amp;rsquo;t be perfect, especially if you have more than one page of scores. Again, the project is meant for sharing snippets of music, not for typesetting a multipage score. The whole thing is rendered on to a single image, and as long as that image looks alright in the browser, that&amp;rsquo;s all it matters to me.&lt;/p&gt;
-&lt;h2 id=&#34;to-do&#34;&gt;To Do&lt;/h2&gt;
+&lt;h2 id=&#34;to-do&#34;&gt;
+  To Do
+  &lt;a href=&#34;#to-do&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;There are a few improvements on my mind.&lt;/p&gt;
 &lt;p&gt;First, the code highlighting should be improved. I should at least tokenize all the operators.&lt;/p&gt;
 &lt;p&gt;Second, there should be a synchronized cursor between the code editor and the score. In other words, when you are editing the plain text file, you should be able to see where you are on the engravings.&lt;/p&gt;
@@ -480,16 +522,37 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
     <id>https://powersnail.com/2022/test-md-page/</id>
     <summary type="html">When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon</summary>
     <content type="html">&lt;p&gt;When you are tweaking your blog, creating a new CSS rule, or making a new theme, it is not uncommon to break pages that you are not looking. Maybe tables lose their responsiveness, sentences are too close together, empty pages look weird, etc. I&amp;rsquo;ve written this document to test some common pitfalls that I experienced when I was tweaking my own blog.&lt;/p&gt;
-&lt;h2 id=&#34;this-is-a-second-level-heading&#34;&gt;This is a second-level heading&lt;/h2&gt;
-&lt;h3 id=&#34;this-is-a-third-level-heading&#34;&gt;This is a third-level heading&lt;/h3&gt;
-&lt;h4 id=&#34;this-is-a-fourth-level-heading&#34;&gt;This is a fourth-level heading&lt;/h4&gt;
+&lt;h2 id=&#34;this-is-a-second-level-heading&#34;&gt;
+  This is a second-level heading
+  &lt;a href=&#34;#this-is-a-second-level-heading&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;this-is-a-third-level-heading&#34;&gt;
+  This is a third-level heading
+  &lt;a href=&#34;#this-is-a-third-level-heading&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h4 id=&#34;this-is-a-fourth-level-heading&#34;&gt;
+  This is a fourth-level heading
+  &lt;a href=&#34;#this-is-a-fourth-level-heading&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;A paragraph under a fourth level heading. There&amp;rsquo;s really no need to get to this level of heading, however.&lt;/p&gt;
-&lt;h5 id=&#34;this-is-a-fifth-level-heading&#34;&gt;This is a fifth-level heading&lt;/h5&gt;
+&lt;h5 id=&#34;this-is-a-fifth-level-heading&#34;&gt;
+  This is a fifth-level heading
+  &lt;a href=&#34;#this-is-a-fifth-level-heading&#34;&gt;#####&lt;/a&gt;
+&lt;/h5&gt;
 &lt;p&gt;A paragraph under a fifth level heading.&lt;/p&gt;
-&lt;h6 id=&#34;this-is-a-sixth-level-heading&#34;&gt;This is a sixth-level heading&lt;/h6&gt;
+&lt;h6 id=&#34;this-is-a-sixth-level-heading&#34;&gt;
+  This is a sixth-level heading
+  &lt;a href=&#34;#this-is-a-sixth-level-heading&#34;&gt;######&lt;/a&gt;
+&lt;/h6&gt;
 &lt;p&gt;A paragraph under a sixth level heading.&lt;/p&gt;
-&lt;h3 id=&#34;a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading&#34;&gt;A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading&lt;/h3&gt;
-&lt;h2 id=&#34;shapes-of-paragraphs&#34;&gt;Shapes of paragraphs&lt;/h2&gt;
+&lt;h3 id=&#34;a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading&#34;&gt;
+  A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long heading
+  &lt;a href=&#34;#a-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-very-long-heading&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h2 id=&#34;shapes-of-paragraphs&#34;&gt;
+  Shapes of paragraphs
+  &lt;a href=&#34;#shapes-of-paragraphs&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;This is a long paragraph. (Content from &lt;em&gt;Pride and Prejudice&lt;/em&gt;)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether; Mr. Bingley, his two sisters, the husband of the eldest, and another young man.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;This is a succession of paragraphs that each contains a short sentence, but not with an extra white line. According to convention, they should be rendered as a single paragraph.&lt;/strong&gt;&lt;/p&gt;
@@ -513,10 +576,16 @@ The moon wrinkled in the water.&lt;/p&gt;
 &lt;p&gt;Midnight shakes the memory&lt;/p&gt;
 &lt;p&gt;As a madman shakes a dead geranium.&lt;/p&gt;
 &lt;p&gt;by T.S. Eliot, &lt;em&gt;Rhapsody on a Windy Night&lt;/em&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;h2 id=&#34;length-of-line&#34;&gt;Length of line&lt;/h2&gt;
+&lt;h2 id=&#34;length-of-line&#34;&gt;
+  Length of line
+  &lt;a href=&#34;#length-of-line&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;One line should contain about 2~3 alphabets&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 &lt;p&gt;abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz&lt;mark&gt;abcdefghijklmnopqrstuvwxyz&lt;/mark&gt;&lt;/p&gt;
-&lt;h2 id=&#34;punctuations&#34;&gt;Punctuations&lt;/h2&gt;
+&lt;h2 id=&#34;punctuations&#34;&gt;
+  Punctuations
+  &lt;a href=&#34;#punctuations&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Comma, period, question marks and exclamation marks.&lt;/p&gt;
 &lt;p&gt;&lt;mark&gt;Is this a question mark? Yes!&lt;/mark&gt;&lt;/p&gt;
 &lt;p&gt;Quotation marks should have the correct orientations:&lt;/p&gt;
@@ -543,9 +612,15 @@ The moon wrinkled in the water.&lt;/p&gt;
 &lt;p&gt;Slashes&lt;/p&gt;
 &lt;p&gt;&lt;mark&gt;Slash/forward\backward&lt;/mark&gt;&lt;/p&gt;
 &lt;p&gt;Foot and Inches: &lt;mark&gt;12&#39; 13&amp;quot;&lt;/mark&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ligatures&#34;&gt;Ligatures&lt;/h2&gt;
+&lt;h2 id=&#34;ligatures&#34;&gt;
+  Ligatures
+  &lt;a href=&#34;#ligatures&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;There, figure, fft, ffi.&lt;/p&gt;
-&lt;h2 id=&#34;block-quote&#34;&gt;Block quote&lt;/h2&gt;
+&lt;h2 id=&#34;block-quote&#34;&gt;
+  Block quote
+  &lt;a href=&#34;#block-quote&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Blockquote directly under a title&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -562,7 +637,10 @@ Without extra line in between&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Their brother, indeed, was the only one of the party whom she could regard with any complacency. His anxiety for Jane was evident, and his attentions to herself most pleasing, and they prevented her feeling herself so much an intruder as she believed she was considered by the others. She had very little notice from any but him. Miss Bingley was engrossed by Mr. Darcy, her sister scarcely less so; and as for Mr. Hurst, by whom Elizabeth sat, he was an indolent man, who lived only to eat, drink, and play at cards, who when he found her prefer a plain dish to a ragout, had nothing to say to her.&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
+&lt;h2 id=&#34;images&#34;&gt;
+  Images
+  &lt;a href=&#34;#images&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Here is an inline image &lt;img
     src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
         srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
@@ -609,7 +687,10 @@ Without extra line in between&lt;/p&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Some Markdown parser will always treat images as an inline element. There&amp;rsquo;s nothing an SSG or theme maker can do. So this &lt;code&gt;figure&lt;/code&gt; is written as raw HTML.&lt;/p&gt;
-&lt;h2 id=&#34;lists&#34;&gt;Lists&lt;/h2&gt;
+&lt;h2 id=&#34;lists&#34;&gt;
+  Lists
+  &lt;a href=&#34;#lists&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;A numbered list&lt;/li&gt;
 &lt;li&gt;With many elements&lt;/li&gt;
@@ -657,14 +738,20 @@ line item&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;And see if the rendering is sensible&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;code-blocks&#34;&gt;Code blocks&lt;/h2&gt;
+&lt;h2 id=&#34;code-blocks&#34;&gt;
+  Code blocks
+  &lt;a href=&#34;#code-blocks&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Block with no language set.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;block_with_a_language&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indent&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;multi&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;level&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;space&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;space&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Block with no language set that is super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;A block with a super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long line&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Block with no language set that is super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;A block with a super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super,  super, long line&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tables&#34;&gt;
+  Tables
+  &lt;a href=&#34;#tables&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;A simple table with very few columns and rows:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -782,7 +869,10 @@ line item&lt;/li&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;some-random-tests&#34;&gt;Some random tests&lt;/h2&gt;
+&lt;h2 id=&#34;some-random-tests&#34;&gt;
+  Some random tests
+  &lt;a href=&#34;#some-random-tests&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Language: 中文测试&lt;/li&gt;
 &lt;li&gt;HTML embeded: &lt;br&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
@@ -819,14 +909,20 @@ line item&lt;/li&gt;
     <updated>Wed, 12 Jan 2022 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2022/hugo-mvp-css/</id>
-    <summary type="html">Theme-less Hugo As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else.</summary>
-    <content type="html">&lt;h2 id=&#34;theme-less-hugo&#34;&gt;Theme-less Hugo&lt;/h2&gt;
+    <summary type="html">Theme-less Hugo ## As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else.</summary>
+    <content type="html">&lt;h2 id=&#34;theme-less-hugo&#34;&gt;
+  Theme-less Hugo
+  &lt;a href=&#34;#theme-less-hugo&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;As popular as theming is, I can&amp;rsquo;t help but feel unsatisfied by a plug-and-use theme made by someone else. From WordPress to Jekyll to Hugo, no theme ever stopped me from tinkering with the underlying templates and CSS, during which, the theme inevitably becomes more coupled with my blog and content. This is because while the templates are usually generic enough for the body of blog articles, they are often quite specific on other elements: about, headers, footers, navigation bars, etc. And to customize those elements, I&amp;rsquo;m practically re-writing the website.&lt;/p&gt;
 &lt;p&gt;When I started with Hugo, I chose the theme &lt;a href=&#34;https://github.com/mavidser/hugo-rocinante&#34;&gt;Rocinante&lt;/a&gt;, for its clean appearance, and partially for its name, which comes from one of my favorite novels of all time. I forked the theme, and kept maintaining two repositories: the blog itself, and the theme. As more modifications were made, the two codebases tangled with each other so deeply, that I often wonder where I should put a certain element.&lt;/p&gt;
 &lt;p&gt;I decided to go theme-less, when the theme no longer bear any resemblance to the original Rocinante. There&amp;rsquo;s no point in maintaining two sets of code if they cannot be decoupled.&lt;/p&gt;
 &lt;p&gt;Theme-less Hugo is easy: I just needed the templates, everything in the &lt;code&gt;layouts&lt;/code&gt; directory, to scaffold the site. So, I copied the skeleton code&amp;mdash;&lt;code&gt;layouts&lt;/code&gt;, and &lt;code&gt;assets&lt;/code&gt; for the styles&amp;mdash;into my blog, and removed the &lt;code&gt;themes&lt;/code&gt; directory.&lt;/p&gt;
 &lt;p&gt;In fact, I think if one has finished theme-shopping, and would like to start making customizations, the first thing to do is to copy the theme into their main project, and delete &lt;code&gt;themes&lt;/code&gt;. It makes the website whole, the workflow more coherent, the workspace better organized, the commit history saner.&lt;/p&gt;
-&lt;h2 id=&#34;semantic-html-and-mvpcss&#34;&gt;Semantic HTML and MVP.CSS&lt;/h2&gt;
+&lt;h2 id=&#34;semantic-html-and-mvpcss&#34;&gt;
+  Semantic HTML and MVP.CSS
+  &lt;a href=&#34;#semantic-html-and-mvpcss&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;I have very little need for advanced topography or animations. My blog is just a bunch of static files hosted on GitHub Pages; nothing Fancy.&lt;/p&gt;
 &lt;p&gt;This is, therefore, a very suitable use case for a classless CSS framework like &lt;a href=&#34;https://andybrewer.github.io/mvp/&#34;&gt;MVP.CSS&lt;/a&gt;. Overall, I think MVP does a fantastic job.&lt;/p&gt;
 &lt;p&gt;A few things that I don&amp;rsquo;t like about it:&lt;/p&gt;
@@ -854,12 +950,18 @@ line item&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;markup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;markup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;highlight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;noClasses&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I then colored the website with a dark banner image of Bach&amp;rsquo;s manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with &lt;a href=&#34;https://bottosson.github.io/posts/oklab/&#34;&gt;Oklab&lt;/a&gt; color space, and it seems to be passing accessibility tests so far. It might be a total overkill though, since a few colors on the spectrum are used. But what is a personal project without a few overkills?&lt;/p&gt;
-&lt;h2 id=&#34;mathjax-and-a-little-grievance-of-hugo&#34;&gt;MathJax, and a Little Grievance of Hugo&lt;/h2&gt;
+&lt;h2 id=&#34;mathjax-and-a-little-grievance-of-hugo&#34;&gt;
+  MathJax, and a Little Grievance of Hugo
+  &lt;a href=&#34;#mathjax-and-a-little-grievance-of-hugo&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;The only JavaScript I use is &lt;a href=&#34;https://www.mathjax.org/&#34;&gt;MathJax&lt;/a&gt;. I&amp;rsquo;ve been considering to use its server-side rendering, but it seems that at the moment of writing this blog, Hugo does not support its use.&lt;/p&gt;
 &lt;p&gt;In fact, Hugo does not support running its output HTML through an arbitrary command, and I think it&amp;rsquo;s a shame. There is a limit to what the &lt;code&gt;replace&lt;/code&gt; and &lt;code&gt;replaceRE&lt;/code&gt; could accomplish, which can be supplemented by custom filters written by other users.&lt;/p&gt;
 &lt;p&gt;For instance, math equations can be easily rendered with LaTeX and converted to SVG. This will enable the embedding of arbitrary Tex elements, not just what MathJax supports, and at the same time, eliminates the need to bundle a JS library for client-side rendering.&lt;/p&gt;
 &lt;p&gt;One thing that I can do is to add an extra step to &lt;code&gt;hugo build&lt;/code&gt;, and iterate through all the output HTML with whatever post-processing I want. But I do hope that this could be integrated into Hugo, so I don&amp;rsquo;t have to further butcher the GitHub Action file.&lt;/p&gt;
-&lt;h2 id=&#34;final-thoughts&#34;&gt;Final Thoughts&lt;/h2&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;
+  Final Thoughts
+  &lt;a href=&#34;#final-thoughts&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;You can find all the code to my blog &lt;a href=&#34;https://github.com/PowerSnail/PowerSnail.github.io&#34;&gt;here&lt;/a&gt;. My modifications to the theme, up to the point that I moved everything into the main repository, can be found &lt;a href=&#34;https://github.com/PowerSnail/hugo-rocinante&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </content>
     <category>posts</category>
@@ -875,16 +977,22 @@ line item&lt;/li&gt;
     <updated>Fri, 06 Jan 2017 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2017/apple-box/</id>
-    <summary type="html">The Apple Boxes Problem The problem can be simply put:
+    <summary type="html">The Apple Boxes Problem ## The problem can be simply put:
 Input: $k$
 Output: let $r$ be the sum of the square of each even integer no larger than $k$, and $y$ be that of the odd.</summary>
-    <content type="html">&lt;h2 id=&#34;the-apple-boxes-problem&#34;&gt;The Apple Boxes Problem&lt;/h2&gt;
+    <content type="html">&lt;h2 id=&#34;the-apple-boxes-problem&#34;&gt;
+  The Apple Boxes Problem
+  &lt;a href=&#34;#the-apple-boxes-problem&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;The problem can be simply put:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Input: $k$&lt;/p&gt;
 &lt;p&gt;Output: let $r$ be the sum of the square of each &lt;em&gt;even&lt;/em&gt; integer no larger than $k$, and $y$ be that of the &lt;em&gt;odd&lt;/em&gt;. Return $r - y$.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;the-naive-solution&#34;&gt;The Naive Solution&lt;/h2&gt;
+&lt;h2 id=&#34;the-naive-solution&#34;&gt;
+  The Naive Solution
+  &lt;a href=&#34;#the-naive-solution&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;We can loop through 1 to $k$, alternating between adding and subtracting.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -894,7 +1002,10 @@ Output: let $r$ be the sum of the square of each even integer no larger than $k$
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;val&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There could be various optimizations, but nevertheless, the algorithm is linear with regard to $k$.&lt;/p&gt;
-&lt;h2 id=&#34;constant-solution&#34;&gt;Constant Solution&lt;/h2&gt;
+&lt;h2 id=&#34;constant-solution&#34;&gt;
+  Constant Solution
+  &lt;a href=&#34;#constant-solution&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;First, assume $k$ is even, so that we can perfectly pair up terms in $r$ and $y$. Observe that each pair is in the form of $x^2 - (x - 1)^2$. This can be transformed to $(x + x - 1)\cdot(x - x + 1) = (x - 1) + x$. When we add all pairs, it becomes a simple series: $1 + 2 + 3 + &amp;hellip; + k$. For example, for $k = 6$:&lt;/p&gt;
 &lt;p&gt;$$
 \begin{align*}
@@ -909,7 +1020,10 @@ r - y &amp;amp;= (2^2 + 4^2 + 6^2) - (1^2 + 3^2 + 5^2) \\
 $$&lt;/p&gt;
 &lt;p&gt;Thus, we can return $\dfrac{k(1 + k)}{2}$ for arbitrary &lt;em&gt;even&lt;/em&gt; $k$.&lt;/p&gt;
 &lt;p&gt;What about &lt;em&gt;odd&lt;/em&gt; $k$? We can adjust the pairing a bit, and easily find that now we have $-\dfrac{k(1 + k)}{2}$.&lt;/p&gt;
-&lt;h2 id=&#34;c-source-code&#34;&gt;C++ Source Code&lt;/h2&gt;
+&lt;h2 id=&#34;c-source-code&#34;&gt;
+  C++ Source Code
+  &lt;a href=&#34;#c-source-code&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;appleBoxes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;sum&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -929,9 +1043,15 @@ $$&lt;/p&gt;
     <id>https://powersnail.com/2017/range-count-1/</id>
     <summary type="html">在 codefights 上做到了一个很有意思的题。给你 a, b 两</summary>
     <content type="html">&lt;p&gt;在 codefights 上做到了一个很有意思的题。给你 a, b 两个数，假设你构建了一个从 a 到 b 的 array，所有这些数的 binary representation 里面有多少个 1？&lt;/p&gt;
-&lt;h1 id=&#34;naive-solution&#34;&gt;Naive Solution&lt;/h1&gt;
+&lt;h1 id=&#34;naive-solution&#34;&gt;
+  Naive Solution
+  &lt;a href=&#34;#naive-solution&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
 &lt;p&gt;最简单的办法 (随手翻了两个别人的答案都是这个), 就是一个数一个数查有多少 1. 笨一点的手工查, 聪明一点的用 built-in function 查. 但是无论如何, 复杂度都是 O(b - a).&lt;/p&gt;
-&lt;h1 id=&#34;logn-solution&#34;&gt;Log(n) Solution&lt;/h1&gt;
+&lt;h1 id=&#34;logn-solution&#34;&gt;
+  Log(n) Solution
+  &lt;a href=&#34;#logn-solution&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
 &lt;p&gt;我们先思考一个简化版本的问题: 所有 &lt;code&gt;unsigned int (c++)&lt;/code&gt; 里面有多少 1? 答案是所有的 bit / 2, 因为当我们把所有数都写成 2 进制, 一半是 1, 一半是0.&lt;/p&gt;
 &lt;p&gt;我们 generalize 一下: 对于任意的 $m$, 所有 $m$ 位的正整数里有 $(2^m * m) / 2$.&lt;/p&gt;
 &lt;p&gt;当我们的上限不是&lt;em&gt;位数&lt;/em&gt;，而是一个数字 $b$, 我们可以把 $b$ 分成 3 各部分。假设 $b$ 不为 0, $b$ 的二进制形式应该是 $1xxxx$&amp;hellip; 假设 $b$ 有 $m + 1$ 位.&lt;/p&gt;
@@ -956,9 +1076,15 @@ $$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rangeBitCount&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;allBits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;allBits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;复杂度证明&#34;&gt;复杂度证明&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;复杂度证明&#34;&gt;
+  复杂度证明
+  &lt;a href=&#34;#%e5%a4%8d%e6%9d%82%e5%ba%a6%e8%af%81%e6%98%8e&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
 &lt;p&gt;这个算法的复杂度很简单，因为这个 recursion 可以很容易的转换成 tail recursion，再变成复杂度相同的 iteration. 这个 iteration 每次去掉最高位的 1，因此最多有 $\log(b)$ 次循环；每次循环做了 constant 的基本算数，因此最后的复杂度应该是 $\log(b)$。&lt;/p&gt;
-&lt;h1 id=&#34;c-source-code&#34;&gt;C++ Source Code&lt;/h1&gt;
+&lt;h1 id=&#34;c-source-code&#34;&gt;
+  C++ Source Code
+  &lt;a href=&#34;#c-source-code&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;allBits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -986,8 +1112,11 @@ $$&lt;/p&gt;
     <updated>Sun, 27 Nov 2016 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2016/valid-number/</id>
-    <summary type="html">Introduction to the Problem The question asks the programmer to validate whether a string is a valid representation of a number.</summary>
-    <content type="html">&lt;h2 id=&#34;introduction-to-the-problem&#34;&gt;Introduction to the Problem&lt;/h2&gt;
+    <summary type="html">Introduction to the Problem ## The question asks the programmer to validate whether a string is a valid representation of a number.</summary>
+    <content type="html">&lt;h2 id=&#34;introduction-to-the-problem&#34;&gt;
+  Introduction to the Problem
+  &lt;a href=&#34;#introduction-to-the-problem&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;The question asks the programmer to validate whether a string is a valid representation of a number. After some trials, we find that the question accepts a few formats:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;pure integer&lt;/li&gt;
@@ -998,7 +1127,10 @@ $$&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;In order to solve the problem in linear time, most solutions set a few flags. This is simple, and quite efficient in both time and space. In fact, I don&amp;rsquo;t really consider this problem qualified for &lt;em&gt;hard&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Just to add some fun, this problem can be solved using a very textbook DFA. The code is elegant, less space efficient (but only for a constant amount) than the flag algorithm. In fact, the latter is just a compact, specialized DFA in essence. The trade-off is more variables and branching.&lt;/p&gt;
-&lt;h2 id=&#34;the-algorithm&#34;&gt;The Algorithm&lt;/h2&gt;
+&lt;h2 id=&#34;the-algorithm&#34;&gt;
+  The Algorithm
+  &lt;a href=&#34;#the-algorithm&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;The first step, we trim the string. There is probably not efficient in bringing white space processing into the DFA.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;inline&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -1013,7 +1145,10 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dfa---states&#34;&gt;DFA - States&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dfa---states&#34;&gt;
+  DFA - States
+  &lt;a href=&#34;#dfa---states&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;Any accepted string can be divided into a few parts:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;before decimal, the left part of a real number&lt;/li&gt;
@@ -1076,7 +1211,10 @@ $$&lt;/p&gt;
 &lt;/table&gt;
 &lt;p&gt;The starting state is &lt;code&gt;START&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;FAULT&lt;/code&gt; is a special state, that the DFA will halt whenever it meets &lt;code&gt;FAULT&lt;/code&gt;, so that we do not have to process the rest of the string.&lt;/p&gt;
-&lt;h3 id=&#34;dfa---transition&#34;&gt;DFA - Transition&lt;/h3&gt;
+&lt;h3 id=&#34;dfa---transition&#34;&gt;
+  DFA - Transition
+  &lt;a href=&#34;#dfa---transition&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;The transition function is a matrix that maps (state, input char) to state.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
@@ -1178,7 +1316,10 @@ $$&lt;/p&gt;
     loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;h3 id=&#34;dfa---termination&#34;&gt;DFA - Termination&lt;/h3&gt;
+  &lt;/figure&gt;&lt;h3 id=&#34;dfa---termination&#34;&gt;
+  DFA - Termination
+  &lt;a href=&#34;#dfa---termination&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;The DFA will terminate when&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;input is depleted&lt;/li&gt;
@@ -1194,7 +1335,10 @@ $$&lt;/p&gt;
 &lt;p&gt;In all other cases, the format is somewhat faulty. For example, if the DFA ended at &lt;code&gt;E&lt;/code&gt;, then the string looks like &lt;code&gt;&amp;quot;{some number}e&amp;quot;&lt;/code&gt;, which is not acceptable.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;The running of the DFA is easy. Simply iterate over the input, and let the transition matrix do its magic.&lt;/p&gt;
-&lt;h2 id=&#34;complete-code&#34;&gt;Complete Code:&lt;/h2&gt;
+&lt;h2 id=&#34;complete-code&#34;&gt;
+  Complete Code:
+  &lt;a href=&#34;#complete-code&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;inline&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -1283,19 +1427,31 @@ $$&lt;/p&gt;
     <updated>Tue, 15 Nov 2016 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2016/control-flow-exception/</id>
-    <summary type="html">Overview A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called control transfer.</summary>
-    <content type="html">&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+    <summary type="html">Overview ## A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called control transfer.</summary>
+    <content type="html">&lt;h2 id=&#34;overview&#34;&gt;
+  Overview
+  &lt;a href=&#34;#overview&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called &lt;em&gt;control transfer&lt;/em&gt;. The sequence of transfers is called &lt;em&gt;control flow&lt;/em&gt;. The control flow is smooth when the transitions are always to the adjacent address. Operations such as &lt;code&gt;jump&lt;/code&gt;, &lt;code&gt;call&lt;/code&gt;, etc. will cause the control flow to be abrupt.&lt;/p&gt;
 &lt;p&gt;There are other situations where the control flow is abruptly changed. For example, hardware timer, network packet arrival, etc. are events that have to be dealt with but not necessarily a part of the execution of the program. The system will likely deal with such situations with &lt;em&gt;exceptional control flow&lt;/em&gt; (ECF), a disruption to the control flow.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Application Level ECF: inter-process &lt;em&gt;signal&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;OS kernel Level ECF: context switches&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;exceptions&#34;&gt;Exceptions&lt;/h2&gt;
-&lt;h3 id=&#34;definition&#34;&gt;Definition&lt;/h3&gt;
+&lt;h2 id=&#34;exceptions&#34;&gt;
+  Exceptions
+  &lt;a href=&#34;#exceptions&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;definition&#34;&gt;
+  Definition
+  &lt;a href=&#34;#definition&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;An &lt;em&gt;exception&lt;/em&gt; is an abrupt change in the control flow in response to some change in the processor&amp;rsquo;s state.&lt;/p&gt;
 &lt;p&gt;An &lt;em&gt;event&lt;/em&gt; is a change in the processor&amp;rsquo;s state.&lt;/p&gt;
-&lt;h3 id=&#34;exception-happening&#34;&gt;Exception Happening&lt;/h3&gt;
+&lt;h3 id=&#34;exception-happening&#34;&gt;
+  Exception Happening
+  &lt;a href=&#34;#exception-happening&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;When the application is executing instruction $I_{curr}$, there is an event occurred.&lt;/p&gt;
 &lt;p&gt;The event could be either caused by the instruction just occurred, or completely unrelated to the application. The processor will look up the &lt;em&gt;exception table&lt;/em&gt;, and make a procedure call to the &lt;em&gt;exception handler&lt;/em&gt;, which will process the particular kind of event. Then, depending on the event, three things can occur:&lt;/p&gt;
 &lt;ol&gt;
@@ -1303,7 +1459,10 @@ $$&lt;/p&gt;
 &lt;li&gt;The handler returns, to $I_{next}$&lt;/li&gt;
 &lt;li&gt;The handler aborts the program&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;exception-handling&#34;&gt;Exception Handling&lt;/h3&gt;
+&lt;h3 id=&#34;exception-handling&#34;&gt;
+  Exception Handling
+  &lt;a href=&#34;#exception-handling&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;The handling of exception involves both hardware and software.&lt;/p&gt;
 &lt;p&gt;Each type of exception is assigned an integer &lt;em&gt;exception number&lt;/em&gt;, assigned by:&lt;/p&gt;
 &lt;ul&gt;
@@ -1332,7 +1491,10 @@ $$&lt;/p&gt;
 &lt;li&gt;the control is transferred to the kernel, which means the exception handlers run in &lt;strong&gt;kernel mode&lt;/strong&gt;, that they have access to all system resources.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The return is a special operation &lt;code&gt;return from interrupt&lt;/code&gt;, which restores kernel mode to user mode.&lt;/p&gt;
-&lt;h3 id=&#34;class-of-exceptions&#34;&gt;Class of Exceptions&lt;/h3&gt;
+&lt;h3 id=&#34;class-of-exceptions&#34;&gt;
+  Class of Exceptions
+  &lt;a href=&#34;#class-of-exceptions&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1371,9 +1533,15 @@ $$&lt;/p&gt;
 &lt;/table&gt;
 &lt;p&gt;Table 1: Classes of Exceptions &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Async&lt;/em&gt;: means that the event (IO Interrupt) is not caused by execution of any instruction, but rather an asynchronous signal that an external IO device sends to the processor.&lt;/p&gt;
-&lt;h4 id=&#34;interrupt-handling&#34;&gt;Interrupt Handling&lt;/h4&gt;
+&lt;h4 id=&#34;interrupt-handling&#34;&gt;
+  Interrupt Handling
+  &lt;a href=&#34;#interrupt-handling&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;The handling of interrupt runs independent of the program. It is not caused by, has no impact on the current program. The processor notices the interrupt pin is set, and jumps to the interrupt handler. The handler will return to $I_{next}$, as though nothing has happened.&lt;/p&gt;
-&lt;h4 id=&#34;traps-and-system-calls&#34;&gt;Traps and System Calls&lt;/h4&gt;
+&lt;h4 id=&#34;traps-and-system-calls&#34;&gt;
+  Traps and System Calls
+  &lt;a href=&#34;#traps-and-system-calls&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;Traps are intentional exceptions, likely to help interface between user program and the kernel, which is a &lt;em&gt;system call&lt;/em&gt;. Trap handlers also return to $I_{next}$ like interrupt handlers.&lt;/p&gt;
 &lt;p&gt;System Calls:&lt;/p&gt;
 &lt;ul&gt;
@@ -1383,11 +1551,20 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;exit&lt;/code&gt;: terminating the current process&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Remember that syscall runs in kernal mode and is thus different from normal procedure calls.&lt;/p&gt;
-&lt;h4 id=&#34;faults&#34;&gt;Faults&lt;/h4&gt;
+&lt;h4 id=&#34;faults&#34;&gt;
+  Faults
+  &lt;a href=&#34;#faults&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;Faults are error conditions that a handler might be able to correct. If the error is corrected, the handler will return to $I_{curr}$ (the faulting instruction), so it is re-executed. Otherwise, the handler will return to an abort routine to terminate the program&lt;/p&gt;
-&lt;h4 id=&#34;aborts&#34;&gt;Aborts&lt;/h4&gt;
+&lt;h4 id=&#34;aborts&#34;&gt;
+  Aborts
+  &lt;a href=&#34;#aborts&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;Aborts result from unrecoverable fatal errors, for example, DRAM bits corruption.&lt;/p&gt;
-&lt;h3 id=&#34;example-exceptions-in-linuxx86-64-systems&#34;&gt;Example Exceptions in Linux/x86-64 Systems&lt;/h3&gt;
+&lt;h3 id=&#34;example-exceptions-in-linuxx86-64-systems&#34;&gt;
+  Example Exceptions in Linux/x86-64 Systems
+  &lt;a href=&#34;#example-exceptions-in-linuxx86-64-systems&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Divide error&lt;/strong&gt;: divide by zero, usually ends up in &lt;code&gt;abort&lt;/code&gt;. (Floating exceptions)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;General protection fault&lt;/strong&gt;: usually because the program references an undefined area of virtual memory, or tries to write to read-only text segment. Usually ends up in &lt;code&gt;abort&lt;/code&gt;. (Segmentation Fault)&lt;/li&gt;
@@ -1486,7 +1663,10 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;c-and-syscalls&#34;&gt;C and Syscalls&lt;/h3&gt;
+&lt;h3 id=&#34;c-and-syscalls&#34;&gt;
+  C and Syscalls
+  &lt;a href=&#34;#c-and-syscalls&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;C/C++ programs can call syscall directly. For example,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -1510,7 +1690,10 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;movq&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;rax&lt;/span&gt;          &lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;syscall&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;_exit&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;movq&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;rdi&lt;/span&gt;           &lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Arg1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;exist&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;syscall&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;processes&#34;&gt;Processes&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;syscall&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;processes&#34;&gt;
+  Processes
+  &lt;a href=&#34;#processes&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;The concept of &lt;em&gt;process&lt;/em&gt; provides the illusion of&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;our program has exclusive use of CPU and memory&lt;/li&gt;
@@ -1528,17 +1711,32 @@ $$&lt;/p&gt;
 &lt;li&gt;the set of open file descriptors&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;These states are the &lt;em&gt;context&lt;/em&gt; of the program.&lt;/p&gt;
-&lt;h3 id=&#34;logical-control-flow&#34;&gt;Logical Control Flow&lt;/h3&gt;
+&lt;h3 id=&#34;logical-control-flow&#34;&gt;
+  Logical Control Flow
+  &lt;a href=&#34;#logical-control-flow&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;We perceive the illusionary control flow, that registers, memory, etc. are changed step by step completely according to the instruction set of our program. This control flow is called &lt;strong&gt;Logical Control Flow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;In reality, processes take turns to use the processor. Each process runs for a short period of time and is preempted (temporarily suspended), until the next turn.&lt;/p&gt;
 &lt;p&gt;This short time period is called &lt;em&gt;time slice&lt;/em&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;concurrent-flows&#34;&gt;Concurrent Flows&lt;/h3&gt;
+&lt;h3 id=&#34;concurrent-flows&#34;&gt;
+  Concurrent Flows
+  &lt;a href=&#34;#concurrent-flows&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;A logical flow whose execution overlaps in time with another flow is called a concurrent flow. Two flows run &lt;em&gt;concurrently&lt;/em&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;parallel-flows&#34;&gt;Parallel Flows&lt;/h3&gt;
+&lt;h3 id=&#34;parallel-flows&#34;&gt;
+  Parallel Flows
+  &lt;a href=&#34;#parallel-flows&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;The concurrent flows that run on different processor cores or computers are called &lt;em&gt;parallel flows&lt;/em&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;private-address-space&#34;&gt;Private Address Space&lt;/h3&gt;
+&lt;h3 id=&#34;private-address-space&#34;&gt;
+  Private Address Space
+  &lt;a href=&#34;#private-address-space&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;The illusion that the program has exclusive use of address space is provided by &lt;em&gt;private address space&lt;/em&gt;. This &amp;ldquo;space&amp;rdquo; of addresses cannot be read/written by other programs, and therefore is exclusive to the program.&lt;/p&gt;
-&lt;h3 id=&#34;user-mode-vs-kernel-mode&#34;&gt;User Mode vs Kernel Mode&lt;/h3&gt;
+&lt;h3 id=&#34;user-mode-vs-kernel-mode&#34;&gt;
+  User Mode vs Kernel Mode
+  &lt;a href=&#34;#user-mode-vs-kernel-mode&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;The OS restricts each process what instructions can be executed and what memory space can be accessed. The processor provides the capability with a &lt;code&gt;mode bit&lt;/code&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1565,9 +1763,15 @@ $$&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Privileged Instruction: &lt;code&gt;syscall&lt;/code&gt; functions, including halt, change mode, I/O op, etc.&lt;/p&gt;
-&lt;h4 id=&#34;proc&#34;&gt;/proc&lt;/h4&gt;
+&lt;h4 id=&#34;proc&#34;&gt;
+  /proc
+  &lt;a href=&#34;#proc&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;/proc&lt;/code&gt; is a Linux file system mount of the kernal data structure. It allows the user to access general system attributes.&lt;/p&gt;
-&lt;h3 id=&#34;context-switch&#34;&gt;Context Switch&lt;/h3&gt;
+&lt;h3 id=&#34;context-switch&#34;&gt;
+  Context Switch
+  &lt;a href=&#34;#context-switch&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;The kernel maintains a context for each process. The context is the state that the kernel needs to restart a preempted process.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Values of general-purpose registers,&lt;/li&gt;
@@ -1586,7 +1790,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Scheduling&lt;/strong&gt;, deciding to preempt a process and restart a preempted process. This is handled by &lt;strong&gt;scheduler&lt;/strong&gt;, a code in the kernel.&lt;/p&gt;
 &lt;p&gt;The kernel can decide to switch when the process is waiting for a read. The IO device can take care of the work, so the kernel will switch to another process, until the IO device sends an interrupt signalling successful transfer of data into the memory.&lt;/p&gt;
-&lt;h2 id=&#34;system-call-error-handling&#34;&gt;System Call Error Handling&lt;/h2&gt;
+&lt;h2 id=&#34;system-call-error-handling&#34;&gt;
+  System Call Error Handling
+  &lt;a href=&#34;#system-call-error-handling&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;When a system level function encounter an error, they return $-1$, and set the global integer variable &lt;code&gt;errno&lt;/code&gt; to indicate what went wrong.&lt;/p&gt;
 &lt;p&gt;An error checking fork function:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;unix_error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -1601,23 +1808,41 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;fork&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// &amp;lt;- check for error return value
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nf&#34;&gt;unix_error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Fork error&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;signals&#34;&gt;Signals&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;signals&#34;&gt;
+  Signals
+  &lt;a href=&#34;#signals&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;A signal is a small message that notifies a process that an event of some type has occurred in the system.&lt;/p&gt;
-&lt;h3 id=&#34;sending-signal&#34;&gt;Sending Signal&lt;/h3&gt;
+&lt;h3 id=&#34;sending-signal&#34;&gt;
+  Sending Signal
+  &lt;a href=&#34;#sending-signal&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;The kernel sends a signal because:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the kernel detects a system event&lt;/li&gt;
 &lt;li&gt;a process invoked &lt;code&gt;kill&lt;/code&gt; function&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;process-group&#34;&gt;Process Group&lt;/h4&gt;
+&lt;h4 id=&#34;process-group&#34;&gt;
+  Process Group
+  &lt;a href=&#34;#process-group&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;Each process belongs to exactly one process group. By default, a child process belongs to the same group as its parent.&lt;/p&gt;
 &lt;p&gt;The Process Group ID can be read/write using &lt;code&gt;getpgrp&lt;/code&gt; and &lt;code&gt;setpgid&lt;/code&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;binkill&#34;&gt;&lt;code&gt;/bin/kill&lt;/code&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;binkill&#34;&gt;
+  &lt;code&gt;/bin/kill&lt;/code&gt;
+  &lt;a href=&#34;#binkill&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;/bin/kill -9 15213&lt;/code&gt; sends a signal 9 (SIGKILL) to process 15213.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;/bin/kill -9 -15213&lt;/code&gt; sends a signal 9 to ever process in group 15213&lt;/p&gt;
-&lt;h4 id=&#34;from-keyboard&#34;&gt;from Keyboard&lt;/h4&gt;
+&lt;h4 id=&#34;from-keyboard&#34;&gt;
+  from Keyboard
+  &lt;a href=&#34;#from-keyboard&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;A Unix shell has at most 1 foreground job and zero or more background jobs. Typing &lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;c&lt;/kbd&gt; causes the kernel to send SIGINT to every process in the foreground process group. &lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;z&lt;/kbd&gt; sends SIGTSTP signal to every process in the foreground process group, which pauses them.&lt;/p&gt;
-&lt;h4 id=&#34;calling-kill-function&#34;&gt;Calling &lt;code&gt;kill&lt;/code&gt; function&lt;/h4&gt;
+&lt;h4 id=&#34;calling-kill-function&#34;&gt;
+  Calling &lt;code&gt;kill&lt;/code&gt; function
+  &lt;a href=&#34;#calling-kill-function&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sys/types.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;signal.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -1627,13 +1852,19 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;pid&lt;/code&gt; = 0, send &lt;code&gt;sig&lt;/code&gt; to process group that current process belongs&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;pid&lt;/code&gt; &amp;lt; 0, send &lt;code&gt;sig&lt;/code&gt; to process group [|&lt;code&gt;pid&lt;/code&gt;|]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;calling-alarm-function&#34;&gt;Calling &lt;code&gt;alarm&lt;/code&gt; function&lt;/h4&gt;
+&lt;h4 id=&#34;calling-alarm-function&#34;&gt;
+  Calling &lt;code&gt;alarm&lt;/code&gt; function
+  &lt;a href=&#34;#calling-alarm-function&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;unistd.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;unsigned&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;alarm&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;unsigned&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;secs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Arranges the kernel to send SIGALRM signal to the calling process in &lt;code&gt;secs&lt;/code&gt; seconds. If secs == 0, then no new alarm is scheduled.&lt;/p&gt;
 &lt;p&gt;It returns the remaining seconds of previous alarm.&lt;/p&gt;
 &lt;p&gt;A call of &lt;code&gt;alarm&lt;/code&gt; cancels all previous &lt;code&gt;alarm&lt;/code&gt;s.&lt;/p&gt;
-&lt;h3 id=&#34;receiving-signal&#34;&gt;Receiving Signal&lt;/h3&gt;
+&lt;h3 id=&#34;receiving-signal&#34;&gt;
+  Receiving Signal
+  &lt;a href=&#34;#receiving-signal&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;The kernel checks for any &lt;em&gt;pending and not blocked&lt;/em&gt; signals, when switching a process from kernel mode to user mode, i.e. from an Interrupt, syscall, or context switching.&lt;/p&gt;
 &lt;p&gt;If there is no such signals, then it will proceed to $I_{next}$. Otherwise, the kernel will choose a signal and force the process to receive it. The receipt will trigger some action, and once the action is completed, the kernel proceeds to $I_{next}$.&lt;/p&gt;
 &lt;p&gt;There is a default action associated with each signal; the user program can change it by using a &lt;code&gt;signal&lt;/code&gt; function&lt;/p&gt;
@@ -1706,7 +1937,10 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;transplant&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I will talk about some of the implementations. The complete source file can be found in my &lt;a href=&#34;https://github.com/PowerSnail/Algorithms-Practices&#34;&gt;algorithm repository&lt;/a&gt;. If you found any problem with the implementation, or anything that is worth adding to this, please leave a comment under this article or open an issue in the algorithm repository. This BST does not insert repeated element.&lt;/p&gt;
-&lt;h2 id=&#34;basic-idea&#34;&gt;Basic Idea&lt;/h2&gt;
+&lt;h2 id=&#34;basic-idea&#34;&gt;
+  Basic Idea
+  &lt;a href=&#34;#basic-idea&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.&lt;/p&gt;
 &lt;p&gt;In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p&gt;
 &lt;figure&gt;
@@ -1717,7 +1951,10 @@ $$&lt;/p&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code&gt;nil&lt;/code&gt; sentinel node, which is not in the data structure but a &lt;a href=&#34;#sentinelNode&#34;&gt;useful element&lt;/a&gt; in our program.&lt;/p&gt;
-&lt;h2 id=&#34;traversals&#34;&gt;Traversals&lt;/h2&gt;
+&lt;h2 id=&#34;traversals&#34;&gt;
+  Traversals
+  &lt;a href=&#34;#traversals&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;The recursive in-order traversal is easy to implement:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inorderRec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -1758,11 +1995,17 @@ $$&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;The trick here is to 1) progress the printing and 2) ensure that at the end of each iteration, the &lt;em&gt;invariant&lt;/em&gt; is preserved, i.e. the situation falls into one of the situations.&lt;/p&gt;
-&lt;h4 id=&#34;prev-pointing-at-parent&#34;&gt;&lt;code&gt;prev&lt;/code&gt; Pointing at Parent&lt;/h4&gt;
+&lt;h4 id=&#34;prev-pointing-at-parent&#34;&gt;
+  &lt;code&gt;prev&lt;/code&gt; Pointing at Parent
+  &lt;a href=&#34;#prev-pointing-at-parent&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;Nothing has been printed, so we go to left directly;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;prev&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We need to consider the case where &lt;code&gt;left&lt;/code&gt; is nil, but this is easy because we can just throw &lt;code&gt;prev&lt;/code&gt; to left. This works because if we examine the &lt;em&gt;loop invariant&lt;/em&gt;, now the tree complies with the second situation.&lt;/p&gt;
-&lt;h4 id=&#34;prev-pointing-at-left&#34;&gt;&lt;code&gt;prev&lt;/code&gt; Pointing at left&lt;/h4&gt;
+&lt;h4 id=&#34;prev-pointing-at-left&#34;&gt;
+  &lt;code&gt;prev&lt;/code&gt; Pointing at left
+  &lt;a href=&#34;#prev-pointing-at-left&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;Left tree is already printed (we consider &lt;code&gt;nil&lt;/code&gt; as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code&gt;x&lt;/code&gt; before entering right.&lt;/p&gt;
 &lt;p&gt;There is a slight complication if &lt;code&gt;x&lt;/code&gt; is a leaf, as both children are &lt;code&gt;nil&lt;/code&gt;. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code&gt;x&lt;/code&gt; forever.&lt;/p&gt;
 &lt;p&gt;&lt;img
@@ -1781,17 +2024,29 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;prev&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;prev-pointing-at-right&#34;&gt;&lt;code&gt;prev&lt;/code&gt; Pointing at Right&lt;/h4&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;prev-pointing-at-right&#34;&gt;
+  &lt;code&gt;prev&lt;/code&gt; Pointing at Right
+  &lt;a href=&#34;#prev-pointing-at-right&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;We know &lt;code&gt;x&lt;/code&gt; subtree is all printed, so all we need to do is to move &lt;code&gt;x&lt;/code&gt; upwards.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;prev&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;insertion&#34;&gt;Insertion&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;insertion&#34;&gt;
+  Insertion
+  &lt;a href=&#34;#insertion&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;Insertion always occur at leaf in a BST. Generally, we need to 1) find a proper leaf as the parent of our new node and 2) insert it into the proper child of the leaf.&lt;/p&gt;
-&lt;h2 id=&#34;a-idsentinelnodea-sentinel-node&#34;&gt;&lt;a id=&#34;sentinelNode&#34;&gt;&lt;/a&gt; Sentinel Node&lt;/h2&gt;
+&lt;h2 id=&#34;a-idsentinelnodea-sentinel-node&#34;&gt;
+  &lt;a id=&#34;sentinelNode&#34;&gt;&lt;/a&gt; Sentinel Node
+  &lt;a href=&#34;#a-idsentinelnodea-sentinel-node&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;How is a sentinel node useful? There are several uses of it, and the most important one is to replace &lt;code&gt;NULL&lt;/code&gt; for representing a non-existing element. It guards against null pointers.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;NULL&lt;/code&gt; is a very bad design from the very beginning, as it is passed into a function as &lt;code&gt;pointer type&lt;/code&gt; but is not a &lt;code&gt;pointer&lt;/code&gt; at all. Any attempt to call a member function will cause a crush. It is also hard to debug, especially when there are layers of function calls. You cannot dereference a null pointer in debugger; it points to 0x00000000, which has no useful information at all.&lt;/p&gt;
 &lt;p&gt;A sentinel &lt;code&gt;nil&lt;/code&gt; on the other hand is a legitimate &lt;code&gt;Node&lt;/code&gt; object. It has all functions supported, and could be more useful for debugging. Debugging-wise, it is printable and assignable.&lt;/p&gt;
 &lt;p&gt;It is also used as the parent of &lt;code&gt;root&lt;/code&gt; in our tree. This eliminates the difference between an empty tree and non-empty tree, so insertion and removal of &lt;code&gt;root&lt;/code&gt; could be carried out without an extra conditional branch.&lt;/p&gt;
-&lt;h2 id=&#34;codes&#34;&gt;Codes&lt;/h2&gt;
+&lt;h2 id=&#34;codes&#34;&gt;
+  Codes
+  &lt;a href=&#34;#codes&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;!--  --&gt;
 </content>
     <category>posts</category>
@@ -1807,8 +2062,11 @@ $$&lt;/p&gt;
     <updated>Fri, 26 Feb 2016 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2016/parsing-techniques-notes02/</id>
-    <summary type="html">Generating Sentences sentence vs. sentential sentence all symbols belongs to terminals (a valid element of the language) sentential may contain non-terminals, an intermediate form during sentence production Example: For a language where $V_N = {P, Q} \land V_T = {a, b, c, d}$, a valid sentential would be $aP$; a valid sentence would be $ac$.</summary>
-    <content type="html">&lt;h2 id=&#34;generating-sentences&#34;&gt;Generating Sentences&lt;/h2&gt;
+    <summary type="html">Generating Sentences ## sentence vs. sentential sentence all symbols belongs to terminals (a valid element of the language) sentential may contain non-terminals, an intermediate form during sentence production Example: #### For a language where $V_N = {P, Q} \land V_T = {a, b, c, d}$, a valid sentential would be $aP$; a valid sentence would be $ac$.</summary>
+    <content type="html">&lt;h2 id=&#34;generating-sentences&#34;&gt;
+  Generating Sentences
+  &lt;a href=&#34;#generating-sentences&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1827,12 +2085,21 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h4 id=&#34;example&#34;&gt;Example:&lt;/h4&gt;
+&lt;h4 id=&#34;example&#34;&gt;
+  Example:
+  &lt;a href=&#34;#example&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;For a language where $V_N = {P, Q} \land V_T = {a, b, c, d}$, a valid sentential would be $aP$; a valid sentence would be $ac$.&lt;/p&gt;
-&lt;h3 id=&#34;type-0-and-type-1-cs-languages&#34;&gt;Type 0 and Type 1 (CS) Languages&lt;/h3&gt;
+&lt;h3 id=&#34;type-0-and-type-1-cs-languages&#34;&gt;
+  Type 0 and Type 1 (CS) Languages
+  &lt;a href=&#34;#type-0-and-type-1-cs-languages&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Breadth-first Production&lt;/strong&gt;: for each sentential, make copies of it for each applicable rule. Then, repeat the operation on each copy. If there is no &lt;em&gt;non-terminal&lt;/em&gt; in the sentential, it is then a sentence, and could be printed and discarded in the production.&lt;/p&gt;
 &lt;p&gt;This process may be infinitely long, but it is guaranteed that an arbitrary sentence will definitely be produced.&lt;/p&gt;
-&lt;h4 id=&#34;two-remarks-about-cs-language-sentence-production&#34;&gt;Two Remarks about CS Language Sentence Production&lt;/h4&gt;
+&lt;h4 id=&#34;two-remarks-about-cs-language-sentence-production&#34;&gt;
+  Two Remarks about CS Language Sentence Production
+  &lt;a href=&#34;#two-remarks-about-cs-language-sentence-production&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;We cannot decide whether a CS language is empty, i.e. whether its rules could produce a sentence. &lt;br&gt; The process takes infinite time, and therefore is &lt;em&gt;undecidable&lt;/em&gt;.&lt;/p&gt;
@@ -1846,7 +2113,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Type 0 language has the same properties.&lt;/p&gt;
-&lt;h3 id=&#34;type-2-cf-language&#34;&gt;Type 2 (CF) Language&lt;/h3&gt;
+&lt;h3 id=&#34;type-2-cf-language&#34;&gt;
+  Type 2 (CF) Language
+  &lt;a href=&#34;#type-2-cf-language&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;Monotonic nature of CF language means that the length of sentence will not &amp;ldquo;shrink&amp;rdquo;. Therefore, we could solve the two problems of CS language by a rather simple algorithm:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Scan rules that have terminal on right-hand side,&lt;/li&gt;
@@ -1856,7 +2126,10 @@ $$&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;If the above process is able to reach the start symbol then it is not empty; otherwise, it finds no way up to the start symbol, the language is empty.&lt;/p&gt;
 &lt;p&gt;The length of sentence does not shrink in CF language. Therefore, we could determine a sentence&amp;rsquo;s existence. If we meet the sentence obviously, it belongs to the language. If we keep producing and exceed the length of the sentence, then further production on the sentential will definitely not produce the sentence. We could therefore decide the inclusion of an arbitrary sentence of finite length in finite time.&lt;/p&gt;
-&lt;h3 id=&#34;type-3-regular-language&#34;&gt;Type 3 (Regular) Language&lt;/h3&gt;
+&lt;h3 id=&#34;type-3-regular-language&#34;&gt;
+  Type 3 (Regular) Language
+  &lt;a href=&#34;#type-3-regular-language&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;Regular language has rules that right-hand side contains at most one non-terminal, and it should be the rightmost symbol. Regular language could be written as regular expressions that is composed of only terminals and regular operators. As a result, if a non-empty regular expression could be constructed, then the language is non-empty.&lt;/p&gt;
 &lt;p&gt;It is also possible to enumerate sentences without breath-first production, as only one non-terminal could be replaced in each sentential. When looking for a sentence $K$ of length $l$, if the length of sentential exceeds $l$, then $K$ cannot be included in the language. Finding any sentence in the process would prove that the language is not empty.&lt;/p&gt;
 &lt;!-- page --&gt;
@@ -1874,9 +2147,12 @@ $$&lt;/p&gt;
     <updated>Wed, 24 Feb 2016 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2016/parsing-techniques-notes01/</id>
-    <summary type="html">Generative Grammar There are several views of defining a language. The computer science and formal linguistics perspective:
+    <summary type="html">Generative Grammar ## There are several views of defining a language. The computer science and formal linguistics perspective:
 terms definition Language a set of sentences Sentence a sequence of symbols Alphabet a set of all symbols The semantics - meaning - of a sentence is described by its tokens cooperating with its structure.</summary>
-    <content type="html">&lt;h2 id=&#34;generative-grammar&#34;&gt;Generative Grammar&lt;/h2&gt;
+    <content type="html">&lt;h2 id=&#34;generative-grammar&#34;&gt;
+  Generative Grammar
+  &lt;a href=&#34;#generative-grammar&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;There are several views of defining a language. The computer science and formal linguistics perspective:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1907,7 +2183,10 @@ terms definition Language a set of sentences Sentence a sequence of symbols Alph
 &lt;li&gt;exact&lt;/li&gt;
 &lt;li&gt;fixed-sized&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;language-can-be-specified-by-infinite-bit-string&#34;&gt;Language can be specified by infinite Bit-String&lt;/h3&gt;
+&lt;h3 id=&#34;language-can-be-specified-by-infinite-bit-string&#34;&gt;
+  Language can be specified by infinite Bit-String
+  &lt;a href=&#34;#language-can-be-specified-by-infinite-bit-string&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;Sorted Alphabet: $\Sigma$
 Language $\Sigma^{* }$ contains all combinations of symbols in $\Sigma$&lt;/p&gt;
 &lt;p&gt;The order of sentences in $\Sigma^* $ follows that:&lt;/p&gt;
@@ -1922,7 +2201,10 @@ Language $\Sigma^{* }$ contains all combinations of symbols in $\Sigma$&lt;/p&gt
 &lt;p&gt;For example:
 Language $L = 010010110&amp;hellip;$&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;formal-grammar&#34;&gt;Formal Grammar&lt;/h3&gt;
+&lt;h3 id=&#34;formal-grammar&#34;&gt;
+  Formal Grammar
+  &lt;a href=&#34;#formal-grammar&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;Recipe of replacing symbols:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name  -&amp;gt; tom | dick | harry // Name may be replaced by tom, dick or harry
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A grammar is a &lt;em&gt;4-tuple&lt;/em&gt; $(V_N, V_T, R, S)$:&lt;/p&gt;
@@ -1932,21 +2214,39 @@ Language $L = 010010110&amp;hellip;$&lt;/p&gt;
 &lt;li&gt;$R$ is the set of rules, a set that contains ordered pairs: ${(P, Q) \mid P\in (V_N\cup V_T)^+ \land Q\in (V_N \cup V_T)^* }$&lt;/li&gt;
 &lt;li&gt;$S$ is the start symbol, $S\in V_N$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;four-types-of-grammars&#34;&gt;Four types of Grammars&lt;/h2&gt;
-&lt;h3 id=&#34;type-0-phrase-structure-grammar-ps-grammar&#34;&gt;Type 0: Phrase Structure Grammar (PS Grammar)&lt;/h3&gt;
+&lt;h2 id=&#34;four-types-of-grammars&#34;&gt;
+  Four types of Grammars
+  &lt;a href=&#34;#four-types-of-grammars&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;type-0-phrase-structure-grammar-ps-grammar&#34;&gt;
+  Type 0: Phrase Structure Grammar (PS Grammar)
+  &lt;a href=&#34;#type-0-phrase-structure-grammar-ps-grammar&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;Most freedom. Follows &lt;em&gt;4-tuple&lt;/em&gt; $(V_N, V_T, R, S)$, without further restriction.
 Represented as &lt;code&gt;Directed Acyclic Graph&lt;/code&gt;: No cycle exists&lt;/p&gt;
-&lt;h3 id=&#34;type-1-context-sensitive-grammar-cs-grammar&#34;&gt;Type 1: Context-Sensitive Grammar (CS Grammar)&lt;/h3&gt;
+&lt;h3 id=&#34;type-1-context-sensitive-grammar-cs-grammar&#34;&gt;
+  Type 1: Context-Sensitive Grammar (CS Grammar)
+  &lt;a href=&#34;#type-1-context-sensitive-grammar-cs-grammar&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;There are two equivalent definitions: &lt;code&gt;Monotonic&lt;/code&gt; and &lt;code&gt;Context-Sensitive&lt;/code&gt;.
 Can be represented by a DAG, similar to PS Grammar.&lt;/p&gt;
-&lt;h4 id=&#34;monotonic&#34;&gt;Monotonic&lt;/h4&gt;
+&lt;h4 id=&#34;monotonic&#34;&gt;
+  Monotonic
+  &lt;a href=&#34;#monotonic&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;For each rule, left-hand side has more or equal number of symbols to right-hand side.&lt;/p&gt;
-&lt;h4 id=&#34;context-sensitive&#34;&gt;Context-Sensitive&lt;/h4&gt;
+&lt;h4 id=&#34;context-sensitive&#34;&gt;
+  Context-Sensitive
+  &lt;a href=&#34;#context-sensitive&#34;&gt;####&lt;/a&gt;
+&lt;/h4&gt;
 &lt;p&gt;Every rule is context-sensitive.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Left-hand side contains only one symbol to be changed in the right-hand side.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;type-2-context-free-grammar-cf-grammar&#34;&gt;Type 2: Context-Free Grammar (CF Grammar)&lt;/h3&gt;
+&lt;h3 id=&#34;type-2-context-free-grammar-cf-grammar&#34;&gt;
+  Type 2: Context-Free Grammar (CF Grammar)
+  &lt;a href=&#34;#type-2-context-free-grammar-cf-grammar&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;LHS could only contain one non-terminal symbol. (Thus not related to neighboring symbols).
 Represented by a tree, as branches of a node is not relevant to other nodes.&lt;/p&gt;
 &lt;p&gt;The generative power of CF Grammar comes from two operations:&lt;/p&gt;
@@ -1955,7 +2255,10 @@ Represented by a tree, as branches of a node is not relevant to other nodes.&lt;
 &lt;li&gt;Choice (choosing from one of the alternatives in the RHS)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;NT -&amp;gt; tom | NT dick | ...&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;type-3-regular-grammar&#34;&gt;Type 3: Regular Grammar&lt;/h3&gt;
+&lt;h3 id=&#34;type-3-regular-grammar&#34;&gt;
+  Type 3: Regular Grammar
+  &lt;a href=&#34;#type-3-regular-grammar&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;Mostly referring to &lt;code&gt;right regular grammar&lt;/code&gt;.
 Each rule could only contain one non-terminal, as the rightmost item.
 Represented by a list, because each sentential has only one replaceable item (non-terminal), or in a production chain.&lt;/p&gt;
@@ -1989,7 +2292,10 @@ Represented by a list, because each sentential has only one replaceable item (no
 &lt;/table&gt;
 &lt;p&gt;Example:&lt;/p&gt;
 &lt;p&gt;$S_S\to(([tdh],)^{* }[tdh] &amp;amp; )^{? }[tdh]$&lt;/p&gt;
-&lt;h3 id=&#34;type-4-finite-choice-grammar-fc-grammar&#34;&gt;Type 4: Finite Choice Grammar (FC Grammar)&lt;/h3&gt;
+&lt;h3 id=&#34;type-4-finite-choice-grammar-fc-grammar&#34;&gt;
+  Type 4: Finite Choice Grammar (FC Grammar)
+  &lt;a href=&#34;#type-4-finite-choice-grammar-fc-grammar&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;Each rule could have only terminals in right-hand side.
 Very limited expressive power.&lt;/p&gt;
 </content>

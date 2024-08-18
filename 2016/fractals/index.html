@@ -36,22 +36,22 @@
         </h1>
         <hr>
         <div class="metadata">
-          <time datetime="2016-11-08T00:00:00Z">08 Nov 2016</time> · 595 words · 3 minutes read
+          <time datetime="2016-11-08T00:00:00Z">08 Nov 2016</time> · 611 words · 3 minutes read
         </div>
         <h1 id="fractal">
-          Fractal
+          Fractal <a href="#fractal">#</a>
         </h1>
         <p>
           naming: fractional dimension
         </p>
         <h2 id="definition">
-          Definition:
+          Definition: <a href="#definition">##</a>
         </h2>
         <p>
           self-similar $$\to$ when zoomed in, look the same
         </p>
         <h2 id="types">
-          Types:
+          Types: <a href="#types">##</a>
         </h2>
         <ol>
           <li>Exactly self-similar
@@ -60,13 +60,13 @@
           </li>
         </ol>
         <h2 id="exactly-self-similar">
-          Exactly Self-similar
+          Exactly Self-similar <a href="#exactly-self-similar">##</a>
         </h2>
         <p>
           If zoomed in, there is no way to tell that we have zoomed in.
         </p>
         <h3 id="sierpinski-carpet">
-          Sierpinski Carpet
+          Sierpinski Carpet <a href="#sierpinski-carpet">###</a>
         </h3>
         <figure>
           <img src="/images/Sierpinski_carpet.jpg" alt="Sierpinski Carpet" srcset="/images/Sierpinski_carpet-400w.jpg 400w,/images/Sierpinski_carpet.jpg 600w" width="600" height="600">
@@ -81,7 +81,7 @@
           </li>
         </ul>
         <h3 id="koch-snowflake">
-          Koch Snowflake
+          Koch Snowflake <a href="#koch-snowflake">###</a>
         </h3>
         <figure>
           <img src="/images/2000px-Koch_Snowflake_7th_iteration.svg.png" alt="Koch Snowflake" srcset="/images/2000px-Koch_Snowflake_7th_iteration.svg-400w.png 400w,/images/2000px-Koch_Snowflake_7th_iteration.svg-600w.png 600w,/images/2000px-Koch_Snowflake_7th_iteration.svg-800w.png 800w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1000w.png 1000w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1200w.png 1200w,/images/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w" width="2000" height="2000" loading="lazy">
@@ -102,7 +102,7 @@
           However, shorelines are not as bumpy as Koch Snowflakes. They are smoother. Hence, we need a concept to describe the bumpiness.
         </p>
         <h3 id="length-of-koch-snowflake">
-          Length of Koch Snowflake
+          Length of Koch Snowflake <a href="#length-of-koch-snowflake">###</a>
         </h3>
         <p>
           Each Step increases the length to $$\dfrac{4}{3} \times$ original. Hence, Koch Snowflake is infinitely long.
@@ -114,7 +114,7 @@
           Question: How quickly does Koch Snowflake’s length converge to infinity?
         </p>
         <h3 id="measuring-length-of-fractal-line">
-          Measuring Length of Fractal Line
+          Measuring Length of Fractal Line <a href="#measuring-length-of-fractal-line">###</a>
         </h3>
         <p>
           Different measuring scales lead to different length.
@@ -137,13 +137,13 @@
           </li>
         </ul>
         <h3 id="shorelinemountain-topology">
-          Shoreline/Mountain Topology
+          Shoreline/Mountain Topology <a href="#shorelinemountain-topology">###</a>
         </h3>
         <p>
           Use fractal dimension to model a bumpy line, and computationally derive the line, rather than describing more details.
         </p>
         <h2 id="statistically-self-similar">
-          Statistically Self-similar
+          Statistically Self-similar <a href="#statistically-self-similar">##</a>
         </h2>
         <p>
           Recursive Tree: <strong>Tree</strong> := Stick + <strong>Tree</strong> + <strong>Tree</strong>
@@ -164,7 +164,7 @@
 </span></span><span class="line"><span class="cl">- Backwards</span></span></code></pre>
         </div>
         <h3 id="l-system">
-          L-System
+          L-System <a href="#l-system">###</a>
         </h3>
         <p>
           The above process can be described by CFG:
@@ -176,7 +176,7 @@
           This use of CFG is called L-System.
         </p>
         <h3 id="improvement-to-l-system-tree">
-          Improvement to L-System Tree
+          Improvement to L-System Tree <a href="#improvement-to-l-system-tree">###</a>
         </h3>
         <ul>
           <li>Randomness : This introduces <strong>Statistically similar</strong> fractal image.
@@ -192,7 +192,7 @@
           However, sadly trees don’t grow by the fractal model.
         </p>
         <h2 id="incorporating-randomness-into-fractals">
-          Incorporating Randomness Into Fractals
+          Incorporating Randomness Into Fractals <a href="#incorporating-randomness-into-fractals">##</a>
         </h2>
         <p>
           Example Algorithm (<em>Subdivide and Offset</em>)
@@ -211,7 +211,7 @@
           More sophisticated examples:
         </p>
         <h3 id="height-map">
-          Height Map
+          Height Map <a href="#height-map">###</a>
         </h3>
         <p>
           A raster vector of height
@@ -275,7 +275,7 @@
           </li>
         </ul>
         <h3 id="perlin-fractal">
-          Perlin Fractal
+          Perlin Fractal <a href="#perlin-fractal">###</a>
         </h3>
         <p>
           A perlin fractal is created by taking in a height map, downsize it, and fill itself with the small height map.
@@ -283,7 +283,7 @@
         <footer>
           <section class="footer-meta">
             <p>
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
+              <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
               <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/graphics">graphics</a>, <a href="/tags/notes">notes</a>
             </p>
           </section>

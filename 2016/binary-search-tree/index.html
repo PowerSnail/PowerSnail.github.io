@@ -36,7 +36,7 @@
         </h1>
         <hr>
         <div class="metadata">
-          <time datetime="2016-02-27T00:00:00Z">27 Feb 2016</time> · 948 words · 5 minutes read
+          <time datetime="2016-02-27T00:00:00Z">27 Feb 2016</time> · 958 words · 5 minutes read
         </div>
         <p>
           This is a simple implementation of binary search tree implemented by C++. Here are the methods of my BST:
@@ -87,7 +87,7 @@
           I will talk about some of the implementations. The complete source file can be found in my <a href="https://github.com/PowerSnail/Algorithms-Practices">algorithm repository</a>. If you found any problem with the implementation, or anything that is worth adding to this, please leave a comment under this article or open an issue in the algorithm repository. This BST does not insert repeated element.
         </p>
         <h2 id="basic-idea">
-          Basic Idea
+          Basic Idea <a href="#basic-idea">##</a>
         </h2>
         <p>
           Binary Search Tree is a basic data structure in computer science. It stores data, in my case some integers, into a tree-like structure.
@@ -103,7 +103,7 @@
           The top node is called root, and the nodes that do not have a child are called leaves. There is a <code>nil</code> sentinel node, which is not in the data structure but a <a href="#sentinelNode">useful element</a> in our program.
         </p>
         <h2 id="traversals">
-          Traversals
+          Traversals <a href="#traversals">##</a>
         </h2>
         <p>
           The recursive in-order traversal is easy to implement:
@@ -184,7 +184,7 @@
           The trick here is to 1) progress the printing and 2) ensure that at the end of each iteration, the <em>invariant</em> is preserved, i.e. the situation falls into one of the situations.
         </p>
         <h4 id="prev-pointing-at-parent">
-          <code>prev</code> Pointing at Parent
+          <code>prev</code> Pointing at Parent <a href="#prev-pointing-at-parent">####</a>
         </h4>
         <p>
           Nothing has been printed, so we go to left directly;
@@ -197,7 +197,7 @@
           We need to consider the case where <code>left</code> is nil, but this is easy because we can just throw <code>prev</code> to left. This works because if we examine the <em>loop invariant</em>, now the tree complies with the second situation.
         </p>
         <h4 id="prev-pointing-at-left">
-          <code>prev</code> Pointing at left
+          <code>prev</code> Pointing at left <a href="#prev-pointing-at-left">####</a>
         </h4>
         <p>
           Left tree is already printed (we consider <code>nil</code> as printed), so we try to go right. Don’t forget to first print out <code>x</code> before entering right.
@@ -225,7 +225,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
         </div>
         <h4 id="prev-pointing-at-right">
-          <code>prev</code> Pointing at Right
+          <code>prev</code> Pointing at Right <a href="#prev-pointing-at-right">####</a>
         </h4>
         <p>
           We know <code>x</code> subtree is all printed, so all we need to do is to move <code>x</code> upwards.
@@ -235,13 +235,13 @@
 </span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">parent</span><span class="p">;</span></span></span></code></pre>
         </div>
         <h2 id="insertion">
-          Insertion
+          Insertion <a href="#insertion">##</a>
         </h2>
         <p>
           Insertion always occur at leaf in a BST. Generally, we need to 1) find a proper leaf as the parent of our new node and 2) insert it into the proper child of the leaf.
         </p>
         <h2 id="a-idsentinelnodea-sentinel-node">
-          <a id="sentinelNode"></a> Sentinel Node
+          <a id="sentinelNode"></a> Sentinel Node <a href="#a-idsentinelnodea-sentinel-node">##</a>
         </h2>
         <p>
           How is a sentinel node useful? There are several uses of it, and the most important one is to replace <code>NULL</code> for representing a non-existing element. It guards against null pointers.
@@ -256,12 +256,12 @@
           It is also used as the parent of <code>root</code> in our tree. This eliminates the difference between an empty tree and non-empty tree, so insertion and removal of <code>root</code> could be carried out without an extra conditional branch.
         </p>
         <h2 id="codes">
-          Codes
+          Codes <a href="#codes">##</a>
         </h2><!--  -->
         <footer>
           <section class="footer-meta">
             <p>
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
+              <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
               <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/algorithms">Algorithms</a>, <a href="/tags/bst">BST</a>, <a href="/tags/data-structure">Data Structure</a>
             </p>
           </section>

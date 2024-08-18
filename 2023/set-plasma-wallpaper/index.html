@@ -36,10 +36,10 @@
         </h1>
         <hr>
         <div class="metadata">
-          <time datetime="2023-02-08T00:00:00Z">08 Feb 2023</time> · 820 words · 4 minutes read
+          <time datetime="2023-02-08T00:00:00Z">08 Feb 2023</time> · 827 words · 4 minutes read
         </div>
         <h2 id="the-problem">
-          The Problem
+          The Problem <a href="#the-problem">##</a>
         </h2>
         <p>
           KDE Plasma is my favorite Linux DE, and it has its quirks and warts. The support for multiple monitors, for example, is fairly buggy at times, especially when monitors are turned on and off. The way it deals with multiple monitors seems to be based on some sort of numerical index that doesn’t map itself to the monitors’ UUIDs, so when the configuration changes, desktop settings can be shifted around.
@@ -51,7 +51,7 @@
           Plasma already provides a command-line tool for setting wallpaper: <code>plasma-apply-wallpaperimage</code>, but it doesn’t have the ability to address each monitor either.
         </p>
         <h2 id="the-solution">
-          The Solution
+          The Solution <a href="#the-solution">##</a>
         </h2>
         <p>
           Fortunately, there’s a Band-Aid for every wart, if you are comfortable making your own Band-Aid. And in this case, my problem can be “fixed” by resetting the wallpapers with a script.
@@ -99,7 +99,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">setWallpaper</span><span class="p">(</span><span class="nx">getDesktops</span><span class="p">()[</span><span class="nx">desktop_id</span><span class="p">],</span> <span class="nx">image_path</span><span class="p">);</span></span></span></code></pre>
         </div>
         <h2 id="dbus-interface">
-          DBus Interface
+          DBus Interface <a href="#dbus-interface">##</a>
         </h2>
         <p>
           To run this script, we use the DBus Interface of Plasma, which provides a function called <code>evaluateScript</code>:
@@ -111,7 +111,7 @@
           …or invoke it with your favorite DBus tooling.
         </p>
         <h2 id="parameterize">
-          Parameterize
+          Parameterize <a href="#parameterize">##</a>
         </h2>
         <p>
           <code>evaluateScript</code> only accepts a self-contained script. You can hard code the path of the images, but there’s no way to supply the image paths as arguments to it, so some sort of string manipulation is required if you want to point Plasma to some arbitrary image.
@@ -196,7 +196,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">()</span></span></span></code></pre>
         </div>
         <h2 id="references">
-          References
+          References <a href="#references">##</a>
         </h2>
         <p>
           Hänninen, H. (2019). <em>Superpaper</em> [Python]. <a href="https://github.com/hhannine/superpaper/blob/219f00aec19a4f0697e37663875eccbfa19b502b/superpaper/wallpaper_processing.py">superpaper/wallpaper_processing.py at 219f00aec19a4f0697e37663875eccbfa19b502b · hhannine/superpaper · GitHub</a> (Original work published 2019)
@@ -207,7 +207,7 @@
         <footer>
           <section class="footer-meta">
             <p>
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
+              <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
               <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">Computer Science</a>, <a href="/tags/python">Python</a>, <a href="/tags/dbus">DBus</a>, <a href="/tags/javascript">Javascript</a>, <a href="/tags/plasma">Plasma</a>, <a href="/tags/kde">KDE</a>
             </p>
           </section>

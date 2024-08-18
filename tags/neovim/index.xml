@@ -47,14 +47,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;vim.cmd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;let tobedeleted = bufnr(&amp;#39;%&amp;#39;) | b# | exe &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;bd! &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; . tobedeleted&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The snippet is predominantly based on &lt;a href=&#34;https://vi.stackexchange.com/questions/7217/how-can-i-cancel-reading-a-file-into-a-buffer-on-bufreadpre&#34;&gt;this Stack Exchange post&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;some-explanations&#34;&gt;Some explanations&lt;/h2&gt;
+&lt;h2 id=&#34;some-explanations&#34;&gt;
+  Some explanations
+  &lt;a href=&#34;#some-explanations&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;BufReadCmd&lt;/code&gt;. This function is triggered before the file is loaded into the buffer, and in fact, it is supposed to do the actual work of reading the file. By not doing that work, the reading is avoided. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;vim.fn.shellescape(vim.api.nvim_buf_get_name(0))&lt;/code&gt;. This line retrieves the name of the current buffer&amp;rsquo;s file using &lt;code&gt;vim.api.nvim_buf_get_name(0)&lt;/code&gt; and then escapes the filename for safe use in a shell command using &lt;code&gt;vim.fn.shellescape()&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;The trailing &lt;code&gt;&amp;amp;&lt;/code&gt; puts the process of the external program into the background, so the editor is not frozen by it.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;vim.cmd(&amp;quot;let tobedeleted = bufnr(&#39;%&#39;) | b# | exe \&amp;quot;bd! \&amp;quot; . tobedeleted&amp;quot;)&lt;/code&gt;. This command first switches the previous buffer to the front, and deletes the buffer of the binary file. &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;further-work&#34;&gt;Further work&lt;/h2&gt;
+&lt;h2 id=&#34;further-work&#34;&gt;
+  Further work
+  &lt;a href=&#34;#further-work&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;p&gt;The next step is to find or make a fast, general purpose file viewer, so I can open all binary files&amp;mdash;or any file that&amp;rsquo;s not suitable for text-based editing&amp;mdash;in the same app. At the moment, &lt;code&gt;mupdf&lt;/code&gt; is the fastest simple PDF viewer I&amp;rsquo;ve found, at least the fastest among the packages in my system repo.&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;

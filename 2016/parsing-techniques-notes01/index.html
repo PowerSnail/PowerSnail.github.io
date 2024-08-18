@@ -42,10 +42,10 @@
         </div>
         <hr>
         <div class="metadata">
-          <time datetime="2016-02-24T00:00:00Z">24 Feb 2016</time> · 546 words · 3 minutes read
+          <time datetime="2016-02-24T00:00:00Z">24 Feb 2016</time> · 557 words · 3 minutes read
         </div>
         <h2 id="generative-grammar">
-          Generative Grammar
+          Generative Grammar <a href="#generative-grammar">##</a>
         </h2>
         <p>
           There are several views of defining a language. The computer science and formal linguistics perspective:
@@ -103,7 +103,7 @@
           </li>
         </ul>
         <h3 id="language-can-be-specified-by-infinite-bit-string">
-          Language can be specified by infinite Bit-String
+          Language can be specified by infinite Bit-String <a href="#language-can-be-specified-by-infinite-bit-string">###</a>
         </h3>
         <p>
           Sorted Alphabet: $\Sigma$ Language $\Sigma^{* }$ contains all combinations of symbols in $\Sigma$
@@ -131,7 +131,7 @@
           </p>
         </blockquote>
         <h3 id="formal-grammar">
-          Formal Grammar
+          Formal Grammar <a href="#formal-grammar">###</a>
         </h3>
         <p>
           Recipe of replacing symbols:
@@ -154,28 +154,28 @@
           </li>
         </ul>
         <h2 id="four-types-of-grammars">
-          Four types of Grammars
+          Four types of Grammars <a href="#four-types-of-grammars">##</a>
         </h2>
         <h3 id="type-0-phrase-structure-grammar-ps-grammar">
-          Type 0: Phrase Structure Grammar (PS Grammar)
+          Type 0: Phrase Structure Grammar (PS Grammar) <a href="#type-0-phrase-structure-grammar-ps-grammar">###</a>
         </h3>
         <p>
           Most freedom. Follows <em>4-tuple</em> $(V_N, V_T, R, S)$, without further restriction. Represented as <code>Directed Acyclic Graph</code>: No cycle exists
         </p>
         <h3 id="type-1-context-sensitive-grammar-cs-grammar">
-          Type 1: Context-Sensitive Grammar (CS Grammar)
+          Type 1: Context-Sensitive Grammar (CS Grammar) <a href="#type-1-context-sensitive-grammar-cs-grammar">###</a>
         </h3>
         <p>
           There are two equivalent definitions: <code>Monotonic</code> and <code>Context-Sensitive</code>. Can be represented by a DAG, similar to PS Grammar.
         </p>
         <h4 id="monotonic">
-          Monotonic
+          Monotonic <a href="#monotonic">####</a>
         </h4>
         <p>
           For each rule, left-hand side has more or equal number of symbols to right-hand side.
         </p>
         <h4 id="context-sensitive">
-          Context-Sensitive
+          Context-Sensitive <a href="#context-sensitive">####</a>
         </h4>
         <p>
           Every rule is context-sensitive.
@@ -185,7 +185,7 @@
           </li>
         </ul>
         <h3 id="type-2-context-free-grammar-cf-grammar">
-          Type 2: Context-Free Grammar (CF Grammar)
+          Type 2: Context-Free Grammar (CF Grammar) <a href="#type-2-context-free-grammar-cf-grammar">###</a>
         </h3>
         <p>
           LHS could only contain one non-terminal symbol. (Thus not related to neighboring symbols). Represented by a tree, as branches of a node is not relevant to other nodes.
@@ -203,7 +203,7 @@
           <code>NT -&gt; tom | NT dick | ...</code>
         </p>
         <h3 id="type-3-regular-grammar">
-          Type 3: Regular Grammar
+          Type 3: Regular Grammar <a href="#type-3-regular-grammar">###</a>
         </h3>
         <p>
           Mostly referring to <code>right regular grammar</code>. Each rule could only contain one non-terminal, as the rightmost item. Represented by a list, because each sentential has only one replaceable item (non-terminal), or in a production chain.
@@ -269,7 +269,7 @@
           $S_S\to(([tdh],)^{* }[tdh] & )^{? }[tdh]$
         </p>
         <h3 id="type-4-finite-choice-grammar-fc-grammar">
-          Type 4: Finite Choice Grammar (FC Grammar)
+          Type 4: Finite Choice Grammar (FC Grammar) <a href="#type-4-finite-choice-grammar-fc-grammar">###</a>
         </h3>
         <p>
           Each rule could have only terminals in right-hand side. Very limited expressive power.
@@ -277,7 +277,7 @@
         <footer>
           <section class="footer-meta">
             <p>
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
+              <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
               <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/notes">notes</a>, <a href="/tags/study">study</a>, <a href="/tags/parsing">parsing</a>
             </p>
           </section>

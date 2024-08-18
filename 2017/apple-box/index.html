@@ -37,10 +37,10 @@
         </h1>
         <hr>
         <div class="metadata">
-          <time datetime="2017-01-06T00:00:00Z">06 Jan 2017</time> · 302 words · 2 minutes read
+          <time datetime="2017-01-06T00:00:00Z">06 Jan 2017</time> · 306 words · 2 minutes read
         </div>
         <h2 id="the-apple-boxes-problem">
-          The Apple Boxes Problem
+          The Apple Boxes Problem <a href="#the-apple-boxes-problem">##</a>
         </h2>
         <p>
           The problem can be simply put:
@@ -54,7 +54,7 @@
           </p>
         </blockquote>
         <h2 id="the-naive-solution">
-          The Naive Solution
+          The Naive Solution <a href="#the-naive-solution">##</a>
         </h2>
         <p>
           We can loop through 1 to $k$, alternating between adding and subtracting.
@@ -73,7 +73,7 @@
           There could be various optimizations, but nevertheless, the algorithm is linear with regard to $k$.
         </p>
         <h2 id="constant-solution">
-          Constant Solution
+          Constant Solution <a href="#constant-solution">##</a>
         </h2>
         <p>
           First, assume $k$ is even, so that we can perfectly pair up terms in $r$ and $y$. Observe that each pair is in the form of $x^2 - (x - 1)^2$. This can be transformed to $(x + x - 1)\cdot(x - x + 1) = (x - 1) + x$. When we add all pairs, it becomes a simple series: $1 + 2 + 3 + … + k$. For example, for $k = 6$:
@@ -88,7 +88,7 @@
           What about <em>odd</em> $k$? We can adjust the pairing a bit, and easily find that now we have $-\dfrac{k(1 + k)}{2}$.
         </p>
         <h2 id="c-source-code">
-          C++ Source Code
+          C++ Source Code <a href="#c-source-code">##</a>
         </h2>
         <div class="highlight">
           <pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">appleBoxes</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
@@ -99,7 +99,7 @@
         <footer>
           <section class="footer-meta">
             <p>
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
+              <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
               <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/algorithm">algorithm</a>, <a href="/tags/codefights">codefights</a>, <a href="/tags/c++">C++</a>
             </p>
           </section>

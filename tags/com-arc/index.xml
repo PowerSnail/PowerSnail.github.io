@@ -35,7 +35,10 @@ for i in rows for j in cols b[i][j] = a[j][i]However, it might be the case that 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In order to make this statement more readable, we define a macro:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;# define RIDX(i, j, N) (i * N + j)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This macro will do a pure text replacement that replace all occurrence of &lt;code&gt;RIDX(i, j, N)&lt;/code&gt; by &lt;code&gt;(i * N + j)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;For readability, let us assume that we can write &lt;code&gt;b[i, j]&lt;/code&gt; for this.&lt;/p&gt;
-&lt;h3 id=&#34;which-one-is-better&#34;&gt;Which one is better?&lt;/h3&gt;
+&lt;h3 id=&#34;which-one-is-better&#34;&gt;
+  Which one is better?
+  &lt;a href=&#34;#which-one-is-better&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;b[i, j] = a[j, i]&lt;/code&gt; vs. &lt;code&gt;b[j, i] = a[i, j]&lt;/code&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -75,12 +78,18 @@ for i in rows for j in cols b[i][j] = a[j][i]However, it might be the case that 
 &lt;p&gt;We are going to use this to our advantage. We access each submatrix of the larger matrix, and transpose them one block a time. Because blocks are small, we enjoy the benefit of spatial locality if we pick the size smartly.&lt;/p&gt;
 &lt;p&gt;After the block-wise transpose, each block is of the right order, and we enjoyed spatial locality.&lt;/p&gt;
 &lt;p&gt;Note that for each block, the destination is still the desired position and therefore, when block-wise operation is done, the whole array is already transposed.&lt;/p&gt;
-&lt;h3 id=&#34;right-size-of-block-size&#34;&gt;Right size of block size&lt;/h3&gt;
+&lt;h3 id=&#34;right-size-of-block-size&#34;&gt;
+  Right size of block size
+  &lt;a href=&#34;#right-size-of-block-size&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;If &lt;code&gt;block.size&lt;/code&gt; is one (operation), this is meaningless
 if &lt;code&gt;block.size&lt;/code&gt; is $N$, this is also meaningless.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Good!&lt;/strong&gt;: &lt;code&gt;block.size&lt;/code&gt; = $k \times ${cache line size}$&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;NOTE: although it is not possible to optimize the performance without benchmarking on the machine, we can generally optimize it based on some trials.&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;implementation&#34;&gt;Implementation&lt;/h3&gt;
+&lt;h3 id=&#34;implementation&#34;&gt;
+  Implementation
+  &lt;a href=&#34;#implementation&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;each&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;block&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;each&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cell&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# do something&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In valid C language, this looks like&lt;/p&gt;
@@ -92,13 +101,25 @@ if &lt;code&gt;block.size&lt;/code&gt; is $N$, this is also meaningless.&lt;/p&g
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;how-is-this-better&#34;&gt;How is this better?&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;how-is-this-better&#34;&gt;
+  How is this better?
+  &lt;a href=&#34;#how-is-this-better&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;If we only look at the inner loop, it still looks like we do not have spatial locality for at least one query. However, because of blocking, all information are in cache and locality does not matter anymore.&lt;/p&gt;
-&lt;h3 id=&#34;loop-variables&#34;&gt;Loop variables&lt;/h3&gt;
+&lt;h3 id=&#34;loop-variables&#34;&gt;
+  Loop variables
+  &lt;a href=&#34;#loop-variables&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;B_j + B_size&lt;/code&gt; is run every time with the loop.
 If we use a variable to store the value, the performance will increase.&lt;/p&gt;
-&lt;h2 id=&#34;compiler-optimizations&#34;&gt;Compiler Optimizations&lt;/h2&gt;
-&lt;h3 id=&#34;disadvantage&#34;&gt;Disadvantage&lt;/h3&gt;
+&lt;h2 id=&#34;compiler-optimizations&#34;&gt;
+  Compiler Optimizations
+  &lt;a href=&#34;#compiler-optimizations&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;disadvantage&#34;&gt;
+  Disadvantage
+  &lt;a href=&#34;#disadvantage&#34;&gt;###&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Not changing semantics&lt;/li&gt;
 &lt;li&gt;Limited Contact&lt;/li&gt;
@@ -113,7 +134,10 @@ If we use a variable to store the value, the performance will increase.&lt;/p&gt
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will be optimized.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1e50&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1e50&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will not be optimized. Because this will actually result in &lt;code&gt;c = 0&lt;/code&gt; instead of &lt;code&gt;c = 1&lt;/code&gt; as in optimized code.&lt;/p&gt;
-&lt;h2 id=&#34;loop-unrolling&#34;&gt;Loop Unrolling&lt;/h2&gt;
+&lt;h2 id=&#34;loop-unrolling&#34;&gt;
+  Loop Unrolling
+  &lt;a href=&#34;#loop-unrolling&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nl&#34;&gt;Loop:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;cmp&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%rdi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%rax&lt;/span&gt;
@@ -135,7 +159,10 @@ If we use a variable to store the value, the performance will increase.&lt;/p&gt
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Caveat&lt;/strong&gt;: the unrolled loop operations might exceed &lt;code&gt;N&lt;/code&gt;, therefore we need to change the boundary: &lt;code&gt;for (int i = 0; i &amp;lt; N - 2; )&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;If &lt;code&gt;N&lt;/code&gt; is big, this should not hurt the performance overall. The advantage of unrolling loops will be more important.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Unrolling Too Much&lt;/strong&gt;: instruction cache miss (But this is unlikely, as it would take quite a number of unrolling to do that)&lt;/p&gt;
-&lt;h2 id=&#34;function-inlining&#34;&gt;Function Inlining&lt;/h2&gt;
+&lt;h2 id=&#34;function-inlining&#34;&gt;
+  Function Inlining
+  &lt;a href=&#34;#function-inlining&#34;&gt;##&lt;/a&gt;
+&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Difficulty 1: Moving arguments into the right place.&lt;/li&gt;
 &lt;/ul&gt;
