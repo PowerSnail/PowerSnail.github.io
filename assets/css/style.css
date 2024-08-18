@@ -94,10 +94,12 @@ code {
   background-color: var(--background-alt);
   padding: 0 0.5ch;
   font-family: "Fira Code", monospace;
+  text-wrap: balance;
 }
 
 pre code {
   padding: 0;
+  text-wrap: nowrap;
 }
 
 /* Figure */
