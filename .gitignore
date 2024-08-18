@@ -7,3 +7,4 @@ resources/_gen
 .mscbackup/
 .venv/
 build/
+.envrc
