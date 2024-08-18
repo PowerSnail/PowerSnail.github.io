@@ -15,6 +15,7 @@ html {
 body {
   font-family: "Crimson Text", "Noto Sans SC", serif;
   font-size: 1.2rem;
+  line-height: 1.5;
   text-rendering: optimizeLegibility;
 
   /* Workaround for iOS bug: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
