@@ -4,7 +4,9 @@
   partial "hacks.html" . }}
 
   {{ if .Params.references }}
-  <h2>References</h2>
+
+  {{ "## References" | .RenderString }}
+
   <div id="replace-bibliography" 
     data-input-file="{{ .Page.File.Filename }}" 
   ></div>
