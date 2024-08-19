@@ -1,47 +1,81 @@
 <!DOCTYPE html>
+
 <html>
   <head>
-    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
-    <meta charset="utf-8">
+    <meta charset="utf-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    
+    
+    
     <meta name="author" content="PowerSnail">
+    
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="theme-color" content="#bd1b37">
-    <title>
-      Cat Dots · SnailShell
-    </title>
-    <meta property="og:title" content="Cat Dots">
-    <meta property="og:site_name" content="SnailShell">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://powersnail.com/cat_dot/">
-    <meta property="og:image" content="https://powersnail.com/icons/snail.svg">
-    <link rel="canonical" href="https://powersnail.com/cat_dot/">
-    <link rel="stylesheet" href="/css/basic.css">
+    
+    <title>Cat Dots · SnailShell</title>
+    
+    <meta property="og:title" content="Cat Dots" />
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://powersnail.com/cat_dot/" />
+    
+    
+      <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
+    
+    
+    
+    
+    <link rel="canonical" href="https://powersnail.com/cat_dot/"/>
+    
+    
+    
+    
+      
+      <link rel="stylesheet" href="/css/basic.css">
+    
+    
+    
+    
+
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <header>
-      <a href="/"><img src="/images/snail.svg" alt="Logo: Home"></a>
+      <a href="/">
+        <img src="/images/snail.svg" alt="Logo: Home">
+      </a>
       <section>
         <div>
-          <label>Radius</label> <input min="1" max="25" step="1" type="number" id="inputRadius">
+          <label>Radius</label>
+          <input min="1" max="25" step="1" type="number" id="inputRadius" />
         </div>
         <div>
-          <label>Color</label> <input type="color" id="inputColor">
+          <label>Color</label>
+          <input type="color" id="inputColor" />
         </div>
         <div>
-          <label>Max Speed</label> <input min="0" max="20" step="2" type="number" id="inputSpeed">
+          <label>Max Speed</label>
+          <input min="0" max="20" step="2" type="number" id="inputSpeed" />
         </div>
         <div>
-          <label>Max Acceleration</label> <input min="0" max="2" step="0.1" type="number" id="inputAcceleration">
-        </div><button disabled id="buttonStart">Start</button> <button id="buttonStop">Stop</button> <button id="buttonRestart">Restart</button> <button id="buttonFullscreen">Fullscreen</button>
+          <label>Max Acceleration</label>
+          <input min="0" max="2" step="0.1" type="number" id="inputAcceleration" />
+        </div>
+        <button disabled id="buttonStart">Start</button>
+        <button id="buttonStop">Stop</button>
+        <button id="buttonRestart">Restart</button>
+        <button id="buttonFullscreen">Fullscreen</button>
       </section>
     </header>
     <main>
-      <canvas id="mainCanvas"></canvas>
+      <canvas id="mainCanvas" ></canvas>
     </main>
     <script src="./cat_dot.js"></script>
   </body>
 </html>
+
