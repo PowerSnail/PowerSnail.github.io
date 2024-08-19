@@ -13,9 +13,9 @@ html {
   overflow-y: scroll;
 }
 body {
-  font-family: "Crimson Text", "Noto Sans SC", serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-family: "Bitter Pro", "Noto Sans SC", serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
   text-rendering: optimizeLegibility;
 
   /* Workaround for iOS bug: https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust */
@@ -30,7 +30,7 @@ body {
 
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: auto 8px minmax(0px, 63ch) 8px auto;
+  grid-template-columns: auto 8px minmax(0px, 600px) 8px auto;
   overflow-wrap: anywhere;
   row-gap: 16px;
 
@@ -44,11 +44,12 @@ h3,
 h4,
 h5,
 h6 {
-  padding-top: 1cap;
+  margin-top: 1cap;
 }
 
 a {
   color: var(--accent);
+  text-decoration-color: var(--translucent);
 }
 
 body > header,
@@ -90,7 +91,7 @@ img {
 
 code {
   white-space: pre;
-  font-size: 0.7em;
+  font-size: 0.9em;
   background-color: var(--background-alt);
   padding: 0 0.5ch;
   font-family: "Fira Code", monospace;
@@ -114,12 +115,14 @@ figure > img {
 
 figcaption {
   grid-column: 2;
+  font-family: "Inter", "Noto Sans SC", sans-serif;
   color: var(--text-alt);
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 /* Filling containers */
-@media (max-width: 63ch) {
+@media (max-width: 616px) {
   .highlight,
   .table-wrapper,
   figure {
@@ -175,8 +178,6 @@ th {
 hr {
   border-color: var(--border);
   border-width: 0.2px;
-  width: 61.8%;
-  justify-self: center;
 }
 
 dt {
@@ -206,6 +207,7 @@ nav-link {
 
 .site-title {
   font-size: 2rem;
+  text-decoration: none;
   margin-right: auto;
   background-image: linear-gradient(6deg, var(--accent) 0%, var(--accent) 50%, var(--primary) 50%, var(--primary) 100%);
   color: transparent !important;
@@ -285,7 +287,7 @@ article > footer {
   display: grid;
   border-top: 1px solid var(--border);
   padding: 1em 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .post-list {
@@ -299,11 +301,12 @@ article > footer {
   grid-column: 1 / -1;
   grid-template-columns: subgrid;
   align-items: baseline;
+  row-gap: 8px;
 }
 
 .post-item-time {
   grid-column: 1;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--text-alt);
 }
 
@@ -315,18 +318,19 @@ article > footer {
 
 .post-item-summary {
   grid-column: 2;
-  color: var(--text-alt);
-  font-style: italic;
-  font-size: 1rem;
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
-h1,
 #title-subtitle {
-  text-align: center;
+  font-weight: 300;
 }
-#title-subtitle {
+
+.metadata {
   color: var(--text-alt);
-  font-style: italic;
+  font-family: "Inter", "Noto Sans SC", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 footer > article {
@@ -350,11 +354,32 @@ body > footer {
   text-indent: 2em hanging;
 }
 
-.csl-entry:target {
-  background-color: var(--translucent);
-  
-}
-
 .citation {
   font-style: italic;
 }
+
+/* Animation Target */
+@keyframes blinkbackground {
+  from {
+    background-color: var(--accent);
+  }
+  to {
+    background-color: var(--translucent);
+  }
+}
+
+*:target {
+  animation-name: blinkbackground;
+  animation-duration: 1s;
+}
+
+*:target::before {
+  content: ">";
+  margin-left: -8px;
+  margin-right: 0;
+  font-family: "Fira Code", monospace;
+  font-size: 8px;
+  vertical-align: middle;
+  color: var(--accent);
+}
+

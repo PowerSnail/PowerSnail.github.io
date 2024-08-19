@@ -7,5 +7,8 @@
   <div id="title-subtitle">{{ .Description | .RenderString }}</div>
 {{ end }}
 
+{{ if .Params.date }}
+{{- partial "metadata.html" . -}} 
+{{ end }}
 <hr />
 
