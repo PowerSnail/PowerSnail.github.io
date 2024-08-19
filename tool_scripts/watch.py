@@ -27,6 +27,8 @@ def listen(q: queue.Queue):
         for dir in subdir.rglob("**"):
             i.add_watch(str(dir), mask=events)
 
+    i.add_watch(str(parent / "config.toml"), mask=events)
+
     for event in i.event_gen(yield_nones=False):
         assert event is not None
         (_, type_names, path, filename) = event

@@ -1,4 +1,7 @@
-{{- $option := "noClasses=false,tabWidth=2" -}}
+{{- $option := .Options -}}
+{{- if eq .Type "python" -}}
+  {{- $option = merge $option (dict "tabWidth" 4) -}}
+{{- end -}}
 {{- if eq .Type "" -}}
   {{ transform.Highlight .Inner "plaintext" $option }}
 {{- else -}}

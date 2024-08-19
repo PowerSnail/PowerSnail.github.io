@@ -13,15 +13,9 @@ block = true
 [markup.goldmark.renderer]
 unsafe = true
 [markup.highlight]
-anchorLineNos = false
 codeFences = true
-hl_Lines = ''
-lineAnchors = ''
-lineNoStart = 1
-lineNumbersInTable = true
-noClasses = true
-style = 'pygments'
-tabWidth = 4
+noClasses = false
+tabWidth = 2
 
 [author]
 name = "PowerSnail"
