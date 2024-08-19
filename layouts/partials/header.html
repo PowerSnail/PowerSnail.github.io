@@ -1,29 +1,23 @@
-{{- define "partials/add-current.html" -}}
-  {{- $current := "" -}}
-  {{- if . -}}
-    {{- $current = " current" -}}
-  {{- end -}}
-  {{- return $current -}}
-{{- end -}}
-
+{{- define "partials/add-current.html" -}} {{- $current := "" -}} {{- if . -}}
+{{- $current = " current" -}} {{- end -}} {{- return $current -}} {{- end -}}
 {{- $current := dict .RelPermalink " current" -}}
 
 <header>
   <article>
     <nav class="site-nav">
-      <a 
-          href="/" 
-          class="site-title"
-      >Snail's Shell
+      <a href="/" class="site-title">
+        <span class="site-title-text">Snail's Shell</span>
       </a>
-      <a 
-        href="/posts/"
-        class="nav-link {{- index $current "/posts/" -}}"
-      >Posts</a>
-      <a 
-        href="/about/"
-        class="nav-link {{- index $current "/about/" -}}"
-      >About</a>
+      <div class="site-title-fill"></div>
+      <a href="/posts/" class="nav-link">
+        Posts
+      </a>
+      <a href="/about/" class="nav-link">
+        About
+      </a>
+      <a href="/index.xml" class="nav-link">
+        {{- (resources.Get "icons/rss.svg").Content | safeHTML -}}
+      </a>
     </nav>
   </article>
 </header>

@@ -12,27 +12,23 @@ I have no association with any of the projects or products. Just a happy user.
 
 Table of content:
 
-| Item              | Category | Summary                        |
-| ----------------- | -------- | ------------------------------ |
-| Topgrade          | CLI      | One command updates everything |
-| KIYA Nail Clipper | Tool     | A well-made nail clipper       |
+| Item                            | Category | 
+| ------------------------------- | -------- | 
+| KIYA Nail Clipper               | Tool     | 
+| Pilot Metropolitan Fountain Pen | Tool     | 
+| `llm` | Software     | 
 
-
-### Topgrade
-
-[Topgrade](https://github.com/r-darwish/topgrade) is a CLI command that updates everything that can be upgraded on your system. 
-
-There are way too many upgradeable things in a modern OS: your distro's package manager, language-specific package manager which the devs love but everyone else hates, the new kid on the block called flatpak, firmware, etc. There are things that I don't even know can be updated. 
-
-Topgrade is that "update now" button for the CLI, which also provides more transparency than its GUI equivalents. Rather than an opaque progress bar that can't predict the remaining time and a percentage number that nobody understands, it simply prints the output of the corresponding command. I know what it is doing. It's exactly as if I've typed those commands myself, but more exhaustively and with less work.
-
-
-### KIYA Nail Clipper
+## KIYA Nail Clipper
 
 It's just a regular nail clipper, that is very well-made. It's sharp, solidly built, compactly shaped, easy to use, durable (I've had one for years), and easy to carry (no weird, protruding shape). For violin playing, I have to trim my nails very often, and this is the most comfortable nail clipper I've ever used.
 
+## Pilot Metropolitan Fountain Pen
 
+I bought one in the university book shop on the first day of arriving as a freshman. At the time, I thought the violet, metallic color was pretty, and the price tag (around $15 I remember) attractive to a student, and it surprised me with how well it wrote, very smooth, with the right amount of friction, and a good balance in hand. Now a decade later, after stacks of notebooks and diaries being filled, I still have the same one, which has never jammed or leaked, and there is no signs of wear to be found.
 
-  
+## `llm`
 
+This is a really cool CLI interface for various LLM providers, including locally hosted ones, written by [Simon Willison](https://simonwillison.net/). I almost use it daily now. I really like the design where you can provide the prompt as an argument, pipe content into `stdin`, or actually do both at the same time, avoiding a lot of bash tricks for concatenation, which I never properly remembers when I need it.
+
+[Link to Repo](https://github.com/simonw/llm)
 

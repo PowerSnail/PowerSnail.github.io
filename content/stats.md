@@ -1,6 +1,6 @@
 ---
 title: Stats
-description: Statistics 
+description: Some random statistics collected of this blog.
 ---
 
 {{% stats %}}
