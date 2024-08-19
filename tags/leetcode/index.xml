@@ -28,7 +28,7 @@
     <summary type="html">Introduction to the Problem ## The question asks the programmer to validate whether a string is a valid representation of a number.</summary>
     <content type="html">&lt;h2 id=&#34;introduction-to-the-problem&#34;&gt;
   Introduction to the Problem
-  &lt;a href=&#34;#introduction-to-the-problem&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#introduction-to-the-problem&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The question asks the programmer to validate whether a string is a valid representation of a number. After some trials, we find that the question accepts a few formats:&lt;/p&gt;
 &lt;ol&gt;
@@ -42,7 +42,7 @@
 &lt;p&gt;Just to add some fun, this problem can be solved using a very textbook DFA. The code is elegant, less space efficient (but only for a constant amount) than the flag algorithm. In fact, the latter is just a compact, specialized DFA in essence. The trade-off is more variables and branching.&lt;/p&gt;
 &lt;h2 id=&#34;the-algorithm&#34;&gt;
   The Algorithm
-  &lt;a href=&#34;#the-algorithm&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#the-algorithm&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The first step, we trim the string. There is probably not efficient in bringing white space processing into the DFA.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;inline&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -60,7 +60,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dfa---states&#34;&gt;
   DFA - States
-  &lt;a href=&#34;#dfa---states&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#dfa---states&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Any accepted string can be divided into a few parts:&lt;/p&gt;
 &lt;ol&gt;
@@ -126,7 +126,7 @@
 &lt;p&gt;&lt;code&gt;FAULT&lt;/code&gt; is a special state, that the DFA will halt whenever it meets &lt;code&gt;FAULT&lt;/code&gt;, so that we do not have to process the rest of the string.&lt;/p&gt;
 &lt;h3 id=&#34;dfa---transition&#34;&gt;
   DFA - Transition
-  &lt;a href=&#34;#dfa---transition&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#dfa---transition&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The transition function is a matrix that maps (state, input char) to state.&lt;/p&gt;
 &lt;figure&gt;
@@ -231,7 +231,7 @@
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;h3 id=&#34;dfa---termination&#34;&gt;
   DFA - Termination
-  &lt;a href=&#34;#dfa---termination&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#dfa---termination&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The DFA will terminate when&lt;/p&gt;
 &lt;ul&gt;
@@ -250,7 +250,7 @@
 &lt;p&gt;The running of the DFA is easy. Simply iterate over the input, and let the transition matrix do its magic.&lt;/p&gt;
 &lt;h2 id=&#34;complete-code&#34;&gt;
   Complete Code:
-  &lt;a href=&#34;#complete-code&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#complete-code&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;

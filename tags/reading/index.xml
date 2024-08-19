@@ -28,7 +28,7 @@
     <summary type="html">Summary ## A short, inspirational book about how to be a productive artist. The first few chapters are about imitation, the necessity of it, and how to evolve from there.</summary>
     <content type="html">&lt;h2 id=&#34;summary&#34;&gt;
   Summary
-  &lt;a href=&#34;#summary&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#summary&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A short, inspirational book about how to be a productive artist. The first few chapters are about imitation, the necessity of it, and how to evolve from there. The author talks about graduating from imitating to emulating: from copying what your heroes make, to copying what your heroes see and hear, which is how &amp;ldquo;stealing&amp;rdquo; can be incorporated into the process of making original art.&lt;/p&gt;
 &lt;p&gt;Later, the book offers some practical tips on gathering inspirations: &amp;ldquo;use your hand&amp;rdquo;, keep hobbies, share, travel, be nice to people, stay out of fights, have daily, regular routines, and put strategic constraints on yourself.&lt;/p&gt;
@@ -39,7 +39,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;thoughts&#34;&gt;
   Thoughts
-  &lt;a href=&#34;#thoughts&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#thoughts&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;It&amp;rsquo;s always fascinating when artists talking about their own process, the way each artist find their own authenticity, the source of originality. Neil Gaiman talked about confluence. Here, Austin Kleon talks about imitation and graduating from imitation.&lt;/p&gt;
 &lt;p&gt;Create what you like. Write the book that you would want to read. Make the software that you&amp;rsquo;d like to use.&lt;/p&gt;
@@ -48,7 +48,7 @@
 &lt;p&gt;That&amp;rsquo;s why to &amp;ldquo;create what you like&amp;rdquo; is a better advice. It actually tells you how to narrow down your choice. From the vast gallery of life experiences, pick the ones that you enjoy the most, immerse yourself in it, and make something out of it.&lt;/p&gt;
 &lt;h2 id=&#34;reference&#34;&gt;
   Reference
-  &lt;a href=&#34;#reference&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#reference&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Kleon, Austin. &lt;em&gt;Steal like an Artist: 10 Things Nobody Told You about Being Creative&lt;/em&gt;. 2022.&lt;/p&gt;
 </content>

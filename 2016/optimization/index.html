@@ -19,7 +19,6 @@
     <meta property="og:image" content="https://powersnail.com/icons/snail.svg">
     <link rel="canonical" href="https://powersnail.com/2016/optimization/">
     <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
   <body>
     <header>
@@ -34,10 +33,10 @@
         <h1>
           Code Optimizations
         </h1>
-        <hr>
         <div class="metadata">
           <time datetime="2016-11-08T00:00:00Z">08 Nov 2016</time> · 865 words · 5 minutes read
         </div>
+        <hr>
         <p>
           An example: <strong>Transpose</strong>
         </p>
@@ -68,7 +67,7 @@
           For readability, let us assume that we can write <code>b[i, j]</code> for this.
         </p>
         <h3 id="which-one-is-better">
-          Which one is better? <a href="#which-one-is-better">###</a>
+          Which one is better? <a href="#which-one-is-better"><small>###</small></a>
         </h3>
         <p>
           <code>b[i, j] = a[j, i]</code> vs. <code>b[j, i] = a[i, j]</code>
@@ -156,7 +155,7 @@
           Note that for each block, the destination is still the desired position and therefore, when block-wise operation is done, the whole array is already transposed.
         </p>
         <h3 id="right-size-of-block-size">
-          Right size of block size <a href="#right-size-of-block-size">###</a>
+          Right size of block size <a href="#right-size-of-block-size"><small>###</small></a>
         </h3>
         <p>
           If <code>block.size</code> is one (operation), this is meaningless if <code>block.size</code> is $N$, this is also meaningless.
@@ -168,7 +167,7 @@
           <em>NOTE: although it is not possible to optimize the performance without benchmarking on the machine, we can generally optimize it based on some trials.</em>
         </p>
         <h3 id="implementation">
-          Implementation <a href="#implementation">###</a>
+          Implementation <a href="#implementation"><small>###</small></a>
         </h3>
         <div class="highlight">
           <pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">each</span> <span class="n">block</span>
@@ -190,22 +189,22 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
         </div>
         <h3 id="how-is-this-better">
-          How is this better? <a href="#how-is-this-better">###</a>
+          How is this better? <a href="#how-is-this-better"><small>###</small></a>
         </h3>
         <p>
           If we only look at the inner loop, it still looks like we do not have spatial locality for at least one query. However, because of blocking, all information are in cache and locality does not matter anymore.
         </p>
         <h3 id="loop-variables">
-          Loop variables <a href="#loop-variables">###</a>
+          Loop variables <a href="#loop-variables"><small>###</small></a>
         </h3>
         <p>
           <code>B_j + B_size</code> is run every time with the loop. If we use a variable to store the value, the performance will increase.
         </p>
         <h2 id="compiler-optimizations">
-          Compiler Optimizations <a href="#compiler-optimizations">##</a>
+          Compiler Optimizations <a href="#compiler-optimizations"><small>##</small></a>
         </h2>
         <h3 id="disadvantage">
-          Disadvantage <a href="#disadvantage">###</a>
+          Disadvantage <a href="#disadvantage"><small>###</small></a>
         </h3>
         <ol>
           <li>Not changing semantics
@@ -237,7 +236,7 @@
           This will not be optimized. Because this will actually result in <code>c = 0</code> instead of <code>c = 1</code> as in optimized code.
         </p>
         <h2 id="loop-unrolling">
-          Loop Unrolling <a href="#loop-unrolling">##</a>
+          Loop Unrolling <a href="#loop-unrolling"><small>##</small></a>
         </h2>
         <div class="highlight">
           <pre class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
@@ -280,7 +279,7 @@
           <strong>Unrolling Too Much</strong>: instruction cache miss (But this is unlikely, as it would take quite a number of unrolling to do that)
         </p>
         <h2 id="function-inlining">
-          Function Inlining <a href="#function-inlining">##</a>
+          Function Inlining <a href="#function-inlining"><small>##</small></a>
         </h2>
         <ul>
           <li>Difficulty 1: Moving arguments into the right place.
@@ -321,7 +320,7 @@
           <section class="footer-meta">
             <p>
               <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/com-arc">com arc</a>, <a href="/tags/notes">notes</a>
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/com-arc"><code>com arc</code></a>, <a href="/tags/notes"><code>notes</code></a>
             </p>
           </section>
           <section>

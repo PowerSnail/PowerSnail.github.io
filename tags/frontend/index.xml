@@ -29,7 +29,7 @@
     <content type="html">&lt;p&gt;I&amp;rsquo;m excited to publish my new project, &lt;a href=&#34;https://powersnail.com/ScoreInUrl&#34;&gt;Score In URL&lt;/a&gt;, a simple, privacy-friendly, sheet music sharing service, where the entire content is encoded in the URL itself as a query parameter. It comes with a decent editor, the score, and the audio.&lt;/p&gt;
 &lt;h2 id=&#34;an-easy-way-to-share-musical-scores&#34;&gt;
   An easy way to share musical scores
-  &lt;a href=&#34;#an-easy-way-to-share-musical-scores&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#an-easy-way-to-share-musical-scores&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The inspiration came to me when I was trying to share a little snippet of music on a forum. It was just a short exercise, but I wanted to deliver both the sheet music and the audio. Most forums don&amp;rsquo;t natively support sharing any form of sheet music notation, apart from just using an image. But to open up a composing program, export to an image, upload that image to Imgur, and finally share that link just for a one-line snippet, it&amp;rsquo;s tedious, and it&amp;rsquo;s an overkill. More importantly, an image has no sound. For that, there are more hoops to jump through.&lt;/p&gt;
 &lt;p&gt;I already knew that abcjs has an editor in browser that can play audio, so what I did was asking them to go to &lt;a href=&#34;https://www.abcjs.net/abcjs-editor.html&#34;&gt;the abcjs editor&lt;/a&gt;, and then, copy &amp;amp; paste my snippet in there. It works; there&amp;rsquo;s image and there&amp;rsquo;s sound, but it&amp;rsquo;s kinda awkward that they have to manually fill in the score, rather than opening a link with the right content already there.&lt;/p&gt;
@@ -37,7 +37,7 @@
 &lt;p&gt;So, I decided to build something similar for ABC Notation. It allows you to enter plain text music just like &lt;em&gt;abcjs editor&lt;/em&gt;, while the whole text is encoded into the URL, just like &lt;em&gt;hashify&lt;/em&gt;. All you need to do is copy the URL to your friend, and they get the source, the sheet music, and audio in a single click. It doesn&amp;rsquo;t get any simpler than that.&lt;/p&gt;
 &lt;h2 id=&#34;static-server-less-privacy-friendly&#34;&gt;
   Static, server-less, privacy-friendly
-  &lt;a href=&#34;#static-server-less-privacy-friendly&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#static-server-less-privacy-friendly&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Since there&amp;rsquo;s no need to store any file, the project can be entirely server-less. All it takes is a base64 decoder and abcjs, which can all be done in the frontend. This is why I&amp;rsquo;ve decided to use the query parameter, eliminating the need for server-side routing. The page takes a single parameter &lt;code&gt;s&lt;/code&gt;, which contains the encoded score.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;decodeScore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -62,7 +62,7 @@
 &lt;p&gt;This approach has its own caveat: size limit. URLs are traditionally at most 2048 characters. How many pages of sheet music you get from those 2048 characters depend on your score, but the spirit of &lt;strong&gt;Score In URL&lt;/strong&gt; is to share short snippets of sheet music, not to be a full-fledged music editor. There are much better tools out there for composing.&lt;/p&gt;
 &lt;h2 id=&#34;abc-notation-and-abcjs&#34;&gt;
   ABC Notation and abcjs
-  &lt;a href=&#34;#abc-notation-and-abcjs&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#abc-notation-and-abcjs&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;ABC Notation is possibly the most hand-writable plain text format for composing sheet music. Most engraving software are WYSIWYG (What You See Is What You Get), which means you are directly interacting with the score, requiring a graphical interface. For a composer sitting in front of their workstation, this is fine, but it&amp;rsquo;s too heavy for building a quick, shareable snippet of music. On the other end of the spectrum, ABC Notation is just plain text. For something simple of a few measures long, it does the job better than any other system.&lt;/p&gt;
 &lt;p&gt;Not unlike how people already do in forums, you simply write out the note names: &lt;code&gt;CDEFGAB&lt;/code&gt;. Capital letters denote the range from &lt;code&gt;C4~B4&lt;/code&gt;, lower case letters give you an octave higher, and to get more than that range, put a &lt;code&gt;&#39;&lt;/code&gt; after the note to raise an octave, and a &lt;code&gt;_&lt;/code&gt; to lower one. Note length is simple math: you define a unit length in the beginning, for instance, with &lt;code&gt;L: 1/16&lt;/code&gt;, &lt;code&gt;C&lt;/code&gt; is a 16th note, &lt;code&gt;C2&lt;/code&gt; is an 8th note, &lt;code&gt;C/2&lt;/code&gt; is a 32nd note, and &lt;code&gt;C3/2&lt;/code&gt; is a dotted 16th note.&lt;/p&gt;
@@ -83,7 +83,7 @@
 &lt;p&gt;Thanks to &lt;a href=&#34;https://www.abcjs.net/&#34;&gt;abcjs&lt;/a&gt;, it&amp;rsquo;s super easy to embed such a system in a web page. Abcjs provides rendering, audio, and error messages which integrate nicely with CodeMirror, the text editor.&lt;/p&gt;
 &lt;h2 id=&#34;text-editing&#34;&gt;
   Text Editing
-  &lt;a href=&#34;#text-editing&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#text-editing&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, &lt;a href=&#34;https://codemirror.net/&#34;&gt;CodeMirror&lt;/a&gt; is used. You can see the errors marked by red dots, like a real text editor used by programmers.&lt;/p&gt;
 &lt;figure&gt;
@@ -96,13 +96,13 @@
   &lt;/figure&gt;&lt;p&gt;The code highlighting is still not comprehensive at the moment. I&amp;rsquo;ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.&lt;/p&gt;
 &lt;h2 id=&#34;not-in-the-scope&#34;&gt;
   Not in the scope
-  &lt;a href=&#34;#not-in-the-scope&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#not-in-the-scope&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;ve decided against using a compression algorithm. A simple base64 encoder is available everywhere, whereas compression requires a 3rd party library, and might be subject to the specific quirks of that implementation. If the compression has a bug, it infects every URL shared from &lt;strong&gt;Score In URL&lt;/strong&gt;. If that algorithm ever gets an update that is not backwards-compatible, all the old URLs are screwed. Furthermore, if &lt;strong&gt;Score In URL&lt;/strong&gt; disappears, a plain base64 string is simple to use: just copy &amp;amp; paste into any base64 decoder. It requires no programming skill, no tool chains, no setup. On the other hand, a compressed string is much harder to decode, especially if the user has no convenient way of installing the exact version of the compression algorithm I used.&lt;/p&gt;
 &lt;p&gt;Despite the existence of a &amp;ldquo;Print&amp;rdquo; button, printing likely won&amp;rsquo;t be perfect, especially if you have more than one page of scores. Again, the project is meant for sharing snippets of music, not for typesetting a multipage score. The whole thing is rendered on to a single image, and as long as that image looks alright in the browser, that&amp;rsquo;s all it matters to me.&lt;/p&gt;
 &lt;h2 id=&#34;to-do&#34;&gt;
   To Do
-  &lt;a href=&#34;#to-do&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#to-do&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;There are a few improvements on my mind.&lt;/p&gt;
 &lt;p&gt;First, the code highlighting should be improved. I should at least tokenize all the operators.&lt;/p&gt;

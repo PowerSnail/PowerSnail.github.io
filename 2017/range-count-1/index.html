@@ -20,7 +20,6 @@
     <link rel="canonical" href="https://powersnail.com/2017/range-count-1/">
     <script type="text/javascript" id="MathJax-script" src="/js/bundle.39b4c9e45c7f60379025444391711d5dc496457cd3480b1edb45bf24649fd217.js" defer></script>
     <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
   <body>
     <header>
@@ -35,21 +34,21 @@
         <h1>
           Count 1s in Range
         </h1>
-        <hr>
         <div class="metadata">
           <time datetime="2017-01-06T00:00:00Z">06 Jan 2017</time> · 651 words · 2 minutes read
         </div>
+        <hr>
         <p>
           在 codefights 上做到了一个很有意思的题。给你 a, b 两个数，假设你构建了一个从 a 到 b 的 array，所有这些数的 binary representation 里面有多少个 1？
         </p>
         <h1 id="naive-solution">
-          Naive Solution <a href="#naive-solution">#</a>
+          Naive Solution <a href="#naive-solution"><small>#</small></a>
         </h1>
         <p>
           最简单的办法 (随手翻了两个别人的答案都是这个), 就是一个数一个数查有多少 1. 笨一点的手工查, 聪明一点的用 built-in function 查. 但是无论如何, 复杂度都是 O(b - a).
         </p>
         <h1 id="logn-solution">
-          Log(n) Solution <a href="#logn-solution">#</a>
+          Log(n) Solution <a href="#logn-solution"><small>#</small></a>
         </h1>
         <p>
           我们先思考一个简化版本的问题: 所有 <code>unsigned int (c++)</code> 里面有多少 1? 答案是所有的 bit / 2, 因为当我们把所有数都写成 2 进制, 一半是 1, 一半是0.
@@ -100,13 +99,13 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
         </div>
         <h1 id="复杂度证明">
-          复杂度证明 <a href="#%e5%a4%8d%e6%9d%82%e5%ba%a6%e8%af%81%e6%98%8e">#</a>
+          复杂度证明 <a href="#%e5%a4%8d%e6%9d%82%e5%ba%a6%e8%af%81%e6%98%8e"><small>#</small></a>
         </h1>
         <p>
           这个算法的复杂度很简单，因为这个 recursion 可以很容易的转换成 tail recursion，再变成复杂度相同的 iteration. 这个 iteration 每次去掉最高位的 1，因此最多有 $\log(b)$ 次循环；每次循环做了 constant 的基本算数，因此最后的复杂度应该是 $\log(b)$。
         </p>
         <h1 id="c-source-code">
-          C++ Source Code <a href="#c-source-code">#</a>
+          C++ Source Code <a href="#c-source-code"><small>#</small></a>
         </h1>
         <div class="highlight">
           <pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">allBits</span><span class="p">(</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
@@ -128,7 +127,7 @@
           <section class="footer-meta">
             <p>
               <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/algorithm">algorithm</a>, <a href="/tags/codefights">codefights</a>, <a href="/tags/c++">C++</a>
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science"><code>computer science</code></a>, <a href="/tags/algorithm"><code>algorithm</code></a>, <a href="/tags/codefights"><code>codefights</code></a>, <a href="/tags/c++"><code>C++</code></a>
             </p>
           </section>
           <section>

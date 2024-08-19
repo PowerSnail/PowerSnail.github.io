@@ -22,7 +22,6 @@
     <link rel="canonical" href="https://powersnail.com/2016/parsing-techniques-notes01/">
     <script type="text/javascript" id="MathJax-script" src="/js/bundle.39b4c9e45c7f60379025444391711d5dc496457cd3480b1edb45bf24649fd217.js" defer></script>
     <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
   <body>
     <header>
@@ -40,12 +39,12 @@
         <div id="title-subtitle">
           some notes on Parsing Techniques A Practical Guide
         </div>
-        <hr>
         <div class="metadata">
           <time datetime="2016-02-24T00:00:00Z">24 Feb 2016</time> · 557 words · 3 minutes read
         </div>
+        <hr>
         <h2 id="generative-grammar">
-          Generative Grammar <a href="#generative-grammar">##</a>
+          Generative Grammar <a href="#generative-grammar"><small>##</small></a>
         </h2>
         <p>
           There are several views of defining a language. The computer science and formal linguistics perspective:
@@ -103,7 +102,7 @@
           </li>
         </ul>
         <h3 id="language-can-be-specified-by-infinite-bit-string">
-          Language can be specified by infinite Bit-String <a href="#language-can-be-specified-by-infinite-bit-string">###</a>
+          Language can be specified by infinite Bit-String <a href="#language-can-be-specified-by-infinite-bit-string"><small>###</small></a>
         </h3>
         <p>
           Sorted Alphabet: $\Sigma$ Language $\Sigma^{* }$ contains all combinations of symbols in $\Sigma$
@@ -131,7 +130,7 @@
           </p>
         </blockquote>
         <h3 id="formal-grammar">
-          Formal Grammar <a href="#formal-grammar">###</a>
+          Formal Grammar <a href="#formal-grammar"><small>###</small></a>
         </h3>
         <p>
           Recipe of replacing symbols:
@@ -154,28 +153,28 @@
           </li>
         </ul>
         <h2 id="four-types-of-grammars">
-          Four types of Grammars <a href="#four-types-of-grammars">##</a>
+          Four types of Grammars <a href="#four-types-of-grammars"><small>##</small></a>
         </h2>
         <h3 id="type-0-phrase-structure-grammar-ps-grammar">
-          Type 0: Phrase Structure Grammar (PS Grammar) <a href="#type-0-phrase-structure-grammar-ps-grammar">###</a>
+          Type 0: Phrase Structure Grammar (PS Grammar) <a href="#type-0-phrase-structure-grammar-ps-grammar"><small>###</small></a>
         </h3>
         <p>
           Most freedom. Follows <em>4-tuple</em> $(V_N, V_T, R, S)$, without further restriction. Represented as <code>Directed Acyclic Graph</code>: No cycle exists
         </p>
         <h3 id="type-1-context-sensitive-grammar-cs-grammar">
-          Type 1: Context-Sensitive Grammar (CS Grammar) <a href="#type-1-context-sensitive-grammar-cs-grammar">###</a>
+          Type 1: Context-Sensitive Grammar (CS Grammar) <a href="#type-1-context-sensitive-grammar-cs-grammar"><small>###</small></a>
         </h3>
         <p>
           There are two equivalent definitions: <code>Monotonic</code> and <code>Context-Sensitive</code>. Can be represented by a DAG, similar to PS Grammar.
         </p>
         <h4 id="monotonic">
-          Monotonic <a href="#monotonic">####</a>
+          Monotonic <a href="#monotonic"><small>####</small></a>
         </h4>
         <p>
           For each rule, left-hand side has more or equal number of symbols to right-hand side.
         </p>
         <h4 id="context-sensitive">
-          Context-Sensitive <a href="#context-sensitive">####</a>
+          Context-Sensitive <a href="#context-sensitive"><small>####</small></a>
         </h4>
         <p>
           Every rule is context-sensitive.
@@ -185,7 +184,7 @@
           </li>
         </ul>
         <h3 id="type-2-context-free-grammar-cf-grammar">
-          Type 2: Context-Free Grammar (CF Grammar) <a href="#type-2-context-free-grammar-cf-grammar">###</a>
+          Type 2: Context-Free Grammar (CF Grammar) <a href="#type-2-context-free-grammar-cf-grammar"><small>###</small></a>
         </h3>
         <p>
           LHS could only contain one non-terminal symbol. (Thus not related to neighboring symbols). Represented by a tree, as branches of a node is not relevant to other nodes.
@@ -203,7 +202,7 @@
           <code>NT -&gt; tom | NT dick | ...</code>
         </p>
         <h3 id="type-3-regular-grammar">
-          Type 3: Regular Grammar <a href="#type-3-regular-grammar">###</a>
+          Type 3: Regular Grammar <a href="#type-3-regular-grammar"><small>###</small></a>
         </h3>
         <p>
           Mostly referring to <code>right regular grammar</code>. Each rule could only contain one non-terminal, as the rightmost item. Represented by a list, because each sentential has only one replaceable item (non-terminal), or in a production chain.
@@ -269,7 +268,7 @@
           $S_S\to(([tdh],)^{* }[tdh] & )^{? }[tdh]$
         </p>
         <h3 id="type-4-finite-choice-grammar-fc-grammar">
-          Type 4: Finite Choice Grammar (FC Grammar) <a href="#type-4-finite-choice-grammar-fc-grammar">###</a>
+          Type 4: Finite Choice Grammar (FC Grammar) <a href="#type-4-finite-choice-grammar-fc-grammar"><small>###</small></a>
         </h3>
         <p>
           Each rule could have only terminals in right-hand side. Very limited expressive power.
@@ -278,7 +277,7 @@
           <section class="footer-meta">
             <p>
               <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/notes">notes</a>, <a href="/tags/study">study</a>, <a href="/tags/parsing">parsing</a>
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science"><code>computer science</code></a>, <a href="/tags/notes"><code>notes</code></a>, <a href="/tags/study"><code>study</code></a>, <a href="/tags/parsing"><code>parsing</code></a>
             </p>
           </section>
           <section>

@@ -28,7 +28,7 @@
     <summary type="html">Cooking for Engineers ## I bumped into a site called Cooking for Engineers today, and at the bottom of some recipes, they have this succinct table that summarizes the procedure in a refreshingly simple manner:</summary>
     <content type="html">&lt;h2 id=&#34;cooking-for-engineers&#34;&gt;
   Cooking for Engineers
-  &lt;a href=&#34;#cooking-for-engineers&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#cooking-for-engineers&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;I bumped into a site called &lt;a href=&#34;http://www.cookingforengineers.com/&#34;&gt;Cooking for Engineers&lt;/a&gt; today, and at the bottom of some recipes, they have this succinct table that summarizes the procedure in a refreshingly simple manner:&lt;/p&gt;
 
@@ -39,7 +39,7 @@
 &lt;p&gt;The drawback of this method is that it&amp;rsquo;s not easily written in Markdown, which is sadly the backbone of Hugo. Markdown table is not as flexible as the HTML one, but the HTML one, with a lot of spans, is not readable inside a markdown file. Not to mention the fact that I probably have to further mess with the CSS to hide some cell walls.&lt;/p&gt;
 &lt;h2 id=&#34;modernist-cuisine&#34;&gt;
   Modernist Cuisine
-  &lt;a href=&#34;#modernist-cuisine&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#modernist-cuisine&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;I encountered another website Modernist Cuisine, which, too, offered their own summary card for each recipe. Instead of a hacky HTML table, they chose to upload an image of a better-formatted table, like the one on this &lt;a href=&#34;https://modernistcuisine.com/recipes/hanukkah-short-ribs/&#34;&gt;page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s not as succinct as the approach taken by Cooking for Engineers. The pro is that the procedure is listed in chronological order. The con is that it&amp;rsquo;s not immediately obvious what can be made in parallel.&lt;/p&gt;
@@ -47,7 +47,7 @@
 &lt;p&gt;So, I decided to go with the Modernist&amp;rsquo;s approach.&lt;/p&gt;
 &lt;h2 id=&#34;chicken-abodo&#34;&gt;
   Chicken Abodo
-  &lt;a href=&#34;#chicken-abodo&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#chicken-abodo&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Chicken Abodo is a famous dish from the Philippines, which I first saw on &lt;a href=&#34;http://www.kenjilopezalt.com/&#34;&gt;J. Kenji López-Alt&lt;/a&gt;&amp;rsquo;s YouTube channel. At the time I took some short notes on my phone:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Sear the chicken, lightly salted

@@ -30,7 +30,7 @@ Input: $k$
 Output: let $r$ be the sum of the square of each even integer no larger than $k$, and $y$ be that of the odd.</summary>
     <content type="html">&lt;h2 id=&#34;the-apple-boxes-problem&#34;&gt;
   The Apple Boxes Problem
-  &lt;a href=&#34;#the-apple-boxes-problem&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#the-apple-boxes-problem&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The problem can be simply put:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -39,7 +39,7 @@ Output: let $r$ be the sum of the square of each even integer no larger than $k$
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;the-naive-solution&#34;&gt;
   The Naive Solution
-  &lt;a href=&#34;#the-naive-solution&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#the-naive-solution&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;We can loop through 1 to $k$, alternating between adding and subtracting.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
@@ -52,7 +52,7 @@ Output: let $r$ be the sum of the square of each even integer no larger than $k$
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;val&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There could be various optimizations, but nevertheless, the algorithm is linear with regard to $k$.&lt;/p&gt;
 &lt;h2 id=&#34;constant-solution&#34;&gt;
   Constant Solution
-  &lt;a href=&#34;#constant-solution&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#constant-solution&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;First, assume $k$ is even, so that we can perfectly pair up terms in $r$ and $y$. Observe that each pair is in the form of $x^2 - (x - 1)^2$. This can be transformed to $(x + x - 1)\cdot(x - x + 1) = (x - 1) + x$. When we add all pairs, it becomes a simple series: $1 + 2 + 3 + &amp;hellip; + k$. For example, for $k = 6$:&lt;/p&gt;
 &lt;p&gt;$$
@@ -70,7 +70,7 @@ $$&lt;/p&gt;
 &lt;p&gt;What about &lt;em&gt;odd&lt;/em&gt; $k$? We can adjust the pairing a bit, and easily find that now we have $-\dfrac{k(1 + k)}{2}$.&lt;/p&gt;
 &lt;h2 id=&#34;c-source-code&#34;&gt;
   C++ Source Code
-  &lt;a href=&#34;#c-source-code&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#c-source-code&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;appleBoxes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
@@ -93,12 +93,12 @@ $$&lt;/p&gt;
     <content type="html">&lt;p&gt;在 codefights 上做到了一个很有意思的题。给你 a, b 两个数，假设你构建了一个从 a 到 b 的 array，所有这些数的 binary representation 里面有多少个 1？&lt;/p&gt;
 &lt;h1 id=&#34;naive-solution&#34;&gt;
   Naive Solution
-  &lt;a href=&#34;#naive-solution&#34;&gt;#&lt;/a&gt;
+  &lt;a href=&#34;#naive-solution&#34;&gt;&lt;small&gt;#&lt;/small&gt;&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;最简单的办法 (随手翻了两个别人的答案都是这个), 就是一个数一个数查有多少 1. 笨一点的手工查, 聪明一点的用 built-in function 查. 但是无论如何, 复杂度都是 O(b - a).&lt;/p&gt;
 &lt;h1 id=&#34;logn-solution&#34;&gt;
   Log(n) Solution
-  &lt;a href=&#34;#logn-solution&#34;&gt;#&lt;/a&gt;
+  &lt;a href=&#34;#logn-solution&#34;&gt;&lt;small&gt;#&lt;/small&gt;&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;我们先思考一个简化版本的问题: 所有 &lt;code&gt;unsigned int (c++)&lt;/code&gt; 里面有多少 1? 答案是所有的 bit / 2, 因为当我们把所有数都写成 2 进制, 一半是 1, 一半是0.&lt;/p&gt;
 &lt;p&gt;我们 generalize 一下: 对于任意的 $m$, 所有 $m$ 位的正整数里有 $(2^m * m) / 2$.&lt;/p&gt;
@@ -126,12 +126,12 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;allBits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;allBits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;复杂度证明&#34;&gt;
   复杂度证明
-  &lt;a href=&#34;#%e5%a4%8d%e6%9d%82%e5%ba%a6%e8%af%81%e6%98%8e&#34;&gt;#&lt;/a&gt;
+  &lt;a href=&#34;#%e5%a4%8d%e6%9d%82%e5%ba%a6%e8%af%81%e6%98%8e&#34;&gt;&lt;small&gt;#&lt;/small&gt;&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;这个算法的复杂度很简单，因为这个 recursion 可以很容易的转换成 tail recursion，再变成复杂度相同的 iteration. 这个 iteration 每次去掉最高位的 1，因此最多有 $\log(b)$ 次循环；每次循环做了 constant 的基本算数，因此最后的复杂度应该是 $\log(b)$。&lt;/p&gt;
 &lt;h1 id=&#34;c-source-code&#34;&gt;
   C++ Source Code
-  &lt;a href=&#34;#c-source-code&#34;&gt;#&lt;/a&gt;
+  &lt;a href=&#34;#c-source-code&#34;&gt;&lt;small&gt;#&lt;/small&gt;&lt;/a&gt;
 &lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;allBits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;

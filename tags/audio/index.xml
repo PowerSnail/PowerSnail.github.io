@@ -29,7 +29,7 @@
 # yt-dlp.conf # Output format: album/tracks.format -o &amp;#34;%(album,playlist_title)U - [%(playlist_id)s]/%(track_number,playlist_index)s - %(title)U - [%(id)s].</summary>
     <content type="html">&lt;h2 id=&#34;the-config-file&#34;&gt;
   The Config File
-  &lt;a href=&#34;#the-config-file&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#the-config-file&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Here&amp;rsquo;s the config file:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# yt-dlp.conf&lt;/span&gt;
@@ -56,11 +56,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--no-overwrites
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--concurrent-fragments &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;the-explanation&#34;&gt;
   The Explanation
-  &lt;a href=&#34;#the-explanation&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#the-explanation&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;h3 id=&#34;output-formats&#34;&gt;
   Output formats.
-  &lt;a href=&#34;#output-formats&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#output-formats&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The files are organized into one-directory-per-album, like the following:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
@@ -97,13 +97,13 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;metadata&#34;&gt;
   Metadata
-  &lt;a href=&#34;#metadata&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#metadata&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;--embed-metadata&lt;/code&gt; tells &lt;code&gt;yt-dlp&lt;/code&gt; to embed metadata. Some albums don&amp;rsquo;t have the proper track number set up, which means that when you import the files into a music player, the order of the album gets scrambled up.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;--parse-metadata &amp;quot;playlist_index:%(track_number)s&amp;quot;&lt;/code&gt; uses the playlist index, which should always be present when downloading a playlist, to fill the track number.&lt;/p&gt;
 &lt;h3 id=&#34;thumbnails&#34;&gt;
   Thumbnails
-  &lt;a href=&#34;#thumbnails&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#thumbnails&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;--embed-thumbnail&lt;/code&gt; tells &lt;code&gt;yt-dlp&lt;/code&gt; to embed a thumbnail;&lt;/li&gt;
@@ -118,13 +118,13 @@
 &lt;p&gt;My guess is that there&amp;rsquo;s some sort of conflict amongst the sequence of converting the image to the right format, embedding the image, and post-processing the image. In a way, I think it makes sense that thumbnail convertor post processor is the right option here, as it implies that we are processing &lt;strong&gt;after the conversion&lt;/strong&gt; and &lt;strong&gt;before the embedding&lt;/strong&gt;, whereas post-processing &lt;code&gt;EmbedThumbnail&lt;/code&gt; would suggest that we are cropping after the embedding occurs, which would be rather not useful. But this is just a speculation. Without digging into the code, it&amp;rsquo;s impossible to tell what exactly is happening here.&lt;/p&gt;
 &lt;h3 id=&#34;miscellaneous&#34;&gt;
   Miscellaneous
-  &lt;a href=&#34;#miscellaneous&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#miscellaneous&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;--no-overwrites&lt;/code&gt;: Don&amp;rsquo;t overwrite files.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;--concurrent-fragments 4&lt;/code&gt;: Download 4 fragments concurrently to speed up the process.&lt;/p&gt;
 &lt;h2 id=&#34;references&#34;&gt;
   References
-  &lt;a href=&#34;#references&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#references&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;pukkandan. (2021, June 23). &lt;em&gt;Comment on [Feature Request] Crop to square thumbnail when embedding in MP3s&lt;/em&gt;. &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp/issues/429#issuecomment-866836396&#34;&gt;[Feature Request] Crop to square thumbnail when embedding in MP3s · Issue #429 · yt-dlp/yt-dlp · GitHub&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;yt-dlp. (2023). &lt;em&gt;Yt-dlp&lt;/em&gt; [Python]. yt-dlp. &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;GitHub - yt-dlp/yt-dlp: A youtube-dl fork with additional features and fixes&lt;/a&gt; (Original work published 2020)&lt;/p&gt;

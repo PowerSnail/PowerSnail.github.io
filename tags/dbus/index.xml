@@ -28,7 +28,7 @@
     <summary type="html">The Problem ## KDE Plasma is my favorite Linux DE, and it has its quirks and warts. The support for multiple monitors, for example, is fairly buggy at times, especially when monitors are turned on and off.</summary>
     <content type="html">&lt;h2 id=&#34;the-problem&#34;&gt;
   The Problem
-  &lt;a href=&#34;#the-problem&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#the-problem&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;KDE Plasma is my favorite Linux DE, and it has its quirks and warts.
 The support for multiple monitors, for example, is fairly buggy at times,
@@ -46,7 +46,7 @@ to frequently reset the appropriate wallpapers.&lt;/p&gt;
 monitor either.&lt;/p&gt;
 &lt;h2 id=&#34;the-solution&#34;&gt;
   The Solution
-  &lt;a href=&#34;#the-solution&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#the-solution&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Fortunately, there&amp;rsquo;s a Band-Aid for every wart, if you are comfortable making
 your own Band-Aid. And in this case, my problem can be &amp;ldquo;fixed&amp;rdquo; by resetting
@@ -87,14 +87,14 @@ These ideas are stolen from the
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// And the variable `image_path` being the path to the image.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;setWallpaper&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getDesktops&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;desktop_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;image_path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dbus-interface&#34;&gt;
   DBus Interface
-  &lt;a href=&#34;#dbus-interface&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#dbus-interface&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;To run this script, we use the DBus Interface of Plasma, which provides a function
 called &lt;code&gt;evaluateScript&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript &lt;span class=&#34;s2&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;hellip;or invoke it with your favorite DBus tooling.&lt;/p&gt;
 &lt;h2 id=&#34;parameterize&#34;&gt;
   Parameterize
-  &lt;a href=&#34;#parameterize&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#parameterize&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;evaluateScript&lt;/code&gt; only accepts a self-contained script.
 You can hard code the path of the images, but there&amp;rsquo;s no way to supply the image
@@ -182,7 +182,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;references&#34;&gt;
   References
-  &lt;a href=&#34;#references&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#references&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Hänninen, H. (2019). &lt;em&gt;Superpaper&lt;/em&gt; [Python]. &lt;a href=&#34;https://github.com/hhannine/superpaper/blob/219f00aec19a4f0697e37663875eccbfa19b502b/superpaper/wallpaper_processing.py&#34;&gt;superpaper/wallpaper_processing.py at 219f00aec19a4f0697e37663875eccbfa19b502b · hhannine/superpaper · GitHub&lt;/a&gt; (Original work published 2019)&lt;/p&gt;
 &lt;p&gt;The KDE Community. (2023). &lt;em&gt;API documentation for Plasma scripting API&lt;/em&gt;. Developer. &lt;a href=&#34;https://develop.kde.org/docs/extend/plasma/scripting/api/&#34;&gt;API documentation | Developer&lt;/a&gt;&lt;/p&gt;

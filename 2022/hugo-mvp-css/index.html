@@ -19,7 +19,6 @@
     <meta property="og:image" content="https://powersnail.com/icons/snail.svg">
     <link rel="canonical" href="https://powersnail.com/2022/hugo-mvp-css/">
     <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
   <body>
     <header>
@@ -34,12 +33,12 @@
         <h1>
           Theme-less Hugo, Almost Pure HTML, Styled with MVP CSS
         </h1>
-        <hr>
         <div class="metadata">
           <time datetime="2022-01-12T00:00:00Z">12 Jan 2022</time> · 819 words · 4 minutes read
         </div>
+        <hr>
         <h2 id="theme-less-hugo">
-          Theme-less Hugo <a href="#theme-less-hugo">##</a>
+          Theme-less Hugo <a href="#theme-less-hugo"><small>##</small></a>
         </h2>
         <p>
           As popular as theming is, I can’t help but feel unsatisfied by a plug-and-use theme made by someone else. From WordPress to Jekyll to Hugo, no theme ever stopped me from tinkering with the underlying templates and CSS, during which, the theme inevitably becomes more coupled with my blog and content. This is because while the templates are usually generic enough for the body of blog articles, they are often quite specific on other elements: about, headers, footers, navigation bars, etc. And to customize those elements, I’m practically re-writing the website.
@@ -57,7 +56,7 @@
           In fact, I think if one has finished theme-shopping, and would like to start making customizations, the first thing to do is to copy the theme into their main project, and delete <code>themes</code>. It makes the website whole, the workflow more coherent, the workspace better organized, the commit history saner.
         </p>
         <h2 id="semantic-html-and-mvpcss">
-          Semantic HTML and MVP.CSS <a href="#semantic-html-and-mvpcss">##</a>
+          Semantic HTML and MVP.CSS <a href="#semantic-html-and-mvpcss"><small>##</small></a>
         </h2>
         <p>
           I have very little need for advanced topography or animations. My blog is just a bunch of static files hosted on GitHub Pages; nothing Fancy.
@@ -112,7 +111,7 @@
           I then colored the website with a dark banner image of Bach’s manuscript, and a color scheme generated from a picture of a violin. To ensure that the colors have enough contrast, I generated them with <a href="https://bottosson.github.io/posts/oklab/">Oklab</a> color space, and it seems to be passing accessibility tests so far. It might be a total overkill though, since a few colors on the spectrum are used. But what is a personal project without a few overkills?
         </p>
         <h2 id="mathjax-and-a-little-grievance-of-hugo">
-          MathJax, and a Little Grievance of Hugo <a href="#mathjax-and-a-little-grievance-of-hugo">##</a>
+          MathJax, and a Little Grievance of Hugo <a href="#mathjax-and-a-little-grievance-of-hugo"><small>##</small></a>
         </h2>
         <p>
           The only JavaScript I use is <a href="https://www.mathjax.org/">MathJax</a>. I’ve been considering to use its server-side rendering, but it seems that at the moment of writing this blog, Hugo does not support its use.
@@ -127,7 +126,7 @@
           One thing that I can do is to add an extra step to <code>hugo build</code>, and iterate through all the output HTML with whatever post-processing I want. But I do hope that this could be integrated into Hugo, so I don’t have to further butcher the GitHub Action file.
         </p>
         <h2 id="final-thoughts">
-          Final Thoughts <a href="#final-thoughts">##</a>
+          Final Thoughts <a href="#final-thoughts"><small>##</small></a>
         </h2>
         <p>
           You can find all the code to my blog <a href="https://github.com/PowerSnail/PowerSnail.github.io">here</a>. My modifications to the theme, up to the point that I moved everything into the main repository, can be found <a href="https://github.com/PowerSnail/hugo-rocinante">here</a>.
@@ -136,7 +135,7 @@
           <section class="footer-meta">
             <p>
               <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/blog">blog</a>, <a href="/tags/hugo">hugo</a>, <a href="/tags/html">html</a>
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science"><code>computer science</code></a>, <a href="/tags/blog"><code>blog</code></a>, <a href="/tags/hugo"><code>hugo</code></a>, <a href="/tags/html"><code>html</code></a>
             </p>
           </section>
           <section>

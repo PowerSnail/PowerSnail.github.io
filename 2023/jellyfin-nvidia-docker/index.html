@@ -21,7 +21,6 @@
     <meta property="og:description" content="Get Hardware-accelerated encoding and decoding working with NVIDIA in Jellyfin running inside a Docker container in openSUSE">
     <link rel="canonical" href="https://powersnail.com/2023/jellyfin-nvidia-docker/">
     <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
   <body>
     <header>
@@ -39,18 +38,18 @@
         <div id="title-subtitle">
           Get Hardware-accelerated encoding and decoding working with NVIDIA in Jellyfin running inside a Docker container in openSUSE
         </div>
-        <hr>
         <div class="metadata">
           <time datetime="2023-03-12T00:00:00Z">12 Mar 2023</time> · 1251 words · 6 minutes read
         </div>
+        <hr>
         <h2 id="what-is-it-all-about">
-          What is it all about? <a href="#what-is-it-all-about">##</a>
+          What is it all about? <a href="#what-is-it-all-about"><small>##</small></a>
         </h2>
         <p>
           Here is what I’m trying to do: I want to watch TV at home. On my hard drive, is a collection of videos, and I’d like to stream them from my PC to mobile devices. The PC runs openSUSE, has an NVIDIA card, and Jellyfin—a sort of self-hosted Netflix—is my choice for managing the multimedia files and the streaming.
         </p>
         <h2 id="why-am-i-running-jellyfin-in-docker">
-          Why am I Running Jellyfin in Docker <a href="#why-am-i-running-jellyfin-in-docker">##</a>
+          Why am I Running Jellyfin in Docker <a href="#why-am-i-running-jellyfin-in-docker"><small>##</small></a>
         </h2>
         <p>
           You can run Jellyfin just by itself, un-containerized, and tell it to use the dependencies that are installed by your OS’s package manager. It would be more space-efficient. You would need one less moving parts (Docker).
@@ -65,7 +64,7 @@
           At last, it’s easy to put constraints on how many cores Jellyfin can use. My machine has 16 cores, and really, to enable the transcoding of videos for one or two users, no more than 2 or 3 cores are necessary. However, for some reason, when I ran it bare metal, I was never able to enact that restriction, whether through Jellyfin’s settings, or some other system tools. Docker, on the other hand, can expose a selected set of cores, which as far as all the transcoding processes know, are all the cores existing.
         </p>
         <h2 id="installing-dependencies">
-          Installing Dependencies <a href="#installing-dependencies">##</a>
+          Installing Dependencies <a href="#installing-dependencies"><small>##</small></a>
         </h2>
         <p>
           To install Docker and Docker Compose,
@@ -100,7 +99,7 @@
           And I restart the PC at this point, just to make sure that all the enabled services are running.
         </p>
         <h2 id="composing-docker-for-jellyfin">
-          Composing Docker for Jellyfin <a href="#composing-docker-for-jellyfin">##</a>
+          Composing Docker for Jellyfin <a href="#composing-docker-for-jellyfin"><small>##</small></a>
         </h2>
         <p>
           Here’s what the official Jellyfin guide says:
@@ -154,7 +153,7 @@
           The rest of the options is the Docker Compose’s way of giving access of the GPU to the container <span class="citation" data-cites="dockerincComposeFileDeploy2023">(<a href="#ref-dockerincComposeFileDeploy2023" role="doc-biblioref">Docker Inc 2023</a>)</span>.
         </p>
         <h2 id="configuring-nvenc-and-nvdec-in-jellyfin">
-          Configuring NVENC and NVDEC in Jellyfin <a href="#configuring-nvenc-and-nvdec-in-jellyfin">##</a>
+          Configuring NVENC and NVDEC in Jellyfin <a href="#configuring-nvenc-and-nvdec-in-jellyfin"><small>##</small></a>
         </h2>
         <p>
           The model of my graphics card is RTX 2080, which can be checked by running:
@@ -172,7 +171,7 @@
           It’s important to know which codec to enable, because Jellyfin blindly trusts the configuration, and won’t test whether the GPU is actually capable of doing a specific transcoding. If an option were to be mis-selected, there wouldn’t be a fallback, and the video would fail to load.
         </p>
         <h2 id="how-well-does-it-work">
-          How well does it work? <a href="#how-well-does-it-work">##</a>
+          How well does it work? <a href="#how-well-does-it-work"><small>##</small></a>
         </h2>
         <p>
           Here’s the CPU usage—specifically the usage of core 13, 14, and 15—when playing a H.265 video, <strong>without</strong> hardware acceleration:
@@ -205,7 +204,7 @@
           It shines when <strong>starting</strong> a video, and more importantly, when I’m <strong>jumping around</strong> the progress bar. What used to be a few seconds of spinning circles, is now only a slight punctuation. The improvement on snappiness simply by moving the work from CPU to GPU is, frankly speaking, astonishing.
         </p>
         <h2 id="references">
-          References <a href="#references">##</a>
+          References <a href="#references"><small>##</small></a>
         </h2>
         <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
           <div id="ref-dockerincComposeFileDeploy2023" class="csl-entry" role="listitem">
@@ -231,7 +230,7 @@
           <section class="footer-meta">
             <p>
               <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/docker">Docker</a>, <a href="/tags/jellyfin">Jellyfin</a>, <a href="/tags/opensuse">openSUSE</a>, <a href="/tags/system-administration">system administration</a>, <a href="/tags/technology">technology</a>, <a href="/tags/nvidia">NVIDIA</a>, <a href="/tags/ffmpeg">FFmpeg</a>
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/docker"><code>Docker</code></a>, <a href="/tags/jellyfin"><code>Jellyfin</code></a>, <a href="/tags/opensuse"><code>openSUSE</code></a>, <a href="/tags/system-administration"><code>system administration</code></a>, <a href="/tags/technology"><code>technology</code></a>, <a href="/tags/nvidia"><code>NVIDIA</code></a>, <a href="/tags/ffmpeg"><code>FFmpeg</code></a>
             </p>
           </section>
           <section>

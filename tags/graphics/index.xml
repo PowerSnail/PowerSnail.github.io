@@ -30,17 +30,17 @@ Definition: ## self-similar $$\to$ when zoomed in, look the same
 Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar ## If zoomed in, there is no way to tell that we have zoomed in.</summary>
     <content type="html">&lt;h1 id=&#34;fractal&#34;&gt;
   Fractal
-  &lt;a href=&#34;#fractal&#34;&gt;#&lt;/a&gt;
+  &lt;a href=&#34;#fractal&#34;&gt;&lt;small&gt;#&lt;/small&gt;&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;naming: fractional dimension&lt;/p&gt;
 &lt;h2 id=&#34;definition&#34;&gt;
   Definition:
-  &lt;a href=&#34;#definition&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#definition&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;self-similar $$\to$ when zoomed in, look the same&lt;/p&gt;
 &lt;h2 id=&#34;types&#34;&gt;
   Types:
-  &lt;a href=&#34;#types&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#types&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Exactly self-similar&lt;/li&gt;
@@ -48,12 +48,12 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/ol&gt;
 &lt;h2 id=&#34;exactly-self-similar&#34;&gt;
   Exactly Self-similar
-  &lt;a href=&#34;#exactly-self-similar&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#exactly-self-similar&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;If zoomed in, there is no way to tell that we have zoomed in.&lt;/p&gt;
 &lt;h3 id=&#34;sierpinski-carpet&#34;&gt;
   Sierpinski Carpet
-  &lt;a href=&#34;#sierpinski-carpet&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#sierpinski-carpet&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;figure&gt;
     &lt;img
@@ -69,7 +69,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/ul&gt;
 &lt;h3 id=&#34;koch-snowflake&#34;&gt;
   Koch Snowflake
-  &lt;a href=&#34;#koch-snowflake&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#koch-snowflake&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;figure&gt;
     &lt;img
@@ -87,14 +87,14 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;However, shorelines are not as bumpy as Koch Snowflakes. They are smoother. Hence, we need a concept to describe the bumpiness.&lt;/p&gt;
 &lt;h3 id=&#34;length-of-koch-snowflake&#34;&gt;
   Length of Koch Snowflake
-  &lt;a href=&#34;#length-of-koch-snowflake&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#length-of-koch-snowflake&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Each Step increases the length to $$\dfrac{4}{3} \times$ original. Hence, Koch Snowflake is infinitely long.&lt;/p&gt;
 &lt;p&gt;$$l_k = \dfrac{4}{3} l_{k-1}$&lt;/p&gt;
 &lt;p&gt;Question: How quickly does Koch Snowflake&amp;rsquo;s length converge to infinity?&lt;/p&gt;
 &lt;h3 id=&#34;measuring-length-of-fractal-line&#34;&gt;
   Measuring Length of Fractal Line
-  &lt;a href=&#34;#measuring-length-of-fractal-line&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#measuring-length-of-fractal-line&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Different measuring scales lead to different length.&lt;/p&gt;
 &lt;p&gt;From the starting point, jump a fixed distance, $$d_u$, and measure how many $d_u$ are there in the line.&lt;/p&gt;
@@ -106,12 +106,12 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/ul&gt;
 &lt;h3 id=&#34;shorelinemountain-topology&#34;&gt;
   Shoreline/Mountain Topology
-  &lt;a href=&#34;#shorelinemountain-topology&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#shorelinemountain-topology&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Use fractal dimension to model a bumpy line, and computationally derive the line, rather than describing more details.&lt;/p&gt;
 &lt;h2 id=&#34;statistically-self-similar&#34;&gt;
   Statistically Self-similar
-  &lt;a href=&#34;#statistically-self-similar&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#statistically-self-similar&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Recursive Tree: &lt;strong&gt;Tree&lt;/strong&gt; := Stick + &lt;strong&gt;Tree&lt;/strong&gt; + &lt;strong&gt;Tree&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Moreover, we need to take care of the angles, length and returning position.&lt;/p&gt;
@@ -124,14 +124,14 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Turn
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Backwards&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;l-system&#34;&gt;
   L-System
-  &lt;a href=&#34;#l-system&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#l-system&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The above process can be described by CFG:&lt;/p&gt;
 &lt;p&gt;$$T:S\leftarrow T \rightarrow \rightarrow T \leftarrow \overline{S}$&lt;/p&gt;
 &lt;p&gt;This use of CFG is called L-System.&lt;/p&gt;
 &lt;h3 id=&#34;improvement-to-l-system-tree&#34;&gt;
   Improvement to L-System Tree
-  &lt;a href=&#34;#improvement-to-l-system-tree&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#improvement-to-l-system-tree&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Randomness : This introduces &lt;strong&gt;Statistically similar&lt;/strong&gt; fractal image.&lt;/li&gt;
@@ -141,7 +141,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;However, sadly trees don&amp;rsquo;t grow by the fractal model.&lt;/p&gt;
 &lt;h2 id=&#34;incorporating-randomness-into-fractals&#34;&gt;
   Incorporating Randomness Into Fractals
-  &lt;a href=&#34;#incorporating-randomness-into-fractals&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#incorporating-randomness-into-fractals&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Example Algorithm (&lt;em&gt;Subdivide and Offset&lt;/em&gt;)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;repeat
@@ -153,7 +153,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;More sophisticated examples:&lt;/p&gt;
 &lt;h3 id=&#34;height-map&#34;&gt;
   Height Map
-  &lt;a href=&#34;#height-map&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#height-map&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;A raster vector of height&lt;/p&gt;
 &lt;ul&gt;
@@ -199,7 +199,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/ul&gt;
 &lt;h3 id=&#34;perlin-fractal&#34;&gt;
   Perlin Fractal
-  &lt;a href=&#34;#perlin-fractal&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#perlin-fractal&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;A perlin fractal is created by taking in a height map, downsize it, and fill itself with the small height map.&lt;/p&gt;
 </content>

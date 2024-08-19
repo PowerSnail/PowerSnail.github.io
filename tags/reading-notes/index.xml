@@ -28,7 +28,7 @@
     <summary type="html">Overview ## A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called control transfer.</summary>
     <content type="html">&lt;h2 id=&#34;overview&#34;&gt;
   Overview
-  &lt;a href=&#34;#overview&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#overview&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called &lt;em&gt;control transfer&lt;/em&gt;. The sequence of transfers is called &lt;em&gt;control flow&lt;/em&gt;. The control flow is smooth when the transitions are always to the adjacent address. Operations such as &lt;code&gt;jump&lt;/code&gt;, &lt;code&gt;call&lt;/code&gt;, etc. will cause the control flow to be abrupt.&lt;/p&gt;
 &lt;p&gt;There are other situations where the control flow is abruptly changed. For example, hardware timer, network packet arrival, etc. are events that have to be dealt with but not necessarily a part of the execution of the program. The system will likely deal with such situations with &lt;em&gt;exceptional control flow&lt;/em&gt; (ECF), a disruption to the control flow.&lt;/p&gt;
@@ -38,17 +38,17 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;exceptions&#34;&gt;
   Exceptions
-  &lt;a href=&#34;#exceptions&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#exceptions&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;h3 id=&#34;definition&#34;&gt;
   Definition
-  &lt;a href=&#34;#definition&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#definition&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;An &lt;em&gt;exception&lt;/em&gt; is an abrupt change in the control flow in response to some change in the processor&amp;rsquo;s state.&lt;/p&gt;
 &lt;p&gt;An &lt;em&gt;event&lt;/em&gt; is a change in the processor&amp;rsquo;s state.&lt;/p&gt;
 &lt;h3 id=&#34;exception-happening&#34;&gt;
   Exception Happening
-  &lt;a href=&#34;#exception-happening&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#exception-happening&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;When the application is executing instruction $I_{curr}$, there is an event occurred.&lt;/p&gt;
 &lt;p&gt;The event could be either caused by the instruction just occurred, or completely unrelated to the application. The processor will look up the &lt;em&gt;exception table&lt;/em&gt;, and make a procedure call to the &lt;em&gt;exception handler&lt;/em&gt;, which will process the particular kind of event. Then, depending on the event, three things can occur:&lt;/p&gt;
@@ -59,7 +59,7 @@
 &lt;/ol&gt;
 &lt;h3 id=&#34;exception-handling&#34;&gt;
   Exception Handling
-  &lt;a href=&#34;#exception-handling&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#exception-handling&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The handling of exception involves both hardware and software.&lt;/p&gt;
 &lt;p&gt;Each type of exception is assigned an integer &lt;em&gt;exception number&lt;/em&gt;, assigned by:&lt;/p&gt;
@@ -91,7 +91,7 @@
 &lt;p&gt;The return is a special operation &lt;code&gt;return from interrupt&lt;/code&gt;, which restores kernel mode to user mode.&lt;/p&gt;
 &lt;h3 id=&#34;class-of-exceptions&#34;&gt;
   Class of Exceptions
-  &lt;a href=&#34;#class-of-exceptions&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#class-of-exceptions&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -133,12 +133,12 @@
 &lt;p&gt;&lt;em&gt;Async&lt;/em&gt;: means that the event (IO Interrupt) is not caused by execution of any instruction, but rather an asynchronous signal that an external IO device sends to the processor.&lt;/p&gt;
 &lt;h4 id=&#34;interrupt-handling&#34;&gt;
   Interrupt Handling
-  &lt;a href=&#34;#interrupt-handling&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#interrupt-handling&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;The handling of interrupt runs independent of the program. It is not caused by, has no impact on the current program. The processor notices the interrupt pin is set, and jumps to the interrupt handler. The handler will return to $I_{next}$, as though nothing has happened.&lt;/p&gt;
 &lt;h4 id=&#34;traps-and-system-calls&#34;&gt;
   Traps and System Calls
-  &lt;a href=&#34;#traps-and-system-calls&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#traps-and-system-calls&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Traps are intentional exceptions, likely to help interface between user program and the kernel, which is a &lt;em&gt;system call&lt;/em&gt;. Trap handlers also return to $I_{next}$ like interrupt handlers.&lt;/p&gt;
 &lt;p&gt;System Calls:&lt;/p&gt;
@@ -151,17 +151,17 @@
 &lt;p&gt;Remember that syscall runs in kernal mode and is thus different from normal procedure calls.&lt;/p&gt;
 &lt;h4 id=&#34;faults&#34;&gt;
   Faults
-  &lt;a href=&#34;#faults&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#faults&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Faults are error conditions that a handler might be able to correct. If the error is corrected, the handler will return to $I_{curr}$ (the faulting instruction), so it is re-executed. Otherwise, the handler will return to an abort routine to terminate the program&lt;/p&gt;
 &lt;h4 id=&#34;aborts&#34;&gt;
   Aborts
-  &lt;a href=&#34;#aborts&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#aborts&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Aborts result from unrecoverable fatal errors, for example, DRAM bits corruption.&lt;/p&gt;
 &lt;h3 id=&#34;example-exceptions-in-linuxx86-64-systems&#34;&gt;
   Example Exceptions in Linux/x86-64 Systems
-  &lt;a href=&#34;#example-exceptions-in-linuxx86-64-systems&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#example-exceptions-in-linuxx86-64-systems&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Divide error&lt;/strong&gt;: divide by zero, usually ends up in &lt;code&gt;abort&lt;/code&gt;. (Floating exceptions)&lt;/li&gt;
@@ -263,7 +263,7 @@
 &lt;/table&gt;
 &lt;h3 id=&#34;c-and-syscalls&#34;&gt;
   C and Syscalls
-  &lt;a href=&#34;#c-and-syscalls&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#c-and-syscalls&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;C/C++ programs can call syscall directly. For example,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
@@ -290,7 +290,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;movq&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;rdi&lt;/span&gt;           &lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Arg1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;exist&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;syscall&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;processes&#34;&gt;
   Processes
-  &lt;a href=&#34;#processes&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#processes&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The concept of &lt;em&gt;process&lt;/em&gt; provides the illusion of&lt;/p&gt;
 &lt;ul&gt;
@@ -311,29 +311,29 @@
 &lt;p&gt;These states are the &lt;em&gt;context&lt;/em&gt; of the program.&lt;/p&gt;
 &lt;h3 id=&#34;logical-control-flow&#34;&gt;
   Logical Control Flow
-  &lt;a href=&#34;#logical-control-flow&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#logical-control-flow&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;We perceive the illusionary control flow, that registers, memory, etc. are changed step by step completely according to the instruction set of our program. This control flow is called &lt;strong&gt;Logical Control Flow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;In reality, processes take turns to use the processor. Each process runs for a short period of time and is preempted (temporarily suspended), until the next turn.&lt;/p&gt;
 &lt;p&gt;This short time period is called &lt;em&gt;time slice&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;concurrent-flows&#34;&gt;
   Concurrent Flows
-  &lt;a href=&#34;#concurrent-flows&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#concurrent-flows&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;A logical flow whose execution overlaps in time with another flow is called a concurrent flow. Two flows run &lt;em&gt;concurrently&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;parallel-flows&#34;&gt;
   Parallel Flows
-  &lt;a href=&#34;#parallel-flows&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#parallel-flows&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The concurrent flows that run on different processor cores or computers are called &lt;em&gt;parallel flows&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;private-address-space&#34;&gt;
   Private Address Space
-  &lt;a href=&#34;#private-address-space&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#private-address-space&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The illusion that the program has exclusive use of address space is provided by &lt;em&gt;private address space&lt;/em&gt;. This &amp;ldquo;space&amp;rdquo; of addresses cannot be read/written by other programs, and therefore is exclusive to the program.&lt;/p&gt;
 &lt;h3 id=&#34;user-mode-vs-kernel-mode&#34;&gt;
   User Mode vs Kernel Mode
-  &lt;a href=&#34;#user-mode-vs-kernel-mode&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#user-mode-vs-kernel-mode&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The OS restricts each process what instructions can be executed and what memory space can be accessed. The processor provides the capability with a &lt;code&gt;mode bit&lt;/code&gt;.&lt;/p&gt;
 &lt;table&gt;
@@ -363,12 +363,12 @@
 &lt;p&gt;Privileged Instruction: &lt;code&gt;syscall&lt;/code&gt; functions, including halt, change mode, I/O op, etc.&lt;/p&gt;
 &lt;h4 id=&#34;proc&#34;&gt;
   /proc
-  &lt;a href=&#34;#proc&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#proc&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;/proc&lt;/code&gt; is a Linux file system mount of the kernal data structure. It allows the user to access general system attributes.&lt;/p&gt;
 &lt;h3 id=&#34;context-switch&#34;&gt;
   Context Switch
-  &lt;a href=&#34;#context-switch&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#context-switch&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The kernel maintains a context for each process. The context is the state that the kernel needs to restart a preempted process.&lt;/p&gt;
 &lt;ul&gt;
@@ -390,7 +390,7 @@
 &lt;p&gt;The kernel can decide to switch when the process is waiting for a read. The IO device can take care of the work, so the kernel will switch to another process, until the IO device sends an interrupt signalling successful transfer of data into the memory.&lt;/p&gt;
 &lt;h2 id=&#34;system-call-error-handling&#34;&gt;
   System Call Error Handling
-  &lt;a href=&#34;#system-call-error-handling&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#system-call-error-handling&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;When a system level function encounter an error, they return $-1$, and set the global integer variable &lt;code&gt;errno&lt;/code&gt; to indicate what went wrong.&lt;/p&gt;
 &lt;p&gt;An error checking fork function:&lt;/p&gt;
@@ -408,12 +408,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;signals&#34;&gt;
   Signals
-  &lt;a href=&#34;#signals&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#signals&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A signal is a small message that notifies a process that an event of some type has occurred in the system.&lt;/p&gt;
 &lt;h3 id=&#34;sending-signal&#34;&gt;
   Sending Signal
-  &lt;a href=&#34;#sending-signal&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#sending-signal&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The kernel sends a signal because:&lt;/p&gt;
 &lt;ul&gt;
@@ -422,24 +422,24 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;process-group&#34;&gt;
   Process Group
-  &lt;a href=&#34;#process-group&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#process-group&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Each process belongs to exactly one process group. By default, a child process belongs to the same group as its parent.&lt;/p&gt;
 &lt;p&gt;The Process Group ID can be read/write using &lt;code&gt;getpgrp&lt;/code&gt; and &lt;code&gt;setpgid&lt;/code&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;binkill&#34;&gt;
   &lt;code&gt;/bin/kill&lt;/code&gt;
-  &lt;a href=&#34;#binkill&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#binkill&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;/bin/kill -9 15213&lt;/code&gt; sends a signal 9 (SIGKILL) to process 15213.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;/bin/kill -9 -15213&lt;/code&gt; sends a signal 9 to ever process in group 15213&lt;/p&gt;
 &lt;h4 id=&#34;from-keyboard&#34;&gt;
   from Keyboard
-  &lt;a href=&#34;#from-keyboard&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#from-keyboard&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;A Unix shell has at most 1 foreground job and zero or more background jobs. Typing &lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;c&lt;/kbd&gt; causes the kernel to send SIGINT to every process in the foreground process group. &lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;z&lt;/kbd&gt; sends SIGTSTP signal to every process in the foreground process group, which pauses them.&lt;/p&gt;
 &lt;h4 id=&#34;calling-kill-function&#34;&gt;
   Calling &lt;code&gt;kill&lt;/code&gt; function
-  &lt;a href=&#34;#calling-kill-function&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#calling-kill-function&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sys/types.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;signal.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
@@ -452,7 +452,7 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;calling-alarm-function&#34;&gt;
   Calling &lt;code&gt;alarm&lt;/code&gt; function
-  &lt;a href=&#34;#calling-alarm-function&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#calling-alarm-function&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;unistd.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -461,7 +461,7 @@
 &lt;p&gt;A call of &lt;code&gt;alarm&lt;/code&gt; cancels all previous &lt;code&gt;alarm&lt;/code&gt;s.&lt;/p&gt;
 &lt;h3 id=&#34;receiving-signal&#34;&gt;
   Receiving Signal
-  &lt;a href=&#34;#receiving-signal&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#receiving-signal&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The kernel checks for any &lt;em&gt;pending and not blocked&lt;/em&gt; signals, when switching a process from kernel mode to user mode, i.e. from an Interrupt, syscall, or context switching.&lt;/p&gt;
 &lt;p&gt;If there is no such signals, then it will proceed to $I_{next}$. Otherwise, the kernel will choose a signal and force the process to receive it. The receipt will trigger some action, and once the action is completed, the kernel proceeds to $I_{next}$.&lt;/p&gt;

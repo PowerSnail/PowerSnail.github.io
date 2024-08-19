@@ -21,7 +21,6 @@
     <meta property="og:description" content="Configuring neovim with Lua.">
     <link rel="canonical" href="https://powersnail.com/2024/open-binary-files-external/">
     <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
   <body>
     <header>
@@ -39,10 +38,10 @@
         <div id="title-subtitle">
           Configuring neovim with Lua.
         </div>
-        <hr>
         <div class="metadata">
           <time datetime="2024-03-05T00:00:00Z">05 Mar 2024</time> · 489 words · 3 minutes read
         </div>
+        <hr>
         <p>
           After some serious attempts to equip my terminal emulator with the ability rendering images, I’ve given up on it. My experience is that in 2024, it’s still not quite a practical endeavor, at least on my machine with all the CLI tools that I’m using, specifically <code>tmux</code> and <code>neovim</code>. There are a handful of image protocols out there made for this purpose, but each comes with enough caveats, or limitations on what terminal/multiplexer/scrolling capabilities that it can work with.
         </p>
@@ -76,7 +75,7 @@
           The snippet is predominantly based on <a href="https://vi.stackexchange.com/questions/7217/how-can-i-cancel-reading-a-file-into-a-buffer-on-bufreadpre">this Stack Exchange post</a>.
         </p>
         <h2 id="some-explanations">
-          Some explanations <a href="#some-explanations">##</a>
+          Some explanations <a href="#some-explanations"><small>##</small></a>
         </h2>
         <ul>
           <li>
@@ -92,7 +91,7 @@
           </li>
         </ul>
         <h2 id="further-work">
-          Further work <a href="#further-work">##</a>
+          Further work <a href="#further-work"><small>##</small></a>
         </h2>
         <p>
           The next step is to find or make a fast, general purpose file viewer, so I can open all binary files—or any file that’s not suitable for text-based editing—in the same app. At the moment, <code>mupdf</code> is the fastest simple PDF viewer I’ve found, at least the fastest among the packages in my system repo.
@@ -120,7 +119,7 @@
           <section class="footer-meta">
             <p>
               <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/neovim">neovim</a>, <a href="/tags/system">system</a>, <a href="/tags/editor">editor</a>, <a href="/tags/text-editing">text editing</a>, <a href="/tags/pdf">pdf</a>, <a href="/tags/image">image</a>, <a href="/tags/lua">lua</a>
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/neovim"><code>neovim</code></a>, <a href="/tags/system"><code>system</code></a>, <a href="/tags/editor"><code>editor</code></a>, <a href="/tags/text-editing"><code>text editing</code></a>, <a href="/tags/pdf"><code>pdf</code></a>, <a href="/tags/image"><code>image</code></a>, <a href="/tags/lua"><code>lua</code></a>
             </p>
           </section>
           <section>

@@ -21,7 +21,6 @@
     <meta property="og:description" content="Announcing Score In URL, a sheet music editor where the content is stored in the URL.">
     <link rel="canonical" href="https://powersnail.com/2022/score-in-url/">
     <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
   <body>
     <header>
@@ -39,15 +38,15 @@
         <div id="title-subtitle">
           Announcing <a href="https://powersnail.com/ScoreInUrl"><em>Score In URL</em></a>, a sheet music editor where the content is stored in the URL.
         </div>
-        <hr>
         <div class="metadata">
           <time datetime="2022-07-29T00:00:00Z">29 Jul 2022</time> · 1204 words · 6 minutes read
         </div>
+        <hr>
         <p>
           I’m excited to publish my new project, <a href="https://powersnail.com/ScoreInUrl">Score In URL</a>, a simple, privacy-friendly, sheet music sharing service, where the entire content is encoded in the URL itself as a query parameter. It comes with a decent editor, the score, and the audio.
         </p>
         <h2 id="an-easy-way-to-share-musical-scores">
-          An easy way to share musical scores <a href="#an-easy-way-to-share-musical-scores">##</a>
+          An easy way to share musical scores <a href="#an-easy-way-to-share-musical-scores"><small>##</small></a>
         </h2>
         <p>
           The inspiration came to me when I was trying to share a little snippet of music on a forum. It was just a short exercise, but I wanted to deliver both the sheet music and the audio. Most forums don’t natively support sharing any form of sheet music notation, apart from just using an image. But to open up a composing program, export to an image, upload that image to Imgur, and finally share that link just for a one-line snippet, it’s tedious, and it’s an overkill. More importantly, an image has no sound. For that, there are more hoops to jump through.
@@ -62,7 +61,7 @@
           So, I decided to build something similar for ABC Notation. It allows you to enter plain text music just like <em>abcjs editor</em>, while the whole text is encoded into the URL, just like <em>hashify</em>. All you need to do is copy the URL to your friend, and they get the source, the sheet music, and audio in a single click. It doesn’t get any simpler than that.
         </p>
         <h2 id="static-server-less-privacy-friendly">
-          Static, server-less, privacy-friendly <a href="#static-server-less-privacy-friendly">##</a>
+          Static, server-less, privacy-friendly <a href="#static-server-less-privacy-friendly"><small>##</small></a>
         </h2>
         <p>
           Since there’s no need to store any file, the project can be entirely server-less. All it takes is a base64 decoder and abcjs, which can all be done in the frontend. This is why I’ve decided to use the query parameter, eliminating the need for server-side routing. The page takes a single parameter <code>s</code>, which contains the encoded score.
@@ -95,7 +94,7 @@
           This approach has its own caveat: size limit. URLs are traditionally at most 2048 characters. How many pages of sheet music you get from those 2048 characters depend on your score, but the spirit of <strong>Score In URL</strong> is to share short snippets of sheet music, not to be a full-fledged music editor. There are much better tools out there for composing.
         </p>
         <h2 id="abc-notation-and-abcjs">
-          ABC Notation and abcjs <a href="#abc-notation-and-abcjs">##</a>
+          ABC Notation and abcjs <a href="#abc-notation-and-abcjs"><small>##</small></a>
         </h2>
         <p>
           ABC Notation is possibly the most hand-writable plain text format for composing sheet music. Most engraving software are WYSIWYG (What You See Is What You Get), which means you are directly interacting with the score, requiring a graphical interface. For a composer sitting in front of their workstation, this is fine, but it’s too heavy for building a quick, shareable snippet of music. On the other end of the spectrum, ABC Notation is just plain text. For something simple of a few measures long, it does the job better than any other system.
@@ -129,7 +128,7 @@
           Thanks to <a href="https://www.abcjs.net/">abcjs</a>, it’s super easy to embed such a system in a web page. Abcjs provides rendering, audio, and error messages which integrate nicely with CodeMirror, the text editor.
         </p>
         <h2 id="text-editing">
-          Text Editing <a href="#text-editing">##</a>
+          Text Editing <a href="#text-editing"><small>##</small></a>
         </h2>
         <p>
           To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, <a href="https://codemirror.net/">CodeMirror</a> is used. You can see the errors marked by red dots, like a real text editor used by programmers.
@@ -142,7 +141,7 @@
           The code highlighting is still not comprehensive at the moment. I’ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.
         </p>
         <h2 id="not-in-the-scope">
-          Not in the scope <a href="#not-in-the-scope">##</a>
+          Not in the scope <a href="#not-in-the-scope"><small>##</small></a>
         </h2>
         <p>
           I’ve decided against using a compression algorithm. A simple base64 encoder is available everywhere, whereas compression requires a 3rd party library, and might be subject to the specific quirks of that implementation. If the compression has a bug, it infects every URL shared from <strong>Score In URL</strong>. If that algorithm ever gets an update that is not backwards-compatible, all the old URLs are screwed. Furthermore, if <strong>Score In URL</strong> disappears, a plain base64 string is simple to use: just copy & paste into any base64 decoder. It requires no programming skill, no tool chains, no setup. On the other hand, a compressed string is much harder to decode, especially if the user has no convenient way of installing the exact version of the compression algorithm I used.
@@ -151,7 +150,7 @@
           Despite the existence of a “Print” button, printing likely won’t be perfect, especially if you have more than one page of scores. Again, the project is meant for sharing snippets of music, not for typesetting a multipage score. The whole thing is rendered on to a single image, and as long as that image looks alright in the browser, that’s all it matters to me.
         </p>
         <h2 id="to-do">
-          To Do <a href="#to-do">##</a>
+          To Do <a href="#to-do"><small>##</small></a>
         </h2>
         <p>
           There are a few improvements on my mind.
@@ -169,7 +168,7 @@
           <section class="footer-meta">
             <p>
               <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/frontend">frontend</a>
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science"><code>computer science</code></a>, <a href="/tags/frontend"><code>frontend</code></a>
             </p>
           </section>
           <section>

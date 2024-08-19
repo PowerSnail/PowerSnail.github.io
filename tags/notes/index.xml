@@ -28,13 +28,13 @@
     <summary type="html">Summary # The book was the execution of ten people, carried out on an isolated island. Ten people of very different backgrounds were invited, by various ruses, to come on to the island.</summary>
     <content type="html">&lt;h1 id=&#34;summary&#34;&gt;
   Summary
-  &lt;a href=&#34;#summary&#34;&gt;#&lt;/a&gt;
+  &lt;a href=&#34;#summary&#34;&gt;&lt;small&gt;#&lt;/small&gt;&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;The book was the execution of ten people, carried out on an isolated island. Ten people of very different backgrounds were invited, by various ruses, to come on to the island. A recorded voice blared out accusations, that each of them had committed a murder and escaped the punishment of the law. One by one, they started dying, in the same manner as described by a nursery rhyme that was carved in their bedrooms. A rich young man died by poison. The maid died by sleeping pill overdose. No one else was on the island, so the murderer must be among themselves, but despite their effort at self-preservation, the killing continued. The general was killed by the sea. The butler was chopped by an axe. The old distinguished lady was again poisoned with cyanide, while a bumblebee was present, as a symbol for bee sting. They searched for poisons and weapons, but then, the Judge was shot when they rushed to help the young lady. The doctor ran out of the house and vanished at midnight. The ex-policeman was killed by a bear-shaped clock dropped from a window. The last two, Vera the young lady, and Lombard the shady hard man, found the corpse of the doctor floating in the sea. Now that there was no other option, Vera though Lombard was the murderer. She cheated him, stole his gun, and shot him dead. Then, as she came back to her room, she was so moved by the murder, the shooting, and the guilt, she committed suicide.&lt;/p&gt;
 &lt;p&gt;The judge was the mastermind. His death was faked by the doctor, who was convinced that faking the death would help draw out the real murderer.&lt;/p&gt;
 &lt;h1 id=&#34;head-hopping&#34;&gt;
   Head Hopping
-  &lt;a href=&#34;#head-hopping&#34;&gt;#&lt;/a&gt;
+  &lt;a href=&#34;#head-hopping&#34;&gt;&lt;small&gt;#&lt;/small&gt;&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;The book was written in 10 view points, and constantly hopping from one head to another.&lt;/p&gt;
 &lt;p&gt;For instance,&lt;/p&gt;
@@ -48,11 +48,11 @@
 &lt;p&gt;The head hopping worked well in this book, as it shows the fear, the anxiety, the curiosity, that were presented in each mind. There were no lead detective to solve the crime; each of them were equally suspicious and suspected.&lt;/p&gt;
 &lt;h1 id=&#34;annotations&#34;&gt;
   Annotations
-  &lt;a href=&#34;#annotations&#34;&gt;#&lt;/a&gt;
+  &lt;a href=&#34;#annotations&#34;&gt;&lt;small&gt;#&lt;/small&gt;&lt;/a&gt;
 &lt;/h1&gt;
 &lt;h2 id=&#34;chapter-one&#34;&gt;
   Chapter One
-  &lt;a href=&#34;#chapter-one&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#chapter-one&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Page 3 Location 100&lt;/p&gt;
 &lt;blockquote&gt;
@@ -84,7 +84,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;chapter-two&#34;&gt;
   Chapter Two
-  &lt;a href=&#34;#chapter-two&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#chapter-two&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Page 21 Location 378&lt;/p&gt;
 &lt;blockquote&gt;
@@ -92,7 +92,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;chapter-four&#34;&gt;
   Chapter Four
-  &lt;a href=&#34;#chapter-four&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#chapter-four&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Page 51 Location 842&lt;/p&gt;
 &lt;blockquote&gt;
@@ -100,7 +100,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;chapter-eight&#34;&gt;
   Chapter Eight
-  &lt;a href=&#34;#chapter-eight&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#chapter-eight&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Page 101 Location 1612&lt;/p&gt;
 &lt;blockquote&gt;
@@ -108,7 +108,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;chapter-nine&#34;&gt;
   Chapter Nine
-  &lt;a href=&#34;#chapter-nine&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#chapter-nine&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Page 130 Location 2076&lt;/p&gt;
 &lt;blockquote&gt;
@@ -116,7 +116,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;chapter-eleven&#34;&gt;
   Chapter Eleven
-  &lt;a href=&#34;#chapter-eleven&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#chapter-eleven&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Page 149 Location 2358&lt;/p&gt;
 &lt;blockquote&gt;
@@ -128,7 +128,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;chapter-sixteen&#34;&gt;
   Chapter Sixteen
-  &lt;a href=&#34;#chapter-sixteen&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#chapter-sixteen&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Page 216 Location 3420&lt;/p&gt;
 &lt;blockquote&gt;
@@ -162,13 +162,13 @@
     <summary type="html">Summary of Pride and Prejudice ## A young intelligent woman, Elizabeth, had a tendency to judge people quickly. Based on impressions and gossips, she deemed Mr.</summary>
     <content type="html">&lt;h2 id=&#34;summary-of-_pride-and-prejudice_&#34;&gt;
   Summary of &lt;em&gt;Pride and Prejudice&lt;/em&gt;
-  &lt;a href=&#34;#summary-of-_pride-and-prejudice_&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#summary-of-_pride-and-prejudice_&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A young intelligent woman, Elizabeth, had a tendency to judge people quickly. Based on impressions and gossips, she deemed Mr. Darcy proud, cruel, and exploiting his friend. When Mr. Darcy expressed his affection to her, Elizabeth bashed him with criticism and sarcasm. However, after meeting Mr. Darcy and his family on a trip, she realized that she had rushed her opinions. She was misled by Mr. Wickham, whom she had deemed to be trustworthy but was actually a long-time liar. When she found out that she had misjudged so many people along the way, she confessed to Mr. Darcy: both her apologies and her own affection towards him. In the end, Mr. Darcy still loved her, and they got married.&lt;/p&gt;
 &lt;p&gt;The storytelling was magnificent and humorous. Not only did Elizabeth misjudged the characters of people, but also I - the reader - misjudged along with her. I also thought in the beginning that Mr. Darcy was obnoxious proud. It&amp;rsquo;s the way that author manipulated the narrative, showing only Elizabeth&amp;rsquo;s perspective, that achieved this effect. There were many intelligent conversations, yet the characters were distinct. Each smart people had their own way of showing their intelligence, some by infallible arguments, some by sarcasms and jokes.&lt;/p&gt;
 &lt;h2 id=&#34;highlights-and-annotations&#34;&gt;
   Highlights and Annotations
-  &lt;a href=&#34;#highlights-and-annotations&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#highlights-and-annotations&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.&lt;/p&gt;
@@ -204,7 +204,7 @@
 &lt;p&gt;Almost anything could be seen as a joke to Mr. Bennet. He was like an old monk who had seen everything in the world, and therefore no longer find anything worthy of excitement (though he was quite disturbed later when Lydia was lost). Unlike a monk though, he loved to make fun of people.&lt;/p&gt;
 &lt;h2 id=&#34;some-non-annotated-highlights&#34;&gt;
   Some Non-annotated Highlights
-  &lt;a href=&#34;#some-non-annotated-highlights&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#some-non-annotated-highlights&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There are few people whom I really love, and still fewer of whom I think well. The more I see of the world, the more am I dissatisfied with it; and every day confirms my belief of the inconsistency of all human characters, and of the little dependence that can be placed on the appearance of merit or sense.&lt;/p&gt;
@@ -235,7 +235,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;bibliography&#34;&gt;
   Bibliography
-  &lt;a href=&#34;#bibliography&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#bibliography&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Austen, J. (2012). &lt;em&gt;Pride and Prejudice&lt;/em&gt;. Amazon Digital Services LLC.&lt;/p&gt;
 </content>
@@ -255,7 +255,7 @@
     <summary type="html">An Overall Review ## Tom Sawyer is a kid living in a small town, under the caring of his aunt.</summary>
     <content type="html">&lt;h2 id=&#34;an-overall-review&#34;&gt;
   An Overall Review
-  &lt;a href=&#34;#an-overall-review&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#an-overall-review&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Tom Sawyer is a kid living in a small town, under the caring of his aunt. He was a mischievous troublemaker both at school and at home. Wanting to be pirates, he and his friends ran off to an island and showed up later to their own funeral when the whole town thought they were dead.  They had their own superstitions, about life, death, and treasures. While pursuing their ceremony of burying a dead cat, they accidentally witnessed a murder and overheard the murderer&amp;rsquo;s plan of blaming it on to a drunk old man. Haunted since, Tom eventually grew the courage to testify against the murderer, who fled the court and disappeared. Later, he and Huck accidentally witness the murderer - now with a different appearance - talking about treasures, so they followed him. While all the thrills and fears happened, Tom managed to won back Becky&amp;rsquo;s heart at school when he took her punishment. The lovers ran off during an event and were lost in a cave, again seeing the murderer who was with his treasure. When Tom and Becky were back, the town sealed the cave, unknowing that the murderer was still in there, who died in hunger and despair. Tom and Huck dug up the treasures and became two rich children.&lt;/p&gt;
 &lt;p&gt;The story of Tom Sawyer is alien to me. I have never experienced a similar childhood, as I was never the mischievous type and neither were my friends. Growing up without having a single fight or making a single prank to my teachers, the energetic trouble making couldn&amp;rsquo;t be farther from my own experiences. Being a Chinese living in an inland city, pirate life was alien even to my imagination. Tom was bold, while I was frankly quite timid.&lt;/p&gt;
@@ -264,11 +264,11 @@
 &lt;p&gt;There were no pretentious vocabularies (in fact he devoted a whole chapter criticizing the school event of writing pretentious words) or complex sentence structures. He chose the right verbs to succinctly describe people&amp;rsquo;s behavior; he sometimes threw witty insights of the characters&amp;rsquo; minds; he used plenty of conversations which served several purposes: describing the subject, reflecting the personality and mindset of the talker, and promoting the interaction between characters.&lt;/p&gt;
 &lt;h2 id=&#34;quotes-i-liked&#34;&gt;
   Quotes I Liked
-  &lt;a href=&#34;#quotes-i-liked&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#quotes-i-liked&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;h3 id=&#34;chapter-1&#34;&gt;
   Chapter 1
-  &lt;a href=&#34;#chapter-1&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#chapter-1&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;She seldom or never looked THROUGH them for so small a thing as a boy; they were her state pair, the pride of her heart, and were built for &amp;ldquo;style,&amp;rdquo; not service—she could have seen through a pair of stove-lids just as well.&lt;/p&gt;
@@ -280,7 +280,7 @@
 &lt;p&gt;&amp;ldquo;Ate into Tom&amp;rsquo;s vitals&amp;rdquo; Very vivid yet simple description of Tom&amp;rsquo;s discomfort meeting a new boy in town.&lt;/p&gt;
 &lt;h3 id=&#34;chapter-2&#34;&gt;
   Chapter 2
-  &lt;a href=&#34;#chapter-2&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#chapter-2&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tom swept his brush daintily back and forth - stepped back to note the effect - added a touch here and there&amp;hellip;&lt;/p&gt;
@@ -292,21 +292,21 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;chapter-3&#34;&gt;
   Chapter 3
-  &lt;a href=&#34;#chapter-3&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#chapter-3&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This picture brought such an agony of pleasurable suffering that he worked it over and over again in his mind and set it up in new and varied lights, till he wore it threadbare.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;chapter-6&#34;&gt;
   Chapter 6
-  &lt;a href=&#34;#chapter-6&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#chapter-6&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tom was suffering in reality, now, so handsomely was his imagination working, and so his groans had gathered quite a genuine tone.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;chapter-8&#34;&gt;
   Chapter 8
-  &lt;a href=&#34;#chapter-8&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#chapter-8&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;But the elastic heart of youth cannot be compressed into one constrained shape long at a time.&lt;/p&gt;
@@ -317,35 +317,35 @@
 &lt;p&gt;Although the sentence is rather long, it is readable and easily comprehended. The author used a sequence of semi-sentences to describe consecutive actions, occasionally blending in a shift of camera to the effects of the actions. The shortness of each semi-sentence ensures that the cognitive burden is low; each action is directly following the previous one, so there is no need to keep track of the overall structure; the occasional clauses tightly relate to the preceding sentence, so they don&amp;rsquo;t interrupt the flow.&lt;/p&gt;
 &lt;h3 id=&#34;chapter-9&#34;&gt;
   Chapter 9
-  &lt;a href=&#34;#chapter-9&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#chapter-9&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The hooting of a distant owl was all the sound that troubled the dead stillness. Tom&amp;rsquo;s reflections grew oppressive. He must force some talk.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;chapter-18&#34;&gt;
   Chapter 18
-  &lt;a href=&#34;#chapter-18&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#chapter-18&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;That was Tom&amp;rsquo;s great secret - the scheme to return home with his brother pirates and attend their own funerals.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;chapter-21&#34;&gt;
   Chapter 21
-  &lt;a href=&#34;#chapter-21&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#chapter-21&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A prevalent feature in these compositions was a nursed and petted melancholy; another was a wasteful and opulent gush of &amp;ldquo;fine language&amp;rdquo;; another was a tendency to lug in by the ears particularly prized words and phrases until they were worn entirely out; and a peculiarity that conspicuously marked and marred them was the inveterate and intolerable sermon that wagged its crippled tail at the end of each and every one of them.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;chapter-26&#34;&gt;
   Chapter 26
-  &lt;a href=&#34;#chapter-26&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#chapter-26&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;When they reached the haunted house there was something so weird and grisly about the dead silence that reigned there under the baking sun, and something so depressing about the loneliness and desolation of the place, that they were afraid, for a moment, to venture in.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;references&#34;&gt;
   References
-  &lt;a href=&#34;#references&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#references&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Twain, M. (2014). &lt;em&gt;The Adventures of Tom Sawyer&lt;/em&gt;. CreateSpace Independent Publishing Platform.&lt;/p&gt;
 </content>
@@ -365,7 +365,7 @@
     <summary type="html">Overview ## A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called control transfer.</summary>
     <content type="html">&lt;h2 id=&#34;overview&#34;&gt;
   Overview
-  &lt;a href=&#34;#overview&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#overview&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A processor accesses a sequence of instructions when it operates. The transition from one to the next, is called &lt;em&gt;control transfer&lt;/em&gt;. The sequence of transfers is called &lt;em&gt;control flow&lt;/em&gt;. The control flow is smooth when the transitions are always to the adjacent address. Operations such as &lt;code&gt;jump&lt;/code&gt;, &lt;code&gt;call&lt;/code&gt;, etc. will cause the control flow to be abrupt.&lt;/p&gt;
 &lt;p&gt;There are other situations where the control flow is abruptly changed. For example, hardware timer, network packet arrival, etc. are events that have to be dealt with but not necessarily a part of the execution of the program. The system will likely deal with such situations with &lt;em&gt;exceptional control flow&lt;/em&gt; (ECF), a disruption to the control flow.&lt;/p&gt;
@@ -375,17 +375,17 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;exceptions&#34;&gt;
   Exceptions
-  &lt;a href=&#34;#exceptions&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#exceptions&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;h3 id=&#34;definition&#34;&gt;
   Definition
-  &lt;a href=&#34;#definition&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#definition&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;An &lt;em&gt;exception&lt;/em&gt; is an abrupt change in the control flow in response to some change in the processor&amp;rsquo;s state.&lt;/p&gt;
 &lt;p&gt;An &lt;em&gt;event&lt;/em&gt; is a change in the processor&amp;rsquo;s state.&lt;/p&gt;
 &lt;h3 id=&#34;exception-happening&#34;&gt;
   Exception Happening
-  &lt;a href=&#34;#exception-happening&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#exception-happening&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;When the application is executing instruction $I_{curr}$, there is an event occurred.&lt;/p&gt;
 &lt;p&gt;The event could be either caused by the instruction just occurred, or completely unrelated to the application. The processor will look up the &lt;em&gt;exception table&lt;/em&gt;, and make a procedure call to the &lt;em&gt;exception handler&lt;/em&gt;, which will process the particular kind of event. Then, depending on the event, three things can occur:&lt;/p&gt;
@@ -396,7 +396,7 @@
 &lt;/ol&gt;
 &lt;h3 id=&#34;exception-handling&#34;&gt;
   Exception Handling
-  &lt;a href=&#34;#exception-handling&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#exception-handling&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The handling of exception involves both hardware and software.&lt;/p&gt;
 &lt;p&gt;Each type of exception is assigned an integer &lt;em&gt;exception number&lt;/em&gt;, assigned by:&lt;/p&gt;
@@ -428,7 +428,7 @@
 &lt;p&gt;The return is a special operation &lt;code&gt;return from interrupt&lt;/code&gt;, which restores kernel mode to user mode.&lt;/p&gt;
 &lt;h3 id=&#34;class-of-exceptions&#34;&gt;
   Class of Exceptions
-  &lt;a href=&#34;#class-of-exceptions&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#class-of-exceptions&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -470,12 +470,12 @@
 &lt;p&gt;&lt;em&gt;Async&lt;/em&gt;: means that the event (IO Interrupt) is not caused by execution of any instruction, but rather an asynchronous signal that an external IO device sends to the processor.&lt;/p&gt;
 &lt;h4 id=&#34;interrupt-handling&#34;&gt;
   Interrupt Handling
-  &lt;a href=&#34;#interrupt-handling&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#interrupt-handling&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;The handling of interrupt runs independent of the program. It is not caused by, has no impact on the current program. The processor notices the interrupt pin is set, and jumps to the interrupt handler. The handler will return to $I_{next}$, as though nothing has happened.&lt;/p&gt;
 &lt;h4 id=&#34;traps-and-system-calls&#34;&gt;
   Traps and System Calls
-  &lt;a href=&#34;#traps-and-system-calls&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#traps-and-system-calls&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Traps are intentional exceptions, likely to help interface between user program and the kernel, which is a &lt;em&gt;system call&lt;/em&gt;. Trap handlers also return to $I_{next}$ like interrupt handlers.&lt;/p&gt;
 &lt;p&gt;System Calls:&lt;/p&gt;
@@ -488,17 +488,17 @@
 &lt;p&gt;Remember that syscall runs in kernal mode and is thus different from normal procedure calls.&lt;/p&gt;
 &lt;h4 id=&#34;faults&#34;&gt;
   Faults
-  &lt;a href=&#34;#faults&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#faults&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Faults are error conditions that a handler might be able to correct. If the error is corrected, the handler will return to $I_{curr}$ (the faulting instruction), so it is re-executed. Otherwise, the handler will return to an abort routine to terminate the program&lt;/p&gt;
 &lt;h4 id=&#34;aborts&#34;&gt;
   Aborts
-  &lt;a href=&#34;#aborts&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#aborts&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Aborts result from unrecoverable fatal errors, for example, DRAM bits corruption.&lt;/p&gt;
 &lt;h3 id=&#34;example-exceptions-in-linuxx86-64-systems&#34;&gt;
   Example Exceptions in Linux/x86-64 Systems
-  &lt;a href=&#34;#example-exceptions-in-linuxx86-64-systems&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#example-exceptions-in-linuxx86-64-systems&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Divide error&lt;/strong&gt;: divide by zero, usually ends up in &lt;code&gt;abort&lt;/code&gt;. (Floating exceptions)&lt;/li&gt;
@@ -600,7 +600,7 @@
 &lt;/table&gt;
 &lt;h3 id=&#34;c-and-syscalls&#34;&gt;
   C and Syscalls
-  &lt;a href=&#34;#c-and-syscalls&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#c-and-syscalls&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;C/C++ programs can call syscall directly. For example,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
@@ -627,7 +627,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;movq&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;rdi&lt;/span&gt;           &lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Arg1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;exist&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;syscall&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;processes&#34;&gt;
   Processes
-  &lt;a href=&#34;#processes&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#processes&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The concept of &lt;em&gt;process&lt;/em&gt; provides the illusion of&lt;/p&gt;
 &lt;ul&gt;
@@ -648,29 +648,29 @@
 &lt;p&gt;These states are the &lt;em&gt;context&lt;/em&gt; of the program.&lt;/p&gt;
 &lt;h3 id=&#34;logical-control-flow&#34;&gt;
   Logical Control Flow
-  &lt;a href=&#34;#logical-control-flow&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#logical-control-flow&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;We perceive the illusionary control flow, that registers, memory, etc. are changed step by step completely according to the instruction set of our program. This control flow is called &lt;strong&gt;Logical Control Flow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;In reality, processes take turns to use the processor. Each process runs for a short period of time and is preempted (temporarily suspended), until the next turn.&lt;/p&gt;
 &lt;p&gt;This short time period is called &lt;em&gt;time slice&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;concurrent-flows&#34;&gt;
   Concurrent Flows
-  &lt;a href=&#34;#concurrent-flows&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#concurrent-flows&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;A logical flow whose execution overlaps in time with another flow is called a concurrent flow. Two flows run &lt;em&gt;concurrently&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;parallel-flows&#34;&gt;
   Parallel Flows
-  &lt;a href=&#34;#parallel-flows&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#parallel-flows&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The concurrent flows that run on different processor cores or computers are called &lt;em&gt;parallel flows&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;private-address-space&#34;&gt;
   Private Address Space
-  &lt;a href=&#34;#private-address-space&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#private-address-space&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The illusion that the program has exclusive use of address space is provided by &lt;em&gt;private address space&lt;/em&gt;. This &amp;ldquo;space&amp;rdquo; of addresses cannot be read/written by other programs, and therefore is exclusive to the program.&lt;/p&gt;
 &lt;h3 id=&#34;user-mode-vs-kernel-mode&#34;&gt;
   User Mode vs Kernel Mode
-  &lt;a href=&#34;#user-mode-vs-kernel-mode&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#user-mode-vs-kernel-mode&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The OS restricts each process what instructions can be executed and what memory space can be accessed. The processor provides the capability with a &lt;code&gt;mode bit&lt;/code&gt;.&lt;/p&gt;
 &lt;table&gt;
@@ -700,12 +700,12 @@
 &lt;p&gt;Privileged Instruction: &lt;code&gt;syscall&lt;/code&gt; functions, including halt, change mode, I/O op, etc.&lt;/p&gt;
 &lt;h4 id=&#34;proc&#34;&gt;
   /proc
-  &lt;a href=&#34;#proc&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#proc&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;/proc&lt;/code&gt; is a Linux file system mount of the kernal data structure. It allows the user to access general system attributes.&lt;/p&gt;
 &lt;h3 id=&#34;context-switch&#34;&gt;
   Context Switch
-  &lt;a href=&#34;#context-switch&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#context-switch&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The kernel maintains a context for each process. The context is the state that the kernel needs to restart a preempted process.&lt;/p&gt;
 &lt;ul&gt;
@@ -727,7 +727,7 @@
 &lt;p&gt;The kernel can decide to switch when the process is waiting for a read. The IO device can take care of the work, so the kernel will switch to another process, until the IO device sends an interrupt signalling successful transfer of data into the memory.&lt;/p&gt;
 &lt;h2 id=&#34;system-call-error-handling&#34;&gt;
   System Call Error Handling
-  &lt;a href=&#34;#system-call-error-handling&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#system-call-error-handling&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;When a system level function encounter an error, they return $-1$, and set the global integer variable &lt;code&gt;errno&lt;/code&gt; to indicate what went wrong.&lt;/p&gt;
 &lt;p&gt;An error checking fork function:&lt;/p&gt;
@@ -745,12 +745,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;signals&#34;&gt;
   Signals
-  &lt;a href=&#34;#signals&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#signals&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A signal is a small message that notifies a process that an event of some type has occurred in the system.&lt;/p&gt;
 &lt;h3 id=&#34;sending-signal&#34;&gt;
   Sending Signal
-  &lt;a href=&#34;#sending-signal&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#sending-signal&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The kernel sends a signal because:&lt;/p&gt;
 &lt;ul&gt;
@@ -759,24 +759,24 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;process-group&#34;&gt;
   Process Group
-  &lt;a href=&#34;#process-group&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#process-group&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Each process belongs to exactly one process group. By default, a child process belongs to the same group as its parent.&lt;/p&gt;
 &lt;p&gt;The Process Group ID can be read/write using &lt;code&gt;getpgrp&lt;/code&gt; and &lt;code&gt;setpgid&lt;/code&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;binkill&#34;&gt;
   &lt;code&gt;/bin/kill&lt;/code&gt;
-  &lt;a href=&#34;#binkill&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#binkill&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;/bin/kill -9 15213&lt;/code&gt; sends a signal 9 (SIGKILL) to process 15213.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;/bin/kill -9 -15213&lt;/code&gt; sends a signal 9 to ever process in group 15213&lt;/p&gt;
 &lt;h4 id=&#34;from-keyboard&#34;&gt;
   from Keyboard
-  &lt;a href=&#34;#from-keyboard&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#from-keyboard&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;A Unix shell has at most 1 foreground job and zero or more background jobs. Typing &lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;c&lt;/kbd&gt; causes the kernel to send SIGINT to every process in the foreground process group. &lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;z&lt;/kbd&gt; sends SIGTSTP signal to every process in the foreground process group, which pauses them.&lt;/p&gt;
 &lt;h4 id=&#34;calling-kill-function&#34;&gt;
   Calling &lt;code&gt;kill&lt;/code&gt; function
-  &lt;a href=&#34;#calling-kill-function&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#calling-kill-function&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sys/types.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;signal.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
@@ -789,7 +789,7 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;calling-alarm-function&#34;&gt;
   Calling &lt;code&gt;alarm&lt;/code&gt; function
-  &lt;a href=&#34;#calling-alarm-function&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#calling-alarm-function&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;unistd.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -798,7 +798,7 @@
 &lt;p&gt;A call of &lt;code&gt;alarm&lt;/code&gt; cancels all previous &lt;code&gt;alarm&lt;/code&gt;s.&lt;/p&gt;
 &lt;h3 id=&#34;receiving-signal&#34;&gt;
   Receiving Signal
-  &lt;a href=&#34;#receiving-signal&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#receiving-signal&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The kernel checks for any &lt;em&gt;pending and not blocked&lt;/em&gt; signals, when switching a process from kernel mode to user mode, i.e. from an Interrupt, syscall, or context switching.&lt;/p&gt;
 &lt;p&gt;If there is no such signals, then it will proceed to $I_{next}$. Otherwise, the kernel will choose a signal and force the process to receive it. The receipt will trigger some action, and once the action is completed, the kernel proceeds to $I_{next}$.&lt;/p&gt;
@@ -842,7 +842,7 @@ for i in rows for j in cols b[i][j] = a[j][i]However, it might be the case that 
 &lt;p&gt;For readability, let us assume that we can write &lt;code&gt;b[i, j]&lt;/code&gt; for this.&lt;/p&gt;
 &lt;h3 id=&#34;which-one-is-better&#34;&gt;
   Which one is better?
-  &lt;a href=&#34;#which-one-is-better&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#which-one-is-better&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;b[i, j] = a[j, i]&lt;/code&gt; vs. &lt;code&gt;b[j, i] = a[i, j]&lt;/code&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -885,7 +885,7 @@ for i in rows for j in cols b[i][j] = a[j][i]However, it might be the case that 
 &lt;p&gt;Note that for each block, the destination is still the desired position and therefore, when block-wise operation is done, the whole array is already transposed.&lt;/p&gt;
 &lt;h3 id=&#34;right-size-of-block-size&#34;&gt;
   Right size of block size
-  &lt;a href=&#34;#right-size-of-block-size&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#right-size-of-block-size&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;If &lt;code&gt;block.size&lt;/code&gt; is one (operation), this is meaningless
 if &lt;code&gt;block.size&lt;/code&gt; is $N$, this is also meaningless.&lt;/p&gt;
@@ -893,7 +893,7 @@ if &lt;code&gt;block.size&lt;/code&gt; is $N$, this is also meaningless.&lt;/p&g
 &lt;p&gt;&lt;em&gt;NOTE: although it is not possible to optimize the performance without benchmarking on the machine, we can generally optimize it based on some trials.&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;implementation&#34;&gt;
   Implementation
-  &lt;a href=&#34;#implementation&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#implementation&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;each&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;block&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;each&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cell&lt;/span&gt;
@@ -908,22 +908,22 @@ if &lt;code&gt;block.size&lt;/code&gt; is $N$, this is also meaningless.&lt;/p&g
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;how-is-this-better&#34;&gt;
   How is this better?
-  &lt;a href=&#34;#how-is-this-better&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#how-is-this-better&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;If we only look at the inner loop, it still looks like we do not have spatial locality for at least one query. However, because of blocking, all information are in cache and locality does not matter anymore.&lt;/p&gt;
 &lt;h3 id=&#34;loop-variables&#34;&gt;
   Loop variables
-  &lt;a href=&#34;#loop-variables&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#loop-variables&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;B_j + B_size&lt;/code&gt; is run every time with the loop.
 If we use a variable to store the value, the performance will increase.&lt;/p&gt;
 &lt;h2 id=&#34;compiler-optimizations&#34;&gt;
   Compiler Optimizations
-  &lt;a href=&#34;#compiler-optimizations&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#compiler-optimizations&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;h3 id=&#34;disadvantage&#34;&gt;
   Disadvantage
-  &lt;a href=&#34;#disadvantage&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#disadvantage&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Not changing semantics&lt;/li&gt;
@@ -941,7 +941,7 @@ If we use a variable to store the value, the performance will increase.&lt;/p&gt
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1e50&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1e50&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will not be optimized. Because this will actually result in &lt;code&gt;c = 0&lt;/code&gt; instead of &lt;code&gt;c = 1&lt;/code&gt; as in optimized code.&lt;/p&gt;
 &lt;h2 id=&#34;loop-unrolling&#34;&gt;
   Loop Unrolling
-  &lt;a href=&#34;#loop-unrolling&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#loop-unrolling&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nl&#34;&gt;Loop:&lt;/span&gt;
@@ -966,7 +966,7 @@ If we use a variable to store the value, the performance will increase.&lt;/p&gt
 &lt;p&gt;&lt;strong&gt;Unrolling Too Much&lt;/strong&gt;: instruction cache miss (But this is unlikely, as it would take quite a number of unrolling to do that)&lt;/p&gt;
 &lt;h2 id=&#34;function-inlining&#34;&gt;
   Function Inlining
-  &lt;a href=&#34;#function-inlining&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#function-inlining&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Difficulty 1: Moving arguments into the right place.&lt;/li&gt;
@@ -1005,17 +1005,17 @@ Definition: ## self-similar $$\to$ when zoomed in, look the same
 Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar ## If zoomed in, there is no way to tell that we have zoomed in.</summary>
     <content type="html">&lt;h1 id=&#34;fractal&#34;&gt;
   Fractal
-  &lt;a href=&#34;#fractal&#34;&gt;#&lt;/a&gt;
+  &lt;a href=&#34;#fractal&#34;&gt;&lt;small&gt;#&lt;/small&gt;&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;naming: fractional dimension&lt;/p&gt;
 &lt;h2 id=&#34;definition&#34;&gt;
   Definition:
-  &lt;a href=&#34;#definition&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#definition&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;self-similar $$\to$ when zoomed in, look the same&lt;/p&gt;
 &lt;h2 id=&#34;types&#34;&gt;
   Types:
-  &lt;a href=&#34;#types&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#types&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Exactly self-similar&lt;/li&gt;
@@ -1023,12 +1023,12 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/ol&gt;
 &lt;h2 id=&#34;exactly-self-similar&#34;&gt;
   Exactly Self-similar
-  &lt;a href=&#34;#exactly-self-similar&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#exactly-self-similar&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;If zoomed in, there is no way to tell that we have zoomed in.&lt;/p&gt;
 &lt;h3 id=&#34;sierpinski-carpet&#34;&gt;
   Sierpinski Carpet
-  &lt;a href=&#34;#sierpinski-carpet&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#sierpinski-carpet&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;figure&gt;
     &lt;img
@@ -1044,7 +1044,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/ul&gt;
 &lt;h3 id=&#34;koch-snowflake&#34;&gt;
   Koch Snowflake
-  &lt;a href=&#34;#koch-snowflake&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#koch-snowflake&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;figure&gt;
     &lt;img
@@ -1062,14 +1062,14 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;However, shorelines are not as bumpy as Koch Snowflakes. They are smoother. Hence, we need a concept to describe the bumpiness.&lt;/p&gt;
 &lt;h3 id=&#34;length-of-koch-snowflake&#34;&gt;
   Length of Koch Snowflake
-  &lt;a href=&#34;#length-of-koch-snowflake&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#length-of-koch-snowflake&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Each Step increases the length to $$\dfrac{4}{3} \times$ original. Hence, Koch Snowflake is infinitely long.&lt;/p&gt;
 &lt;p&gt;$$l_k = \dfrac{4}{3} l_{k-1}$&lt;/p&gt;
 &lt;p&gt;Question: How quickly does Koch Snowflake&amp;rsquo;s length converge to infinity?&lt;/p&gt;
 &lt;h3 id=&#34;measuring-length-of-fractal-line&#34;&gt;
   Measuring Length of Fractal Line
-  &lt;a href=&#34;#measuring-length-of-fractal-line&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#measuring-length-of-fractal-line&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Different measuring scales lead to different length.&lt;/p&gt;
 &lt;p&gt;From the starting point, jump a fixed distance, $$d_u$, and measure how many $d_u$ are there in the line.&lt;/p&gt;
@@ -1081,12 +1081,12 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/ul&gt;
 &lt;h3 id=&#34;shorelinemountain-topology&#34;&gt;
   Shoreline/Mountain Topology
-  &lt;a href=&#34;#shorelinemountain-topology&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#shorelinemountain-topology&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Use fractal dimension to model a bumpy line, and computationally derive the line, rather than describing more details.&lt;/p&gt;
 &lt;h2 id=&#34;statistically-self-similar&#34;&gt;
   Statistically Self-similar
-  &lt;a href=&#34;#statistically-self-similar&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#statistically-self-similar&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Recursive Tree: &lt;strong&gt;Tree&lt;/strong&gt; := Stick + &lt;strong&gt;Tree&lt;/strong&gt; + &lt;strong&gt;Tree&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Moreover, we need to take care of the angles, length and returning position.&lt;/p&gt;
@@ -1099,14 +1099,14 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Turn
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Backwards&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;l-system&#34;&gt;
   L-System
-  &lt;a href=&#34;#l-system&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#l-system&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;The above process can be described by CFG:&lt;/p&gt;
 &lt;p&gt;$$T:S\leftarrow T \rightarrow \rightarrow T \leftarrow \overline{S}$&lt;/p&gt;
 &lt;p&gt;This use of CFG is called L-System.&lt;/p&gt;
 &lt;h3 id=&#34;improvement-to-l-system-tree&#34;&gt;
   Improvement to L-System Tree
-  &lt;a href=&#34;#improvement-to-l-system-tree&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#improvement-to-l-system-tree&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Randomness : This introduces &lt;strong&gt;Statistically similar&lt;/strong&gt; fractal image.&lt;/li&gt;
@@ -1116,7 +1116,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;However, sadly trees don&amp;rsquo;t grow by the fractal model.&lt;/p&gt;
 &lt;h2 id=&#34;incorporating-randomness-into-fractals&#34;&gt;
   Incorporating Randomness Into Fractals
-  &lt;a href=&#34;#incorporating-randomness-into-fractals&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#incorporating-randomness-into-fractals&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Example Algorithm (&lt;em&gt;Subdivide and Offset&lt;/em&gt;)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;repeat
@@ -1128,7 +1128,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;More sophisticated examples:&lt;/p&gt;
 &lt;h3 id=&#34;height-map&#34;&gt;
   Height Map
-  &lt;a href=&#34;#height-map&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#height-map&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;A raster vector of height&lt;/p&gt;
 &lt;ul&gt;
@@ -1174,7 +1174,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/ul&gt;
 &lt;h3 id=&#34;perlin-fractal&#34;&gt;
   Perlin Fractal
-  &lt;a href=&#34;#perlin-fractal&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#perlin-fractal&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;A perlin fractal is created by taking in a height map, downsize it, and fill itself with the small height map.&lt;/p&gt;
 </content>
@@ -1194,7 +1194,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
     <summary type="html">Generating Sentences ## sentence vs. sentential sentence all symbols belongs to terminals (a valid element of the language) sentential may contain non-terminals, an intermediate form during sentence production Example: #### For a language where $V_N = {P, Q} \land V_T = {a, b, c, d}$, a valid sentential would be $aP$; a valid sentence would be $ac$.</summary>
     <content type="html">&lt;h2 id=&#34;generating-sentences&#34;&gt;
   Generating Sentences
-  &lt;a href=&#34;#generating-sentences&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#generating-sentences&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1216,18 +1216,18 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/table&gt;
 &lt;h4 id=&#34;example&#34;&gt;
   Example:
-  &lt;a href=&#34;#example&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#example&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;For a language where $V_N = {P, Q} \land V_T = {a, b, c, d}$, a valid sentential would be $aP$; a valid sentence would be $ac$.&lt;/p&gt;
 &lt;h3 id=&#34;type-0-and-type-1-cs-languages&#34;&gt;
   Type 0 and Type 1 (CS) Languages
-  &lt;a href=&#34;#type-0-and-type-1-cs-languages&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#type-0-and-type-1-cs-languages&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Breadth-first Production&lt;/strong&gt;: for each sentential, make copies of it for each applicable rule. Then, repeat the operation on each copy. If there is no &lt;em&gt;non-terminal&lt;/em&gt; in the sentential, it is then a sentence, and could be printed and discarded in the production.&lt;/p&gt;
 &lt;p&gt;This process may be infinitely long, but it is guaranteed that an arbitrary sentence will definitely be produced.&lt;/p&gt;
 &lt;h4 id=&#34;two-remarks-about-cs-language-sentence-production&#34;&gt;
   Two Remarks about CS Language Sentence Production
-  &lt;a href=&#34;#two-remarks-about-cs-language-sentence-production&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#two-remarks-about-cs-language-sentence-production&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -1244,7 +1244,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;Type 0 language has the same properties.&lt;/p&gt;
 &lt;h3 id=&#34;type-2-cf-language&#34;&gt;
   Type 2 (CF) Language
-  &lt;a href=&#34;#type-2-cf-language&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#type-2-cf-language&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Monotonic nature of CF language means that the length of sentence will not &amp;ldquo;shrink&amp;rdquo;. Therefore, we could solve the two problems of CS language by a rather simple algorithm:&lt;/p&gt;
 &lt;ol&gt;
@@ -1257,7 +1257,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;The length of sentence does not shrink in CF language. Therefore, we could determine a sentence&amp;rsquo;s existence. If we meet the sentence obviously, it belongs to the language. If we keep producing and exceed the length of the sentence, then further production on the sentential will definitely not produce the sentence. We could therefore decide the inclusion of an arbitrary sentence of finite length in finite time.&lt;/p&gt;
 &lt;h3 id=&#34;type-3-regular-language&#34;&gt;
   Type 3 (Regular) Language
-  &lt;a href=&#34;#type-3-regular-language&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#type-3-regular-language&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Regular language has rules that right-hand side contains at most one non-terminal, and it should be the rightmost symbol. Regular language could be written as regular expressions that is composed of only terminals and regular operators. As a result, if a non-empty regular expression could be constructed, then the language is non-empty.&lt;/p&gt;
 &lt;p&gt;It is also possible to enumerate sentences without breath-first production, as only one non-terminal could be replaced in each sentential. When looking for a sentence $K$ of length $l$, if the length of sentential exceeds $l$, then $K$ cannot be included in the language. Finding any sentence in the process would prove that the language is not empty.&lt;/p&gt;
@@ -1280,7 +1280,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 terms definition Language a set of sentences Sentence a sequence of symbols Alphabet a set of all symbols The semantics - meaning - of a sentence is described by its tokens cooperating with its structure.</summary>
     <content type="html">&lt;h2 id=&#34;generative-grammar&#34;&gt;
   Generative Grammar
-  &lt;a href=&#34;#generative-grammar&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#generative-grammar&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;There are several views of defining a language. The computer science and formal linguistics perspective:&lt;/p&gt;
 &lt;table&gt;
@@ -1314,7 +1314,7 @@ terms definition Language a set of sentences Sentence a sequence of symbols Alph
 &lt;/ul&gt;
 &lt;h3 id=&#34;language-can-be-specified-by-infinite-bit-string&#34;&gt;
   Language can be specified by infinite Bit-String
-  &lt;a href=&#34;#language-can-be-specified-by-infinite-bit-string&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#language-can-be-specified-by-infinite-bit-string&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Sorted Alphabet: $\Sigma$
 Language $\Sigma^{* }$ contains all combinations of symbols in $\Sigma$&lt;/p&gt;
@@ -1332,7 +1332,7 @@ Language $L = 010010110&amp;hellip;$&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;formal-grammar&#34;&gt;
   Formal Grammar
-  &lt;a href=&#34;#formal-grammar&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#formal-grammar&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Recipe of replacing symbols:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name  -&amp;gt; tom | dick | harry // Name may be replaced by tom, dick or harry
@@ -1345,28 +1345,28 @@ Language $L = 010010110&amp;hellip;$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;four-types-of-grammars&#34;&gt;
   Four types of Grammars
-  &lt;a href=&#34;#four-types-of-grammars&#34;&gt;##&lt;/a&gt;
+  &lt;a href=&#34;#four-types-of-grammars&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;h3 id=&#34;type-0-phrase-structure-grammar-ps-grammar&#34;&gt;
   Type 0: Phrase Structure Grammar (PS Grammar)
-  &lt;a href=&#34;#type-0-phrase-structure-grammar-ps-grammar&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#type-0-phrase-structure-grammar-ps-grammar&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Most freedom. Follows &lt;em&gt;4-tuple&lt;/em&gt; $(V_N, V_T, R, S)$, without further restriction.
 Represented as &lt;code&gt;Directed Acyclic Graph&lt;/code&gt;: No cycle exists&lt;/p&gt;
 &lt;h3 id=&#34;type-1-context-sensitive-grammar-cs-grammar&#34;&gt;
   Type 1: Context-Sensitive Grammar (CS Grammar)
-  &lt;a href=&#34;#type-1-context-sensitive-grammar-cs-grammar&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#type-1-context-sensitive-grammar-cs-grammar&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;There are two equivalent definitions: &lt;code&gt;Monotonic&lt;/code&gt; and &lt;code&gt;Context-Sensitive&lt;/code&gt;.
 Can be represented by a DAG, similar to PS Grammar.&lt;/p&gt;
 &lt;h4 id=&#34;monotonic&#34;&gt;
   Monotonic
-  &lt;a href=&#34;#monotonic&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#monotonic&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;For each rule, left-hand side has more or equal number of symbols to right-hand side.&lt;/p&gt;
 &lt;h4 id=&#34;context-sensitive&#34;&gt;
   Context-Sensitive
-  &lt;a href=&#34;#context-sensitive&#34;&gt;####&lt;/a&gt;
+  &lt;a href=&#34;#context-sensitive&#34;&gt;&lt;small&gt;####&lt;/small&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Every rule is context-sensitive.&lt;/p&gt;
 &lt;ul&gt;
@@ -1374,7 +1374,7 @@ Can be represented by a DAG, similar to PS Grammar.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;type-2-context-free-grammar-cf-grammar&#34;&gt;
   Type 2: Context-Free Grammar (CF Grammar)
-  &lt;a href=&#34;#type-2-context-free-grammar-cf-grammar&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#type-2-context-free-grammar-cf-grammar&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;LHS could only contain one non-terminal symbol. (Thus not related to neighboring symbols).
 Represented by a tree, as branches of a node is not relevant to other nodes.&lt;/p&gt;
@@ -1386,7 +1386,7 @@ Represented by a tree, as branches of a node is not relevant to other nodes.&lt;
 &lt;p&gt;&lt;code&gt;NT -&amp;gt; tom | NT dick | ...&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;type-3-regular-grammar&#34;&gt;
   Type 3: Regular Grammar
-  &lt;a href=&#34;#type-3-regular-grammar&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#type-3-regular-grammar&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Mostly referring to &lt;code&gt;right regular grammar&lt;/code&gt;.
 Each rule could only contain one non-terminal, as the rightmost item.
@@ -1423,7 +1423,7 @@ Represented by a list, because each sentential has only one replaceable item (no
 &lt;p&gt;$S_S\to(([tdh],)^{* }[tdh] &amp;amp; )^{? }[tdh]$&lt;/p&gt;
 &lt;h3 id=&#34;type-4-finite-choice-grammar-fc-grammar&#34;&gt;
   Type 4: Finite Choice Grammar (FC Grammar)
-  &lt;a href=&#34;#type-4-finite-choice-grammar-fc-grammar&#34;&gt;###&lt;/a&gt;
+  &lt;a href=&#34;#type-4-finite-choice-grammar-fc-grammar&#34;&gt;&lt;small&gt;###&lt;/small&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Each rule could have only terminals in right-hand side.
 Very limited expressive power.&lt;/p&gt;

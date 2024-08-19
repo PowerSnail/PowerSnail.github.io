@@ -22,7 +22,6 @@
     <link rel="canonical" href="https://powersnail.com/2016/parsing-techniques-notes02/">
     <script type="text/javascript" id="MathJax-script" src="/js/bundle.39b4c9e45c7f60379025444391711d5dc496457cd3480b1edb45bf24649fd217.js" defer></script>
     <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
   <body>
     <header>
@@ -40,12 +39,12 @@
         <div id="title-subtitle">
           some notes on Parsing Techniques A Practical Guide
         </div>
-        <hr>
         <div class="metadata">
           <time datetime="2016-02-26T00:00:00Z">26 Feb 2016</time> · 537 words · 3 minutes read
         </div>
+        <hr>
         <h2 id="generating-sentences">
-          Generating Sentences <a href="#generating-sentences">##</a>
+          Generating Sentences <a href="#generating-sentences"><small>##</small></a>
         </h2>
         <div class="table-wrapper">
           <table>
@@ -78,13 +77,13 @@
           </table>
         </div>
         <h4 id="example">
-          Example: <a href="#example">####</a>
+          Example: <a href="#example"><small>####</small></a>
         </h4>
         <p>
           For a language where $V_N = {P, Q} \land V_T = {a, b, c, d}$, a valid sentential would be $aP$; a valid sentence would be $ac$.
         </p>
         <h3 id="type-0-and-type-1-cs-languages">
-          Type 0 and Type 1 (CS) Languages <a href="#type-0-and-type-1-cs-languages">###</a>
+          Type 0 and Type 1 (CS) Languages <a href="#type-0-and-type-1-cs-languages"><small>###</small></a>
         </h3>
         <p>
           <strong>Breadth-first Production</strong>: for each sentential, make copies of it for each applicable rule. Then, repeat the operation on each copy. If there is no <em>non-terminal</em> in the sentential, it is then a sentence, and could be printed and discarded in the production.
@@ -93,7 +92,7 @@
           This process may be infinitely long, but it is guaranteed that an arbitrary sentence will definitely be produced.
         </p>
         <h4 id="two-remarks-about-cs-language-sentence-production">
-          Two Remarks about CS Language Sentence Production <a href="#two-remarks-about-cs-language-sentence-production">####</a>
+          Two Remarks about CS Language Sentence Production <a href="#two-remarks-about-cs-language-sentence-production"><small>####</small></a>
         </h4>
         <ol>
           <li>
@@ -119,7 +118,7 @@
           Type 0 language has the same properties.
         </p>
         <h3 id="type-2-cf-language">
-          Type 2 (CF) Language <a href="#type-2-cf-language">###</a>
+          Type 2 (CF) Language <a href="#type-2-cf-language"><small>###</small></a>
         </h3>
         <p>
           Monotonic nature of CF language means that the length of sentence will not “shrink”. Therefore, we could solve the two problems of CS language by a rather simple algorithm:
@@ -141,7 +140,7 @@
           The length of sentence does not shrink in CF language. Therefore, we could determine a sentence’s existence. If we meet the sentence obviously, it belongs to the language. If we keep producing and exceed the length of the sentence, then further production on the sentential will definitely not produce the sentence. We could therefore decide the inclusion of an arbitrary sentence of finite length in finite time.
         </p>
         <h3 id="type-3-regular-language">
-          Type 3 (Regular) Language <a href="#type-3-regular-language">###</a>
+          Type 3 (Regular) Language <a href="#type-3-regular-language"><small>###</small></a>
         </h3>
         <p>
           Regular language has rules that right-hand side contains at most one non-terminal, and it should be the rightmost symbol. Regular language could be written as regular expressions that is composed of only terminals and regular operators. As a result, if a non-empty regular expression could be constructed, then the language is non-empty.
@@ -153,7 +152,7 @@
           <section class="footer-meta">
             <p>
               <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/notes">notes</a>, <a href="/tags/study">study</a>, <a href="/tags/parsing">parsing</a>
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science"><code>computer science</code></a>, <a href="/tags/notes"><code>notes</code></a>, <a href="/tags/study"><code>study</code></a>, <a href="/tags/parsing"><code>parsing</code></a>
             </p>
           </section>
           <section>

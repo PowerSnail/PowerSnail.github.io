@@ -20,7 +20,6 @@
     <link rel="canonical" href="https://powersnail.com/2017/apple-box/">
     <script type="text/javascript" id="MathJax-script" src="/js/bundle.39b4c9e45c7f60379025444391711d5dc496457cd3480b1edb45bf24649fd217.js" defer></script>
     <link id="main-css" rel="stylesheet" href="/css/style.css">
-    <link rel="preload" as="font" href="/fonts/crimson-text.woff2" type="font/woff2" crossorigin="">
   </head>
   <body>
     <header>
@@ -35,12 +34,12 @@
         <h1>
           A Constant Solution to Code-Fights Apple Boxes Problem
         </h1>
-        <hr>
         <div class="metadata">
           <time datetime="2017-01-06T00:00:00Z">06 Jan 2017</time> · 306 words · 2 minutes read
         </div>
+        <hr>
         <h2 id="the-apple-boxes-problem">
-          The Apple Boxes Problem <a href="#the-apple-boxes-problem">##</a>
+          The Apple Boxes Problem <a href="#the-apple-boxes-problem"><small>##</small></a>
         </h2>
         <p>
           The problem can be simply put:
@@ -54,7 +53,7 @@
           </p>
         </blockquote>
         <h2 id="the-naive-solution">
-          The Naive Solution <a href="#the-naive-solution">##</a>
+          The Naive Solution <a href="#the-naive-solution"><small>##</small></a>
         </h2>
         <p>
           We can loop through 1 to $k$, alternating between adding and subtracting.
@@ -73,7 +72,7 @@
           There could be various optimizations, but nevertheless, the algorithm is linear with regard to $k$.
         </p>
         <h2 id="constant-solution">
-          Constant Solution <a href="#constant-solution">##</a>
+          Constant Solution <a href="#constant-solution"><small>##</small></a>
         </h2>
         <p>
           First, assume $k$ is even, so that we can perfectly pair up terms in $r$ and $y$. Observe that each pair is in the form of $x^2 - (x - 1)^2$. This can be transformed to $(x + x - 1)\cdot(x - x + 1) = (x - 1) + x$. When we add all pairs, it becomes a simple series: $1 + 2 + 3 + … + k$. For example, for $k = 6$:
@@ -88,7 +87,7 @@
           What about <em>odd</em> $k$? We can adjust the pairing a bit, and easily find that now we have $-\dfrac{k(1 + k)}{2}$.
         </p>
         <h2 id="c-source-code">
-          C++ Source Code <a href="#c-source-code">##</a>
+          C++ Source Code <a href="#c-source-code"><small>##</small></a>
         </h2>
         <div class="highlight">
           <pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">appleBoxes</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
@@ -100,7 +99,7 @@
           <section class="footer-meta">
             <p>
               <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentcolor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science">computer science</a>, <a href="/tags/algorithm">algorithm</a>, <a href="/tags/codefights">codefights</a>, <a href="/tags/c++">C++</a>
+              <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path></svg> <a href="/tags/computer-science"><code>computer science</code></a>, <a href="/tags/algorithm"><code>algorithm</code></a>, <a href="/tags/codefights"><code>codefights</code></a>, <a href="/tags/c++"><code>C++</code></a>
             </p>
           </section>
           <section>
