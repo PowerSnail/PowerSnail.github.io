@@ -1,96 +1,358 @@
-:root{
-  --red: oklch(35% 0.14 30);
-  --yellow: oklch(35% 0.14 90);
-  --green: oklch(35% 0.14 150);
-  --cyan: oklch(35% 0.14 210);
-  --blue: oklch(35% 0.14 270);
-  --violet: oklch(35% 0.14 330);
-  --gray: oklch(35% 0.00 0);
+:root {
+  --red: oklch(45% 0.18 30);
+  --yellow: oklch(45% 0.20 90);
+  --green: oklch(45% 0.18 150);
+  --cyan: oklch(45% 0.18 210);
+  --blue: oklch(45% 0.18 270);
+  --violet: oklch(45% 0.18 330);
+  --gray: oklch(50% 0 0);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root{
+  :root {
     --red: oklch(80% 0.14 30);
     --yellow: oklch(80% 0.14 90);
     --green: oklch(80% 0.14 150);
     --cyan: oklch(80% 0.14 210);
     --blue: oklch(80% 0.14 270);
     --violet: oklch(80% 0.14 330);
-    --gray: oklch(80% 0.00 0);
+    --gray: oklch(80% 0 0);
   }
 }
-
-/* LineTableTD */ .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
-/* LineTable */ .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
-/* LineHighlight */ .hl { background-color: #ff880088 }
-/* LineNumbersTable */ .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: var(--gray) }
-/* LineNumbers */ .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: var(--gray) }
-/* Line */ .line { display: flex; }
-/* Keyword */ .k { color: var(--blue) }
-/* Name */ .n { color: var(--green) }
-/* NameAttribute */ .na { color: var(--green) }
-/* NameBuiltin */ .nb { color: var(--green) }
-/* NameBuiltinPseudo */ .bp { font-style: italic }
-/* NameClass */ .nc { color: var(--cyan) }
-/* NameConstant */ .no { color: var(--yellow) }
-/* NameDecorator */ .nd { color: var(--cyan) }
-/* NameEntity */ .ni { color: var(--green) }
-/* NameException */ .ne { color: var(--yellow) }
-/* NameFunction */ .nf { color: var(--yellow) }
-/* NameFunctionMagic */ .fm { color: var(--yellow) }
-/* NameLabel */ .nl { color: var(--cyan) }
-/* NameNamespace */ .nn { color: var(--cyan) }
-/* NameOther */ .nx {  }
-/* NameProperty */ .py {  }
-/* NameTag */ .nt { color: var(--blue) }
-/* NameVariable */ .nv { color: var(--red) }
-/* NameVariableClass */ .vc {  }
-/* NameVariableGlobal */ .vg { color: var(--yellow) }
-/* NameVariableInstance */ .vi {  }
-/* NameVariableMagic */ .vm { color: var(--yellow) }
-/* Literal */ .l { color: var(--red) }
-/* LiteralDate */ .ld {  }
-/* LiteralString */ .s { color: var(--red) }
-/* LiteralStringAffix */ .sa { color: var(--gray) }
-/* LiteralStringBacktick */ .sb { color: var(--red) }
-/* LiteralStringChar */ .sc { color: var(--violet) }
-/* LiteralStringDelimiter */ .dl { color: var(--yellow) }
-/* LiteralStringDoc */ .sd { color: var(--yellow); font-style: italic }
-/* LiteralStringDouble */ .s2 { color: var(--red) }
-/* LiteralStringEscape */ .se { color: var(--green) }
-/* LiteralStringHeredoc */ .sh { color: var(--red) }
-/* LiteralStringInterpol */ .si { color: var(--red); text-decoration: underline }
-/* LiteralStringOther */ .sx { color: var(--violet) }
-/* LiteralStringRegex */ .sr { color: var(--violet) }
-/* LiteralStringSingle */ .s1 { color: var(--red) }
-/* LiteralStringSymbol */ .ss { color: var(--red) }
-/* LiteralNumber */ .m { color: var(--gray) }
-/* LiteralNumberBin */ .mb { color: var(--gray) }
-/* LiteralNumberFloat */ .mf { color: var(--gray) }
-/* LiteralNumberHex */ .mh { color: var(--gray) }
-/* LiteralNumberInteger */ .mi { color: var(--gray) }
-/* LiteralNumberIntegerLong */ .il { color: var(--gray) }
-/* LiteralNumberOct */ .mo { color: var(--gray) }
-/* Operator */ .o { color: var(--gray) }
-/* OperatorWord */ .ow { color: var(--violet) }
-/* Punctuation */ .p { color: var(--gray) }
-/* Comment */ .c { color: var(--gray); font-style: italic }
-/* CommentHashbang */ .ch { color: var(--cyan); font-style: italic }
-/* CommentMultiline */ .cm { color: var(--gray); font-style: italic }
-/* CommentSingle */ .c1 { color: var(--gray); font-style: italic }
-/* CommentSpecial */ .cs { color: var(--gray); font-style: italic }
-/* CommentPreproc */ .cp { color: var(--cyan) }
-/* CommentPreprocFile */ .cpf { color: var(--cyan) }
-/* Generic */ .g { color: var(--text) }
-/* GenericDeleted */ .gd { color: var(--red) }
-/* GenericEmph */ .ge { font-style: italic }
-/* GenericError */ .gr { color: var(--red) }
-/* GenericHeading */ .gh { color: var(--gray) }
-/* GenericInserted */ .gi { color: var(--green) }
-/* GenericOutput */ .go { color: var(--gray) }
-/* GenericPrompt */ .gp { color: var(--gray) }
-/* GenericStrong */ .gs { font-weight: bold }
-/* GenericSubheading */ .gu { color: var(--gray) }
-/* GenericTraceback */ .gt { color: var(--blue) }
-/* GenericUnderline */ .gl { text-decoration: underline }
-/* TextWhitespace */ .w { color: var(--yellow) }
+/* Background */
+.bg {
+  color: var(--text);
+  background-color: var(--background-alt);
+}
+/* PreWrapper */
+.chroma {
+  color: var(--text);
+  background-color: var(--background-alt);
+  font-size: 1rem;
+}
+/* Other */
+.chroma .x {
+}
+/* Error */
+.chroma .err {
+  color: var(--red);
+}
+/* CodeLine */
+.chroma .cl {
+}
+/* LineLink */
+.chroma .lnlinks {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+/* LineTableTD */
+.chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* LineTable */
+.chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* LineHighlight */
+.chroma .hl {
+  background-color: var(--translucent);
+}
+/* LineNumbersTable */
+.chroma .lnt {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: var(--gray);
+}
+/* LineNumbers */
+.chroma .ln {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: var(--gray);
+}
+/* Line */
+.chroma .line {
+  display: flex;
+}
+/* Keyword */
+.chroma .k {
+  color: var(--yellow);
+  font-weight: bold;
+}
+/* KeywordConstant */
+.chroma .kc {
+  color: var(--yellow);
+}
+/* KeywordDeclaration */
+.chroma .kd {
+  color: var(--violet);
+}
+/* KeywordNamespace */
+.chroma .kn {
+  color: var(--yellow);
+}
+/* KeywordPseudo */
+.chroma .kp {
+  color: var(--yellow);
+}
+/* KeywordReserved */
+.chroma .kr {
+  color: var(--yellow);
+}
+/* KeywordType */
+.chroma .kt {
+  color: var(--yellow);
+}
+/* Name */
+.chroma .n {
+  color: var(--red);
+}
+/* NameAttribute */
+.chroma .na {
+  color: var(--red);
+}
+/* NameBuiltin */
+.chroma .nb {
+  color: var(--text-alt);
+}
+/* NameBuiltinPseudo */
+.chroma .bp {
+}
+/* NameClass */
+.chroma .nc {
+}
+/* NameConstant */
+.chroma .no {
+}
+/* NameDecorator */
+.chroma .nd {
+}
+/* NameEntity */
+.chroma .ni {
+}
+/* NameException */
+.chroma .ne {
+}
+/* NameFunction */
+.chroma .nf {
+}
+/* NameFunctionMagic */
+.chroma .fm {
+}
+/* NameLabel */
+.chroma .nl {
+}
+/* NameNamespace */
+.chroma .nn {
+}
+/* NameOther */
+.chroma .nx {
+}
+/* NameProperty */
+.chroma .py {
+}
+/* NameTag */
+.chroma .nt {
+}
+/* NameVariable */
+.chroma .nv {
+}
+/* NameVariableClass */
+.chroma .vc {
+}
+/* NameVariableGlobal */
+.chroma .vg {
+}
+/* NameVariableInstance */
+.chroma .vi {
+}
+/* NameVariableMagic */
+.chroma .vm {
+}
+/* Literal */
+.chroma .l {
+}
+/* LiteralDate */
+.chroma .ld {
+  color: var(--yellow);
+}
+/* LiteralString */
+.chroma .s {
+  color: var(--green);
+}
+/* LiteralStringAffix */
+.chroma .sa {
+  color: var(--green);
+}
+/* LiteralStringBacktick */
+.chroma .sb {
+  color: var(--green);
+}
+/* LiteralStringChar */
+.chroma .sc {
+  color: var(--green);
+}
+/* LiteralStringDelimiter */
+.chroma .dl {
+  color: var(--green);
+}
+/* LiteralStringDoc */
+.chroma .sd {
+  color: var(--green);
+}
+/* LiteralStringDouble */
+.chroma .s2 {
+  color: var(--green);
+}
+/* LiteralStringEscape */
+.chroma .se {
+  color: var(--green);
+}
+/* LiteralStringHeredoc */
+.chroma .sh {
+  color: var(--green);
+}
+/* LiteralStringInterpol */
+.chroma .si {
+  color: var(--green);
+}
+/* LiteralStringOther */
+.chroma .sx {
+  color: var(--green);
+}
+/* LiteralStringRegex */
+.chroma .sr {
+  color: var(--green);
+}
+/* LiteralStringSingle */
+.chroma .s1 {
+  color: var(--green);
+}
+/* LiteralStringSymbol */
+.chroma .ss {
+  color: var(--green);
+}
+/* LiteralNumber */
+.chroma .m {
+  color: var(--yellow);
+}
+/* LiteralNumberBin */
+.chroma .mb {
+  color: var(--yellow);
+}
+/* LiteralNumberFloat */
+.chroma .mf {
+  color: var(--yellow);
+}
+/* LiteralNumberHex */
+.chroma .mh {
+  color: var(--yellow);
+}
+/* LiteralNumberInteger */
+.chroma .mi {
+  color: var(--yellow);
+}
+/* LiteralNumberIntegerLong */
+.chroma .il {
+  color: var(--yellow);
+}
+/* LiteralNumberOct */
+.chroma .mo {
+  color: var(--yellow);
+}
+/* Operator */
+.chroma .o {
+  color: var(--cyan);
+}
+/* OperatorWord */
+.chroma .ow {
+  color: var(--cyan);
+}
+/* Punctuation */
+.chroma .p {
+  color: var(--cyan);
+}
+/* Comment */
+.chroma .c {
+  color: var(--gray);
+}
+/* CommentHashbang */
+.chroma .ch {
+  color: var(--gray);
+}
+/* CommentMultiline */
+.chroma .cm {
+  color: var(--gray);
+}
+/* CommentSingle */
+.chroma .c1 {
+  color: var(--gray);
+}
+/* CommentSpecial */
+.chroma .cs {
+  color: var(--gray);
+}
+/* CommentPreproc */
+.chroma .cp {
+  color: var(--violet);
+}
+/* CommentPreprocFile */
+.chroma .cpf {
+  color: var(--violet);
+}
+/* Generic */
+.chroma .g {
+}
+/* GenericDeleted */
+.chroma .gd {
+}
+/* GenericEmph */
+.chroma .ge {
+}
+/* GenericError */
+.chroma .gr {
+  color: var(--red);
+}
+/* GenericHeading */
+.chroma .gh {
+  font-weight: bold;
+}
+/* GenericInserted */
+.chroma .gi {
+}
+/* GenericOutput */
+.chroma .go {
+}
+/* GenericPrompt */
+.chroma .gp {
+}
+/* GenericStrong */
+.chroma .gs {
+  font-weight: bold;
+}
+/* GenericSubheading */
+.chroma .gu {
+  font-weight: bold;
+}
+/* GenericTraceback */
+.chroma .gt {
+}
+/* GenericUnderline */
+.chroma .gl {
+  text-decoration: underline;
+}
+/* TextWhitespace */
+.chroma .w {
+}

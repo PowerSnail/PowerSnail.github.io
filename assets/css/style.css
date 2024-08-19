@@ -310,6 +310,7 @@ body > footer {
 .csl-entry {
   margin-top: 16px;
   text-indent: 2em hanging;
+  text-wrap: balance;
 }
 
 .citation {
