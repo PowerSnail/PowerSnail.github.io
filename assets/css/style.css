@@ -48,7 +48,7 @@ h6 {
 
 a {
   color: var(--accent);
-  text-decoration-color: var(--translucent);
+  text-decoration-thickness: 0.7px;
 }
 
 body > header,
@@ -221,21 +221,54 @@ body > footer {
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: end;
   align-items: baseline;
-  gap: 16px;
-  row-gap: 4px;
+  row-gap: 0;
+  column-gap: 18px;
   padding: 0 2px;
 }
-
 
 .site-title-fill {
   flex-grow: 1;
 }
 
+.site-nav details {
+  display: contents;
+}
+
+.site-nav .site-title-break-line {
+  flex-basis: 100%;
+}
+
+.site-nav details summary {
+  color: var(--accent);
+  transition:all .2s ease-out;
+}
+
+.site-nav details summary svg {
+  transition:all .2s ease-out;
+}
+
+.site-nav details[open] summary svg {
+  transform:rotate(45deg);
+}
+
+.site-nav details summary::marker {
+  content: none;
+  display: none;
+}
+
+.site-nav details summary::-webkit-details-marker {
+  display: none;
+}
+
+.site-nav details a {
+  flex-basis: 100%;
+  text-align: end;
+}
+
 /* icon in the footer */
 .icon {
-  color: var(--accent);
   height: 1cap;
   width: 1cap;
 }

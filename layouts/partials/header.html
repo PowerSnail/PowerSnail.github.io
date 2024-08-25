@@ -12,12 +12,31 @@
       <a href="/posts/" class="nav-link">
         Posts
       </a>
-      <a href="/about/" class="nav-link">
-        About
-      </a>
-      <a href="/index.xml" class="nav-link">
-        {{- (resources.Get "icons/rss.svg").Content | safeHTML -}}
-      </a>
+      <details>
+        <summary>
+          {{- (resources.Get "icons/plus.svg").Content | safeHTML -}}
+          More
+        </summary>
+        <div class="site-title-break-line"></div>
+        <a href="/index.xml" class="nav-link">
+          RSS
+        </a>
+        <a href="/about/" class="nav-link">
+          About
+        </a>
+        <a href="/sheet-music/" class="nav-link">
+          Sheet Music
+        </a>
+        <a href="/stats/" class="nav-link">
+          Blog Stats
+        </a>
+        <a href="/cat_dot/" class="nav-link">
+          Moving Red Dot for Cat
+        </a>
+        <a href="/game_of_life/" class="nav-link">
+          Game of Life
+        </a>
+      </details>
     </nav>
   </article>
 </header>
