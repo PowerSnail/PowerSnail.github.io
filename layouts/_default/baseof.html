@@ -4,6 +4,9 @@
     {{ partial "head.html" . }}
   </head>
 <body>
+  {{ if .Site.Params.mooncake }}
+    {{ partial "specials/mooncake.html"}}
+  {{ end}}
   {{ if .Site.Params.christmas }}
     {{ partial "specials/christmas.html"}}
   {{ end}}

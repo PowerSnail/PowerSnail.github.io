@@ -31,7 +31,6 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 8px minmax(0px, 600px) 8px auto;
   overflow-wrap: anywhere;
-  row-gap: 16px;
 
   color: var(--text);
   background-color: var(--background);
