@@ -27,7 +27,7 @@ lang = "en"
 theme_color = "#bd1b37"
 responsiveImageSizes = [400, 600, 800, 1000, 1200]
 # christmas = true
-mooncake = true
+# mooncake = true
 
 [permalinks]
 posts = "/:year/:slug/"
