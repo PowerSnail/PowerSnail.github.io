@@ -15,20 +15,23 @@ def main(input_file: str):
     md_file = bib_enabled.attrs.get("data-input-file")
 
     bib_output = sp.run(
-        f"pandoc --citeproc {md_file} --csl tool_scripts/chicago-author-date-no-em-dash.csl -t html",
+        f"pandoc --citeproc {md_file} --csl tool_scripts/chicago-author-date-no-em-dash.csl -t html --metadata link-citations=true --metadata nocite='@*'",
         shell=True,
         capture_output=True,
     ).stdout.decode("utf-8")
 
     bib_page = LexborHTMLParser(bib_output)
 
-    valid_keys = set()
+    valid_key_res = []
     for e in bib_page.css(".citation"):
-        keys = not_none(e.attrs.get("data-cites", "")).split(" ")
-        valid_keys.update(keys)
+        key = e.attrs.get("data-cites")
+        if not key:
+            raise ValueError("Citation element has no data-cites attribute")
+        key_re = r";\s*".join(f"@{key}" for key in key.split(" "))
+        valid_key_res.append(key_re)
 
-    filter_at_tags(page, valid_keys)
-    for e1, e2 in zip(page.css(".citation"), bib_page.css(".citation")):
+    filter_at_tags(page, valid_key_res)
+    for e1, e2 in zip(page.css(".citation-to-replace"), bib_page.css(".citation")):
         e1.replace_with(e2)
 
     bib_enabled.replace_with(not_none(bib_page.css_first("#refs")))
@@ -37,20 +40,16 @@ def main(input_file: str):
         file.write(not_none(page.html))
 
 
-def filter_at_tags(page: LexborHTMLParser, valid_keys: set[str]):
+def filter_at_tags(page: LexborHTMLParser, valid_keys: list[str]):
     valid_key_re = "(" + "|".join(valid_keys) + ")"
     identifiers = []
+
     for e in not_none(page.root).traverse(include_text=True):
         if e.tag == "-text":
             content = e.text_content
             content = re.sub(
-                rf"\[@{valid_key_re}(;\s*{valid_key_re})*\]",
-                r"<span class='citation'>\g<0></span>",
-                content,
-            )
-            content = re.sub(
-                rf"@{valid_key_re}",
-                r"<span class='citation'>\g<0></span>",
+                rf"\[{valid_key_re}\]|{valid_key_re}",
+                "<span class='citation-to-replace'></span>",
                 content,
             )
             if content != e.text_content:
