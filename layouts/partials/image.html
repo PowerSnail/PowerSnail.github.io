@@ -23,9 +23,18 @@
     {{- $isSvg = true -}}
     {{- $svgContent := "" -}}
     {{- $svgContent = os.ReadFile $path -}}
-    {{- $viewBoxSizes := split (index (split (index (split $svgContent `viewBox=`) 1) `'`) 1) ` ` -}}
-    {{- $width = math.Round (float (index $viewBoxSizes 2)) -}}
-    {{- $height = math.Round (float (index $viewBoxSizes 3)) -}}
+
+    {{- $svgWidth := index (index (findRESubmatch "width=\"([0-9]+)\"" $svgContent) 0) 1 -}}
+    {{- $svgHeight := index (index (findRESubmatch "height=\"([0-9]+)\"" $svgContent) 0) 1 -}}
+    
+    {{- $viewBox := index (index (findRESubmatch "viewBox=\"([^\"]+)\"" $svgContent 1) 0) 1 -}}
+    {{- $viewBoxParts := split $viewBox " " -}}
+
+    {{- $viewBoxWidth := index $viewBoxParts 2 -}}
+    {{- $viewBoxHeight := index $viewBoxParts 3 -}}
+    {{- $width = default $svgWidth $viewBoxWidth -}}
+    {{- $height = default $svgHeight $viewBoxHeight -}}
+
 {{- else -}}
     {{- with (imageConfig $path) -}}
         {{- $width = .Width -}}
@@ -42,13 +51,15 @@
 
 <img
     src="{{- $url | safeURL -}}" alt="{{- .alt -}}"
-    {{- if $isSvg }} 
-        style="width:100%; height: auto;"
-    {{ else }}
+    {{- if $isSvg -}}
+      {{- with $width }} width="{{- . -}}" {{ end -}}
+      {{- with $height }} height="{{- . -}}" {{ end -}}
+      style="max-width: 100%; height: auto"
+    {{- else -}}
         srcset="
             {{- range $resizedImages -}}{{ . }}{{- end -}}
             {{ $url }} {{ $width }}w"
-    {{ end -}}
+    {{- end -}}
     {{- with $width }} width="{{- . -}}" {{ end -}}
     {{- with $height }} height="{{- . -}}" {{ end -}}
     {{- if (gt $imageCount 1) -}}
