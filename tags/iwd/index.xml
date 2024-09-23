@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Iwd on SnailShell</title>
+  <link>https://powersnail.com/tags/iwd/</link><link rel="self" href="https://powersnail.com/tags/iwd/index.xml"></link><updated>Sun, 22 Sep 2024 00:00:00 +0000</updated>
+  <id>https://powersnail.com/tags/iwd/</id>
+
+  <author>
+    <name>PowerSnail</name>
+  </author>
+
+  <icon>https://powersnail.com/favicon.ico</icon>
+
+  <description>Recent content in Iwd on SnailShell</description>
+  <generator>Hugo -- gohugo.io</generator>
+  <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Disable 2.4GHz for iwd</title>
+    <link rel="alternate">https://powersnail.com/2024/disable-2-4ghz-for-iwd/</link>
+    <published>Sun, 22 Sep 2024 00:00:00 +0000</published>
+    <updated>Sun, 22 Sep 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2024/disable-2-4ghz-for-iwd/</id>
+    <summary type="html">Debugging an Erratic WIFI Connection ## Recently, I had a problem with the WIFI connection on my Linux workstation: sometimes, the latency fluctuates quite badly, occasionally to the point of going offline completely.</summary>
+    <content type="html">&lt;h2 id=&#34;debugging-an-erratic-wifi-connection&#34;&gt;
+  Debugging an Erratic WIFI Connection
+  &lt;a href=&#34;#debugging-an-erratic-wifi-connection&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Recently, I had a problem with the WIFI connection on my Linux workstation: sometimes, the latency fluctuates quite badly, occasionally to the point of going offline completely. It doesn&amp;rsquo;t happen all the time, though. I could go through a whole day without a single disruption, but when it started acting out, there was seemingly nothing I could do to stop it. Turning the router off and on again, restarting my PC, forgetting and re-adding the network in Network Manager, etc. all ended up futile.&lt;/p&gt;
+&lt;p&gt;At first, I thought it was a problem with how the network was configured on my machine. After all, it&amp;rsquo;s Linux, and 90% of the time when something does not function as expected, it&amp;rsquo;s because there&amp;rsquo;s a switch buried in &lt;code&gt;/etc&lt;/code&gt; whose purpose and usage is detailed on ArchWiki that you just need to flip.&lt;/p&gt;
+&lt;p&gt;That did not seem to be the case this time. After some painstaking tinkering around&amp;mdash;reading system logs &amp;amp; dmesg logs, diving into NetworkManager&amp;rsquo;s config files, replacing wpa_supplicant with iwd(&lt;a href=&#34;https://iwd.wiki.kernel.org/&#34;&gt;iNet Wireless Daemon&lt;/a&gt;), switching back to wpa_supplicant, switching to IWD yet again&amp;mdash;I made no progress. The fluctuations came and went as it pleased, unaffected by my efforts to adjust the network configurations.&lt;/p&gt;
+&lt;p&gt;But I noticed two interesting patterns: 1) when the network is stable, I have about 10ms ping to 1.1.1.1, but when the network is unstable, the best I get is about 20ms; and 2) the latency is fine when NetworkManager shows 1 bar, i.e. the signal is weak; but when I get 3 bars, fluctuation and disconnections occur, which is very counter-intuitive.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;WIFI Signal&lt;/th&gt;
+&lt;th&gt;Minimum Ping&lt;/th&gt;
+&lt;th&gt;Maximum Ping&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img
+    src=&#34;https://powersnail.com/2024/disable-2-4ghz-for-iwd/network-wireless-signal-weak-symbolic.svg&#34; alt=&#34;an wifi icon with one bar signal&#34; width=&#34;22&#34;  height=&#34;22&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;22&#34;  height=&#34;22&#34; &gt;
+ Weak&lt;/td&gt;
+&lt;td&gt;10ms&lt;/td&gt;
+&lt;td&gt;15ms&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img
+    src=&#34;https://powersnail.com/2024/disable-2-4ghz-for-iwd/network-wireless-signal-good-symbolic.svg&#34; alt=&#34;an wifi icon with two bar signal&#34; width=&#34;22&#34;  height=&#34;22&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;22&#34;  height=&#34;22&#34; loading=&#34;lazy&#34;&gt;
+ Strong&lt;/td&gt;
+&lt;td&gt;20ms&lt;/td&gt;
+&lt;td&gt;1800ms ~ ∞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This got me thinking about 5GHz vs 2.4GHz. I knew that 2.4GHz is slower but more penetrative, while 5GHz is the opposite. It must be the case that whenever the network fluctuates, I&amp;rsquo;m connected to the 2.4GHz band. This can be tested by observing the output of &lt;code&gt;sudo iwctl station wlan0 show | grep Frequency&lt;/code&gt; (&lt;code&gt;wlan0&lt;/code&gt; is the name of my wifi adapter in iwd). I ran this command whenever I got the erratic pings, and indeed, it only happened when connected to the 2.4GHz band.&lt;/p&gt;
+&lt;p&gt;The next step was figuring out whether that was the PC&amp;rsquo;s fault or the route&amp;rsquo;s. The first thought was that it must be the PC, because my phone had been connecting to the internet just fine, but of course, there was nothing that I did on my phone that was sensitive to latency, so I might not have noticed it. And more importantly, the phone might have a different strategy choosing which band to connect to, and it favors the 5GHz band more the PC does.&lt;/p&gt;
+&lt;p&gt;I took my phone, downloaded one of the WIFI analyzer apps, and started towards a corner of the house, watching as 5GHz signal weakened to the point where the phone switched to 2.4GHz. I tried to ping the router, and well, the familiar fluctuations was reproduced on my phone as well.&lt;/p&gt;
+&lt;p&gt;The router isn&amp;rsquo;t mine, though. It&amp;rsquo;s one of those ISP provided router and it belongs to my landlord. So the most I can do is to simply disable 2.4GHz.&lt;/p&gt;
+&lt;p&gt;It turns out, when I&amp;rsquo;m Googling around, that most people want the other way around: they want to connect to 2.4GHz and disable 5GHz, like &lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=284405&#34;&gt;this&lt;/a&gt;. I think that&amp;rsquo;s because if you are at the edge of 5GHz&amp;rsquo;s effective range, 2.4GHz is usually more stable despite being slower. That is if your 2.4GHz has not gone rogue like mine.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-disable-5ghz-in-iwd&#34;&gt;
+  How to disable 5GHz in iwd
+  &lt;a href=&#34;#how-to-disable-5ghz-in-iwd&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Despite sharing the same SSID (the name you usually see in the list of WIFIs), the 2.4GHz and 5GHz bands of a WIFI, are actually two separate things that can be connected to. The fact that they appear as a unified entity and that our devices can switch between them seamlessly is a feature of convenience.&lt;/p&gt;
+&lt;p&gt;Therefore, the first thing I tried was setting the connection&amp;rsquo;s BSSID (which is not shared by different frequency bands) in NetworkManager to the one used by the 5GHz band. Logically, this should tell NetworkManager to specifically look for that 5GHz connection, and not try to switch to its erratic sibling. But it didn&amp;rsquo;t work; because I had iwd as the WIFI backend, which doesn&amp;rsquo;t have the capability of connecting to a BSSID [@sethSOLVEDHowForce2023].&lt;/p&gt;
+&lt;p&gt;At the end of the day, there is a switch buried in &lt;code&gt;/etc&lt;/code&gt; whose purpose and usage is detailed on ArchWiki that I can flip [@marcelholtmannIwdconfig5ArchManual2019]:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/iwd/main.conf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[Rank]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;BandModifier5GHz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;BandModifier2_4GHz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;0.0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;strong&gt;Rank&lt;/strong&gt; section sets the priority of each frequency band with which iwd connects to, and setting it to zero disables it completely.&lt;/p&gt;
+&lt;p&gt;To complete the picture, here&amp;rsquo;s my setup:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Machine: A PC that I assembled;&lt;/li&gt;
+&lt;li&gt;OS/Distribution: &lt;code&gt;Linux version 6.10.9-1-default (geeko@buildhost) (gcc (SUSE Linux) 14.2.0, GNU ld (GNU Binutils; openSUSE Tumbleweed) 2.43.1.20240828-2) #1 SMP PREEMPT_DYNAMIC Sun Sep 8 13:43:05 UTC 2024 (5af7788)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Network setup: NetworkManager + iwd&lt;/li&gt;
+&lt;li&gt;WIFI adapter: Wireless-AC 3168NGW, which came with the motherboard.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;i-probably-need-a-better-router-and-a-better-wifi-adapter-for-the-pc&#34;&gt;
+  I probably need a better router, and a better WIFI adapter for the PC
+  &lt;a href=&#34;#i-probably-need-a-better-router-and-a-better-wifi-adapter-for-the-pc&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;As mentioned above, when I tested the connection with my phone, my hypothesis was that the phone has a different strategy choosing frequency bands, and it adheres to 5GHz more than the PC, but I was wrong.&lt;/p&gt;
+&lt;p&gt;Seemingly, the phone just receives a stronger signal. I&amp;rsquo;m not sure whether this is because the WIFI scanner app calculates RSSI differently from iwd, but if I trust the numbers they gave me, the differences are massive:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;2.4GHz&lt;/th&gt;
+&lt;th&gt;5GHz&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;PC&lt;/td&gt;
+&lt;td&gt;-67dBm&lt;/td&gt;
+&lt;td&gt;-71dBm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Phone&lt;/td&gt;
+&lt;td&gt;-48dBm&lt;/td&gt;
+&lt;td&gt;-53dBm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Perhaps, in addition to getting a better router with a functional 2.4GHz band, I should also consider getting a more competent WIFI adapter for the PC.&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
+  
+</feed>

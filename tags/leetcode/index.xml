@@ -131,9 +131,7 @@
 &lt;p&gt;The transition function is a matrix that maps (state, input char) to state.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-     width=&#34;106&#34;  height=&#34;69&#34; &gt;
+    src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34;style=&#34;max-width: 100%; height: auto&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;table&gt;
@@ -224,9 +222,7 @@
 &lt;/table&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-    loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34; width=&#34;473.47&#34;  height=&#34;503.12&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;473.47&#34;  height=&#34;503.12&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;h3 id=&#34;dfa---termination&#34;&gt;

@@ -2,7 +2,7 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Posts on SnailShell</title>
-  <link>https://powersnail.com/posts/</link><link rel="self" href="https://powersnail.com/posts/index.xml"></link><updated>Sun, 28 Jul 2024 00:00:00 +0000</updated>
+  <link>https://powersnail.com/posts/</link><link rel="self" href="https://powersnail.com/posts/index.xml"></link><updated>Sun, 22 Sep 2024 00:00:00 +0000</updated>
   <id>https://powersnail.com/posts/</id>
 
   <author>
@@ -14,6 +14,105 @@
   <description>Recent content in Posts on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Disable 2.4GHz for iwd</title>
+    <link rel="alternate">https://powersnail.com/2024/disable-2-4ghz-for-iwd/</link>
+    <published>Sun, 22 Sep 2024 00:00:00 +0000</published>
+    <updated>Sun, 22 Sep 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2024/disable-2-4ghz-for-iwd/</id>
+    <summary type="html">Debugging an Erratic WIFI Connection ## Recently, I had a problem with the WIFI connection on my Linux workstation: sometimes, the latency fluctuates quite badly, occasionally to the point of going offline completely.</summary>
+    <content type="html">&lt;h2 id=&#34;debugging-an-erratic-wifi-connection&#34;&gt;
+  Debugging an Erratic WIFI Connection
+  &lt;a href=&#34;#debugging-an-erratic-wifi-connection&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Recently, I had a problem with the WIFI connection on my Linux workstation: sometimes, the latency fluctuates quite badly, occasionally to the point of going offline completely. It doesn&amp;rsquo;t happen all the time, though. I could go through a whole day without a single disruption, but when it started acting out, there was seemingly nothing I could do to stop it. Turning the router off and on again, restarting my PC, forgetting and re-adding the network in Network Manager, etc. all ended up futile.&lt;/p&gt;
+&lt;p&gt;At first, I thought it was a problem with how the network was configured on my machine. After all, it&amp;rsquo;s Linux, and 90% of the time when something does not function as expected, it&amp;rsquo;s because there&amp;rsquo;s a switch buried in &lt;code&gt;/etc&lt;/code&gt; whose purpose and usage is detailed on ArchWiki that you just need to flip.&lt;/p&gt;
+&lt;p&gt;That did not seem to be the case this time. After some painstaking tinkering around&amp;mdash;reading system logs &amp;amp; dmesg logs, diving into NetworkManager&amp;rsquo;s config files, replacing wpa_supplicant with iwd(&lt;a href=&#34;https://iwd.wiki.kernel.org/&#34;&gt;iNet Wireless Daemon&lt;/a&gt;), switching back to wpa_supplicant, switching to IWD yet again&amp;mdash;I made no progress. The fluctuations came and went as it pleased, unaffected by my efforts to adjust the network configurations.&lt;/p&gt;
+&lt;p&gt;But I noticed two interesting patterns: 1) when the network is stable, I have about 10ms ping to 1.1.1.1, but when the network is unstable, the best I get is about 20ms; and 2) the latency is fine when NetworkManager shows 1 bar, i.e. the signal is weak; but when I get 3 bars, fluctuation and disconnections occur, which is very counter-intuitive.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;WIFI Signal&lt;/th&gt;
+&lt;th&gt;Minimum Ping&lt;/th&gt;
+&lt;th&gt;Maximum Ping&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img
+    src=&#34;https://powersnail.com/2024/disable-2-4ghz-for-iwd/network-wireless-signal-weak-symbolic.svg&#34; alt=&#34;an wifi icon with one bar signal&#34; width=&#34;22&#34;  height=&#34;22&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;22&#34;  height=&#34;22&#34; &gt;
+ Weak&lt;/td&gt;
+&lt;td&gt;10ms&lt;/td&gt;
+&lt;td&gt;15ms&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img
+    src=&#34;https://powersnail.com/2024/disable-2-4ghz-for-iwd/network-wireless-signal-good-symbolic.svg&#34; alt=&#34;an wifi icon with two bar signal&#34; width=&#34;22&#34;  height=&#34;22&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;22&#34;  height=&#34;22&#34; loading=&#34;lazy&#34;&gt;
+ Strong&lt;/td&gt;
+&lt;td&gt;20ms&lt;/td&gt;
+&lt;td&gt;1800ms ~ ∞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This got me thinking about 5GHz vs 2.4GHz. I knew that 2.4GHz is slower but more penetrative, while 5GHz is the opposite. It must be the case that whenever the network fluctuates, I&amp;rsquo;m connected to the 2.4GHz band. This can be tested by observing the output of &lt;code&gt;sudo iwctl station wlan0 show | grep Frequency&lt;/code&gt; (&lt;code&gt;wlan0&lt;/code&gt; is the name of my wifi adapter in iwd). I ran this command whenever I got the erratic pings, and indeed, it only happened when connected to the 2.4GHz band.&lt;/p&gt;
+&lt;p&gt;The next step was figuring out whether that was the PC&amp;rsquo;s fault or the route&amp;rsquo;s. The first thought was that it must be the PC, because my phone had been connecting to the internet just fine, but of course, there was nothing that I did on my phone that was sensitive to latency, so I might not have noticed it. And more importantly, the phone might have a different strategy choosing which band to connect to, and it favors the 5GHz band more the PC does.&lt;/p&gt;
+&lt;p&gt;I took my phone, downloaded one of the WIFI analyzer apps, and started towards a corner of the house, watching as 5GHz signal weakened to the point where the phone switched to 2.4GHz. I tried to ping the router, and well, the familiar fluctuations was reproduced on my phone as well.&lt;/p&gt;
+&lt;p&gt;The router isn&amp;rsquo;t mine, though. It&amp;rsquo;s one of those ISP provided router and it belongs to my landlord. So the most I can do is to simply disable 2.4GHz.&lt;/p&gt;
+&lt;p&gt;It turns out, when I&amp;rsquo;m Googling around, that most people want the other way around: they want to connect to 2.4GHz and disable 5GHz, like &lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=284405&#34;&gt;this&lt;/a&gt;. I think that&amp;rsquo;s because if you are at the edge of 5GHz&amp;rsquo;s effective range, 2.4GHz is usually more stable despite being slower. That is if your 2.4GHz has not gone rogue like mine.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-disable-5ghz-in-iwd&#34;&gt;
+  How to disable 5GHz in iwd
+  &lt;a href=&#34;#how-to-disable-5ghz-in-iwd&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Despite sharing the same SSID (the name you usually see in the list of WIFIs), the 2.4GHz and 5GHz bands of a WIFI, are actually two separate things that can be connected to. The fact that they appear as a unified entity and that our devices can switch between them seamlessly is a feature of convenience.&lt;/p&gt;
+&lt;p&gt;Therefore, the first thing I tried was setting the connection&amp;rsquo;s BSSID (which is not shared by different frequency bands) in NetworkManager to the one used by the 5GHz band. Logically, this should tell NetworkManager to specifically look for that 5GHz connection, and not try to switch to its erratic sibling. But it didn&amp;rsquo;t work; because I had iwd as the WIFI backend, which doesn&amp;rsquo;t have the capability of connecting to a BSSID [@sethSOLVEDHowForce2023].&lt;/p&gt;
+&lt;p&gt;At the end of the day, there is a switch buried in &lt;code&gt;/etc&lt;/code&gt; whose purpose and usage is detailed on ArchWiki that I can flip [@marcelholtmannIwdconfig5ArchManual2019]:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/iwd/main.conf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[Rank]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;BandModifier5GHz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;BandModifier2_4GHz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;0.0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;strong&gt;Rank&lt;/strong&gt; section sets the priority of each frequency band with which iwd connects to, and setting it to zero disables it completely.&lt;/p&gt;
+&lt;p&gt;To complete the picture, here&amp;rsquo;s my setup:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Machine: A PC that I assembled;&lt;/li&gt;
+&lt;li&gt;OS/Distribution: &lt;code&gt;Linux version 6.10.9-1-default (geeko@buildhost) (gcc (SUSE Linux) 14.2.0, GNU ld (GNU Binutils; openSUSE Tumbleweed) 2.43.1.20240828-2) #1 SMP PREEMPT_DYNAMIC Sun Sep 8 13:43:05 UTC 2024 (5af7788)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Network setup: NetworkManager + iwd&lt;/li&gt;
+&lt;li&gt;WIFI adapter: Wireless-AC 3168NGW, which came with the motherboard.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;i-probably-need-a-better-router-and-a-better-wifi-adapter-for-the-pc&#34;&gt;
+  I probably need a better router, and a better WIFI adapter for the PC
+  &lt;a href=&#34;#i-probably-need-a-better-router-and-a-better-wifi-adapter-for-the-pc&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;As mentioned above, when I tested the connection with my phone, my hypothesis was that the phone has a different strategy choosing frequency bands, and it adheres to 5GHz more than the PC, but I was wrong.&lt;/p&gt;
+&lt;p&gt;Seemingly, the phone just receives a stronger signal. I&amp;rsquo;m not sure whether this is because the WIFI scanner app calculates RSSI differently from iwd, but if I trust the numbers they gave me, the differences are massive:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;2.4GHz&lt;/th&gt;
+&lt;th&gt;5GHz&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;PC&lt;/td&gt;
+&lt;td&gt;-67dBm&lt;/td&gt;
+&lt;td&gt;-71dBm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Phone&lt;/td&gt;
+&lt;td&gt;-48dBm&lt;/td&gt;
+&lt;td&gt;-53dBm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Perhaps, in addition to getting a better router with a functional 2.4GHz band, I should also consider getting a more competent WIFI adapter for the PC.&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
   
   <entry>
     <author>
@@ -213,24 +312,18 @@
 &lt;p&gt;Here&amp;rsquo;s the CPU usage&amp;mdash;specifically the usage of core 13, 14, and 15&amp;mdash;when playing a H.265 video, &lt;strong&gt;without&lt;/strong&gt; hardware acceleration:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp&#34; alt=&#34;An image showing that the usages of the three cores are above 80% during transcoding&#34;
-        srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp 1862w&#34;
-     width=&#34;1862&#34;  height=&#34;162&#34; &gt;
+    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp&#34; alt=&#34;An image showing that the usages of the three cores are above 80% during transcoding&#34;srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp 1862w&#34; width=&#34;1862&#34;  height=&#34;162&#34; &gt;
 
     &lt;figcaption&gt;CPU usage without hardware acceleration&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;After enabling hardware acceleration, when playing the same video, the core usages drop to below 40%, and you can see from the &lt;code&gt;nvtop&lt;/code&gt; (a tool which displays GPU usage), that a FFmpeg process is utilizing the GPU. Now, obviously this data is just a snapshot and is noisy, given all the other processes running on the machine. Although I don&amp;rsquo;t have a clean, isolated, long-lasting series of data showing the history of CPU usage, it is my observation that the drop is both significant and consistent through time. For one, it no longer causes FPS to fluctuate, when a video starts to play while I&amp;rsquo;m in the middle of a game.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp&#34; alt=&#34;An image showing that the three cores are utilized below 40%&#34;
-        srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp 1862w&#34;
-     width=&#34;1862&#34;  height=&#34;162&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp&#34; alt=&#34;An image showing that the three cores are utilized below 40%&#34;srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp 1862w&#34; width=&#34;1862&#34;  height=&#34;162&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;CPU usage with hardware acceleration&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/gpu-usage.webp&#34; alt=&#34;An image showing GPU usage during transcoding, highlighted is a process of FFmpeg utilizing&#34;
-        srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/gpu-usage-400w.webp 400w,/2023/jellyfin-nvidia-docker/gpu-usage-600w.webp 600w,/2023/jellyfin-nvidia-docker/gpu-usage-800w.webp 800w,/2023/jellyfin-nvidia-docker/gpu-usage-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/gpu-usage-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/gpu-usage.webp 1916w&#34;
-     width=&#34;1916&#34;  height=&#34;1218&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/gpu-usage.webp&#34; alt=&#34;An image showing GPU usage during transcoding, highlighted is a process of FFmpeg utilizing&#34;srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/gpu-usage-400w.webp 400w,/2023/jellyfin-nvidia-docker/gpu-usage-600w.webp 600w,/2023/jellyfin-nvidia-docker/gpu-usage-800w.webp 800w,/2023/jellyfin-nvidia-docker/gpu-usage-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/gpu-usage-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/gpu-usage.webp 1916w&#34; width=&#34;1916&#34;  height=&#34;1218&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;GPU usage during transcoding&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;And of course, hardware acceleration isn&amp;rsquo;t just making the GPU busier and the CPU idler; another benefit is that, titularly, the video is transcoded faster. This isn&amp;rsquo;t noticeable in the middle of playing a video, because Jellyfin would, like any competent streaming software, transcode the next chunk when you are still watching the previous one.&lt;/p&gt;
@@ -572,9 +665,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
     <summary type="html">Nathan Cole talking about shifting the balance to the pinky during one of his master classes.[^nathan] During one of his masterclasses, Nathan Cole was helping a student with landing the a soft note after a series of spiccato.</summary>
     <content type="html">&lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/nathan-cole.webp&#34; alt=&#34;A picture of violinist Nathan Cole playing during his master class, in green T-shirt.&#34;
-        srcset=&#34;https://powersnail.com/images/nathan-cole-400w.webp 400w,/images/nathan-cole-600w.webp 600w,/images/nathan-cole-800w.webp 800w,/images/nathan-cole-1000w.webp 1000w,/images/nathan-cole-1200w.webp 1200w,/images/nathan-cole.webp 1280w&#34;
-     width=&#34;1280&#34;  height=&#34;591&#34; &gt;
+    src=&#34;https://powersnail.com/images/nathan-cole.webp&#34; alt=&#34;A picture of violinist Nathan Cole playing during his master class, in green T-shirt.&#34;srcset=&#34;https://powersnail.com/images/nathan-cole-400w.webp 400w,/images/nathan-cole-600w.webp 600w,/images/nathan-cole-800w.webp 800w,/images/nathan-cole-1000w.webp 1000w,/images/nathan-cole-1200w.webp 1200w,/images/nathan-cole.webp 1280w&#34; width=&#34;1280&#34;  height=&#34;591&#34; &gt;
 
     &lt;figcaption&gt;Nathan Cole talking about shifting the balance to the pinky during one of his master classes.[^nathan]&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;During one of his masterclasses, &lt;a href=&#34;https://www.natesviolin.com/&#34;&gt;Nathan Cole&lt;/a&gt; was helping a student with landing the a soft note after a series of &lt;em&gt;spiccato&lt;/em&gt;. She couldn&amp;rsquo;t get that note &lt;em&gt;piano&lt;/em&gt; enough, because the bow coming down from the air carried its own momentum that was out of her control. Nathan offered two major insights: first, don&amp;rsquo;t think of it as &amp;ldquo;landing&amp;rdquo;, but instead, a rolling motion that morphs into coasting rather than sticking a landing; and second, engage the pinky to lighten weight of the bow, so the bow keeps its angle constant. What she had been doing up to that point, was raising her arm to lighten the note, which lifted the frog of the bow, causing the bow to rotate slightly, the tip to drop, and then the bow would slap the string harder than she wanted as it engaged the string at a more direct angle. When she engaged the pinky and started to think about the control of the tip, the problem went away instantly.&lt;/p&gt;
@@ -616,9 +707,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;p&gt;It gives you the quote right back:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1.webp&#34; alt=&#34;Generated image from Oscar Wilde&amp;amp;rsquo;s quote&#34;
-        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1-400w.webp 400w,/2022/stable-diffusion-fun/quote-1-600w.webp 600w,/2022/stable-diffusion-fun/quote-1-800w.webp 800w,/2022/stable-diffusion-fun/quote-1-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-1-1200w.webp 1200w,/2022/stable-diffusion-fun/quote-1.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; &gt;
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1.webp&#34; alt=&#34;Generated image from Oscar Wilde&amp;amp;rsquo;s quote&#34;srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-1-400w.webp 400w,/2022/stable-diffusion-fun/quote-1-600w.webp 600w,/2022/stable-diffusion-fun/quote-1-800w.webp 800w,/2022/stable-diffusion-fun/quote-1-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-1-1200w.webp 1200w,/2022/stable-diffusion-fun/quote-1.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; &gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Questions are never indiscreet; answers sometimes are.&lt;/p&gt;
@@ -627,9 +716,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;p&gt;Sometimes, it will go a different route, and illustrate like a book of classics:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2.webp&#34; alt=&#34;Generated image from Oscar Wilde Quote&#34;
-        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2-400w.webp 400w,/2022/stable-diffusion-fun/quote-2-600w.webp 600w,/2022/stable-diffusion-fun/quote-2-800w.webp 800w,/2022/stable-diffusion-fun/quote-2-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-2.webp 1024w&#34;
-     width=&#34;1024&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2.webp&#34; alt=&#34;Generated image from Oscar Wilde Quote&#34;srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/quote-2-400w.webp 400w,/2022/stable-diffusion-fun/quote-2-600w.webp 600w,/2022/stable-diffusion-fun/quote-2-800w.webp 800w,/2022/stable-diffusion-fun/quote-2-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-2.webp 1024w&#34; width=&#34;1024&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;If the lower classes don&amp;rsquo;t set us a good example what on earth is the use of them? They seem, as a class, to have absolutely no sense of moral responsibility.&lt;/p&gt;
@@ -641,9 +728,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;/h2&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;
-        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-400w.webp 400w,/2022/stable-diffusion-fun/cicada-600w.webp 600w,/2022/stable-diffusion-fun/cicada-800w.webp 800w,/2022/stable-diffusion-fun/cicada-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada.webp&#34; alt=&#34;Generated image from a quote taken from Pale Fire&#34;srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-400w.webp 400w,/2022/stable-diffusion-fun/cicada-600w.webp 600w,/2022/stable-diffusion-fun/cicada-800w.webp 800w,/2022/stable-diffusion-fun/cicada-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings.&lt;/p&gt;
@@ -653,9 +738,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;p&gt;Could it be the position of the two words in the sentence? Let&amp;rsquo;s try reversing it:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse.webp&#34; alt=&#34;Generated image from reversing a quote taken from Pale Fire&amp;amp;quot;&#34;
-        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse-400w.webp 400w,/2022/stable-diffusion-fun/cicada-reverse-600w.webp 600w,/2022/stable-diffusion-fun/cicada-reverse-800w.webp 800w,/2022/stable-diffusion-fun/cicada-reverse-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-reverse-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-reverse.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse.webp&#34; alt=&#34;Generated image from reversing a quote taken from Pale Fire&amp;amp;quot;&#34;srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-reverse-400w.webp 400w,/2022/stable-diffusion-fun/cicada-reverse-600w.webp 600w,/2022/stable-diffusion-fun/cicada-reverse-800w.webp 800w,/2022/stable-diffusion-fun/cicada-reverse-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-reverse-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-reverse.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;A cicada sings / Waxwings are berry-pecking.&lt;/p&gt;
@@ -663,25 +746,19 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;p&gt;Maybe it&amp;rsquo;s the realistic style which it&amp;rsquo;s going for? Let&amp;rsquo;s try adding some stylistic modifiers to the prompt:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration.webp&#34; alt=&#34;Added illustration to the prompt.&amp;amp;quot;&#34;
-        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration-400w.webp 400w,/2022/stable-diffusion-fun/cicada-illustration-600w.webp 600w,/2022/stable-diffusion-fun/cicada-illustration-800w.webp 800w,/2022/stable-diffusion-fun/cicada-illustration-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-illustration-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-illustration.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration.webp&#34; alt=&#34;Added illustration to the prompt.&amp;amp;quot;&#34;srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-illustration-400w.webp 400w,/2022/stable-diffusion-fun/cicada-illustration-600w.webp 600w,/2022/stable-diffusion-fun/cicada-illustration-800w.webp 800w,/2022/stable-diffusion-fun/cicada-illustration-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-illustration-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-illustration.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Illustration.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil.webp&#34; alt=&#34;Added oil painting to the prompt.&amp;amp;quot;&#34;
-        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil-400w.webp 400w,/2022/stable-diffusion-fun/cicada-oil-600w.webp 600w,/2022/stable-diffusion-fun/cicada-oil-800w.webp 800w,/2022/stable-diffusion-fun/cicada-oil-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-oil-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-oil.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil.webp&#34; alt=&#34;Added oil painting to the prompt.&amp;amp;quot;&#34;srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-oil-400w.webp 400w,/2022/stable-diffusion-fun/cicada-oil-600w.webp 600w,/2022/stable-diffusion-fun/cicada-oil-800w.webp 800w,/2022/stable-diffusion-fun/cicada-oil-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-oil-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-oil.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Oil painting.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo.webp&#34; alt=&#34;Added photo to the prompt.&amp;amp;quot;&#34;
-        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo-400w.webp 400w,/2022/stable-diffusion-fun/cicada-photo-600w.webp 600w,/2022/stable-diffusion-fun/cicada-photo-800w.webp 800w,/2022/stable-diffusion-fun/cicada-photo-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-photo-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-photo.webp 2560w&#34;
-     width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo.webp&#34; alt=&#34;Added photo to the prompt.&amp;amp;quot;&#34;srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/cicada-photo-400w.webp 400w,/2022/stable-diffusion-fun/cicada-photo-600w.webp 600w,/2022/stable-diffusion-fun/cicada-photo-800w.webp 800w,/2022/stable-diffusion-fun/cicada-photo-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-photo-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-photo.webp 2560w&#34; width=&#34;2560&#34;  height=&#34;512&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Waxwings are berry-pecking / a cicada sings. Photo.&lt;/p&gt;
@@ -699,9 +776,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;/blockquote&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano.webp&#34; alt=&#34;Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli&#34;
-        srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano-400w.webp 400w,/2022/stable-diffusion-fun/robot-playing-the-piano.webp 600w&#34;
-     width=&#34;600&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano.webp&#34; alt=&#34;Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli&#34;srcset=&#34;https://powersnail.com/2022/stable-diffusion-fun/robot-playing-the-piano-400w.webp 400w,/2022/stable-diffusion-fun/robot-playing-the-piano.webp 600w&#34; width=&#34;600&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Generated by Stable Diffusion: A robot playing the piano, 4k, detailed, by Studio Ghibli&lt;/p&gt;
@@ -781,9 +856,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO: Please give GRUB a moment to show up in QEMU...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Voila!&lt;/em&gt;&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/opensuse-grub-preview.webp&#34; alt=&#34;Screenshot of grub2-theme-preview&#34;
-        srcset=&#34;https://powersnail.com/images/opensuse-grub-preview-400w.webp 400w,/images/opensuse-grub-preview-600w.webp 600w,/images/opensuse-grub-preview-800w.webp 800w,/images/opensuse-grub-preview-1000w.webp 1000w,/images/opensuse-grub-preview.webp 1200w&#34;
-     width=&#34;1200&#34;  height=&#34;675&#34; &gt;
+    src=&#34;https://powersnail.com/images/opensuse-grub-preview.webp&#34; alt=&#34;Screenshot of grub2-theme-preview&#34;srcset=&#34;https://powersnail.com/images/opensuse-grub-preview-400w.webp 400w,/images/opensuse-grub-preview-600w.webp 600w,/images/opensuse-grub-preview-800w.webp 800w,/images/opensuse-grub-preview-1000w.webp 1000w,/images/opensuse-grub-preview.webp 1200w&#34; width=&#34;1200&#34;  height=&#34;675&#34; &gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;</content>
@@ -848,9 +921,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C2DE FGAB | c2de fgab | c&amp;#39;2ba gfed | c2BA GFED | C8&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result looks like:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/score-in-url/c_maj.webp&#34; alt=&#34;The rendered score of C Major Scale&#34;
-        srcset=&#34;https://powersnail.com/2022/score-in-url/c_maj-400w.webp 400w,/2022/score-in-url/c_maj-600w.webp 600w,/2022/score-in-url/c_maj-800w.webp 800w,/2022/score-in-url/c_maj-1000w.webp 1000w,/2022/score-in-url/c_maj.webp 1200w&#34;
-     width=&#34;1200&#34;  height=&#34;230&#34; &gt;
+    src=&#34;https://powersnail.com/2022/score-in-url/c_maj.webp&#34; alt=&#34;The rendered score of C Major Scale&#34;srcset=&#34;https://powersnail.com/2022/score-in-url/c_maj-400w.webp 400w,/2022/score-in-url/c_maj-600w.webp 600w,/2022/score-in-url/c_maj-800w.webp 800w,/2022/score-in-url/c_maj-1000w.webp 1000w,/2022/score-in-url/c_maj.webp 1200w&#34; width=&#34;1200&#34;  height=&#34;230&#34; &gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;You can visit &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQyBNYWpvciBTY2FsZQpMOiAxLzE2Ck06IDIvNApDMkRFIEZHQUIgfCBjMmRlIGZnYWIgfCBjJzJiYSBnZmVkIHwgYzJCQSBHRkVEIHwgQzg%3D&#34;&gt;this link&lt;/a&gt; to see and hear the C Major scale on &lt;strong&gt;Score In URL&lt;/strong&gt;. Or a number of other examples: &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogUGFydGl0YSBJSUkgLSBQcmVsdWRpbwpDOiBKLlMuIEJhY2gKUTogMS80PTEyMApNOiAzLzQKTDogMS8xNgpLOiBFbWFqCnoyIGUnZCcgZScyYjJnMmIyIHwgKGVmZWQgZTIpQjJHMkIyIHwgRUJGQiBHQkFCIEdCRkIgfApFZWRjIEJlZGMgQkFHRiAgICB8IEVCRkIgR0JBQiBHQkZCICB8IEVlZGMgQmVkYyBCQUdGIHwKRUZHQSBCY2RlIGZnYWYgICAgfCBnYmVmIGdhYmMnIGQnZSdjJ2QnICB8IGUnYmFiIGdiYWIgZ2JmYiB8CmVlJ2QnYycgYmVjJ2UgYmVhZXwgZ2JmYiBnYmFiIGdiZmIgIHwgZWUnZCdjJyBiZWMnZSBiZWFlIHwKZ2VlZWRlZWVmZWRlIHwgZWVnZWZlZ2VhZWZlIHwgZ2VlZWRlZWVmZWRlIHwKZWVnZWZlZ2VhZWZlIHwgZ2VnZSBnZWdlIGdlZ2UgfCBnZWdkIGdlZ2QgZ2VnZCB8CmdlZz1kIGdlZ2QgZ2VnZCB8IGFlYWMgYWVhYyBhZWFjIHwgYWVhQiBhZWFCIGFlYUIgfApnZWdCIGdlZ0IgZ2VnQiB8IGdlZ0EgZ2VnQSBnZWdBIHwgZmVmQSBmZWZBIGZlZkEgfApmZWZHIGZlZkcgZmVmRyB8IGVlZUcgZWVlRyBlZWVHIHwgZWVlRiBlZWVGIGVlZUYgfApkZWRGIGRlZEYgZGVkRiB8IEVGRUYgR0JFRiBHQkVGIHwgR0FHQSBCZUdBIEJlR0EgfA%3D%3D&#34;&gt;First page of Bach&amp;rsquo;s Preludio&lt;/a&gt;, &lt;a href=&#34;https://powersnail.com/ScoreInUrl/?s=VDogQWlyIG9uIEcgU3RyaW5nCkM6IEouUy4gQmFjaCAoYXJyLiBBdWd1c3QgV2lsaGVsbWouKQpROiAiTGVudG8iCk06IDQvNApMOiAxLzE2Cks6IENtYWoKfDogRTE2LSB8IEUyKEFGIERDQixDKSAoIXRyaWxsIUIsNy8yQSwvMikgRyw0IHwgRzgtIEcoRV9CLEEsKSAoRF5DKShHRikgfCAKRjgtIEYoREEsRywpIChDQiwpKEZFKSB8IChFNiBeRkcpIChDMkMvMkQvMkUpIChFRCkoREMpIHwgKEIsQSwpKEEsLzJCLC8yQykgKEMyQixBLCkgRyw4IDp8IAp8OiAoQiw0LUIsQy8yQiwvMkEsLzJCLC8yRywpIChHNiBfQiwyKSB8IChBLDJBMi0gQSkoR0ZFKSB7L0V9RjQtIEYvMihFLzJELzJDLzJCLEEsKSB8IF5HLEEsKEIsMi0gQixDKShEMi0gREUpRjItIEYyRTIgfAooREMpKEIsQSwpIChCLEMvMkQvMkNCLCkgQSw4IHwgKEM0LSBDRURDKSAoQTYgR15GKSB8ICh7L0V9REdHLDIpIChBLDNCLC8yQy8yKSAoQiw3LzJBLC8yKSBHLDQgfCAKQzYgKEVEKSBENiAoRkUpIHwgRTYgKEdGKSBGOCB8IEcsNC0gRyxCLERGIEZERTItIEUyKEVGLzJHLzIpIHwgCihDNC0gQ0VHX0IpIChCMiBBNCBDMikgfCAoQixEIEY0IEEsMikgKEcsMkRFLzJGLzItIEYpKEUyRCB8IEMvMkIsLzIpKEEsMkIsKSAoQiwyey9BLH1CLEMpIEM4IDp8Cg%3D%3D&#34;&gt;Air on G String&lt;/a&gt;.&lt;/p&gt;
@@ -863,9 +934,7 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
 &lt;p&gt;To provide some rudimentary code highlighting, and more importantly, ergonomic error reporting, &lt;a href=&#34;https://codemirror.net/&#34;&gt;CodeMirror&lt;/a&gt; is used. You can see the errors marked by red dots, like a real text editor used by programmers.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error.webp&#34; alt=&#34;Screenshot showcasing error reporting&#34;
-        srcset=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error-400w.webp 400w,/2022/score-in-url/Screenshot_error-600w.webp 600w,/2022/score-in-url/Screenshot_error-800w.webp 800w,/2022/score-in-url/Screenshot_error-1000w.webp 1000w,/2022/score-in-url/Screenshot_error-1200w.webp 1200w,/2022/score-in-url/Screenshot_error.webp 1702w&#34;
-     width=&#34;1702&#34;  height=&#34;346&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error.webp&#34; alt=&#34;Screenshot showcasing error reporting&#34;srcset=&#34;https://powersnail.com/2022/score-in-url/Screenshot_error-400w.webp 400w,/2022/score-in-url/Screenshot_error-600w.webp 600w,/2022/score-in-url/Screenshot_error-800w.webp 800w,/2022/score-in-url/Screenshot_error-1000w.webp 1000w,/2022/score-in-url/Screenshot_error-1200w.webp 1200w,/2022/score-in-url/Screenshot_error.webp 1702w&#34; width=&#34;1702&#34;  height=&#34;346&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;The code highlighting is still not comprehensive at the moment. I&amp;rsquo;ve merely written a few tokenization rules at this point, and certainly will improve on that in the future.&lt;/p&gt;
@@ -901,26 +970,20 @@ monitor from the left with &lt;code&gt;python wallpaper.py one 1 image1.jpg&lt;/
     <content type="html">&lt;p&gt;&lt;em&gt;Preludio&lt;/em&gt; (&lt;em&gt;Prelude&lt;/em&gt; in some version) is one of Bach&amp;rsquo;s best violin pieces. From measure 17 to 28, a bariolage among three strings brings us a sublime polyphonic experience, with only single notes played detaché. The focus is usually on the bowing, but the left hand is not without challenge either, especially at speed.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full.webp&#34; alt=&#34;Sheet music of the bariolage section&#34;
-        srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full-400w.webp 400w,/2022/bach-preludio-sneaky-shift/bariolage-full-600w.webp 600w,/2022/bach-preludio-sneaky-shift/bariolage-full-800w.webp 800w,/2022/bach-preludio-sneaky-shift/bariolage-full-1000w.webp 1000w,/2022/bach-preludio-sneaky-shift/bariolage-full-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/bariolage-full.webp 1912w&#34;
-     width=&#34;1912&#34;  height=&#34;1156&#34; &gt;
+    src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full.webp&#34; alt=&#34;Sheet music of the bariolage section&#34;srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/bariolage-full-400w.webp 400w,/2022/bach-preludio-sneaky-shift/bariolage-full-600w.webp 600w,/2022/bach-preludio-sneaky-shift/bariolage-full-800w.webp 800w,/2022/bach-preludio-sneaky-shift/bariolage-full-1000w.webp 1000w,/2022/bach-preludio-sneaky-shift/bariolage-full-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/bariolage-full.webp 1912w&#34; width=&#34;1912&#34;  height=&#34;1156&#34; &gt;
 
     &lt;figcaption&gt;Snippet from Preludio&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;From measure 20 to 28, the left hand descends one position every two measures. The most straightforward way is to shift at the beginning of measure 21, 23, 25, 27, and 28, using the third finger on A string, the first finger always pressing the lower note on D string, as shown below:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift.webp&#34; alt=&#34;The straight-forward version&#34;
-        srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift-400w.webp 400w,/2022/bach-preludio-sneaky-shift/straightforward-shift-600w.webp 600w,/2022/bach-preludio-sneaky-shift/straightforward-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/straightforward-shift-1000w.webp 1000w,/2022/bach-preludio-sneaky-shift/straightforward-shift-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/straightforward-shift.webp 2693w&#34;
-     width=&#34;2693&#34;  height=&#34;258&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift.webp&#34; alt=&#34;The straight-forward version&#34;srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/straightforward-shift-400w.webp 400w,/2022/bach-preludio-sneaky-shift/straightforward-shift-600w.webp 600w,/2022/bach-preludio-sneaky-shift/straightforward-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/straightforward-shift-1000w.webp 1000w,/2022/bach-preludio-sneaky-shift/straightforward-shift-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/straightforward-shift.webp 2693w&#34; width=&#34;2693&#34;  height=&#34;258&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;There are two ways to hide this shift. The first is to squeeze your 3rd finger inward without shifting when the bow is still on the D string, and then to complete the shift by moving the 1st finger while playing the other three notes. But given how cramped the notes are on higher positions, that squeeze might be a bit awkward.&lt;/p&gt;
 &lt;p&gt;The second way is to delay the shift and hide it using the open E. In measure 20, the 1st finger is on C♯, the 2nd finger on A. If we don&amp;rsquo;t shift, we&amp;rsquo;ll begin measure 21 with 2nd finger on A, too. Then, when the bow is on the open E, shift the entire hand down a position, and substitute the 3rd finger on A, the 1st finger naturally falling on B. If you can shift within the duration of that E, there will be no audible shift. And this way, there is no squeezing, or awkward hand frame. Like this:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift.webp&#34; alt=&#34;The sneaky version&#34;
-        srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift-400w.webp 400w,/2022/bach-preludio-sneaky-shift/sneaky-shift-600w.webp 600w,/2022/bach-preludio-sneaky-shift/sneaky-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/sneaky-shift-1000w.webp 1000w,/2022/bach-preludio-sneaky-shift/sneaky-shift-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/sneaky-shift.webp 2693w&#34;
-     width=&#34;2693&#34;  height=&#34;269&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift.webp&#34; alt=&#34;The sneaky version&#34;srcset=&#34;https://powersnail.com/2022/bach-preludio-sneaky-shift/sneaky-shift-400w.webp 400w,/2022/bach-preludio-sneaky-shift/sneaky-shift-600w.webp 600w,/2022/bach-preludio-sneaky-shift/sneaky-shift-800w.webp 800w,/2022/bach-preludio-sneaky-shift/sneaky-shift-1000w.webp 1000w,/2022/bach-preludio-sneaky-shift/sneaky-shift-1200w.webp 1200w,/2022/bach-preludio-sneaky-shift/sneaky-shift.webp 2693w&#34; width=&#34;2693&#34;  height=&#34;269&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Then, in the measure 22, no shift is needed. In measure 23, begin with 2nd finger on G♯, shift during the open string E, and end with 3rd finger on G♯. So on, and so on.&lt;/p&gt;
@@ -1109,40 +1172,30 @@ Without extra line in between&lt;/p&gt;
   &lt;a href=&#34;#images&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Here is an inline image &lt;img
-    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
-        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
-     width=&#34;128&#34;  height=&#34;128&#34; &gt;
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; &gt;
 . There isn&amp;rsquo;t really a good strategy to place an image that is taller than a line inside a sentence, in my opinion. It&amp;rsquo;s just a wacky form of content allowed by the HTML.&lt;/p&gt;
 &lt;p&gt;Images put on their own line is better:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;
-        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34;
-     width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp&#34; alt=&#34;test image&#34;srcset=&#34;https://powersnail.com/2022/test-md-page/snail-small.webp 128w&#34; width=&#34;128&#34;  height=&#34;128&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;A bigger image:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;
-        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34;
-     width=&#34;400&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp&#34; alt=&#34;test image&#34;srcset=&#34;https://powersnail.com/2022/test-md-page/snail-big.webp 400w&#34; width=&#34;400&#34;  height=&#34;400&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;A gigantic image:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;
-        srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-400w.webp 400w,/2022/test-md-page/snail-gigantic-600w.webp 600w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1000w.webp 1000w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w&#34;
-     width=&#34;4000&#34;  height=&#34;4000&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic.webp&#34; alt=&#34;test image&#34;srcset=&#34;https://powersnail.com/2022/test-md-page/snail-gigantic-400w.webp 400w,/2022/test-md-page/snail-gigantic-600w.webp 600w,/2022/test-md-page/snail-gigantic-800w.webp 800w,/2022/test-md-page/snail-gigantic-1000w.webp 1000w,/2022/test-md-page/snail-gigantic-1200w.webp 1200w,/2022/test-md-page/snail-gigantic.webp 4000w&#34; width=&#34;4000&#34;  height=&#34;4000&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;A svg image:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-    loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/test-md-page/snail.svg&#34; alt=&#34;svg image&#34; width=&#34;33.866666&#34;  height=&#34;33.866668&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;33.866666&#34;  height=&#34;33.866668&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;A figure written in HTML:&lt;/p&gt;
@@ -1384,50 +1437,38 @@ line item&lt;/li&gt;
 &lt;p&gt;The iconic Chinese cuisine Red Braised Pork Belly has an appetizing, deep, brick-red color. This comes from 糖色(tang se): caramel color. Sugar crystals are heated to a deep red color, and diluted with water. The result is a translucent shimmery red solution, more natural and appetizing than the pinkish red of 红曲粉 (red yeast rice powder), which is found on some Cantonese Char Siu.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly.webp&#34; alt=&#34;Caramel color vs. red yeast rice powder&#34;
-        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly-400w.webp 400w,/2022/chinese-caramel-color/red-braised-pork-belly.webp 512w&#34;
-     width=&#34;512&#34;  height=&#34;256&#34; &gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly.webp&#34; alt=&#34;Caramel color vs. red yeast rice powder&#34;srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/red-braised-pork-belly-400w.webp 400w,/2022/chinese-caramel-color/red-braised-pork-belly.webp 512w&#34; width=&#34;512&#34;  height=&#34;256&#34; &gt;
 
     &lt;figcaption&gt;Compare the color of red braised pork belly vs. Char Siu&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;We can roughly break the process down to four stages: melting, bubbling, turning yellow, and turning red.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp&#34; alt=&#34;Melting sugar&#34;
-        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp 256w&#34;
-     width=&#34;256&#34;  height=&#34;143&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp&#34; alt=&#34;Melting sugar&#34;srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-1.webp 256w&#34; width=&#34;256&#34;  height=&#34;143&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;Melting sugar&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;To melt the sugar, turn on low heat and toss &lt;strong&gt;30 grams of sugar crystals&lt;/strong&gt; in the pot, with &lt;strong&gt;1 teaspoon of oil&lt;/strong&gt;, and &lt;strong&gt;30 grams of water&lt;/strong&gt;. Keep stirring, and knocking on the crystals with the back of your spoon (or spatula) to break them apart.&lt;/p&gt;
 &lt;p&gt;You can use just the oil, or just the water, too; I find oil &amp;amp; water mixture to be easier to work with. Water makes it easier to melt the sugar in the initial stage, and oil helps to buffer the heat when the sugar starts caramelizing.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp&#34; alt=&#34;Bubbling sugar&#34;
-        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp 256w&#34;
-     width=&#34;256&#34;  height=&#34;220&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp&#34; alt=&#34;Bubbling sugar&#34;srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-2.webp 256w&#34; width=&#34;256&#34;  height=&#34;220&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;Bubbling&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;After the sugar melt, the syrup will start to bubble. Keep stirring.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp&#34; alt=&#34;Syrup turning yellow&#34;
-        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp 256w&#34;
-     width=&#34;256&#34;  height=&#34;193&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp&#34; alt=&#34;Syrup turning yellow&#34;srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-3.webp 256w&#34; width=&#34;256&#34;  height=&#34;193&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;#97843A Light Yellow&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;When the syrup turns #97843A (light yellow), caramelization has begun. Continue to stir, and be extra careful now, because the syrup will change color very rapidly.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp&#34; alt=&#34;Syrup&amp;amp;rsquo;s yellow color deepens&#34;
-        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp 256w&#34;
-     width=&#34;256&#34;  height=&#34;174&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp&#34; alt=&#34;Syrup&amp;amp;rsquo;s yellow color deepens&#34;srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-4.webp 256w&#34; width=&#34;256&#34;  height=&#34;174&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;#996118 Deep Yellow&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;When the syrup turns #996118 (dark yellow), turn off the heat. The residual heat is enough to cook the caramel.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp&#34; alt=&#34;Syrup turning red&#34;
-        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp 256w&#34;
-     width=&#34;256&#34;  height=&#34;172&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp&#34; alt=&#34;Syrup turning red&#34;srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-5.webp 256w&#34; width=&#34;256&#34;  height=&#34;172&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;h1 id=&#34;420c00-brick-red&#34;&gt;
   420C00 Brick Red
@@ -1437,9 +1478,7 @@ line item&lt;/li&gt;
   &lt;/figure&gt;&lt;p&gt;When the syrup turns #420C00 (brick-red), pour 400 grams of boiling water into the pot to stop the cooking. Be careful: some violent splattering is to be expected. Give the solution a few more rounds of stirring to ensure that it is even.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp&#34; alt=&#34;Syrup diluted with water&#34;
-        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp 256w&#34;
-     width=&#34;256&#34;  height=&#34;192&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp&#34; alt=&#34;Syrup diluted with water&#34;srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-6.webp 256w&#34; width=&#34;256&#34;  height=&#34;192&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;Pour water in to the pot&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;h2 id=&#34;finalizing&#34;&gt;
@@ -1448,17 +1487,13 @@ line item&lt;/li&gt;
 &lt;/h2&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp&#34; alt=&#34;Caramel color in a bowl&#34;
-        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp 256w&#34;
-     width=&#34;256&#34;  height=&#34;206&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp&#34; alt=&#34;Caramel color in a bowl&#34;srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-7.webp 256w&#34; width=&#34;256&#34;  height=&#34;206&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;Final Product&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;Here&amp;rsquo;s our finished Chinese caramel color in a bowl. To use it, scoop a generous amount into your braised dish at the beginning of cooking.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp&#34; alt=&#34;Caramel color as compared with black tea&#34;
-        srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp 256w&#34;
-     width=&#34;256&#34;  height=&#34;202&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp&#34; alt=&#34;Caramel color as compared with black tea&#34;srcset=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-8.webp 256w&#34; width=&#34;256&#34;  height=&#34;202&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;Caramel Color vs. Earl Grey&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;The caramel color should be roughly the same color as a cup of black tea. That&amp;rsquo;s Earl Grey in the metal spoon for your reference.&lt;/p&gt;
@@ -1468,9 +1503,7 @@ line item&lt;/li&gt;
 &lt;/h2&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-color.svg&#34; alt=&#34;Caramel Color Summary&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-     width=&#34;393&#34;  height=&#34;160&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2022/chinese-caramel-color/caramel-color.svg&#34; alt=&#34;Caramel Color Summary&#34;style=&#34;max-width: 100%; height: auto&#34;loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;</content>
@@ -1505,9 +1538,7 @@ line item&lt;/li&gt;
 &lt;/h2&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/bow-planes-exercise-legato.svg&#34; alt=&#34;Legato Exercise&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-    &gt;
+    src=&#34;https://powersnail.com/images/bow-planes-exercise-legato.svg&#34; alt=&#34;Legato Exercise&#34; width=&#34;675&#34;  height=&#34;85.115&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;675&#34;  height=&#34;85.115&#34; &gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;First, play a simple legato exercise, connecting each plane to the next. Since we are warming up the bow arm, keep your torso stationary. Change the plane with your elbow level only. The aim of this exercise is to find where the planes are, and get used to moving between them swiftly.&lt;/p&gt;
@@ -1526,9 +1557,7 @@ line item&lt;/li&gt;
 &lt;p&gt;Ideally, you should be able to break the chord anywhere on the bow. In his masterclass, soloist Kerson Leung instructed a student do a simple exercise for Bach: break the chord as early as you can; shorten the first double-stop as much as possible, while still make them ring. The aim, of course, is not to play every chord curtly, but to acquire the capability of breaking a chord at an arbitrary place without damaging the tone quality.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/bow-planes-exercise-dotted-rhythm.svg&#34; alt=&#34;Dotted Rhythm Exercise&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-    loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/bow-planes-exercise-dotted-rhythm.svg&#34; alt=&#34;Dotted Rhythm Exercise&#34; width=&#34;675&#34;  height=&#34;201.57&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;675&#34;  height=&#34;201.57&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;We can reify this exercise with dotted rhythm. Again, play with the same requirement as the first exercise: clean, immediate string crossing. Snap into the plane and draw the bow as steady as possible. Don&amp;rsquo;t fidget with the elbow level; if you didn&amp;rsquo;t arrive at the plane accurately, take a step back and redo the measure. Remember, the goal is to anchor your elbow.&lt;/p&gt;
@@ -1539,9 +1568,7 @@ line item&lt;/li&gt;
 &lt;/h2&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/bow-planes-exercise-string-crossings.svg&#34; alt=&#34;Advanced String Crossings&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-    loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/bow-planes-exercise-string-crossings.svg&#34; alt=&#34;Advanced String Crossings&#34; width=&#34;675.78235&#34;  height=&#34;202.15199&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;675.78235&#34;  height=&#34;202.15199&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;So far, we have limited ourselves in moving between neighboring planes. But chords can span up to seven planes, depending on the phrasing. Therefore, the third exercise is jumping from G-string to every other plane, and then jumping from E string backwards.&lt;/p&gt;
@@ -1554,9 +1581,7 @@ line item&lt;/li&gt;
 &lt;p&gt;Take a chord from your repertoire, and deconstruct the chord into separated planes.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/deconstructing-a-chord.svg&#34; alt=&#34;Deconstruction of a Chord&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-    loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/deconstructing-a-chord.svg&#34; alt=&#34;Deconstruction of a Chord&#34; width=&#34;675&#34;  height=&#34;114.86&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;675&#34;  height=&#34;114.86&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;For example, to deconstruct the first chord of Bach&amp;rsquo;s Sarabande of B Minor, we separate the chord into double-stops and single notes, according to what phrasing you&amp;rsquo;d like. Use dotted rhythm to experiment with different momentum and emphasis.&lt;/p&gt;
@@ -1684,9 +1709,7 @@ line item&lt;/li&gt;
 &lt;p&gt;Here is a printable summary card for the recipe:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-     width=&#34;543&#34;  height=&#34;236&#34; &gt;
+    src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34;style=&#34;max-width: 100%; height: auto&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;</content>
@@ -1766,9 +1789,7 @@ line item&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And to convert this into an image, which tightly bounds the table rather than being a full letter sized white page, I rendered the document into a &lt;code&gt;DVI&lt;/code&gt; file and converted it into &lt;code&gt;SVG&lt;/code&gt; with &lt;code&gt;dvisvgm&lt;/code&gt;. The tool automatically crops the image, so it doesn&amp;rsquo;t end being a full letter sized page.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/chicken-abodo.svg&#34; alt=&#34;Recipe Summary for Chicken Abodo&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-     width=&#34;390&#34;  height=&#34;177&#34; &gt;
+    src=&#34;https://powersnail.com/images/chicken-abodo.svg&#34; alt=&#34;Recipe Summary for Chicken Abodo&#34;style=&#34;max-width: 100%; height: auto&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;This is the final result of a printable, succinct, summary card for my chicken abodo recipe. After reading on the web (and fiddling with HTML and CSS) for so long, there&amp;rsquo;s something very satisfying about LaTeX. It just looks nice.&lt;/p&gt;
@@ -2474,9 +2495,7 @@ $$&lt;/p&gt;
 &lt;p&gt;The transition function is a matrix that maps (state, input char) to state.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-     width=&#34;106&#34;  height=&#34;69&#34; &gt;
+    src=&#34;https://powersnail.com/images/valid-number-DFA.svg&#34; alt=&#34;DFA Transformation matrix&#34;style=&#34;max-width: 100%; height: auto&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;table&gt;
@@ -2567,9 +2586,7 @@ $$&lt;/p&gt;
 &lt;/table&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-    loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/valid_number_dfa.svg&#34; alt=&#34;grammar&#34; width=&#34;473.47&#34;  height=&#34;503.12&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;473.47&#34;  height=&#34;503.12&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;h3 id=&#34;dfa---termination&#34;&gt;
@@ -3353,9 +3370,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/h3&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/Sierpinski_carpet.jpg&#34; alt=&#34;Sierpinski Carpet&#34;
-        srcset=&#34;https://powersnail.com/images/Sierpinski_carpet-400w.jpg 400w,/images/Sierpinski_carpet.jpg 600w&#34;
-     width=&#34;600&#34;  height=&#34;600&#34; &gt;
+    src=&#34;https://powersnail.com/images/Sierpinski_carpet.jpg&#34; alt=&#34;Sierpinski Carpet&#34;srcset=&#34;https://powersnail.com/images/Sierpinski_carpet-400w.jpg 400w,/images/Sierpinski_carpet.jpg 600w&#34; width=&#34;600&#34;  height=&#34;600&#34; &gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;ul&gt;
@@ -3369,9 +3384,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/h3&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/2000px-Koch_Snowflake_7th_iteration.svg.png&#34; alt=&#34;Koch Snowflake&#34;
-        srcset=&#34;https://powersnail.com/images/2000px-Koch_Snowflake_7th_iteration.svg-400w.png 400w,/images/2000px-Koch_Snowflake_7th_iteration.svg-600w.png 600w,/images/2000px-Koch_Snowflake_7th_iteration.svg-800w.png 800w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1000w.png 1000w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1200w.png 1200w,/images/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w&#34;
-     width=&#34;2000&#34;  height=&#34;2000&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/2000px-Koch_Snowflake_7th_iteration.svg.png&#34; alt=&#34;Koch Snowflake&#34;srcset=&#34;https://powersnail.com/images/2000px-Koch_Snowflake_7th_iteration.svg-400w.png 400w,/images/2000px-Koch_Snowflake_7th_iteration.svg-600w.png 600w,/images/2000px-Koch_Snowflake_7th_iteration.svg-800w.png 800w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1000w.png 1000w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1200w.png 1200w,/images/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w&#34; width=&#34;2000&#34;  height=&#34;2000&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;ul&gt;
@@ -3459,9 +3472,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;&lt;strong&gt;Diamond Square&lt;/strong&gt;&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/2998px-Diamond_Square.svg.png&#34; alt=&#34;Level 0&#34;
-        srcset=&#34;https://powersnail.com/images/2998px-Diamond_Square.svg-400w.png 400w,/images/2998px-Diamond_Square.svg-600w.png 600w,/images/2998px-Diamond_Square.svg-800w.png 800w,/images/2998px-Diamond_Square.svg-1000w.png 1000w,/images/2998px-Diamond_Square.svg-1200w.png 1200w,/images/2998px-Diamond_Square.svg.png 2998w&#34;
-     width=&#34;2998&#34;  height=&#34;640&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/2998px-Diamond_Square.svg.png&#34; alt=&#34;Level 0&#34;srcset=&#34;https://powersnail.com/images/2998px-Diamond_Square.svg-400w.png 400w,/images/2998px-Diamond_Square.svg-600w.png 600w,/images/2998px-Diamond_Square.svg-800w.png 800w,/images/2998px-Diamond_Square.svg-1000w.png 1000w,/images/2998px-Diamond_Square.svg-1200w.png 1200w,/images/2998px-Diamond_Square.svg.png 2998w&#34; width=&#34;2998&#34;  height=&#34;640&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;ul&gt;
@@ -3474,9 +3485,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;The result could look something like:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/Plasmafractal.gif&#34; alt=&#34;Diamond Square&#34;
-        srcset=&#34;https://powersnail.com/images/Plasmafractal.gif 300w&#34;
-     width=&#34;300&#34;  height=&#34;225&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/Plasmafractal.gif&#34; alt=&#34;Diamond Square&#34;srcset=&#34;https://powersnail.com/images/Plasmafractal.gif 300w&#34; width=&#34;300&#34;  height=&#34;225&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;The problem is the grid pattern is visible. There are &amp;lsquo;+&amp;rsquo; in the graph, so rotating the graph will be noticed (not entirely natural)&lt;/p&gt;
@@ -3562,9 +3571,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&amp;rsquo;s call them left and right child respectively.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/binarysearchtree.jpg&#34; alt=&#34;Binary Search Tree&#34;
-        srcset=&#34;https://powersnail.com/images/binarysearchtree-400w.jpg 400w,/images/binarysearchtree-600w.jpg 600w,/images/binarysearchtree-800w.jpg 800w,/images/binarysearchtree-1000w.jpg 1000w,/images/binarysearchtree-1200w.jpg 1200w,/images/binarysearchtree.jpg 2445w&#34;
-     width=&#34;2445&#34;  height=&#34;2308&#34; &gt;
+    src=&#34;https://powersnail.com/images/binarysearchtree.jpg&#34; alt=&#34;Binary Search Tree&#34;srcset=&#34;https://powersnail.com/images/binarysearchtree-400w.jpg 400w,/images/binarysearchtree-600w.jpg 600w,/images/binarysearchtree-800w.jpg 800w,/images/binarysearchtree-1000w.jpg 1000w,/images/binarysearchtree-1200w.jpg 1200w,/images/binarysearchtree.jpg 2445w&#34; width=&#34;2445&#34;  height=&#34;2308&#34; &gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;The top node is called root, and the nodes that do not have a child are called leaves. There is a &lt;code&gt;nil&lt;/code&gt; sentinel node, which is not in the data structure but a &lt;a href=&#34;#sentinelNode&#34;&gt;useful element&lt;/a&gt; in our program.&lt;/p&gt;
@@ -3626,9 +3633,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;Left tree is already printed (we consider &lt;code&gt;nil&lt;/code&gt; as printed), so we try to go right. Don&amp;rsquo;t forget to first print out &lt;code&gt;x&lt;/code&gt; before entering right.&lt;/p&gt;
 &lt;p&gt;There is a slight complication if &lt;code&gt;x&lt;/code&gt; is a leaf, as both children are &lt;code&gt;nil&lt;/code&gt;. We would not be able to know whether we have come back from left or right! The traversal will circle around at &lt;code&gt;x&lt;/code&gt; forever.&lt;/p&gt;
 &lt;p&gt;&lt;img
-    src=&#34;https://powersnail.com/images/fromlefttoright.jpg&#34; alt=&#34;From Left to Right&#34;
-        srcset=&#34;https://powersnail.com/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w&#34;
-     width=&#34;2441&#34;  height=&#34;2067&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/fromlefttoright.jpg&#34; alt=&#34;From Left to Right&#34;srcset=&#34;https://powersnail.com/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w&#34; width=&#34;2441&#34;  height=&#34;2067&#34; loading=&#34;lazy&#34;&gt;
 {:width=&amp;ldquo;36px&amp;rdquo;}.&lt;/p&gt;
 &lt;p&gt;The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;

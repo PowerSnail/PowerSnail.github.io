@@ -60,9 +60,7 @@
 &lt;p&gt;Here is a printable summary card for the recipe:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34; 
-        style=&#34;width:100%; height: auto;&#34;
-     width=&#34;543&#34;  height=&#34;236&#34; &gt;
+    src=&#34;https://powersnail.com/images/tiramisu.svg&#34; alt=&#34;Summary Card&#34;style=&#34;max-width: 100%; height: auto&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;</content>

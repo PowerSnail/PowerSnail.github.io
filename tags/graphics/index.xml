@@ -57,9 +57,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/h3&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/Sierpinski_carpet.jpg&#34; alt=&#34;Sierpinski Carpet&#34;
-        srcset=&#34;https://powersnail.com/images/Sierpinski_carpet-400w.jpg 400w,/images/Sierpinski_carpet.jpg 600w&#34;
-     width=&#34;600&#34;  height=&#34;600&#34; &gt;
+    src=&#34;https://powersnail.com/images/Sierpinski_carpet.jpg&#34; alt=&#34;Sierpinski Carpet&#34;srcset=&#34;https://powersnail.com/images/Sierpinski_carpet-400w.jpg 400w,/images/Sierpinski_carpet.jpg 600w&#34; width=&#34;600&#34;  height=&#34;600&#34; &gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;ul&gt;
@@ -73,9 +71,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;/h3&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/2000px-Koch_Snowflake_7th_iteration.svg.png&#34; alt=&#34;Koch Snowflake&#34;
-        srcset=&#34;https://powersnail.com/images/2000px-Koch_Snowflake_7th_iteration.svg-400w.png 400w,/images/2000px-Koch_Snowflake_7th_iteration.svg-600w.png 600w,/images/2000px-Koch_Snowflake_7th_iteration.svg-800w.png 800w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1000w.png 1000w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1200w.png 1200w,/images/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w&#34;
-     width=&#34;2000&#34;  height=&#34;2000&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/2000px-Koch_Snowflake_7th_iteration.svg.png&#34; alt=&#34;Koch Snowflake&#34;srcset=&#34;https://powersnail.com/images/2000px-Koch_Snowflake_7th_iteration.svg-400w.png 400w,/images/2000px-Koch_Snowflake_7th_iteration.svg-600w.png 600w,/images/2000px-Koch_Snowflake_7th_iteration.svg-800w.png 800w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1000w.png 1000w,/images/2000px-Koch_Snowflake_7th_iteration.svg-1200w.png 1200w,/images/2000px-Koch_Snowflake_7th_iteration.svg.png 2000w&#34; width=&#34;2000&#34;  height=&#34;2000&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;ul&gt;
@@ -163,9 +159,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;&lt;strong&gt;Diamond Square&lt;/strong&gt;&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/2998px-Diamond_Square.svg.png&#34; alt=&#34;Level 0&#34;
-        srcset=&#34;https://powersnail.com/images/2998px-Diamond_Square.svg-400w.png 400w,/images/2998px-Diamond_Square.svg-600w.png 600w,/images/2998px-Diamond_Square.svg-800w.png 800w,/images/2998px-Diamond_Square.svg-1000w.png 1000w,/images/2998px-Diamond_Square.svg-1200w.png 1200w,/images/2998px-Diamond_Square.svg.png 2998w&#34;
-     width=&#34;2998&#34;  height=&#34;640&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/2998px-Diamond_Square.svg.png&#34; alt=&#34;Level 0&#34;srcset=&#34;https://powersnail.com/images/2998px-Diamond_Square.svg-400w.png 400w,/images/2998px-Diamond_Square.svg-600w.png 600w,/images/2998px-Diamond_Square.svg-800w.png 800w,/images/2998px-Diamond_Square.svg-1000w.png 1000w,/images/2998px-Diamond_Square.svg-1200w.png 1200w,/images/2998px-Diamond_Square.svg.png 2998w&#34; width=&#34;2998&#34;  height=&#34;640&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;ul&gt;
@@ -178,9 +172,7 @@ Types: ## Exactly self-similar Statistically self-similar Exactly Self-similar #
 &lt;p&gt;The result could look something like:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/images/Plasmafractal.gif&#34; alt=&#34;Diamond Square&#34;
-        srcset=&#34;https://powersnail.com/images/Plasmafractal.gif 300w&#34;
-     width=&#34;300&#34;  height=&#34;225&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/images/Plasmafractal.gif&#34; alt=&#34;Diamond Square&#34;srcset=&#34;https://powersnail.com/images/Plasmafractal.gif 300w&#34; width=&#34;300&#34;  height=&#34;225&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;The problem is the grid pattern is visible. There are &amp;lsquo;+&amp;rsquo; in the graph, so rotating the graph will be noticed (not entirely natural)&lt;/p&gt;

@@ -152,9 +152,7 @@ More
 <p>In a tree, there are nodes, which are the storage a piece of data and also connection to other nodes. A node can connect to its parent and its children. In other trees, there could be unlimited children, but for our case, a binary tree could have at most two children. Naturally, let&rsquo;s call them left and right child respectively.</p>
 <figure>
     <img
-    src="/images/binarysearchtree.jpg" alt="Binary Search Tree"
-        srcset="/images/binarysearchtree-400w.jpg 400w,/images/binarysearchtree-600w.jpg 600w,/images/binarysearchtree-800w.jpg 800w,/images/binarysearchtree-1000w.jpg 1000w,/images/binarysearchtree-1200w.jpg 1200w,/images/binarysearchtree.jpg 2445w"
-     width="2445"  height="2308" >
+    src="/images/binarysearchtree.jpg" alt="Binary Search Tree"srcset="/images/binarysearchtree-400w.jpg 400w,/images/binarysearchtree-600w.jpg 600w,/images/binarysearchtree-800w.jpg 800w,/images/binarysearchtree-1000w.jpg 1000w,/images/binarysearchtree-1200w.jpg 1200w,/images/binarysearchtree.jpg 2445w" width="2445"  height="2308" >
 
     <figcaption></figcaption>
   </figure><p>The top node is called root, and the nodes that do not have a child are called leaves. There is a <code>nil</code> sentinel node, which is not in the data structure but a <a href="#sentinelNode">useful element</a> in our program.</p>
@@ -216,9 +214,7 @@ More
 <p>Left tree is already printed (we consider <code>nil</code> as printed), so we try to go right. Don&rsquo;t forget to first print out <code>x</code> before entering right.</p>
 <p>There is a slight complication if <code>x</code> is a leaf, as both children are <code>nil</code>. We would not be able to know whether we have come back from left or right! The traversal will circle around at <code>x</code> forever.</p>
 <p><img
-    src="/images/fromlefttoright.jpg" alt="From Left to Right"
-        srcset="/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w"
-     width="2441"  height="2067" loading="lazy">
+    src="/images/fromlefttoright.jpg" alt="From Left to Right"srcset="/images/fromlefttoright-400w.jpg 400w,/images/fromlefttoright-600w.jpg 600w,/images/fromlefttoright-800w.jpg 800w,/images/fromlefttoright-1000w.jpg 1000w,/images/fromlefttoright-1200w.jpg 1200w,/images/fromlefttoright.jpg 2441w" width="2441"  height="2067" loading="lazy">
 {:width=&ldquo;36px&rdquo;}.</p>
 <p>The solution is that we never come from right at a leaf node. When we reach a leaf node from its left, we directly move upwards.</p>
 <div class="highlight"><pre  class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">key</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>

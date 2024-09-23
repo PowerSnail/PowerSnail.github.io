@@ -106,24 +106,18 @@
 &lt;p&gt;Here&amp;rsquo;s the CPU usage&amp;mdash;specifically the usage of core 13, 14, and 15&amp;mdash;when playing a H.265 video, &lt;strong&gt;without&lt;/strong&gt; hardware acceleration:&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp&#34; alt=&#34;An image showing that the usages of the three cores are above 80% during transcoding&#34;
-        srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp 1862w&#34;
-     width=&#34;1862&#34;  height=&#34;162&#34; &gt;
+    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp&#34; alt=&#34;An image showing that the usages of the three cores are above 80% during transcoding&#34;srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-no-gpu.webp 1862w&#34; width=&#34;1862&#34;  height=&#34;162&#34; &gt;
 
     &lt;figcaption&gt;CPU usage without hardware acceleration&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;After enabling hardware acceleration, when playing the same video, the core usages drop to below 40%, and you can see from the &lt;code&gt;nvtop&lt;/code&gt; (a tool which displays GPU usage), that a FFmpeg process is utilizing the GPU. Now, obviously this data is just a snapshot and is noisy, given all the other processes running on the machine. Although I don&amp;rsquo;t have a clean, isolated, long-lasting series of data showing the history of CPU usage, it is my observation that the drop is both significant and consistent through time. For one, it no longer causes FPS to fluctuate, when a video starts to play while I&amp;rsquo;m in the middle of a game.&lt;/p&gt;
 &lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp&#34; alt=&#34;An image showing that the three cores are utilized below 40%&#34;
-        srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp 1862w&#34;
-     width=&#34;1862&#34;  height=&#34;162&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp&#34; alt=&#34;An image showing that the three cores are utilized below 40%&#34;srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-400w.webp 400w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-600w.webp 600w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-800w.webp 800w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/cpu-usage-with-gpu.webp 1862w&#34; width=&#34;1862&#34;  height=&#34;162&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;CPU usage with hardware acceleration&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;figure&gt;
     &lt;img
-    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/gpu-usage.webp&#34; alt=&#34;An image showing GPU usage during transcoding, highlighted is a process of FFmpeg utilizing&#34;
-        srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/gpu-usage-400w.webp 400w,/2023/jellyfin-nvidia-docker/gpu-usage-600w.webp 600w,/2023/jellyfin-nvidia-docker/gpu-usage-800w.webp 800w,/2023/jellyfin-nvidia-docker/gpu-usage-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/gpu-usage-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/gpu-usage.webp 1916w&#34;
-     width=&#34;1916&#34;  height=&#34;1218&#34; loading=&#34;lazy&#34;&gt;
+    src=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/gpu-usage.webp&#34; alt=&#34;An image showing GPU usage during transcoding, highlighted is a process of FFmpeg utilizing&#34;srcset=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/gpu-usage-400w.webp 400w,/2023/jellyfin-nvidia-docker/gpu-usage-600w.webp 600w,/2023/jellyfin-nvidia-docker/gpu-usage-800w.webp 800w,/2023/jellyfin-nvidia-docker/gpu-usage-1000w.webp 1000w,/2023/jellyfin-nvidia-docker/gpu-usage-1200w.webp 1200w,/2023/jellyfin-nvidia-docker/gpu-usage.webp 1916w&#34; width=&#34;1916&#34;  height=&#34;1218&#34; loading=&#34;lazy&#34;&gt;
 
     &lt;figcaption&gt;GPU usage during transcoding&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;p&gt;And of course, hardware acceleration isn&amp;rsquo;t just making the GPU busier and the CPU idler; another benefit is that, titularly, the video is transcoded faster. This isn&amp;rsquo;t noticeable in the middle of playing a video, because Jellyfin would, like any competent streaming software, transcode the next chunk when you are still watching the previous one.&lt;/p&gt;
