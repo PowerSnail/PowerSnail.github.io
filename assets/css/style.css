@@ -214,7 +214,6 @@ body > footer {
   );
   color: transparent !important;
   background-clip: text;
-
 }
 
 .site-nav {
@@ -235,21 +234,38 @@ body > footer {
   display: contents;
 }
 
-.site-nav .site-title-break-line {
+header {
+  transition: background-color 0.2s;
+}
+
+header:has(.site-nav details[open]) {
+  background-color: oklch(from var(--background-alt) calc(l * 0.95) c h);
+  transition: background-color 0.2s;
+}
+
+.site-nav .site-title-more {
+  padding: 8px;
   flex-basis: 100%;
+  display: flex;
+  background-color: var(--background-alt);
+  flex-flow: column;
+  align-items: end;
+  /* box-shadow: 7px 13px 0px 0px rgba(0, 0, 0, 0.34); */
+  border-top: 1px dashed var(--border);
+  border-bottom: 1px dashed var(--border);
 }
 
 .site-nav details summary {
   color: var(--accent);
-  transition:all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .site-nav details summary svg {
-  transition:all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .site-nav details[open] summary svg {
-  transform:rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .site-nav details summary::marker {

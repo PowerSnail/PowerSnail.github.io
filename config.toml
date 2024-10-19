@@ -28,6 +28,7 @@ theme_color = "#bd1b37"
 responsiveImageSizes = [400, 600, 800, 1000, 1200]
 # christmas = true
 # mooncake = true
+halloween = true
 
 [permalinks]
 posts = "/:year/:slug/"
