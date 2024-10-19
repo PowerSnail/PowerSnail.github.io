@@ -231,7 +231,7 @@ body > footer {
   flex-grow: 1;
 }
 
-.site-nav details {
+.site-nav details[open] {
   display: contents;
 }
 
