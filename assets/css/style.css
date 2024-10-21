@@ -79,6 +79,14 @@ img {
   height: auto;
 }
 
+kbd {
+  border: 0.5px solid var(--border);
+  border-radius: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+  box-shadow: 1px 1px 0 1px var(--border);
+}
+
 /* Code blocks */
 .highlight {
   padding: 8px;
