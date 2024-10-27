@@ -41,7 +41,7 @@ build *flags:
 # Push the new site to Github
 publish: build
     touch build/public/.nojekyll
-    mv build/temp "/tmp/deleted-blog-temp-$(date +%s)"
+    mv build/temp "/tmp/deleted-blog-temp-$(date +%s)" || true
     mkdir -p build/temp
     cp -r .git build/temp/.git
     cd build/temp && git switch --force gh-pages && git pull
