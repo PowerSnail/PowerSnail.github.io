@@ -1,0 +1,40 @@
+name: Publish Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Hugo
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y hugo just fd-find wget curl pandoc
+
+      - name: Install LightningCSS & prettier
+        run: |
+          npm install -g lightningcss
+          npm install -g prettier
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Install python dependencies
+        run: |
+          uv sync
+
+      - name: Publish Site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          uv run just publish
+        permissions:
+          contents: write
