@@ -2,7 +2,7 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tags on SnailShell</title>
-  <link>https://powersnail.com/tags/</link><link rel="self" href="https://powersnail.com/tags/index.xml"></link><updated>Sun, 22 Sep 2024 00:00:00 +0000</updated>
+  <link>https://powersnail.com/tags/</link><link rel="self" href="https://powersnail.com/tags/index.xml"></link><updated>Mon, 21 Oct 2024 00:00:00 +0000</updated>
   <id>https://powersnail.com/tags/</id>
 
   <author>
@@ -14,6 +14,36 @@
   <description>Recent content in Tags on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Computer</title>
+    <link rel="alternate">https://powersnail.com/tags/computer/</link>
+    <published>Mon, 21 Oct 2024 00:00:00 +0000</published>
+    <updated>Mon, 21 Oct 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/computer/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Tmux</title>
+    <link rel="alternate">https://powersnail.com/tags/tmux/</link>
+    <published>Mon, 21 Oct 2024 00:00:00 +0000</published>
+    <updated>Mon, 21 Oct 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/tmux/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
   
   <entry>
     <author>
@@ -310,21 +340,6 @@
     <updated>Sun, 19 Feb 2023 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/tags/audio/</id>
-    <summary type="html"></summary>
-    <content type="html"></content>
-    <category>tags</category>
-  </entry>
-  
-  <entry>
-    <author>
-      <name>PowerSnail</name>
-    </author>
-    <title type="html">Computer</title>
-    <link rel="alternate">https://powersnail.com/tags/computer/</link>
-    <published>Sun, 19 Feb 2023 00:00:00 +0000</published>
-    <updated>Sun, 19 Feb 2023 00:00:00 +0000</updated>
-    
-    <id>https://powersnail.com/tags/computer/</id>
     <summary type="html"></summary>
     <content type="html"></content>
     <category>tags</category>

@@ -2,7 +2,7 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Computer on SnailShell</title>
-  <link>https://powersnail.com/tags/computer/</link><link rel="self" href="https://powersnail.com/tags/computer/index.xml"></link><updated>Sun, 19 Feb 2023 00:00:00 +0000</updated>
+  <link>https://powersnail.com/tags/computer/</link><link rel="self" href="https://powersnail.com/tags/computer/index.xml"></link><updated>Mon, 21 Oct 2024 00:00:00 +0000</updated>
   <id>https://powersnail.com/tags/computer/</id>
 
   <author>
@@ -14,6 +14,60 @@
   <description>Recent content in Computer on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">&lt;code&gt;tmux&lt;/code&gt; - Edit the Current Pane in Neovim</title>
+    <link rel="alternate">https://powersnail.com/2024/tmux-edit-in-neovim/</link>
+    <published>Mon, 21 Oct 2024 00:00:00 +0000</published>
+    <updated>Mon, 21 Oct 2024 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2024/tmux-edit-in-neovim/</id>
+    <summary type="html">TL;DR: I put the following lines into my .tmux.conf:
+# Edit current pane in neovim bind e run &amp;#34;tmux capture-pane -S 0 -p -J &amp;gt; /tmp/tmux-edit &amp;amp;&amp;amp; tmux new-window &amp;#39;nvim /tmp/tmux-edit&amp;#39;&amp;#34; bind E run &amp;#34;tmux capture-pane -S - -p -J &amp;gt; /tmp/tmux-edit &amp;amp;&amp;amp; tmux new-window &amp;#39;nvim /tmp/tmux-edit&amp;#39;&amp;#34; Navigation in Neovim ## tmux and neovim are essential parts of my workflow, both of which are very good at being worked on with keyboard only.</summary>
+    <content type="html">&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: I put the following lines into my &lt;code&gt;.tmux.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Edit current pane in neovim&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;bind&lt;/span&gt; e run &lt;span class=&#34;s2&#34;&gt;&amp;#34;tmux capture-pane -S 0 -p -J &amp;gt; /tmp/tmux-edit &amp;amp;&amp;amp; tmux new-window &amp;#39;nvim /tmp/tmux-edit&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;bind&lt;/span&gt; E run &lt;span class=&#34;s2&#34;&gt;&amp;#34;tmux capture-pane -S - -p -J &amp;gt; /tmp/tmux-edit &amp;amp;&amp;amp; tmux new-window &amp;#39;nvim /tmp/tmux-edit&amp;#39;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;navigation-in-neovim&#34;&gt;
+  Navigation in Neovim
+  &lt;a href=&#34;#navigation-in-neovim&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux&lt;/code&gt; and &lt;code&gt;neovim&lt;/code&gt; are essential parts of my workflow, both of which are very good at being worked on with keyboard only.&lt;/p&gt;
+&lt;p&gt;Having recently invested in &lt;code&gt;neovim&lt;/code&gt; plugins like &lt;a href=&#34;https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-jump2d.md&#34;&gt;mini.jump2d&lt;/a&gt; and &lt;a href=&#34;https://github.com/ggandor/leap.nvim&#34;&gt;leap.nvim&lt;/a&gt;, I find myself increasingly spoiled. These two plugins, in slightly different ways, provide the capability of moving the cursor to where you are looking at, by identifying that location with a few key strokes. The premise is that if you have somewhere you want the cursor to go, it&amp;rsquo;s likely you are already staring at it, so let&amp;rsquo;s show some labels all around the buffer, and you can type the label right at the destination. &lt;em&gt;leap.nvim&lt;/em&gt; does it by having you type a 2-gram, while &lt;em&gt;mini.jump2d&lt;/em&gt; enumerating locations such as word boundaries, etc.&lt;/p&gt;
+&lt;p&gt;The mechanism are better demonstrated by their own docs, but essentially for me, it&amp;rsquo;s like semi-auto eyeball tracking. This kind of navigation might not give you the path of fewest number of keystrokes, but it requires the least amount cognitive load in my experience (compared to reading relative line numbers for example), because it incurs very little context switching in my mind.&lt;/p&gt;
+&lt;h2 id=&#34;tweaking-tmux&#34;&gt;
+  Tweaking tmux
+  &lt;a href=&#34;#tweaking-tmux&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Newly spoiled, I find the experience of moving around in &lt;code&gt;tmux&lt;/code&gt;&amp;rsquo;s copy mode increasingly lacking. I habitually type &lt;code&gt;s&lt;/code&gt; (my binding to &lt;code&gt;leap.nvim&lt;/code&gt;) when I&amp;rsquo;m in &lt;code&gt;tmux&lt;/code&gt;, while staring into the target position waiting for my key stroke hints to show up, as if waving a credit card at tip jar. I want to replicate the leaps and jumps everywhere in the terminal, especially in &lt;code&gt;tmux&lt;/code&gt;. (In fact, I want my entire GUI screen to do this as well: show me all clickable/focusable areas, with a label that I can navigate to; but that&amp;rsquo;s a different story.)&lt;/p&gt;
+&lt;p&gt;Instead of trying to replicate the capability in &lt;code&gt;tmux&lt;/code&gt;&amp;mdash;which probably is not only difficult, but also unlikely to provide a 100% identical experience&amp;mdash;I looked for a shortcut, like any respectable lazy engineer would do: I&amp;rsquo;ll just open the current pane in &lt;code&gt;neovim&lt;/code&gt;. This way, I don&amp;rsquo;t have to re-invent the wheel and only have to configure my navigation once in one place.&lt;/p&gt;
+&lt;p&gt;In the end, all that needs to be done is a two-line configuration in &lt;code&gt;.tmux.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Edit current pane in neovim&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;bind&lt;/span&gt; e run &lt;span class=&#34;s2&#34;&gt;&amp;#34;tmux capture-pane -S 0 -p -J &amp;gt; /tmp/tmux-edit &amp;amp;&amp;amp; tmux new-window &amp;#39;nvim /tmp/tmux-edit&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;bind&lt;/span&gt; E run &lt;span class=&#34;s2&#34;&gt;&amp;#34;tmux capture-pane -S - -p -J &amp;gt; /tmp/tmux-edit &amp;amp;&amp;amp; tmux new-window &amp;#39;nvim /tmp/tmux-edit&amp;#39;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Some explanations [@marriottTmux1LinuxManual2024]:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tmux capture-pane&lt;/code&gt; gets the content of the current pane;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-J&lt;/code&gt; unwraps line breaks created by &lt;code&gt;tmux&lt;/code&gt;, this makes stuff like URL, string literals more greppable and more copyable.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt; pipes it to &lt;code&gt;stdout&lt;/code&gt;, which gets piped into &lt;code&gt;/tmp/tmux-edit&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tmux new-window &#39;nvim /tmp/tmux-edit&#39;&lt;/code&gt; runs neovim in a new tmux window.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-S&lt;/code&gt; specifies the line at which the capture starts; &lt;code&gt;0&lt;/code&gt; is the topmost visible line, while &lt;code&gt;-&lt;/code&gt; is the topmost line in the pane&amp;rsquo;s history. With this, I created two variants of the command: lowercase &lt;kbd&gt;e&lt;/kbd&gt; is bound to capturing the currently visible lines, which I use the most; and capital &lt;kbd&gt;E&lt;/kbd&gt; is bound to capturing the entire history.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;img
+    src=&#34;https://powersnail.com/2024/tmux-edit-in-neovim/illustration-tmux-neovim.svg&#34; alt=&#34;A sketch that illustrates the concept of this configuration&#34; width=&#34;926.0425818640132&#34;  height=&#34;588.4711867724441&#34; style=&#34;max-width: 100%; height: auto&#34; width=&#34;926.0425818640132&#34;  height=&#34;588.4711867724441&#34; &gt;
+
+    &lt;figcaption&gt;Diagram: Piping tmux pane to neovim&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;h2 id=&#34;room-for-improvements&#34;&gt;
+  Room for Improvements
+  &lt;a href=&#34;#room-for-improvements&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;One, this is not going to work if I try to edit two panes at the same time. A more elegant solution is to create a uniquely-named temp file in place of &lt;code&gt;/tmp/tmux-edit&lt;/code&gt;, but that takes away the simplicity of the solution, as we&amp;rsquo;ll have to deal with quoting &amp;amp; escaping of quotation marks inside a shell command, inside an argument to &lt;code&gt;tmux new-window&lt;/code&gt; inside a shell command inside &lt;code&gt;tmux&lt;/code&gt; configuration file, while making sure that the filename variable is expanding at the right stage. It is not going to be fun. I&amp;rsquo;ll settle with no concurrency for now.&lt;/p&gt;
+&lt;p&gt;Two, &lt;code&gt;neovim&lt;/code&gt; doesn&amp;rsquo;t necessarily do too well with very, very long lines, and it is entirely possible that somewhere in the pane history, I &lt;code&gt;cat&lt;/code&gt; some minified file by accident.&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
   
   <entry>
     <author>
