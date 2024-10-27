@@ -7,7 +7,7 @@ slug: tmux-edit-in-neovim
 tags:
     - tmux
     - computer
-draft: true
+draft: false
 references:
     - id: marriottTmux1LinuxManual2024
       accessed:
