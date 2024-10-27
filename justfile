@@ -44,7 +44,7 @@ publish: build
     mv build/temp "/tmp/deleted-blog-temp-$(date +%s)" || true
     mkdir -p build/temp
     cp -r .git build/temp/.git
-    cd build/temp && git switch --force gh-pages && git pull
+    cd build/temp && git switch -c --force gh-pages && git pull
     mv build/temp/.git build/public/.git
     cd build/public \
       && git add . \

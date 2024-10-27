@@ -24,8 +24,8 @@ jobs:
         run: |
           npm install -g lightningcss
           npm install -g prettier
-          sudo ln -s "$(npm get prefix)/bin/prettier" /usr/bin/prettier
-          sudo ln -s "$(npm get prefix)/bin/lightningcss" /usr/bin/lightningcss
+          sudo ln -s "$(npm get prefix)/bin/prettier" /bin/prettier
+          sudo ln -s "$(npm get prefix)/bin/lightningcss" /bin/lightningcss
 
       - name: Install uv
         run: |
