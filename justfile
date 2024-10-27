@@ -75,12 +75,4 @@ _post-process-html sitedir:
     fd -t f ".html" "{{ sitedir }}/" --exec python tool_scripts/add_bibliography.py
     python tool_scripts/generate_responsive_images.py "{{ sitedir }}/"
     python tool_scripts/check_dead_links.py "{{ sitedir }}/"
-
-_format-html path:
-    #!/bin/bash
-    output=$(tidy --wrap 0 --indent yes --drop-empty-elements no -m -q {{ path }} 2>&1)
-    if [[ $? != 0 ]] 
-    then
-        echo {{ path }}
-        echo $output
-    fi
+    fd -t f ".html" "{{ sitedir }}/" --exec prettier --ignore-path -w
