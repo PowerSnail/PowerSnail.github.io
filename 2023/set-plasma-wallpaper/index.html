@@ -1,217 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>
+      Setting Wallpapers for Multiple Monitors through DBus for KDE Plasma ·
+      SnailShell
+    </title>
 
-
-
-<meta name="author" content="PowerSnail">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
-
-<title>Setting Wallpapers for Multiple Monitors through DBus for KDE Plasma · SnailShell</title>
-
-<meta property="og:title" content="Setting Wallpapers for Multiple Monitors through DBus for KDE Plasma" />
-<meta property="og:site_name" content="SnailShell" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://powersnail.com/2023/set-plasma-wallpaper/" />
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
-
-
-
-
-<link rel="canonical" href="https://powersnail.com/2023/set-plasma-wallpaper/"/>
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
-  </head>
-<body>
-  
-  
-    <div
-  style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  "
->
-  <div style="grid-column: 3/-3; position: relative">
-    <img
-      src="/images/halloween.webp"
-      width="256px"
-      height="48px"
-      style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;"
+    <meta
+      property="og:title"
+      content="Setting Wallpapers for Multiple Monitors through DBus for KDE Plasma"
     />
-  </div>
-</div>
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2023/set-plasma-wallpaper/"
+    />
 
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2023/set-plasma-wallpaper/"
+    />
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
+
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
           </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article id="post-main">
+        <h1>
+          Setting Wallpapers for Multiple Monitors through DBus for KDE Plasma
+        </h1>
+
+        <div class="metadata">
+          <time datetime="2023-02-08T00:00:00Z">08 Feb 2023</time>
+          · 827 words · 4 minutes read
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
+        <hr />
 
-  <main>
-<article id="post-main"><h1>
-  Setting Wallpapers for Multiple Monitors through DBus for KDE Plasma
-  
-
-</h1>
-
-
-
-<div class="metadata">
-    <time datetime="2023-02-08T00:00:00Z">08 Feb 2023</time>
-    ·
-    827 words
-    ·
-    4 minutes read
-</div>
-<hr />
-
-<h2 id="the-problem">
-  The Problem
-  <a href="#the-problem"><small>##</small></a>
-</h2>
-<p>KDE Plasma is my favorite Linux DE, and it has its quirks and warts.
-The support for multiple monitors, for example, is fairly buggy at times,
-especially when monitors are turned on and off.
-The way it deals with multiple monitors seems to be based on some sort of
-numerical index that doesn&rsquo;t map itself to the monitors&rsquo; UUIDs, so
-when the configuration changes, desktop settings can be shifted around.</p>
-<p>I have wallpapers of different shapes on each monitor, because my left
-monitor is vertical, the right horizontal, and they get messed up when
-the machine resumes from sleep or when the monitors are turned off manually.
-There appears to be no way of tying a wallpaper to a physical monitor. So, I have
-to frequently reset the appropriate wallpapers.</p>
-<p>Plasma already provides a command-line tool for setting wallpaper:
-<code>plasma-apply-wallpaperimage</code>, but it doesn&rsquo;t have the ability to address each
-monitor either.</p>
-<h2 id="the-solution">
-  The Solution
-  <a href="#the-solution"><small>##</small></a>
-</h2>
-<p>Fortunately, there&rsquo;s a Band-Aid for every wart, if you are comfortable making
-your own Band-Aid. And in this case, my problem can be &ldquo;fixed&rdquo; by resetting
-the wallpapers with a script.</p>
-<p>Plasma can be scripted with JavaScript through its DBus interface, and there&rsquo;s
-a fairly comprehensive documentation (The KDE Community, 2023).</p>
-<p>The first step is getting the desktops in a deterministic order.
-Desktops can be retrieved by a global function <code>desktops()</code> which &ldquo;returns an
-array of all desktops that currently exist&rdquo;(The KDE Community, 2023).
-Each <code>Desktop</code> object has a <code>screen</code> property, a numerical ID of the
-associated monitor, but since Plasma doesn&rsquo;t provide any hardware information or
-stable ID of the monitor, the only way to sort the monitors deterministically
-seems to be using the screen&rsquo;s position.
-We sort them from left to right, which is both deterministic, and fairly
-intuitive from the human user&rsquo;s perspective, arguably more so than UUIDs.
-Furthermore, since we are setting wallpapers in the order of the monitors, we
-can also rule out <code>Desktop</code> objects with no associated screen.
-These ideas are stolen from the
-<a href="https://github.com/hhannine/superpaper/blob/219f00aec19a4f0697e37663875eccbfa19b502b/superpaper/wallpaper_processing.py#L687">superpaper project</a>
-(Hänninen, 2019).</p>
-<div class="highlight"><pre  class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">getDesktops</span><span class="p">()</span> <span class="p">{</span>
+        <h2 id="the-problem">
+          The Problem
+          <a href="#the-problem"><small>##</small></a>
+        </h2>
+        <p>
+          KDE Plasma is my favorite Linux DE, and it has its quirks and warts.
+          The support for multiple monitors, for example, is fairly buggy at
+          times, especially when monitors are turned on and off. The way it
+          deals with multiple monitors seems to be based on some sort of
+          numerical index that doesn&rsquo;t map itself to the monitors&rsquo;
+          UUIDs, so when the configuration changes, desktop settings can be
+          shifted around.
+        </p>
+        <p>
+          I have wallpapers of different shapes on each monitor, because my left
+          monitor is vertical, the right horizontal, and they get messed up when
+          the machine resumes from sleep or when the monitors are turned off
+          manually. There appears to be no way of tying a wallpaper to a
+          physical monitor. So, I have to frequently reset the appropriate
+          wallpapers.
+        </p>
+        <p>
+          Plasma already provides a command-line tool for setting wallpaper:
+          <code>plasma-apply-wallpaperimage</code>, but it doesn&rsquo;t have
+          the ability to address each monitor either.
+        </p>
+        <h2 id="the-solution">
+          The Solution
+          <a href="#the-solution"><small>##</small></a>
+        </h2>
+        <p>
+          Fortunately, there&rsquo;s a Band-Aid for every wart, if you are
+          comfortable making your own Band-Aid. And in this case, my problem can
+          be &ldquo;fixed&rdquo; by resetting the wallpapers with a script.
+        </p>
+        <p>
+          Plasma can be scripted with JavaScript through its DBus interface, and
+          there&rsquo;s a fairly comprehensive documentation (The KDE Community,
+          2023).
+        </p>
+        <p>
+          The first step is getting the desktops in a deterministic order.
+          Desktops can be retrieved by a global function
+          <code>desktops()</code> which &ldquo;returns an array of all desktops
+          that currently exist&rdquo;(The KDE Community, 2023). Each
+          <code>Desktop</code> object has a <code>screen</code> property, a
+          numerical ID of the associated monitor, but since Plasma doesn&rsquo;t
+          provide any hardware information or stable ID of the monitor, the only
+          way to sort the monitors deterministically seems to be using the
+          screen&rsquo;s position. We sort them from left to right, which is
+          both deterministic, and fairly intuitive from the human user&rsquo;s
+          perspective, arguably more so than UUIDs. Furthermore, since we are
+          setting wallpapers in the order of the monitors, we can also rule out
+          <code>Desktop</code> objects with no associated screen. These ideas
+          are stolen from the
+          <a
+            href="https://github.com/hhannine/superpaper/blob/219f00aec19a4f0697e37663875eccbfa19b502b/superpaper/wallpaper_processing.py#L687"
+            >superpaper project</a
+          >
+          (Hänninen, 2019).
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">getDesktops</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">desktops</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">d</span> <span class="p">=&gt;</span> <span class="nx">d</span><span class="p">.</span><span class="nx">screen</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">screenGeometry</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">screen</span><span class="p">).</span><span class="nx">left</span> <span class="o">-</span> <span class="nx">screenGeometry</span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">screen</span><span class="p">).</span><span class="nx">left</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><p>The second piece of puzzle is setting the wallpaper to a <code>Desktop</code> object:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">setWallpaper</span><span class="p">(</span><span class="nx">desktop</span><span class="p">,</span> <span class="nx">path</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+        </div>
+        <p>
+          The second piece of puzzle is setting the wallpaper to a
+          <code>Desktop</code> object:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">setWallpaper</span><span class="p">(</span><span class="nx">desktop</span><span class="p">,</span> <span class="nx">path</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">desktop</span><span class="p">.</span><span class="nx">wallpaperPlugin</span> <span class="o">=</span> <span class="s2">&#34;org.kde.image&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">desktop</span><span class="p">.</span><span class="nx">currentConfigGroup</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">(</span><span class="s2">&#34;Wallpaper&#34;</span><span class="p">,</span> <span class="s2">&#34;org.kde.image&#34;</span><span class="p">,</span> <span class="s2">&#34;General&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">desktop</span><span class="p">.</span><span class="nx">writeConfig</span><span class="p">(</span><span class="s2">&#34;Image&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><p>To assign a list of images to all the desktops one by one:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Imagine we have a variable called imageList, an array containing the 
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+        </div>
+        <p>To assign a list of images to all the desktops one by one:</p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Imagine we have a variable called imageList, an array containing the 
 </span></span></span><span class="line"><span class="cl"><span class="c1">// paths of the image files.
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">getDesktops</span><span class="p">().</span><span class="nx">forEach</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nx">desktop</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setWallpaper</span><span class="p">(</span><span class="nx">desktop</span><span class="p">,</span> <span class="nx">imageList</span><span class="p">[</span><span class="nx">i</span> <span class="o">%</span> <span class="nx">imageList</span><span class="p">.</span><span class="nx">length</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div><p>To set one wallpaper for one specific desktop:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Assume the variable `desktop_id` is the (0-based) index of the
+</span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre>
+        </div>
+        <p>To set one wallpaper for one specific desktop:</p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Assume the variable `desktop_id` is the (0-based) index of the
 </span></span></span><span class="line"><span class="cl"><span class="c1">// monitor, counting from left to right.
 </span></span></span><span class="line"><span class="cl"><span class="c1">// And the variable `image_path` being the path to the image.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">setWallpaper</span><span class="p">(</span><span class="nx">getDesktops</span><span class="p">()[</span><span class="nx">desktop_id</span><span class="p">],</span> <span class="nx">image_path</span><span class="p">);</span></span></span></code></pre></div><h2 id="dbus-interface">
-  DBus Interface
-  <a href="#dbus-interface"><small>##</small></a>
-</h2>
-<p>To run this script, we use the DBus Interface of Plasma, which provides a function
-called <code>evaluateScript</code>:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript <span class="s2">&#34;...&#34;</span></span></span></code></pre></div><p>&hellip;or invoke it with your favorite DBus tooling.</p>
-<h2 id="parameterize">
-  Parameterize
-  <a href="#parameterize"><small>##</small></a>
-</h2>
-<p><code>evaluateScript</code> only accepts a self-contained script.
-You can hard code the path of the images, but there&rsquo;s no way to supply the image
-paths as arguments to it, so some sort of string manipulation is required if you
-want to point Plasma to some arbitrary image.</p>
-<p>For me, someone whose home directory is already filled with various Python
-glues and <em>ad hoc</em> scripts, nothing beats some composable <em>f-strings</em>, string
-replacements, and a nice familiar command-line interface.
-Any language good with string manipulation and a convenient DBus interface is
-a suitable tool for this step.
-Or, alternatively, you could also leave the path hard-coded, and place or link
-different images to that path before calling the script.</p>
-<p>Here&rsquo;s my script. I can set wallpapers to all the desktops by calling
-<code>python wallpaper.py all image1.jpg image2.jpg ...</code>, and set wallpaper for the 2nd
-monitor from the left with <code>python wallpaper.py one 1 image1.jpg</code>.</p>
-<div class="highlight"><pre  class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">dbus</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">setWallpaper</span><span class="p">(</span><span class="nx">getDesktops</span><span class="p">()[</span><span class="nx">desktop_id</span><span class="p">],</span> <span class="nx">image_path</span><span class="p">);</span></span></span></code></pre>
+        </div>
+        <h2 id="dbus-interface">
+          DBus Interface
+          <a href="#dbus-interface"><small>##</small></a>
+        </h2>
+        <p>
+          To run this script, we use the DBus Interface of Plasma, which
+          provides a function called <code>evaluateScript</code>:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript <span class="s2">&#34;...&#34;</span></span></span></code></pre>
+        </div>
+        <p>&hellip;or invoke it with your favorite DBus tooling.</p>
+        <h2 id="parameterize">
+          Parameterize
+          <a href="#parameterize"><small>##</small></a>
+        </h2>
+        <p>
+          <code>evaluateScript</code> only accepts a self-contained script. You
+          can hard code the path of the images, but there&rsquo;s no way to
+          supply the image paths as arguments to it, so some sort of string
+          manipulation is required if you want to point Plasma to some arbitrary
+          image.
+        </p>
+        <p>
+          For me, someone whose home directory is already filled with various
+          Python glues and <em>ad hoc</em> scripts, nothing beats some
+          composable <em>f-strings</em>, string replacements, and a nice
+          familiar command-line interface. Any language good with string
+          manipulation and a convenient DBus interface is a suitable tool for
+          this step. Or, alternatively, you could also leave the path
+          hard-coded, and place or link different images to that path before
+          calling the script.
+        </p>
+        <p>
+          Here&rsquo;s my script. I can set wallpapers to all the desktops by
+          calling
+          <code>python wallpaper.py all image1.jpg image2.jpg ...</code>, and
+          set wallpaper for the 2nd monitor from the left with
+          <code>python wallpaper.py one 1 image1.jpg</code>.
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">dbus</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">typer</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
@@ -281,57 +337,70 @@ monitor from the left with <code>python wallpaper.py one 1 image1.jpg</code>.</p
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">()</span></span></span></code></pre></div><h2 id="references">
-  References
-  <a href="#references"><small>##</small></a>
-</h2>
-<p>Hänninen, H. (2019). <em>Superpaper</em> [Python]. <a href="https://github.com/hhannine/superpaper/blob/219f00aec19a4f0697e37663875eccbfa19b502b/superpaper/wallpaper_processing.py">superpaper/wallpaper_processing.py at 219f00aec19a4f0697e37663875eccbfa19b502b · hhannine/superpaper · GitHub</a> (Original work published 2019)</p>
-<p>The KDE Community. (2023). <em>API documentation for Plasma scripting API</em>. Developer. <a href="https://develop.kde.org/docs/extend/plasma/scripting/api/">API documentation | Developer</a></p>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">()</span></span></span></code></pre>
+        </div>
+        <h2 id="references">
+          References
+          <a href="#references"><small>##</small></a>
+        </h2>
+        <p>
+          Hänninen, H. (2019). <em>Superpaper</em> [Python].
+          <a
+            href="https://github.com/hhannine/superpaper/blob/219f00aec19a4f0697e37663875eccbfa19b502b/superpaper/wallpaper_processing.py"
+            >superpaper/wallpaper_processing.py at
+            219f00aec19a4f0697e37663875eccbfa19b502b · hhannine/superpaper ·
+            GitHub</a
+          >
+          (Original work published 2019)
+        </p>
+        <p>
+          The KDE Community. (2023).
+          <em>API documentation for Plasma scripting API</em>. Developer.
+          <a href="https://develop.kde.org/docs/extend/plasma/scripting/api/"
+            >API documentation | Developer</a
+          >
+        </p>
 
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a href="/tags/computer-science"><code>Computer Science</code></a
+              >, <a href="/tags/python"><code>Python</code></a
+              >, <a href="/tags/dbus"><code>DBus</code></a
+              >, <a href="/tags/javascript"><code>Javascript</code></a
+              >, <a href="/tags/plasma"><code>Plasma</code></a
+              >, <a href="/tags/kde"><code>KDE</code></a>
+            </p>
+          </section>
 
-  
-
-
-  <footer>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg
-          aria-label="tags"
-          class="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="16"
-          height="16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
-            clip-rule="evenodd"
-          />
-        </svg>
-           <a href="/tags/computer-science"><code>Computer Science</code></a>, <a href="/tags/python"><code>Python</code></a>, <a href="/tags/dbus"><code>DBus</code></a>, <a href="/tags/javascript"><code>Javascript</code></a>, <a href="/tags/plasma"><code>Plasma</code></a>, <a href="/tags/kde"><code>KDE</code></a>
-      </p>
-      
-    </section>
-
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2023.set-plasma-wallpaper@powersnail.com">comment.2023.set-plasma-wallpaper@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
-
-
-  </main><footer>
-  <article><div>© PowerSnail 2023</div>
-  </article>
-</footer>
-
-</body>
+          <section>
+            <p>
+              Leave a comment via email:
+              <a href="mailto:comment.2023.set-plasma-wallpaper@powersnail.com"
+                >comment.2023.set-plasma-wallpaper@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2023</div></article>
+    </footer>
+  </body>
 </html>

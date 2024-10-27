@@ -1,215 +1,339 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>tmux - Edit the Current Pane in Neovim · SnailShell</title>
 
+    <meta
+      property="og:title"
+      content="tmux - Edit the Current Pane in Neovim"
+    />
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2024/tmux-edit-in-neovim/"
+    />
 
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
 
-<meta name="author" content="PowerSnail">
+    <meta
+      name="description"
+      content="A custom binding that send the current TMUX pane to neovim."
+    />
+    <meta
+      property="og:description"
+      content="A custom binding that send the current TMUX pane to neovim."
+    />
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2024/tmux-edit-in-neovim/"
+    />
 
-<title>tmux - Edit the Current Pane in Neovim · SnailShell</title>
-
-<meta property="og:title" content="tmux - Edit the Current Pane in Neovim">
-<meta property="og:site_name" content="SnailShell">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://powersnail.com/2024/tmux-edit-in-neovim/">
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg">
-
-
-
-  
-  <meta name="description" content="A custom binding that send the current TMUX pane to neovim.">
-  <meta property="og:description" content="A custom binding that send the current TMUX pane to neovim.">
-
-
-<link rel="canonical" href="https://powersnail.com/2024/tmux-edit-in-neovim/">
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
   </head>
-<body>
-  
-  
-    <div style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  ">
-  <div style="grid-column: 3/-3; position: relative">
-    <img src="/images/halloween.webp" width="256px" height="48px" style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;">
-  </div>
-</div>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
 
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
+          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                ></path>
+              </svg>
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
-</svg>
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
-          </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+    <main>
+      <article id="post-main">
+        <h1><code>tmux</code> - Edit the Current Pane in Neovim</h1>
+
+        <div id="title-subtitle">
+          A custom binding that send the current TMUX pane to neovim.
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
 
-  <main>
-<article id="post-main"><h1>
-  <code>tmux</code> - Edit the Current Pane in Neovim
-  
+        <div class="metadata">
+          <time datetime="2024-10-21T00:00:00Z">21 Oct 2024</time>
+          · 702 words · 4 minutes read
+        </div>
+        <hr />
 
-</h1>
-
-
-  <div id="title-subtitle">A custom binding that send the current TMUX pane to neovim.</div>
-
-
-<div class="metadata">
-    <time datetime="2024-10-21T00:00:00Z">21 Oct 2024</time>
-    ·
-    702 words
-    ·
-    4 minutes read
-</div>
-<hr>
-
-<p><strong>TL;DR</strong>: I put the following lines into my <code>.tmux.conf</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Edit current pane in neovim</span>
+        <p>
+          <strong>TL;DR</strong>: I put the following lines into my
+          <code>.tmux.conf</code>:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Edit current pane in neovim</span>
 </span></span><span class="line"><span class="cl"><span class="nb">bind</span> e run <span class="s2">"tmux capture-pane -S 0 -p -J &gt; /tmp/tmux-edit &amp;&amp; tmux new-window 'nvim /tmp/tmux-edit'"</span>
-</span></span><span class="line"><span class="cl"><span class="nb">bind</span> E run <span class="s2">"tmux capture-pane -S - -p -J &gt; /tmp/tmux-edit &amp;&amp; tmux new-window 'nvim /tmp/tmux-edit'"</span></span></span></code></pre></div><h2 id="navigation-in-neovim">
-  Navigation in Neovim
-  <a href="#navigation-in-neovim"><small>##</small></a>
-</h2>
-<p><code>tmux</code> and <code>neovim</code> are essential parts of my workflow, both of which are very good at being worked on with keyboard only.</p>
-<p>Having recently invested in <code>neovim</code> plugins like <a href="https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-jump2d.md">mini.jump2d</a> and <a href="https://github.com/ggandor/leap.nvim">leap.nvim</a>, I find myself increasingly spoiled. These two plugins, in slightly different ways, provide the capability of moving the cursor to where you are looking at, by identifying that location with a few key strokes. The premise is that if you have somewhere you want the cursor to go, it’s likely you are already staring at it, so let’s show some labels all around the buffer, and you can type the label right at the destination. <em>leap.nvim</em> does it by having you type a 2-gram, while <em>mini.jump2d</em> enumerating locations such as word boundaries, etc.</p>
-<p>The mechanism are better demonstrated by their own docs, but essentially for me, it’s like semi-auto eyeball tracking. This kind of navigation might not give you the path of fewest number of keystrokes, but it requires the least amount cognitive load in my experience (compared to reading relative line numbers for example), because it incurs very little context switching in my mind.</p>
-<h2 id="tweaking-tmux">
-  Tweaking tmux
-  <a href="#tweaking-tmux"><small>##</small></a>
-</h2>
-<p>Newly spoiled, I find the experience of moving around in <code>tmux</code>’s copy mode increasingly lacking. I habitually type <code>s</code> (my binding to <code>leap.nvim</code>) when I’m in <code>tmux</code>, while staring into the target position waiting for my key stroke hints to show up, as if waving a credit card at tip jar. I want to replicate the leaps and jumps everywhere in the terminal, especially in <code>tmux</code>. (In fact, I want my entire GUI screen to do this as well: show me all clickable/focusable areas, with a label that I can navigate to; but that’s a different story.)</p>
-<p>Instead of trying to replicate the capability in <code>tmux</code>—which probably is not only difficult, but also unlikely to provide a 100% identical experience—I looked for a shortcut, like any respectable lazy engineer would do: I’ll just open the current pane in <code>neovim</code>. This way, I don’t have to re-invent the wheel and only have to configure my navigation once in one place.</p>
-<p>In the end, all that needs to be done is a two-line configuration in <code>.tmux.conf</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Edit current pane in neovim</span>
+</span></span><span class="line"><span class="cl"><span class="nb">bind</span> E run <span class="s2">"tmux capture-pane -S - -p -J &gt; /tmp/tmux-edit &amp;&amp; tmux new-window 'nvim /tmp/tmux-edit'"</span></span></span></code></pre>
+        </div>
+        <h2 id="navigation-in-neovim">
+          Navigation in Neovim
+          <a href="#navigation-in-neovim"><small>##</small></a>
+        </h2>
+        <p>
+          <code>tmux</code> and <code>neovim</code> are essential parts of my
+          workflow, both of which are very good at being worked on with keyboard
+          only.
+        </p>
+        <p>
+          Having recently invested in <code>neovim</code> plugins like
+          <a
+            href="https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-jump2d.md"
+            >mini.jump2d</a
+          >
+          and <a href="https://github.com/ggandor/leap.nvim">leap.nvim</a>, I
+          find myself increasingly spoiled. These two plugins, in slightly
+          different ways, provide the capability of moving the cursor to where
+          you are looking at, by identifying that location with a few key
+          strokes. The premise is that if you have somewhere you want the cursor
+          to go, it’s likely you are already staring at it, so let’s show some
+          labels all around the buffer, and you can type the label right at the
+          destination. <em>leap.nvim</em> does it by having you type a 2-gram,
+          while <em>mini.jump2d</em> enumerating locations such as word
+          boundaries, etc.
+        </p>
+        <p>
+          The mechanism are better demonstrated by their own docs, but
+          essentially for me, it’s like semi-auto eyeball tracking. This kind of
+          navigation might not give you the path of fewest number of keystrokes,
+          but it requires the least amount cognitive load in my experience
+          (compared to reading relative line numbers for example), because it
+          incurs very little context switching in my mind.
+        </p>
+        <h2 id="tweaking-tmux">
+          Tweaking tmux
+          <a href="#tweaking-tmux"><small>##</small></a>
+        </h2>
+        <p>
+          Newly spoiled, I find the experience of moving around in
+          <code>tmux</code>’s copy mode increasingly lacking. I habitually type
+          <code>s</code> (my binding to <code>leap.nvim</code>) when I’m in
+          <code>tmux</code>, while staring into the target position waiting for
+          my key stroke hints to show up, as if waving a credit card at tip jar.
+          I want to replicate the leaps and jumps everywhere in the terminal,
+          especially in <code>tmux</code>. (In fact, I want my entire GUI screen
+          to do this as well: show me all clickable/focusable areas, with a
+          label that I can navigate to; but that’s a different story.)
+        </p>
+        <p>
+          Instead of trying to replicate the capability in
+          <code>tmux</code>—which probably is not only difficult, but also
+          unlikely to provide a 100% identical experience—I looked for a
+          shortcut, like any respectable lazy engineer would do: I’ll just open
+          the current pane in <code>neovim</code>. This way, I don’t have to
+          re-invent the wheel and only have to configure my navigation once in
+          one place.
+        </p>
+        <p>
+          In the end, all that needs to be done is a two-line configuration in
+          <code>.tmux.conf</code>:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Edit current pane in neovim</span>
 </span></span><span class="line"><span class="cl"><span class="nb">bind</span> e run <span class="s2">"tmux capture-pane -S 0 -p -J &gt; /tmp/tmux-edit &amp;&amp; tmux new-window 'nvim /tmp/tmux-edit'"</span>
-</span></span><span class="line"><span class="cl"><span class="nb">bind</span> E run <span class="s2">"tmux capture-pane -S - -p -J &gt; /tmp/tmux-edit &amp;&amp; tmux new-window 'nvim /tmp/tmux-edit'"</span></span></span></code></pre></div><p>Some explanations <span class="citation" data-cites="marriottTmux1LinuxManual2024">(<a href="#ref-marriottTmux1LinuxManual2024" role="doc-biblioref">Marriott
-2024</a>)</span>:</p>
-<ul>
-<li><code>tmux capture-pane</code> gets the content of the current pane;</li>
-<li><code>-J</code> unwraps line breaks created by <code>tmux</code>, this makes stuff like URL, string literals more greppable and more copyable.</li>
-<li><code>-p</code> pipes it to <code>stdout</code>, which gets piped into <code>/tmp/tmux-edit</code>;</li>
-<li><code>tmux new-window 'nvim /tmp/tmux-edit'</code> runs neovim in a new tmux window.</li>
-<li><code>-S</code> specifies the line at which the capture starts; <code>0</code> is the topmost visible line, while <code>-</code> is the topmost line in the pane’s history. With this, I created two variants of the command: lowercase <kbd>e</kbd> is bound to capturing the currently visible lines, which I use the most; and capital <kbd>E</kbd> is bound to capturing the entire history.</li>
-</ul>
-<figure>
-    <img src="/2024/tmux-edit-in-neovim/illustration-tmux-neovim.svg" alt="A sketch that illustrates the concept of this configuration" width="926.0425818640132" height="588.4711867724441" style="max-width: 100%; height: auto">
+</span></span><span class="line"><span class="cl"><span class="nb">bind</span> E run <span class="s2">"tmux capture-pane -S - -p -J &gt; /tmp/tmux-edit &amp;&amp; tmux new-window 'nvim /tmp/tmux-edit'"</span></span></span></code></pre>
+        </div>
+        <p>
+          Some explanations
+          <span class="citation" data-cites="marriottTmux1LinuxManual2024"
+            >(<a href="#ref-marriottTmux1LinuxManual2024" role="doc-biblioref"
+              >Marriott 2024</a
+            >)</span
+          >:
+        </p>
+        <ul>
+          <li>
+            <code>tmux capture-pane</code> gets the content of the current pane;
+          </li>
+          <li>
+            <code>-J</code> unwraps line breaks created by <code>tmux</code>,
+            this makes stuff like URL, string literals more greppable and more
+            copyable.
+          </li>
+          <li>
+            <code>-p</code> pipes it to <code>stdout</code>, which gets piped
+            into <code>/tmp/tmux-edit</code>;
+          </li>
+          <li>
+            <code>tmux new-window 'nvim /tmp/tmux-edit'</code> runs neovim in a
+            new tmux window.
+          </li>
+          <li>
+            <code>-S</code> specifies the line at which the capture starts;
+            <code>0</code> is the topmost visible line, while <code>-</code> is
+            the topmost line in the pane’s history. With this, I created two
+            variants of the command: lowercase <kbd>e</kbd> is bound to
+            capturing the currently visible lines, which I use the most; and
+            capital <kbd>E</kbd> is bound to capturing the entire history.
+          </li>
+        </ul>
+        <figure>
+          <img
+            src="/2024/tmux-edit-in-neovim/illustration-tmux-neovim.svg"
+            alt="A sketch that illustrates the concept of this configuration"
+            width="926.0425818640132"
+            height="588.4711867724441"
+            style="max-width: 100%; height: auto"
+          />
 
-    <figcaption>Diagram: Piping tmux pane to neovim</figcaption>
-  </figure><h2 id="room-for-improvements">
-  Room for Improvements
-  <a href="#room-for-improvements"><small>##</small></a>
-</h2>
-<p>One, this is not going to work if I try to edit two panes at the same time. A more elegant solution is to create a uniquely-named temp file in place of <code>/tmp/tmux-edit</code>, but that takes away the simplicity of the solution, as we’ll have to deal with quoting &amp; escaping of quotation marks inside a shell command, inside an argument to <code>tmux new-window</code> inside a shell command inside <code>tmux</code> configuration file, while making sure that the filename variable is expanding at the right stage. It is not going to be fun. I’ll settle with no concurrency for now.</p>
-<p>Two, <code>neovim</code> doesn’t necessarily do too well with very, very long lines, and it is entirely possible that somewhere in the pane history, I <code>cat</code> some minified file by accident.</p>
+          <figcaption>Diagram: Piping tmux pane to neovim</figcaption>
+        </figure>
+        <h2 id="room-for-improvements">
+          Room for Improvements
+          <a href="#room-for-improvements"><small>##</small></a>
+        </h2>
+        <p>
+          One, this is not going to work if I try to edit two panes at the same
+          time. A more elegant solution is to create a uniquely-named temp file
+          in place of <code>/tmp/tmux-edit</code>, but that takes away the
+          simplicity of the solution, as we’ll have to deal with quoting &amp;
+          escaping of quotation marks inside a shell command, inside an argument
+          to <code>tmux new-window</code> inside a shell command inside
+          <code>tmux</code> configuration file, while making sure that the
+          filename variable is expanding at the right stage. It is not going to
+          be fun. I’ll settle with no concurrency for now.
+        </p>
+        <p>
+          Two, <code>neovim</code> doesn’t necessarily do too well with very,
+          very long lines, and it is entirely possible that somewhere in the
+          pane history, I <code>cat</code> some minified file by accident.
+        </p>
 
+        <h2 id="references">
+          References
+          <a href="#references"><small>##</small></a>
+        </h2>
 
-  
+        <div
+          id="refs"
+          class="references csl-bib-body hanging-indent"
+          data-entry-spacing="0"
+          role="list"
+        >
+          <div
+            id="ref-marriottTmux1LinuxManual2024"
+            class="csl-entry"
+            role="listitem"
+          >
+            Marriott, Nicholas. 2024.
+            <span>“Tmux(1) - Linux Manual Page.”</span> May 24, 2024.
+            <a href="https://man7.org/linux/man-pages/man1/tmux.1.html"
+              >https://man7.org/linux/man-pages/man1/tmux.1.html</a
+            >.
+          </div>
+        </div>
 
-  <h2 id="references">
-  References
-  <a href="#references"><small>##</small></a>
-</h2>
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <a href="/tags/tmux"><code>tmux</code></a
+              >, <a href="/tags/computer"><code>computer</code></a>
+            </p>
+          </section>
 
-
-  <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-marriottTmux1LinuxManual2024" class="csl-entry" role="listitem">
-Marriott, Nicholas. 2024. <span>“Tmux(1) - Linux Manual Page.”</span>
-May 24, 2024. <a href="https://man7.org/linux/man-pages/man1/tmux.1.html">https://man7.org/linux/man-pages/man1/tmux.1.html</a>.
-</div>
-</div>
-  
-
-
-  <footer>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-          <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path>
-        </svg>
-           <a href="/tags/tmux"><code>tmux</code></a>, <a href="/tags/computer"><code>computer</code></a>
-      </p>
-      
-    </section>
-
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2024.tmux-edit-in-neovim@powersnail.com">comment.2024.tmux-edit-in-neovim@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
-
-
-  </main><footer>
-  <article><div>© PowerSnail 2024</div>
-  </article>
-</footer>
-
-
-
-</body></html>
+          <section>
+            <p>
+              Leave a comment via email:
+              <a href="mailto:comment.2024.tmux-edit-in-neovim@powersnail.com"
+                >comment.2024.tmux-edit-in-neovim@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2024</div></article>
+    </footer>
+  </body>
+</html>

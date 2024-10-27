@@ -1,293 +1,520 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>Stats · SnailShell</title>
 
+    <meta property="og:title" content="Stats" />
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://powersnail.com/stats/" />
 
-
-<meta name="author" content="PowerSnail">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
-
-<title>Stats · SnailShell</title>
-
-<meta property="og:title" content="Stats" />
-<meta property="og:site_name" content="SnailShell" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://powersnail.com/stats/" />
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
-
-
-
-  
-  <meta name="description" content="Some random statistics collected of this blog.">
-  <meta property="og:description" content="Some random statistics collected of this blog." />
-
-
-<link rel="canonical" href="https://powersnail.com/stats/"/>
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
-  </head>
-<body>
-  
-  
-    <div
-  style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  "
->
-  <div style="grid-column: 3/-3; position: relative">
-    <img
-      src="/images/halloween.webp"
-      width="256px"
-      height="48px"
-      style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;"
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
     />
-  </div>
-</div>
 
+    <meta
+      name="description"
+      content="Some random statistics collected of this blog."
+    />
+    <meta
+      property="og:description"
+      content="Some random statistics collected of this blog."
+    />
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
+    <link rel="canonical" href="https://powersnail.com/stats/" />
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
+
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
           </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article>
+        <h1>Stats</h1>
+
+        <div id="title-subtitle">
+          Some random statistics collected of this blog.
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
 
-  <main>
-<article><h1>
-  Stats
-  
+        <hr />
 
-</h1>
-
-
-  <div id="title-subtitle">Some random statistics collected of this blog.</div>
-
-
-
-<hr />
-
-<h2 id="overview">
-  Overview
-  <a href="#overview"><small>##</small></a>
-</h2>
-<p>Generated at: 27 Oct 24 20:06 UTC, with Hugo (version=0.131.0), in
-<em>Production</em> mode.</p>
-<h2 id="pages">
-  Pages
-  <a href="#pages"><small>##</small></a>
-</h2>
-<div class="table-wrapper"> <table>
-<thead>
-<tr>
-<th>Entry</th>
-<th>Count</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Posts</td>
-<td>33</td>
-</tr>
-<tr>
-<td>Drafts</td>
-<td>0</td>
-</tr>
-<tr>
-<td><strong>Total Pages</strong></td>
-<td><strong>104</strong></td>
-</tr>
-</tbody>
-</table> </div>
-<h2 id="tags">
-  Tags
-  <a href="#tags"><small>##</small></a>
-</h2>
-<p>Counts (&gt;1):</p>
-<div class="table-wrapper"> <table>
-<thead>
-<tr>
-<th>Tag</th>
-<th>Item Count</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="/tags/computer-science/">Computer Science</a></td>
-<td>14</td>
-</tr>
-<tr>
-<td><a href="/tags/notes/">Notes</a></td>
-<td>8</td>
-</tr>
-<tr>
-<td><a href="/tags/study/">Study</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><a href="/tags/recipe/">Recipe</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><a href="/tags/algorithm/">Algorithm</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><a href="/tags/c++/">C++</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><a href="/tags/violin/">Violin</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><a href="/tags/blog/">Blog</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><a href="/tags/bowing/">Bowing</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><a href="/tags/codefights/">Codefights</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><a href="/tags/computer/">Computer</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><a href="/tags/html/">Html</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><a href="/tags/music/">Music</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><a href="/tags/parsing/">Parsing</a></td>
-<td>2</td>
-</tr>
-</tbody>
-</table> </div>
-<p>Orphaned Tags:</p>
-<ul>
-<li>Algorithms: <a href="/2016/binary-search-tree/">posts/comsci/2016-02-27-binary-search-tree.md</a></li>
-<li>Audio: <a href="/2023/youtube-music-album-download/">posts/comsci/2023-02-19-youtube-music-album-download.md</a></li>
-<li>Bach: <a href="/2022/bowing-planes-exercise/">posts/music/2022-01-31-bowing-planes-exercise.md</a></li>
-<li>BST: <a href="/2016/binary-search-tree/">posts/comsci/2016-02-27-binary-search-tree.md</a></li>
-<li>Chicken: <a href="/2022/a-new-way-of-presenting-recipes-and-chicken-abodo/">posts/recipes/2022-01-03-a-new-way-of-presenting-recipes-and-chicken-abodo.md</a></li>
-<li>Chinese: <a href="/2022/chinese-caramel-color/">posts/recipes/2022-02-02-chinese-caramel-color/index.md</a></li>
-<li>Com Arc: <a href="/2016/optimization/">posts/comsci/2016-11-08-optimization.md</a></li>
-<li>Csapp: <a href="/2016/control-flow-exception/">posts/comsci/2016-11-15-control-flow-exception.md</a></li>
-<li>Data Structure: <a href="/2016/binary-search-tree/">posts/comsci/2016-02-27-binary-search-tree.md</a></li>
-<li>DBus: <a href="/2023/set-plasma-wallpaper/">posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a></li>
-<li>Dessert: <a href="/2022/tiramisu/">posts/recipes/2022-01-09-tiramisu.md</a></li>
-<li>DNS: <a href="/2024/lesson-learned-migrating-registrar/">posts/comsci/2024-07-28-lesson-learned-migrating-registrar/index.md</a></li>
-<li>Docker: <a href="/2023/jellyfin-nvidia-docker/">posts/comsci/jellyfin-nvidia-docker/index.md</a></li>
-<li>Domain: <a href="/2024/lesson-learned-migrating-registrar/">posts/comsci/2024-07-28-lesson-learned-migrating-registrar/index.md</a></li>
-<li>Editor: <a href="/2024/open-binary-files-external/">posts/comsci/2024-03-05-open-binary-files-external/index.md</a></li>
-<li>FFmpeg: <a href="/2023/jellyfin-nvidia-docker/">posts/comsci/jellyfin-nvidia-docker/index.md</a></li>
-<li>Fingering: <a href="/2022/bach-preludio-sneaky-shift/">posts/music/2022-07-22-bach-preludio-sneaky-shift/index.md</a></li>
-<li>Frontend: <a href="/2022/score-in-url/">posts/comsci/2022-07-29-score-in-url/index.md</a></li>
-<li>Graphics: <a href="/2016/fractals/">posts/comsci/2016-11-08-fractals.md</a></li>
-<li>Hugo: <a href="/2022/hugo-mvp-css/">posts/comsci/2022-01-12-hugo-mvp-css.md</a></li>
-<li>Image: <a href="/2024/open-binary-files-external/">posts/comsci/2024-03-05-open-binary-files-external/index.md</a></li>
-<li>Iwd: <a href="/2024/disable-2-4ghz-for-iwd/">posts/comsci/2024-09-22-disable-2-4ghz-for-iwd/index.md</a></li>
-<li>Japanese: <a href="/2020/chicken-sandwitch-nanban-sauce/">posts/recipes/2020-02-21-chicken-sandwitch-nanban-sauce.md</a></li>
-<li>Javascript: <a href="/2023/set-plasma-wallpaper/">posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a></li>
-<li>Jellyfin: <a href="/2023/jellyfin-nvidia-docker/">posts/comsci/jellyfin-nvidia-docker/index.md</a></li>
-<li>KDE: <a href="/2023/set-plasma-wallpaper/">posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a></li>
-<li>Leetcode: <a href="/2016/valid-number/">posts/comsci/2016-11-27-valid-number.md</a></li>
-<li>Lua: <a href="/2024/open-binary-files-external/">posts/comsci/2024-03-05-open-binary-files-external/index.md</a></li>
-<li>Machine Learning: <a href="/2022/stable-diffusion-fun/">posts/comsci/2022-11-10-stable-diffusion-fun/index.md</a></li>
-<li>Markdown: <a href="/2022/test-md-page/">posts/comsci/2022-07-06-test-md-page/index.md</a></li>
-<li>Nameserver: <a href="/2024/lesson-learned-migrating-registrar/">posts/comsci/2024-07-28-lesson-learned-migrating-registrar/index.md</a></li>
-<li>Neovim: <a href="/2024/open-binary-files-external/">posts/comsci/2024-03-05-open-binary-files-external/index.md</a></li>
-<li>NVIDIA: <a href="/2023/jellyfin-nvidia-docker/">posts/comsci/jellyfin-nvidia-docker/index.md</a></li>
-<li>OpenSUSE: <a href="/2023/jellyfin-nvidia-docker/">posts/comsci/jellyfin-nvidia-docker/index.md</a></li>
-<li>Pdf: <a href="/2024/open-binary-files-external/">posts/comsci/2024-03-05-open-binary-files-external/index.md</a></li>
-<li>Plasma: <a href="/2023/set-plasma-wallpaper/">posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a></li>
-<li>Python: <a href="/2023/set-plasma-wallpaper/">posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a></li>
-<li>Reading: <a href="/2022/steal-like-an-artist/">posts/reading/2022-07-17-steal-like-an-artist.md</a></li>
-<li>Reading Notes: <a href="/2016/control-flow-exception/">posts/comsci/2016-11-15-control-flow-exception.md</a></li>
-<li>System: <a href="/2024/open-binary-files-external/">posts/comsci/2024-03-05-open-binary-files-external/index.md</a></li>
-<li>System Administration: <a href="/2023/jellyfin-nvidia-docker/">posts/comsci/jellyfin-nvidia-docker/index.md</a></li>
-<li>Technology: <a href="/2023/jellyfin-nvidia-docker/">posts/comsci/jellyfin-nvidia-docker/index.md</a></li>
-<li>Text Editing: <a href="/2024/open-binary-files-external/">posts/comsci/2024-03-05-open-binary-files-external/index.md</a></li>
-<li>TIL: <a href="/2022/til-html-time-tag/">posts/comsci/2022-12-10-til-html-time-tag.md</a></li>
-<li>Tmux: <a href="/2024/tmux-edit-in-neovim/">posts/comsci/2024-10-21-tmux-edit-in-neovim/index.md</a></li>
-<li>Wifi: <a href="/2024/disable-2-4ghz-for-iwd/">posts/comsci/2024-09-22-disable-2-4ghz-for-iwd/index.md</a></li>
-<li>Youtube Music: <a href="/2023/youtube-music-album-download/">posts/comsci/2023-02-19-youtube-music-album-download.md</a></li>
-<li>Yt-Dlp: <a href="/2023/youtube-music-album-download/">posts/comsci/2023-02-19-youtube-music-album-download.md</a></li>
-</ul>
-
-</article>
-
-  </main><footer>
-  <article><div>© PowerSnail 2024</div>
-  </article>
-</footer>
-
-</body>
+        <h2 id="overview">
+          Overview
+          <a href="#overview"><small>##</small></a>
+        </h2>
+        <p>
+          Generated at: 27 Oct 24 21:13 UTC, with Hugo (version=0.131.0), in
+          <em>Production</em> mode.
+        </p>
+        <h2 id="pages">
+          Pages
+          <a href="#pages"><small>##</small></a>
+        </h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Entry</th>
+                <th>Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Posts</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td>Drafts</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td><strong>Total Pages</strong></td>
+                <td><strong>104</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="tags">
+          Tags
+          <a href="#tags"><small>##</small></a>
+        </h2>
+        <p>Counts (&gt;1):</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Item Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="/tags/computer-science/">Computer Science</a></td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/notes/">Notes</a></td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/study/">Study</a></td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/recipe/">Recipe</a></td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/algorithm/">Algorithm</a></td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/c++/">C++</a></td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/violin/">Violin</a></td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/blog/">Blog</a></td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/bowing/">Bowing</a></td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/codefights/">Codefights</a></td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/computer/">Computer</a></td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/html/">Html</a></td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/music/">Music</a></td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td><a href="/tags/parsing/">Parsing</a></td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Orphaned Tags:</p>
+        <ul>
+          <li>
+            Algorithms:
+            <a href="/2016/binary-search-tree/"
+              >posts/comsci/2016-02-27-binary-search-tree.md</a
+            >
+          </li>
+          <li>
+            Audio:
+            <a href="/2023/youtube-music-album-download/"
+              >posts/comsci/2023-02-19-youtube-music-album-download.md</a
+            >
+          </li>
+          <li>
+            Bach:
+            <a href="/2022/bowing-planes-exercise/"
+              >posts/music/2022-01-31-bowing-planes-exercise.md</a
+            >
+          </li>
+          <li>
+            BST:
+            <a href="/2016/binary-search-tree/"
+              >posts/comsci/2016-02-27-binary-search-tree.md</a
+            >
+          </li>
+          <li>
+            Chicken:
+            <a href="/2022/a-new-way-of-presenting-recipes-and-chicken-abodo/"
+              >posts/recipes/2022-01-03-a-new-way-of-presenting-recipes-and-chicken-abodo.md</a
+            >
+          </li>
+          <li>
+            Chinese:
+            <a href="/2022/chinese-caramel-color/"
+              >posts/recipes/2022-02-02-chinese-caramel-color/index.md</a
+            >
+          </li>
+          <li>
+            Com Arc:
+            <a href="/2016/optimization/"
+              >posts/comsci/2016-11-08-optimization.md</a
+            >
+          </li>
+          <li>
+            Csapp:
+            <a href="/2016/control-flow-exception/"
+              >posts/comsci/2016-11-15-control-flow-exception.md</a
+            >
+          </li>
+          <li>
+            Data Structure:
+            <a href="/2016/binary-search-tree/"
+              >posts/comsci/2016-02-27-binary-search-tree.md</a
+            >
+          </li>
+          <li>
+            DBus:
+            <a href="/2023/set-plasma-wallpaper/"
+              >posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a
+            >
+          </li>
+          <li>
+            Dessert:
+            <a href="/2022/tiramisu/">posts/recipes/2022-01-09-tiramisu.md</a>
+          </li>
+          <li>
+            DNS:
+            <a href="/2024/lesson-learned-migrating-registrar/"
+              >posts/comsci/2024-07-28-lesson-learned-migrating-registrar/index.md</a
+            >
+          </li>
+          <li>
+            Docker:
+            <a href="/2023/jellyfin-nvidia-docker/"
+              >posts/comsci/jellyfin-nvidia-docker/index.md</a
+            >
+          </li>
+          <li>
+            Domain:
+            <a href="/2024/lesson-learned-migrating-registrar/"
+              >posts/comsci/2024-07-28-lesson-learned-migrating-registrar/index.md</a
+            >
+          </li>
+          <li>
+            Editor:
+            <a href="/2024/open-binary-files-external/"
+              >posts/comsci/2024-03-05-open-binary-files-external/index.md</a
+            >
+          </li>
+          <li>
+            FFmpeg:
+            <a href="/2023/jellyfin-nvidia-docker/"
+              >posts/comsci/jellyfin-nvidia-docker/index.md</a
+            >
+          </li>
+          <li>
+            Fingering:
+            <a href="/2022/bach-preludio-sneaky-shift/"
+              >posts/music/2022-07-22-bach-preludio-sneaky-shift/index.md</a
+            >
+          </li>
+          <li>
+            Frontend:
+            <a href="/2022/score-in-url/"
+              >posts/comsci/2022-07-29-score-in-url/index.md</a
+            >
+          </li>
+          <li>
+            Graphics:
+            <a href="/2016/fractals/">posts/comsci/2016-11-08-fractals.md</a>
+          </li>
+          <li>
+            Hugo:
+            <a href="/2022/hugo-mvp-css/"
+              >posts/comsci/2022-01-12-hugo-mvp-css.md</a
+            >
+          </li>
+          <li>
+            Image:
+            <a href="/2024/open-binary-files-external/"
+              >posts/comsci/2024-03-05-open-binary-files-external/index.md</a
+            >
+          </li>
+          <li>
+            Iwd:
+            <a href="/2024/disable-2-4ghz-for-iwd/"
+              >posts/comsci/2024-09-22-disable-2-4ghz-for-iwd/index.md</a
+            >
+          </li>
+          <li>
+            Japanese:
+            <a href="/2020/chicken-sandwitch-nanban-sauce/"
+              >posts/recipes/2020-02-21-chicken-sandwitch-nanban-sauce.md</a
+            >
+          </li>
+          <li>
+            Javascript:
+            <a href="/2023/set-plasma-wallpaper/"
+              >posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a
+            >
+          </li>
+          <li>
+            Jellyfin:
+            <a href="/2023/jellyfin-nvidia-docker/"
+              >posts/comsci/jellyfin-nvidia-docker/index.md</a
+            >
+          </li>
+          <li>
+            KDE:
+            <a href="/2023/set-plasma-wallpaper/"
+              >posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a
+            >
+          </li>
+          <li>
+            Leetcode:
+            <a href="/2016/valid-number/"
+              >posts/comsci/2016-11-27-valid-number.md</a
+            >
+          </li>
+          <li>
+            Lua:
+            <a href="/2024/open-binary-files-external/"
+              >posts/comsci/2024-03-05-open-binary-files-external/index.md</a
+            >
+          </li>
+          <li>
+            Machine Learning:
+            <a href="/2022/stable-diffusion-fun/"
+              >posts/comsci/2022-11-10-stable-diffusion-fun/index.md</a
+            >
+          </li>
+          <li>
+            Markdown:
+            <a href="/2022/test-md-page/"
+              >posts/comsci/2022-07-06-test-md-page/index.md</a
+            >
+          </li>
+          <li>
+            Nameserver:
+            <a href="/2024/lesson-learned-migrating-registrar/"
+              >posts/comsci/2024-07-28-lesson-learned-migrating-registrar/index.md</a
+            >
+          </li>
+          <li>
+            Neovim:
+            <a href="/2024/open-binary-files-external/"
+              >posts/comsci/2024-03-05-open-binary-files-external/index.md</a
+            >
+          </li>
+          <li>
+            NVIDIA:
+            <a href="/2023/jellyfin-nvidia-docker/"
+              >posts/comsci/jellyfin-nvidia-docker/index.md</a
+            >
+          </li>
+          <li>
+            OpenSUSE:
+            <a href="/2023/jellyfin-nvidia-docker/"
+              >posts/comsci/jellyfin-nvidia-docker/index.md</a
+            >
+          </li>
+          <li>
+            Pdf:
+            <a href="/2024/open-binary-files-external/"
+              >posts/comsci/2024-03-05-open-binary-files-external/index.md</a
+            >
+          </li>
+          <li>
+            Plasma:
+            <a href="/2023/set-plasma-wallpaper/"
+              >posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a
+            >
+          </li>
+          <li>
+            Python:
+            <a href="/2023/set-plasma-wallpaper/"
+              >posts/comsci/2023-02-08-set-plasma-wallpaper/index.md</a
+            >
+          </li>
+          <li>
+            Reading:
+            <a href="/2022/steal-like-an-artist/"
+              >posts/reading/2022-07-17-steal-like-an-artist.md</a
+            >
+          </li>
+          <li>
+            Reading Notes:
+            <a href="/2016/control-flow-exception/"
+              >posts/comsci/2016-11-15-control-flow-exception.md</a
+            >
+          </li>
+          <li>
+            System:
+            <a href="/2024/open-binary-files-external/"
+              >posts/comsci/2024-03-05-open-binary-files-external/index.md</a
+            >
+          </li>
+          <li>
+            System Administration:
+            <a href="/2023/jellyfin-nvidia-docker/"
+              >posts/comsci/jellyfin-nvidia-docker/index.md</a
+            >
+          </li>
+          <li>
+            Technology:
+            <a href="/2023/jellyfin-nvidia-docker/"
+              >posts/comsci/jellyfin-nvidia-docker/index.md</a
+            >
+          </li>
+          <li>
+            Text Editing:
+            <a href="/2024/open-binary-files-external/"
+              >posts/comsci/2024-03-05-open-binary-files-external/index.md</a
+            >
+          </li>
+          <li>
+            TIL:
+            <a href="/2022/til-html-time-tag/"
+              >posts/comsci/2022-12-10-til-html-time-tag.md</a
+            >
+          </li>
+          <li>
+            Tmux:
+            <a href="/2024/tmux-edit-in-neovim/"
+              >posts/comsci/2024-10-21-tmux-edit-in-neovim/index.md</a
+            >
+          </li>
+          <li>
+            Wifi:
+            <a href="/2024/disable-2-4ghz-for-iwd/"
+              >posts/comsci/2024-09-22-disable-2-4ghz-for-iwd/index.md</a
+            >
+          </li>
+          <li>
+            Youtube Music:
+            <a href="/2023/youtube-music-album-download/"
+              >posts/comsci/2023-02-19-youtube-music-album-download.md</a
+            >
+          </li>
+          <li>
+            Yt-Dlp:
+            <a href="/2023/youtube-music-album-download/"
+              >posts/comsci/2023-02-19-youtube-music-album-download.md</a
+            >
+          </li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2024</div></article>
+    </footer>
+  </body>
 </html>

@@ -1,228 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>
+      A Constant Solution to Code-Fights Apple Boxes Problem · SnailShell
+    </title>
 
-
-
-<meta name="author" content="PowerSnail">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
-
-<title>A Constant Solution to Code-Fights Apple Boxes Problem · SnailShell</title>
-
-<meta property="og:title" content="A Constant Solution to Code-Fights Apple Boxes Problem" />
-<meta property="og:site_name" content="SnailShell" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://powersnail.com/2017/apple-box/" />
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
-
-
-
-
-<link rel="canonical" href="https://powersnail.com/2017/apple-box/"/>
-
-
-
-
-<script type="text/javascript" id="MathJax-script" src="/js/bundle.39b4c9e45c7f60379025444391711d5dc496457cd3480b1edb45bf24649fd217.js" defer></script>
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
-  </head>
-<body>
-  
-  
-    <div
-  style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  "
->
-  <div style="grid-column: 3/-3; position: relative">
-    <img
-      src="/images/halloween.webp"
-      width="256px"
-      height="48px"
-      style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;"
+    <meta
+      property="og:title"
+      content="A Constant Solution to Code-Fights Apple Boxes Problem"
     />
-  </div>
-</div>
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://powersnail.com/2017/apple-box/" />
 
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
+    <link rel="canonical" href="https://powersnail.com/2017/apple-box/" />
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      src="/js/bundle.39b4c9e45c7f60379025444391711d5dc496457cd3480b1edb45bf24649fd217.js"
+      defer
+    ></script>
+
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
+
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
           </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article id="post-main">
+        <h1>A Constant Solution to Code-Fights Apple Boxes Problem</h1>
+
+        <div class="metadata">
+          <time datetime="2017-01-06T00:00:00Z">06 Jan 2017</time>
+          · 306 words · 2 minutes read
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
+        <hr />
 
-  <main>
-<article id="post-main"><h1>
-  A Constant Solution to Code-Fights Apple Boxes Problem
-  
-
-</h1>
-
-
-
-<div class="metadata">
-    <time datetime="2017-01-06T00:00:00Z">06 Jan 2017</time>
-    ·
-    306 words
-    ·
-    2 minutes read
-</div>
-<hr />
-
-<h2 id="the-apple-boxes-problem">
-  The Apple Boxes Problem
-  <a href="#the-apple-boxes-problem"><small>##</small></a>
-</h2>
-<p>The problem can be simply put:</p>
-<blockquote>
-<p>Input: $k$</p>
-<p>Output: let $r$ be the sum of the square of each <em>even</em> integer no larger than $k$, and $y$ be that of the <em>odd</em>. Return $r - y$.</p>
-</blockquote>
-<h2 id="the-naive-solution">
-  The Naive Solution
-  <a href="#the-naive-solution"><small>##</small></a>
-</h2>
-<p>We can loop through 1 to $k$, alternating between adding and subtracting.</p>
-<div class="highlight"><pre  class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">val</span> <span class="o">=</span> <span class="mi">0</span>
+        <h2 id="the-apple-boxes-problem">
+          The Apple Boxes Problem
+          <a href="#the-apple-boxes-problem"><small>##</small></a>
+        </h2>
+        <p>The problem can be simply put:</p>
+        <blockquote>
+          <p>Input: $k$</p>
+          <p>
+            Output: let $r$ be the sum of the square of each
+            <em>even</em> integer no larger than $k$, and $y$ be that of the
+            <em>odd</em>. Return $r - y$.
+          </p>
+        </blockquote>
+        <h2 id="the-naive-solution">
+          The Naive Solution
+          <a href="#the-naive-solution"><small>##</small></a>
+        </h2>
+        <p>
+          We can loop through 1 to $k$, alternating between adding and
+          subtracting.
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">val</span> <span class="o">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">k</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">        <span class="n">val</span> <span class="o">+=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span>
 </span></span><span class="line"><span class="cl">        <span class="n">val</span> <span class="o">-=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="n">val</span></span></span></code></pre></div><p>There could be various optimizations, but nevertheless, the algorithm is linear with regard to $k$.</p>
-<h2 id="constant-solution">
-  Constant Solution
-  <a href="#constant-solution"><small>##</small></a>
-</h2>
-<p>First, assume $k$ is even, so that we can perfectly pair up terms in $r$ and $y$. Observe that each pair is in the form of $x^2 - (x - 1)^2$. This can be transformed to $(x + x - 1)\cdot(x - x + 1) = (x - 1) + x$. When we add all pairs, it becomes a simple series: $1 + 2 + 3 + &hellip; + k$. For example, for $k = 6$:</p>
-<p>$$
-\begin{align*}
-r &amp;= 2^2 + 4^2 + 6^2 \\
-y &amp;= 1^2 + 3^2 + 5^2 \\
-r - y &amp;= (2^2 + 4^2 + 6^2) - (1^2 + 3^2 + 5^2) \\
-&amp;= (2^2 - 1^2) + (4^2 - 2^2) + (6^2 - 5^2) \\
-&amp;= 1 + 2 + 3 + 4 + 5 + 6 \\
-&amp;= \dfrac{6(1 + 6)}{2} \\
-&amp;= 21
-\end{align*}
-$$</p>
-<p>Thus, we can return $\dfrac{k(1 + k)}{2}$ for arbitrary <em>even</em> $k$.</p>
-<p>What about <em>odd</em> $k$? We can adjust the pairing a bit, and easily find that now we have $-\dfrac{k(1 + k)}{2}$.</p>
-<h2 id="c-source-code">
-  C++ Source Code
-  <a href="#c-source-code"><small>##</small></a>
-</h2>
-<div class="highlight"><pre  class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">appleBoxes</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="n">val</span></span></span></code></pre>
+        </div>
+        <p>
+          There could be various optimizations, but nevertheless, the algorithm
+          is linear with regard to $k$.
+        </p>
+        <h2 id="constant-solution">
+          Constant Solution
+          <a href="#constant-solution"><small>##</small></a>
+        </h2>
+        <p>
+          First, assume $k$ is even, so that we can perfectly pair up terms in
+          $r$ and $y$. Observe that each pair is in the form of $x^2 - (x -
+          1)^2$. This can be transformed to $(x + x - 1)\cdot(x - x + 1) = (x -
+          1) + x$. When we add all pairs, it becomes a simple series: $1 + 2 + 3
+          + &hellip; + k$. For example, for $k = 6$:
+        </p>
+        <p>
+          $$ \begin{align*} r &amp;= 2^2 + 4^2 + 6^2 \\ y &amp;= 1^2 + 3^2 + 5^2
+          \\ r - y &amp;= (2^2 + 4^2 + 6^2) - (1^2 + 3^2 + 5^2) \\ &amp;= (2^2 -
+          1^2) + (4^2 - 2^2) + (6^2 - 5^2) \\ &amp;= 1 + 2 + 3 + 4 + 5 + 6 \\
+          &amp;= \dfrac{6(1 + 6)}{2} \\ &amp;= 21 \end{align*} $$
+        </p>
+        <p>
+          Thus, we can return $\dfrac{k(1 + k)}{2}$ for arbitrary
+          <em>even</em> $k$.
+        </p>
+        <p>
+          What about <em>odd</em> $k$? We can adjust the pairing a bit, and
+          easily find that now we have $-\dfrac{k(1 + k)}{2}$.
+        </p>
+        <h2 id="c-source-code">
+          C++ Source Code
+          <a href="#c-source-code"><small>##</small></a>
+        </h2>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">appleBoxes</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span>  <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">k</span><span class="p">)</span> <span class="o">*</span> <span class="n">k</span> <span class="o">/</span> <span class="mi">2</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">k</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="o">-</span><span class="nl">sum</span> <span class="p">:</span> <span class="n">sum</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+        </div>
 
-  
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a href="/tags/computer-science"><code>computer science</code></a
+              >, <a href="/tags/algorithm"><code>algorithm</code></a
+              >, <a href="/tags/codefights"><code>codefights</code></a
+              >, <a href="/tags/c&#43;&#43;"><code>C&#43;&#43;</code></a>
+            </p>
+          </section>
 
-
-  <footer>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg
-          aria-label="tags"
-          class="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="16"
-          height="16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
-            clip-rule="evenodd"
-          />
-        </svg>
-           <a href="/tags/computer-science"><code>computer science</code></a>, <a href="/tags/algorithm"><code>algorithm</code></a>, <a href="/tags/codefights"><code>codefights</code></a>, <a href="/tags/c&#43;&#43;"><code>C&#43;&#43;</code></a>
-      </p>
-      
-    </section>
-
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2017.apple-box@powersnail.com">comment.2017.apple-box@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
-
-
-  </main><footer>
-  <article><div>© PowerSnail 2017</div>
-  </article>
-</footer>
-
-</body>
+          <section>
+            <p>
+              Leave a comment via email:
+              <a href="mailto:comment.2017.apple-box@powersnail.com"
+                >comment.2017.apple-box@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2017</div></article>
+    </footer>
+  </body>
 </html>

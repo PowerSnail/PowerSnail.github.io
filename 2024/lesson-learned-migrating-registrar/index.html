@@ -1,213 +1,302 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>Lesson Learned Migrating Registrar · SnailShell</title>
 
-
-
-<meta name="author" content="PowerSnail">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
-
-<title>Lesson Learned Migrating Registrar · SnailShell</title>
-
-<meta property="og:title" content="Lesson Learned Migrating Registrar" />
-<meta property="og:site_name" content="SnailShell" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://powersnail.com/2024/lesson-learned-migrating-registrar/" />
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
-
-
-
-  
-  <meta name="description" content="I made a mistake when trying to change the registrar for my domain. By simultaneously changing the nameserver and the transferring the domain,
-and not being patient enough to validate changes, I broke my domain, twice.">
-  <meta property="og:description" content="I made a mistake when trying to change the registrar for my domain. By simultaneously changing the nameserver and the transferring the domain,
-and not being patient enough to validate changes, I broke my domain, twice." />
-
-
-<link rel="canonical" href="https://powersnail.com/2024/lesson-learned-migrating-registrar/"/>
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
-  </head>
-<body>
-  
-  
-    <div
-  style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  "
->
-  <div style="grid-column: 3/-3; position: relative">
-    <img
-      src="/images/halloween.webp"
-      width="256px"
-      height="48px"
-      style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;"
+    <meta property="og:title" content="Lesson Learned Migrating Registrar" />
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2024/lesson-learned-migrating-registrar/"
     />
-  </div>
-</div>
 
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
+    <meta
+      name="description"
+      content="I made a mistake when trying to change the registrar for my domain. By simultaneously changing the nameserver and the transferring the domain,
+and not being patient enough to validate changes, I broke my domain, twice."
+    />
+    <meta
+      property="og:description"
+      content="I made a mistake when trying to change the registrar for my domain. By simultaneously changing the nameserver and the transferring the domain,
+and not being patient enough to validate changes, I broke my domain, twice."
+    />
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2024/lesson-learned-migrating-registrar/"
+    />
+
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
+
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
           </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article id="post-main">
+        <h1>Lesson Learned Migrating Registrar</h1>
+
+        <div id="title-subtitle">
+          I made a mistake when trying to change the registrar for my domain. By
+          simultaneously changing the nameserver and the transferring the
+          domain, and not being patient enough to validate changes, I broke my
+          domain, twice.
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
 
-  <main>
-<article id="post-main"><h1>
-  Lesson Learned Migrating Registrar
-  
+        <div class="metadata">
+          <time datetime="2024-07-28T00:00:00Z">28 Jul 2024</time>
+          · 877 words · 5 minutes read
+        </div>
+        <hr />
 
-</h1>
+        <p>
+          I originally registered my domain <code>powersnail.com</code> on
+          Google Domain, which seemed to be a popular and well-made product at
+          the time. It was all good, until in 2023, the service was announced to
+          terminate and all domains will be transferred to SquareSpace.
+        </p>
+        <p>
+          Despite receiving notifications of the news, I procrastinated long
+          enough such that I was already transferred to SquareSpace, when I came
+          about to move away. The interface on SquareSpace was quite bare-bone
+          in functionality and there were reports that its name server was very
+          slow when propagating changes.
+        </p>
+        <p>
+          Additionally, Google Domain was convenient for me because I had and
+          need a Google account, but I didn&rsquo;t have a SquareSpace account,
+          and I was not interested in using any of its core product anyway.
+        </p>
+        <p>I wanted to move away from it altogether.</p>
+        <p>
+          To be precise, there were two things that I&rsquo;d like to change:
+          the name server to CloudFlare and the registrar to porkbun. The former
+          because of its impressive free-tier features, and the latter because
+          it&rsquo;s pretty <em>cool</em> in a no-bullshit, direct
+          way&mdash;there&rsquo;s something very candid about their UI that just
+          really make me happy.
+        </p>
+        <p>
+          The first thing I did was changing the nameserver. It was easy enough,
+          but somehow, the change just was not propagating. It is typical of
+          anything related to DNS to be accompanied by a warning that you may
+          have to wait for a couple of hours, but to be honest, when I was
+          messing with DNS settings in Google Domain, it never took more than a
+          few minutes for the change to propagate. SquareSpace was living up to
+          its reputation of slow propagation and I was growing impatient, so I
+          decided that, well, as long as the change could eventually happen, I
+          might as well proceed.
+        </p>
+        <p>
+          So I requested transfer of the domain itself from SquareSpace to
+          porkbun. It was said that the process would take days. Good enough. It
+          was set into motion. I went away.
+        </p>
+        <p>
+          It was, then, a very quiet day. I found myself not being bothered by a
+          single email the entire rest of the day, which was odd. It quickly
+          dawned on me that I had broken my custom domain.
+        </p>
+        <p>
+          It turns out that the name server was not successfully changed to
+          CloudFlare. On SquareSpace, the name servers were pointing to
+          CloudFlare. For CloudFlare&mdash;and also the rest of the world, the
+          domain was still pointing to SquareSpace&rsquo;s server. It was hard
+          to imagine how it ended up in such a state, but the result was that
+          neither of them were handling the DNS queries, and so everything, from
+          my blog to my email to my personal git server, was effectively down.
+        </p>
+        <p>
+          The fact that changing the name server is not atomic came as a
+          surprise to me. I would have thought that SquareSpace&rsquo;s name
+          server would continue to do its job, during the time where the change
+          was still being propagated, or if some error had occurred, it would
+          rollback. But no, it simply stopped responding to DNS queries first,
+          before the rest of the internet ever saw that change, and then my
+          impatience&mdash;initiating the domain transfer too soon&mdash;froze
+          the broken state where nothing was proceeding.
+        </p>
+        <p>
+          The transfer was going to take as much as 15 days, and the customer
+          support refused to expedite the process (come on, SquareSpace, even
+          Godaddy allows it). So, I cancelled the transfer first, restored the
+          name server to SquareSpace, which thankfully fixed the DNS situation,
+          and then, re-requested transfer without messing with name server this
+          time.
+        </p>
+        <p>
+          Well, here comes the day of radio silence. When the transfer
+          completed, my domain stopped being resolved again, because the moment
+          the domain was off SquareSpace, SquareSpace cut off the name server
+          for that domain. There was also no way to export the DNS records after
+          the transfer. (I don&rsquo;t remember seeing an export options before
+          either, but I could be wrong, since I no longer have access to that
+          UI)
+        </p>
+        <p>
+          Luckily, I had an old backup copy of my DNS records exported from
+          Google Domain, which was not fully up to date, but better than
+          creating everything from scratch. I imported the records to CF, and
+          pointed porkbun to CF&rsquo;s server (which happened nearly instantly
+          unlike SquareSpace).
+        </p>
+        <p>Finally, it was all working.</p>
+        <p>
+          At the end of the day, here are what I learned about doing a domain
+          transfer without down time:
+        </p>
+        <ol>
+          <li>
+            <p>
+              Don&rsquo;t mess with two things at the same time when dealing
+              with domains, especially when something is not in a fully
+              functional state.
+            </p>
+          </li>
+          <li>
+            <p>
+              When migrating domains, migrate the DNS records off first. Even if
+              the name server change takes forever, wait until it&rsquo;s done.
+            </p>
+          </li>
+          <li>
+            <p>
+              There is also the benefit of using a name server that is not also
+              your registrar, so when you transfer the domain, you don&rsquo;t
+              risk the registrar also cut off DNS resolution. I think it
+              isn&rsquo;t unreasonable to expect any sane provider to not cut it
+              off, because these are obviously separate services, but the
+              reality is that they very well might.
+            </p>
+          </li>
+        </ol>
+        <p>
+          And special thanks to SquareSpace for providing a learning
+          opportunity. Had the name server change been swift, or had the name
+          server been available until I disable them, everything would have
+          worked smoothly and I wouldn&rsquo;t even realize that there were
+          lessons to be learned.
+        </p>
 
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a href="/tags/domain"><code>domain</code></a
+              >, <a href="/tags/dns"><code>DNS</code></a
+              >, <a href="/tags/nameserver"><code>nameserver</code></a>
+            </p>
+          </section>
 
-  <div id="title-subtitle">I made a mistake when trying to change the registrar for my domain. By simultaneously changing the nameserver and the transferring the domain,
-and not being patient enough to validate changes, I broke my domain, twice.</div>
-
-
-<div class="metadata">
-    <time datetime="2024-07-28T00:00:00Z">28 Jul 2024</time>
-    ·
-    877 words
-    ·
-    5 minutes read
-</div>
-<hr />
-
-<p>I originally registered my domain <code>powersnail.com</code> on Google Domain, which seemed to be a popular and well-made product at the time. It was all good, until in 2023, the service was announced to terminate and all domains will be transferred to SquareSpace.</p>
-<p>Despite receiving notifications of the news, I procrastinated long enough such that I was already transferred to SquareSpace, when I came about to move away. The interface on SquareSpace was quite bare-bone in functionality and there were reports that its name server was very slow when propagating changes.</p>
-<p>Additionally, Google Domain was convenient for me because I had and need a Google account, but I didn&rsquo;t have a SquareSpace account, and I was not interested in using any of its core product anyway.</p>
-<p>I wanted to move away from it altogether.</p>
-<p>To be precise, there were two things that I&rsquo;d like to change: the name server to CloudFlare and the registrar to porkbun. The former because of its impressive free-tier features, and the latter because it&rsquo;s pretty <em>cool</em> in a no-bullshit, direct way&mdash;there&rsquo;s something very candid about their UI that just really make me happy.</p>
-<p>The first thing I did was changing the nameserver. It was easy enough, but somehow, the change just was not propagating. It is typical of anything related to DNS to be accompanied by a warning that you may have to wait for a couple of hours, but to be honest, when I was messing with DNS settings in Google Domain, it never took more than a few minutes for the change to propagate. SquareSpace was living up to its reputation of slow propagation and I was growing impatient, so I decided that, well, as long as the change could eventually happen, I might as well proceed.</p>
-<p>So I requested transfer of the domain itself from SquareSpace to porkbun. It was said that the process would take days. Good enough. It was set into motion. I went away.</p>
-<p>It was, then, a very quiet day. I found myself not being bothered by a single email the entire rest of the day, which was odd. It quickly dawned on me that I had broken my custom domain.</p>
-<p>It turns out that the name server was not successfully changed to CloudFlare. On SquareSpace, the name servers were pointing to CloudFlare. For CloudFlare&mdash;and also the rest of the world, the domain was still pointing to SquareSpace&rsquo;s server. It was hard to imagine how it ended up in such a state, but the result was that neither of them were handling the DNS queries, and so everything, from my blog to my email to my personal git server, was effectively down.</p>
-<p>The fact that changing the name server is not atomic came as a surprise to me. I would have thought that SquareSpace&rsquo;s name server would continue to do its job, during the time where the change was still being propagated, or if some error had occurred, it would rollback. But no, it simply stopped responding to DNS queries first, before the rest of the internet ever saw that change, and then my impatience&mdash;initiating the domain transfer too soon&mdash;froze the broken state where nothing was proceeding.</p>
-<p>The transfer was going to take as much as 15 days, and the customer support refused to expedite the process (come on, SquareSpace, even Godaddy allows it). So, I cancelled the transfer first, restored the name server to SquareSpace, which thankfully fixed the DNS situation, and then, re-requested transfer without messing with name server this time.</p>
-<p>Well, here comes the day of radio silence. When the transfer completed, my domain stopped being resolved again, because the moment the domain was off SquareSpace, SquareSpace cut off the name server for that domain. There was also no way to export the DNS records after the transfer. (I don&rsquo;t remember seeing an export options before either, but I could be wrong, since I no longer have access to that UI)</p>
-<p>Luckily, I had an old backup copy of my DNS records exported from Google Domain, which was not fully up to date, but better than creating everything from scratch. I imported the records to CF, and pointed porkbun to CF&rsquo;s server (which happened nearly instantly unlike SquareSpace).</p>
-<p>Finally, it was all working.</p>
-<p>At the end of the day, here are what I learned about doing a domain transfer without down time:</p>
-<ol>
-<li>
-<p>Don&rsquo;t mess with two things at the same time when dealing with domains, especially when something is not in a fully functional state.</p>
-</li>
-<li>
-<p>When migrating domains, migrate the DNS records off first. Even if the name server change takes forever, wait until it&rsquo;s done.</p>
-</li>
-<li>
-<p>There is also the benefit of using a name server that is not also your registrar, so when you transfer the domain, you don&rsquo;t risk the registrar also cut off DNS resolution. I think it isn&rsquo;t unreasonable to expect any sane provider to not cut it off, because these are obviously separate services, but the reality is that they very well might.</p>
-</li>
-</ol>
-<p>And special thanks to SquareSpace for providing a learning opportunity. Had the name server change been swift, or had the name server been available until I disable them, everything would have worked smoothly and I wouldn&rsquo;t even realize that there were lessons to be learned.</p>
-
-
-  
-
-
-  <footer>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg
-          aria-label="tags"
-          class="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="16"
-          height="16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
-            clip-rule="evenodd"
-          />
-        </svg>
-           <a href="/tags/domain"><code>domain</code></a>, <a href="/tags/dns"><code>DNS</code></a>, <a href="/tags/nameserver"><code>nameserver</code></a>
-      </p>
-      
-    </section>
-
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2024.lesson-learned-migrating-registrar@powersnail.com">comment.2024.lesson-learned-migrating-registrar@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
-
-
-  </main><footer>
-  <article><div>© PowerSnail 2024</div>
-  </article>
-</footer>
-
-</body>
+          <section>
+            <p>
+              Leave a comment via email:
+              <a
+                href="mailto:comment.2024.lesson-learned-migrating-registrar@powersnail.com"
+                >comment.2024.lesson-learned-migrating-registrar@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2024</div></article>
+    </footer>
+  </body>
 </html>

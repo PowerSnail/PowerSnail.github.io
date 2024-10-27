@@ -1,288 +1,569 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>A few fun discoveries about Stable Diffusion · SnailShell</title>
 
-
-
-<meta name="author" content="PowerSnail">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
-
-<title>A few fun discoveries about Stable Diffusion · SnailShell</title>
-
-<meta property="og:title" content="A few fun discoveries about Stable Diffusion" />
-<meta property="og:site_name" content="SnailShell" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://powersnail.com/2022/stable-diffusion-fun/" />
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
-
-
-
-  
-  <meta name="description" content="Testing the literary limit of Stable Diffusion with literature">
-  <meta property="og:description" content="Testing the literary limit of Stable Diffusion with literature" />
-
-
-<link rel="canonical" href="https://powersnail.com/2022/stable-diffusion-fun/"/>
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
-  </head>
-<body>
-  
-  
-    <div
-  style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  "
->
-  <div style="grid-column: 3/-3; position: relative">
-    <img
-      src="/images/halloween.webp"
-      width="256px"
-      height="48px"
-      style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;"
+    <meta
+      property="og:title"
+      content="A few fun discoveries about Stable Diffusion"
     />
-  </div>
-</div>
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2022/stable-diffusion-fun/"
+    />
 
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
+    <meta
+      name="description"
+      content="Testing the literary limit of Stable Diffusion with literature"
+    />
+    <meta
+      property="og:description"
+      content="Testing the literary limit of Stable Diffusion with literature"
+    />
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2022/stable-diffusion-fun/"
+    />
+
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
+
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
           </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article id="post-main">
+        <h1>A few fun discoveries about Stable Diffusion</h1>
+
+        <div id="title-subtitle">
+          Testing the literary limit of Stable Diffusion with literature
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
 
-  <main>
-<article id="post-main"><h1>
-  A few fun discoveries about Stable Diffusion
-  
+        <div class="metadata">
+          <time datetime="2022-11-10T00:00:00Z">10 Nov 2022</time>
+          · 1047 words · 5 minutes read
+        </div>
+        <hr />
 
-</h1>
-
-
-  <div id="title-subtitle">Testing the literary limit of Stable Diffusion with literature</div>
-
-
-<div class="metadata">
-    <time datetime="2022-11-10T00:00:00Z">10 Nov 2022</time>
-    ·
-    1047 words
-    ·
-    5 minutes read
-</div>
-<hr />
-
-<p>Standing opposed to OpenAI&rsquo;s DALL-E and Midjourney, is the open sourced model Stable Diffusion<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Some of the images it painted are genuinely impressive, coherent, and free of artifacts (at least at first glance). But those are almost always the result of prompt engineering: an Edisonian process of random search through the infinite linguistic space. Or in other words, people trying different words until they get a desirable result.</p>
-<p>For instance, there&rsquo;s a collection of &ldquo;magic words&rdquo; that improves the quality of the model&rsquo;s output: &ldquo;4k&rdquo;, &ldquo;detailed&rdquo;, etc.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> The model associates these key words with the high quality images in its training set, because that&rsquo;s how people label their own work, and thus tries to be close to those images.</p>
-<p>What happens if you don&rsquo;t give it a particularly graphic sentence? How does it deal with the abstract, the metaphysical, and the poetic?</p>
-<h2 id="literatures-quotes-and-illustrations">
-  Literatures, Quotes, and Illustrations
-  <a href="#literatures-quotes-and-illustrations"><small>##</small></a>
-</h2>
-<p>It gives you the quote right back:</p>
-<figure>
-    <img
-    src="/2022/stable-diffusion-fun/quote-1.webp" alt="Generated image from Oscar Wilde&amp;rsquo;s quote"srcset="/2022/stable-diffusion-fun/quote-1-400w.webp 400w,/2022/stable-diffusion-fun/quote-1-600w.webp 600w,/2022/stable-diffusion-fun/quote-1-800w.webp 800w,/2022/stable-diffusion-fun/quote-1-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-1-1200w.webp 1200w,/2022/stable-diffusion-fun/quote-1.webp 2560w" width="2560"  height="512" >
-
-    <figcaption></figcaption>
-  </figure><p>Questions are never indiscreet; answers sometimes are.</p>
-<p>&ndash;Oscar Wilde<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
-<p>&hellip;&hellip;Not quite verbatim, but close enough. Similar to how &ldquo;4k&rdquo; nudges the model towards higher quality, if you sound like Brainy Quotes, it will paint like Brainy Quotes for you.</p>
-<p>Sometimes, it will go a different route, and illustrate like a book of classics:</p>
-<figure>
-    <img
-    src="/2022/stable-diffusion-fun/quote-2.webp" alt="Generated image from Oscar Wilde Quote"srcset="/2022/stable-diffusion-fun/quote-2-400w.webp 400w,/2022/stable-diffusion-fun/quote-2-600w.webp 600w,/2022/stable-diffusion-fun/quote-2-800w.webp 800w,/2022/stable-diffusion-fun/quote-2-1000w.webp 1000w,/2022/stable-diffusion-fun/quote-2.webp 1024w" width="1024"  height="512" loading="lazy">
-
-    <figcaption></figcaption>
-  </figure><p>If the lower classes don&rsquo;t set us a good example what on earth is the use of them? They seem, as a class, to have absolutely no sense of moral responsibility.</p>
-<p>&ndash;Oscar Wilde<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
-<p>Now, this is just a silly experimentation. The model is trained on descriptions of images. It&rsquo;s not surprising that it wouldn&rsquo;t do well on metaphysical epigrams depicting no concrete objects. In fact, if you give me drawing prompt &ldquo;Questions are never indiscreet; answers sometimes are&rdquo;, I&rsquo;d probably ask you clarify just what the hell you want me to draw.</p>
-<h2 id="where-is-the-cicada">
-  Where is the cicada?
-  <a href="#where-is-the-cicada"><small>##</small></a>
-</h2>
-<figure>
-    <img
-    src="/2022/stable-diffusion-fun/cicada.webp" alt="Generated image from a quote taken from Pale Fire"srcset="/2022/stable-diffusion-fun/cicada-400w.webp 400w,/2022/stable-diffusion-fun/cicada-600w.webp 600w,/2022/stable-diffusion-fun/cicada-800w.webp 800w,/2022/stable-diffusion-fun/cicada-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada.webp 2560w" width="2560"  height="512" loading="lazy">
-
-    <figcaption></figcaption>
-  </figure><p>Waxwings are berry-pecking / a cicada sings.</p>
-<p>&ndash;Nabokov, <em>Pale Fire</em><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
-<p>Another limitation I found is that Stable Diffusion sometimes ignores parts of the prompt. This is quite interesting because it obviously is capable of juxtaposing unrelated elements together, as demonstrated by the famous example of an astronaut riding a horse, in its <a href="https://github.com/CompVis/stable-diffusion">repository</a>.</p>
-<p>A beautiful line of poetry, &ldquo;Waxwings are berry-pecking / a cicada sings&rdquo;, is not as abstract as the previous section. It depicts two subjects, a bird and a bug, and yet Stable Diffusion absolutely refuses to recognize the existence of the latter.</p>
-<p>Could it be the position of the two words in the sentence? Let&rsquo;s try reversing it:</p>
-<figure>
-    <img
-    src="/2022/stable-diffusion-fun/cicada-reverse.webp" alt="Generated image from reversing a quote taken from Pale Fire&amp;quot;"srcset="/2022/stable-diffusion-fun/cicada-reverse-400w.webp 400w,/2022/stable-diffusion-fun/cicada-reverse-600w.webp 600w,/2022/stable-diffusion-fun/cicada-reverse-800w.webp 800w,/2022/stable-diffusion-fun/cicada-reverse-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-reverse-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-reverse.webp 2560w" width="2560"  height="512" loading="lazy">
-
-    <figcaption></figcaption>
-  </figure><p>A cicada sings / Waxwings are berry-pecking.</p>
-<p>Nope. Only the bird itself. Beautifully drawn, but missing its companion.</p>
-<p>Maybe it&rsquo;s the realistic style which it&rsquo;s going for? Let&rsquo;s try adding some stylistic modifiers to the prompt:</p>
-<figure>
-    <img
-    src="/2022/stable-diffusion-fun/cicada-illustration.webp" alt="Added illustration to the prompt.&amp;quot;"srcset="/2022/stable-diffusion-fun/cicada-illustration-400w.webp 400w,/2022/stable-diffusion-fun/cicada-illustration-600w.webp 600w,/2022/stable-diffusion-fun/cicada-illustration-800w.webp 800w,/2022/stable-diffusion-fun/cicada-illustration-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-illustration-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-illustration.webp 2560w" width="2560"  height="512" loading="lazy">
-
-    <figcaption></figcaption>
-  </figure><p>Waxwings are berry-pecking / a cicada sings. Illustration.</p>
-<figure>
-    <img
-    src="/2022/stable-diffusion-fun/cicada-oil.webp" alt="Added oil painting to the prompt.&amp;quot;"srcset="/2022/stable-diffusion-fun/cicada-oil-400w.webp 400w,/2022/stable-diffusion-fun/cicada-oil-600w.webp 600w,/2022/stable-diffusion-fun/cicada-oil-800w.webp 800w,/2022/stable-diffusion-fun/cicada-oil-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-oil-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-oil.webp 2560w" width="2560"  height="512" loading="lazy">
-
-    <figcaption></figcaption>
-  </figure><p>Waxwings are berry-pecking / a cicada sings. Oil painting.</p>
-<figure>
-    <img
-    src="/2022/stable-diffusion-fun/cicada-photo.webp" alt="Added photo to the prompt.&amp;quot;"srcset="/2022/stable-diffusion-fun/cicada-photo-400w.webp 400w,/2022/stable-diffusion-fun/cicada-photo-600w.webp 600w,/2022/stable-diffusion-fun/cicada-photo-800w.webp 800w,/2022/stable-diffusion-fun/cicada-photo-1000w.webp 1000w,/2022/stable-diffusion-fun/cicada-photo-1200w.webp 1200w,/2022/stable-diffusion-fun/cicada-photo.webp 2560w" width="2560"  height="512" loading="lazy">
-
-    <figcaption></figcaption>
-  </figure><p>Waxwings are berry-pecking / a cicada sings. Photo.</p>
-<p>Still, the cicada is nowhere to be found. And if you look carefully, you&rsquo;ll notice that even &ldquo;berry&rdquo; isn&rsquo;t always there. The model concentrates on &ldquo;waxwings&rdquo;, and that&rsquo;s the only thing it seems to <em>care</em> about, if you&rsquo;ll excuse the inaccurately personified verb. Perhaps the model has a bias in its training set, some objects being more likely to appear than others, and thus carrying a heavier weight. An image with waxwings, berries, and a cicada is less likely than an image with just a waxwing, even given a prompt that includes all three elements. Is this a fundamental limitation on the model, or is it a deficiency in the training data?</p>
-<h2 id="last-word">
-  Last word
-  <a href="#last-word"><small>##</small></a>
-</h2>
-<p>Stable Diffusion, like many other machine learning models dabbling in art, astonishes the programmer part of my brain. It&rsquo;s utterly ridiculous that we can prompt the program to generate coherent images, without hard-coding any rule about what it means for an image to be coherent. We give zero <em>a priori</em> to the model on what constitutes a photo or an oil painting, or the anatomy of waxwings, or the color of trees and leaves, and yet, it does show a level of understanding of all those concepts. Put aside the thorny question of &ldquo;how do you define &lsquo;understand&rsquo;?&rdquo;, if we merely judge the program by its performance, it is capable of generating images where a human would recognize the objects, styles, lighting conditions, etc. to be the same as what the prompt describes. And again, without codifying such objects or styles by a human.</p>
-<p>But at the same time, the other parts of my brain still smirks a bit at the results. When you jump even slightly out of the box, Stable Diffusion starts to show its limits. And even within the box, it takes a lot of word tweaking and cherry-picking to get some useful images out of the model. A lot of hobbyists left the model to run overnight on a long list of prompts. In other areas, the music generated by machine learnings are still quite bad, and seems to go from nowhere to nowhere, if we judge the music entirely on its own merit. The same goes for text generation.</p>
-<p>It is quite disquieting to see just how close we are to computer programs surpassing human in the field of creative arts, and perhaps even programming itself. We are not there yet, but I&rsquo;m willing to bet that it&rsquo;s going to happen within the lifetime of my generation. Where would that leave us? To become the Olympians of the machines and reap the fruit of their labor? Or to compete with the machines, and eventually&mdash;inevitably&mdash;become obsolete? Will the society become more equal as the rising productivity and efficiency alleviate scarcity, or will the divide deepen between the wealthy and powerful, and the underprivileged?</p>
-<blockquote>
-<p>Anybody that competes with slaves becomes a slave</p>
-<p>&ndash;Vonnegut, <em>Player Piano</em><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></p>
-</blockquote>
-<figure>
-    <img
-    src="/2022/stable-diffusion-fun/robot-playing-the-piano.webp" alt="Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli"srcset="/2022/stable-diffusion-fun/robot-playing-the-piano-400w.webp 400w,/2022/stable-diffusion-fun/robot-playing-the-piano.webp 600w" width="600"  height="400" loading="lazy">
-
-    <figcaption></figcaption>
-  </figure><p>Generated by Stable Diffusion: A robot playing the piano, 4k, detailed, by Studio Ghibli</p>
-
-
-
-  
-
-
-  <footer>
-    
-    <section><ol>
-<li id="fn:1">
-<p>Rombach, R., Blattmann, A., Lorenz, D., Esser, P., &amp; Ommer, B. (2021). <em>High-resolution image synthesis with latent diffusion models</em>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p><em>Stable Diffusion Prompt Book—OpenArt</em>. (n.d.). OpenArt. Retrieved November 10, 2022, from <a href="https://openart.ai/">https://openart.ai/</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p>Wilde, O. (2001). <em>An Ideal Husband</em>. Courier Corporation.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:4">
-<p>Wilde, O. (2017). <em>The Importance of Being Earnest &amp; Other Plays</em>. Pan Macmillan.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:5">
-<p>Nabokov, V. (1992). <em>Pale Fire: Introduction by Richard Rorty</em>. Knopf Doubleday Publishing Group.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:6">
-<p>Vonnegut, K. (1999). <em>Player Piano</em>. Random House Publishing Group.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol></section>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg
-          aria-label="tags"
-          class="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="16"
-          height="16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
-            clip-rule="evenodd"
+        <p>
+          Standing opposed to OpenAI&rsquo;s DALL-E and Midjourney, is the open
+          sourced model Stable Diffusion<sup id="fnref:1"
+            ><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup
+          >. Some of the images it painted are genuinely impressive, coherent,
+          and free of artifacts (at least at first glance). But those are almost
+          always the result of prompt engineering: an Edisonian process of
+          random search through the infinite linguistic space. Or in other
+          words, people trying different words until they get a desirable
+          result.
+        </p>
+        <p>
+          For instance, there&rsquo;s a collection of &ldquo;magic words&rdquo;
+          that improves the quality of the model&rsquo;s output:
+          &ldquo;4k&rdquo;, &ldquo;detailed&rdquo;, etc.<sup id="fnref:2"
+            ><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup
+          >
+          The model associates these key words with the high quality images in
+          its training set, because that&rsquo;s how people label their own
+          work, and thus tries to be close to those images.
+        </p>
+        <p>
+          What happens if you don&rsquo;t give it a particularly graphic
+          sentence? How does it deal with the abstract, the metaphysical, and
+          the poetic?
+        </p>
+        <h2 id="literatures-quotes-and-illustrations">
+          Literatures, Quotes, and Illustrations
+          <a href="#literatures-quotes-and-illustrations"><small>##</small></a>
+        </h2>
+        <p>It gives you the quote right back:</p>
+        <figure>
+          <img
+            src="/2022/stable-diffusion-fun/quote-1.webp"
+            alt="Generated image from Oscar Wilde&amp;rsquo;s quote"
+            srcset="
+              /2022/stable-diffusion-fun/quote-1-400w.webp   400w,
+              /2022/stable-diffusion-fun/quote-1-600w.webp   600w,
+              /2022/stable-diffusion-fun/quote-1-800w.webp   800w,
+              /2022/stable-diffusion-fun/quote-1-1000w.webp 1000w,
+              /2022/stable-diffusion-fun/quote-1-1200w.webp 1200w,
+              /2022/stable-diffusion-fun/quote-1.webp       2560w
+            "
+            width="2560"
+            height="512"
           />
-        </svg>
-           <a href="/tags/machine-learning"><code>machine learning</code></a>, <a href="/tags/computer-science"><code>computer science</code></a>
-      </p>
-      
-    </section>
 
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2022.stable-diffusion-fun@powersnail.com">comment.2022.stable-diffusion-fun@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
+          <figcaption></figcaption>
+        </figure>
+        <p>Questions are never indiscreet; answers sometimes are.</p>
+        <p>
+          &ndash;Oscar Wilde<sup id="fnref:3"
+            ><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup
+          >
+        </p>
+        <p>
+          &hellip;&hellip;Not quite verbatim, but close enough. Similar to how
+          &ldquo;4k&rdquo; nudges the model towards higher quality, if you sound
+          like Brainy Quotes, it will paint like Brainy Quotes for you.
+        </p>
+        <p>
+          Sometimes, it will go a different route, and illustrate like a book of
+          classics:
+        </p>
+        <figure>
+          <img
+            src="/2022/stable-diffusion-fun/quote-2.webp"
+            alt="Generated image from Oscar Wilde Quote"
+            srcset="
+              /2022/stable-diffusion-fun/quote-2-400w.webp   400w,
+              /2022/stable-diffusion-fun/quote-2-600w.webp   600w,
+              /2022/stable-diffusion-fun/quote-2-800w.webp   800w,
+              /2022/stable-diffusion-fun/quote-2-1000w.webp 1000w,
+              /2022/stable-diffusion-fun/quote-2.webp       1024w
+            "
+            width="1024"
+            height="512"
+            loading="lazy"
+          />
 
+          <figcaption></figcaption>
+        </figure>
+        <p>
+          If the lower classes don&rsquo;t set us a good example what on earth
+          is the use of them? They seem, as a class, to have absolutely no sense
+          of moral responsibility.
+        </p>
+        <p>
+          &ndash;Oscar Wilde<sup id="fnref:4"
+            ><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup
+          >
+        </p>
+        <p>
+          Now, this is just a silly experimentation. The model is trained on
+          descriptions of images. It&rsquo;s not surprising that it
+          wouldn&rsquo;t do well on metaphysical epigrams depicting no concrete
+          objects. In fact, if you give me drawing prompt &ldquo;Questions are
+          never indiscreet; answers sometimes are&rdquo;, I&rsquo;d probably ask
+          you clarify just what the hell you want me to draw.
+        </p>
+        <h2 id="where-is-the-cicada">
+          Where is the cicada?
+          <a href="#where-is-the-cicada"><small>##</small></a>
+        </h2>
+        <figure>
+          <img
+            src="/2022/stable-diffusion-fun/cicada.webp"
+            alt="Generated image from a quote taken from Pale Fire"
+            srcset="
+              /2022/stable-diffusion-fun/cicada-400w.webp   400w,
+              /2022/stable-diffusion-fun/cicada-600w.webp   600w,
+              /2022/stable-diffusion-fun/cicada-800w.webp   800w,
+              /2022/stable-diffusion-fun/cicada-1000w.webp 1000w,
+              /2022/stable-diffusion-fun/cicada-1200w.webp 1200w,
+              /2022/stable-diffusion-fun/cicada.webp       2560w
+            "
+            width="2560"
+            height="512"
+            loading="lazy"
+          />
 
-  </main><footer>
-  <article><div>© PowerSnail 2022</div>
-  </article>
-</footer>
+          <figcaption></figcaption>
+        </figure>
+        <p>Waxwings are berry-pecking / a cicada sings.</p>
+        <p>
+          &ndash;Nabokov, <em>Pale Fire</em
+          ><sup id="fnref:5"
+            ><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup
+          >
+        </p>
+        <p>
+          Another limitation I found is that Stable Diffusion sometimes ignores
+          parts of the prompt. This is quite interesting because it obviously is
+          capable of juxtaposing unrelated elements together, as demonstrated by
+          the famous example of an astronaut riding a horse, in its
+          <a href="https://github.com/CompVis/stable-diffusion">repository</a>.
+        </p>
+        <p>
+          A beautiful line of poetry, &ldquo;Waxwings are berry-pecking / a
+          cicada sings&rdquo;, is not as abstract as the previous section. It
+          depicts two subjects, a bird and a bug, and yet Stable Diffusion
+          absolutely refuses to recognize the existence of the latter.
+        </p>
+        <p>
+          Could it be the position of the two words in the sentence? Let&rsquo;s
+          try reversing it:
+        </p>
+        <figure>
+          <img
+            src="/2022/stable-diffusion-fun/cicada-reverse.webp"
+            alt="Generated image from reversing a quote taken from Pale Fire&amp;quot;"
+            srcset="
+              /2022/stable-diffusion-fun/cicada-reverse-400w.webp   400w,
+              /2022/stable-diffusion-fun/cicada-reverse-600w.webp   600w,
+              /2022/stable-diffusion-fun/cicada-reverse-800w.webp   800w,
+              /2022/stable-diffusion-fun/cicada-reverse-1000w.webp 1000w,
+              /2022/stable-diffusion-fun/cicada-reverse-1200w.webp 1200w,
+              /2022/stable-diffusion-fun/cicada-reverse.webp       2560w
+            "
+            width="2560"
+            height="512"
+            loading="lazy"
+          />
 
-</body>
+          <figcaption></figcaption>
+        </figure>
+        <p>A cicada sings / Waxwings are berry-pecking.</p>
+        <p>
+          Nope. Only the bird itself. Beautifully drawn, but missing its
+          companion.
+        </p>
+        <p>
+          Maybe it&rsquo;s the realistic style which it&rsquo;s going for?
+          Let&rsquo;s try adding some stylistic modifiers to the prompt:
+        </p>
+        <figure>
+          <img
+            src="/2022/stable-diffusion-fun/cicada-illustration.webp"
+            alt="Added illustration to the prompt.&amp;quot;"
+            srcset="
+              /2022/stable-diffusion-fun/cicada-illustration-400w.webp   400w,
+              /2022/stable-diffusion-fun/cicada-illustration-600w.webp   600w,
+              /2022/stable-diffusion-fun/cicada-illustration-800w.webp   800w,
+              /2022/stable-diffusion-fun/cicada-illustration-1000w.webp 1000w,
+              /2022/stable-diffusion-fun/cicada-illustration-1200w.webp 1200w,
+              /2022/stable-diffusion-fun/cicada-illustration.webp       2560w
+            "
+            width="2560"
+            height="512"
+            loading="lazy"
+          />
+
+          <figcaption></figcaption>
+        </figure>
+        <p>Waxwings are berry-pecking / a cicada sings. Illustration.</p>
+        <figure>
+          <img
+            src="/2022/stable-diffusion-fun/cicada-oil.webp"
+            alt="Added oil painting to the prompt.&amp;quot;"
+            srcset="
+              /2022/stable-diffusion-fun/cicada-oil-400w.webp   400w,
+              /2022/stable-diffusion-fun/cicada-oil-600w.webp   600w,
+              /2022/stable-diffusion-fun/cicada-oil-800w.webp   800w,
+              /2022/stable-diffusion-fun/cicada-oil-1000w.webp 1000w,
+              /2022/stable-diffusion-fun/cicada-oil-1200w.webp 1200w,
+              /2022/stable-diffusion-fun/cicada-oil.webp       2560w
+            "
+            width="2560"
+            height="512"
+            loading="lazy"
+          />
+
+          <figcaption></figcaption>
+        </figure>
+        <p>Waxwings are berry-pecking / a cicada sings. Oil painting.</p>
+        <figure>
+          <img
+            src="/2022/stable-diffusion-fun/cicada-photo.webp"
+            alt="Added photo to the prompt.&amp;quot;"
+            srcset="
+              /2022/stable-diffusion-fun/cicada-photo-400w.webp   400w,
+              /2022/stable-diffusion-fun/cicada-photo-600w.webp   600w,
+              /2022/stable-diffusion-fun/cicada-photo-800w.webp   800w,
+              /2022/stable-diffusion-fun/cicada-photo-1000w.webp 1000w,
+              /2022/stable-diffusion-fun/cicada-photo-1200w.webp 1200w,
+              /2022/stable-diffusion-fun/cicada-photo.webp       2560w
+            "
+            width="2560"
+            height="512"
+            loading="lazy"
+          />
+
+          <figcaption></figcaption>
+        </figure>
+        <p>Waxwings are berry-pecking / a cicada sings. Photo.</p>
+        <p>
+          Still, the cicada is nowhere to be found. And if you look carefully,
+          you&rsquo;ll notice that even &ldquo;berry&rdquo; isn&rsquo;t always
+          there. The model concentrates on &ldquo;waxwings&rdquo;, and
+          that&rsquo;s the only thing it seems to <em>care</em> about, if
+          you&rsquo;ll excuse the inaccurately personified verb. Perhaps the
+          model has a bias in its training set, some objects being more likely
+          to appear than others, and thus carrying a heavier weight. An image
+          with waxwings, berries, and a cicada is less likely than an image with
+          just a waxwing, even given a prompt that includes all three elements.
+          Is this a fundamental limitation on the model, or is it a deficiency
+          in the training data?
+        </p>
+        <h2 id="last-word">
+          Last word
+          <a href="#last-word"><small>##</small></a>
+        </h2>
+        <p>
+          Stable Diffusion, like many other machine learning models dabbling in
+          art, astonishes the programmer part of my brain. It&rsquo;s utterly
+          ridiculous that we can prompt the program to generate coherent images,
+          without hard-coding any rule about what it means for an image to be
+          coherent. We give zero <em>a priori</em> to the model on what
+          constitutes a photo or an oil painting, or the anatomy of waxwings, or
+          the color of trees and leaves, and yet, it does show a level of
+          understanding of all those concepts. Put aside the thorny question of
+          &ldquo;how do you define &lsquo;understand&rsquo;?&rdquo;, if we
+          merely judge the program by its performance, it is capable of
+          generating images where a human would recognize the objects, styles,
+          lighting conditions, etc. to be the same as what the prompt describes.
+          And again, without codifying such objects or styles by a human.
+        </p>
+        <p>
+          But at the same time, the other parts of my brain still smirks a bit
+          at the results. When you jump even slightly out of the box, Stable
+          Diffusion starts to show its limits. And even within the box, it takes
+          a lot of word tweaking and cherry-picking to get some useful images
+          out of the model. A lot of hobbyists left the model to run overnight
+          on a long list of prompts. In other areas, the music generated by
+          machine learnings are still quite bad, and seems to go from nowhere to
+          nowhere, if we judge the music entirely on its own merit. The same
+          goes for text generation.
+        </p>
+        <p>
+          It is quite disquieting to see just how close we are to computer
+          programs surpassing human in the field of creative arts, and perhaps
+          even programming itself. We are not there yet, but I&rsquo;m willing
+          to bet that it&rsquo;s going to happen within the lifetime of my
+          generation. Where would that leave us? To become the Olympians of the
+          machines and reap the fruit of their labor? Or to compete with the
+          machines, and eventually&mdash;inevitably&mdash;become obsolete? Will
+          the society become more equal as the rising productivity and
+          efficiency alleviate scarcity, or will the divide deepen between the
+          wealthy and powerful, and the underprivileged?
+        </p>
+        <blockquote>
+          <p>Anybody that competes with slaves becomes a slave</p>
+          <p>
+            &ndash;Vonnegut, <em>Player Piano</em
+            ><sup id="fnref:6"
+              ><a href="#fn:6" class="footnote-ref" role="doc-noteref"
+                >6</a
+              ></sup
+            >
+          </p>
+        </blockquote>
+        <figure>
+          <img
+            src="/2022/stable-diffusion-fun/robot-playing-the-piano.webp"
+            alt="Image generated from the prompt: A robot playing the piano, 4k, detailed, by Studio Ghibli"
+            srcset="
+              /2022/stable-diffusion-fun/robot-playing-the-piano-400w.webp 400w,
+              /2022/stable-diffusion-fun/robot-playing-the-piano.webp      600w
+            "
+            width="600"
+            height="400"
+            loading="lazy"
+          />
+
+          <figcaption></figcaption>
+        </figure>
+        <p>
+          Generated by Stable Diffusion: A robot playing the piano, 4k,
+          detailed, by Studio Ghibli
+        </p>
+
+        <footer>
+          <section>
+            <ol>
+              <li id="fn:1">
+                <p>
+                  Rombach, R., Blattmann, A., Lorenz, D., Esser, P., &amp;
+                  Ommer, B. (2021).
+                  <em
+                    >High-resolution image synthesis with latent diffusion
+                    models</em
+                  >.&#160;<a
+                    href="#fnref:1"
+                    class="footnote-backref"
+                    role="doc-backlink"
+                    >&#x21a9;&#xfe0e;</a
+                  >
+                </p>
+              </li>
+              <li id="fn:2">
+                <p>
+                  <em>Stable Diffusion Prompt Book—OpenArt</em>. (n.d.).
+                  OpenArt. Retrieved November 10, 2022, from
+                  <a href="https://openart.ai/">https://openart.ai/</a>&#160;<a
+                    href="#fnref:2"
+                    class="footnote-backref"
+                    role="doc-backlink"
+                    >&#x21a9;&#xfe0e;</a
+                  >
+                </p>
+              </li>
+              <li id="fn:3">
+                <p>
+                  Wilde, O. (2001). <em>An Ideal Husband</em>. Courier
+                  Corporation.&#160;<a
+                    href="#fnref:3"
+                    class="footnote-backref"
+                    role="doc-backlink"
+                    >&#x21a9;&#xfe0e;</a
+                  >
+                </p>
+              </li>
+              <li id="fn:4">
+                <p>
+                  Wilde, O. (2017).
+                  <em>The Importance of Being Earnest &amp; Other Plays</em>.
+                  Pan Macmillan.&#160;<a
+                    href="#fnref:4"
+                    class="footnote-backref"
+                    role="doc-backlink"
+                    >&#x21a9;&#xfe0e;</a
+                  >
+                </p>
+              </li>
+              <li id="fn:5">
+                <p>
+                  Nabokov, V. (1992).
+                  <em>Pale Fire: Introduction by Richard Rorty</em>. Knopf
+                  Doubleday Publishing Group.&#160;<a
+                    href="#fnref:5"
+                    class="footnote-backref"
+                    role="doc-backlink"
+                    >&#x21a9;&#xfe0e;</a
+                  >
+                </p>
+              </li>
+              <li id="fn:6">
+                <p>
+                  Vonnegut, K. (1999). <em>Player Piano</em>. Random House
+                  Publishing Group.&#160;<a
+                    href="#fnref:6"
+                    class="footnote-backref"
+                    role="doc-backlink"
+                    >&#x21a9;&#xfe0e;</a
+                  >
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a href="/tags/machine-learning"><code>machine learning</code></a
+              >,
+              <a href="/tags/computer-science"><code>computer science</code></a>
+            </p>
+          </section>
+
+          <section>
+            <p>
+              Leave a comment via email:
+              <a href="mailto:comment.2022.stable-diffusion-fun@powersnail.com"
+                >comment.2022.stable-diffusion-fun@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2022</div></article>
+    </footer>
+  </body>
 </html>

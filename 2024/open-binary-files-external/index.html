@@ -1,142 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>
+      How to Make Neovim Open PDF and Images External Viewers · SnailShell
+    </title>
 
-
-
-<meta name="author" content="PowerSnail">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
-
-<title>How to Make Neovim Open PDF and Images External Viewers · SnailShell</title>
-
-<meta property="og:title" content="How to Make Neovim Open PDF and Images External Viewers" />
-<meta property="og:site_name" content="SnailShell" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://powersnail.com/2024/open-binary-files-external/" />
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
-
-
-
-  
-  <meta name="description" content="Configuring neovim with Lua.">
-  <meta property="og:description" content="Configuring neovim with Lua." />
-
-
-<link rel="canonical" href="https://powersnail.com/2024/open-binary-files-external/"/>
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
-  </head>
-<body>
-  
-  
-    <div
-  style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  "
->
-  <div style="grid-column: 3/-3; position: relative">
-    <img
-      src="/images/halloween.webp"
-      width="256px"
-      height="48px"
-      style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;"
+    <meta
+      property="og:title"
+      content="How to Make Neovim Open PDF and Images External Viewers"
     />
-  </div>
-</div>
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2024/open-binary-files-external/"
+    />
 
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
+    <meta name="description" content="Configuring neovim with Lua." />
+    <meta property="og:description" content="Configuring neovim with Lua." />
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2024/open-binary-files-external/"
+    />
+
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
+
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
           </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article id="post-main">
+        <h1>How to Make Neovim Open PDF and Images External Viewers</h1>
+
+        <div id="title-subtitle">Configuring neovim with Lua.</div>
+
+        <div class="metadata">
+          <time datetime="2024-03-05T00:00:00Z">05 Mar 2024</time>
+          · 489 words · 3 minutes read
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
+        <hr />
 
-  <main>
-<article id="post-main"><h1>
-  How to Make Neovim Open PDF and Images External Viewers
-  
-
-</h1>
-
-
-  <div id="title-subtitle">Configuring neovim with Lua.</div>
-
-
-<div class="metadata">
-    <time datetime="2024-03-05T00:00:00Z">05 Mar 2024</time>
-    ·
-    489 words
-    ·
-    3 minutes read
-</div>
-<hr />
-
-<p>After some serious attempts to equip my terminal emulator with the ability rendering images, I&rsquo;ve given up on it. My experience is that in 2024, it&rsquo;s still not quite a practical endeavor, at least on my machine with all the CLI tools that I&rsquo;m using, specifically <code>tmux</code> and <code>neovim</code>. There are a handful of image protocols out there made for this purpose, but each comes with enough caveats, or limitations on what terminal/multiplexer/scrolling capabilities that it can work with.</p>
-<p>Still, there is the need to display images and PDFs while I&rsquo;m working, and using <code>neovim</code> as my main editor, I find it tedious to have to open a preview of a file in another pane by typing out its full path, when there is a perfectly functional fuzzy search capability right there in the editor. It&rsquo;s also annoying when I accidentally select a binary file and <code>neovim</code> shows me gibberish.</p>
-<p>As a workaround, I set up some auto-commands that trigger external previewers for these files:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">-- Open binary files</span>
+        <p>
+          After some serious attempts to equip my terminal emulator with the
+          ability rendering images, I&rsquo;ve given up on it. My experience is
+          that in 2024, it&rsquo;s still not quite a practical endeavor, at
+          least on my machine with all the CLI tools that I&rsquo;m using,
+          specifically <code>tmux</code> and <code>neovim</code>. There are a
+          handful of image protocols out there made for this purpose, but each
+          comes with enough caveats, or limitations on what
+          terminal/multiplexer/scrolling capabilities that it can work with.
+        </p>
+        <p>
+          Still, there is the need to display images and PDFs while I&rsquo;m
+          working, and using <code>neovim</code> as my main editor, I find it
+          tedious to have to open a preview of a file in another pane by typing
+          out its full path, when there is a perfectly functional fuzzy search
+          capability right there in the editor. It&rsquo;s also annoying when I
+          accidentally select a binary file and <code>neovim</code> shows me
+          gibberish.
+        </p>
+        <p>
+          As a workaround, I set up some auto-commands that trigger external
+          previewers for these files:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">-- Open binary files</span>
 </span></span><span class="line"><span class="cl"><span class="n">vim.api</span><span class="p">.</span><span class="n">nvim_create_autocmd</span><span class="p">(</span><span class="s2">&#34;BufReadCmd&#34;</span><span class="p">,</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="n">pattern</span> <span class="o">=</span> <span class="s2">&#34;*.pdf&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">callback</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
@@ -153,80 +165,161 @@ More
 </span></span><span class="line"><span class="cl">    <span class="n">vim.cmd</span><span class="p">(</span><span class="s2">&#34;silent !eyestalk &#34;</span> <span class="o">..</span> <span class="n">filename</span> <span class="o">..</span> <span class="s2">&#34; &amp;&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">vim.cmd</span><span class="p">(</span><span class="s2">&#34;let tobedeleted = bufnr(&#39;%&#39;) | b# | exe </span><span class="se">\&#34;</span><span class="s2">bd! </span><span class="se">\&#34;</span><span class="s2"> . tobedeleted&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">end</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span></span></span></code></pre></div><p>The snippet is predominantly based on <a href="https://vi.stackexchange.com/questions/7217/how-can-i-cancel-reading-a-file-into-a-buffer-on-bufreadpre">this Stack Exchange post</a>.</p>
-<h2 id="some-explanations">
-  Some explanations
-  <a href="#some-explanations"><small>##</small></a>
-</h2>
-<ul>
-<li><code>BufReadCmd</code>. This function is triggered before the file is loaded into the buffer, and in fact, it is supposed to do the actual work of reading the file. By not doing that work, the reading is avoided. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
-<li><code>vim.fn.shellescape(vim.api.nvim_buf_get_name(0))</code>. This line retrieves the name of the current buffer&rsquo;s file using <code>vim.api.nvim_buf_get_name(0)</code> and then escapes the filename for safe use in a shell command using <code>vim.fn.shellescape()</code>.</li>
-<li>The trailing <code>&amp;</code> puts the process of the external program into the background, so the editor is not frozen by it.</li>
-<li><code>vim.cmd(&quot;let tobedeleted = bufnr('%') | b# | exe \&quot;bd! \&quot; . tobedeleted&quot;)</code>. This command first switches the previous buffer to the front, and deletes the buffer of the binary file. <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
-</ul>
-<h2 id="further-work">
-  Further work
-  <a href="#further-work"><small>##</small></a>
-</h2>
-<p>The next step is to find or make a fast, general purpose file viewer, so I can open all binary files&mdash;or any file that&rsquo;s not suitable for text-based editing&mdash;in the same app. At the moment, <code>mupdf</code> is the fastest simple PDF viewer I&rsquo;ve found, at least the fastest among the packages in my system repo.</p>
+</span></span><span class="line"><span class="cl"><span class="p">})</span></span></span></code></pre>
+        </div>
+        <p>
+          The snippet is predominantly based on
+          <a
+            href="https://vi.stackexchange.com/questions/7217/how-can-i-cancel-reading-a-file-into-a-buffer-on-bufreadpre"
+            >this Stack Exchange post</a
+          >.
+        </p>
+        <h2 id="some-explanations">
+          Some explanations
+          <a href="#some-explanations"><small>##</small></a>
+        </h2>
+        <ul>
+          <li>
+            <code>BufReadCmd</code>. This function is triggered before the file
+            is loaded into the buffer, and in fact, it is supposed to do the
+            actual work of reading the file. By not doing that work, the reading
+            is avoided.
+            <sup id="fnref:1"
+              ><a href="#fn:1" class="footnote-ref" role="doc-noteref"
+                >1</a
+              ></sup
+            >
+            <sup id="fnref:2"
+              ><a href="#fn:2" class="footnote-ref" role="doc-noteref"
+                >2</a
+              ></sup
+            >
+          </li>
+          <li>
+            <code>vim.fn.shellescape(vim.api.nvim_buf_get_name(0))</code>. This
+            line retrieves the name of the current buffer&rsquo;s file using
+            <code>vim.api.nvim_buf_get_name(0)</code> and then escapes the
+            filename for safe use in a shell command using
+            <code>vim.fn.shellescape()</code>.
+          </li>
+          <li>
+            The trailing <code>&amp;</code> puts the process of the external
+            program into the background, so the editor is not frozen by it.
+          </li>
+          <li>
+            <code
+              >vim.cmd(&quot;let tobedeleted = bufnr('%') | b# | exe \&quot;bd!
+              \&quot; . tobedeleted&quot;)</code
+            >. This command first switches the previous buffer to the front, and
+            deletes the buffer of the binary file.
+            <sup id="fnref:3"
+              ><a href="#fn:3" class="footnote-ref" role="doc-noteref"
+                >3</a
+              ></sup
+            >
+          </li>
+        </ul>
+        <h2 id="further-work">
+          Further work
+          <a href="#further-work"><small>##</small></a>
+        </h2>
+        <p>
+          The next step is to find or make a fast, general purpose file viewer,
+          so I can open all binary files&mdash;or any file that&rsquo;s not
+          suitable for text-based editing&mdash;in the same app. At the moment,
+          <code>mupdf</code> is the fastest simple PDF viewer I&rsquo;ve found,
+          at least the fastest among the packages in my system repo.
+        </p>
 
+        <footer>
+          <section>
+            <ol>
+              <li id="fn:1">
+                <p>
+                  Bram Moolenaar. (2024, January 25). VIM REFERENCE MANUAL.
+                  <a href="https://vimhelp.org/autocmd.txt.html#BufReadCmd"
+                    >https://vimhelp.org/autocmd.txt.html#BufReadCmd</a
+                  >&#160;<a
+                    href="#fnref:1"
+                    class="footnote-backref"
+                    role="doc-backlink"
+                    >&#x21a9;&#xfe0e;</a
+                  >
+                </p>
+              </li>
+              <li id="fn:2">
+                <p>
+                  muru. (2016, April 6). Answer to “How can I cancel reading a
+                  file into a buffer on BufReadPre?” Vi and Vim Stack Exchange.
+                  <a href="https://vi.stackexchange.com/a/7223"
+                    >https://vi.stackexchange.com/a/7223</a
+                  >&#160;<a
+                    href="#fnref:2"
+                    class="footnote-backref"
+                    role="doc-backlink"
+                    >&#x21a9;&#xfe0e;</a
+                  >
+                </p>
+              </li>
+              <li id="fn:3">
+                <p>
+                  Louwers, B. (2016, April 6). Answer to “How can I cancel
+                  reading a file into a buffer on BufReadPre?” Vi and Vim Stack
+                  Exchange.
+                  <a href="https://vi.stackexchange.com/a/7236"
+                    >https://vi.stackexchange.com/a/7236</a
+                  >&#160;<a
+                    href="#fnref:3"
+                    class="footnote-backref"
+                    role="doc-backlink"
+                    >&#x21a9;&#xfe0e;</a
+                  >
+                </p>
+              </li>
+            </ol>
+          </section>
 
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a href="/tags/neovim"><code>neovim</code></a
+              >, <a href="/tags/system"><code>system</code></a
+              >, <a href="/tags/editor"><code>editor</code></a
+              >, <a href="/tags/text-editing"><code>text editing</code></a
+              >, <a href="/tags/pdf"><code>pdf</code></a
+              >, <a href="/tags/image"><code>image</code></a
+              >, <a href="/tags/lua"><code>lua</code></a>
+            </p>
+          </section>
 
-  
-
-
-  <footer>
-    
-    <section><ol>
-<li id="fn:1">
-<p>Bram Moolenaar. (2024, January 25). VIM REFERENCE MANUAL. <a href="https://vimhelp.org/autocmd.txt.html#BufReadCmd">https://vimhelp.org/autocmd.txt.html#BufReadCmd</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p>muru. (2016, April 6). Answer to “How can I cancel reading a file into a buffer on BufReadPre?” Vi and Vim Stack Exchange. <a href="https://vi.stackexchange.com/a/7223">https://vi.stackexchange.com/a/7223</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p>Louwers, B. (2016, April 6). Answer to “How can I cancel reading a file into a buffer on BufReadPre?” Vi and Vim Stack Exchange. <a href="https://vi.stackexchange.com/a/7236">https://vi.stackexchange.com/a/7236</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol></section>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg
-          aria-label="tags"
-          class="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="16"
-          height="16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
-            clip-rule="evenodd"
-          />
-        </svg>
-           <a href="/tags/neovim"><code>neovim</code></a>, <a href="/tags/system"><code>system</code></a>, <a href="/tags/editor"><code>editor</code></a>, <a href="/tags/text-editing"><code>text editing</code></a>, <a href="/tags/pdf"><code>pdf</code></a>, <a href="/tags/image"><code>image</code></a>, <a href="/tags/lua"><code>lua</code></a>
-      </p>
-      
-    </section>
-
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2024.open-binary-files-external@powersnail.com">comment.2024.open-binary-files-external@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
-
-
-  </main><footer>
-  <article><div>© PowerSnail 2024</div>
-  </article>
-</footer>
-
-</body>
+          <section>
+            <p>
+              Leave a comment via email:
+              <a
+                href="mailto:comment.2024.open-binary-files-external@powersnail.com"
+                >comment.2024.open-binary-files-external@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2024</div></article>
+    </footer>
+  </body>
 </html>

@@ -1,266 +1,454 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>Disable 2.4GHz for iwd · SnailShell</title>
 
+    <meta property="og:title" content="Disable 2.4GHz for iwd" />
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2024/disable-2-4ghz-for-iwd/"
+    />
 
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
 
-<meta name="author" content="PowerSnail">
+    <meta
+      name="description"
+      content="I debugged my insanely fluctuating WIFI latency, and found out that the 2.4GHz band had gone rogue. As the router doesn&amp;rsquo;t belong to me, I have to apply a workaround where iwd is configured to not scan 2.4GHz network."
+    />
+    <meta
+      property="og:description"
+      content="I debugged my insanely fluctuating WIFI latency, and found out that the 2.4GHz band had gone rogue. As the router doesn&amp;rsquo;t belong to me, I have to apply a workaround where iwd is configured to not scan 2.4GHz network."
+    />
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2024/disable-2-4ghz-for-iwd/"
+    />
 
-<title>Disable 2.4GHz for iwd · SnailShell</title>
-
-<meta property="og:title" content="Disable 2.4GHz for iwd">
-<meta property="og:site_name" content="SnailShell">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://powersnail.com/2024/disable-2-4ghz-for-iwd/">
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg">
-
-
-
-  
-  <meta name="description" content="I debugged my insanely fluctuating WIFI latency, and found out that the 2.4GHz band had gone rogue. As the router doesn&amp;rsquo;t belong to me, I have to apply a workaround where iwd is configured to not scan 2.4GHz network.">
-  <meta property="og:description" content="I debugged my insanely fluctuating WIFI latency, and found out that the 2.4GHz band had gone rogue. As the router doesn&amp;rsquo;t belong to me, I have to apply a workaround where iwd is configured to not scan 2.4GHz network.">
-
-
-<link rel="canonical" href="https://powersnail.com/2024/disable-2-4ghz-for-iwd/">
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
   </head>
-<body>
-  
-  
-    <div style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  ">
-  <div style="grid-column: 3/-3; position: relative">
-    <img src="/images/halloween.webp" width="256px" height="48px" style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;">
-  </div>
-</div>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
 
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
+          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                ></path>
+              </svg>
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
-</svg>
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
-          </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+    <main>
+      <article id="post-main">
+        <h1>Disable 2.4GHz for iwd</h1>
+
+        <div id="title-subtitle">
+          I debugged my insanely fluctuating WIFI latency, and found out that
+          the 2.4GHz band had gone rogue. As the router doesn’t belong to me, I
+          have to apply a workaround where iwd is configured to not scan 2.4GHz
+          network.
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
 
-  <main>
-<article id="post-main"><h1>
-  Disable 2.4GHz for iwd
-  
+        <div class="metadata">
+          <time datetime="2024-09-22T00:00:00Z">22 Sep 2024</time>
+          · 957 words · 5 minutes read
+        </div>
+        <hr />
 
-</h1>
-
-
-  <div id="title-subtitle">I debugged my insanely fluctuating WIFI latency, and found out that the 2.4GHz band had gone rogue. As the router doesn’t belong to me, I have to apply a workaround where iwd is configured to not scan 2.4GHz network.</div>
-
-
-<div class="metadata">
-    <time datetime="2024-09-22T00:00:00Z">22 Sep 2024</time>
-    ·
-    957 words
-    ·
-    5 minutes read
-</div>
-<hr>
-
-<h2 id="debugging-an-erratic-wifi-connection">
-  Debugging an Erratic WIFI Connection
-  <a href="#debugging-an-erratic-wifi-connection"><small>##</small></a>
-</h2>
-<p>Recently, I had a problem with the WIFI connection on my Linux workstation: sometimes, the latency fluctuates quite badly, occasionally to the point of going offline completely. It doesn’t happen all the time, though. I could go through a whole day without a single disruption, but when it started acting out, there was seemingly nothing I could do to stop it. Turning the router off and on again, restarting my PC, forgetting and re-adding the network in Network Manager, etc. all ended up futile.</p>
-<p>At first, I thought it was a problem with how the network was configured on my machine. After all, it’s Linux, and 90% of the time when something does not function as expected, it’s because there’s a switch buried in <code>/etc</code> whose purpose and usage is detailed on ArchWiki that you just need to flip.</p>
-<p>That did not seem to be the case this time. After some painstaking tinkering around—reading system logs &amp; dmesg logs, diving into NetworkManager’s config files, replacing wpa_supplicant with iwd(<a href="https://iwd.wiki.kernel.org/">iNet Wireless Daemon</a>), switching back to wpa_supplicant, switching to IWD yet again—I made no progress. The fluctuations came and went as it pleased, unaffected by my efforts to adjust the network configurations.</p>
-<p>But I noticed two interesting patterns: 1) when the network is stable, I have about 10ms ping to 1.1.1.1, but when the network is unstable, the best I get is about 20ms; and 2) the latency is fine when NetworkManager shows 1 bar, i.e. the signal is weak; but when I get 3 bars, fluctuation and disconnections occur, which is very counter-intuitive.</p>
-<div class="table-wrapper"> <table>
-<thead>
-<tr>
-<th>WIFI Signal</th>
-<th>Minimum Ping</th>
-<th>Maximum Ping</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="/2024/disable-2-4ghz-for-iwd/network-wireless-signal-weak-symbolic.svg" alt="an wifi icon with one bar signal" width="22" height="22" style="max-width: 100%; height: auto">
- Weak</td>
-<td>10ms</td>
-<td>15ms</td>
-</tr>
-<tr>
-<td><img src="/2024/disable-2-4ghz-for-iwd/network-wireless-signal-good-symbolic.svg" alt="an wifi icon with two bar signal" width="22" height="22" style="max-width: 100%; height: auto" loading="lazy">
- Strong</td>
-<td>20ms</td>
-<td>1800ms ~ ∞</td>
-</tr>
-</tbody>
-</table> </div>
-<p>This got me thinking about 5GHz vs 2.4GHz. I knew that 2.4GHz is slower but more penetrative, while 5GHz is the opposite. It must be the case that whenever the network fluctuates, I’m connected to the 2.4GHz band. This can be tested by observing the output of <code>sudo iwctl station wlan0 show | grep Frequency</code> (<code>wlan0</code> is the name of my wifi adapter in iwd). I ran this command whenever I got the erratic pings, and indeed, it only happened when connected to the 2.4GHz band.</p>
-<p>The next step was figuring out whether that was the PC’s fault or the route’s. The first thought was that it must be the PC, because my phone had been connecting to the internet just fine, but of course, there was nothing that I did on my phone that was sensitive to latency, so I might not have noticed it. And more importantly, the phone might have a different strategy choosing which band to connect to, and it favors the 5GHz band more the PC does.</p>
-<p>I took my phone, downloaded one of the WIFI analyzer apps, and started towards a corner of the house, watching as 5GHz signal weakened to the point where the phone switched to 2.4GHz. I tried to ping the router, and well, the familiar fluctuations was reproduced on my phone as well.</p>
-<p>The router isn’t mine, though. It’s one of those ISP provided router and it belongs to my landlord. So the most I can do is to simply disable 2.4GHz.</p>
-<p>It turns out, when I’m Googling around, that most people want the other way around: they want to connect to 2.4GHz and disable 5GHz, like <a href="https://bbs.archlinux.org/viewtopic.php?id=284405">this</a>. I think that’s because if you are at the edge of 5GHz’s effective range, 2.4GHz is usually more stable despite being slower. That is if your 2.4GHz has not gone rogue like mine.</p>
-<h2 id="how-to-disable-5ghz-in-iwd">
-  How to disable 5GHz in iwd
-  <a href="#how-to-disable-5ghz-in-iwd"><small>##</small></a>
-</h2>
-<p>Despite sharing the same SSID (the name you usually see in the list of WIFIs), the 2.4GHz and 5GHz bands of a WIFI, are actually two separate things that can be connected to. The fact that they appear as a unified entity and that our devices can switch between them seamlessly is a feature of convenience.</p>
-<p>Therefore, the first thing I tried was setting the connection’s BSSID (which is not shared by different frequency bands) in NetworkManager to the one used by the 5GHz band. Logically, this should tell NetworkManager to specifically look for that 5GHz connection, and not try to switch to its erratic sibling. But it didn’t work; because I had iwd as the WIFI backend, which doesn’t have the capability of connecting to a BSSID <span class="citation" data-cites="sethSOLVEDHowForce2023">(<a href="#ref-sethSOLVEDHowForce2023" role="doc-biblioref">seth
-2023</a>)</span>.</p>
-<p>At the end of the day, there is a switch buried in <code>/etc</code>whose purpose and usage is detailed on ArchWiki that I can flip <span class="citation" data-cites="marcelholtmannIwdconfig5ArchManual2019">(<a href="#ref-marcelholtmannIwdconfig5ArchManual2019" role="doc-biblioref">Marcel Holtmann et al. 2019</a>)</span>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="c1"># /etc/iwd/main.conf</span>
+        <h2 id="debugging-an-erratic-wifi-connection">
+          Debugging an Erratic WIFI Connection
+          <a href="#debugging-an-erratic-wifi-connection"><small>##</small></a>
+        </h2>
+        <p>
+          Recently, I had a problem with the WIFI connection on my Linux
+          workstation: sometimes, the latency fluctuates quite badly,
+          occasionally to the point of going offline completely. It doesn’t
+          happen all the time, though. I could go through a whole day without a
+          single disruption, but when it started acting out, there was seemingly
+          nothing I could do to stop it. Turning the router off and on again,
+          restarting my PC, forgetting and re-adding the network in Network
+          Manager, etc. all ended up futile.
+        </p>
+        <p>
+          At first, I thought it was a problem with how the network was
+          configured on my machine. After all, it’s Linux, and 90% of the time
+          when something does not function as expected, it’s because there’s a
+          switch buried in <code>/etc</code> whose purpose and usage is detailed
+          on ArchWiki that you just need to flip.
+        </p>
+        <p>
+          That did not seem to be the case this time. After some painstaking
+          tinkering around—reading system logs &amp; dmesg logs, diving into
+          NetworkManager’s config files, replacing wpa_supplicant with iwd(<a
+            href="https://iwd.wiki.kernel.org/"
+            >iNet Wireless Daemon</a
+          >), switching back to wpa_supplicant, switching to IWD yet again—I
+          made no progress. The fluctuations came and went as it pleased,
+          unaffected by my efforts to adjust the network configurations.
+        </p>
+        <p>
+          But I noticed two interesting patterns: 1) when the network is stable,
+          I have about 10ms ping to 1.1.1.1, but when the network is unstable,
+          the best I get is about 20ms; and 2) the latency is fine when
+          NetworkManager shows 1 bar, i.e. the signal is weak; but when I get 3
+          bars, fluctuation and disconnections occur, which is very
+          counter-intuitive.
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>WIFI Signal</th>
+                <th>Minimum Ping</th>
+                <th>Maximum Ping</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="/2024/disable-2-4ghz-for-iwd/network-wireless-signal-weak-symbolic.svg"
+                    alt="an wifi icon with one bar signal"
+                    width="22"
+                    height="22"
+                    style="max-width: 100%; height: auto"
+                  />
+                  Weak
+                </td>
+                <td>10ms</td>
+                <td>15ms</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="/2024/disable-2-4ghz-for-iwd/network-wireless-signal-good-symbolic.svg"
+                    alt="an wifi icon with two bar signal"
+                    width="22"
+                    height="22"
+                    style="max-width: 100%; height: auto"
+                    loading="lazy"
+                  />
+                  Strong
+                </td>
+                <td>20ms</td>
+                <td>1800ms ~ ∞</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          This got me thinking about 5GHz vs 2.4GHz. I knew that 2.4GHz is
+          slower but more penetrative, while 5GHz is the opposite. It must be
+          the case that whenever the network fluctuates, I’m connected to the
+          2.4GHz band. This can be tested by observing the output of
+          <code>sudo iwctl station wlan0 show | grep Frequency</code> (<code
+            >wlan0</code
+          >
+          is the name of my wifi adapter in iwd). I ran this command whenever I
+          got the erratic pings, and indeed, it only happened when connected to
+          the 2.4GHz band.
+        </p>
+        <p>
+          The next step was figuring out whether that was the PC’s fault or the
+          route’s. The first thought was that it must be the PC, because my
+          phone had been connecting to the internet just fine, but of course,
+          there was nothing that I did on my phone that was sensitive to
+          latency, so I might not have noticed it. And more importantly, the
+          phone might have a different strategy choosing which band to connect
+          to, and it favors the 5GHz band more the PC does.
+        </p>
+        <p>
+          I took my phone, downloaded one of the WIFI analyzer apps, and started
+          towards a corner of the house, watching as 5GHz signal weakened to the
+          point where the phone switched to 2.4GHz. I tried to ping the router,
+          and well, the familiar fluctuations was reproduced on my phone as
+          well.
+        </p>
+        <p>
+          The router isn’t mine, though. It’s one of those ISP provided router
+          and it belongs to my landlord. So the most I can do is to simply
+          disable 2.4GHz.
+        </p>
+        <p>
+          It turns out, when I’m Googling around, that most people want the
+          other way around: they want to connect to 2.4GHz and disable 5GHz,
+          like
+          <a href="https://bbs.archlinux.org/viewtopic.php?id=284405">this</a>.
+          I think that’s because if you are at the edge of 5GHz’s effective
+          range, 2.4GHz is usually more stable despite being slower. That is if
+          your 2.4GHz has not gone rogue like mine.
+        </p>
+        <h2 id="how-to-disable-5ghz-in-iwd">
+          How to disable 5GHz in iwd
+          <a href="#how-to-disable-5ghz-in-iwd"><small>##</small></a>
+        </h2>
+        <p>
+          Despite sharing the same SSID (the name you usually see in the list of
+          WIFIs), the 2.4GHz and 5GHz bands of a WIFI, are actually two separate
+          things that can be connected to. The fact that they appear as a
+          unified entity and that our devices can switch between them seamlessly
+          is a feature of convenience.
+        </p>
+        <p>
+          Therefore, the first thing I tried was setting the connection’s BSSID
+          (which is not shared by different frequency bands) in NetworkManager
+          to the one used by the 5GHz band. Logically, this should tell
+          NetworkManager to specifically look for that 5GHz connection, and not
+          try to switch to its erratic sibling. But it didn’t work; because I
+          had iwd as the WIFI backend, which doesn’t have the capability of
+          connecting to a BSSID
+          <span class="citation" data-cites="sethSOLVEDHowForce2023"
+            >(<a href="#ref-sethSOLVEDHowForce2023" role="doc-biblioref"
+              >seth 2023</a
+            >)</span
+          >.
+        </p>
+        <p>
+          At the end of the day, there is a switch buried in
+          <code>/etc</code>whose purpose and usage is detailed on ArchWiki that
+          I can flip
+          <span
+            class="citation"
+            data-cites="marcelholtmannIwdconfig5ArchManual2019"
+            >(<a
+              href="#ref-marcelholtmannIwdconfig5ArchManual2019"
+              role="doc-biblioref"
+              >Marcel Holtmann et al. 2019</a
+            >)</span
+          >:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="c1"># /etc/iwd/main.conf</span>
 </span></span><span class="line"><span class="cl"><span class="k">[Rank]</span>
 </span></span><span class="line"><span class="cl"><span class="na">BandModifier5GHz</span><span class="o">=</span><span class="s">1.0</span>
-</span></span><span class="line"><span class="cl"><span class="na">BandModifier2_4GHz</span><span class="o">=</span><span class="s">0.0</span></span></span></code></pre></div><p>The <strong>Rank</strong> section sets the priority of each frequency band with which iwd connects to, and setting it to zero disables it completely.</p>
-<p>To complete the picture, here’s my setup:</p>
-<ol>
-<li>Machine: A PC that I assembled;</li>
-<li>OS/Distribution: <code>Linux version 6.10.9-1-default (geeko@buildhost) (gcc (SUSE Linux) 14.2.0, GNU ld (GNU Binutils; openSUSE Tumbleweed) 2.43.1.20240828-2) #1 SMP PREEMPT_DYNAMIC Sun Sep 8 13:43:05 UTC 2024 (5af7788)</code></li>
-<li>Network setup: NetworkManager + iwd</li>
-<li>WIFI adapter: Wireless-AC 3168NGW, which came with the motherboard.</li>
-</ol>
-<h2 id="i-probably-need-a-better-router-and-a-better-wifi-adapter-for-the-pc">
-  I probably need a better router, and a better WIFI adapter for the PC
-  <a href="#i-probably-need-a-better-router-and-a-better-wifi-adapter-for-the-pc"><small>##</small></a>
-</h2>
-<p>As mentioned above, when I tested the connection with my phone, my hypothesis was that the phone has a different strategy choosing frequency bands, and it adheres to 5GHz more than the PC, but I was wrong.</p>
-<p>Seemingly, the phone just receives a stronger signal. I’m not sure whether this is because the WIFI scanner app calculates RSSI differently from iwd, but if I trust the numbers they gave me, the differences are massive:</p>
-<div class="table-wrapper"> <table>
-<thead>
-<tr>
-<th></th>
-<th>2.4GHz</th>
-<th>5GHz</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PC</td>
-<td>-67dBm</td>
-<td>-71dBm</td>
-</tr>
-<tr>
-<td>Phone</td>
-<td>-48dBm</td>
-<td>-53dBm</td>
-</tr>
-</tbody>
-</table> </div>
-<p>Perhaps, in addition to getting a better router with a functional 2.4GHz band, I should also consider getting a more competent WIFI adapter for the PC.</p>
+</span></span><span class="line"><span class="cl"><span class="na">BandModifier2_4GHz</span><span class="o">=</span><span class="s">0.0</span></span></span></code></pre>
+        </div>
+        <p>
+          The <strong>Rank</strong> section sets the priority of each frequency
+          band with which iwd connects to, and setting it to zero disables it
+          completely.
+        </p>
+        <p>To complete the picture, here’s my setup:</p>
+        <ol>
+          <li>Machine: A PC that I assembled;</li>
+          <li>
+            OS/Distribution:
+            <code
+              >Linux version 6.10.9-1-default (geeko@buildhost) (gcc (SUSE
+              Linux) 14.2.0, GNU ld (GNU Binutils; openSUSE Tumbleweed)
+              2.43.1.20240828-2) #1 SMP PREEMPT_DYNAMIC Sun Sep 8 13:43:05 UTC
+              2024 (5af7788)</code
+            >
+          </li>
+          <li>Network setup: NetworkManager + iwd</li>
+          <li>
+            WIFI adapter: Wireless-AC 3168NGW, which came with the motherboard.
+          </li>
+        </ol>
+        <h2
+          id="i-probably-need-a-better-router-and-a-better-wifi-adapter-for-the-pc"
+        >
+          I probably need a better router, and a better WIFI adapter for the PC
+          <a
+            href="#i-probably-need-a-better-router-and-a-better-wifi-adapter-for-the-pc"
+            ><small>##</small></a
+          >
+        </h2>
+        <p>
+          As mentioned above, when I tested the connection with my phone, my
+          hypothesis was that the phone has a different strategy choosing
+          frequency bands, and it adheres to 5GHz more than the PC, but I was
+          wrong.
+        </p>
+        <p>
+          Seemingly, the phone just receives a stronger signal. I’m not sure
+          whether this is because the WIFI scanner app calculates RSSI
+          differently from iwd, but if I trust the numbers they gave me, the
+          differences are massive:
+        </p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>2.4GHz</th>
+                <th>5GHz</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PC</td>
+                <td>-67dBm</td>
+                <td>-71dBm</td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>-48dBm</td>
+                <td>-53dBm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Perhaps, in addition to getting a better router with a functional
+          2.4GHz band, I should also consider getting a more competent WIFI
+          adapter for the PC.
+        </p>
 
+        <h2 id="references">
+          References
+          <a href="#references"><small>##</small></a>
+        </h2>
 
-  
+        <div
+          id="refs"
+          class="references csl-bib-body hanging-indent"
+          data-entry-spacing="0"
+          role="list"
+        >
+          <div
+            id="ref-marcelholtmannIwdconfig5ArchManual2019"
+            class="csl-entry"
+            role="listitem"
+          >
+            Marcel Holtmann, Denis Kenzior, Andrew Zaborowski, James Prestwood,
+            and Tim Kourt. 2019.
+            <span>“Iwd.config(5) — Arch Manual Pages.”</span> September 22,
+            2019.
+            <a href="https://man.archlinux.org/man/iwd.config.5.en#Rank"
+              >https://man.archlinux.org/man/iwd.config.5.en#Rank</a
+            >.
+          </div>
+          <div
+            id="ref-sethSOLVEDHowForce2023"
+            class="csl-entry"
+            role="listitem"
+          >
+            seth. 2023.
+            <span
+              >“[SOLVED] How to Force Iwd to Use 2.4GHz Network Instead of 5GHz?
+              / Networking, Server, and Protection / Arch Linux Forums.”</span
+            >
+            March 19, 2023.
+            <a
+              href="https://bbs.archlinux.org/viewtopic.php?pid=2090864#p2090864"
+              >https://bbs.archlinux.org/viewtopic.php?pid=2090864#p2090864</a
+            >.
+          </div>
+        </div>
 
-  <h2 id="references">
-  References
-  <a href="#references"><small>##</small></a>
-</h2>
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <a href="/tags/wifi"><code>wifi</code></a
+              >, <a href="/tags/iwd"><code>iwd</code></a>
+            </p>
+          </section>
 
-
-  <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-marcelholtmannIwdconfig5ArchManual2019" class="csl-entry" role="listitem">
-Marcel Holtmann, Denis Kenzior, Andrew Zaborowski, James Prestwood, and
-Tim Kourt. 2019. <span>“Iwd.config(5) — Arch Manual Pages.”</span>
-September 22, 2019. <a href="https://man.archlinux.org/man/iwd.config.5.en#Rank">https://man.archlinux.org/man/iwd.config.5.en#Rank</a>.
-</div>
-<div id="ref-sethSOLVEDHowForce2023" class="csl-entry" role="listitem">
-seth. 2023. <span>“[SOLVED] How to Force Iwd to Use 2.4GHz Network
-Instead of 5GHz? / Networking, Server, and Protection / Arch Linux
-Forums.”</span> March 19, 2023. <a href="https://bbs.archlinux.org/viewtopic.php?pid=2090864#p2090864">https://bbs.archlinux.org/viewtopic.php?pid=2090864#p2090864</a>.
-</div>
-</div>
-  
-
-
-  <footer>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg aria-label="tags" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-          <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"></path>
-        </svg>
-           <a href="/tags/wifi"><code>wifi</code></a>, <a href="/tags/iwd"><code>iwd</code></a>
-      </p>
-      
-    </section>
-
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2024.disable-2-4ghz-for-iwd@powersnail.com">comment.2024.disable-2-4ghz-for-iwd@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
-
-
-  </main><footer>
-  <article><div>© PowerSnail 2024</div>
-  </article>
-</footer>
-
-
-
-</body></html>
+          <section>
+            <p>
+              Leave a comment via email:
+              <a
+                href="mailto:comment.2024.disable-2-4ghz-for-iwd@powersnail.com"
+                >comment.2024.disable-2-4ghz-for-iwd@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2024</div></article>
+    </footer>
+  </body>
+</html>

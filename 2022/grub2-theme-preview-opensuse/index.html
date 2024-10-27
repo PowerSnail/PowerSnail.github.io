@@ -1,154 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>
+      Fixing Grub2 Theme Preview on Opensuse Tumbleweed · SnailShell
+    </title>
 
-
-
-<meta name="author" content="PowerSnail">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
-
-<title>Fixing Grub2 Theme Preview on Opensuse Tumbleweed · SnailShell</title>
-
-<meta property="og:title" content="Fixing Grub2 Theme Preview on Opensuse Tumbleweed" />
-<meta property="og:site_name" content="SnailShell" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://powersnail.com/2022/grub2-theme-preview-opensuse/" />
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
-
-
-
-  
-  <meta name="description" content="To use Grub2 theme preview on openSUSE, two environment variables needs to be overridden.">
-  <meta property="og:description" content="To use Grub2 theme preview on openSUSE, two environment variables needs to be overridden." />
-
-
-<link rel="canonical" href="https://powersnail.com/2022/grub2-theme-preview-opensuse/"/>
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
-  </head>
-<body>
-  
-  
-    <div
-  style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  "
->
-  <div style="grid-column: 3/-3; position: relative">
-    <img
-      src="/images/halloween.webp"
-      width="256px"
-      height="48px"
-      style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;"
+    <meta
+      property="og:title"
+      content="Fixing Grub2 Theme Preview on Opensuse Tumbleweed"
     />
-  </div>
-</div>
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2022/grub2-theme-preview-opensuse/"
+    />
 
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
+    <meta
+      name="description"
+      content="To use Grub2 theme preview on openSUSE, two environment variables needs to be overridden."
+    />
+    <meta
+      property="og:description"
+      content="To use Grub2 theme preview on openSUSE, two environment variables needs to be overridden."
+    />
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2022/grub2-theme-preview-opensuse/"
+    />
+
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
+
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
           </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article id="post-main">
+        <h1>Fixing Grub2 Theme Preview on Opensuse Tumbleweed</h1>
+
+        <div id="title-subtitle">
+          To use Grub2 theme preview on openSUSE, two environment variables
+          needs to be overridden.
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
 
-  <main>
-<article id="post-main"><h1>
-  Fixing Grub2 Theme Preview on Opensuse Tumbleweed
-  
+        <div class="metadata">
+          <time datetime="2022-08-06T00:00:00Z">06 Aug 2022</time>
+          · 345 words · 2 minutes read
+        </div>
+        <hr />
 
-</h1>
-
-
-  <div id="title-subtitle">To use Grub2 theme preview on openSUSE, two environment variables needs to be overridden.</div>
-
-
-<div class="metadata">
-    <time datetime="2022-08-06T00:00:00Z">06 Aug 2022</time>
-    ·
-    345 words
-    ·
-    2 minutes read
-</div>
-<hr />
-
-<p><strong>TLDR</strong>: To use <a href="https://github.com/hartwork/grub2-theme-preview">grub2-theme-preview</a> on openSUSE, you need to override the paths of firmware and ovmf:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">G2TP_GRUB_LIB</span><span class="o">=</span>/usr/share/grub2
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">G2TP_OVMF_IMAGE</span><span class="o">=</span>/usr/share/qemu/ovmf-x86_64-code.bin</span></span></code></pre></div><hr>
-<p>Running after installing grub2-theme-preview and it&rsquo;s dependencies on openSUSE Tumbleweed, I was given the following error:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&gt; grub2-theme-preview .
-</span></span><span class="line"><span class="cl">ERROR: <span class="o">[</span>Errno 2<span class="o">]</span> GRUB platform directory <span class="s2">&#34;/usr/lib/grub/x86_64-efi&#34;</span> not found</span></span></code></pre></div><p>This is because grub2-theme-preview hard codes a few paths for this file, which unfortunately do not include openSUSE&rsquo;s layout.</p>
-<p>The path can be overridden with undocumented an environment variables, which isn&rsquo;t mentioned in the help message or REAME.md, but it can be seen in code:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># __main__.py</span>
+        <p>
+          <strong>TLDR</strong>: To use
+          <a href="https://github.com/hartwork/grub2-theme-preview"
+            >grub2-theme-preview</a
+          >
+          on openSUSE, you need to override the paths of firmware and ovmf:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">G2TP_GRUB_LIB</span><span class="o">=</span>/usr/share/grub2
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">G2TP_OVMF_IMAGE</span><span class="o">=</span>/usr/share/qemu/ovmf-x86_64-code.bin</span></span></code></pre>
+        </div>
+        <hr />
+        <p>
+          Running after installing grub2-theme-preview and it&rsquo;s
+          dependencies on openSUSE Tumbleweed, I was given the following error:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&gt; grub2-theme-preview .
+</span></span><span class="line"><span class="cl">ERROR: <span class="o">[</span>Errno 2<span class="o">]</span> GRUB platform directory <span class="s2">&#34;/usr/lib/grub/x86_64-efi&#34;</span> not found</span></span></code></pre>
+        </div>
+        <p>
+          This is because grub2-theme-preview hard codes a few paths for this
+          file, which unfortunately do not include openSUSE&rsquo;s layout.
+        </p>
+        <p>
+          The path can be overridden with undocumented an environment variables,
+          which isn&rsquo;t mentioned in the help message or REAME.md, but it
+          can be seen in code:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># __main__.py</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_grub2_directory</span><span class="p">(</span><span class="n">platform</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">/</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;G2TP_GRUB_LIB&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/lib/grub&#39;</span><span class="p">),</span> <span class="n">platform</span><span class="p">)</span></span></span></code></pre></div><p>Where is it in openSUSE? The error message says that &ldquo;/usr/lib/grub/x86_64-efi&rdquo; was not found, so let&rsquo;s find x86-64-efi:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&gt;  fd x86_64-efi /usr
-</span></span><span class="line"><span class="cl">/usr/share/grub2/x86_64-efi/</span></span></code></pre></div><p>The code tells us that <code>G2TP_GRUB_LIB</code> should refer to the directory that contains <code>x86_64-efi</code>, so we can override the environment variable:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">G2TP_GRUB_LIB</span><span class="o">=</span>/usr/share/grub2</span></span></code></pre></div><p>Now, let&rsquo;s run it again:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&gt; grub2-theme-preview .
-</span></span><span class="line"><span class="cl">ERROR: <span class="o">[</span>Errno 2<span class="o">]</span> OVMF image file <span class="s2">&#34;/usr/share/[..]/OVMF_CODE.fd&#34;</span> is missing, please install package <span class="s1">&#39;edk2-ovmf&#39;</span> or <span class="s1">&#39;ovmf&#39;</span>.</span></span></code></pre></div><p>Okay, so there&rsquo;s another one. Again, digging into the code, we can find another environment variable:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_grub2_ovmf_tuple</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">/</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;G2TP_GRUB_LIB&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/lib/grub&#39;</span><span class="p">),</span> <span class="n">platform</span><span class="p">)</span></span></span></code></pre>
+        </div>
+        <p>
+          Where is it in openSUSE? The error message says that
+          &ldquo;/usr/lib/grub/x86_64-efi&rdquo; was not found, so let&rsquo;s
+          find x86-64-efi:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&gt;  fd x86_64-efi /usr
+</span></span><span class="line"><span class="cl">/usr/share/grub2/x86_64-efi/</span></span></code></pre>
+        </div>
+        <p>
+          The code tells us that <code>G2TP_GRUB_LIB</code> should refer to the
+          directory that contains <code>x86_64-efi</code>, so we can override
+          the environment variable:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">G2TP_GRUB_LIB</span><span class="o">=</span>/usr/share/grub2</span></span></code></pre>
+        </div>
+        <p>Now, let&rsquo;s run it again:</p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&gt; grub2-theme-preview .
+</span></span><span class="line"><span class="cl">ERROR: <span class="o">[</span>Errno 2<span class="o">]</span> OVMF image file <span class="s2">&#34;/usr/share/[..]/OVMF_CODE.fd&#34;</span> is missing, please install package <span class="s1">&#39;edk2-ovmf&#39;</span> or <span class="s1">&#39;ovmf&#39;</span>.</span></span></code></pre>
+        </div>
+        <p>
+          Okay, so there&rsquo;s another one. Again, digging into the code, we
+          can find another environment variable:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_grub2_ovmf_tuple</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">    <span class="o">...</span>
 </span></span><span class="line"><span class="cl">    <span class="n">omvf_image</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;G2TP_OVMF_IMAGE&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">omvf_image</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># Support non-standard locations e.g. NixOS</span>
@@ -160,65 +218,90 @@ More
 </span></span><span class="line"><span class="cl">            <span class="s1">&#39;/usr/share/OVMF/OVMF_CODE.fd&#39;</span><span class="p">,</span>  <span class="c1"># Debian and its derivatives</span>
 </span></span><span class="line"><span class="cl">            <span class="s1">&#39;/usr/share/edk2/ovmf/OVMF_CODE.fd&#39;</span><span class="p">,</span>  <span class="c1"># Fedora (and its derivatives?)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span></span></span></code></pre></div><p><code>OVMF_CODE.fd</code>, however, is more elusive. <code>fd OVMF_CODE</code> returns nothing. After some Googling and forum digging, it turns out that openSUSE does not name the UEFI firmware as <code>OVMF_CODE.fd</code>; rather, <code>ovmf-[arch]-code.bin</code>. For my purpose, the x86_64 version is located at <code>/usr/share/qemu/ovmf-x86_64-code.bin</code>. This time, <code>grub2-theme-preview</code> is looking for the path of the file, rather than the directory, so, we set the environment variable:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">G2TP_OVMF_IMAGE</span><span class="o">=</span>/usr/share/qemu/ovmf-x86_64-code.bin</span></span></code></pre></div><p>Running <code>grub2-theme-preview</code> once again:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&gt; grub2-theme-preview .
+</span></span><span class="line"><span class="cl">    <span class="o">...</span></span></span></code></pre>
+        </div>
+        <p>
+          <code>OVMF_CODE.fd</code>, however, is more elusive.
+          <code>fd OVMF_CODE</code> returns nothing. After some Googling and
+          forum digging, it turns out that openSUSE does not name the UEFI
+          firmware as <code>OVMF_CODE.fd</code>; rather,
+          <code>ovmf-[arch]-code.bin</code>. For my purpose, the x86_64 version
+          is located at <code>/usr/share/qemu/ovmf-x86_64-code.bin</code>. This
+          time, <code>grub2-theme-preview</code> is looking for the path of the
+          file, rather than the directory, so, we set the environment variable:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">G2TP_OVMF_IMAGE</span><span class="o">=</span>/usr/share/qemu/ovmf-x86_64-code.bin</span></span></code></pre>
+        </div>
+        <p>Running <code>grub2-theme-preview</code> once again:</p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&gt; grub2-theme-preview .
 </span></span><span class="line"><span class="cl">INFO: Appending to fonts to load: ascii.pf2
 </span></span><span class="line"><span class="cl">INFO: Appending to fonts to load: DejaVuSans-Bold14.pf2
 </span></span><span class="line"><span class="cl">INFO: Appending to fonts to load: DejaVuSans10.pf2
 </span></span><span class="line"><span class="cl">INFO: Appending to fonts to load: DejaVuSans12.pf2
 </span></span><span class="line"><span class="cl">INFO: Found OVMF image at <span class="s1">&#39;/usr/share/qemu/ovmf-x86_64-code.bin&#39;</span>.
-</span></span><span class="line"><span class="cl">INFO: Please give GRUB a moment to show up in QEMU...</span></span></code></pre></div><p><em>Voila!</em></p>
-<figure>
-    <img
-    src="/images/opensuse-grub-preview.webp" alt="Screenshot of grub2-theme-preview"srcset="/images/opensuse-grub-preview-400w.webp 400w,/images/opensuse-grub-preview-600w.webp 600w,/images/opensuse-grub-preview-800w.webp 800w,/images/opensuse-grub-preview-1000w.webp 1000w,/images/opensuse-grub-preview.webp 1200w" width="1200"  height="675" >
-
-    <figcaption></figcaption>
-  </figure>
-
-  
-
-
-  <footer>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg
-          aria-label="tags"
-          class="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="16"
-          height="16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
-            clip-rule="evenodd"
+</span></span><span class="line"><span class="cl">INFO: Please give GRUB a moment to show up in QEMU...</span></span></code></pre>
+        </div>
+        <p><em>Voila!</em></p>
+        <figure>
+          <img
+            src="/images/opensuse-grub-preview.webp"
+            alt="Screenshot of grub2-theme-preview"
+            srcset="
+              /images/opensuse-grub-preview-400w.webp   400w,
+              /images/opensuse-grub-preview-600w.webp   600w,
+              /images/opensuse-grub-preview-800w.webp   800w,
+              /images/opensuse-grub-preview-1000w.webp 1000w,
+              /images/opensuse-grub-preview.webp       1200w
+            "
+            width="1200"
+            height="675"
           />
-        </svg>
-           <a href="/tags/computer-science"><code>computer science</code></a>
-      </p>
-      
-    </section>
 
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2022.grub2-theme-preview-opensuse@powersnail.com">comment.2022.grub2-theme-preview-opensuse@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
+          <figcaption></figcaption>
+        </figure>
 
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a href="/tags/computer-science"><code>computer science</code></a>
+            </p>
+          </section>
 
-  </main><footer>
-  <article><div>© PowerSnail 2022</div>
-  </article>
-</footer>
-
-</body>
+          <section>
+            <p>
+              Leave a comment via email:
+              <a
+                href="mailto:comment.2022.grub2-theme-preview-opensuse@powersnail.com"
+                >comment.2022.grub2-theme-preview-opensuse@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2022</div></article>
+    </footer>
+  </body>
 </html>

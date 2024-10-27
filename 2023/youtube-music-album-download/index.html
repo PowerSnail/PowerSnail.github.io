@@ -1,144 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="PowerSnail" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
 
+    <title>
+      My Config File for Downloading Albums from YouTube Music · SnailShell
+    </title>
 
-
-
-<meta name="author" content="PowerSnail">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="theme-color" content="#bd1b37">
-
-<title>My Config File for Downloading Albums from YouTube Music · SnailShell</title>
-
-<meta property="og:title" content="My Config File for Downloading Albums from YouTube Music" />
-<meta property="og:site_name" content="SnailShell" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://powersnail.com/2023/youtube-music-album-download/" />
-
-
-  <meta property="og:image" content="https://powersnail.com/icons/snail.svg" />
-
-
-
-  
-  <meta name="description" content="Download albums from YouTube Music with embedded metadata and properly cropped thumbnail.">
-  <meta property="og:description" content="Download albums from YouTube Music with embedded metadata and properly cropped thumbnail." />
-
-
-<link rel="canonical" href="https://powersnail.com/2023/youtube-music-album-download/"/>
-
-
-
-
-  <link id="main-css" rel="stylesheet" href="/css/style.css">
-
-
-
-
-
-  </head>
-<body>
-  
-  
-    <div
-  style="
-    height: 50px;
-    width: 100%;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    background-color: #f57029ff;
-    display: grid;
-  "
->
-  <div style="grid-column: 3/-3; position: relative">
-    <img
-      src="/images/halloween.webp"
-      width="256px"
-      height="48px"
-      style="position: absolute; left: 0; top: 0; max-width: 100%; height: auto;"
+    <meta
+      property="og:title"
+      content="My Config File for Downloading Albums from YouTube Music"
     />
-  </div>
-</div>
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2023/youtube-music-album-download/"
+    />
 
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
 
-  
-  
-  <header>
-  <article>
-    <nav class="site-nav">
-      <a href="/" class="site-title">
-        <span class="site-title-text">Snail's Shell</span>
-      </a>
-      <div class="site-title-fill"></div>
-      <a href="/posts/" class="nav-link">
-        Posts
-      </a>
-      <details>
-        <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" width="16" height="16">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
+    <meta
+      name="description"
+      content="Download albums from YouTube Music with embedded metadata and properly cropped thumbnail."
+    />
+    <meta
+      property="og:description"
+      content="Download albums from YouTube Music with embedded metadata and properly cropped thumbnail."
+    />
 
-More
-        </summary>
-        <div class="site-title-more">
-          <a href="/index.xml" class="nav-link">
-            RSS
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2023/youtube-music-album-download/"
+    />
+
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        height: 50px;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-template-columns: subgrid;
+        background-color: #f57029ff;
+        display: grid;
+      "
+    >
+      <div style="grid-column: 3/-3; position: relative">
+        <img
+          src="/images/halloween.webp"
+          width="256px"
+          height="48px"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
+
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
           </a>
-          <a href="/about/" class="nav-link">
-            About
-          </a>
-          <a href="/sheet-music/" class="nav-link">
-            Sheet Music
-          </a>
-          <a href="/stats/" class="nav-link">
-            Blog Stats
-          </a>
-          <a href="/cat_dot/" class="nav-link">
-            Moving Red Dot for Cat
-          </a>
-          <a href="/game_of_life/" class="nav-link">
-            Game of Life
-          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article id="post-main">
+        <h1>My Config File for Downloading Albums from YouTube Music</h1>
+
+        <div id="title-subtitle">
+          Download albums from YouTube Music with embedded metadata and properly
+          cropped thumbnail.
         </div>
-      </details>
-    </nav>
-  </article>
-</header>
 
-  <main>
-<article id="post-main"><h1>
-  My Config File for Downloading Albums from YouTube Music
-  
+        <div class="metadata">
+          <time datetime="2023-02-19T00:00:00Z">19 Feb 2023</time>
+          · 883 words · 5 minutes read
+        </div>
+        <hr />
 
-</h1>
-
-
-  <div id="title-subtitle">Download albums from YouTube Music with embedded metadata and properly cropped thumbnail.</div>
-
-
-<div class="metadata">
-    <time datetime="2023-02-19T00:00:00Z">19 Feb 2023</time>
-    ·
-    883 words
-    ·
-    5 minutes read
-</div>
-<hr />
-
-<h2 id="the-config-file">
-  The Config File
-  <a href="#the-config-file"><small>##</small></a>
-</h2>
-<p>Here&rsquo;s the config file:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># yt-dlp.conf</span>
+        <h2 id="the-config-file">
+          The Config File
+          <a href="#the-config-file"><small>##</small></a>
+        </h2>
+        <p>Here&rsquo;s the config file:</p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># yt-dlp.conf</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Output format: album/tracks.format</span>
 </span></span><span class="line"><span class="cl">-o <span class="s2">&#34;%(album,playlist_title)U - [%(playlist_id)s]/%(track_number,playlist_index)s - %(title)U - [%(id)s].%(ext)s&#34;</span>
@@ -160,16 +161,24 @@ More
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Misc</span>
 </span></span><span class="line"><span class="cl">--no-overwrites
-</span></span><span class="line"><span class="cl">--concurrent-fragments <span class="m">4</span></span></span></code></pre></div><h2 id="the-explanation">
-  The Explanation
-  <a href="#the-explanation"><small>##</small></a>
-</h2>
-<h3 id="output-formats">
-  Output formats.
-  <a href="#output-formats"><small>###</small></a>
-</h3>
-<p>The files are organized into one-directory-per-album, like the following:</p>
-<div class="highlight"><pre  class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">--concurrent-fragments <span class="m">4</span></span></span></code></pre>
+        </div>
+        <h2 id="the-explanation">
+          The Explanation
+          <a href="#the-explanation"><small>##</small></a>
+        </h2>
+        <h3 id="output-formats">
+          Output formats.
+          <a href="#output-formats"><small>###</small></a>
+        </h3>
+        <p>
+          The files are organized into one-directory-per-album, like the
+          following:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...
 </span></span><span class="line"><span class="cl">├── Bach, J.S.： Sonatas &amp; Partitas - [OLAK5uy_nd-ZT5mVVQ4tFm_6FsJWbj-u6GypaFYe8]
 </span></span><span class="line"><span class="cl">│   ├── 01 - J.S. Bach： Sonata for Violin Solo No. 1 in G Minor, BWV 1001 - I. Adagio - [ZePaXgWY7-Q].opus
 </span></span><span class="line"><span class="cl">│   ├── 02 - J.S. Bach： Sonata for Violin Solo No. 1 in G Minor, BWV 1001 - II. Fuga. Allegro - [93p59vL87cE].opus
@@ -178,107 +187,224 @@ More
 </span></span><span class="line"><span class="cl">│   ├── 05 - J.S. Bach： Partita for Violin Solo No. 1 in B Minor, BWV 1002 - Ia. Allemanda - [4C8pA-8Hy8Q].opus
 </span></span><span class="line"><span class="cl">│   ├── 06 - J.S. Bach： Partita for Violin Solo No. 1 in B Minor, BWV 1002 - Ib. Double - [vy43_64aax8].opus
 </span></span><span class="line"><span class="cl">│   ├── 07 - J.S. Bach： Partita for Violin Solo No. 1 in B Minor, BWV 1002 - IIa. Corrente - [yiHc8-quDIc].opus
-</span></span><span class="line"><span class="cl">...</span></span></code></pre></div><ul>
-<li>
-<p>The output template: <code>&quot;%(album,playlist_title)U - [%(playlist_id)s]/%(track_number,playlist_index)s - %(title)U - [%(id)s].%(ext)s&quot;</code></p>
-<ul>
-<li><code>%(album,playlist_title)U</code> tells <code>yt-dlp</code> to use the album&rsquo;s name, and if that does not exist, use the playlist&rsquo;s title, the trailing &ldquo;U&rdquo; indicating that the string should be normalized.</li>
-<li><code>%(track_number,playlist_index)s</code> means that the file name begins with the track number, which makes it easier to sort the files, if the file manager or app is not metadata-aware.</li>
-<li><code>%(title)U</code> is the title normalized.</li>
-<li><code>%(ext)s</code> is the extension.</li>
-<li><code>%(id)s</code> and <code>%(playlist_id)s</code> are the unique ID that YouTube assigns to the file and the playlist respectively, which might be useful if later I need to get more data from YouTube.</li>
-</ul>
-</li>
-<li>
-<p>Sanitizing filenames</p>
-<ul>
-<li>
-<p><code>--restrict-filenames</code> sanitizes the string of illegal characters. Some file systems support more characters than others, so in theory, it makes sense to err on the side of caution. However, this flag replaces all non-ASCII characters and even special ASCII characters with underscores, which is way too aggressive. While it makes file systems very happy, (an incompatibility is basically impossible), all titles, except the pure English ones, get mangled. &ldquo;Dvořák&rdquo; becomes &ldquo;Dvor_k&rdquo;, &ldquo;Ysaÿe&rdquo; now read &ldquo;Ysa_e&rdquo;, and some titles started making funny faces: <code>-___-</code></p>
-</li>
-<li>
-<p><code>--windows-filenames</code> does exactly what it says on the tin: it makes the string Windows-compatible. I&rsquo;d prefer if it is a little bit more aggressive, for instance, removing <code>&amp;</code> which some cloud drives don&rsquo;t support, but it&rsquo;s a good enough trade-off.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="metadata">
-  Metadata
-  <a href="#metadata"><small>###</small></a>
-</h3>
-<p><code>--embed-metadata</code> tells <code>yt-dlp</code> to embed metadata. Some albums don&rsquo;t have the proper track number set up, which means that when you import the files into a music player, the order of the album gets scrambled up.</p>
-<p><code>--parse-metadata &quot;playlist_index:%(track_number)s&quot;</code> uses the playlist index, which should always be present when downloading a playlist, to fill the track number.</p>
-<h3 id="thumbnails">
-  Thumbnails
-  <a href="#thumbnails"><small>###</small></a>
-</h3>
-<ul>
-<li><code>--embed-thumbnail</code> tells <code>yt-dlp</code> to embed a thumbnail;</li>
-<li><code>--convert-thumbnails png</code> indicates that the format of the thumbnail should be <code>png</code>. <code>webp</code> is possibly the best image format available in <code>yt-dlp</code>, but its popularity being so recent, I&rsquo;m wary of its compatibility with music players. Either <code>png</code> or <code>jpeg</code> should be fine.</li>
-</ul>
-<p>By default, YouTube provides a padded, rectangular image. To cut off the padding, we can use <code>ffmpeg</code> in post-processing. In this <a href="https://github.com/yt-dlp/yt-dlp/issues/429">Github Issue</a>, pukkandan(2021) gave a solution: <code>--ppa &quot;EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf crop=\&quot;'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\&quot;&quot;</code>. But on my machine, <code>yt-dlp</code> seems to ignore this instruction. Even with <code>--verbose</code> turned on, I could see no log about cropping the thumbnail, and if I mangle the command deliberately, no error is produced, either. All I get is the same padded rectangular image in the end.</p>
-<p>According to <code>yt-dlp</code>&rsquo;s README:</p>
-<blockquote>
-<p>Supported PP are: Merger, ModifyChapters, SplitChapters, ExtractAudio, VideoRemuxer, VideoConvertor, Metadata, EmbedSubtitle, <strong>EmbedThumbnail</strong>, SubtitlesConvertor, <strong>ThumbnailsConvertor</strong>, FixupStretched, FixupM4a, FixupM3u8, FixupTimestamp and FixupDuration.</p>
-</blockquote>
-<p><code>EmbedThumbnail</code> and <code>ThumbnailsConvertor</code> must be the two relevant options, so I gave the latter a try: <code>--ppa &quot;ThumbnailsConvertor+ffmpeg_o:-c:v png -vf crop=\&quot;'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\&quot;&quot;</code>. And, <em>hooray</em>, it works!</p>
-<p>My guess is that there&rsquo;s some sort of conflict amongst the sequence of converting the image to the right format, embedding the image, and post-processing the image. In a way, I think it makes sense that thumbnail convertor post processor is the right option here, as it implies that we are processing <strong>after the conversion</strong> and <strong>before the embedding</strong>, whereas post-processing <code>EmbedThumbnail</code> would suggest that we are cropping after the embedding occurs, which would be rather not useful. But this is just a speculation. Without digging into the code, it&rsquo;s impossible to tell what exactly is happening here.</p>
-<h3 id="miscellaneous">
-  Miscellaneous
-  <a href="#miscellaneous"><small>###</small></a>
-</h3>
-<p><code>--no-overwrites</code>: Don&rsquo;t overwrite files.</p>
-<p><code>--concurrent-fragments 4</code>: Download 4 fragments concurrently to speed up the process.</p>
-<h2 id="references">
-  References
-  <a href="#references"><small>##</small></a>
-</h2>
-<p>pukkandan. (2021, June 23). <em>Comment on [Feature Request] Crop to square thumbnail when embedding in MP3s</em>. <a href="https://github.com/yt-dlp/yt-dlp/issues/429#issuecomment-866836396">[Feature Request] Crop to square thumbnail when embedding in MP3s · Issue #429 · yt-dlp/yt-dlp · GitHub</a></p>
-<p>yt-dlp. (2023). <em>Yt-dlp</em> [Python]. yt-dlp. <a href="https://github.com/yt-dlp/yt-dlp">GitHub - yt-dlp/yt-dlp: A youtube-dl fork with additional features and fixes</a> (Original work published 2020)</p>
+</span></span><span class="line"><span class="cl">...</span></span></code></pre>
+        </div>
+        <ul>
+          <li>
+            <p>
+              The output template:
+              <code
+                >&quot;%(album,playlist_title)U -
+                [%(playlist_id)s]/%(track_number,playlist_index)s - %(title)U -
+                [%(id)s].%(ext)s&quot;</code
+              >
+            </p>
+            <ul>
+              <li>
+                <code>%(album,playlist_title)U</code> tells
+                <code>yt-dlp</code> to use the album&rsquo;s name, and if that
+                does not exist, use the playlist&rsquo;s title, the trailing
+                &ldquo;U&rdquo; indicating that the string should be normalized.
+              </li>
+              <li>
+                <code>%(track_number,playlist_index)s</code> means that the file
+                name begins with the track number, which makes it easier to sort
+                the files, if the file manager or app is not metadata-aware.
+              </li>
+              <li><code>%(title)U</code> is the title normalized.</li>
+              <li><code>%(ext)s</code> is the extension.</li>
+              <li>
+                <code>%(id)s</code> and <code>%(playlist_id)s</code> are the
+                unique ID that YouTube assigns to the file and the playlist
+                respectively, which might be useful if later I need to get more
+                data from YouTube.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Sanitizing filenames</p>
+            <ul>
+              <li>
+                <p>
+                  <code>--restrict-filenames</code> sanitizes the string of
+                  illegal characters. Some file systems support more characters
+                  than others, so in theory, it makes sense to err on the side
+                  of caution. However, this flag replaces all non-ASCII
+                  characters and even special ASCII characters with underscores,
+                  which is way too aggressive. While it makes file systems very
+                  happy, (an incompatibility is basically impossible), all
+                  titles, except the pure English ones, get mangled.
+                  &ldquo;Dvořák&rdquo; becomes &ldquo;Dvor_k&rdquo;,
+                  &ldquo;Ysaÿe&rdquo; now read &ldquo;Ysa_e&rdquo;, and some
+                  titles started making funny faces: <code>-___-</code>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <code>--windows-filenames</code> does exactly what it says on
+                  the tin: it makes the string Windows-compatible. I&rsquo;d
+                  prefer if it is a little bit more aggressive, for instance,
+                  removing <code>&amp;</code> which some cloud drives
+                  don&rsquo;t support, but it&rsquo;s a good enough trade-off.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h3 id="metadata">
+          Metadata
+          <a href="#metadata"><small>###</small></a>
+        </h3>
+        <p>
+          <code>--embed-metadata</code> tells <code>yt-dlp</code> to embed
+          metadata. Some albums don&rsquo;t have the proper track number set up,
+          which means that when you import the files into a music player, the
+          order of the album gets scrambled up.
+        </p>
+        <p>
+          <code
+            >--parse-metadata &quot;playlist_index:%(track_number)s&quot;</code
+          >
+          uses the playlist index, which should always be present when
+          downloading a playlist, to fill the track number.
+        </p>
+        <h3 id="thumbnails">
+          Thumbnails
+          <a href="#thumbnails"><small>###</small></a>
+        </h3>
+        <ul>
+          <li>
+            <code>--embed-thumbnail</code> tells <code>yt-dlp</code> to embed a
+            thumbnail;
+          </li>
+          <li>
+            <code>--convert-thumbnails png</code> indicates that the format of
+            the thumbnail should be <code>png</code>. <code>webp</code> is
+            possibly the best image format available in <code>yt-dlp</code>, but
+            its popularity being so recent, I&rsquo;m wary of its compatibility
+            with music players. Either <code>png</code> or
+            <code>jpeg</code> should be fine.
+          </li>
+        </ul>
+        <p>
+          By default, YouTube provides a padded, rectangular image. To cut off
+          the padding, we can use <code>ffmpeg</code> in post-processing. In
+          this
+          <a href="https://github.com/yt-dlp/yt-dlp/issues/429">Github Issue</a
+          >, pukkandan(2021) gave a solution:
+          <code
+            >--ppa &quot;EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf
+            crop=\&quot;'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\&quot;&quot;</code
+          >. But on my machine, <code>yt-dlp</code> seems to ignore this
+          instruction. Even with <code>--verbose</code> turned on, I could see
+          no log about cropping the thumbnail, and if I mangle the command
+          deliberately, no error is produced, either. All I get is the same
+          padded rectangular image in the end.
+        </p>
+        <p>According to <code>yt-dlp</code>&rsquo;s README:</p>
+        <blockquote>
+          <p>
+            Supported PP are: Merger, ModifyChapters, SplitChapters,
+            ExtractAudio, VideoRemuxer, VideoConvertor, Metadata, EmbedSubtitle,
+            <strong>EmbedThumbnail</strong>, SubtitlesConvertor,
+            <strong>ThumbnailsConvertor</strong>, FixupStretched, FixupM4a,
+            FixupM3u8, FixupTimestamp and FixupDuration.
+          </p>
+        </blockquote>
+        <p>
+          <code>EmbedThumbnail</code> and <code>ThumbnailsConvertor</code> must
+          be the two relevant options, so I gave the latter a try:
+          <code
+            >--ppa &quot;ThumbnailsConvertor+ffmpeg_o:-c:v png -vf
+            crop=\&quot;'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\&quot;&quot;</code
+          >. And, <em>hooray</em>, it works!
+        </p>
+        <p>
+          My guess is that there&rsquo;s some sort of conflict amongst the
+          sequence of converting the image to the right format, embedding the
+          image, and post-processing the image. In a way, I think it makes sense
+          that thumbnail convertor post processor is the right option here, as
+          it implies that we are processing
+          <strong>after the conversion</strong> and
+          <strong>before the embedding</strong>, whereas post-processing
+          <code>EmbedThumbnail</code> would suggest that we are cropping after
+          the embedding occurs, which would be rather not useful. But this is
+          just a speculation. Without digging into the code, it&rsquo;s
+          impossible to tell what exactly is happening here.
+        </p>
+        <h3 id="miscellaneous">
+          Miscellaneous
+          <a href="#miscellaneous"><small>###</small></a>
+        </h3>
+        <p><code>--no-overwrites</code>: Don&rsquo;t overwrite files.</p>
+        <p>
+          <code>--concurrent-fragments 4</code>: Download 4 fragments
+          concurrently to speed up the process.
+        </p>
+        <h2 id="references">
+          References
+          <a href="#references"><small>##</small></a>
+        </h2>
+        <p>
+          pukkandan. (2021, June 23).
+          <em
+            >Comment on [Feature Request] Crop to square thumbnail when
+            embedding in MP3s</em
+          >.
+          <a
+            href="https://github.com/yt-dlp/yt-dlp/issues/429#issuecomment-866836396"
+            >[Feature Request] Crop to square thumbnail when embedding in MP3s ·
+            Issue #429 · yt-dlp/yt-dlp · GitHub</a
+          >
+        </p>
+        <p>
+          yt-dlp. (2023). <em>Yt-dlp</em> [Python]. yt-dlp.
+          <a href="https://github.com/yt-dlp/yt-dlp"
+            >GitHub - yt-dlp/yt-dlp: A youtube-dl fork with additional features
+            and fixes</a
+          >
+          (Original work published 2020)
+        </p>
 
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a href="/tags/computer"><code>computer</code></a
+              >, <a href="/tags/youtube-music"><code>youtube music</code></a
+              >, <a href="/tags/audio"><code>audio</code></a
+              >, <a href="/tags/yt-dlp"><code>yt-dlp</code></a>
+            </p>
+          </section>
 
-  
-
-
-  <footer>
-    
-
-    <section class="footer-meta">
-      
-      <p>
-        
-        <svg
-          aria-label="tags"
-          class="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          width="16"
-          height="16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
-            clip-rule="evenodd"
-          />
-        </svg>
-           <a href="/tags/computer"><code>computer</code></a>, <a href="/tags/youtube-music"><code>youtube music</code></a>, <a href="/tags/audio"><code>audio</code></a>, <a href="/tags/yt-dlp"><code>yt-dlp</code></a>
-      </p>
-      
-    </section>
-
-    <section><p>
-        Leave a comment via email: 
-        <a href="mailto:comment.2023.youtube-music-album-download@powersnail.com">comment.2023.youtube-music-album-download@powersnail.com</a>. 
-      </p>
-    </section>
-  </footer>
-</article>
-
-
-  </main><footer>
-  <article><div>© PowerSnail 2023</div>
-  </article>
-</footer>
-
-</body>
+          <section>
+            <p>
+              Leave a comment via email:
+              <a
+                href="mailto:comment.2023.youtube-music-album-download@powersnail.com"
+                >comment.2023.youtube-music-album-download@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2023</div></article>
+    </footer>
+  </body>
 </html>
