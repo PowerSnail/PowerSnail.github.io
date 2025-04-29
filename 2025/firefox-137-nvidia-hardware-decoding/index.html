@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="PowerSnail" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
+
+    <title>Firefox 137 Nvidia Hardware Decoding · SnailShell</title>
+
+    <meta property="og:title" content="Firefox 137 Nvidia Hardware Decoding" />
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2025/firefox-137-nvidia-hardware-decoding/"
+    />
+
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
+
+    <meta
+      name="description"
+      content="How to enable hardware decoding for Firefox 137 on Linux when using Nvidia GPU"
+    />
+    <meta
+      property="og:description"
+      content="How to enable hardware decoding for Firefox 137 on Linux when using Nvidia GPU"
+    />
+
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2025/firefox-137-nvidia-hardware-decoding/"
+    />
+
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
+          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article id="post-main">
+        <h1>Firefox 137 Nvidia Hardware Decoding</h1>
+
+        <div id="title-subtitle">
+          How to enable hardware decoding for Firefox 137 on Linux when using
+          Nvidia GPU
+        </div>
+
+        <div class="metadata">
+          <time datetime="2025-04-29T00:00:00Z">29 Apr 2025</time>
+          · 441 words · 3 minutes read
+        </div>
+        <hr />
+
+        <p>
+          Recently, I&rsquo;ve noticed that I don&rsquo;t have hard decoding
+          enabled in Firefox (my machine uses openSUSE Tumbleweed, and
+          proprietary driver 570 for GTX 2080 video card). On
+          <code>about:support</code> page, the media section shows the
+          following:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">Codec   Software    Hardware
+</span></span><span class="line"><span class="cl">H264	Supported	Unsupported
+</span></span><span class="line"><span class="cl">VP9	    Supported	Unsupported
+</span></span><span class="line"><span class="cl">VP8	    Supported	Unsupported
+</span></span><span class="line"><span class="cl">AV1	    Supported	Unsupported
+</span></span><span class="line"><span class="cl">HEVC	Supported	Unsupported
+</span></span><span class="line"><span class="cl">AAC	    Supported	Unsupported
+</span></span><span class="line"><span class="cl">MP3	    Supported	Unsupported
+</span></span><span class="line"><span class="cl">Opus	Supported	Unsupported
+</span></span><span class="line"><span class="cl">Vorbis	Supported	Unsupported
+</span></span><span class="line"><span class="cl">FLAC	Supported	Unsupported
+</span></span><span class="line"><span class="cl">Wave	Supported	Unsupported</span></span></code></pre>
+        </div>
+        <p>
+          That&rsquo;s a bit disappointing; GTX 2080 certainly have the
+          capability of doing some hardware decoding, and I use it for my
+          Jellyfin installation hosted on the same machine. See
+          <a href="https://powersnail.com/2023/jellyfin-nvidia-docker/"
+            >this post</a
+          >
+          on how I set it up.
+        </p>
+        <p>
+          To be fair, videos play fine in Firefox&mdash;with software decoding I
+          presume, and I don&rsquo;t often watch YouTube on my PC, so I&rsquo;m
+          not entirely sure when this has been turned off. Some forum posts say
+          that it is new as of Firefox 137, and some suggest that hardware
+          decoding has been broken since 136. See
+          <a
+            href="https://forum.manjaro.org/t/firefox-137-0-no-longer-plays-any-videos-for-me-after-switching-from-136/176606/1"
+            >https://forum.manjaro.org/t/firefox-137-0-no-longer-plays-any-videos-for-me-after-switching-from-136/176606/1</a
+          >.
+        </p>
+        <p>
+          After fiddling around a bit with all the various solutions floating
+          around these posts, I found that what I was missing was the
+          <code>libva-nvidia-driver</code> package. This package is not in the
+          default openSUSE repository, nor is it in the proprietary driver
+          repository; instead it is still in an experimental repository:
+          <a
+            href="https://build.opensuse.org/package/show/X11%3AXOrg/libva-nvidia-driver"
+            >https://build.opensuse.org/package/show/X11%3AXOrg/libva-nvidia-driver</a
+          >.
+        </p>
+        <p>
+          To install it (if you are okay with using an experimental package),
+          run
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">opi libva-nvidia-driver</span></span></code></pre>
+        </div>
+        <p>
+          &hellip;and choose the <code>X11:XOrg</code> repository as the source.
+          Obligatory reminder: an experimental package comes with the titular
+          caveat of being experimental, and it is your judgement call whether to
+          trust its reliability and compatibility with other packages in the
+          main repo. Also, keep an eye on whether it gets eventually merged into
+          the main repo.
+        </p>
+        <p>
+          After getting the package installed, I now see in the Media section:
+        </p>
+        <div class="highlight">
+          <pre
+            class="chroma"
+          ><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">Codec   Software    Hardware
+</span></span><span class="line"><span class="cl">H264	Supported	Supported
+</span></span><span class="line"><span class="cl">VP9	    Supported	Supported
+</span></span><span class="line"><span class="cl">VP8	    Supported	Supported
+</span></span><span class="line"><span class="cl">AV1	    Supported	Unsupported
+</span></span><span class="line"><span class="cl">HEVC	Supported	Supported
+</span></span><span class="line"><span class="cl">AAC	    Supported	Unsupported
+</span></span><span class="line"><span class="cl">MP3	    Supported	Unsupported
+</span></span><span class="line"><span class="cl">Opus	Supported	Unsupported
+</span></span><span class="line"><span class="cl">Vorbis	Supported	Unsupported
+</span></span><span class="line"><span class="cl">FLAC	Supported	Unsupported
+</span></span><span class="line"><span class="cl">Wave	Supported	Unsupported</span></span></code></pre>
+        </div>
+        <p>
+          Hooray! Good enough for me, having H264, VP8/9, and HEVC enabled are
+          all I could ask for.
+        </p>
+        <hr />
+        <p>
+          There are loads of solutions proposed on forums and Reddit. I did some
+          further experiments on what are the pre-requisite to actually put
+          <code>libva-nvidia-driver</code> into use.
+        </p>
+        <ol>
+          <li><code>ffmpeg</code> needs to be installed;</li>
+          <li>
+            NVIDIA DRM needs to be enabled (which I enable with a kernel
+            parameter <code>nvidia_drm.modeset=1</code>);
+          </li>
+          <li>
+            You need to toggle
+            <code>media.hardware-video-decoding.force-enabled</code> to
+            <code>true</code> in <code>about:config</code>. With this being
+            false, hardware decoding support all revert back to Unsupported.
+          </li>
+          <li>
+            It&rsquo;s not necessary to touch
+            <code>media.ffmpeg.vaapi.enabled</code>,
+            <code>media.av1.enabled</code>,
+            <code>gfx.x11-egl.force-enabled</code>, or
+            <code>widget.dmabuf.force-enabled</code>.
+          </li>
+          <li>
+            All the workarounds involving setting environment variables
+            don&rsquo;t seem to be necessary or effective. I don&rsquo;t have
+          </li>
+        </ol>
+
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a href="/tags/nvidia"><code>nvidia</code></a
+              >, <a href="/tags/opensuse"><code>opensuse</code></a
+              >, <a href="/tags/firefox"><code>firefox</code></a>
+            </p>
+          </section>
+
+          <section>
+            <p>
+              Leave a comment via email:
+              <a
+                href="mailto:comment.2025.firefox-137-nvidia-hardware-decoding@powersnail.com"
+                >comment.2025.firefox-137-nvidia-hardware-decoding@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2025</div></article>
+    </footer>
+  </body>
+</html>

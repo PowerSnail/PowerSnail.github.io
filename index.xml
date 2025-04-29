@@ -2,7 +2,7 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Homepage on SnailShell</title>
-  <link>https://powersnail.com/</link><link rel="self" href="https://powersnail.com/index.xml"></link><updated>Mon, 21 Oct 2024 00:00:00 +0000</updated>
+  <link>https://powersnail.com/</link><link rel="self" href="https://powersnail.com/index.xml"></link><updated>Tue, 29 Apr 2025 00:00:00 +0000</updated>
   <id>https://powersnail.com/</id>
 
   <author>
@@ -14,6 +14,60 @@
   <description>Recent content in Homepage on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Firefox 137 Nvidia Hardware Decoding</title>
+    <link rel="alternate">https://powersnail.com/2025/firefox-137-nvidia-hardware-decoding/</link>
+    <published>Tue, 29 Apr 2025 00:00:00 +0000</published>
+    <updated>Tue, 29 Apr 2025 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2025/firefox-137-nvidia-hardware-decoding/</id>
+    <summary type="html">Recently, I&amp;rsquo;ve noticed that I don&amp;rsquo;t have hard decoding enabled in Firefox (my machine uses openSUSE Tumbleweed, and proprietary driver 570 for GTX 2080 video card).</summary>
+    <content type="html">&lt;p&gt;Recently, I&amp;rsquo;ve noticed that I don&amp;rsquo;t have hard decoding enabled in Firefox (my machine uses openSUSE Tumbleweed, and proprietary driver 570 for GTX 2080 video card). On &lt;code&gt;about:support&lt;/code&gt; page, the media section shows the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Codec   Software    Hardware
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H264	Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VP9	    Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VP8	    Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AV1	    Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HEVC	Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AAC	    Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MP3	    Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Opus	Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Vorbis	Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FLAC	Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Wave	Supported	Unsupported&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;That&amp;rsquo;s a bit disappointing; GTX 2080 certainly have the capability of doing some hardware decoding, and I use it for my Jellyfin installation hosted on the same machine. See &lt;a href=&#34;https://powersnail.com/2023/jellyfin-nvidia-docker/&#34;&gt;this post&lt;/a&gt; on how I set it up.&lt;/p&gt;
+&lt;p&gt;To be fair, videos play fine in Firefox&amp;mdash;with software decoding I presume, and I don&amp;rsquo;t often watch YouTube on my PC, so I&amp;rsquo;m not entirely sure when this has been turned off. Some forum posts say that it is new as of Firefox 137, and some suggest that hardware decoding has been broken since 136. See &lt;a href=&#34;https://forum.manjaro.org/t/firefox-137-0-no-longer-plays-any-videos-for-me-after-switching-from-136/176606/1&#34;&gt;https://forum.manjaro.org/t/firefox-137-0-no-longer-plays-any-videos-for-me-after-switching-from-136/176606/1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After fiddling around a bit with all the various solutions floating around these posts, I found that what I was missing was the &lt;code&gt;libva-nvidia-driver&lt;/code&gt; package. This package is not in the default openSUSE repository, nor is it in the proprietary driver repository; instead it is still in an experimental repository: &lt;a href=&#34;https://build.opensuse.org/package/show/X11%3AXOrg/libva-nvidia-driver&#34;&gt;https://build.opensuse.org/package/show/X11%3AXOrg/libva-nvidia-driver&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To install it (if you are okay with using an experimental package), run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;opi libva-nvidia-driver&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;hellip;and choose the &lt;code&gt;X11:XOrg&lt;/code&gt; repository as the source. Obligatory reminder: an experimental package comes with the titular caveat of being experimental, and it is your judgement call whether to trust its reliability and compatibility with other packages in the main repo. Also, keep an eye on whether it gets eventually merged into the main repo.&lt;/p&gt;
+&lt;p&gt;After getting the package installed, I now see in the Media section:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Codec   Software    Hardware
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H264	Supported	Supported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VP9	    Supported	Supported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VP8	    Supported	Supported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AV1	    Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HEVC	Supported	Supported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AAC	    Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MP3	    Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Opus	Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Vorbis	Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FLAC	Supported	Unsupported
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Wave	Supported	Unsupported&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hooray! Good enough for me, having H264, VP8/9, and HEVC enabled are all I could ask for.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;There are loads of solutions proposed on forums and Reddit. I did some further experiments on what are the pre-requisite to actually put &lt;code&gt;libva-nvidia-driver&lt;/code&gt; into use.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;ffmpeg&lt;/code&gt; needs to be installed;&lt;/li&gt;
+&lt;li&gt;NVIDIA DRM needs to be enabled (which I enable with a kernel parameter &lt;code&gt;nvidia_drm.modeset=1&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;You need to toggle &lt;code&gt;media.hardware-video-decoding.force-enabled&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in &lt;code&gt;about:config&lt;/code&gt;. With this being false, hardware decoding support all revert back to Unsupported.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s not necessary to touch &lt;code&gt;media.ffmpeg.vaapi.enabled&lt;/code&gt;, &lt;code&gt;media.av1.enabled&lt;/code&gt;, &lt;code&gt;gfx.x11-egl.force-enabled&lt;/code&gt;, or &lt;code&gt;widget.dmabuf.force-enabled&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;All the workarounds involving setting environment variables don&amp;rsquo;t seem to be necessary or effective. I don&amp;rsquo;t have&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    <category>posts</category>
+  </entry>
   
   <entry>
     <author>
