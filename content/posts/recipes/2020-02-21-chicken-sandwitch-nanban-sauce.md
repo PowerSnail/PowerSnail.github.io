@@ -5,7 +5,6 @@ tags:
     - Japanese
     - recipe
 date: "2020-02-21"
-lang: zh
 slug: "chicken-sandwitch-nanban-sauce"
 ---
 

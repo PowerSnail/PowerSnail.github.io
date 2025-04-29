@@ -7,7 +7,6 @@ tags:
     - C++
 mathjax: true
 isCJKLanguage: true
-lang: zh
 date: "2017-01-06"
 slug: "range-count-1"
 ---
