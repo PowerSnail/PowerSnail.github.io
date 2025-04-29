@@ -18,7 +18,7 @@
   <id>{{ .Permalink }}</id>
 
   <author>
-    <name>{{ .Site.Author.name }}</name>
+    <name>{{ .Site.Params.Author.name }}</name>
   </author>
 
   <icon>https://powersnail.com/favicon.ico</icon>
@@ -29,13 +29,13 @@
   {{ range $pages }}
   <entry>
     <author>
-      <name>{{ .Site.Author.name }}</name>
+      <name>{{ .Site.Params.Author.name }}</name>
     </author>
     <title type="html">{{ .Title | markdownify | html }}</title>
     <link rel="alternate">{{ .Permalink }}</link>
     <published>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</published>
     <updated>{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</updated>
-    {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+    {{ with .Site.Params.Author.email }}<author>{{.}}{{ with $.Site.Params.Author.name }} ({{.}}){{end}}</author>{{end}}
     <id>{{ .Permalink }}</id>
     <summary type="html">{{ .Summary | html }}</summary>
     <content type="html">{{ .Content | html }}</content>
