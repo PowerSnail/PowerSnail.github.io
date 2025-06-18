@@ -63,7 +63,7 @@
 &lt;li&gt;NVIDIA DRM needs to be enabled (which I enable with a kernel parameter &lt;code&gt;nvidia_drm.modeset=1&lt;/code&gt;);&lt;/li&gt;
 &lt;li&gt;You need to toggle &lt;code&gt;media.hardware-video-decoding.force-enabled&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in &lt;code&gt;about:config&lt;/code&gt;. With this being false, hardware decoding support all revert back to Unsupported.&lt;/li&gt;
 &lt;li&gt;It&amp;rsquo;s not necessary to touch &lt;code&gt;media.ffmpeg.vaapi.enabled&lt;/code&gt;, &lt;code&gt;media.av1.enabled&lt;/code&gt;, &lt;code&gt;gfx.x11-egl.force-enabled&lt;/code&gt;, or &lt;code&gt;widget.dmabuf.force-enabled&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;All the workarounds involving setting environment variables don&amp;rsquo;t seem to be necessary or effective. I don&amp;rsquo;t have&lt;/li&gt;
+&lt;li&gt;All the workarounds involving setting environment variables don&amp;rsquo;t seem to be necessary or effective.&lt;/li&gt;
 &lt;/ol&gt;
 </content>
     <category>posts</category>
