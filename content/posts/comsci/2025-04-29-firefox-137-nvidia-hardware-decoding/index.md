@@ -68,4 +68,4 @@ There are loads of solutions proposed on forums and Reddit. I did some further e
 2. NVIDIA DRM needs to be enabled (which I enable with a kernel parameter `nvidia_drm.modeset=1`);
 3. You need to toggle `media.hardware-video-decoding.force-enabled` to `true` in `about:config`. With this being false, hardware decoding support all revert back to Unsupported.
 4. It's not necessary to touch `media.ffmpeg.vaapi.enabled`, `media.av1.enabled`, `gfx.x11-egl.force-enabled`, or `widget.dmabuf.force-enabled`.
-5. All the workarounds involving setting environment variables don't seem to be necessary or effective. I don't have
+5. All the workarounds involving setting environment variables don't seem to be necessary or effective.
