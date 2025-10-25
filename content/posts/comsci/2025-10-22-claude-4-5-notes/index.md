@@ -1,6 +1,6 @@
 ---
 title: Claude Haiku 4.5 - Quotes and Notes
-description: Claude Haiku 4.5 is released
+description: Claude Haiku 4.5 is released; here are some quotes and reading notes of mine.
 date: 2025-10-22
 slug: claude-4-5-notes
 tags:
