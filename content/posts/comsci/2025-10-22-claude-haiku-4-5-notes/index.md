@@ -8,7 +8,7 @@ tags:
     - ai
     - anthropic
     - claude 4.5
-draft: true
+draft: false
 ---
 
 > Claude Haiku 4.5, our latest small model, is available today to all users.
