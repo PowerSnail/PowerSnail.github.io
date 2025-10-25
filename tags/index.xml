@@ -2,7 +2,7 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tags on SnailShell</title>
-  <link>https://powersnail.com/tags/</link><link rel="self" href="https://powersnail.com/tags/index.xml"></link><updated>Tue, 29 Apr 2025 00:00:00 +0000</updated>
+  <link>https://powersnail.com/tags/</link><link rel="self" href="https://powersnail.com/tags/index.xml"></link><updated>Wed, 22 Oct 2025 00:00:00 +0000</updated>
   <id>https://powersnail.com/tags/</id>
 
   <author>
@@ -14,6 +14,66 @@
   <description>Recent content in Tags on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Ai</title>
+    <link rel="alternate">https://powersnail.com/tags/ai/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Wed, 22 Oct 2025 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/ai/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Anthropic</title>
+    <link rel="alternate">https://powersnail.com/tags/anthropic/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Wed, 22 Oct 2025 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/anthropic/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Claude 4.5</title>
+    <link rel="alternate">https://powersnail.com/tags/claude-4.5/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Wed, 22 Oct 2025 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/claude-4.5/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Llm</title>
+    <link rel="alternate">https://powersnail.com/tags/llm/</link>
+    <published>Mon, 01 Jan 0001 00:00:00 +0000</published>
+    <updated>Wed, 22 Oct 2025 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/tags/llm/</id>
+    <summary type="html"></summary>
+    <content type="html"></content>
+    <category>tags</category>
+  </entry>
   
   <entry>
     <author>

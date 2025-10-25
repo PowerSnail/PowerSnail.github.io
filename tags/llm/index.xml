@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Llm on SnailShell</title>
+  <link>https://powersnail.com/tags/llm/</link><link rel="self" href="https://powersnail.com/tags/llm/index.xml"></link><updated>Wed, 22 Oct 2025 00:00:00 +0000</updated>
+  <id>https://powersnail.com/tags/llm/</id>
+
+  <author>
+    <name>PowerSnail</name>
+  </author>
+
+  <icon>https://powersnail.com/favicon.ico</icon>
+
+  <description>Recent content in Llm on SnailShell</description>
+  <generator>Hugo -- gohugo.io</generator>
+  <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Claude Haiku 4.5 - Quotes and Notes</title>
+    <link rel="alternate">https://powersnail.com/2025/claude-4-5-notes/</link>
+    <published>Wed, 22 Oct 2025 00:00:00 +0000</published>
+    <updated>Wed, 22 Oct 2025 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2025/claude-4-5-notes/</id>
+    <summary type="html">Claude Haiku 4.5, our latest small model, is available today to all users.
+On 2025-10-16, Claude Haiku 4.5 was released.</summary>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Claude Haiku 4.5, our latest small model, is available today to all users.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On 2025-10-16, Claude Haiku 4.5 was released. It is a smaller, faster model than the previously released Claude Sonnet 4.5.&lt;/p&gt;
+&lt;p&gt;Here are the release notes: &lt;a href=&#34;https://www.anthropic.com/news/claude-haiku-4-5&#34;&gt;https://www.anthropic.com/news/claude-haiku-4-5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The claim is that Haiku 4.5 is on par with GPT-5 Codex on SWE-bench. This is quite interesting, as in my experience GPT-5 Codex is incredibly slow for complex tasks, but that extra time seems useful, as it produces more accurate results. I&amp;rsquo;m curious whether Haiku 4.5 performs as well on those kinds of tasks as GPT-5 Codex, but faster, though I&amp;rsquo;m doubtful.&lt;/p&gt;
+&lt;p&gt;However, even if it is not as good for large, complex tasks, it might still be useful for completing shorter tasks. If we use GPT-5 Codex as the orchestrator, which then dispatches Haiku 4.5 to write individual functions, we might get a speed boost while keeping the benefit of GPT-5 Codex&amp;rsquo;s higher-level insights.&lt;/p&gt;
+&lt;p&gt;Compared with its predecessor, Haiku 3.5, Anthropic claims that Haiku 4.5 offers better capabilities in agentic coding and computer use (for example, operating browsers). Anthropic acknowledges that the model is not a &amp;ldquo;frontier&amp;rdquo; model but is suitable for agentic work, which suggests that Anthropic encourages the same kind of architecture where a large model serves as the orchestrator and a smaller model handles lower-level work.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It is not a frontier model, but its high levels of intelligence and speed make it appropriate for a wide variety of “agentic” uses, including where multiple instances of the model complete tasks in parallel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Haiku 4.5 is also supposed to have better safety and alignment.&lt;/p&gt;
+&lt;p&gt;Haiku 4.5 provides an &amp;ldquo;extended thinking mode&amp;rdquo; in which it follows a chain of thought before replying. I think the reason more models (even smaller, faster models) are becoming &amp;ldquo;reasoning&amp;rdquo; models is that accuracy on complex problems requires more time and tokens. To alleviate this slowness, Anthropic launches another instance of Haiku 4.5 to summarize the thoughts if the chain of thought gets too long.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[&amp;hellip;] agentic episodes in reinforcement learning more frequently encounter physical context-window
+limits.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is an interesting observation, and their solution is to make the model &amp;ldquo;aware&amp;rdquo; of this limitation during training. They claim that the model becomes more careful about when to &amp;ldquo;wrap things up&amp;rdquo; as the limit approaches.&lt;/p&gt;
+&lt;p&gt;I had once before encountered agents exhausting the context window when porting a Next.js backend to Python with GPT-5 Codex. I&amp;rsquo;m not sure this awareness will help, as I suspect that when dealing with tasks that involve a huge amount of input (e.g., coding in a large codebase), the application layer must also take responsibility for feeding data into the model more judiciously. At least the model probably won&amp;rsquo;t exhaust its context window by outputting too much.&lt;/p&gt;
+&lt;p&gt;Sources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.anthropic.com/news/claude-haiku-4-5&#34;&gt;https://www.anthropic.com/news/claude-haiku-4-5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://assets.anthropic.com/m/99128ddd009bdcb/Claude-Haiku-4-5-System-Card.pdf&#34;&gt;https://assets.anthropic.com/m/99128ddd009bdcb/Claude-Haiku-4-5-System-Card.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category>posts</category>
+  </entry>
+  
+</feed>

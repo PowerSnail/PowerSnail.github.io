@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="PowerSnail" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#bd1b37" />
+
+    <title>Claude Haiku 4.5 - Quotes and Notes · SnailShell</title>
+
+    <meta property="og:title" content="Claude Haiku 4.5 - Quotes and Notes" />
+    <meta property="og:site_name" content="SnailShell" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://powersnail.com/2025/claude-4-5-notes/"
+    />
+
+    <meta
+      property="og:image"
+      content="https://powersnail.com/icons/snail.svg"
+    />
+
+    <meta
+      name="description"
+      content="Claude Haiku 4.5 is released; here are some quotes and reading notes of mine."
+    />
+    <meta
+      property="og:description"
+      content="Claude Haiku 4.5 is released; here are some quotes and reading notes of mine."
+    />
+
+    <link
+      rel="canonical"
+      href="https://powersnail.com/2025/claude-4-5-notes/"
+    />
+
+    <link id="main-css" rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <article>
+        <nav class="site-nav">
+          <a href="/" class="site-title">
+            <span class="site-title-text">Snail's Shell</span>
+          </a>
+          <div class="site-title-fill"></div>
+          <a href="/posts/" class="nav-link"> Posts </a>
+          <details>
+            <summary>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon"
+                width="16"
+                height="16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+
+              More
+            </summary>
+            <div class="site-title-more">
+              <a href="/index.xml" class="nav-link"> RSS </a>
+              <a href="/about/" class="nav-link"> About </a>
+              <a href="/sheet-music/" class="nav-link"> Sheet Music </a>
+              <a href="/stats/" class="nav-link"> Blog Stats </a>
+              <a href="/cat_dot/" class="nav-link"> Moving Red Dot for Cat </a>
+              <a href="/game_of_life/" class="nav-link"> Game of Life </a>
+            </div>
+          </details>
+        </nav>
+      </article>
+    </header>
+
+    <main>
+      <article id="post-main">
+        <h1>Claude Haiku 4.5 - Quotes and Notes</h1>
+
+        <div id="title-subtitle">
+          Claude Haiku 4.5 is released; here are some quotes and reading notes
+          of mine.
+        </div>
+
+        <div class="metadata">
+          <time datetime="2025-10-22T00:00:00Z">22 Oct 2025</time>
+          · 460 words · 3 minutes read
+        </div>
+        <hr />
+
+        <blockquote>
+          <p>
+            Claude Haiku 4.5, our latest small model, is available today to all
+            users.
+          </p>
+        </blockquote>
+        <p>
+          On 2025-10-16, Claude Haiku 4.5 was released. It is a smaller, faster
+          model than the previously released Claude Sonnet 4.5.
+        </p>
+        <p>
+          Here are the release notes:
+          <a href="https://www.anthropic.com/news/claude-haiku-4-5"
+            >https://www.anthropic.com/news/claude-haiku-4-5</a
+          >
+        </p>
+        <p>
+          The claim is that Haiku 4.5 is on par with GPT-5 Codex on SWE-bench.
+          This is quite interesting, as in my experience GPT-5 Codex is
+          incredibly slow for complex tasks, but that extra time seems useful,
+          as it produces more accurate results. I&rsquo;m curious whether Haiku
+          4.5 performs as well on those kinds of tasks as GPT-5 Codex, but
+          faster, though I&rsquo;m doubtful.
+        </p>
+        <p>
+          However, even if it is not as good for large, complex tasks, it might
+          still be useful for completing shorter tasks. If we use GPT-5 Codex as
+          the orchestrator, which then dispatches Haiku 4.5 to write individual
+          functions, we might get a speed boost while keeping the benefit of
+          GPT-5 Codex&rsquo;s higher-level insights.
+        </p>
+        <p>
+          Compared with its predecessor, Haiku 3.5, Anthropic claims that Haiku
+          4.5 offers better capabilities in agentic coding and computer use (for
+          example, operating browsers). Anthropic acknowledges that the model is
+          not a &ldquo;frontier&rdquo; model but is suitable for agentic work,
+          which suggests that Anthropic encourages the same kind of architecture
+          where a large model serves as the orchestrator and a smaller model
+          handles lower-level work.
+        </p>
+        <blockquote>
+          <p>
+            It is not a frontier model, but its high levels of intelligence and
+            speed make it appropriate for a wide variety of “agentic” uses,
+            including where multiple instances of the model complete tasks in
+            parallel.
+          </p>
+        </blockquote>
+        <p>Haiku 4.5 is also supposed to have better safety and alignment.</p>
+        <p>
+          Haiku 4.5 provides an &ldquo;extended thinking mode&rdquo; in which it
+          follows a chain of thought before replying. I think the reason more
+          models (even smaller, faster models) are becoming
+          &ldquo;reasoning&rdquo; models is that accuracy on complex problems
+          requires more time and tokens. To alleviate this slowness, Anthropic
+          launches another instance of Haiku 4.5 to summarize the thoughts if
+          the chain of thought gets too long.
+        </p>
+        <blockquote>
+          <p>
+            [&hellip;] agentic episodes in reinforcement learning more
+            frequently encounter physical context-window limits.
+          </p>
+        </blockquote>
+        <p>
+          This is an interesting observation, and their solution is to make the
+          model &ldquo;aware&rdquo; of this limitation during training. They
+          claim that the model becomes more careful about when to &ldquo;wrap
+          things up&rdquo; as the limit approaches.
+        </p>
+        <p>
+          I had once before encountered agents exhausting the context window
+          when porting a Next.js backend to Python with GPT-5 Codex. I&rsquo;m
+          not sure this awareness will help, as I suspect that when dealing with
+          tasks that involve a huge amount of input (e.g., coding in a large
+          codebase), the application layer must also take responsibility for
+          feeding data into the model more judiciously. At least the model
+          probably won&rsquo;t exhaust its context window by outputting too
+          much.
+        </p>
+        <p>Sources:</p>
+        <ul>
+          <li>
+            <a href="https://www.anthropic.com/news/claude-haiku-4-5"
+              >https://www.anthropic.com/news/claude-haiku-4-5</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://assets.anthropic.com/m/99128ddd009bdcb/Claude-Haiku-4-5-System-Card.pdf"
+              >https://assets.anthropic.com/m/99128ddd009bdcb/Claude-Haiku-4-5-System-Card.pdf</a
+            >
+          </li>
+        </ul>
+
+        <footer>
+          <section class="footer-meta">
+            <p>
+              <svg
+                aria-label="tags"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a href="/tags/llm"><code>llm</code></a
+              >, <a href="/tags/ai"><code>ai</code></a
+              >, <a href="/tags/anthropic"><code>anthropic</code></a
+              >, <a href="/tags/claude-4.5"><code>claude 4.5</code></a>
+            </p>
+          </section>
+
+          <section>
+            <p>
+              Leave a comment via email:
+              <a href="mailto:comment.2025.claude-4-5-notes@powersnail.com"
+                >comment.2025.claude-4-5-notes@powersnail.com</a
+              >.
+            </p>
+          </section>
+        </footer>
+      </article>
+    </main>
+    <footer>
+      <article><div>© PowerSnail 2025</div></article>
+    </footer>
+  </body>
+</html>
