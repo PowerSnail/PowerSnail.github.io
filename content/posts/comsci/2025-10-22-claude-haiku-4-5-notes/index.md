@@ -1,5 +1,5 @@
 ---
-title: Claude Haiku 4.5 - Quotes and Notes
+title: Claude Haiku 4.5 Released - Quotes and Notes
 description: Claude Haiku 4.5 is released; here are some quotes and reading notes of mine.
 date: 2025-10-22
 slug: claude-4-5-notes
@@ -10,8 +10,6 @@ tags:
     - claude 4.5
 draft: false
 ---
-
-> Claude Haiku 4.5, our latest small model, is available today to all users.
 
 On 2025-10-16, Claude Haiku 4.5 was released. It is a smaller, faster model than the previously released Claude Sonnet 4.5.
 
