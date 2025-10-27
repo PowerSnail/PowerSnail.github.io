@@ -19,18 +19,14 @@
     <author>
       <name>PowerSnail</name>
     </author>
-    <title type="html">Claude Haiku 4.5 - Quotes and Notes</title>
+    <title type="html">Claude Haiku 4.5 Released - Quotes and Notes</title>
     <link rel="alternate">https://powersnail.com/2025/claude-4-5-notes/</link>
     <published>Wed, 22 Oct 2025 00:00:00 +0000</published>
     <updated>Wed, 22 Oct 2025 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2025/claude-4-5-notes/</id>
-    <summary type="html">Claude Haiku 4.5, our latest small model, is available today to all users.
-On 2025-10-16, Claude Haiku 4.5 was released.</summary>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;Claude Haiku 4.5, our latest small model, is available today to all users.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;On 2025-10-16, Claude Haiku 4.5 was released. It is a smaller, faster model than the previously released Claude Sonnet 4.5.&lt;/p&gt;
+    <summary type="html">On 2025-10-16, Claude Haiku 4.5 was released. It is a smaller, faster model than the previously released Claude Sonnet 4.5.</summary>
+    <content type="html">&lt;p&gt;On 2025-10-16, Claude Haiku 4.5 was released. It is a smaller, faster model than the previously released Claude Sonnet 4.5.&lt;/p&gt;
 &lt;p&gt;Here are the release notes: &lt;a href=&#34;https://www.anthropic.com/news/claude-haiku-4-5&#34;&gt;https://www.anthropic.com/news/claude-haiku-4-5&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The claim is that Haiku 4.5 is on par with GPT-5 Codex on SWE-bench. This is quite interesting, as in my experience GPT-5 Codex is incredibly slow for complex tasks, but that extra time seems useful, as it produces more accurate results. I&amp;rsquo;m curious whether Haiku 4.5 performs as well on those kinds of tasks as GPT-5 Codex, but faster, though I&amp;rsquo;m doubtful.&lt;/p&gt;
 &lt;p&gt;However, even if it is not as good for large, complex tasks, it might still be useful for completing shorter tasks. If we use GPT-5 Codex as the orchestrator, which then dispatches Haiku 4.5 to write individual functions, we might get a speed boost while keeping the benefit of GPT-5 Codex&amp;rsquo;s higher-level insights.&lt;/p&gt;
