@@ -57,7 +57,7 @@ build-debug: (build "--buildDrafts" "--environment" "development")
 
 # Watch the directory for change and rebuild
 watch-debug:
-    python tool_scripts/watch.py | while read changed; do echo "Changed $changed"; just build-debug; done
+    uv run python tool_scripts/watch.py | while read changed; do echo "Changed $changed"; just build-debug; done
 
 # Run a caddy server, with filewatching, and auto-reload. (Port=12000)
 serve-debug: build-debug
@@ -79,7 +79,7 @@ _post-process-css sitedir:
     fd "\.css" {{ sitedir }} --exec lightningcss -m "{}" --output-file "{}"
 
 _post-process-html sitedir:
-    fd -t f ".html" "{{ sitedir }}/" --exec python tool_scripts/add_bibliography.py
-    python tool_scripts/generate_responsive_images.py "{{ sitedir }}/"
-    python tool_scripts/check_dead_links.py "{{ sitedir }}/"
+    fd -t f ".html" "{{ sitedir }}/" --exec uv run python tool_scripts/add_bibliography.py
+    uv run python tool_scripts/generate_responsive_images.py "{{ sitedir }}/"
+    uv run python tool_scripts/check_dead_links.py "{{ sitedir }}/"
     fd -t f ".html" "{{ sitedir }}/" --exec prettier --ignore-path -w
