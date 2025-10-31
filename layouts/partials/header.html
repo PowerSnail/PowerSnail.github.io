@@ -3,6 +3,9 @@
 {{- $current := dict .RelPermalink " current" -}}
 
 <header>
+  {{ if .Site.Params.halloween }}
+    {{ partial "specials/halloween.html"}}
+  {{ end}}
   <article>
     <nav class="site-nav">
       <a href="/" class="site-title">
