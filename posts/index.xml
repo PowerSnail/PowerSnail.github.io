@@ -2,7 +2,7 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Posts on SnailShell</title>
-  <link>https://powersnail.com/posts/</link><link rel="self" href="https://powersnail.com/posts/index.xml"></link><updated>Wed, 22 Oct 2025 00:00:00 +0000</updated>
+  <link>https://powersnail.com/posts/</link><link rel="self" href="https://powersnail.com/posts/index.xml"></link><updated>Fri, 31 Oct 2025 00:00:00 +0000</updated>
   <id>https://powersnail.com/posts/</id>
 
   <author>
@@ -14,6 +14,29 @@
   <description>Recent content in Posts on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">Happy Halloween (2025)</title>
+    <link rel="alternate">https://powersnail.com/2025/halloween-pumpkin/</link>
+    <published>Fri, 31 Oct 2025 00:00:00 +0000</published>
+    <updated>Fri, 31 Oct 2025 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2025/halloween-pumpkin/</id>
+    <summary type="html">I don&amp;rsquo;t have a costume this year, so here&amp;rsquo;s a painting of mine of a pumpkin.
+A watercolor painting of a pumpkin sitting in a field of grass.</summary>
+    <content type="html">&lt;p&gt;I don&amp;rsquo;t have a costume this year, so here&amp;rsquo;s a painting of mine of a pumpkin.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img
+    src=&#34;https://powersnail.com/2025/halloween-pumpkin/pumpkin.jpg&#34; alt=&#34;pumpkin&#34;srcset=&#34;https://powersnail.com/2025/halloween-pumpkin/pumpkin-400w.jpg 400w,/2025/halloween-pumpkin/pumpkin-600w.jpg 600w,/2025/halloween-pumpkin/pumpkin-800w.jpg 800w,/2025/halloween-pumpkin/pumpkin-1000w.jpg 1000w,/2025/halloween-pumpkin/pumpkin-1200w.jpg 1200w,/2025/halloween-pumpkin/pumpkin.jpg 1280w&#34; width=&#34;1280&#34;  height=&#34;700&#34; &gt;
+
+    &lt;figcaption&gt;A watercolor painting of a pumpkin sitting in a field of grass.&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;p&gt;I hope everyone has a great time at this spooky time of year.&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
   
   <entry>
     <author>
@@ -2398,9 +2421,7 @@ line item&lt;/li&gt;
     <updated>Fri, 06 Jan 2017 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2017/apple-box/</id>
-    <summary type="html">The Apple Boxes Problem ## The problem can be simply put:
-Input: $k$
-Output: let $r$ be the sum of the square of each even integer no larger than $k$, and $y$ be that of the odd.</summary>
+    <summary type="html">An Apple box coding challenge</summary>
     <content type="html">&lt;h2 id=&#34;the-apple-boxes-problem&#34;&gt;
   The Apple Boxes Problem
   &lt;a href=&#34;#the-apple-boxes-problem&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;

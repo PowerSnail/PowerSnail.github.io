@@ -945,9 +945,7 @@ line item&lt;/li&gt;
     <updated>Fri, 06 Jan 2017 00:00:00 +0000</updated>
     
     <id>https://powersnail.com/2017/apple-box/</id>
-    <summary type="html">The Apple Boxes Problem ## The problem can be simply put:
-Input: $k$
-Output: let $r$ be the sum of the square of each even integer no larger than $k$, and $y$ be that of the odd.</summary>
+    <summary type="html">An Apple box coding challenge</summary>
     <content type="html">&lt;h2 id=&#34;the-apple-boxes-problem&#34;&gt;
   The Apple Boxes Problem
   &lt;a href=&#34;#the-apple-boxes-problem&#34;&gt;&lt;small&gt;##&lt;/small&gt;&lt;/a&gt;

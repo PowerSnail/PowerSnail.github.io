@@ -46,6 +46,32 @@
   </head>
   <body>
     <header>
+      <div
+        style="
+          height: 50px;
+          width: 100%;
+          grid-column: 1/-1;
+          grid-template-columns: subgrid;
+          background-color: #f57029ff;
+          display: grid;
+        "
+      >
+        <div style="grid-column: 3/-3; position: relative">
+          <img
+            src="/images/halloween.webp"
+            width="256px"
+            height="48px"
+            style="
+              position: absolute;
+              left: 0;
+              top: 0;
+              max-width: 100%;
+              height: auto;
+            "
+          />
+        </div>
+      </div>
+
       <article>
         <nav class="site-nav">
           <a href="/" class="site-title">
@@ -100,6 +126,15 @@
         <h2>Recent posts</h2>
         <div class="post-list">
           <div class="post-item">
+            <time class="post-item-time" datetime="2025-10-31T00:00:00Z"
+              >31 Oct 2025</time
+            >
+            <a class="post-item-title" href="/2025/halloween-pumpkin/">
+              Happy Halloween (2025)
+            </a>
+            <div class="post-item-summary">Let the spooky spirit wonder!</div>
+          </div>
+          <div class="post-item">
             <time class="post-item-time" datetime="2025-10-22T00:00:00Z"
               >22 Oct 2025</time
             >
@@ -149,23 +184,6 @@
               that the 2.4GHz band had gone rogue. As the router doesn&rsquo;t
               belong to me, I have to apply a workaround where iwd is configured
               to not scan 2.4GHz network.
-            </div>
-          </div>
-          <div class="post-item">
-            <time class="post-item-time" datetime="2024-07-28T00:00:00Z"
-              >28 Jul 2024</time
-            >
-            <a
-              class="post-item-title"
-              href="/2024/lesson-learned-migrating-registrar/"
-            >
-              Lesson Learned Migrating Registrar
-            </a>
-            <div class="post-item-summary">
-              I made a mistake when trying to change the registrar for my
-              domain. By simultaneously changing the nameserver and the
-              transferring the domain, and not being patient enough to validate
-              changes, I broke my domain, twice.
             </div>
           </div>
         </div>
