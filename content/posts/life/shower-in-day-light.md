@@ -13,7 +13,7 @@ It runs across the atmosphere \
 Evading dust and wings of birds \
 It penetrates the double-paned window \
 And ricochets off crystals falling in threads \
-Getting lost on the lenses steamed opaque \
+Losing its way on the lenses steamed opaque \
 I take them off, trading fog for a blur  \
 Bare-eyed, I'm still bulletproof.
 
