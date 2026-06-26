@@ -1,11 +1,11 @@
 ---
 title: A Myopic Man's Shower in Daylight
 description: A short poem
-date: 2026-06-22
+date: 2026-06-26
 slug: shower-in-daylight
 tags:
     - poem
-draft: true
+draft: false
 ---
 
 The sun with a photon takes a shot at me \
