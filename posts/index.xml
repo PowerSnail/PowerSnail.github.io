@@ -2,7 +2,7 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Posts on SnailShell</title>
-  <link>https://powersnail.com/posts/</link><link rel="self" href="https://powersnail.com/posts/index.xml"></link><updated>Mon, 22 Jun 2026 00:00:00 +0000</updated>
+  <link>https://powersnail.com/posts/</link><link rel="self" href="https://powersnail.com/posts/index.xml"></link><updated>Fri, 26 Jun 2026 00:00:00 +0000</updated>
   <id>https://powersnail.com/posts/</id>
 
   <author>
@@ -14,6 +14,29 @@
   <description>Recent content in Posts on SnailShell</description>
   <generator>Hugo -- gohugo.io</generator>
   <copyright>en-us</copyright>
+  
+  <entry>
+    <author>
+      <name>PowerSnail</name>
+    </author>
+    <title type="html">A Myopic Man&amp;rsquo;s Shower in Daylight</title>
+    <link rel="alternate">https://powersnail.com/2026/shower-in-daylight/</link>
+    <published>Fri, 26 Jun 2026 00:00:00 +0000</published>
+    <updated>Fri, 26 Jun 2026 00:00:00 +0000</updated>
+    
+    <id>https://powersnail.com/2026/shower-in-daylight/</id>
+    <summary type="html">The sun with a photon takes a shot at me It runs across the atmosphere Evading dust and wings of birds It penetrates the double-paned window And ricochets off crystals falling in threads Getting lost on the lenses steamed opaque I take them off, trading fog for a blur Bare-eyed, I&amp;rsquo;m still bulletproof.</summary>
+    <content type="html">&lt;p&gt;The sun with a photon takes a shot at me &lt;br&gt;
+It runs across the atmosphere &lt;br&gt;
+Evading dust and wings of birds &lt;br&gt;
+It penetrates the double-paned window &lt;br&gt;
+And ricochets off crystals falling in threads &lt;br&gt;
+Getting lost on the lenses steamed opaque &lt;br&gt;
+I take them off, trading fog for a blur  &lt;br&gt;
+Bare-eyed, I&amp;rsquo;m still bulletproof.&lt;/p&gt;
+</content>
+    <category>posts</category>
+  </entry>
   
   <entry>
     <author>
