@@ -1,5 +1,5 @@
 ---
-title: Shower in Daylight
+title: A Myopic Man's Shower in Daylight
 description: A short poem
 date: 2026-06-22
 slug: shower-in-daylight
@@ -8,13 +8,14 @@ tags:
 draft: true
 ---
 
-The sun with a photon fires at me \
+The sun with a photon takes a shot at me \
 It runs across the atmosphere \
-Evading dusts and birds \
-And penetrates the double-paned window \
-And ricochets off of crystals falling in threads\
-And gets lost in the fog on my glasses \
-I took them off \
-Frosted vision melted into blurs
+Evading dust and wings of birds \
+It penetrates the double-paned window \
+And ricochets off crystals falling in threads \
+Getting lost on the lenses steamed opaque \
+I take them off, trading fog for a blur  \
+Bare-eyed, I'm still bulletproof.
+
 
 
